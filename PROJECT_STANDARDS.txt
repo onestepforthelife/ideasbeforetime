@@ -1,0 +1,369 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║         PROJECT STANDARDS & WORKING PREFERENCES - IDEAS BEFORE TIME         ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ DOCUMENT METADATA                                                            │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ Owner:        Amit Kumar / Onestepforthelife                                 │
+│ Created:      November 24, 2025                                              │
+│ Last Updated: November 24, 2025                                              │
+│ Version:      1.0                                                            │
+│ Location:     C:\Users\araag\Documents\Cloudfare\PROJECT_STANDARDS.txt      │
+│ Status:       ACTIVE - Reference for all development work                    │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 📋 PURPOSE                                                                   │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ This document defines the working boundaries, preferences, coding standards, │
+│ and documentation style for the "Ideas Before Time" project. All future work │
+│ must follow these guidelines to maintain consistency across sessions.        │
+│                                                                              │
+│ This serves as permanent memory for AI assistant (Kiro) ensuring:           │
+│  • No loss of context between sessions                                      │
+│  • Consistent quality and style                                             │
+│  • Preservation of design decisions                                         │
+│  • Clear boundaries and expectations                                        │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ SECTION 1: 🎨 DESIGN & HTML STANDARDS                                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ COLOR SCHEME                                                                 │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ Primary Gradient:  linear-gradient(135deg, #667eea 0%, #764ba2 100%)        │
+│ Theme:             Purple throughout all pages                               │
+│ Card Backgrounds:  White (#FFFFFF)                                           │
+│ Text Colors:       • Headings: #333333                                       │
+│                    • Body text: #666666                                      │
+│                    • Links: #667eea                                          │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ HTML STRUCTURE - MANDATORY ELEMENTS                                          │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ ✓ Sticky navigation bar at top                                              │
+│ ✓ Purple gradient background (body)                                         │
+│ ✓ White content container with border-radius: 15px                          │
+│ ✓ Watermark: "AV © Onestepforthelife" (diagonal, semi-transparent)          │
+│ ✓ Responsive design (mobile-friendly)                                       │
+│ ✓ Back navigation to library.html (on detail pages)                         │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ TYPOGRAPHY                                                                   │
+│ ✓ Font family: 'Segoe UI', Arial, sans-serif                                │
+│ ✓ Professional, clean, readable                                             │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ CARD-BASED LAYOUTS                                                           │
+│ ✓ Rounded corners (border-radius: 10-15px)                                  │
+│ ✓ Box shadows for depth                                                     │
+│ ✓ Hover effects: transform: translateY(-5px)                                │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ NAVIGATION MENU - STANDARD ITEMS (ALL PAGES)                                │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ 🏠 Home                    → index.html                                      │
+│ 💡 Innovation Library      → library.html                                    │
+│ 📊 Business Insights       → business-insights.html                          │
+│ 🎯 SPO Tool (₹21)          → social-optimizer-index.html                     │
+│ 📄 CV                      → cv-preview.html                                 │
+│ 👤 About                   → about.html                                      │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ FILE NAMING CONVENTIONS                                                      │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ Innovation Pages:    {topic}-{year}.html                                     │
+│                      Example: silent-dj-2001.html, digital-money-2012.html   │
+│                                                                              │
+│ Documentation:       ALL_CAPS_WITH_UNDERSCORES.txt                           │
+│                      Example: DEPLOYMENT_LOG.txt, PROJECT_STANDARDS.txt      │
+│                                                                              │
+│ Python Scripts:      lowercase_with_underscores.py                           │
+│                      Example: generate_acrylic_report.py                     │
+│                                                                              │
+│ Images:              descriptive-name.jpg or descriptive-name.png            │
+│                      Example: library-hero.jpg, panel-1-foundation-grit.jpg  │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ SECTION 2: 📝 DOCUMENTATION STANDARDS                                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ LOG FILE FORMAT                                                              │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ ✓ Use indexed entries: [YYYY-MM-DD-###]                                     │
+│ ✓ Include timestamp, status, priority                                       │
+│ ✓ Structure: Issue → Root Cause → Solution → Status → Next Steps            │
+│ ✓ Use separator lines (80 characters: ====)                                 │
+│ ✓ Keep chronological order (newest at bottom)                               │
+│                                                                              │
+│ Example Entry Format:                                                        │
+│ ════════════════════════════════════════════════════════════════════════════ │
+│ [2025-11-24-001] DESCRIPTIVE TITLE                                           │
+│ ════════════════════════════════════════════════════════════════════════════ │
+│ Time: November 24, 2025 (Afternoon)                                          │
+│ Status: RESOLVED / IN PROGRESS / BLOCKED                                     │
+│ Priority: HIGH / MEDIUM / LOW                                                │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ TEXT FILE STYLE GUIDE                                                        │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ Filenames:           ALL_CAPS_WITH_UNDERSCORES.txt                           │
+│ Section Headers:     Clear with underlines or box borders                    │
+│ Status Indicators:   ✓ Completed  |  ⏳ In Progress  |  ✗ Blocked/Failed    │
+│ Language:            Professional, concise, action-oriented                  │
+│ Formatting:          Use boxes, tables, and visual separators                │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ RECORD KEEPING PRINCIPLES                                                    │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ ✓ Document every significant change                                         │
+│ ✓ Include "why" not just "what"                                             │
+│ ✓ Reference related entries with [YYYY-MM-DD-###] format                    │
+│ ✓ Update status when issues are resolved                                    │
+│ ✓ Keep technical details for future reference                               │
+│ ✓ Cross-reference related documents                                         │
+│ ✓ Maintain version history                                                  │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ SECTION 3: 🎯 WORKING BOUNDARIES & PREFERENCES                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ ✓ WHAT KIRO CAN HELP WITH                                                   │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ ✓ Web development (HTML/CSS/JavaScript)                                     │
+│ ✓ Python scripts for document generation                                    │
+│ ✓ File management and organization                                          │
+│ ✓ Deployment configuration (Cloudflare Pages)                               │
+│ ✓ Documentation and record keeping                                          │
+│ ✓ Market research report generation                                         │
+│ ✓ Code optimization and debugging                                           │
+│ ✓ SEO and sitemap management                                                │
+│ ✓ Content writing and editing                                               │
+│ ✓ Technical troubleshooting                                                 │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ ✗ OUT OF SCOPE - DO NOT REQUEST                                             │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ ✗ Video creation or editing                                                 │
+│ ✗ Image generation or manipulation                                          │
+│ ✗ Audio processing                                                          │
+│ ✗ Social media content creation (beyond text)                               │
+│ ✗ Graphic design (use existing templates only)                              │
+│ ✗ Database management (client-side only)                                    │
+│ ✗ Mobile app development                                                    │
+│ ✗ Backend server setup                                                      │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ DEPLOYMENT PREFERENCES                                                       │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ Platform:        Cloudflare Pages                                            │
+│ Build Process:   None (static HTML)                                          │
+│ Version Control: GitHub (onestepforthelife/cloudfare)                        │
+│ Deployment:      Manual via dashboard (no CLI required)                      │
+│ Configuration:   Keep wrangler.jsonc minimal and clean                       │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ TECHNOLOGY STACK                                                             │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ Frontend:        Pure HTML/CSS/JavaScript (no frameworks)                    │
+│ Backend Scripts: Python 3.x                                                  │
+│ Documents:       python-docx library                                         │
+│ Authentication:  Client-side (session storage)                               │
+│ Data Storage:    File-based (no databases)                                   │
+│ Hosting:         Cloudflare Pages (static)                                   │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+
+================================================================================
+SECTION 4: CONTENT STANDARDS
+================================================================================
+
+INNOVATION PAGES:
+----------------
+✓ Each innovation must have:
+  - Year of conception
+  - Years ahead of mainstream
+  - Detailed story/context
+  - Current status/adoption
+  - Personal insights
+  - Related image (JPG format)
+
+BUSINESS CONTENT:
+----------------
+✓ Professional tone
+✓ Data-driven insights
+✓ Market analysis focus
+✓ Chemical industry expertise
+✓ Strategic recommendations
+
+PERSONAL BRANDING:
+-----------------
+✓ Highlight 19+ years experience
+✓ Specialty chemicals leadership
+✓ Pattern recognition expertise
+✓ Innovation track record
+✓ Professional credentials
+
+
+================================================================================
+SECTION 5: COMMUNICATION STYLE
+================================================================================
+
+WITH KIRO (AI ASSISTANT):
+-------------------------
+✓ Direct, clear instructions
+✓ Expect detailed explanations
+✓ Request documentation of all changes
+✓ Maintain permanent records
+✓ Build on previous work
+✓ Reference past solutions
+
+DOCUMENTATION TONE:
+------------------
+✓ Professional but accessible
+✓ Technical when necessary
+✓ Clear and concise
+✓ Action-oriented
+✓ Solution-focused
+
+
+================================================================================
+SECTION 6: PROJECT STRUCTURE
+================================================================================
+
+DIRECTORY LAYOUT:
+----------------
+Cloudfare/                          (Production files)
+├── index.html                      (Homepage)
+├── library.html                    (Innovation library)
+├── about.html                      (About page)
+├── timeline.html                   (Timeline view)
+├── business-insights.html          (Business hub)
+├── cv-preview.html                 (CV preview)
+├── *.html                          (Innovation pages)
+├── *.js                            (JavaScript files)
+├── *.css                           (Stylesheets)
+├── *.txt                           (Documentation)
+├── wrangler.jsonc                  (Cloudflare config)
+├── sitemap.xml                     (SEO)
+├── robots.txt                      (SEO)
+├── images/                         (Image assets)
+└── .well-known/                    (Domain verification)
+
+amit Pics personal/                 (Source & development)
+├── *.py                            (Python scripts)
+├── *.txt                           (Documentation)
+├── *.html                          (Generated reports)
+├── *.jpg, *.png                    (Personal images)
+└── Cloudfare/                      (Duplicate for backup)
+
+
+================================================================================
+SECTION 7: QUALITY STANDARDS
+================================================================================
+
+CODE QUALITY:
+------------
+✓ Clean, readable code
+✓ Consistent indentation (4 spaces)
+✓ Meaningful variable names
+✓ Comments for complex logic
+✓ No console.log in production
+✓ Validate HTML/CSS
+
+TESTING CHECKLIST:
+-----------------
+✓ Test on desktop and mobile
+✓ Check all navigation links
+✓ Verify responsive design
+✓ Test form submissions
+✓ Check image loading
+✓ Validate external links
+✓ Test across browsers
+
+DEPLOYMENT CHECKLIST:
+--------------------
+✓ Update sitemap.xml
+✓ Check robots.txt
+✓ Verify meta tags
+✓ Test all pages locally
+✓ Commit to GitHub
+✓ Deploy to Cloudflare
+✓ Verify live site
+✓ Update documentation
+
+
+================================================================================
+SECTION 8: MAINTENANCE SCHEDULE
+================================================================================
+
+REGULAR UPDATES:
+---------------
+✓ Update DEPLOYMENT_LOG.txt after every change
+✓ Review PROJECT_STANDARDS.txt monthly
+✓ Update sitemap.xml when adding pages
+✓ Backup files weekly
+✓ Check broken links monthly
+✓ Review analytics monthly
+
+DOCUMENTATION UPDATES:
+---------------------
+✓ Log all significant changes immediately
+✓ Update standards when new patterns emerge
+✓ Document all decisions and reasoning
+✓ Keep contact information current
+✓ Archive old logs annually
+
+
+================================================================================
+SECTION 9: CONTACT & REFERENCES
+================================================================================
+
+PROJECT OWNER:
+-------------
+Name: Amit Kumar
+Email: onestepforthelife@gmail.com
+LinkedIn: https://www.linkedin.com/in/leadershipexpertamit/
+GitHub: onestepforthelife
+
+PROJECT LINKS:
+-------------
+Live Site: https://ideas-before-time.pages.dev
+GitHub Repo: https://github.com/onestepforthelife/cloudfare
+Cloudflare Account: ec0e231cd7a2cde41590c6e8272cc78c
+
+RELATED DOCUMENTS:
+-----------------
+- DEPLOYMENT_LOG.txt - Change history and troubleshooting
+- PROJECT_STANDARDS.txt - This document
+- GITHUB_UPLOAD_GUIDE.txt - GitHub deployment instructions
+- README.md - Project overview
+
+
+================================================================================
+END OF STANDARDS DOCUMENT
+================================================================================
+Last Updated: November 24, 2025
+Next Review: December 24, 2025
+
+NOTE: This document should be updated whenever new patterns, preferences, or
+standards emerge during development. All changes must be documented with date
+and reason.
+================================================================================

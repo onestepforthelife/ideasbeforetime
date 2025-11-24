@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghar Ghar Game - Interactive Role Play for Kids | Away from Phones</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Ghar Ghar - Interactive role-play game for kids. Away from phones, come here! Educational storytelling game with shopkeeper, teacher, principal & student roles. Free, safe, no data collection.">
+    <meta name="keywords" content="ghar ghar game, kids role play, educational games, children storytelling, screen-free activities, Indian kids games, घर घर खेल">
+    <meta name="author" content="Amit Kumar">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ghar Ghar Game - Interactive Role Play for Kids">
+    <meta property="og:description" content="Away from phones, come here! Fun educational role-play game where kids become shopkeepers, teachers, principals & students. Free & safe.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amitagrawal.info/ghar-ghar-game.html">
+    <meta property="og:image" content="https://amitagrawal.info/images/ghar-ghar-preview.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ghar Ghar Game - Interactive Role Play for Kids">
+    <meta name="twitter:description" content="Away from phones, come here! Educational storytelling game for children.">
+    <meta name="twitter:image" content="https://amitagrawal.info/images/ghar-ghar-preview.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ff6b6b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Ghar Ghar">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YGVH0QGSGP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YGVH0QGSGP');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .game-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff6b6b;
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .tagline {
+            text-align: center;
+            color: #ff6b6b;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 25px;
+            font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .setup-screen, .game-screen {
+            display: none;
+        }
+
+        .setup-screen.active, .game-screen.active {
+            display: block;
+        }
+
+        .player-setup {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .player-card {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            padding: 20px;
+            border-radius: 15px;
+            border: 3px solid #fdcb6e;
+        }
+
+        .player-card h3 {
+            color: #2d3436;
+            margin-bottom: 15px;
+        }
+
+        .role-select, .shop-select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #fdcb6e;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .start-btn {
+            display: block;
+            margin: 0 auto;
+            padding: 20px 60px;
+            font-size: 1.5em;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255,107,107,0.4);
+            transition: transform 0.2s;
+        }
+
+        .start-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .game-area {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+            min-height: 400px;
+        }
+
+        .character {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            border: 4px solid #dfe6e9;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            min-height: 350px;
+        }
+
+        .character:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .character.talking {
+            border-color: #00b894;
+            background: linear-gradient(135deg, #e8f8f5 0%, #d4f1e8 100%);
+            animation: pulse 0.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .character-figure {
+            position: relative;
+            display: inline-block;
+            transition: transform 0.1s ease-out;
+            margin: 10px 0;
+        }
+
+        .character-body-full {
+            font-size: 8em;
+            display: block;
+            line-height: 1;
+        }
+
+        .character-role-icon {
+            font-size: 3em;
+            position: absolute;
+            top: 10px;
+            right: -10px;
+            background: white;
+            border-radius: 50%;
+            padding: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .character.talking .character-figure {
+            animation: bounce 0.6s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .character-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2d3436;
+            margin: 15px 0 5px;
+        }
+
+        .character-role {
+            color: #636e72;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+
+        .character-shop {
+            background: #74b9ff;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .character-inventory {
+            min-height: 60px;
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 10px;
+            border: 2px dashed #b2bec3;
+        }
+
+        .character.talking .character-inventory {
+            border-color: #00b894;
+            background: rgba(0,184,148,0.1);
+        }
+
+        .inventory-item {
+            display: inline-block;
+            font-size: 2.2em;
+            margin: 3px;
+            cursor: grab;
+            transition: transform 0.2s;
+            user-select: none;
+        }
+
+        .inventory-item:hover {
+            transform: scale(1.2);
+        }
+
+        .inventory-item:active {
+            cursor: grabbing;
+        }
+
+        /* Action animations */
+        .character.eating .character-figure {
+            animation: eating 0.5s ease-in-out 3;
+        }
+
+        @keyframes eating {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .character.writing .character-figure {
+            animation: writing 0.3s ease-in-out 5;
+        }
+
+        @keyframes writing {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+
+        .character.playing .character-figure {
+            animation: playing 0.4s ease-in-out 4;
+        }
+
+        @keyframes playing {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .character.reading .character-figure {
+            animation: reading 0.6s ease-in-out 3;
+        }
+
+        @keyframes reading {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .character.drinking .character-figure {
+            animation: drinking 0.5s ease-in-out 3;
+        }
+
+        @keyframes drinking {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(-15deg) scale(1.05); }
+        }
+
+        .character.using .character-figure {
+            animation: using 0.4s ease-in-out 4;
+        }
+
+        @keyframes using {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.15) rotate(10deg); }
+        }
+
+        .action-bubble {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff6b6b;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            animation: bubblePop 2s ease-out forwards;
+            z-index: 10;
+        }
+
+        @keyframes bubblePop {
+            0% { opacity: 0; transform: scale(0); }
+            10% { opacity: 1; transform: scale(1.2); }
+            20% { transform: scale(1); }
+            90% { opacity: 1; }
+            100% { opacity: 0; transform: scale(0.8); }
+        }
+
+        .instructions {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            padding: 18px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.05em;
+            color: #2d3436;
+            font-weight: 500;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .reset-btn {
+            display: block;
+            margin: 25px auto 0;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            background: #636e72;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .reset-btn:hover {
+            background: #2d3436;
+        }
+
+        /* Item pool at bottom */
+        .item-pool {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,1) 100%);
+            padding: 20px;
+            border-top: 4px solid #ff6b6b;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .pool-title {
+            text-align: center;
+            font-size: 1.1em;
+            color: #2d3436;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .pool-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .pool-item {
+            font-size: 3em;
+            cursor: pointer;
+            transition: all 0.3s;
+            user-select: none;
+            position: relative;
+        }
+
+        .pool-item:hover {
+            transform: scale(1.3) translateY(-10px);
+        }
+
+        .pool-item:active {
+            cursor: grabbing;
+        }
+
+        /* Flying item animation */
+        .flying-item {
+            position: fixed;
+            font-size: 3em;
+            pointer-events: none;
+            z-index: 2000;
+            animation: flyUp 0.8s ease-out forwards;
+        }
+
+        @keyframes flyUp {
+            0% {
+                transform: translateY(0) scale(1) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-400px) scale(1.5) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .game-screen {
+            padding-bottom: 180px;
+        }
+
+        /* Watermark */
+        .watermark {
+            position: fixed;
+            bottom: 160px;
+            right: 20px;
+            font-size: 0.85em;
+            color: rgba(0,0,0,0.3);
+            font-weight: 600;
+            z-index: 999;
+            pointer-events: none;
+            text-align: right;
+            line-height: 1.4;
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border: 2px solid #ffc107;
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #856404;
+            line-height: 1.6;
+        }
+
+        .disclaimer strong {
+            color: #ff6b6b;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .disclaimer ul {
+            margin: 10px 0 10px 20px;
+            padding: 0;
+        }
+
+        .disclaimer li {
+            margin: 5px 0;
+        }
+
+        /* Tips Box */
+        .tips-box {
+            background: linear-gradient(135deg, #e8f8f5 0%, #d4f1e8 100%);
+            border: 2px solid #00b894;
+            border-radius: 10px;
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            color: #2d3436;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .tips-box strong {
+            color: #00b894;
+            margin-right: 10px;
+        }
+
+        .tips-box span {
+            background: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        /* Keyboard shortcuts hint */
+        .shortcuts {
+            position: fixed;
+            bottom: 160px;
+            left: 20px;
+            background: rgba(255,255,255,0.95);
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 0.8em;
+            color: #636e72;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+
+        .shortcuts strong {
+            display: block;
+            color: #2d3436;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .shortcuts {
+                display: none;
+            }
+            
+            .tips-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>🏠 Ghar Ghar Game 🏠</h1>
+        <p class="subtitle">घर घर खेल - Interactive Role Play!</p>
+        <p class="tagline">✨ Away from phones, come here! ✨</p>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+            <strong>⚠️ Disclaimer / अस्वीकरण</strong>
+            <ul>
+                <li><strong>Educational Purpose:</strong> This game is designed for children's creative play and storytelling development.</li>
+                <li><strong>शैक्षिक उद्देश्य:</strong> यह खेल बच्चों के रचनात्मक खेल और कहानी कहने के विकास के लिए बनाया गया है।</li>
+                <li><strong>Parental Guidance:</strong> Adult supervision recommended for children under 6 years.</li>
+                <li><strong>No Data Collection:</strong> This game runs entirely in your browser. No personal data is collected or stored.</li>
+                <li><strong>Free to Use:</strong> This is a free educational tool. No purchases required.</li>
+            </ul>
+        </div>
+
+        <!-- Setup Screen -->
+        <div class="setup-screen active" id="setupScreen">
+            <div class="player-setup" id="playerSetup"></div>
+            <button class="start-btn" onclick="startGame()">शुरू करें / Start Game!</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div class="game-screen" id="gameScreen">
+            <!-- Language & Controls Bar -->
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;flex-wrap:wrap;gap:10px;">
+                <select id="langSelect" onchange="changeLang(this.value)" style="padding:8px 15px;border-radius:20px;border:2px solid #ff6b6b;font-size:1em;cursor:pointer;">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                    <option value="ta">தமிழ்</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="bn">বাংলা</option>
+                </select>
+                <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                    <button onclick="saveGameState()" style="padding:8px 20px;background:#00b894;color:white;border:none;border-radius:20px;cursor:pointer;font-size:0.9em;">💾 Save</button>
+                    <button onclick="loadGameState()" style="padding:8px 20px;background:#0984e3;color:white;border:none;border-radius:20px;cursor:pointer;font-size:0.9em;">📂 Load</button>
+                    <button id="installBtn" style="display:none;padding:8px 20px;background:#6c5ce7;color:white;border:none;border-radius:20px;cursor:pointer;font-size:0.9em;">📱 Install App</button>
+                    <button onclick="showStoryPrompts()" style="padding:8px 20px;background:#fd79a8;color:white;border:none;border-radius:20px;cursor:pointer;font-size:0.9em;">📖 Story Ideas</button>
+                    <button onclick="showMultiplayerMenu()" style="padding:8px 20px;background:#e17055;color:white;border:none;border-radius:20px;cursor:pointer;font-size:0.9em;">🌐 Play Online</button>
+                </div>
+            </div>
+
+            <div class="instructions">
+                🎭 Click character to make them talk! 
+                👆 Double-click items at bottom to send them flying! 
+                🎯 Drag items to characters! 
+                ✨ Click items in inventory to USE them (with sound)!
+                🔊 Sound effects enabled!
+            </div>
+            
+            <!-- Quick Tips -->
+            <div class="tips-box">
+                <strong>💡 Pro Tips:</strong>
+                <span>• Mix roles for fun stories</span>
+                <span>• Collect items before using</span>
+                <span>• Characters follow your mouse!</span>
+            </div>
+
+            <!-- Story Prompt Modal -->
+            <div id="storyModal" style="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:white;padding:30px;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,0.3);z-index:9999;max-width:500px;width:90%;">
+                <h3 style="color:#ff6b6b;margin-bottom:15px;">📖 Story Prompts</h3>
+                <div id="storyContent"></div>
+                <button onclick="closeStoryModal()" style="margin-top:20px;padding:10px 30px;background:#636e72;color:white;border:none;border-radius:20px;cursor:pointer;">Close</button>
+            </div>
+            <div id="storyOverlay" onclick="closeStoryModal()" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:9998;"></div>
+
+            <div class="game-area" id="gameArea"></div>
+            <button class="reset-btn" onclick="resetGame()">New Game</button>
+        </div>
+    </div>
+
+    <!-- Item Pool at Bottom -->
+    <div class="item-pool" id="itemPool" style="display: none;">
+        <div class="pool-title">🎁 Double-Click Items to Use in Story! 🎁</div>
+        <div class="pool-items" id="poolItems"></div>
+    </div>
+
+    <!-- Watermark -->
+    <div class="watermark">
+        Ghar Ghar™<br>
+        by Amit Kumar<br>
+        © 2025
+    </div>
+
+    <!-- Keyboard Shortcuts -->
+    <div class="shortcuts" id="shortcuts" style="display: none;">
+        <strong>⌨️ Shortcuts:</strong>
+        Press 1-4: Select player<br>
+        Space: Toggle talking<br>
+        R: Reset game
+    </div>
+
+    <!-- PeerJS for Free Multiplayer -->
+    <script src="https://unpkg.com/peerjs@1.5.1/dist/peerjs.min.js"></script>
+    
+    <!-- External Scripts -->
+    <script src="ghar-ghar-roles-extended.js"></script>
+    <script src="ghar-ghar-i18n.js"></script>
+    <script src="ghar-ghar-stories.js"></script>
+    <script src="ghar-ghar-pwa.js"></script>
+    <script src="ghar-ghar-multiplayer.js"></script>
+
+    <script>
+        let currentLang = 'en';
+        
+        const roles = {
+            shopkeeper: {
+                character: '🧍‍♂️',
+                emoji: '👨‍🍳',
+                name: 'Shopkeeper',
+                shops: [
+                    '🍕 Pizza Shop', '🍛 Indian Food', '🍜 Chinese Food', '🍰 Bakery',
+                    '🥗 Salad Bar', '🍦 Ice Cream', '🌮 Mexican Food', '🍱 Japanese Food',
+                    '🥘 South Indian', '🍔 Burger Shop'
+                ],
+                items: {
+                    '🍕 Pizza Shop': ['🍕', '🧀', '🍅', '🥤', '🍟'],
+                    '🍛 Indian Food': ['🍛', '🍚', '🫓', '🥘', '🧈'],
+                    '🍜 Chinese Food': ['🍜', '🥟', '🍚', '🥢', '🍵'],
+                    '🍰 Bakery': ['🍰', '🧁', '🍪', '🥐', '🍞'],
+                    '🥗 Salad Bar': ['🥗', '🥒', '🥕', '🍅', '🥑'],
+                    '🍦 Ice Cream': ['🍦', '🍨', '🍧', '🍓', '🍫'],
+                    '🌮 Mexican Food': ['🌮', '🌯', '🫔', '🌶️', '🥑'],
+                    '🍱 Japanese Food': ['🍱', '🍣', '🍙', '🍵', '🥢'],
+                    '🥘 South Indian': ['🥘', '🫓', '🍛', '🥥', '☕'],
+                    '🍔 Burger Shop': ['🍔', '🍟', '🥤', '🧀', '🍅']
+                }
+            },
+            teacher: {
+                character: '🧍‍♀️',
+                emoji: '👩‍🏫',
+                name: 'Teacher',
+                shops: [
+                    '📚 English Class', '🔢 Math Class', '🔬 Science Lab', '🎨 Art Class',
+                    '🎵 Music Class', '⚽ Sports Teacher', '💻 Computer Class',
+                    '🌍 Geography', '📖 Hindi Class', '🧪 Chemistry'
+                ],
+                items: {
+                    '📚 English Class': ['📚', '📖', '✏️', '📝', '🔤'],
+                    '🔢 Math Class': ['🔢', '➕', '➖', '✖️', '➗'],
+                    '🔬 Science Lab': ['🔬', '🧪', '⚗️', '🧬', '🔭'],
+                    '🎨 Art Class': ['🎨', '🖌️', '🖍️', '✂️', '📐'],
+                    '🎵 Music Class': ['🎵', '🎹', '🎸', '🥁', '🎤'],
+                    '⚽ Sports Teacher': ['⚽', '🏀', '🏐', '🏸', '🏆'],
+                    '💻 Computer Class': ['💻', '⌨️', '🖱️', '🖥️', '💾'],
+                    '🌍 Geography': ['🌍', '🗺️', '🧭', '🏔️', '🌊'],
+                    '📖 Hindi Class': ['📖', '✍️', '📝', '🔤', '📚'],
+                    '🧪 Chemistry': ['🧪', '⚗️', '🧬', '💊', '🔬']
+                }
+            },
+            principal: {
+                character: '🧍‍♂️',
+                emoji: '👨‍💼',
+                name: 'Principal',
+                shops: ['🏫 Main Office', '📋 Assembly Hall', '🏆 Awards Room'],
+                items: {
+                    '🏫 Main Office': ['📋', '📝', '📞', '💼', '🖊️'],
+                    '📋 Assembly Hall': ['🎤', '📢', '🏫', '👥', '📋'],
+                    '🏆 Awards Room': ['🏆', '🥇', '🎖️', '⭐', '📜']
+                }
+            },
+            student: {
+                character: '🧍‍♀️',
+                emoji: '👧',
+                name: 'Student',
+                shops: ['🎒 Class 1', '📝 Class 2', '✏️ Class 3', '📐 Class 4', '🖊️ Class 5'],
+                items: {
+                    '🎒 Class 1': ['🎒', '📚', '✏️', '🖍️', '📖'],
+                    '📝 Class 2': ['📝', '✏️', '📏', '📐', '🖊️'],
+                    '✏️ Class 3': ['✏️', '📓', '📚', '🖍️', '✂️'],
+                    '📐 Class 4': ['📐', '📏', '🖊️', '📝', '📚'],
+                    '🖊️ Class 5': ['🖊️', '📓', '📚', '💻', '🎒']
+                }
+            }
+        };
+
+        let players = [];
+        let currentTalking = null;
+        let mouseX = 0, mouseY = 0;
+        let allItems = new Set();
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            updateCharacterPositions();
+        });
+
+        function initSetup() {
+            const setupDiv = document.getElementById('playerSetup');
+            for (let i = 1; i <= 4; i++) {
+                const card = document.createElement('div');
+                card.className = 'player-card';
+                card.innerHTML = `
+                    <h3>Player ${i}</h3>
+                    <select class="role-select" id="role${i}" onchange="updateShopOptions(${i})">
+                        <option value="">Choose Role...</option>
+                        <option value="shopkeeper">🧑‍🍳 Shopkeeper</option>
+                        <option value="teacher">👩‍🏫 Teacher</option>
+                        <option value="principal">👔 Principal</option>
+                        <option value="student">👧 Student</option>
+                        <option value="doctor">👨‍⚕️ Doctor</option>
+                        <option value="police">👮 Police</option>
+                        <option value="chef">👨‍🍳 Chef</option>
+                        <option value="farmer">👨‍🌾 Farmer</option>
+                        <option value="artist">👩‍🎨 Artist</option>
+                        <option value="firefighter">👨‍🚒 Firefighter</option>
+                    </select>
+                    <input type="text" class="player-name-input" id="name${i}" placeholder="Player Name" style="width:100%;padding:8px;border-radius:8px;border:2px solid #fdcb6e;margin-bottom:10px;">
+                    <select class="shop-select" id="shop${i}" disabled>
+                        <option value="">Choose Shop/Class...</option>
+                    </select>
+                    <select class="skin-tone-select" id="skin${i}" style="width:100%;padding:8px;border-radius:8px;border:2px solid #fdcb6e;margin-top:10px;">
+                        <option value="🧍">Default</option>
+                        <option value="🧍🏻">Light</option>
+                        <option value="🧍🏼">Medium-Light</option>
+                        <option value="🧍🏽">Medium</option>
+                        <option value="🧍🏾">Medium-Dark</option>
+                        <option value="🧍🏿">Dark</option>
+                    </select>
+                `;
+                setupDiv.appendChild(card);
+            }
+        }
+
+        // Merge extended roles
+        Object.assign(roles, extendedRoles);
+
+        function updateShopOptions(playerNum) {
+            const roleSelect = document.getElementById(`role${playerNum}`);
+            const shopSelect = document.getElementById(`shop${playerNum}`);
+            const role = roleSelect.value;
+
+            shopSelect.innerHTML = '<option value="">Choose Shop/Class...</option>';
+            
+            if (role && roles[role]) {
+                shopSelect.disabled = false;
+                roles[role].shops.forEach(shop => {
+                    const option = document.createElement('option');
+                    option.value = shop;
+                    option.textContent = shop;
+                    shopSelect.appendChild(option);
+                });
+            } else {
+                shopSelect.disabled = true;
+            }
+        }
+
+        function changeLang(lang) {
+            currentLang = lang;
+            localStorage.setItem('gharGharLang', lang);
+            // Update UI text
+            document.querySelector('.subtitle').textContent = t('subtitle', lang);
+            document.querySelector('.tagline').textContent = t('tagline', lang);
+        }
+
+        function showStoryPrompts() {
+            const suggestions = suggestStories(players);
+            const content = document.getElementById('storyContent');
+            
+            if (suggestions.length === 0) {
+                content.innerHTML = '<p>Add more players to unlock story prompts!</p>';
+            } else {
+                content.innerHTML = suggestions.map(story => `
+                    <div style="background:#f8f9fa;padding:15px;border-radius:10px;margin-bottom:10px;">
+                        <h4 style="color:#ff6b6b;margin-bottom:5px;">${story.title}</h4>
+                        <p style="font-size:0.9em;color:#636e72;">${story.prompt}</p>
+                        <span style="background:#74b9ff;color:white;padding:3px 10px;border-radius:15px;font-size:0.8em;">${story.difficulty}</span>
+                    </div>
+                `).join('');
+            }
+            
+            document.getElementById('storyModal').style.display = 'block';
+            document.getElementById('storyOverlay').style.display = 'block';
+        }
+
+        function closeStoryModal() {
+            document.getElementById('storyModal').style.display = 'none';
+            document.getElementById('storyOverlay').style.display = 'none';
+        }
+
+        // Multiplayer menu
+        function showMultiplayerMenu() {
+            const modal = document.createElement('div');
+            modal.id = 'multiplayerModal';
+            modal.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: white;
+                padding: 40px;
+                border-radius: 20px;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+                z-index: 10000;
+                text-align: center;
+                max-width: 500px;
+                width: 90%;
+            `;
+            
+            modal.innerHTML = `
+                <h2 style="color: #ff6b6b; margin-bottom: 20px;">🌐 Play Online - FREE!</h2>
+                <p style="margin-bottom: 25px; color: #636e72;">
+                    Play with friends from anywhere! 100% free, no server costs.
+                </p>
+                <div style="display: grid; gap: 15px;">
+                    <button onclick="createRoom(); closeMultiplayerMenu();" style="padding: 20px; background: linear-gradient(135deg, #00b894 0%, #00cec9 100%); color: white; border: none; border-radius: 15px; cursor: pointer; font-size: 1.1em; font-weight: bold;">
+                        🎮 Create Room<br>
+                        <span style="font-size: 0.8em; font-weight: normal;">Host a game & share code</span>
+                    </button>
+                    <button onclick="showJoinRoomModal(); closeMultiplayerMenu();" style="padding: 20px; background: linear-gradient(135deg, #0984e3 0%, #74b9ff 100%); color: white; border: none; border-radius: 15px; cursor: pointer; font-size: 1.1em; font-weight: bold;">
+                        🚀 Join Room<br>
+                        <span style="font-size: 0.8em; font-weight: normal;">Enter friend's code</span>
+                    </button>
+                    ${conn ? `
+                    <button onclick="disconnectMultiplayer(); closeMultiplayerMenu();" style="padding: 15px; background: #d63031; color: white; border: none; border-radius: 15px; cursor: pointer; font-size: 1em;">
+                        ❌ Disconnect
+                    </button>
+                    ` : ''}
+                </div>
+                <button onclick="closeMultiplayerMenu()" style="margin-top: 20px; padding: 10px 30px; background: #636e72; color: white; border: none; border-radius: 20px; cursor: pointer;">
+                    Close
+                </button>
+                <div style="margin-top: 20px; padding: 15px; background: #fff3cd; border-radius: 10px; font-size: 0.9em; color: #856404;">
+                    <strong>💡 How it works:</strong><br>
+                    Uses peer-to-peer connection (WebRTC). No server needed!<br>
+                    Both players see the same game in real-time.
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            const overlay = document.createElement('div');
+            overlay.id = 'multiplayerOverlay';
+            overlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.5);
+                z-index: 9999;
+            `;
+            overlay.onclick = closeMultiplayerMenu;
+            document.body.appendChild(overlay);
+        }
+
+        function closeMultiplayerMenu() {
+            const modal = document.getElementById('multiplayerModal');
+            const overlay = document.getElementById('multiplayerOverlay');
+            if (modal) modal.remove();
+            if (overlay) overlay.remove();
+        }
+
+        function startGame() {
+            players = [];
+            allItems.clear();
+            
+            for (let i = 1; i <= 4; i++) {
+                const role = document.getElementById(`role${i}`).value;
+                const shop = document.getElementById(`shop${i}`).value;
+                const playerName = document.getElementById(`name${i}`).value || `Player ${i}`;
+                const skinTone = document.getElementById(`skin${i}`).value;
+                
+                if (role && shop) {
+                    const roleData = roles[role];
+                    players.push({
+                        id: i,
+                        role: role,
+                        shop: shop,
+                        character: skinTone,
+                        emoji: roleData.emoji,
+                        name: playerName,
+                        inventory: []
+                    });
+                    
+                    // Collect all items
+                    const items = roleData.items[shop] || [];
+                    items.forEach(item => allItems.add(item));
+                }
+            }
+
+            if (players.length < 2) {
+                alert(t('minPlayers', currentLang));
+                return;
+            }
+
+            document.getElementById('setupScreen').classList.remove('active');
+            document.getElementById('gameScreen').classList.add('active');
+            document.getElementById('itemPool').style.display = 'block';
+            
+            renderCharacters();
+            renderItemPool();
+            updateStats('gameStart');
+        }
+
+        function renderCharacters() {
+            const gameArea = document.getElementById('gameArea');
+            gameArea.innerHTML = '';
+
+            players.forEach(player => {
+                const charDiv = document.createElement('div');
+                charDiv.className = 'character';
+                charDiv.id = `char${player.id}`;
+                charDiv.onclick = () => toggleTalking(player.id);
+                charDiv.ondrop = (e) => handleDrop(e, player.id);
+                charDiv.ondragover = (e) => e.preventDefault();
+                
+                charDiv.innerHTML = `
+                    <div class="character-figure" id="figure${player.id}">
+                        <div class="character-body-full">${player.character}</div>
+                        <div class="character-role-icon">${player.emoji}</div>
+                    </div>
+                    <div class="character-name">${player.name}</div>
+                    <div class="character-role">${roles[player.role].name}</div>
+                    <div class="character-shop">${player.shop}</div>
+                    <div class="character-inventory" id="inventory${player.id}"></div>
+                `;
+                gameArea.appendChild(charDiv);
+            });
+        }
+
+        function renderItemPool() {
+            const poolItems = document.getElementById('poolItems');
+            poolItems.innerHTML = '';
+            
+            allItems.forEach(item => {
+                const itemSpan = document.createElement('span');
+                itemSpan.className = 'pool-item';
+                itemSpan.textContent = item;
+                itemSpan.draggable = true;
+                itemSpan.ondragstart = (e) => {
+                    e.dataTransfer.setData('text/plain', item);
+                };
+                itemSpan.ondblclick = (e) => createFlyingItem(item, e.clientX, e.clientY);
+                poolItems.appendChild(itemSpan);
+            });
+        }
+
+        function createFlyingItem(item, x, y) {
+            const flyingItem = document.createElement('div');
+            flyingItem.className = 'flying-item';
+            flyingItem.textContent = item;
+            flyingItem.style.left = x + 'px';
+            flyingItem.style.top = y + 'px';
+            document.body.appendChild(flyingItem);
+            
+            setTimeout(() => flyingItem.remove(), 800);
+        }
+
+        function handleDrop(e, playerId) {
+            e.preventDefault();
+            const item = e.dataTransfer.getData('text/plain');
+            const player = players.find(p => p.id === playerId);
+            
+            if (player && !player.inventory.includes(item)) {
+                player.inventory.push(item);
+                updateInventory(playerId);
+            }
+        }
+
+        function updateInventory(playerId) {
+            const player = players.find(p => p.id === playerId);
+            const inventoryDiv = document.getElementById(`inventory${playerId}`);
+            
+            inventoryDiv.innerHTML = player.inventory
+                .map(item => `<span class="inventory-item" onclick="useItem('${item}', ${playerId})">${item}</span>`)
+                .join('');
+        }
+
+        // Item categories and their actions
+        const itemActions = {
+            food: {
+                items: ['🍕', '🍛', '🍜', '🍰', '🥗', '🍦', '🌮', '🍱', '🥘', '🍔', '🧀', '🍅', '🍟', '🍚', '🫓', '🧈', '🥟', '🥢', '🧁', '🍪', '🥐', '🍞', '🥒', '🥕', '🥑', '🍨', '🍧', '🍓', '🍫', '🌯', '🫔', '🌶️', '🍣', '🍙', '🥥'],
+                animation: 'eating',
+                message: 'Yummy! 😋'
+            },
+            drink: {
+                items: ['🥤', '🍵', '☕'],
+                animation: 'drinking',
+                message: 'Refreshing! 🥤'
+            },
+            writing: {
+                items: ['✏️', '📝', '🖊️', '✍️', '📓', '📋', '📖', '📚', '🔤'],
+                animation: 'writing',
+                message: 'Writing... ✍️'
+            },
+            reading: {
+                items: ['📚', '📖', '📋', '📜'],
+                animation: 'reading',
+                message: 'Reading... 📖'
+            },
+            playing: {
+                items: ['⚽', '🏀', '🏐', '🏸', '🎹', '🎸', '🥁', '🎤', '🎵'],
+                animation: 'playing',
+                message: 'Playing! 🎮'
+            },
+            using: {
+                items: ['🔬', '🧪', '⚗️', '🧬', '🔭', '🎨', '🖌️', '🖍️', '✂️', '📐', '💻', '⌨️', '🖱️', '🖥️', '💾', '🌍', '🗺️', '🧭', '🏔️', '🌊', '🔢', '➕', '➖', '✖️', '➗', '📞', '💼', '🎤', '📢', '🏫', '👥', '🏆', '🥇', '🎖️', '⭐', '🎒', '📏', '🧪', '💊'],
+                animation: 'using',
+                message: 'Using it! ✨'
+            }
+        };
+
+        // Sound effects using Web Audio API
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        
+        function playSound(frequency, duration, type = 'sine') {
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.frequency.value = frequency;
+            oscillator.type = type;
+            
+            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration);
+            
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + duration);
+        }
+
+        function playActionSound(action) {
+            switch(action) {
+                case 'eating':
+                    // Munching sound
+                    playSound(400, 0.1);
+                    setTimeout(() => playSound(450, 0.1), 150);
+                    setTimeout(() => playSound(400, 0.1), 300);
+                    break;
+                case 'drinking':
+                    // Gulping sound
+                    playSound(300, 0.15);
+                    setTimeout(() => playSound(250, 0.15), 200);
+                    break;
+                case 'writing':
+                    // Scratching sound
+                    playSound(800, 0.05, 'square');
+                    setTimeout(() => playSound(850, 0.05, 'square'), 100);
+                    break;
+                case 'reading':
+                    // Page flip sound
+                    playSound(600, 0.1, 'triangle');
+                    break;
+                case 'playing':
+                    // Happy bounce sound
+                    playSound(523, 0.1);
+                    setTimeout(() => playSound(659, 0.1), 100);
+                    setTimeout(() => playSound(784, 0.15), 200);
+                    break;
+                case 'using':
+                    // Click sound
+                    playSound(1000, 0.05);
+                    setTimeout(() => playSound(1200, 0.05), 80);
+                    break;
+            }
+        }
+
+        function useItem(item, playerId) {
+            const charElement = document.getElementById(`char${playerId}`);
+            
+            // Find which action this item belongs to
+            let action = 'using';
+            let message = 'Using it! ✨';
+            
+            for (const [actionType, data] of Object.entries(itemActions)) {
+                if (data.items.includes(item)) {
+                    action = data.animation;
+                    message = data.message;
+                    break;
+                }
+            }
+            
+            // Remove any existing action classes
+            charElement.classList.remove('eating', 'drinking', 'writing', 'reading', 'playing', 'using');
+            
+            // Add new action class
+            charElement.classList.add(action);
+            
+            // Play sound effect
+            playActionSound(action);
+            
+            // Track stats
+            updateStats('itemUsed');
+            
+            // Show action bubble
+            const bubble = document.createElement('div');
+            bubble.className = 'action-bubble';
+            bubble.textContent = message;
+            charElement.appendChild(bubble);
+            
+            // Remove action class and bubble after animation
+            setTimeout(() => {
+                charElement.classList.remove(action);
+                bubble.remove();
+            }, 2000);
+        }
+
+        function updateCharacterPositions() {
+            players.forEach(player => {
+                const figure = document.getElementById(`figure${player.id}`);
+                if (!figure) return;
+
+                const rect = figure.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+
+                const deltaX = (mouseX - centerX) / 60;
+                const deltaY = (mouseY - centerY) / 60;
+
+                const maxMove = 8;
+                const moveX = Math.max(-maxMove, Math.min(maxMove, deltaX));
+                const moveY = Math.max(-maxMove, Math.min(maxMove, deltaY));
+
+                figure.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+        }
+
+        function toggleTalking(playerId) {
+            document.querySelectorAll('.character').forEach(char => {
+                char.classList.remove('talking');
+            });
+
+            const charElement = document.getElementById(`char${playerId}`);
+            if (currentTalking === playerId) {
+                currentTalking = null;
+            } else {
+                charElement.classList.add('talking');
+                currentTalking = playerId;
+            }
+        }
+
+        function resetGame() {
+            document.getElementById('gameScreen').classList.remove('active');
+            document.getElementById('setupScreen').classList.add('active');
+            document.getElementById('itemPool').style.display = 'none';
+            players = [];
+            currentTalking = null;
+            allItems.clear();
+        }
+
+        initSetup();
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('gameScreen').classList.contains('active')) {
+                // Show shortcuts hint
+                document.getElementById('shortcuts').style.display = 'block';
+                
+                // Number keys 1-4 to select players
+                if (e.key >= '1' && e.key <= '4') {
+                    const playerNum = parseInt(e.key);
+                    if (players[playerNum - 1]) {
+                        toggleTalking(players[playerNum - 1].id);
+                    }
+                }
+                
+                // Space to toggle current talking
+                if (e.key === ' ' && currentTalking) {
+                    e.preventDefault();
+                    toggleTalking(currentTalking);
+                }
+                
+                // R to reset
+                if (e.key === 'r' || e.key === 'R') {
+                    if (confirm('Reset game? खेल रीसेट करें?')) {
+                        resetGame();
+                    }
+                }
+            }
+        });
+
+        // Track game events
+        function trackEvent(action, label) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    'event_category': 'Ghar_Ghar_Game',
+                    'event_label': label
+                });
+            }
+        }
+
+        // Track game start
+        const originalStartGame = startGame;
+        startGame = function() {
+            trackEvent('game_start', `${players.length}_players`);
+            originalStartGame();
+        };
+
+        // Track item usage
+        const originalUseItem = useItem;
+        useItem = function(item, playerId) {
+            trackEvent('item_used', item);
+            originalUseItem(item, playerId);
+        };
+    </script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Ghar Ghar Game",
+        "alternateName": "घर घर खेल",
+        "description": "Interactive role-play game for kids. Away from phones, come here! Educational storytelling with shopkeeper, teacher, principal & student roles.",
+        "url": "https://amitagrawal.info/ghar-ghar-game.html",
+        "applicationCategory": "GameApplication",
+        "genre": "Educational Game",
+        "audience": {
+            "@type": "PeopleAudience",
+            "suggestedMinAge": 4,
+            "suggestedMaxAge": 12
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Amit Kumar",
+            "url": "https://amitagrawal.info"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+        },
+        "inLanguage": ["en", "hi"],
+        "isAccessibleForFree": true,
+        "browserRequirements": "Requires JavaScript. Works on all modern browsers.",
+        "operatingSystem": "Any"
+    }
+    </script>
+</body>
+</html>

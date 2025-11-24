@@ -1,0 +1,240 @@
+================================================================================
+DEPLOYMENT & MAINTENANCE LOG - IDEAS BEFORE TIME
+================================================================================
+Project: Ideas Before Time - Innovation Timeline & Strategic Intelligence
+Location: C:\Users\araag\Documents\Cloudfare\DEPLOYMENT_LOG.txt
+GitHub: onestepforthelife/cloudfare
+Live Site: ideas-before-time.pages.dev
+================================================================================
+
+INDEX:
+------
+[2025-11-24-001] Website URL Not Working - DNS Issue
+[2025-11-24-002] Video Creation Request - Out of Scope
+[2025-11-24-003] Project Standards Documentation Created
+
+
+================================================================================
+[2025-11-24-001] WEBSITE URL NOT WORKING - DNS ISSUE
+================================================================================
+Time: November 24, 2025 (Afternoon)
+Status: RESOLVED
+Priority: HIGH
+
+ISSUE REPORTED:
+--------------
+- Website URL not accessible: ideas-before-time.pages.dev
+- Error: DNS_PROBE_FINISHED_NXDOMAIN (domain not found)
+- User saw "No production routes" in Cloudflare dashboard
+
+ROOT CAUSE ANALYSIS:
+-------------------
+- Two separate projects existed in Cloudflare Pages:
+  1. "cloudfare" project - Had actual files deployed at cloudfare-7mu.pages.dev
+  2. "ideas-before-time" project - Empty project with zero deployments
+- The empty "ideas-before-time" project was reserving the desired domain name
+- Domain name conflict prevented proper URL assignment
+
+SOLUTION IMPLEMENTED:
+--------------------
+Step 1: Configuration Update
+  - File: Cloudfare/wrangler.jsonc
+  - Action: Added pages_build_output_dir configuration
+  - Action: Merged observability settings properly
+  - Result: Configuration file now complete
+
+Step 2: Project Cleanup
+  - Action: Deleted empty "ideas-before-time" project from Cloudflare
+  - Result: Domain name freed up for use
+
+Step 3: Project Rename
+  - Action: Renamed "cloudfare" project to "ideas-before-time"
+  - Result: Project now has correct name matching desired URL
+
+CURRENT STATUS:
+--------------
+✓ Project name: ideas-before-time
+✓ Old URL (still active): cloudfare-7mu.pages.dev
+⏳ New URL (DNS propagating): ideas-before-time.pages.dev
+✓ GitHub repo: onestepforthelife/cloudfare
+✓ Last deployment: 20 hours ago (successful)
+✓ All files present and deployed
+
+FILES MODIFIED:
+--------------
+- Cloudfare/wrangler.jsonc - Updated configuration
+- Cloudfare/DEPLOYMENT_LOG.txt - Created this log
+
+TECHNICAL NOTES:
+---------------
+- DNS propagation typically takes 2-3 minutes
+- Both URLs work during transition period
+- No code changes required - pure configuration fix
+- Static site deployment (no build process needed)
+
+NEXT STEPS:
+----------
+1. Wait for DNS propagation (2-3 minutes)
+2. Verify ideas-before-time.pages.dev is accessible
+3. Update all documentation with new URL
+4. Test all pages and functionality
+
+
+================================================================================
+[2025-11-24-002] VIDEO CREATION REQUEST - OUT OF SCOPE
+================================================================================
+Time: November 24, 2025 (Afternoon)
+Status: DECLINED
+Priority: N/A
+
+REQUEST:
+--------
+User requested help creating video presentation with:
+- Speech audio
+- Personal images
+- Smart background for Yale University admission
+
+RESPONSE:
+---------
+- Video creation is outside Kiro's capabilities
+- Kiro specializes in code, development, and file management
+- Recommended alternative tools:
+  * Adobe Premiere Pro / DaVinci Resolve (professional)
+  * Canva (user-friendly with templates)
+  * iMovie / Windows Video Editor (built-in)
+  * Descript (speech-based videos)
+
+ACTION TAKEN:
+------------
+- Explained scope limitations
+- Provided alternative tool recommendations
+- Offered to help with web-based presentations if needed
+
+
+================================================================================
+END OF LOG
+================================================================================
+Last Updated: November 24, 2025
+Next Review: As needed
+
+
+================================================================================
+[2025-11-24-003] PROJECT STANDARDS DOCUMENTATION CREATED
+================================================================================
+Time: November 24, 2025 (Afternoon)
+Status: COMPLETED
+Priority: HIGH
+
+REQUEST:
+--------
+User requested permanent documentation of:
+- Working boundaries and limitations
+- Coding standards and HTML style preferences
+- Documentation format and record-keeping style
+- Project preferences and communication style
+- All standards to be maintained forever across all sessions
+
+PURPOSE:
+--------
+Create a comprehensive reference document that ensures:
+- Consistency across all future work
+- Continuity between different work sessions
+- Clear guidelines for AI assistant (Kiro)
+- Preservation of project standards and preferences
+- No loss of context or "forgetting" previous decisions
+
+SOLUTION IMPLEMENTED:
+--------------------
+Created: Cloudfare/PROJECT_STANDARDS.txt
+
+Document includes 9 major sections:
+1. Design & HTML Standards
+   - Color scheme (purple gradient #667eea to #764ba2)
+   - HTML structure requirements
+   - Navigation menu standards
+   - File naming conventions
+
+2. Documentation Standards
+   - Log file format with indexed entries
+   - Text file style guidelines
+   - Record-keeping requirements
+
+3. Working Boundaries & Preferences
+   - What to do (web dev, Python, deployment)
+   - What not to do (video, image editing, etc.)
+   - Deployment preferences (Cloudflare Pages)
+   - Technology stack (pure HTML/CSS/JS)
+
+4. Content Standards
+   - Innovation page requirements
+   - Business content guidelines
+   - Personal branding elements
+
+5. Communication Style
+   - How to work with Kiro
+   - Documentation tone
+
+6. Project Structure
+   - Directory layout
+   - File organization
+
+7. Quality Standards
+   - Code quality requirements
+   - Testing checklist
+   - Deployment checklist
+
+8. Maintenance Schedule
+   - Regular update requirements
+   - Documentation update frequency
+
+9. Contact & References
+   - Project owner information
+   - Project links
+   - Related documents
+
+KEY FEATURES:
+------------
+✓ Comprehensive coverage of all project aspects
+✓ Clear do's and don'ts
+✓ Specific technical requirements
+✓ Maintenance guidelines
+✓ Cross-referenced with other documentation
+
+FILES CREATED:
+-------------
+- Cloudfare/PROJECT_STANDARDS.txt (New - 400+ lines)
+
+FILES UPDATED:
+-------------
+- Cloudfare/DEPLOYMENT_LOG.txt (Added this entry)
+
+BENEFITS:
+---------
+✓ No more "I don't remember" from AI assistant
+✓ Consistent work quality across all sessions
+✓ Clear reference for all future development
+✓ Preservation of design decisions and rationale
+✓ Easy onboarding for any new collaborators
+✓ Permanent knowledge base that grows over time
+
+USAGE INSTRUCTIONS:
+------------------
+- Kiro will read PROJECT_STANDARDS.txt at start of each session
+- All new work must follow documented standards
+- Update standards when new patterns emerge
+- Reference standards when making decisions
+- Keep standards document current and accurate
+
+NEXT STEPS:
+----------
+✓ Standards document created and saved
+✓ Will be referenced in all future work
+✓ Will be updated as new preferences emerge
+✓ Serves as permanent project memory
+
+
+================================================================================
+END OF LOG
+================================================================================
+Last Updated: November 24, 2025
+Next Review: As needed

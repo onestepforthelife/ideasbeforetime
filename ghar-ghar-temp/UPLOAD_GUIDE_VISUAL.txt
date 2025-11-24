@@ -1,0 +1,160 @@
+╔══════════════════════════════════════════════════════════════╗
+║     🏠 GHAR GHAR - CLOUDFLARE UPLOAD GUIDE (VISUAL) 🏠      ║
+║              You Already Have Chrome Open!                   ║
+╚══════════════════════════════════════════════════════════════╝
+
+📍 YOU ARE HERE: Chrome with Cloudflare open
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: In Cloudflare Dashboard
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Look at LEFT SIDEBAR, find and click:
+
+    ┌─────────────────┐
+    │   📄 Pages      │  ← CLICK THIS
+    └─────────────────┘
+
+Then you'll see a button:
+
+    ┌─────────────────────────┐
+    │  + Create a project     │  ← CLICK THIS
+    └─────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 2: Choose Upload Method
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+You'll see TWO options:
+
+    ┌──────────────────────┐
+    │  Connect to Git      │  ← DON'T click this
+    └──────────────────────┘
+
+    ┌──────────────────────┐
+    │  Upload assets       │  ← CLICK THIS ONE!
+    └──────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 3: Name Your Project
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+You'll see a text box:
+
+    Project name: [________________]
+
+Type exactly: ghar-ghar-game
+
+    Project name: [ghar-ghar-game_]
+
+Then click:
+
+    ┌──────────────────────┐
+    │  Create project      │  ← CLICK
+    └──────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 4: Upload Files
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+You'll see a DRAG & DROP area:
+
+    ┌─────────────────────────────────────┐
+    │                                     │
+    │   📁 Drag files here                │
+    │      or click to browse             │
+    │                                     │
+    └─────────────────────────────────────┘
+
+NOW:
+
+1. Open File Explorer (Windows key + E)
+
+2. Navigate to:
+   C:\Users\araag\OneDrive\amit Pics personal\Cloudfare\ghar-ghar
+
+3. You'll see 8 files:
+   ✓ ghar-ghar-game.html
+   ✓ ghar-ghar-roles-extended.js
+   ✓ ghar-ghar-i18n.js
+   ✓ ghar-ghar-stories.js
+   ✓ ghar-ghar-pwa.js
+   ✓ ghar-ghar-multiplayer.js
+   ✓ ghar-ghar-sw.js
+   ✓ manifest.json
+
+4. Select ALL 8 files (Ctrl+A)
+
+5. DRAG them to the Cloudflare upload area in Chrome
+
+6. You'll see files uploading:
+   ┌─────────────────────────────────────┐
+   │ ✓ ghar-ghar-game.html      [100%]  │
+   │ ✓ ghar-ghar-roles-ext...   [100%]  │
+   │ ✓ ghar-ghar-i18n.js        [100%]  │
+   │ ... (all 8 files)                   │
+   └─────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 5: Deploy!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After files upload, click:
+
+    ┌──────────────────────┐
+    │  Deploy site         │  ← CLICK
+    └──────────────────────┘
+
+You'll see:
+    🔄 Deploying...
+    ⏳ Building...
+    ✅ Success!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 6: Get Your URL!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+You'll see your new site URL:
+
+    🌐 https://ghar-ghar-game.pages.dev
+
+Click "Visit site" or copy the URL!
+
+Your game will be at:
+    https://ghar-ghar-game.pages.dev/ghar-ghar-game.html
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ DONE! 🎉
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Your sites:
+✓ Original: https://ideas-before-time.pages.dev/
+✓ Ghar Ghar: https://ghar-ghar-game.pages.dev/
+
+Completely separate! No mix-up! ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⏱️ TOTAL TIME: 5 minutes
+
+🎮 TEST MULTIPLAYER:
+1. Open game on phone
+2. Open game on computer
+3. Create room on one
+4. Join with code on other
+5. Play together!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Need help? Tell me which step you're on!
+
+╔══════════════════════════════════════════════════════════════╗
+║              🎊 You Got This! 🎊                            ║
+╚══════════════════════════════════════════════════════════════╝

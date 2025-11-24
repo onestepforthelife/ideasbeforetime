@@ -1,0 +1,4 @@
+Contact: mailto:onestepforthelife@gmail.com
+Preferred-Languages: en
+Canonical: https://ideas-before-time.pages.dev/security.txt
+Policy: https://ideas-before-time.pages.dev/privacy-policy.html
