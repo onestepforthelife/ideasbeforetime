@@ -13,12 +13,16 @@ Transform "Ideas Before Time" into a modern, professional website following 2024
 
 
 
+
+
   - Create `css/design-system.css` with all CSS custom properties (colors, typography, spacing, shadows, animations)
   - Define modern color palette (primary blue, secondary purple, accent colors, neutral scale)
+
   - Set up typography system with Inter and Poppins fonts
   - Establish spacing scale and shadow system
   - Define animation timing and easing functions
   - _Requirements: 1.1, 1.2, 8.1, 8.4_
+
 
 
 
