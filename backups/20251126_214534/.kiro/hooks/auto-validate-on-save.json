@@ -1,0 +1,17 @@
+{
+  "name": "Auto-validate innovations.json on save",
+  "description": "Automatically validates innovations.json when you save it",
+  "trigger": "on_file_save",
+  "enabled": true,
+  "filePattern": "**/innovations.json",
+  "action": {
+    "type": "shell_command",
+    "command": "python scripts/validate_innovations.py",
+    "workingDirectory": "Cloudfare"
+  },
+  "metadata": {
+    "created": "2025-11-26",
+    "version": "1.0",
+    "purpose": "Catch JSON errors immediately on save"
+  }
+}

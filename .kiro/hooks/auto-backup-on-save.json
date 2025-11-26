@@ -1,0 +1,17 @@
+{
+  "name": "Auto-backup on innovations.json save",
+  "description": "Automatically creates backup when innovations.json is saved",
+  "trigger": "on_file_save",
+  "enabled": true,
+  "filePattern": "**/innovations.json",
+  "action": {
+    "type": "shell_command",
+    "command": "python scripts/backup_system.py",
+    "workingDirectory": "Cloudfare"
+  },
+  "metadata": {
+    "created": "2025-11-26",
+    "version": "1.0",
+    "purpose": "Automatic backup before any changes"
+  }
+}

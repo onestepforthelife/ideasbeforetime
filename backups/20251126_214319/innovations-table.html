@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innovation Explorer - Interactive Timeline</title>
+<meta name="description" content="Explore 9 innovations predicted years before mainstream adoption - searchable, sortable, interactive timeline">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 18px;
+    opacity: 0.95;
+}
+.controls {
+    padding: 30px 40px;
+    background: #f9f9f9;
+    border-bottom: 2px solid #e0e0e0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.search-box {
+    flex: 1;
+    min-width: 300px;
+}
+.search-box input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+.search-box input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+.sort-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.sort-btn {
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid #667eea;
+    color: #667eea;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+.sort-btn:hover {
+    background: #667eea;
+    color: white;
+}
+.sort-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #764ba2;
+}
+.stats {
+    padding: 20px 40px;
+    background: #e8f5e9;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.stat {
+    text-align: center;
+}
+.stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #667eea;
+}
+.stat-label {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    border-color: #667eea;
+}
+.card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+.card-year {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+.card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255,255,255,0.3);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.card-body {
+    padding: 20px;
+}
+.card-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+.card-category {
+    background: #f5f7ff;
+    color: #667eea;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.card-impact {
+    font-size: 13px;
+    font-weight: 600;
+}
+.impact-high { color: #f57c00; }
+.impact-revolutionary { color: #d32f2f; }
+.impact-medium { color: #388e3c; }
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+.no-results h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.back-btn {
+    display: inline-block;
+    margin: 30px 40px;
+    padding: 15px 35px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+.back-btn:hover {
+    transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .controls {
+        padding: 20px;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="hero">
+        <h1>🔍 Innovation Explorer</h1>
+        <p>Interactive timeline of 9 innovations predicted years before mainstream adoption</p>
+    </div>
+
+    <div class="controls">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 Search innovations by title, year, or description...">
+        </div>
+        <div class="sort-buttons">
+            <button class="sort-btn active" data-sort="year">Sort by Year</button>
+            <button class="sort-btn" data-sort="title">Sort by Title</button>
+            <button class="sort-btn" data-sort="impact">Sort by Impact</button>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-number" id="totalCount">9</div>
+            <div class="stat-label">Total Innovations</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number" id="avgYears">5-9</div>
+            <div class="stat-label">Years Ahead (Avg)</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number" id="visibleCount">9</div>
+            <div class="stat-label">Showing</div>
+        </div>
+    </div>
+
+    <div class="grid" id="innovationsGrid"></div>
+
+    <div class="no-results" id="noResults" style="display: none;">
+        <h3>No innovations found</h3>
+        <p>Try a different search term</p>
+    </div>
+
+    <a href="library.html" class="back-btn">← Back to Library</a>
+</div>
+
+<script>
+// Innovations data (will be embedded from innovations.json)
+const innovations = [
+    {
+        "id": "silent-dj-2001",
+        "year": 2001,
+        "title": "Silent DJ",
+        "shortDescription": "Wireless headphone party concept for campus events - multiple music channels without external noise",
+        "category": "Entertainment",
+        "impact": "High",
+        "yearsAhead": "4-9 years"
+    },
+    {
+        "id": "tv-storage-2002",
+        "year": 2002,
+        "title": "TV Storage & Replay",
+        "shortDescription": "Record live TV, pause, rewind, and replay - DVR concept before TiVo was mainstream",
+        "category": "Entertainment",
+        "impact": "Revolutionary",
+        "yearsAhead": "3-5 years"
+    },
+    {
+        "id": "music-ringtones-2003",
+        "year": 2003,
+        "title": "Music as Ringtones",
+        "shortDescription": "Full songs as mobile ringtones instead of monophonic beeps - personalized mobile experience",
+        "category": "Mobile",
+        "impact": "High",
+        "yearsAhead": "2-3 years"
+    },
+    {
+        "id": "dual-sim-2003",
+        "year": 2003,
+        "title": "Dual SIM Phones",
+        "shortDescription": "Two phone numbers in one device - work and personal separation without carrying two phones",
+        "category": "Mobile",
+        "impact": "High",
+        "yearsAhead": "4-6 years"
+    },
+    {
+        "id": "universal-health-id-2009",
+        "year": 2009,
+        "title": "Universal Health ID",
+        "shortDescription": "Single digital health identity for all medical records - portable health history across providers",
+        "category": "Healthcare",
+        "impact": "Revolutionary",
+        "yearsAhead": "8-12 years"
+    },
+    {
+        "id": "3d-imaging-2009",
+        "year": 2009,
+        "title": "3D Imaging for Diagnosis",
+        "shortDescription": "Advanced 3D medical imaging for better diagnosis - holographic visualization of internal organs",
+        "category": "Healthcare",
+        "impact": "High",
+        "yearsAhead": "5-8 years"
+    },
+    {
+        "id": "digital-money-2012",
+        "year": 2012,
+        "title": "Digital Money Vision",
+        "shortDescription": "Cashless economy with mobile payments and virtual currency - money as pure digital concept",
+        "category": "Fintech",
+        "impact": "Revolutionary",
+        "yearsAhead": "4-8 years"
+    },
+    {
+        "id": "moveable-dividers-2012",
+        "year": 2012,
+        "title": "Moveable Office Dividers",
+        "shortDescription": "Flexible workspace partitions for dynamic office layouts - adapt spaces to changing team needs",
+        "category": "Workplace",
+        "impact": "Medium",
+        "yearsAhead": "3-5 years"
+    },
+    {
+        "id": "dashboard-simplification-2017",
+        "year": 2017,
+        "title": "Dashboard Simplification",
+        "shortDescription": "Unified dashboards for data visualization and decision-making - insights at a glance",
+        "category": "Business Intelligence",
+        "impact": "High",
+        "yearsAhead": "1-2 years"
+    }
+];
+
+let currentSort = 'year';
+let currentOrder = 'asc';
+
+// Render innovations
+function renderInnovations(data) {
+    const grid = document.getElementById('innovationsGrid');
+    const noResults = document.getElementById('noResults');
+    
+    if (data.length === 0) {
+        grid.style.display = 'none';
+        noResults.style.display = 'block';
+        return;
+    }
+    
+    grid.style.display = 'grid';
+    noResults.style.display = 'none';
+    
+    grid.innerHTML = data.map(innovation => `
+        <div class="card" onclick="window.location.href='${innovation.id}.html'">
+            <div class="card-header">
+                <div class="card-badge">${innovation.yearsAhead}</div>
+                <div class="card-year">${innovation.year}</div>
+                <div class="card-title">${innovation.title}</div>
+            </div>
+            <div class="card-body">
+                <div class="card-description">${innovation.shortDescription}</div>
+                <div class="card-meta">
+                    <span class="card-category">${innovation.category}</span>
+                    <span class="card-impact impact-${innovation.impact.toLowerCase()}">${innovation.impact} Impact</span>
+                </div>
+            </div>
+        </div>
+    `).join('');
+    
+    document.getElementById('visibleCount').textContent = data.length;
+}
+
+// Sort innovations
+function sortInnovations(data, sortBy) {
+    const sorted = [...data];
+    
+    sorted.sort((a, b) => {
+        let aVal, bVal;
+        
+        if (sortBy === 'year') {
+            aVal = a.year;
+            bVal = b.year;
+        } else if (sortBy === 'title') {
+            aVal = a.title.toLowerCase();
+            bVal = b.title.toLowerCase();
+        } else if (sortBy === 'impact') {
+            const impactOrder = { 'Revolutionary': 3, 'High': 2, 'Medium': 1 };
+            aVal = impactOrder[a.impact];
+            bVal = impactOrder[b.impact];
+        }
+        
+        if (aVal < bVal) return currentOrder === 'asc' ? -1 : 1;
+        if (aVal > bVal) return currentOrder === 'asc' ? 1 : -1;
+        return 0;
+    });
+    
+    return sorted;
+}
+
+// Search innovations
+function searchInnovations(data, query) {
+    if (!query) return data;
+    
+    const lowerQuery = query.toLowerCase();
+    return data.filter(innovation => 
+        innovation.title.toLowerCase().includes(lowerQuery) ||
+        innovation.shortDescription.toLowerCase().includes(lowerQuery) ||
+        innovation.year.toString().includes(lowerQuery) ||
+        innovation.category.toLowerCase().includes(lowerQuery)
+    );
+}
+
+// Update display
+function updateDisplay() {
+    let filtered = searchInnovations(innovations, document.getElementById('searchInput').value);
+    let sorted = sortInnovations(filtered, currentSort);
+    renderInnovations(sorted);
+}
+
+// Event listeners
+document.getElementById('searchInput').addEventListener('input', updateDisplay);
+
+document.querySelectorAll('.sort-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const sortBy = btn.dataset.sort;
+        
+        if (currentSort === sortBy) {
+            currentOrder = currentOrder === 'asc' ? 'desc' : 'asc';
+        } else {
+            currentSort = sortBy;
+            currentOrder = 'asc';
+        }
+        
+        document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        updateDisplay();
+    });
+});
+
+// Initial render
+updateDisplay();
+</script>
+
+<!-- SEO Meta Tags -->
+<script src="page-metadata.js"></script>
+
+<!-- Common Navigation -->
+<script src="common-navigation.js"></script>
+
+<!-- Google Analytics 4 - Universal Tracking -->
+<script src="universal-analytics.js"></script>
+
+</body>
+</html>

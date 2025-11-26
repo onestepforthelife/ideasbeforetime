@@ -1,0 +1,130 @@
+{
+  "innovations": [
+    {
+      "id": "silent-dj-2001",
+      "year": 2001,
+      "title": "Silent DJ",
+      "shortDescription": "Wireless headphone party concept for campus events - multiple music channels without external noise",
+      "category": "Entertainment",
+      "impact": "High",
+      "image": "silent-dj-2001.jpg",
+      "status": "published",
+      "yearsAhead": "4-9 years",
+      "realWorldAdoption": "Silent discos became mainstream globally 2005-2010"
+    },
+    {
+      "id": "tv-storage-2002",
+      "year": 2002,
+      "title": "TV Storage & Replay",
+      "shortDescription": "Record live TV, pause, rewind, and replay - DVR concept before TiVo was mainstream",
+      "category": "Entertainment",
+      "impact": "Revolutionary",
+      "image": "tv-storage-2002.jpg",
+      "status": "published",
+      "yearsAhead": "3-5 years",
+      "realWorldAdoption": "DVR became standard in cable/satellite boxes by 2005-2007"
+    },
+    {
+      "id": "music-ringtones-2003",
+      "year": 2003,
+      "title": "Music as Ringtones",
+      "shortDescription": "Full songs as mobile ringtones instead of monophonic beeps - personalized mobile experience",
+      "category": "Mobile",
+      "impact": "High",
+      "image": "music-ringtones-2003.jpg",
+      "status": "published",
+      "yearsAhead": "2-3 years",
+      "realWorldAdoption": "Polyphonic and MP3 ringtones became standard 2005-2006"
+    },
+    {
+      "id": "dual-sim-2003",
+      "year": 2003,
+      "title": "Dual SIM Phones",
+      "shortDescription": "Two phone numbers in one device - work and personal separation without carrying two phones",
+      "category": "Mobile",
+      "impact": "High",
+      "image": "dual-sim-2003.jpg",
+      "status": "published",
+      "yearsAhead": "4-6 years",
+      "realWorldAdoption": "Dual SIM became mainstream in emerging markets 2007-2009"
+    },
+    {
+      "id": "universal-health-id-2009",
+      "year": 2009,
+      "title": "Universal Health ID",
+      "shortDescription": "Single digital health identity for all medical records - portable health history across providers",
+      "category": "Healthcare",
+      "impact": "Revolutionary",
+      "image": "universal-health-id-2009.jpg",
+      "status": "published",
+      "yearsAhead": "8-12 years",
+      "realWorldAdoption": "India launched Ayushman Bharat Health ID in 2021"
+    },
+    {
+      "id": "3d-imaging-2009",
+      "year": 2009,
+      "title": "3D Imaging for Diagnosis",
+      "shortDescription": "Advanced 3D medical imaging for better diagnosis - holographic visualization of internal organs",
+      "category": "Healthcare",
+      "impact": "High",
+      "image": "3d-imaging-2009.jpg",
+      "status": "published",
+      "yearsAhead": "5-8 years",
+      "realWorldAdoption": "3D medical imaging and AR surgery planning became standard 2014-2017"
+    },
+    {
+      "id": "digital-money-2012",
+      "year": 2012,
+      "title": "Digital Money Vision",
+      "shortDescription": "Cashless economy with mobile payments and virtual currency - money as pure digital concept",
+      "category": "Fintech",
+      "impact": "Revolutionary",
+      "image": "digital-money-2012.jpg",
+      "status": "published",
+      "yearsAhead": "4-8 years",
+      "realWorldAdoption": "UPI launched 2016, India leads world in digital payments by 2020"
+    },
+    {
+      "id": "moveable-dividers-2012",
+      "year": 2012,
+      "title": "Moveable Office Dividers",
+      "shortDescription": "Flexible workspace partitions for dynamic office layouts - adapt spaces to changing team needs",
+      "category": "Workplace",
+      "impact": "Medium",
+      "image": "moveable-dividers-2012.jpg",
+      "status": "published",
+      "yearsAhead": "3-5 years",
+      "realWorldAdoption": "Flexible office design became standard in modern workplaces 2015-2017"
+    },
+    {
+      "id": "dashboard-simplification-2017",
+      "year": 2017,
+      "title": "Dashboard Simplification",
+      "shortDescription": "Unified dashboards for data visualization and decision-making - insights at a glance",
+      "category": "Business Intelligence",
+      "impact": "High",
+      "image": "dashboard-simplification-2017.jpg",
+      "status": "published",
+      "yearsAhead": "1-2 years",
+      "realWorldAdoption": "Dashboard-first analytics became standard in all SaaS products 2018-2019"
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2025-11-26",
+    "totalInnovations": 9,
+    "version": "1.0",
+    "categories": [
+      "Entertainment",
+      "Mobile",
+      "Healthcare",
+      "Fintech",
+      "Workplace",
+      "Business Intelligence"
+    ],
+    "impactLevels": [
+      "Medium",
+      "High",
+      "Revolutionary"
+    ]
+  }
+}
