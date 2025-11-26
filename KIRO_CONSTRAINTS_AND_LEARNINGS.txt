@@ -1,0 +1,67 @@
+# KIRO Constraints & Learnings
+Date: 2025-11-26
+
+## STRICT CONSTRAINTS
+
+### Workspace Boundaries
+- ONLY work in: C:\Users\araag\Documents\Cloudfare
+- NEVER access: C:\Users\araag\OneDrive\amit Pics personal
+- Even if asked, do NOT use personal folders without explicit discussion
+- Ask permission first, schedule discussion, no impulsive questions
+
+### Git Push Loop Issue - Root Cause Analysis
+
+**What Happened:**
+Git pull --rebase got stuck asking "Should I try again? (y/n)" for deleting 'images' directory
+
+**Why It Got Stuck:**
+1. Remote had changes we didn't have locally (branches diverged)
+2. Tried to rebase, which attempted to delete 'images' folder
+3. Folder deletion failed (likely locked by another process)
+4. Git entered interactive mode waiting for y/n input
+5. PowerShell couldn't pipe input to the interactive prompt properly
+6. Multiple attempts created a loop without resolving the stuck process
+
+**Lesson Learned:**
+- Always check git status before pushing
+- Use force push with lease when branches diverge: `git push --force-with-lease`
+- Kill stuck git processes immediately: `taskkill /F /IM git.exe`
+- Don't try multiple approaches when process is stuck - kill it first
+
+## AVAILABLE TOOLS
+
+### Power Automate
+- User has Power Automate available
+- Can be used for automation workflows
+- Discuss integration opportunities
+
+## UPCOMING TASKS
+
+### Site Modernization Required
+
+**Current State:**
+- Both sites look "old school" and "kid-made"
+- Need modern, professional design
+
+**Sites to Modernize:**
+1. Ideas Before Time (Cloudfare folder)
+   - Current: Purple gradient, basic cards
+   - Target: Modern, world-class design
+
+2. Ghar Ghar Game (ghar-ghar-temp folder - DELETED)
+   - Status: Files were deleted in recent commit
+   - Need to restore or rebuild with modern design
+
+**Design Requirements:**
+- Modern UI/UX
+- Professional look & feel
+- Latest design trends
+- Responsive and polished
+- NOT basic/amateur appearance
+
+## NEXT STEPS
+
+1. Fix git stuck process (user to run: taskkill /F /IM git.exe)
+2. Complete GitHub push with force-with-lease
+3. Create spec for site modernization
+4. Discuss Power Automate integration opportunities

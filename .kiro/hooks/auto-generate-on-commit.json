@@ -1,0 +1,23 @@
+{
+  "name": "Auto-generate files before commit",
+  "description": "Runs automation scripts when you're about to commit",
+  "trigger": "manual",
+  "enabled": true,
+  "action": {
+    "type": "shell_command",
+    "command": "python scripts/kiro_automation.py",
+    "workingDirectory": "Cloudfare"
+  },
+  "quickActions": [
+    {
+      "label": "🔄 Run Full Automation",
+      "action": "execute",
+      "description": "Validate JSON + Generate sitemap"
+    }
+  ],
+  "metadata": {
+    "created": "2025-11-26",
+    "version": "1.0",
+    "purpose": "Run all automation tasks before deployment"
+  }
+}
