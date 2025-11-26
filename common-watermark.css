@@ -10,9 +10,9 @@ body::before {
     transform-origin: center;
     font-size: 12px;
     font-weight: 600;
-    color: rgba(102, 126, 234, 0.04);
+    color: rgba(102, 126, 234, 0.06);
     pointer-events: none;
-    z-index: 0;
+    z-index: -9999;
     white-space: pre-wrap;
     word-wrap: break-word;
     line-height: 3;
@@ -32,10 +32,10 @@ body::after {
         -45deg,
         transparent,
         transparent 100px,
-        rgba(102, 126, 234, 0.02) 100px,
-        rgba(102, 126, 234, 0.02) 200px
+        rgba(102, 126, 234, 0.03) 100px,
+        rgba(102, 126, 234, 0.03) 200px
     );
     pointer-events: none;
-    z-index: 0;
+    z-index: -9998;
     user-select: none;
 }
