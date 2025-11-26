@@ -1,0 +1,99 @@
+WATERMARK IMPLEMENTATION GUIDE
+==============================
+
+STRIPED WATERMARK PATTERN - Multiple Lines
+===========================================
+
+Replace the OLD single watermark with this NEW repeating pattern:
+
+OLD CODE (Single watermark - remove this):
+------------------------------------------
+body::before {
+    content: "AV © Onestepforthelife";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 80px;
+    font-weight: 700;
+    color: rgba(102, 126, 234, 0.02);
+    pointer-events: none;
+    z-index: 0;
+    white-space: nowrap;
+    user-select: none;
+}
+
+NEW CODE (Striped pattern - use this):
+--------------------------------------
+body::before {
+    content: "AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife    AV © Onestepforthelife";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    transform: rotate(-45deg);
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(102, 126, 234, 0.03);
+    pointer-events: none;
+    z-index: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 4;
+    user-select: none;
+    overflow: hidden;
+}
+
+WHAT THIS DOES:
+===============
+✅ Creates multiple diagonal lines of watermark
+✅ Covers entire page (not just center)
+✅ Small text (14px) - subtle but visible
+✅ Repeats "AV © Onestepforthelife" 20 times
+✅ Line spacing (line-height: 4) creates stripe effect
+✅ Very light opacity (0.03) - doesn't distract
+
+REMOVE DUPLICATE WATERMARKS:
+=============================
+Some pages have watermark in TWO places:
+1. body::before (background)
+2. .hero-image::after (on image)
+
+RECOMMENDATION: Keep only body::before (remove hero-image::after)
+
+Example - REMOVE THIS from innovation pages:
+--------------------------------------------
+.hero-image::after {
+    content: "AV © Onestepforthelife";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.7);
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+CUSTOMIZATION OPTIONS:
+======================
+- Adjust font-size: 12px (smaller) to 16px (larger)
+- Adjust opacity: 0.02 (lighter) to 0.05 (darker)
+- Adjust line-height: 3 (closer lines) to 5 (wider spacing)
+- Adjust rotation: -45deg (default) or -30deg (less steep)
+
+FILES TO UPDATE:
+================
+All pages with watermark:
+- All 9 innovation pages (silent-dj-2001.html, etc.)
+- index.html, index-new.html
+- library.html, timeline.html
+- about.html, disclaimer.html, privacy-policy.html
+- All SPO pages (social-optimizer-*.html)
+- business-insights.html ✅ ALREADY UPDATED
+
+SAMPLE UPDATED: business-insights.html
+======================================
+Check this file to see the new striped watermark in action!
+

@@ -1,0 +1,121 @@
+🚀 RAZORPAY SETUP - 5 MINUTE GUIDE
+=====================================
+
+Your Social Profile Optimizer AI is 99% ready!
+Just add your Razorpay key and it will work instantly.
+
+📋 STEP-BY-STEP SETUP:
+======================
+
+STEP 1: Create Razorpay Account (2 minutes)
+--------------------------------------------
+1. Go to: https://razorpay.com
+2. Click "Sign Up" (top right)
+3. Enter your details:
+   - Business Name: Social Profile Optimizer AI
+   - Email: onestepforthelife@gmail.com
+   - Phone: Your number
+   - Business Type: Individual/Proprietorship
+4. Verify email and phone
+5. Complete KYC (can do later, test mode works immediately!)
+
+STEP 2: Get Your API Key (1 minute)
+------------------------------------
+1. Login to Razorpay Dashboard
+2. Go to: Settings → API Keys (left sidebar)
+3. Click "Generate Test Key" (for testing)
+4. You'll see two keys:
+   - Key ID: rzp_test_XXXXXXXXXXXX
+   - Key Secret: YYYYYYYYYYYYYYYY
+5. Copy the "Key ID" (starts with rzp_test_)
+
+STEP 3: Add Key to Your Code (30 seconds)
+------------------------------------------
+1. Open: Cloudfare/social-optimizer-app.js
+2. Find line 380: const RAZORPAY_KEY = 'rzp_test_DEMO_KEY';
+3. Replace with your key:
+   const RAZORPAY_KEY = 'rzp_test_XXXXXXXXXXXX';
+4. Save the file
+
+STEP 4: Test It! (1 minute)
+----------------------------
+1. Open: Cloudfare/social-optimizer-app.html in browser
+2. Go through the wizard
+3. Click "Pay ₹11"
+4. Use Razorpay test cards:
+   - Card: 4111 1111 1111 1111
+   - CVV: Any 3 digits
+   - Expiry: Any future date
+5. Profile unlocks automatically! ✅
+
+STEP 5: Go Live (When Ready)
+-----------------------------
+1. Complete KYC in Razorpay dashboard
+2. Get "Live" API key (Settings → API Keys → Generate Live Key)
+3. Replace test key with live key in code
+4. Deploy to Cloudflare Pages
+5. Start accepting real payments! 💰
+
+💳 PRICING DETAILS:
+===================
+- Monthly Fee: ₹0 (ZERO!)
+- Transaction Fee: 2% only
+- Example: Customer pays ₹11 → You get ₹10.78
+- No setup cost, no hidden charges
+
+🌍 MULTI-CURRENCY SUPPORT:
+===========================
+Your tool already supports:
+- India: ₹11 INR
+- USA: $0.15 USD
+- Europe: €0.14 EUR
+- UK: £0.12 GBP
+- Others: Auto-detected!
+
+The currency-detector.js automatically shows the right price based on user's location.
+
+🔒 SECURITY:
+============
+✅ Razorpay is PCI-DSS compliant
+✅ No card details stored on your site
+✅ Automatic fraud detection
+✅ Instant payment confirmation
+✅ Secure webhook notifications
+
+📊 PAYMENT TRACKING:
+====================
+All payments are logged in:
+1. Razorpay Dashboard (real-time)
+2. LocalStorage (for your admin panel)
+3. Browser console (for debugging)
+
+Access admin panel: social-optimizer-admin.html
+
+💡 TESTING TIPS:
+================
+Test Cards (Razorpay Test Mode):
+- Success: 4111 1111 1111 1111
+- Failure: 4000 0000 0000 0002
+- UPI: success@razorpay (for UPI testing)
+
+🚨 IMPORTANT NOTES:
+===================
+1. Test mode works WITHOUT KYC
+2. Live mode requires KYC (takes 24-48 hours)
+3. Keep your Key Secret private (never share!)
+4. Use Test key for testing, Live key for production
+5. Webhook setup is optional (auto-unlock works without it)
+
+📧 SUPPORT:
+===========
+Razorpay Support: https://razorpay.com/support
+Your Email: onestepforthelife@gmail.com
+
+🎉 THAT'S IT!
+=============
+Your payment system is ready. Just add the key and start earning!
+
+Questions? Email: onestepforthelife@gmail.com
+
+---
+Last Updated: November 22, 2025

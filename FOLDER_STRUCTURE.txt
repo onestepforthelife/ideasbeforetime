@@ -1,0 +1,67 @@
+WEBSITE FOLDER STRUCTURE
+========================
+
+Cloudfare/
+├── innovations/          ✅ Ideas Before Time Projects
+│   ├── silent-dj-2001.html
+│   ├── tv-storage-2002.html
+│   ├── music-ringtones-2003.html
+│   ├── dual-sim-2003.html
+│   ├── universal-health-id-2009.html
+│   ├── 3d-imaging-2009.html
+│   ├── digital-money-2012.html
+│   ├── moveable-dividers-2012.html
+│   └── dashboard-simplification-2017.html
+│
+├── ghar-ghar/           ✅ Ghar Ghar Game
+│   ├── ghar-ghar-game.html
+│   ├── ghar-ghar-i18n.js
+│   ├── ghar-ghar-pwa.js
+│   ├── ghar-ghar-roles-extended.js
+│   ├── ghar-ghar-stories.js
+│   ├── ghar-ghar-sw.js
+│   ├── manifest.json
+│   ├── GHAR_GHAR_GAME_README.md
+│   ├── GHAR_GHAR_SETUP_GUIDE.txt
+│   ├── GHAR_GHAR_ENHANCEMENTS_COMPLETE.md
+│   ├── GHAR_GHAR_FINAL_SUMMARY.md
+│   └── GHAR_GHAR_QUICK_REFERENCE.txt
+│
+├── images/              (existing)
+├── .well-known/         (existing)
+│
+└── Root Files:
+    ├── index.html (SPO homepage)
+    ├── index-portfolio.html
+    ├── library.html
+    ├── timeline.html
+    ├── about.html
+    ├── cv.html
+    ├── cv-preview.html
+    ├── research-preview.html
+    ├── Final_Acrylic_Market_Report.html
+    ├── business-insights.html
+    ├── business-news.html
+    ├── social-optimizer-*.html
+    ├── privacy-policy.html
+    ├── disclaimer.html
+    ├── terms-and-disclaimer.html
+    ├── refund-policy.html
+    ├── request-access.html
+    └── sitemap.xml
+
+BENEFITS:
+=========
+✅ Clean organization
+✅ Easy to find files
+✅ Separate game from main site
+✅ Innovation pages grouped together
+✅ Professional structure
+
+NEXT STEPS:
+===========
+1. Update links in library.html to point to innovations/ folder
+2. Update links in timeline.html to point to innovations/ folder
+3. Update ghar-ghar links if any
+4. Test all navigation
+

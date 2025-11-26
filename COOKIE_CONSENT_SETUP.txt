@@ -1,0 +1,161 @@
+COOKIE CONSENT BANNER SETUP GUIDE
+==================================
+Legally Compliant with GDPR, DPDP Act 2023, and Google Consent Mode v2
+
+WHAT'S INCLUDED:
+----------------
+✅ Custom consent banner (no third-party dependencies)
+✅ Google Consent Mode v2 integration
+✅ GDPR & DPDP Act 2023 compliant
+✅ User preference storage (localStorage)
+✅ Customizable cookie categories
+✅ Mobile responsive design
+✅ Professional purple gradient theme
+
+FILES CREATED:
+--------------
+1. cookie-consent.js - Main consent logic
+2. cookie-consent.css - Banner styling
+
+HOW TO ADD TO YOUR PAGES:
+--------------------------
+
+Add these lines to the <head> section of EVERY page:
+
+<!-- Cookie Consent Banner -->
+<link rel="stylesheet" href="cookie-consent.css">
+<script src="cookie-consent.js"></script>
+
+PAGES TO UPDATE:
+----------------
+✅ index.html (login page)
+✅ library.html
+✅ timeline.html
+✅ about.html
+✅ cv.html
+✅ All 9 innovation pages
+✅ Final_Acrylic_Market_Report.html
+✅ All legal pages (privacy-policy.html, disclaimer.html, etc.)
+
+FEATURES:
+---------
+
+1. THREE CONSENT OPTIONS:
+   - Accept All: Grants all permissions
+   - Necessary Only: Denies optional cookies
+   - Customize: User chooses specific categories
+
+2. COOKIE CATEGORIES:
+   - Analytics Cookies (Google Analytics)
+   - Marketing Cookies (for future use)
+
+3. GOOGLE CONSENT MODE V2:
+   - analytics_storage
+   - ad_storage
+   - ad_user_data
+   - ad_personalization
+
+4. USER PREFERENCES:
+   - Stored in localStorage
+   - Persists across sessions
+   - Can be reset anytime
+
+TESTING:
+--------
+
+1. Open any page - banner should appear at bottom
+2. Click "Accept All" - banner disappears, consent saved
+3. Reload page - banner should NOT appear (consent remembered)
+4. To test again, open browser console and type:
+   resetCookieConsent()
+
+LEGAL COMPLIANCE:
+-----------------
+
+✅ GDPR (EU): Explicit consent before tracking
+✅ DPDP Act 2023 (India): User control over data
+✅ Google Consent Mode v2: Required for Google Analytics
+✅ Clear language: Users understand what they're consenting to
+✅ Granular control: Users can choose specific categories
+✅ Easy to withdraw: Can reset preferences anytime
+
+PRIVACY POLICY UPDATE:
+----------------------
+
+Your privacy-policy.html already covers:
+- What cookies are used
+- Why they're used
+- How to control them
+- Data retention
+- User rights
+
+The consent banner complements this by:
+- Getting explicit consent BEFORE setting cookies
+- Giving users control at point of entry
+- Respecting user choices across sessions
+
+GOOGLE ANALYTICS INTEGRATION:
+------------------------------
+
+The consent banner automatically:
+1. Blocks Google Analytics until consent given
+2. Updates consent mode when user chooses
+3. Respects user preferences on every page load
+
+Your Google Analytics will only track users who:
+- Click "Accept All", OR
+- Click "Customize" and check "Analytics Cookies"
+
+CUSTOMIZATION:
+--------------
+
+To change colors, edit cookie-consent.css:
+- Line 8: Background gradient
+- Line 9: Text color
+- Line 52-54: Button colors
+
+To add more cookie categories, edit cookie-consent.js:
+- Add new checkbox in HTML (line 30-40)
+- Add new consent parameter in setConsent() function
+- Update Google Consent Mode if needed
+
+DEPLOYMENT:
+-----------
+
+1. Upload cookie-consent.js to Cloudflare Pages
+2. Upload cookie-consent.css to Cloudflare Pages
+3. Add <link> and <script> tags to all HTML pages
+4. Test on staging/preview before going live
+5. Verify banner appears on first visit
+6. Verify banner doesn't appear on subsequent visits
+
+MAINTENANCE:
+------------
+
+- Review consent categories annually
+- Update if you add new tracking tools
+- Keep privacy policy in sync with banner
+- Monitor Google Consent Mode updates
+
+SUPPORT:
+--------
+
+If banner doesn't appear:
+1. Check browser console for errors
+2. Verify files are uploaded correctly
+3. Ensure <script> tag is in <head> section
+4. Clear browser cache and test
+
+To reset consent for testing:
+- Open browser console
+- Type: resetCookieConsent()
+- Press Enter
+
+LEGAL DISCLAIMER:
+-----------------
+
+This consent banner is designed to meet common legal requirements.
+However, laws vary by jurisdiction. Consider consulting a legal
+professional for specific compliance needs in your target markets.
+
+© 2025 Ideas Before Time

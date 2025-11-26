@@ -1,0 +1,82 @@
+HOMEPAGE UPDATES - COMPREHENSIVE LIST
+======================================
+
+1. ❌ REMOVE "BASF" BRANDING
+   Current: "✅ Built by BASF expert"
+   New: "✅ Built by Fortune 500 industry expert"
+   
+2. ✅ UPDATE BEFORE/AFTER LABELS
+   Current: "❌ BEFORE" / "✅ AFTER"
+   New: "❌ BEFORE using One Step SPO tool" / "✅ AFTER using One Step SPO tool"
+
+3. 🏢 EXPAND TRUST BADGES
+   Current: BASF, DSM, 3M, IIT Kanpur MBA
+   New: Add more from CV + create phrase
+   Phrase: "Insights from 20+ years across Fortune 500 companies, global institutions & premier academia"
+   
+   Badges to add:
+   - Avery Dennison (GOLD Program - Top 20 global leadership)
+   - Asian Development Bank (ADB Consultant)
+   - IIT Kanpur MBA
+   - Delhi University (LLB)
+   - Delhi College of Engineering
+   - Microsoft Azure AI Certified
+   - Data Science Analytics Certified
+
+4. 👥 EXPAND TARGET AUDIENCE
+   Current: Leaders, Students, Consultants, Healthcare, Tech, Sales
+   Add:
+   - Content Creators (YouTubers, TikTokers, Influencers)
+   - Fashion Designers & Stylists
+   - Shop Owners & Boutique Firms
+   - SME/MSME Entrepreneurs
+   - Freelancers & Gig Workers
+   - Artists & Photographers
+   - Coaches & Trainers
+
+5. 📱 UPDATE MAIN HEADLINE
+   Current: "Fix Your LinkedIn Profile in 2 Minutes — Only ₹21"
+   New: "Optimize Your Social Profile in 2 Minutes — Only ₹21"
+   Subtext: "LinkedIn • Instagram • Twitter • Facebook • All Platforms"
+
+6. ✅ UPDATE FEATURES - ADD DISCLAIMER
+   Current: Lists 6 features
+   New: Add note "AI-powered with 20+ years of human industry expertise"
+
+7. 🔄 FIX REFUND POLICY
+   Current: "Yes! If you're not satisfied..."
+   New: "This tool is priced at cost (₹21 covers platform maintenance only). Due to instant digital delivery, refunds are not available. However, we stand behind the quality - if you're not satisfied, contact us for personalized support."
+
+8. 🌐 ADD LANGUAGE SELECTOR
+   Add simple dropdown at top:
+   - English
+   - हिंदी (Hindi)
+   - বাংলা (Bengali)
+   - தமிழ் (Tamil)
+   - తెలుగు (Telugu)
+   - मराठी (Marathi)
+   - ગુજરાતી (Gujarati)
+   - ಕನ್ನಡ (Kannada)
+   - മലയാളം (Malayalam)
+   - ਪੰਜਾਬੀ (Punjabi)
+   
+   Implementation: Simple text change, not full translation (lightweight)
+
+9. 🖼️ FIX IMAGES ISSUE
+   Problem: Images not loading in about.html and other pages
+   Solution: 
+   - Use absolute paths instead of relative
+   - Add fallback colors
+   - Verify all image files exist
+   - Add alt text for accessibility
+
+PRIORITY ORDER:
+===============
+1. Remove BASF branding (legal/compliance)
+2. Fix images (user experience)
+3. Update headline for all platforms
+4. Expand target audience
+5. Fix refund policy
+6. Add language selector
+7. Update trust badges
+8. Update before/after labels

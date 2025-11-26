@@ -1,0 +1,36 @@
+ACCESS CODES - QUICK REFERENCE CARD
+====================================
+
+CURRENT ACTIVE CODES:
+---------------------
+✅ RECRUITER2025 - For recruiters
+✅ PARTNER2025 - For business partners  
+✅ VIP2025 - For VIP contacts
+✅ BASF2025 - For BASF colleagues
+✅ MEDIA2025 - For media/press
+
+HOW TO SHARE:
+-------------
+"Use access code: VIP2025 at Step 4"
+URL: https://ideas-before-time.pages.dev/social-optimizer-app.html
+
+APPROVAL REQUESTS:
+------------------
+Check email: onestepforthelife@gmail.com
+Subject: "SPO Approval Request from [Name]"
+
+QUICK APPROVAL REPLY:
+---------------------
+"Approved! Access Code: VIP2025"
+
+TO ADD NEW CODE:
+----------------
+Edit social-optimizer-app.html
+Find: const validCodes = [
+Add: 'NEWCODE2025',
+
+ANALYTICS:
+----------
+Google Analytics → Events
+- approval_requested
+- access_code_used

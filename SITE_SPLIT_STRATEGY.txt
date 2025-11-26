@@ -1,0 +1,211 @@
+WEBSITE SPLIT STRATEGY - KIDS GAME vs PROFESSIONAL
+===================================================
+
+CURRENT PROBLEM:
+================
+- Kids game (Ghar Ghar) mixed with professional portfolio
+- Confusing for visitors
+- Not professional for recruiters/clients
+- Parents looking for kids game see business content
+
+SOLUTION: SEPARATE DOMAINS/SUBDOMAINS
+======================================
+
+OPTION 1: TWO SEPARATE DOMAINS (BEST)
+--------------------------------------
+
+Professional Site:
+🏢 amitkumar.com or onestep.com
+   - CV, Portfolio, Innovations
+   - SPO Tool
+   - Business Insights
+   - Market Research
+   - Professional content only
+
+Kids Game Site:
+🎮 gharghar.com or gharghar.in
+   - Ghar Ghar game only
+   - Kid-friendly design
+   - Parent information
+   - Safe, focused experience
+
+Cost: ₹1600-2400/year (two domains)
+Benefit: Complete separation, professional
+
+OPTION 2: SUBDOMAIN (RECOMMENDED - CHEAPER)
+--------------------------------------------
+
+Professional Site (Main):
+🏢 amitkumar.com
+   - Everything professional
+   - CV, Portfolio, SPO, Research
+
+Kids Game (Subdomain):
+🎮 play.amitkumar.com or game.amitkumar.com
+   - Ghar Ghar game only
+   - Separate branding
+   - Kid-friendly
+
+Cost: ₹800-1200/year (one domain)
+Benefit: Cheaper, still separated
+
+OPTION 3: SUBDIRECTORY (CURRENT - FREE)
+----------------------------------------
+
+Professional Site (Main):
+🏢 amitkumar.com
+   - Homepage, CV, Portfolio, SPO
+
+Kids Game (Folder):
+🎮 amitkumar.com/game/ or amitkumar.com/gharghar/
+   - Hidden from main navigation
+   - Direct link only
+   - Not visible to recruiters
+
+Cost: ₹800-1200/year (one domain)
+Benefit: Cheapest, but less separation
+
+MY RECOMMENDATION:
+==================
+
+🏆 OPTION 2: SUBDOMAIN (Best balance)
+--------------------------------------
+
+Main Site: amitkumar.com
+- Professional homepage
+- CV, Portfolio, Innovations
+- SPO Tool
+- Business content
+- Target: Recruiters, clients, professionals
+
+Game Site: play.amitkumar.com
+- Ghar Ghar game
+- Kid-friendly design
+- Separate branding
+- Target: Parents, kids
+
+IMPLEMENTATION:
+===============
+
+STEP 1: Buy Domain
+------------------
+Buy: amitkumar.com (₹800-1200/year)
+
+STEP 2: Set Up Main Site
+-------------------------
+amitkumar.com → Current professional content
+- index.html (portfolio or SPO)
+- /cv-preview.html
+- /library.html
+- /about.html
+- /social-optimizer-app.html
+
+STEP 3: Set Up Subdomain
+-------------------------
+play.amitkumar.com → Ghar Ghar game
+
+In Cloudflare Pages:
+1. Create new project: "gharghar-game"
+2. Upload ghar-ghar/ folder
+3. Connect to subdomain: play.amitkumar.com
+
+STEP 4: Update Navigation
+--------------------------
+
+Main Site (amitkumar.com):
+- NO link to game (keep professional)
+- Only show: CV, Portfolio, SPO, About
+
+Game Site (play.amitkumar.com):
+- Link back to main site (optional)
+- "Made by Amit Kumar" footer
+
+SHARING STRATEGY:
+=================
+
+For Recruiters/Clients:
+-----------------------
+✅ Share: amitkumar.com
+✅ Share: amitkumar.com/cv
+✅ Share: amitkumar.com/portfolio
+❌ Don't mention game site
+
+For Parents/Kids:
+-----------------
+✅ Share: play.amitkumar.com
+✅ Share on parenting forums
+✅ Share on kids app stores
+❌ Don't mention professional content
+
+ALTERNATIVE NAMES FOR GAME SUBDOMAIN:
+======================================
+
+Choose one:
+- play.amitkumar.com (BEST - universal)
+- game.amitkumar.com (clear purpose)
+- kids.amitkumar.com (target audience)
+- gharghar.amitkumar.com (specific game name)
+- fun.amitkumar.com (friendly)
+
+COMPLETE SEPARATION EXAMPLE:
+=============================
+
+Scenario 1: Recruiter visits
+-----------------------------
+1. Goes to: amitkumar.com
+2. Sees: Professional portfolio
+3. Clicks: CV, Innovations, SPO
+4. Never sees: Kids game
+5. Impression: Professional expert ✅
+
+Scenario 2: Parent visits
+--------------------------
+1. Goes to: play.amitkumar.com
+2. Sees: Ghar Ghar game
+3. Kids play safely
+4. Never sees: Business content
+5. Impression: Safe kids game ✅
+
+FUTURE EXPANSION:
+=================
+
+If you create more games:
+- play.amitkumar.com/gharghar
+- play.amitkumar.com/game2
+- play.amitkumar.com/game3
+
+If you add blog:
+- blog.amitkumar.com
+
+If you add shop:
+- shop.amitkumar.com
+
+COST SUMMARY:
+=============
+
+Option 1 (Two Domains):
+- amitkumar.com: ₹800-1200/year
+- gharghar.com: ₹800-1200/year
+- Total: ₹1600-2400/year
+
+Option 2 (Subdomain) - RECOMMENDED:
+- amitkumar.com: ₹800-1200/year
+- play.amitkumar.com: FREE (included)
+- Total: ₹800-1200/year
+
+Option 3 (Subdirectory):
+- amitkumar.com: ₹800-1200/year
+- amitkumar.com/game/: FREE (included)
+- Total: ₹800-1200/year
+- But: Less separation
+
+FINAL RECOMMENDATION:
+=====================
+
+🏆 Buy: amitkumar.com (₹800-1200/year)
+🎮 Create subdomain: play.amitkumar.com (FREE)
+💼 Keep professional content separate
+🎯 Perfect balance of cost & separation
+
+Want me to help set this up?
+

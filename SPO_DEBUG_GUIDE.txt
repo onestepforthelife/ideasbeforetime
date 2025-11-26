@@ -1,0 +1,52 @@
+SPO APP DEBUG GUIDE
+===================
+
+ISSUE: "Next" button not working on Step 1
+
+POSSIBLE CAUSES:
+================
+
+1. VALIDATION BLOCKING
+   - Platform not selected
+   - Input method not selected  
+   - File not uploaded (if using image/PDF)
+   - Text fields empty (if using text input)
+
+2. JAVASCRIPT ERROR
+   - Check browser console (F12)
+   - Look for red error messages
+
+3. FILES NOT LOADED
+   - social-optimizer-app.js not loading
+   - social-optimizer-ai-engine.js not loading
+
+HOW TO DEBUG:
+=============
+
+1. Open browser console (F12)
+2. Click "Next" button
+3. Look for errors or validation messages
+
+4. Check if validation message appears above button:
+   - Red box = errors (blocks next)
+   - Blue box = warnings (allows next)
+   - Green box = success (ready to proceed)
+
+5. Make sure you:
+   ✓ Selected a platform (LinkedIn, Instagram, etc.)
+   ✓ Selected input method (Text, Link, Image, PDF)
+   ✓ Provided the required information
+
+QUICK FIX:
+==========
+If button still doesn't work, try:
+1. Refresh page
+2. Clear browser cache
+3. Try different browser
+
+MANUAL OVERRIDE (for testing):
+==============================
+Open browser console and type:
+nextStep(2)
+
+This will force move to step 2.

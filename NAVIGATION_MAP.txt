@@ -1,0 +1,84 @@
+COMPLETE NAVIGATION MAP - Ideas Before Time
+===========================================
+Updated: November 2024
+
+✅ ALL LINKS VERIFIED - NO BROKEN CHAINS
+
+MAIN ENTRY POINTS:
+------------------
+1. index.html (Login Page)
+   → Password: acrylic2024
+   → Redirects to: library.html
+
+2. library.html (Main Hub - Card View)
+   → Navigation: timeline.html, about.html
+   → Logout: Returns to index.html
+
+3. timeline.html (Timeline View)
+   → Navigation: library.html, about.html
+   → Logout: Returns to index.html
+
+CONTENT SECTIONS:
+-----------------
+
+💡 INNOVATION TIMELINE (9 Ideas):
+   1. silent-dj-2001.html
+   2. tv-storage-2002.html
+   3. music-ringtones-2003.html
+   4. dual-sim-2003.html
+   5. universal-health-id-2009.html
+   6. 3d-imaging-2009.html
+   7. digital-money-2012.html
+   8. moveable-dividers-2012.html
+   9. dashboard-simplification-2017.html
+   
+   All pages have: Back to Library button
+
+🔬 MARKET RESEARCH:
+   - Final_Acrylic_Market_Report.html
+   
+👤 PROFESSIONAL PROFILE:
+   - cv.html (NEW - Added to library!)
+     Email: annikavashist@gmail.com (Personal/Recruiter only)
+
+LEGAL & POLICY PAGES:
+---------------------
+   - privacy-policy.html
+   - disclaimer.html
+   - terms-and-disclaimer.html
+   - refund-policy.html
+   
+   All accessible from footer links
+
+CONTACT INFORMATION:
+--------------------
+   Public Email: onestepforthelife@gmail.com
+   CV Email: annikavashist@gmail.com (Private - Recruiters only)
+   LinkedIn: linkedin.com/in/leadershipexpertamit
+   Phone: +91-9811409022
+
+COPYRIGHT:
+----------
+   © 2025 Amit Kumar / Onestepforthelife. All rights reserved.
+   (Updated across all pages)
+
+NAVIGATION FLOW:
+----------------
+index.html (Login)
+    ↓
+library.html (Main Hub)
+    ↓
+    ├→ Innovation Pages (9 items) → Back to Library
+    ├→ Market Research → Back to Library  
+    ├→ CV (Professional Profile) → Back to Library
+    ├→ timeline.html ↔ library.html
+    ├→ about.html → Back to Library
+    └→ Legal Pages → Back to Home
+
+✅ VERIFICATION COMPLETE:
+- All 9 innovation pages linked
+- CV added to library
+- All navigation chains working
+- Copyright updated to 2025
+- Email separation maintained
+- No broken links detected

@@ -1,0 +1,172 @@
+FULL SITE AUDIT REPORT
+======================
+Date: November 22, 2025
+
+CRITICAL ISSUES FOUND:
+======================
+
+1. BASF BRANDING (LEGAL/COMPLIANCE ISSUE)
+==========================================
+Found in 7 files:
+
+❌ index.html (4 instances)
+   - Meta description
+   - Hero urgency text
+   - Example headline
+   - Footer text
+
+❌ index-new.html (4 instances)
+   - Same as index.html
+
+❌ about.html (3 instances)
+   - Job titles in timeline
+   - Professional experience section
+
+❌ cv.html (2 instances)
+   - Executive highlights
+   - Training section
+
+❌ library.html (2 instances)
+   - CV description
+   - Market analysis description
+
+❌ social-optimizer-app.html (1 instance)
+   - Access code "BASF2025"
+
+RECOMMENDATION: Replace with:
+- "Fortune 500 industry expert"
+- "20+ years across global corporations"
+- "Ex-Fortune 500 leader"
+- Keep in CV/About (factual work history) but remove from marketing
+
+2. IMAGES ISSUE
+===============
+All images use relative paths: images/filename.jpg
+
+PROBLEM: Images in about.html use both:
+- CSS background-image (may not load)
+- <img> tags (should load)
+
+FILES WITH IMAGES:
+✓ about.html - 4 panel images (using <img> tags - GOOD)
+✓ cv.html - 1 profile image
+✓ library.html - 1 hero image
+✓ All 9 innovation pages - hero images
+✓ social-optimizer-index.html - og:image meta tags
+
+IMAGES THAT EXIST:
+✓ images/panel-1-foundation-grit.jpg
+✓ images/panel-2-building-knowledge.jpg
+✓ images/panel-3-innovator-outside.jpg
+✓ images/panel-4-transformation-leader.jpg
+✓ images/library-hero.jpg
+✓ images/silent-dj-2001.jpg
+✓ images/tv-storage-2002.jpg
+✓ images/music-ringtones-2003.jpg
+✓ images/dual-sim-2003.jpg
+✓ images/universal-health-id-2009.jpg
+✓ images/3d-imaging-2009.jpg
+✓ images/digital-money-2012.jpg
+✓ images/moveable-dividers-2012.jpg
+✓ images/dashboard-simplification-2017.jpg
+❌ images/CV Image.png (MISSING - used in cv.html)
+
+RECOMMENDATION:
+- Add missing CV Image.png OR use existing Amit DP.jpg
+- Images should load fine with relative paths
+- If not loading, check browser console for 404 errors
+
+3. LINKEDIN vs SOCIAL PROFILE
+==============================
+Current: "Fix Your LinkedIn Profile"
+Needed: "Optimize Your Social Profile"
+
+Found in:
+❌ index.html - Title, meta, headlines
+❌ index-new.html - Same
+❌ social-optimizer-app.html - Title, descriptions
+
+4. BEFORE/AFTER LABELS
+======================
+Current: "❌ BEFORE" / "✅ AFTER"
+Needed: "❌ BEFORE using One Step SPO" / "✅ AFTER using One Step SPO"
+
+Found in:
+❌ index.html
+❌ index-new.html
+
+5. TARGET AUDIENCE EXPANSION
+============================
+Current: 6 categories
+Needed: Add 8+ more
+
+Missing:
+- Content Creators (YouTubers, TikTokers)
+- Fashion Designers
+- Shop Owners & Boutiques
+- SME/MSME Entrepreneurs
+- Freelancers
+- Artists & Photographers
+- Coaches & Trainers
+- Real Estate Agents
+
+6. REFUND POLICY
+================
+Current: "Yes! Full refund within 24 hours"
+Issue: Tool is ₹21 (cost price), instant delivery
+
+Needed: "₹21 covers platform costs only. Due to instant digital delivery, refunds not available. Contact us for support if unsatisfied."
+
+7. LANGUAGE SELECTOR
+====================
+Status: NOT IMPLEMENTED
+Needed: Simple dropdown for 10+ Indian languages
+
+8. TRUST BADGES
+===============
+Current: BASF, DSM, 3M, IIT Kanpur
+Needed: Add more from CV without BASF
+
+Add:
+- Avery Dennison (GOLD Program)
+- Asian Development Bank
+- Microsoft Azure AI Certified
+- Data Science Certified
+- IIT Kanpur MBA
+- Delhi University LLB
+
+SUMMARY OF FILES NEEDING UPDATES:
+==================================
+
+CRITICAL (Do First):
+1. index.html - Remove BASF, update messaging
+2. index-new.html - Same as above
+3. social-optimizer-app.html - Remove BASF2025 code
+
+IMPORTANT (Do Second):
+4. about.html - Keep BASF in work history (factual)
+5. cv.html - Keep BASF in experience (factual), fix image
+6. library.html - Update descriptions
+
+OPTIONAL (Do Later):
+7. Add language selector
+8. Expand target audiences
+9. Update trust badges
+
+TOTAL FILES TO UPDATE: 6 critical files
+ESTIMATED TIME: 30-45 minutes for all changes
+
+NEXT STEPS:
+===========
+1. I can create preview versions of all 6 files
+2. You review them
+3. I apply changes to live files
+4. Deploy to Cloudflare Pages
+
+OR
+
+1. I make all changes now with detailed log
+2. You review the log
+3. Rollback if needed
+
+WHICH APPROACH DO YOU PREFER?

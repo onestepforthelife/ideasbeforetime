@@ -1,0 +1,55 @@
+URGENT FIXES SUMMARY - Implementation Plan
+==========================================
+
+Due to the extensive changes needed, I recommend we tackle these in phases:
+
+PHASE 1: CRITICAL LEGAL/COMPLIANCE (DO FIRST)
+==============================================
+✅ Remove all "BASF" references
+✅ Update to "Fortune 500 industry expert" or "20+ years industry veteran"
+
+Files to update:
+- index.html (homepage)
+- about.html
+- social-optimizer-app.html
+- Any other pages mentioning BASF
+
+PHASE 2: CORE MESSAGING (DO SECOND)
+====================================
+✅ Change "LinkedIn" to "Social Profile" in headlines
+✅ Update before/after labels
+✅ Fix refund policy
+✅ Update feature descriptions
+
+PHASE 3: EXPANSION (DO THIRD)
+==============================
+✅ Add more target audiences
+✅ Expand trust badges
+✅ Add language selector
+
+PHASE 4: TECHNICAL (DO LAST)
+=============================
+✅ Fix all images
+✅ Verify image paths
+✅ Add fallbacks
+
+IMMEDIATE ACTION NEEDED:
+========================
+
+Would you like me to:
+
+OPTION A: Fix everything at once (will take time, many file changes)
+OPTION B: Fix critical items first (BASF removal, headline updates)
+OPTION C: Create a new updated homepage from scratch
+
+Which option do you prefer?
+
+QUICK WINS I CAN DO NOW:
+=========================
+1. Remove BASF from homepage
+2. Update headline to "Social Profile" instead of "LinkedIn"
+3. Fix before/after labels
+4. Update refund policy
+5. Add more professional categories
+
+Let me know and I'll proceed!

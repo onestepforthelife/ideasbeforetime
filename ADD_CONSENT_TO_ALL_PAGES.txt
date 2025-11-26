@@ -1,0 +1,90 @@
+QUICK IMPLEMENTATION CHECKLIST
+===============================
+
+✅ COMPLETED:
+- cookie-consent.js created
+- cookie-consent.css created  
+- index.html updated
+
+⏳ TO DO - Add these 2 lines to <head> section of each page:
+
+<link rel="stylesheet" href="cookie-consent.css">
+<script src="cookie-consent.js"></script>
+
+PAGES THAT NEED UPDATE:
+-----------------------
+
+MAIN NAVIGATION:
+☐ library.html
+☐ timeline.html
+☐ about.html
+☐ cv.html
+
+INNOVATION PAGES (9):
+☐ silent-dj-2001.html
+☐ tv-storage-2002.html
+☐ music-ringtones-2003.html
+☐ dual-sim-2003.html
+☐ universal-health-id-2009.html
+☐ 3d-imaging-2009.html
+☐ digital-money-2012.html
+☐ moveable-dividers-2012.html
+☐ dashboard-simplification-2017.html
+
+MARKET RESEARCH:
+☐ Final_Acrylic_Market_Report.html
+
+LEGAL PAGES:
+☐ privacy-policy.html
+☐ disclaimer.html
+☐ terms-and-disclaimer.html
+☐ refund-policy.html
+
+OPTIONAL (if you want consent on these too):
+☐ profile-optimizer.html
+☐ social-optimizer-*.html files
+☐ business-insights.html
+☐ business-news.html
+
+TESTING AFTER IMPLEMENTATION:
+------------------------------
+
+1. Visit index.html - consent banner should appear
+2. Click "Accept All"
+3. Navigate to library.html - banner should NOT appear (consent remembered)
+4. Open new incognito window
+5. Visit any page - banner should appear again
+6. Test "Customize" option
+7. Test "Necessary Only" option
+
+GOOGLE ANALYTICS SETUP:
+-----------------------
+
+In Google Analytics setup, select:
+"I use a custom consent banner"
+
+Then paste this code in your Google Analytics tag (after consent banner scripts):
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  
+  gtag('js', new Date());
+  gtag('config', 'YOUR-GA-ID');
+</script>
+
+The consent banner will automatically control when Google Analytics can track.
+
+DEPLOYMENT ORDER:
+-----------------
+
+1. Upload cookie-consent.js
+2. Upload cookie-consent.css
+3. Update all HTML files with the 2 lines
+4. Test on one page first
+5. Deploy remaining pages
+6. Verify in Google Analytics that consent mode is working
+
+© 2025 Ideas Before Time

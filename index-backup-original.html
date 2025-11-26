@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ideas Before Time - Innovation & Strategic Intelligence</title>
+<meta name="description" content="Innovation Timeline & Strategic Market Intelligence. 9 innovations predicted 4-15 years ahead. Professional insights from Amit Kumar.">
+<meta name="author" content="Amit Kumar">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ideas Before Time - Innovation Portfolio">
+<meta property="og:description" content="Personal portfolio showcasing innovation timeline and strategic insights">
+<meta property="og:url" content="https://ideas-before-time.pages.dev">
+<link rel="canonical" href="https://ideas-before-time.pages.dev">
+<!-- Cookie Consent Banner -->
+<link rel="stylesheet" href="cookie-consent.css">
+<script src="cookie-consent.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+body::before {
+    content: "AV © Onestepforthelife";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 80px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.03);
+    pointer-events: none;
+    z-index: 0;
+    white-space: nowrap;
+    user-select: none;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.header h1 {
+    color: #333;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+.header .tagline {
+    color: #667eea;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.header p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+}
+.cta-section {
+    text-align: center;
+    margin: 50px 0;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-radius: 15px;
+}
+.cta-button {
+    display: inline-block;
+    padding: 20px 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    transition: transform 0.3s;
+    margin: 10px;
+}
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.5);
+}
+.cta-button.secondary {
+    background: white;
+    color: #667eea;
+    border: 3px solid #667eea;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+.feature-card {
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.feature-card .icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.feature-card h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.feature-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
+.stat-item h2 {
+    font-size: 42px;
+    margin-bottom: 5px;
+}
+.stat-item p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+.services-section {
+    margin: 50px 0;
+}
+.services-section h2 {
+    color: #333;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.service-card {
+    padding: 25px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+.service-card:hover {
+    border-color: #667eea;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+.service-card h3 {
+    color: #667eea;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.service-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.badge-free {
+    background: #d4edda;
+    color: #155724;
+}
+.badge-premium {
+    background: #ffc107;
+    color: #333;
+}
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #e0e0e0;
+}
+.footer a {
+    color: #667eea;
+    text-decoration: none;
+    margin: 0 15px;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+    .header h1 {
+        font-size: 32px;
+    }
+    .cta-button {
+        display: block;
+        margin: 10px 0;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>💡 Ideas Before Time</h1>
+        <div class="tagline">Innovation Timeline & Strategic Market Intelligence</div>
+        <p>Documented innovations predicted 4-15 years before mainstream adoption. Professional insights from 19+ years of specialty chemicals leadership and pattern recognition expertise.</p>
+    </div>
+
+    <div class="cta-section">
+        <h2 style="color: #333; margin-bottom: 20px;">🎉 100% Free - No Login Required</h2>
+        <p style="color: #666; margin-bottom: 30px;">Explore 9 innovations that predicted the future 4-15 years ahead. Complete open access to all innovation stories, timeline, and insights.</p>
+        <a href="library.html" class="cta-button">Explore Innovation Library →</a>
+        <a href="about.html" class="cta-button secondary">About Amit Kumar</a>
+    </div>
+
+    <div class="stats-section">
+        <div class="stat-item">
+            <h2>9</h2>
+            <p>Innovations Predicted</p>
+        </div>
+        <div class="stat-item">
+            <h2>4-15</h2>
+            <p>Years Ahead</p>
+        </div>
+        <div class="stat-item">
+            <h2>19+</h2>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+            <h2>25%+</h2>
+            <p>CAGR Delivered</p>
+        </div>
+    </div>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="icon">🎧</div>
+            <h3>Silent DJ (2001)</h3>
+            <p>Wireless headphone parties - 4-9 years before mainstream</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📱</div>
+            <h3>Dual SIM (2003)</h3>
+            <p>Now standard in billions of smartphones worldwide</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🏥</div>
+            <h3>Universal Health ID (2009)</h3>
+            <p>Same year as US HITECH Act - 500M+ IDs in India today</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">💰</div>
+            <h3>Digital Money (2012)</h3>
+            <p>Cashless economy vision - UPI now processes 100B+ transactions</p>
+        </div>
+    </div>
+
+    <div class="services-section">
+        <h2>Our Services</h2>
+        
+        <div class="service-card">
+            <h3>💡 Innovation Library</h3>
+            <span class="service-badge badge-free">FREE ACCESS</span>
+            <p>Explore 9 documented innovations predicted years before they became reality. Learn about pattern recognition and trend prediction. Includes detailed analysis of each innovation's journey from concept to mainstream adoption.</p>
+            <a href="library.html" style="color: #667eea; font-weight: 600; text-decoration: none;">Explore Now →</a>
+        </div>
+
+        <div class="service-card">
+            <h3>📊 Strategic Market Research</h3>
+            <span class="service-badge badge-premium">Login required</span>
+            <p>Professional market intelligence for chemical industry investments. Comprehensive analysis of acrylic emulsions market, supply chain dynamics, pricing trends, and strategic insights.</p>
+            <a href="mailto:onestepforthelife@gmail.com" style="color: #667eea; font-weight: 600; text-decoration: none;">Request Access →</a>
+        </div>
+
+        <div class="service-card">
+            <h3>🎯 LinkedIn Profile Optimizer</h3>
+            <span class="service-badge badge-premium">Login required</span>
+            <p>AI-powered LinkedIn profile optimization tool. Transform your professional presence with data-driven insights and recommendations.</p>
+            <a href="mailto:onestepforthelife@gmail.com" style="color: #667eea; font-weight: 600; text-decoration: none;">Request Access →</a>
+        </div>
+
+        <div class="service-card">
+            <h3>📄 Professional CV</h3>
+            <span class="service-badge badge-premium">Password required</span>
+            <p>Complete professional CV with 19+ years of experience, education, certifications, and achievements. Shared privately with recruiters and potential employers.</p>
+            <a href="cv.html" style="color: #667eea; font-weight: 600; text-decoration: none;">Access CV →</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p style="color: #888; font-size: 14px; margin-bottom: 15px;">
+            <a href="library.html">Innovation Library</a> |
+            <a href="timeline.html">Timeline View</a> |
+            <a href="about.html">About</a> |
+            <a href="cv.html">CV</a> |
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="disclaimer.html">Terms & Disclaimer</a>
+        </p>
+        <p style="color: #888; font-size: 14px; margin-bottom: 10px;">
+            Contact: <a href="mailto:onestepforthelife@gmail.com">onestepforthelife@gmail.com</a> |
+            <a href="https://www.linkedin.com/in/leadershipexpertamit/" target="_blank">LinkedIn</a>
+        </p>
+        <p style="color: #888; font-size: 12px;">© 2025 Amit Kumar / Onestepforthelife. All rights reserved.</p>
+    </div>
+</div>
+
+<!-- Google Analytics 4 - Universal Tracking -->
+<script src="universal-analytics.js"></script>
+
+</body>
+</html>

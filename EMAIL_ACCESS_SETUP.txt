@@ -1,0 +1,115 @@
+EMAIL-BASED ACCESS CONTROL SETUP GUIDE
+======================================
+
+OVERVIEW
+--------
+The site now uses an email-based approval system instead of a simple password.
+Visitors must request access by providing their email and LinkedIn profile.
+
+SETUP STEPS
+-----------
+
+1. CREATE FORMSPREE ACCOUNT (FREE)
+   - Go to: https://formspree.io/
+   - Sign up with your email: aragreat@gmail.com (or onestepforthelife@gmail.com)
+   - Verify your email address
+
+2. CREATE A NEW FORM
+   - Click "New Form" in Formspree dashboard
+   - Name it: "Ideas Before Time - Access Requests"
+   - Copy the Form ID (looks like: xyzabc123)
+
+3. UPDATE index.html
+   - Open: Cloudfare/index.html
+   - Find line with: 'https://formspree.io/f/YOUR_FORM_ID'
+   - Replace YOUR_FORM_ID with your actual Form ID
+   - Example: 'https://formspree.io/f/xyzabc123'
+
+4. CONFIGURE EMAIL NOTIFICATIONS
+   - In Formspree dashboard, go to your form settings
+   - Set notification email to: aragreat@gmail.com
+   - Enable email notifications for new submissions
+
+5. APPROVE NEW USERS
+   When you receive an access request email:
+   
+   a) Review the requester's LinkedIn profile
+   b) If approved, add their email to index.html:
+      - Open: Cloudfare/index.html
+      - Find the APPROVED_EMAILS array (around line 150)
+      - Add their email: 'user@example.com',
+   
+   c) Send them an approval email:
+      Subject: Access Approved - Ideas Before Time
+      Body: "Your access has been approved. Visit https://ideas-before-time.pages.dev 
+             and enter your email to access the library."
+
+6. DEPLOY CHANGES
+   - Upload updated index.html to Cloudflare Pages
+   - Changes take effect immediately
+
+CURRENT APPROVED EMAILS
+------------------------
+- aragreat@gmail.com (admin)
+- onestepforthelife@gmail.com (admin)
+
+HOW IT WORKS
+------------
+1. Visitor fills out access request form
+2. You receive email notification with their details
+3. You manually add their email to APPROVED_EMAILS list
+4. They can then access the site using their email
+5. Session persists until browser is closed
+
+ADMIN QUICK ACCESS
+------------------
+- Click "Admin Login" link at bottom of page
+- Enter password: acrylic2024
+- Instant access without email verification
+
+ALTERNATIVE: USE WEB3FORMS (NO SIGNUP REQUIRED)
+------------------------------------------------
+If you prefer not to create a Formspree account:
+
+1. Go to: https://web3forms.com/
+2. Enter your email: aragreat@gmail.com
+3. Get instant Access Key (no signup needed)
+4. In index.html, replace the fetch URL with:
+   
+   const response = await fetch('https://api.web3forms.com/submit', {
+       method: 'POST',
+       headers: {
+           'Content-Type': 'application/json'
+       },
+       body: JSON.stringify({
+           access_key: 'YOUR_ACCESS_KEY_HERE',
+           email: email,
+           linkedin: linkedin,
+           reason: reason,
+           subject: 'New Access Request - Ideas Before Time'
+       })
+   });
+
+FIXING DOMAIN ISSUE
+-------------------
+To fix https://ideas-before-time.pages.dev/library not working:
+
+1. Log into Cloudflare Dashboard
+2. Go to Pages > Your Project
+3. Check which project is connected to "ideas-before-time"
+4. Make sure it's pointing to the correct repository/deployment
+5. If needed, go to Settings > Custom Domains
+6. Verify "ideas-before-time.pages.dev" is properly configured
+
+The domain should automatically work once the correct project is deployed.
+
+SECURITY NOTES
+--------------
+- This is client-side authentication (suitable for low-security content)
+- Approved emails list is visible in page source
+- For sensitive data, consider server-side authentication
+- LinkedIn verification is manual (you check the profile)
+
+SUPPORT
+-------
+For issues, contact: aragreat@gmail.com

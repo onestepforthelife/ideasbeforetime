@@ -1,0 +1,53 @@
+CRITICAL FIXES TO APPLY
+=======================
+
+1. BACK LINK FONT SIZE - Increase to 18px
+==========================================
+Current: Various sizes (12-14px)
+Fix: Change all .back-btn, .back-link, .back-button to font-size: 18px
+
+Files affected: All innovation pages, about, cv, etc.
+
+2. WATERMARK FIX - Reduce size 10x, make repetitive
+===================================================
+Current: Single large watermark
+Fix: 
+- Reduce font-size from 80-100px to 8-10px
+- Make it repeat across entire background
+- Reduce opacity to 0.01-0.02
+
+3. INNOVATION IMAGES NOT SHOWING - PERMANENT FIX
+=================================================
+Problem: Images use CSS background-image which doesn't load
+Solution: Convert ALL to <img> tags with proper paths
+
+Files to fix:
+- silent-dj-2001.html
+- tv-storage-2002.html
+- music-ringtones-2003.html
+- dual-sim-2003.html
+- universal-health-id-2009.html
+- 3d-imaging-2009.html
+- digital-money-2012.html
+- moveable-dividers-2012.html
+- dashboard-simplification-2017.html
+
+4. BUSINESS INSIGHTS DATE - Make Dynamic
+=========================================
+Current: "Last Updated: November 2024"
+Fix: Use JavaScript to show current date
+Add: <script>document.write(new Date().toLocaleDateString('en-US', {month: 'long', year: 'numeric'}))</script>
+
+5. NEWS DATES - Add Proper Dates
+=================================
+Each news item needs actual date of occurrence
+
+IMPLEMENTATION PRIORITY:
+========================
+1. Images fix (most critical)
+2. Watermark fix
+3. Back link font size
+4. Dynamic dates
+5. News dates
+
+Let me implement these now...
