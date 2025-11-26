@@ -1,15 +1,14 @@
 /**
  * Modern Design System - Ideas Before Time
- * 2024-2025 Design Tokens
+ * 2024-2025 Design Trends
  * 
- * This file contains all design tokens (CSS custom properties) that define
- * the visual language of the site. All components should reference these
- * tokens rather than hard-coded values.
+ * This file contains all design tokens (CSS custom properties)
+ * that define the visual language of the site.
  */
 
 :root {
   /* ============================================
-     COLOR SYSTEM - Modern 2024-2025 Palette
+     MODERN COLOR PALETTE
      ============================================ */
   
   /* Primary Colors - Modern Blue */
@@ -25,12 +24,17 @@
   --color-secondary-light: #a78bfa;
   --color-secondary-dark: #7c3aed;
   
-  /* Accent Colors - Warm Orange */
+  /* Accent Colors */
   --color-accent: #f59e0b;
   --color-accent-light: #fbbf24;
   --color-accent-dark: #d97706;
   
-  /* Neutral Scale - Slate */
+  /* Success, Warning, Error */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  
+  /* Neutral Scale - Modern Grays */
   --color-neutral-50: #f8fafc;
   --color-neutral-100: #f1f5f9;
   --color-neutral-200: #e2e8f0;
@@ -43,32 +47,28 @@
   --color-neutral-900: #0f172a;
   
   /* Semantic Colors */
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
-  --color-error: #ef4444;
-  --color-info: #3b82f6;
-  
-  /* Background Colors */
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: var(--color-neutral-50);
-  --color-bg-tertiary: var(--color-neutral-100);
-  
-  /* Text Colors */
+  --color-background: #ffffff;
+  --color-surface: var(--color-neutral-50);
   --color-text-primary: var(--color-neutral-900);
-  --color-text-secondary: var(--color-neutral-700);
-  --color-text-tertiary: var(--color-neutral-500);
-  --color-text-inverse: #ffffff;
+  --color-text-secondary: var(--color-neutral-600);
+  --color-text-muted: var(--color-neutral-500);
+  --color-border: var(--color-neutral-200);
+  --color-divider: var(--color-neutral-100);
   
   /* ============================================
      GLASSMORPHISM EFFECTS
      ============================================ */
   
   --glass-bg: rgba(255, 255, 255, 0.1);
-  --glass-bg-light: rgba(255, 255, 255, 0.15);
-  --glass-bg-dark: rgba(0, 0, 0, 0.1);
+  --glass-bg-light: rgba(255, 255, 255, 0.05);
+  --glass-bg-strong: rgba(255, 255, 255, 0.15);
   --glass-border: rgba(255, 255, 255, 0.2);
   --glass-blur: 10px;
   --glass-blur-strong: 20px;
+  
+  /* Dark Glass (for light backgrounds) */
+  --glass-dark-bg: rgba(15, 23, 42, 0.05);
+  --glass-dark-border: rgba(15, 23, 42, 0.1);
   
   /* ============================================
      TYPOGRAPHY SYSTEM
@@ -77,7 +77,7 @@
   /* Font Families */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   --font-display: 'Poppins', var(--font-primary);
-  --font-mono: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  --font-mono: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
   
   /* Font Sizes - Fluid Typography */
   --text-xs: 0.75rem;      /* 12px */
@@ -117,7 +117,7 @@
   --tracking-widest: 0.1em;
   
   /* ============================================
-     SPACING SYSTEM
+     SPACING SCALE
      ============================================ */
   
   --space-0: 0;
@@ -146,7 +146,7 @@
   --space-32: 8rem;        /* 128px */
   
   /* ============================================
-     SHADOWS - Layered Depth
+     SHADOWS
      ============================================ */
   
   --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -158,9 +158,9 @@
   --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
   
   /* Colored Shadows */
-  --shadow-primary: 0 10px 20px rgba(37, 99, 235, 0.3);
-  --shadow-secondary: 0 10px 20px rgba(139, 92, 246, 0.3);
-  --shadow-accent: 0 10px 20px rgba(245, 158, 11, 0.3);
+  --shadow-primary: 0 10px 20px -5px rgba(37, 99, 235, 0.3);
+  --shadow-secondary: 0 10px 20px -5px rgba(139, 92, 246, 0.3);
+  --shadow-accent: 0 10px 20px -5px rgba(245, 158, 11, 0.3);
   
   /* ============================================
      BORDER RADIUS
@@ -177,10 +177,10 @@
   --radius-full: 9999px;
   
   /* ============================================
-     ANIMATION SYSTEM
+     ANIMATION TIMING
      ============================================ */
   
-  /* Duration */
+  /* Durations */
   --duration-75: 75ms;
   --duration-100: 100ms;
   --duration-150: 150ms;
@@ -190,19 +190,19 @@
   --duration-700: 700ms;
   --duration-1000: 1000ms;
   
-  /* Transition Presets */
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-all: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  
   /* Easing Functions */
   --ease-linear: linear;
   --ease-in: cubic-bezier(0.4, 0, 1, 1);
   --ease-out: cubic-bezier(0, 0, 0.2, 1);
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  --ease-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  /* Transition Presets */
+  --transition-fast: var(--duration-150) var(--ease-out);
+  --transition-base: var(--duration-300) var(--ease-in-out);
+  --transition-slow: var(--duration-500) var(--ease-in-out);
+  --transition-all: all var(--duration-300) var(--ease-in-out);
   
   /* ============================================
      Z-INDEX SCALE
@@ -250,11 +250,13 @@
   --gradient-secondary: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-light));
   --gradient-accent: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
   --gradient-rainbow: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent));
-  --gradient-dark: linear-gradient(135deg, var(--color-neutral-800), var(--color-neutral-900));
+  --gradient-sunset: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb);
+  --gradient-ocean: linear-gradient(135deg, #667eea, #764ba2);
   
-  /* Overlay Gradients */
-  --gradient-overlay-light: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%);
-  --gradient-overlay-dark: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  /* Text Gradients */
+  --gradient-text-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  --gradient-text-warm: linear-gradient(135deg, #f093fb, #f5576c);
+  --gradient-text-cool: linear-gradient(135deg, #4facfe, #00f2fe);
 }
 
 /* ============================================
@@ -263,16 +265,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg-primary: var(--color-neutral-900);
-    --color-bg-secondary: var(--color-neutral-800);
-    --color-bg-tertiary: var(--color-neutral-700);
-    
+    --color-background: var(--color-neutral-900);
+    --color-surface: var(--color-neutral-800);
     --color-text-primary: var(--color-neutral-50);
     --color-text-secondary: var(--color-neutral-300);
-    --color-text-tertiary: var(--color-neutral-400);
+    --color-text-muted: var(--color-neutral-400);
+    --color-border: var(--color-neutral-700);
+    --color-divider: var(--color-neutral-800);
     
-    --glass-bg: rgba(0, 0, 0, 0.3);
-    --glass-bg-light: rgba(0, 0, 0, 0.4);
+    /* Adjust glass for dark mode */
+    --glass-bg: rgba(15, 23, 42, 0.3);
     --glass-border: rgba(255, 255, 255, 0.1);
   }
 }
@@ -291,28 +293,19 @@
     --duration-500: 0ms;
     --duration-700: 0ms;
     --duration-1000: 0ms;
-    
-    --transition-fast: none;
-    --transition-base: none;
-    --transition-slow: none;
-    --transition-all: none;
-  }
-  
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
   }
 }
 
 /* ============================================
-   BASE RESET & TYPOGRAPHY
+   BASE RESET & DEFAULTS
    ============================================ */
 
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -327,7 +320,8 @@ body {
   font-size: var(--text-base);
   line-height: var(--leading-normal);
   color: var(--color-text-primary);
-  background-color: var(--color-bg-primary);
+  background-color: var(--color-background);
+  min-height: 100vh;
 }
 
 /* ============================================
@@ -344,22 +338,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, var(--text-5xl));
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
   margin-bottom: var(--space-6);
 }
 
 h2 {
-  font-size: clamp(1.5rem, 4vw, var(--text-4xl));
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
   margin-bottom: var(--space-5);
 }
 
 h3 {
-  font-size: clamp(1.25rem, 3vw, var(--text-3xl));
-  margin-bottom: var(--space-4);
+  font-size: clamp(var(--text-xl), 3vw, var(--text-3xl));
 }
 
 h4 {
-  font-size: var(--text-2xl);
+  font-size: clamp(var(--text-lg), 2.5vw, var(--text-2xl));
 }
 
 h5 {
@@ -372,13 +365,14 @@ h6 {
 
 p {
   margin-bottom: var(--space-4);
+  color: var(--color-text-secondary);
   line-height: var(--leading-relaxed);
 }
 
 a {
   color: var(--color-primary);
   text-decoration: none;
-  transition: var(--transition-fast);
+  transition: color var(--transition-fast);
 }
 
 a:hover {
@@ -396,27 +390,12 @@ a:focus-visible {
    ============================================ */
 
 .text-gradient {
-  background: var(--gradient-primary);
+  background: var(--gradient-text-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.text-gradient-secondary {
-  background: var(--gradient-secondary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.text-gradient-rainbow {
-  background: var(--gradient-rainbow);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Container */
 .container {
   width: 100%;
   max-width: var(--container-xl);
@@ -440,7 +419,7 @@ a:focus-visible {
   }
 }
 
-/* Screen Reader Only */
+/* Screen reader only */
 .sr-only {
   position: absolute;
   width: 1px;
