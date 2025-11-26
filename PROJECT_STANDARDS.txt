@@ -367,3 +367,323 @@ NOTE: This document should be updated whenever new patterns, preferences, or
 standards emerge during development. All changes must be documented with date
 and reason.
 ================================================================================
+
+
+================================================================================
+SECTION 10: KIRO WORKING METHODOLOGY - LEARNED FROM ALL SESSIONS
+================================================================================
+Last Updated: November 25, 2025
+Purpose: How Kiro should work with Amit across ALL sessions
+
+10.1 EXECUTION STYLE
+-------------------
+✓ Execute immediately without asking permission repeatedly
+✓ Use "Option A: SEC Approach" - validate first, then scale
+✓ Batch operations (modify 9 files at once, not one-by-one)
+✓ Report results concisely (2-3 sentences, no bullet lists)
+✓ Continue until work is complete unless user says stop
+✓ No asking "should I continue?" or "want me to do X?"
+
+✗ Don't ask for permission multiple times
+✗ Don't give verbose summaries with bullet points
+✗ Don't repeat same messages
+✗ Don't over-plan without action
+✗ Don't stop after every small task
+
+10.2 COMMUNICATION PATTERNS
+--------------------------
+GOOD:
+"Done. Added navigation to 13 pages, fixed links. Ready to deploy."
+
+BAD:
+"I have completed the following:
+- Navigation added
+- Links fixed
+Would you like me to continue?"
+
+WHEN USER SAYS:
+- "continue without asking" → Execute everything until complete
+- "u do" → Just do it, don't explain
+- "yes" → Continue with current work
+- "where were we" → Brief status update only
+
+10.3 PROACTIVE BEHAVIOR
+----------------------
+ALWAYS DO (without being asked):
+✓ Identify missing items (favicon, 404 page, etc.)
+✓ Suggest improvements
+✓ Fix obvious errors (broken links, wrong paths)
+✓ Update documentation automatically
+✓ Create deployment checklists
+✓ Think 360° - what else is needed?
+
+EXAMPLE:
+"Completed SEO. Also noticed: favicon missing, 404 page needed, images not compressed. Adding these now."
+
+10.4 LEARNING & MEMORY
+---------------------
+EVERY SESSION:
+✓ Read PROJECT_STANDARDS.txt first
+✓ Read KIRO_LEARNING_LOG.txt
+✓ Check DEPLOYMENT_LOG.txt for latest status
+✓ Update all 3 files after work
+
+TRACK:
+- What worked well
+- What frustrated user
+- What was missing
+- How to be faster
+- New patterns discovered
+
+10.5 MISTAKE PATTERNS TO AVOID
+-----------------------------
+From past sessions:
+
+MISTAKE 1: Creating files that already exist
+- LESSON: Always check if file exists first
+- Use grepSearch or fileSearch before creating
+
+MISTAKE 2: Using wrong paths
+- LESSON: Use relative paths (library.html not /library.html)
+- Test from different page depths
+
+MISTAKE 3: Linking to non-existent pages
+- LESSON: Verify file exists before linking
+- Use listDirectory to check
+
+MISTAKE 4: Breaking existing functionality
+- LESSON: Read existing code before modifying
+- Test critical paths first
+
+MISTAKE 5: Incomplete work
+- LESSON: Think 360° - what else is needed?
+- Proactively identify gaps
+
+10.6 SPEED OPTIMIZATION TECHNIQUES
+---------------------------------
+✓ Parallel tool calls (strReplace 9 files at once)
+✓ Batch read files (readMultipleFiles)
+✓ Use grepSearch instead of reading entire files
+✓ Create reusable components (common-navigation.js)
+✓ Document once, reference many times
+
+10.7 QUALITY ASSURANCE
+---------------------
+BEFORE SCALING:
+1. Test on 1 file first (SEC approach)
+2. Verify it works
+3. Then apply to all files
+4. Document what was changed
+
+AFTER COMPLETING:
+1. Update DEPLOYMENT_LOG.txt
+2. Create deployment checklist
+3. Identify missing items
+4. Suggest next steps
+
+10.8 DOCUMENTATION STANDARDS
+---------------------------
+ALWAYS CREATE:
+✓ Indexed log entries (DEPLOYMENT_LOG.txt)
+✓ Implementation summaries
+✓ Deployment checklists
+✓ Setup guides (Google Search Console, etc.)
+✓ Upload checklists
+
+FORMAT:
+- Use indexed entries [2025-11-25-001]
+- Include: Time, Status, Priority
+- List files modified
+- Document results
+- Note next steps
+
+10.9 SPEC WORKFLOW INTEGRATION
+-----------------------------
+WHEN TO USE SPECS:
+- Complex multi-phase projects
+- User wants to review before execution
+- Documentation needed for future reference
+- Multiple people need to understand plan
+
+WHEN TO EXECUTE IN CHAT:
+- User wants it done NOW
+- Simple fixes and improvements
+- User is supervising
+- Fast iteration needed
+
+HYBRID APPROACH (BEST):
+1. Create specs as documentation
+2. Execute in chat for speed
+3. Update specs with actual results
+4. Specs become permanent record
+
+10.10 CONTINUOUS IMPROVEMENT
+---------------------------
+AFTER EVERY SESSION:
+1. What worked well?
+2. What frustrated user?
+3. What was missing?
+4. How to be faster?
+5. Update this section
+
+MONTHLY:
+1. Review all session logs
+2. Identify patterns
+3. Update standards
+4. Refine methodology
+
+================================================================================
+SESSION HISTORY SUMMARY
+================================================================================
+
+SESSION 1 (Nov 24, 2025):
+- Fixed DNS issue (project rename)
+- Created PROJECT_STANDARDS.txt
+- Established working boundaries
+- LESSON: Document everything permanently
+
+SESSION 2 (Nov 25, 2025):
+- Created 3 Kiro specs (website-fixes, seo-performance, advanced-features)
+- Executed navigation fixes (13 pages)
+- Executed SEO optimization (18 pages)
+- Created 8 new files, modified 21 files
+- LESSON: Execute without asking, batch operations, proactive gap analysis
+
+PATTERNS ACROSS SESSIONS:
+- User values speed and action
+- User catches mistakes quickly
+- User wants 360° complete work
+- User appreciates honesty and directness
+- User wants permanent documentation
+
+================================================================================
+NEXT SESSION PREPARATION
+================================================================================
+
+BEFORE STARTING:
+1. Read this entire file (PROJECT_STANDARDS.txt)
+2. Read KIRO_LEARNING_LOG.txt
+3. Check DEPLOYMENT_LOG.txt for latest status
+4. Review FIXES_NEEDED.txt or any pending work
+
+MINDSET:
+- Execute first, ask later (only if stuck)
+- Think 360° - what's missing?
+- Batch operations for speed
+- Document as you go
+- Proactive gap analysis
+
+COMMUNICATION:
+- Concise (2-3 sentences)
+- Action-focused
+- No repetition
+- Report results, not intentions
+
+================================================================================
+CRITICAL SUCCESS FACTORS
+================================================================================
+
+1. SPEED: Execute without asking permission
+2. QUALITY: Validate first, then scale (SEC approach)
+3. COMPLETENESS: Think 360°, identify gaps proactively
+4. DOCUMENTATION: Update logs, create guides
+5. LEARNING: Track what works, improve continuously
+
+================================================================================
+END OF SECTION 10
+================================================================================
+
+
+================================================================================
+IMAGE MANAGEMENT STANDARDS (Added 2025-11-26)
+================================================================================
+
+PERMANENT RULE: ALL IMAGES GO IN images/ FOLDER
+-----------------------------------------------
+
+Directory Structure:
+Cloudfare/
+├── images/
+│   ├── panel-1-foundation-grit.jpg
+│   ├── panel-2-building-knowledge.jpg
+│   ├── panel-3-innovator-outside.jpg
+│   ├── panel-4-transformation-leader.jpg
+│   ├── silent-dj-2001.jpg
+│   ├── tv-storage-2002.jpg
+│   ├── music-ringtones-2003.jpg
+│   ├── dual-sim-2003.jpg
+│   ├── universal-health-id-2009.jpg
+│   ├── 3d-imaging-2009.jpg
+│   ├── digital-money-2012.jpg
+│   ├── moveable-dividers-2012.jpg
+│   ├── dashboard-simplification-2017.jpg
+│   ├── library-hero.jpg
+│   └── CV Image.png
+├── index.html
+├── library.html
+└── (other files)
+
+HTML Image References:
+----------------------
+ALWAYS use: <img src="images/filename.jpg">
+NEVER use: <img src="filename.jpg">
+
+CSS Background Images:
+---------------------
+ALWAYS use: url('images/filename.jpg')
+NEVER use: url('filename.jpg')
+
+Adding New Images:
+-----------------
+1. Save image to: C:\Users\araag\Documents\Cloudfare\images\
+2. Reference in HTML: images/filename.jpg
+3. Commit and push via GitHub Desktop
+
+WHY THIS MATTERS:
+----------------
+- Keeps root folder clean
+- Easy to find all images
+- Consistent paths across all pages
+- No more broken images on live site
+
+LESSON LEARNED:
+--------------
+Images were in root folder but HTML referenced images/ folder.
+Result: Broken images for days.
+Solution: Move all images to images/ folder once, works forever.
+
+================================================================================
+GITHUB DESKTOP WORKFLOW (Added 2025-11-26)
+================================================================================
+
+PERMANENT WORKFLOW: USE GITHUB DESKTOP, NOT MANUAL UPLOADS
+----------------------------------------------------------
+
+Setup (One Time):
+1. Install GitHub Desktop
+2. Clone repository to: C:\Users\araag\Documents\Cloudfare-GitHub
+3. Work in that folder only
+
+Daily Workflow:
+1. Edit files in Cloudfare-GitHub folder
+2. Open GitHub Desktop
+3. Review changes
+4. Write commit message
+5. Click "Commit to main"
+6. Click "Push origin"
+7. Wait 2 minutes for Cloudflare deployment
+
+Benefits:
+✓ No manual file selection
+✓ No forgetting files
+✓ Version history
+✓ Easy rollback if needed
+✓ One-click deployment
+
+NEVER AGAIN:
+✗ Manual uploads to GitHub website
+✗ Dragging files one by one
+✗ Forgetting which files changed
+✗ Uploading wrong versions
+
+================================================================================

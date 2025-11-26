@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Test</title>
+<style>
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+.test-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+<body>
+
+<div class="test-content">
+    <h1>Navigation Test Page</h1>
+    <p>This page tests the common-navigation.js functionality.</p>
+    
+    <h2>✅ What to Check:</h2>
+    <ul>
+        <li>Navigation bar appears at top (fixed position)</li>
+        <li>Footer appears at bottom</li>
+        <li>All links work (no 404 errors)</li>
+        <li>Mobile menu toggle works (resize browser)</li>
+        <li>Body has proper padding (content not hidden under navbar)</li>
+        <li>Hover effects work on links</li>
+    </ul>
+    
+    <h2>📋 Navigation Links:</h2>
+    <ul>
+        <li>Home → index.html</li>
+        <li>Innovation Library → library.html</li>
+        <li>Business Insights → business-insights.html</li>
+        <li>Market Reports → specialty-chemicals-index.html</li>
+        <li>CV → cv-preview.html</li>
+        <li>About → about.html</li>
+    </ul>
+    
+    <h2>🔍 Footer Links:</h2>
+    <ul>
+        <li>Innovation Library</li>
+        <li>Timeline View</li>
+        <li>About</li>
+        <li>CV</li>
+        <li>Market Reports</li>
+    </ul>
+    
+    <p style="margin-top: 40px; padding: 20px; background: #f0f0f0; border-left: 4px solid #667eea;">
+        <strong>Test Instructions:</strong><br>
+        1. Open this file in browser<br>
+        2. Check navigation appears<br>
+        3. Click each link to verify they work<br>
+        4. Resize browser to test mobile menu<br>
+        5. If all works, apply to other pages
+    </p>
+</div>
+
+<!-- Load common navigation -->
+<script src="common-navigation.js"></script>
+
+</body>
+</html>

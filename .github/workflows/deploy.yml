@@ -1,0 +1,50 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Validate innovations.json
+        run: |
+          echo "Validating innovations.json..."
+          node -e "JSON.parse(require('fs').readFileSync('innovations.json', 'utf8'))"
+          echo "✓ JSON is valid"
+      
+      - name: Generate sitemap
+        run: |
+          echo "Generating sitemap..."
+          node scripts/generate-sitemap.js
+      
+      - name: Update innovations page
+        run: |
+          echo "Updating innovations page..."
+          node scripts/generate-innovations-page.js
+      
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ideas-before-time
+          directory: .
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Deployment summary
+        run: |
+          echo "✓ Deployment complete"
+          echo "Site: https://ideas-before-time.pages.dev"

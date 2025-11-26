@@ -1,0 +1,42 @@
+{
+  "name": "Content Update Reminder",
+  "description": "Reminds user to update innovations every 30 days",
+  "trigger": "on_session_start",
+  "enabled": true,
+  "condition": {
+    "type": "time_based",
+    "days_since_last_update": 30,
+    "check_file": "innovations.json"
+  },
+  "action": {
+    "type": "message",
+    "content": "🤖 **Content Update Reminder**\n\nIt's been 30 days since your last innovation update!\n\nWould you like to add new innovations to your Ideas Before Time website?\n\n**Quick Actions:**\n- Edit innovations.json to add new entries\n- The automation system will handle the rest (sitemap, page generation, deployment)\n\n**Current Status:**\n- Total Innovations: 9\n- Last Updated: Check innovations.json metadata"
+  },
+  "quickActions": [
+    {
+      "label": "📝 Edit innovations.json",
+      "action": "open_file",
+      "file": "innovations.json"
+    },
+    {
+      "label": "🌐 View Live Site",
+      "action": "open_url",
+      "url": "https://ideas-before-time.pages.dev/innovations-table.html"
+    },
+    {
+      "label": "📚 View Spec",
+      "action": "open_file",
+      "file": ".kiro/specs/automation-system/requirements.md"
+    },
+    {
+      "label": "⏰ Remind me in 7 days",
+      "action": "snooze",
+      "days": 7
+    }
+  ],
+  "metadata": {
+    "created": "2025-11-26",
+    "version": "1.0",
+    "author": "Kiro AI"
+  }
+}
