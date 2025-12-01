@@ -7,6 +7,8 @@ function addSiteFooter() {
         <div class="footer-content">
             <nav class="footer-links">
                 <a href="index.html">Home</a>
+                <a href="social-optimizer-index.html">SPO Tool</a>
+                <a href="email-sender-web.html">Job Search Tool</a>
                 <a href="library.html">Innovation Library</a>
                 <a href="about.html">About</a>
                 <a href="privacy-policy.html">Privacy Policy</a>

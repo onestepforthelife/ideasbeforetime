@@ -36,11 +36,18 @@
 <body>
     <div id="navigation-placeholder"></div>
     <div id="watermark"></div>
+    
+    <!-- Credit System UI -->
+    <script src="job-credits-system.js"></script>
+    <link rel="stylesheet" href="job-credits-ui.html">
 
     <div class="hero">
-        <h1>📧 Email Sender with Approval</h1>
-        <p>Review & Send Job Applications with One Click</p>
+        <h1>📧 Job Search Tool</h1>
+        <p>AI-Powered Email Automation • Pay Only for Time Used</p>
     </div>
+    
+    <!-- Include Credit Banner & Modal -->
+    <div id="creditSystemContainer"></div>
 
     <div class="container">
         <!-- Setup Section -->
@@ -114,6 +121,20 @@
     </div>
 
     <script src="common-navigation.js"></script>
+    
+    <!-- Load Credit System UI -->
+    <script>
+        fetch('job-credits-ui.html')
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById('creditSystemContainer').innerHTML = html;
+                // Initialize credit system after loading
+                if (typeof creditSystem !== 'undefined') {
+                    creditSystem.updateDisplay();
+                }
+            });
+    </script>
+    
     <script>
         let emailConfig = null;
         let jobs = [];
