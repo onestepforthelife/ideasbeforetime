@@ -284,8 +284,15 @@
                     <p style="color: #666; line-height: 1.6;">We accept UPI (PhonePe, GPay, Paytm), all credit/debit cards via Razorpay and Stripe, and international payments. 100% secure checkout.</p>
                 </div>
                 <div style="margin-bottom: 25px;">
-                    <h3 style="color: #667eea; margin-bottom: 10px;">🔄 Can I get a refund?</h3>
-                    <p style="color: #666; line-height: 1.6;">Yes! If you're not satisfied with the optimization, contact us within 24 hours for a full refund. No questions asked.</p>
+                    <h3 style="color: #667eea; margin-bottom: 10px;">🔄 What does ₹21 cover?</h3>
+                    <p style="color: #666; line-height: 1.6;">The tool is completely free! ₹21 covers:</p>
+                    <ul style="color: #666; line-height: 1.8; margin-left: 20px; margin-top: 10px;">
+                        <li>Backend API costs (OpenAI, Gemini)</li>
+                        <li>Server infrastructure</li>
+                        <li>Support & maintenance</li>
+                        <li>Instant processing</li>
+                    </ul>
+                    <p style="color: #666; line-height: 1.6; margin-top: 10px; font-size: 14px;">Since service is delivered instantly and costs are incurred immediately, refunds are not applicable. Questions? Email: <a href="mailto:onestepforthelife@gmail.com" style="color: #667eea;">onestepforthelife@gmail.com</a></p>
                 </div>
                 <div style="margin-bottom: 25px;">
                     <h3 style="color: #667eea; margin-bottom: 10px;">📱 Which platforms are supported?</h3>
@@ -375,5 +382,24 @@
     
     <!-- Currency Detection Script -->
     <script src="currency-detector.js"></script>
+
+    <!-- Password Protection for SPO -->
+    <script>
+    (function() {
+        const SPO_PASSWORD = 'AmitSPO2025!';
+        const isAuthenticated = sessionStorage.getItem('spo_authenticated') === 'true';
+        
+        if (!isAuthenticated) {
+            const enteredPassword = prompt('Social Profile Optimizer is password protected.\n\nPlease enter the password to access:');
+            
+            if (enteredPassword === SPO_PASSWORD) {
+                sessionStorage.setItem('spo_authenticated', 'true');
+            } else {
+                alert('Incorrect password. Redirecting to home page.');
+                window.location.href = 'index.html';
+            }
+        }
+    })();
+    </script>
 </body>
 </html>

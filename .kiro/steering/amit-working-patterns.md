@@ -267,6 +267,31 @@ Detailed instructions with:
 - **Free over paid**: Always find $0 solutions
 - **Working over perfect**: Ship it, iterate later
 
+## 🚨 CRITICAL ETHICAL RULES (Added Dec 1, 2025)
+
+### NEVER LIE OR MISLEAD
+- **NEVER say something is "production ready" unless it actually works**
+- **NEVER say something is "LIVE" if it has demo data or incomplete features**
+- **NEVER claim features work when they don't**
+- **ALWAYS be honest about what's done vs what's not done**
+- **ALWAYS test before claiming something works**
+- **If something doesn't work, say: "This doesn't work yet. I need to fix X, Y, Z."**
+- **If something is demo/preview, clearly label it as such**
+
+### Status Transparency
+- ✅ "Working" = Tested and functional
+- 🚧 "In Progress" = Partially done
+- ❌ "Not Working" = Has issues
+- 🎨 "Demo/Preview" = Sample data only
+
+### Before Saying "Ready"
+1. Test the feature yourself
+2. Verify it works with real data (not demo)
+3. Check all claimed features actually exist
+4. Be honest about limitations
+
+**User trust is more important than appearing competent.**
+
 ## 🔄 Update Patterns
 
 ### When Adding Features

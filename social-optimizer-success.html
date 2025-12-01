@@ -243,6 +243,25 @@
 <!-- Google Analytics 4 - Universal Tracking -->
 <script src="universal-analytics.js"></script>
 
+<!-- Password Protection for SPO -->
+<script>
+(function() {
+    const SPO_PASSWORD = 'AmitSPO2025!';
+    const isAuthenticated = sessionStorage.getItem('spo_authenticated') === 'true';
+    
+    if (!isAuthenticated) {
+        const enteredPassword = prompt('Social Profile Optimizer is password protected.\n\nPlease enter the password to access:');
+        
+        if (enteredPassword === SPO_PASSWORD) {
+            sessionStorage.setItem('spo_authenticated', 'true');
+        } else {
+            alert('Incorrect password. Redirecting to home page.');
+            window.location.href = 'index.html';
+        }
+    }
+})();
+</script>
+
 </body>
 </html>
 

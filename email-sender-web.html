@@ -89,6 +89,18 @@
             </div>
         </div>
 
+        <!-- Action Bar -->
+        <div style="background: white; border-radius: 15px; padding: 20px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <div>
+                <h3 style="margin: 0; color: #333;">📧 Job Applications</h3>
+                <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">Review and send your personalized emails</p>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <button class="btn" onclick="loadJobs()">🔄 Refresh</button>
+                <button class="btn btn-warning" onclick="startFreshSearch()">🆕 Start Fresh Search</button>
+            </div>
+        </div>
+
         <!-- Stats -->
         <div class="stats">
             <div class="stat-card">
@@ -235,66 +247,36 @@
             alert('🧪 Test email feature requires backend. For now, use Python version: python email_sender.py');
         }
 
+        // Clear all jobs and start fresh
+        function startFreshSearch() {
+            if (confirm('🔄 This will clear all current jobs and start fresh. Continue?')) {
+                jobs = [];
+                localStorage.removeItem('jobSearchResults');
+                displayJobs();
+                updateStats();
+                alert('✅ Cleared! Now run your job search to populate new results.');
+            }
+        }
+
         // Load jobs from localStorage (simulated - in real version would load from job_results folder)
         function loadJobs() {
-            // Simulate loading jobs
-            jobs = [
-                {
-                    id: 1,
-                    company: 'Coherent Corp',
-                    title: 'Director Operations',
-                    matchScore: 95,
+            // Check localStorage first
+            const stored = localStorage.getItem('jobSearchResults');
+            if (stored) {
+                jobs = JSON.parse(stored);
+                displayJobs();
+                updateStats();
+                return;
+            }
+            
+            // Empty by default - no test data
+            jobs = [];
                     contacts: [
                         { name: 'Albert Ooi', email: 'albert.ooi@coherent.com' },
                         { name: 'Brad Dudschus', email: 'brad.dudschus@coherent.com' },
                         { name: 'Grace Lee', email: 'grace.lee@coherent.com' }
                     ],
-                    subject: 'Work Capability Available | Director Operations – Coherent Corp | Operational Excellence',
-                    body: `Dear Albert, Brad, Grace, and colleagues,
-
-Greetings.
-
-I am reaching out collectively regarding the Director Operations role at Coherent Corp. Out of respect for your time and inbox, I am sending this single consolidated message rather than separate emails.
-
-What you seek in this role:
-• Oversee manufacturing, engineering, and operational excellence initiatives
-• Strengthen systems and innovation to future-proof capabilities
-• Lead strategic planning, governance, and compliance frameworks
-
-What I offer to Coherent Corp:
-• Delivered 25%+ CAGR and stewarded $150M+ P&Ls across BASF, DSM, and 3M
-• Supported semiconductor supply chains with advanced manufacturing solutions
-• Embedded audit-ready governance frameworks across APAC operations
-
-I am a Singapore ONE Pass eligible executive, ensuring immediate availability. I kindly seek your support in reviewing my CV and would be grateful if you could advise the appropriate next step.
-
-With respect and best regards,
-
-Amit Kumar
-Regional Director-Level Outcomes | APAC Market Expansion | $150M+ P&L Stewardship
-E: annikavashist@gmail.com | M: +91-9811409022
-LinkedIn: https://www.linkedin.com/in/leadershipexpertamit`
-                },
-                {
-                    id: 2,
-                    company: 'DHL Supply Chain',
-                    title: 'VP Supply Chain',
-                    matchScore: 92,
-                    contacts: [
-                        { name: 'John Smith', email: 'john.smith@dhl.com' },
-                        { name: 'Sarah Chen', email: 'sarah.chen@dhl.com' }
-                    ],
-                    subject: 'Work Capability Available | VP Supply Chain – DHL | Global Supply Chain Leadership',
-                    body: `Dear John, Sarah, and colleagues,
-
-Greetings.
-
-I am writing regarding the VP Supply Chain role at DHL Supply Chain...
-
-[Full email body here]`
-                }
-            ];
-
+            
             displayJobs();
             updateStats();
         }
@@ -307,8 +289,9 @@ I am writing regarding the VP Supply Chain role at DHL Supply Chain...
                 container.innerHTML = `
                     <div style="text-align: center; padding: 40px; color: #6c757d;">
                         <div style="font-size: 3em; margin-bottom: 15px;">📭</div>
-                        <p>No jobs ready yet. Run the AI agent first.</p>
+                        <p style="margin-bottom: 20px;">No jobs loaded yet. Import your job search results or run the AI agent.</p>
                         <button class="btn" onclick="loadJobs()">🔄 Refresh</button>
+                        <button class="btn btn-success" onclick="importJobs()">📥 Import Jobs</button>
                     </div>
                 `;
                 return;

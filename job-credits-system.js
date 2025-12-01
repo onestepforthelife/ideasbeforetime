@@ -136,9 +136,29 @@ class CreditSystem {
         }
     }
 
+    // Check for passcode
+    checkPasscode() {
+        const passcode = prompt('🔑 Enter passcode (or click Cancel to pay):');
+        if (passcode && passcode.toLowerCase() === 'guruji') {
+            return true;
+        }
+        return false;
+    }
+
     // Initiate Razorpay payment
     buyCredits(packageKey) {
         const pkg = CREDIT_PACKAGES[packageKey];
+        
+        // Check for passcode first
+        if (this.checkPasscode()) {
+            this.addCredits(pkg.seconds);
+            this.hideBuyCreditsModal();
+            this.showSuccessMessage(`✅ ${pkg.name} activated FREE with passcode! ${this.formatTime(pkg.seconds)} added.`);
+            if (!this.isActive) {
+                this.startTimer();
+            }
+            return;
+        }
         
         const options = {
             key: 'rzp_test_YOUR_KEY_HERE', // Replace with actual Razorpay key
