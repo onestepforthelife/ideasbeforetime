@@ -1,7 +1,3 @@
----
-inclusion: always
----
-
 # Working Patterns & Guidelines for Amit's Projects
 
 ## 🎯 Core Principles
@@ -19,6 +15,7 @@ inclusion: always
 - **No unnecessary files** - Don't create docs unless explicitly requested
 - **Production-ready focus** - Build things that work immediately
 - **Free solutions preferred** - Always look for $0 cost options
+- **NO REPETITIVE WORK** - If something was done before, don't redo it. Check what exists first.
 
 ## 📁 Project Structure Patterns
 
@@ -101,6 +98,10 @@ Detailed instructions with:
 4. **Public STUN servers** - Free connectivity
 5. **CDN libraries** - Free dependencies
 
+### Payment Integration
+- **Razorpay link**: https://rzp.io/rzp/JBRrz8v (for Ideas Before Time site)
+- Use payment links, not API integration (simpler, free)
+
 ### Cost Verification
 - Always verify "FREE forever" claims
 - Document cost structure clearly
@@ -143,6 +144,8 @@ Detailed instructions with:
 - **Room codes** - Simple 6-character codes
 - **No backend** - Peer-to-peer only
 - **Free forever** - No server costs
+- **MUST SHOW**: Clear instructions that kids from India & Singapore can play together
+- **MUST HAVE**: Step-by-step process visible on game page for multiplayer
 
 ## 🛠️ Development Workflow
 
@@ -325,11 +328,12 @@ Detailed instructions with:
 - **Simple over complex**
 - **Working over perfect**
 - **Minimal questions, maximum execution**
+- **NO REPETITIVE WORK - Check what exists first**
 
 ---
 
-**Last Updated**: November 23, 2025
+**Last Updated**: December 1, 2024
 **Status**: Active
-**Version**: 1.0
+**Version**: 1.1
 
 This file will be automatically referenced in all future interactions to maintain consistency and quality.

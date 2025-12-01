@@ -1,0 +1,145 @@
+╔══════════════════════════════════════════════════════════════╗
+║     🤝 SETUP KIRO FOR YOUR PARTNER 🤝                       ║
+║          Copy/Paste This Prompt to Their Kiro               ║
+╚══════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 COPY THIS ENTIRE MESSAGE TO YOUR PARTNER'S KIRO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Hi Kiro! I'm working with Amit on his projects. Please follow these rules:
+
+## 🎯 WORKING STYLE
+
+1. **Understand typos** - Amit types fast with shortcuts, understand intent
+2. **Minimal questions** - Ask upfront what's needed, then execute
+3. **No repetitive work** - Check what exists before redoing anything
+4. **Visual guides** - Use ASCII art, emojis, boxes for documentation
+5. **Free solutions only** - Always find $0 cost options
+6. **Action over discussion** - Do the work, don't just explain
+
+## 📁 PROJECTS
+
+### Ideas Before Time Website
+- Location: `C:\Users\araag\Documents\Cloudfare`
+- Live site: https://ideas-before-time.pages.dev
+- Payment link: https://rzp.io/rzp/JBRrz8v
+- Deploy: Use GitHub Desktop or run `UPLOAD_TO_GITHUB.bat`
+
+### Ghar Ghar Game
+- Location: `C:\Users\araag\Documents\Cloudfare\ghar-ghar\`
+- Multiplayer game for kids (10 roles, 5 languages)
+- Free forever using PeerJS + WebRTC
+- No backend, no costs, peer-to-peer only
+
+## 🔒 SECURITY RULES
+
+- ❌ NEVER store passwords in files
+- ❌ NEVER commit credentials to Git
+- ✅ Use OAuth/tokens only
+- ✅ Browser-based auth preferred
+
+## 💰 COST RULES
+
+- Cloudflare Pages = FREE hosting
+- PeerJS + WebRTC = FREE multiplayer
+- GitHub = FREE version control
+- Always verify "FREE forever" claims
+
+## 🛠️ WORKFLOW
+
+When Amit says "Update X":
+1. Read existing file first
+2. Make minimal changes only
+3. Don't redo what's already done
+4. Confirm briefly when complete
+
+When Amit says "Fix site":
+1. Check contrast (white text on gradient needs shadows)
+2. Align headers/footers consistently
+3. Test all links work
+4. Make readable, professional
+
+## 📝 DOCUMENTATION STYLE
+
+Use this format for guides:
+
+```
+╔══════════════════════════════════════════════════════════════╗
+║     🎯 TITLE WITH EMOJI 🎯                                  ║
+╚══════════════════════════════════════════════════════════════╝
+
+✅ YOU WILL SEE: What happens
+✅ YOU WILL DO: Actions needed
+✅ DIFFICULTY: ⭐ Easy
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 STEP 1: Clear Title
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Instructions with emojis and visual boxes
+```
+
+## 🎮 GHAR GHAR SPECIFICS
+
+- 10 roles: doctor, teacher, police, chef, etc.
+- 5 languages: English, Hindi, Tamil, Telugu, Bengali
+- 150+ items, 60+ shops/classes
+- Multiplayer works globally (any country)
+- Kids use phone/WhatsApp to talk while playing
+- Show clear instructions on how to play together
+
+## 📂 FILE LOCATIONS
+
+Common files:
+- `common-navigation.css` - Navigation styling
+- `common-navigation.js` - Mobile menu
+- `common-watermark.css` - Watermark system
+- `.kiro/steering/amit-working-patterns.md` - Full rules
+
+## 🚀 DEPLOYMENT
+
+1. Make changes to files
+2. Open GitHub Desktop
+3. Commit with message
+4. Push to GitHub
+5. Cloudflare auto-deploys in 2 minutes
+
+## 💡 REMEMBER
+
+- Amit prefers action over discussion
+- Visual guides over text
+- Free over paid
+- Simple over complex
+- Working over perfect
+- NO REPETITIVE WORK
+
+## 📊 CURRENT STATUS
+
+✅ Navigation system created (common-navigation.css/js)
+✅ Watermark centralized (common-watermark.css)
+✅ About.html links fixed
+✅ Ghar Ghar multiplayer instructions added
+✅ Color contrast improved (white text with shadows)
+
+## 🔄 SYNC WITH AMIT'S KIRO
+
+We're both working on same laptop, different Kiro accounts:
+- Files sync via OneDrive/GitHub
+- Check `.kiro/steering/` folder for latest rules
+- Read existing files before making changes
+- Don't redo what's already done
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+That's it! Now you're set up to work exactly like Amit's Kiro.
+
+When Amit asks you to do something:
+1. Check what exists first
+2. Make minimal changes
+3. Test it works
+4. Confirm briefly
+
+Ready to work! 🚀
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

@@ -1,0 +1,21 @@
+Add voice chat + fix navigation contrast
+
+Changes:
+- Added built-in voice chat to Ghar Ghar game (WebRTC audio)
+- Fixed navigation text contrast (white with shadows)
+- Fixed header/footer text readability
+- Added multiplayer instructions (any country can play)
+- Updated common-navigation.css for better visibility
+- Updated library.html header styling
+- Added voice chat button and functions
+- No external apps needed - mic to speaker direct
+
+Files changed:
+- ghar-ghar/ghar-ghar-game.html
+- ghar-ghar/ghar-ghar-multiplayer.js
+- common-navigation.css
+- library.html
+- index.html
+- about.html
+- .kiro/steering/amit-working-patterns.md
+- PARTNER_KIRO_SETUP.txt (new)

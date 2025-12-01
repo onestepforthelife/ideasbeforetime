@@ -1,0 +1,13 @@
+# Keep these folders tracked
+!.github/
+!.kiro/
+!ghar-ghar/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore temp files
+*.tmp
+*.log

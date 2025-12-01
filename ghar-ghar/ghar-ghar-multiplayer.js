@@ -5,6 +5,9 @@ let peer = null;
 let conn = null;
 let isHost = false;
 let roomCode = null;
+let localStream = null;
+let remoteAudio = null;
+let voiceEnabled = false;
 
 // Initialize PeerJS with multiple FREE STUN servers (all stable, long-term)
 function initMultiplayer() {
@@ -38,6 +41,15 @@ function initMultiplayer() {
         conn = connection;
         setupConnection();
         showNotification('Player connected! 🎮');
+    });
+
+    peer.on('call', (call) => {
+        if (localStream) {
+            call.answer(localStream);
+            call.on('stream', (remoteStream) => {
+                playRemoteAudio(remoteStream);
+            });
+        }
     });
 
     peer.on('error', (err) => {
@@ -79,6 +91,9 @@ function setupConnection() {
     conn.on('open', () => {
         showNotification('Connected! Game synced! 🎉');
         syncGameState();
+        if (voiceEnabled && isHost) {
+            startVoiceCall();
+        }
     });
 
     conn.on('data', (data) => {
@@ -87,8 +102,76 @@ function setupConnection() {
 
     conn.on('close', () => {
         showNotification('Player disconnected');
+        stopVoiceChat();
         conn = null;
     });
+}
+
+// Voice chat functions
+async function enableVoiceChat() {
+    try {
+        localStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+        voiceEnabled = true;
+        showNotification('🎤 Microphone enabled!');
+        updateVoiceButton();
+        
+        if (conn && conn.open && isHost) {
+            startVoiceCall();
+        }
+    } catch (err) {
+        console.error('Microphone error:', err);
+        showNotification('❌ Cannot access microphone. Check permissions.');
+    }
+}
+
+function startVoiceCall() {
+    if (!peer || !conn || !localStream) return;
+    
+    const call = peer.call(roomCode, localStream);
+    call.on('stream', (remoteStream) => {
+        playRemoteAudio(remoteStream);
+    });
+}
+
+function playRemoteAudio(stream) {
+    if (!remoteAudio) {
+        remoteAudio = document.createElement('audio');
+        remoteAudio.autoplay = true;
+        document.body.appendChild(remoteAudio);
+    }
+    remoteAudio.srcObject = stream;
+    showNotification('🔊 Voice chat connected!');
+}
+
+function stopVoiceChat() {
+    if (localStream) {
+        localStream.getTracks().forEach(track => track.stop());
+        localStream = null;
+    }
+    if (remoteAudio) {
+        remoteAudio.srcObject = null;
+        remoteAudio.remove();
+        remoteAudio = null;
+    }
+    voiceEnabled = false;
+    updateVoiceButton();
+}
+
+function toggleVoiceChat() {
+    if (voiceEnabled) {
+        stopVoiceChat();
+        showNotification('🔇 Voice chat disabled');
+    } else {
+        enableVoiceChat();
+    }
+}
+
+function updateVoiceButton() {
+    const btn = document.getElementById('voiceChatBtn');
+    if (btn) {
+        btn.textContent = voiceEnabled ? '🔇 Mute' : '🎤 Voice Chat';
+        btn.style.background = voiceEnabled ? '#d63031' : '#00b894';
+    }
 }
 
 // Sync game state
