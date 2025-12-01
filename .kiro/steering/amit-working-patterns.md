@@ -320,6 +320,23 @@ Detailed instructions with:
 - ✅ Success criteria defined
 - ✅ Time estimate provided
 
+## 🤝 Multi-User Collaboration
+
+### When Working with Partner
+- Both users share same workspace folder
+- Both Kiros follow same steering rules
+- Files sync automatically (OneDrive/GitHub)
+- **If there's a conflict, ASK before proceeding**
+- Check file timestamps to see who edited last
+- Don't overwrite partner's recent changes
+- Communicate through comments in files if needed
+
+### Conflict Resolution
+- If file was modified in last hour → ASK first
+- If instructions contradict → ASK which to follow
+- If unsure about intent → ASK for clarification
+- Better to ask than to undo partner's work
+
 ## 💡 Remember
 
 - **Amit prefers action over discussion**
@@ -329,11 +346,12 @@ Detailed instructions with:
 - **Working over perfect**
 - **Minimal questions, maximum execution**
 - **NO REPETITIVE WORK - Check what exists first**
+- **ASK if there's any conflict between users**
 
 ---
 
 **Last Updated**: December 1, 2024
 **Status**: Active
-**Version**: 1.1
+**Version**: 1.2
 
 This file will be automatically referenced in all future interactions to maintain consistency and quality.

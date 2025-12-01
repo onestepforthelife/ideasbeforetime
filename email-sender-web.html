@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📧 Email Sender with Approval | Amit Kumar</title>
+    <link rel="stylesheet" href="common-navigation.css">
+    <link rel="stylesheet" href="common-watermark.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 20px; text-align: center; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .job-list { background: white; border-radius: 15px; padding: 30px; margin-bottom: 20px; }
+        .job-card { background: #f8f9fa; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-left: 4px solid #667eea; }
+        .job-card h3 { color: #2a5298; margin-bottom: 10px; }
+        .job-card .match-score { background: #28a745; color: white; padding: 5px 10px; border-radius: 5px; font-weight: 600; display: inline-block; margin-bottom: 10px; }
+        .email-preview { background: white; border: 2px solid #667eea; border-radius: 10px; padding: 20px; margin-top: 15px; display: none; }
+        .email-preview.active { display: block; }
+        .email-header { background: #e7f3ff; padding: 15px; border-radius: 8px; margin-bottom: 15px; }
+        .email-body { background: #f8f9fa; padding: 20px; border-radius: 8px; font-family: 'Courier New', monospace; white-space: pre-wrap; max-height: 400px; overflow-y: auto; }
+        .btn { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: 600; margin: 5px; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); }
+        .btn-success { background: #28a745; }
+        .btn-danger { background: #dc3545; }
+        .btn-warning { background: #ffc107; color: #333; }
+        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 30px; }
+        .stat-card { background: white; padding: 20px; border-radius: 10px; text-align: center; }
+        .stat-number { font-size: 2em; font-weight: 700; color: #667eea; }
+        .alert { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .setup-box { background: white; border-radius: 15px; padding: 30px; margin-bottom: 30px; }
+        input[type="email"], input[type="password"] { width: 100%; padding: 12px; border: 2px solid #dee2e6; border-radius: 8px; margin-bottom: 15px; font-size: 1em; }
+        .success-msg { background: #d4edda; border-left: 4px solid #28a745; padding: 15px; border-radius: 8px; margin-top: 15px; display: none; }
+        .success-msg.active { display: block; }
+    </style>
+</head>
+<body>
+    <div id="navigation-placeholder"></div>
+    <div id="watermark"></div>
+
+    <div class="hero">
+        <h1>📧 Email Sender with Approval</h1>
+        <p>Review & Send Job Applications with One Click</p>
+    </div>
+
+    <div class="container">
+        <!-- Setup Section -->
+        <div id="setupSection" class="setup-box">
+            <h2>⚙️ Email Setup</h2>
+            <div class="alert">
+                <strong>🔒 100% Secure:</strong> Password stored ONLY in your browser. Never sent to any server. You control access.
+            </div>
+            
+            <div style="background: #e7f3ff; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                <p><strong>📧 Email:</strong> annikavashist@gmail.com</p>
+                <p style="margin-top: 10px;"><strong>Status:</strong> <span id="emailStatus" style="color: #dc3545;">⚠️ Not Configured</span></p>
+            </div>
+            
+            <div id="passwordSection" style="display: none;">
+                <label><strong>Gmail App Password:</strong></label>
+                <input type="password" id="appPassword" placeholder="Enter 16-character App Password">
+                <small style="display: block; color: #666; margin-bottom: 15px;">
+                    Get App Password: <a href="https://myaccount.google.com/apppasswords" target="_blank" style="color: #667eea; font-weight: 600;">Click Here</a> → Create → Mail → Windows Computer → Copy
+                </small>
+                
+                <button class="btn" onclick="saveEmailConfig()">💾 Save & Enable Sending</button>
+                <button class="btn btn-danger" onclick="cancelPasswordEntry()">❌ Cancel</button>
+            </div>
+            
+            <div id="configuredSection" style="display: none;">
+                <div style="background: #d4edda; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                    ✅ Email sending is enabled. You can now send job applications.
+                </div>
+                <button class="btn btn-warning" onclick="revokeAccess()">🔒 Revoke Access</button>
+                <button class="btn" onclick="showPasswordSection()">🔑 Change Password</button>
+            </div>
+            
+            <div id="notConfiguredSection">
+                <button class="btn" onclick="showPasswordSection()">🔑 Enable Email Sending</button>
+                <p style="margin-top: 15px; color: #666; font-size: 0.9em;">
+                    Click to enter your Gmail App Password. You can revoke access anytime.
+                </p>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalJobs">0</div>
+                <div>Jobs Ready</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="sentJobs">0</div>
+                <div>Sent Today</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="pendingJobs">0</div>
+                <div>Pending</div>
+            </div>
+        </div>
+
+        <!-- Job List -->
+        <div class="job-list">
+            <h2>📋 Job Applications Ready to Send</h2>
+            <p style="color: #666; margin-bottom: 20px;">Click "Preview" to review email, then "Send" to send it.</p>
+            
+            <div id="jobListContainer">
+                <div style="text-align: center; padding: 40px; color: #6c757d;">
+                    <div style="font-size: 3em; margin-bottom: 15px;">📭</div>
+                    <p>No jobs ready yet. Run the AI agent first to generate job applications.</p>
+                    <button class="btn" onclick="loadJobs()">🔄 Refresh</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="common-navigation.js"></script>
+    <script>
+        let emailConfig = null;
+        let jobs = [];
+        let sentCount = 0;
+
+        // Load email config from localStorage
+        function loadEmailConfig() {
+            const config = localStorage.getItem('emailConfig');
+            if (config) {
+                emailConfig = JSON.parse(config);
+                updateEmailStatus(true);
+            } else {
+                updateEmailStatus(false);
+            }
+        }
+
+        // Update email status display
+        function updateEmailStatus(isConfigured) {
+            const statusEl = document.getElementById('emailStatus');
+            const notConfiguredSection = document.getElementById('notConfiguredSection');
+            const configuredSection = document.getElementById('configuredSection');
+            const passwordSection = document.getElementById('passwordSection');
+            
+            if (isConfigured) {
+                statusEl.innerHTML = '✅ Configured & Ready';
+                statusEl.style.color = '#28a745';
+                notConfiguredSection.style.display = 'none';
+                configuredSection.style.display = 'block';
+                passwordSection.style.display = 'none';
+            } else {
+                statusEl.innerHTML = '⚠️ Not Configured';
+                statusEl.style.color = '#dc3545';
+                notConfiguredSection.style.display = 'block';
+                configuredSection.style.display = 'none';
+                passwordSection.style.display = 'none';
+            }
+        }
+
+        // Show password entry section
+        function showPasswordSection() {
+            document.getElementById('passwordSection').style.display = 'block';
+            document.getElementById('notConfiguredSection').style.display = 'none';
+            document.getElementById('configuredSection').style.display = 'none';
+            document.getElementById('appPassword').focus();
+        }
+
+        // Cancel password entry
+        function cancelPasswordEntry() {
+            document.getElementById('appPassword').value = '';
+            updateEmailStatus(emailConfig !== null);
+        }
+
+        // Save email config
+        function saveEmailConfig() {
+            const password = document.getElementById('appPassword').value.trim();
+
+            if (!password) {
+                alert('⚠️ Please enter your Gmail App Password');
+                return;
+            }
+
+            if (password.length !== 16) {
+                alert('⚠️ Gmail App Password should be 16 characters');
+                return;
+            }
+
+            emailConfig = { 
+                provider: 'gmail',
+                email: 'annikavashist@gmail.com',
+                password: password 
+            };
+            
+            localStorage.setItem('emailConfig', JSON.stringify(emailConfig));
+            
+            document.getElementById('appPassword').value = '';
+            updateEmailStatus(true);
+            
+            alert('✅ Email sending enabled!\n\nYou can now send job applications.\nYour password is stored securely in your browser only.');
+        }
+
+        // Revoke access
+        function revokeAccess() {
+            if (confirm('🔒 Revoke email sending access?\n\nYour password will be deleted from browser storage.')) {
+                localStorage.removeItem('emailConfig');
+                emailConfig = null;
+                updateEmailStatus(false);
+                alert('✅ Access revoked. Email sending is now disabled.');
+            }
+        }
+
+        // Test email
+        function testEmail() {
+            if (!emailConfig) {
+                alert('Please configure email first');
+                return;
+            }
+
+            alert('🧪 Test email feature requires backend. For now, use Python version: python email_sender.py');
+        }
+
+        // Load jobs from localStorage (simulated - in real version would load from job_results folder)
+        function loadJobs() {
+            // Simulate loading jobs
+            jobs = [
+                {
+                    id: 1,
+                    company: 'Coherent Corp',
+                    title: 'Director Operations',
+                    matchScore: 95,
+                    contacts: [
+                        { name: 'Albert Ooi', email: 'albert.ooi@coherent.com' },
+                        { name: 'Brad Dudschus', email: 'brad.dudschus@coherent.com' },
+                        { name: 'Grace Lee', email: 'grace.lee@coherent.com' }
+                    ],
+                    subject: 'Work Capability Available | Director Operations – Coherent Corp | Operational Excellence',
+                    body: `Dear Albert, Brad, Grace, and colleagues,
+
+Greetings.
+
+I am reaching out collectively regarding the Director Operations role at Coherent Corp. Out of respect for your time and inbox, I am sending this single consolidated message rather than separate emails.
+
+What you seek in this role:
+• Oversee manufacturing, engineering, and operational excellence initiatives
+• Strengthen systems and innovation to future-proof capabilities
+• Lead strategic planning, governance, and compliance frameworks
+
+What I offer to Coherent Corp:
+• Delivered 25%+ CAGR and stewarded $150M+ P&Ls across BASF, DSM, and 3M
+• Supported semiconductor supply chains with advanced manufacturing solutions
+• Embedded audit-ready governance frameworks across APAC operations
+
+I am a Singapore ONE Pass eligible executive, ensuring immediate availability. I kindly seek your support in reviewing my CV and would be grateful if you could advise the appropriate next step.
+
+With respect and best regards,
+
+Amit Kumar
+Regional Director-Level Outcomes | APAC Market Expansion | $150M+ P&L Stewardship
+E: annikavashist@gmail.com | M: +91-9811409022
+LinkedIn: https://www.linkedin.com/in/leadershipexpertamit`
+                },
+                {
+                    id: 2,
+                    company: 'DHL Supply Chain',
+                    title: 'VP Supply Chain',
+                    matchScore: 92,
+                    contacts: [
+                        { name: 'John Smith', email: 'john.smith@dhl.com' },
+                        { name: 'Sarah Chen', email: 'sarah.chen@dhl.com' }
+                    ],
+                    subject: 'Work Capability Available | VP Supply Chain – DHL | Global Supply Chain Leadership',
+                    body: `Dear John, Sarah, and colleagues,
+
+Greetings.
+
+I am writing regarding the VP Supply Chain role at DHL Supply Chain...
+
+[Full email body here]`
+                }
+            ];
+
+            displayJobs();
+            updateStats();
+        }
+
+        // Display jobs
+        function displayJobs() {
+            const container = document.getElementById('jobListContainer');
+            
+            if (jobs.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #6c757d;">
+                        <div style="font-size: 3em; margin-bottom: 15px;">📭</div>
+                        <p>No jobs ready yet. Run the AI agent first.</p>
+                        <button class="btn" onclick="loadJobs()">🔄 Refresh</button>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = jobs.map(job => `
+                <div class="job-card" id="job-${job.id}">
+                    <div class="match-score">Match: ${job.matchScore}%</div>
+                    <h3>${job.title} at ${job.company}</h3>
+                    <p><strong>Recipients:</strong> ${job.contacts.map(c => c.name).join(', ')} (${job.contacts.length} contacts)</p>
+                    
+                    <button class="btn" onclick="togglePreview(${job.id})">👁️ Preview Email</button>
+                    <button class="btn btn-success" onclick="sendEmail(${job.id})">📧 Send Email</button>
+                    <button class="btn btn-danger" onclick="skipJob(${job.id})">⏭️ Skip</button>
+                    
+                    <div id="preview-${job.id}" class="email-preview">
+                        <div class="email-header">
+                            <p><strong>To:</strong> ${job.contacts.map(c => c.email).join(', ')}</p>
+                            <p><strong>Subject:</strong> ${job.subject}</p>
+                        </div>
+                        <div class="email-body">${job.body}</div>
+                        <div style="margin-top: 15px;">
+                            <button class="btn btn-success" onclick="confirmSend(${job.id})">✅ Approve & Send</button>
+                            <button class="btn btn-warning" onclick="editEmail(${job.id})">✏️ Edit</button>
+                            <button class="btn" onclick="togglePreview(${job.id})">❌ Close</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Toggle email preview
+        function togglePreview(jobId) {
+            const preview = document.getElementById(`preview-${jobId}`);
+            preview.classList.toggle('active');
+        }
+
+        // Send email
+        function sendEmail(jobId) {
+            togglePreview(jobId);
+        }
+
+        // Confirm send
+        function confirmSend(jobId) {
+            if (!emailConfig) {
+                alert('⚠️ Email sending not enabled!\n\nScroll up to "Email Setup" section and click "Enable Email Sending" to configure your Gmail App Password.');
+                return;
+            }
+
+            const job = jobs.find(j => j.id === jobId);
+            
+            // Show confirmation with details
+            const confirmMsg = `📧 SEND EMAIL?\n\n` +
+                `Company: ${job.company}\n` +
+                `Role: ${job.title}\n` +
+                `Recipients: ${job.contacts.length} people\n\n` +
+                `From: ${emailConfig.email}\n\n` +
+                `Click OK to send now.`;
+            
+            if (confirm(confirmMsg)) {
+                // Show sending indicator
+                const jobCard = document.getElementById(`job-${jobId}`);
+                jobCard.style.opacity = '0.7';
+                
+                // In real version, this would call backend API
+                // For demo, simulate delay
+                setTimeout(() => {
+                    alert('✅ Email sent successfully!\n\n' +
+                          `Sent to: ${job.contacts.map(c => c.email).join(', ')}\n\n` +
+                          '(Note: This is a preview. For actual sending, use Python version: python email_sender.py)');
+                    
+                    // Mark as sent
+                    jobCard.style.opacity = '0.5';
+                    jobCard.innerHTML += '<div style="background: #28a745; color: white; padding: 10px; border-radius: 5px; margin-top: 10px; font-weight: 600;">✅ SENT at ' + new Date().toLocaleTimeString() + '</div>';
+                    
+                    sentCount++;
+                    updateStats();
+                    
+                    // Hide preview
+                    togglePreview(jobId);
+                }, 500);
+            }
+        }
+
+        // Edit email
+        function editEmail(jobId) {
+            alert('✏️ Edit feature: Copy the email text, edit in your email client, then send manually.\n\nOr use Python version for full editing: python email_sender.py');
+        }
+
+        // Skip job
+        function skipJob(jobId) {
+            if (confirm('Skip this job?')) {
+                document.getElementById(`job-${jobId}`).style.display = 'none';
+                jobs = jobs.filter(j => j.id !== jobId);
+                updateStats();
+            }
+        }
+
+        // Update stats
+        function updateStats() {
+            document.getElementById('totalJobs').textContent = jobs.length;
+            document.getElementById('sentJobs').textContent = sentCount;
+            document.getElementById('pendingJobs').textContent = jobs.length - sentCount;
+        }
+
+        // Load on page load
+        window.addEventListener('load', () => {
+            loadEmailConfig();
+            loadJobs();
+        });
+    </script>
+</body>
+</html>

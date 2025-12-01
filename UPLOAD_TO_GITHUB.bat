@@ -23,7 +23,7 @@ echo Step 3: Commit changes with timestamp
 echo.
 echo Step 4: Connect to GitHub (if not done)
 %GIT% remote remove origin 2>nul
-%GIT% remote add origin https://github.com/onestepforthelife/ideas-before-time.git
+%GIT% remote add origin https://github.com/onestepforthelife/ideasbeforetime.git
 
 echo.
 echo Step 5: Push to GitHub
