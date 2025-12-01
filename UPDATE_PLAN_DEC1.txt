@@ -1,0 +1,46 @@
+╔══════════════════════════════════════════════════════════════╗
+║     📋 UPDATE PLAN - December 1, 2025                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+✅ COMPLETED:
+1. Cloudflare Access Setup Guide uploaded
+
+🔄 IN PROGRESS:
+
+CHEMICAL REPORT UPDATES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Add to Q5 (Product & Innovation Trends):
+   - Phenoxyethanol (preservatives)
+   - Acrylates (specialty polymers)
+   - Silicones (conditioning agents)
+
+2. Add to Q8 (Future Outlook):
+   - Sustainability section
+   - Circular economy
+   - Carbon accounting
+
+3. Add Navigation:
+   - Better header (SPO, About, Market Insights, Ideas Before Time)
+   - Better footer
+   - Left-side index for scrolling
+
+NICKEL REPORT UPDATES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Add Part 2: ESG – Recycled Ni Compounds
+   - Scrap sources
+   - Recycling routes
+   - Company-wise data
+   - Sustainability impact
+
+2. Add Navigation:
+   - Same header/footer as Chemical Report
+   - Left-side index
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Amit - This is a big update. Should I:
+A) Do all updates now (will take 15-20 minutes)
+B) Do Chemical Report first, then Nickel Report
+C) Focus on navigation first, then content
+
+Which approach do you prefer?
