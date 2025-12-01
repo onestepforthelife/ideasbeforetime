@@ -1,0 +1,130 @@
+╔══════════════════════════════════════════════════════════════╗
+║     🚀 QUICK START - AI JOB AGENT 🚀                        ║
+║          Get Started in 5 Minutes                            ║
+╚══════════════════════════════════════════════════════════════╝
+
+✅ EVERYTHING IS READY!
+
+Your profile folder: amit profile for Kiro\
+   ✅ keywords.txt (7 search keywords)
+   ✅ sample_emails.txt (3 proven email templates)
+   ✅ profile_summary.txt (your profile data)
+   📄 cv.pdf (add yours here)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 STEP 1: ADD YOUR CV (Optional)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Copy your CV PDF to:
+   amit profile for Kiro\cv.pdf
+
+Agent will use it for better job matching!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 STEP 2: RUN THE AGENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Double-click: job_agent.py
+
+OR
+
+Open Command Prompt:
+   cd C:\Users\araag\Documents\Cloudfare
+   python job_agent.py
+
+Agent will:
+   ✅ Read your profile
+   ✅ Search for jobs
+   ✅ Find 20 best matches
+   ✅ Generate email drafts
+   ✅ Save to job_results folder
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 STEP 3: CHECK RESULTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Open: job_results\job_1_20251201.json
+
+You'll see:
+   • Company name
+   • Job title
+   • 7 contacts with emails
+   • Full email draft (ready to copy)
+   • Match score (95%)
+
+Copy email → Send → Done!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔄 UPDATE YOUR PROFILE ANYTIME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Double-click: UPDATE_PROFILE.bat
+
+Choose what to update:
+   1. CV
+   2. Keywords
+   3. Sample emails
+   4. Profile summary
+
+Agent uses latest version automatically!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📅 SET UP DAILY AUTO-RUN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Windows Task Scheduler:
+   1. Open Task Scheduler
+   2. Create Basic Task
+   3. Name: "AI Job Agent"
+   4. Trigger: Daily at 9:00 AM
+   5. Action: Start program
+   6. Program: python
+   7. Arguments: job_agent.py
+   8. Start in: C:\Users\araag\Documents\Cloudfare
+
+Done! Agent runs every day automatically.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 WHAT YOU GET DAILY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Every morning at 10:30 AM:
+   ✅ 20 jobs processed
+   ✅ 20 email drafts ready
+   ✅ Ranked by relevance (best first)
+   ✅ All contacts found
+   ✅ Emails verified
+
+You just:
+   ✅ Open job_results folder
+   ✅ Copy top 5-10 drafts
+   ✅ Send emails
+   ✅ Done in 30 minutes!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 YOUR CURRENT PROFILE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Target: Semiconductor & Logistics Director roles
+Location: Singapore
+Salary: S$30,000+/month (ONE Pass)
+Keywords: 7 search terms loaded
+Email Style: 3 proven templates loaded
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ YOU'RE READY!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Run: python job_agent.py
+
+Agent will do everything automatically!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

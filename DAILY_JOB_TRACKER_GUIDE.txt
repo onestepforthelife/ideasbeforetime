@@ -1,0 +1,205 @@
+╔══════════════════════════════════════════════════════════════╗
+║     📋 DAILY JOB TRACKER GUIDE 📋                           ║
+║          Never Miss a Job • Track Everything                 ║
+╚══════════════════════════════════════════════════════════════╝
+
+✅ WHAT IT DOES:
+   • Saves every job you find (day by day)
+   • Checkbox to mark done/not done
+   • Quick links to LinkedIn & Google job search
+   • Opens email generator with one click
+   • Stores history in your browser (never lost)
+
+✅ DIFFICULTY: Super Easy (Add job → Check box → Done)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📍 HOW TO USE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: Open JOB_TRACKER_DAILY.html
+
+STEP 2: Click search links to find jobs
+   ┌────────────────────────────────────────┐
+   │ 💼 LinkedIn: Semiconductor Jobs        │ ← CLICK
+   │ 📦 LinkedIn: Logistics Jobs            │ ← CLICK
+   │ 🔎 Google: Semiconductor Director      │ ← CLICK
+   └────────────────────────────────────────┘
+
+STEP 3: Found a job? Add it:
+   ┌────────────────────────────────────────┐
+   │ Company: Coherent Corp                 │
+   │ Job Title: Director Operations         │
+   │ Domain: coherent.com                   │
+   │ [➕ Add to Tracker]                    │
+   └────────────────────────────────────────┘
+
+STEP 4: Job appears in list:
+   ┌────────────────────────────────────────┐
+   │ ☐ Director Operations                  │
+   │    Coherent Corp • coherent.com        │
+   │    Added: Dec 1, 2025                  │
+   │    [👁️ Generate Email] [🗑️]           │
+   └────────────────────────────────────────┘
+
+STEP 5: Click [👁️ Generate Email]
+   → Opens email generator tool
+   → Auto-fills company, title, domain
+   → Generate contacts + draft
+   → Copy & send
+
+STEP 6: Done? Check the box:
+   ┌────────────────────────────────────────┐
+   │ ☑ Director Operations                  │ ← CHECKED
+   │    Coherent Corp • coherent.com        │
+   │    (Faded = Done)                      │
+   └────────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 STATS AT TOP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+┌──────────┬──────────┬──────────┐
+│ Total: 5 │ Pending:3│ Done: 2  │
+└──────────┴──────────┴──────────┘
+
+Updates automatically when you check/uncheck boxes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 YOUR CURRENT TARGET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Industry: Semiconductor & Logistics
+Location: Singapore
+Salary: S$30,000+/month (ONE Pass eligible)
+
+Search links are pre-configured for this!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💾 DATA SAVED LOCALLY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ All jobs saved in your browser
+✅ Never lost (even if you close browser)
+✅ No internet needed after first load
+✅ 100% private (no data sent anywhere)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔄 DAILY WORKFLOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MORNING:
+1. Open JOB_TRACKER_DAILY.html
+2. Click search links
+3. Add 5-10 new jobs you find
+4. Close browser
+
+AFTERNOON:
+1. Open JOB_TRACKER_DAILY.html
+2. See all jobs from morning
+3. Click [👁️ Generate Email] for each
+4. Send emails
+5. Check boxes as done
+
+NEXT DAY:
+1. Open tracker
+2. See yesterday's jobs (checked = done)
+3. Add today's new jobs
+4. Repeat
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔮 FUTURE CHANGES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Want to change target industry/location?
+
+OPTION 1: Edit search links in HTML
+   → Open JOB_TRACKER_DAILY.html in text editor
+   → Find "search-links" section
+   → Change keywords in URLs
+
+OPTION 2: Use Google/LinkedIn directly
+   → Search manually
+   → Add jobs to tracker
+   → Still get email generation
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 PRO TIPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ADD JOBS IMMEDIATELY
+   → See a job? Add it right away
+   → Don't wait, you'll forget
+
+2. CHECK BOXES AFTER SENDING
+   → Sent email? Check the box
+   → Easy to see what's done
+
+3. DON'T DELETE OLD JOBS
+   → Keep history for reference
+   → See what you applied to
+
+4. BOOKMARK THE TRACKER
+   → Open it every morning
+   → Make it your job search homepage
+
+5. USE WITH EMAIL GENERATOR
+   → Tracker = Find & organize jobs
+   → Generator = Create emails
+   → Together = Complete system
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚨 TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROBLEM: Jobs disappeared
+SOLUTION: Check if you cleared browser data
+          Jobs stored in localStorage
+
+PROBLEM: Search links don't work
+SOLUTION: Links open in new tab
+          Check popup blocker
+
+PROBLEM: Generate Email button does nothing
+SOLUTION: Make sure JOB_OUTREACH_AUTOMATION_TOOL.html
+          is in same folder
+
+PROBLEM: Can't check boxes
+SOLUTION: Click directly on checkbox
+          Not on text
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 FILES YOU NEED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. JOB_TRACKER_DAILY.html
+   → Daily tracker (this tool)
+
+2. JOB_OUTREACH_AUTOMATION_TOOL.html
+   → Email generator (opens from tracker)
+
+3. This guide
+   → DAILY_JOB_TRACKER_GUIDE.txt
+
+Keep all 3 in same folder!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ YOU'RE READY!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Open JOB_TRACKER_DAILY.html and start tracking!
+
+Every job you find → Add to tracker → Never miss it
+
+🎯 Focus on finding jobs, tracker remembers everything!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

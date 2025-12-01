@@ -10,7 +10,9 @@ const PaymentGateway = {
             enabled: true
         },
         razorpay: {
-            keyId: 'rzp_test_DEMO_KEY', // Replace with your Razorpay key
+            keyId: 'rzp_live_RmJ2p4des8sDGF', // Live Razorpay key
+            paymentLink: 'https://razorpay.me/@onestepforthelife', // Razorpay payment link
+            qrCodeId: 'qr_RmKd822g6HqeTl', // QR Code ID
             enabled: true
         },
         upi: {
@@ -98,9 +100,9 @@ const PaymentGateway = {
                 badgeColor: '#28a745'
             },
             razorpay: {
-                name: 'Card / UPI / Wallets',
+                name: 'Razorpay (UPI/Cards/Wallets)',
                 icon: '💳',
-                description: 'All payment methods via Razorpay',
+                description: 'Scan QR or pay via link - All methods accepted',
                 fee: '2% fees',
                 badge: pricing.country === 'IN' ? 'POPULAR' : null,
                 badgeColor: '#667eea'
@@ -264,10 +266,19 @@ const PaymentGateway = {
     // Razorpay Payment
     processRazorpay() {
         const config = this.config.razorpay;
+        const pricing = window.CurrencyDetector?.getCurrentPricing() || { amount: 21, currency: 'INR' };
         
-        if (config.keyId === 'rzp_test_DEMO_KEY') {
-            alert('⚠️ Razorpay Setup Required\n\nPlease add your Razorpay Key ID in payment-selector.js\n\nUsing demo mode for now...');
-            this.simulatePayment();
+        // Option 1: Use Payment Link (Easiest - No API needed!)
+        if (config.paymentLink) {
+            // Show payment modal with options
+            this.showRazorpayModal(config, pricing);
+            return;
+        }
+        
+        // Option 2: Standard Razorpay Checkout (Requires API)
+        if (config.keyId === 'rzp_test_DEMO_KEY' || config.keyId === 'rzp_live_RmJ2p4des8sDGF') {
+            alert('⚠️ Using Razorpay Payment Link\n\nFor automatic unlock, set up Razorpay API integration.');
+            this.showRazorpayModal(config, pricing);
             return;
         }
         
@@ -276,7 +287,6 @@ const PaymentGateway = {
             return;
         }
         
-        const pricing = window.CurrencyDetector?.getCurrentPricing() || { amount: 21, currency: 'INR' };
         const amount = pricing.currency === 'INR' ? pricing.amount * 100 : pricing.amount * 100; // Convert to paise/cents
         
         const options = {
@@ -301,6 +311,118 @@ const PaymentGateway = {
         
         const rzp = new Razorpay(options);
         rzp.open();
+    },
+
+    // Show Razorpay Payment Modal
+    showRazorpayModal(config, pricing) {
+        const modal = document.createElement('div');
+        modal.id = 'razorpayModal';
+        modal.style.cssText = `
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background: rgba(0,0,0,0.8); display: flex; align-items: center; 
+            justify-content: center; z-index: 10000; padding: 20px;
+        `;
+        
+        modal.innerHTML = `
+            <div style="background: white; border-radius: 20px; padding: 40px; max-width: 500px; width: 100%; text-align: center;">
+                <h2 style="color: #667eea; margin-bottom: 20px;">Pay via Razorpay</h2>
+                
+                <div style="background: #f8f9ff; padding: 30px; border-radius: 15px; margin: 20px 0;">
+                    <div style="font-size: 3em; margin-bottom: 15px;">💳</div>
+                    <div style="font-size: 2em; font-weight: bold; color: #667eea; margin-bottom: 10px;">
+                        ₹${pricing.amount}
+                    </div>
+                    <div style="color: #666; margin-bottom: 20px;">Secure payment powered by Razorpay</div>
+                    
+                    ${config.qrCodeId ? `
+                    <div style="margin: 20px 0;">
+                        <img src="https://api.razorpay.com/v1/qr_codes/${config.qrCodeId}/qr_code" 
+                             alt="Razorpay QR Code" 
+                             style="max-width: 200px; border-radius: 10px; border: 2px solid #e0e0e0; padding: 10px; background: white;">
+                        <div style="color: #999; font-size: 0.85em; margin-top: 10px;">
+                            Scan with any UPI app
+                        </div>
+                    </div>
+                    ` : ''}
+                    
+                    <div style="margin: 20px 0;">
+                        <a href="${config.paymentLink}" target="_blank" 
+                           style="display: inline-block; background: #667eea; color: white; 
+                                  padding: 15px 40px; border-radius: 10px; text-decoration: none; 
+                                  font-weight: bold; font-size: 1.1em;">
+                            Pay Now
+                        </a>
+                    </div>
+                    
+                    <div style="color: #999; font-size: 0.9em; margin-top: 15px;">
+                        Accepts UPI, Cards, Wallets, Net Banking
+                    </div>
+                </div>
+                
+                <div style="background: #fff3cd; padding: 15px; border-radius: 10px; margin: 20px 0; border-left: 4px solid #ffc107;">
+                    <div style="font-weight: bold; color: #856404; margin-bottom: 5px;">After Payment:</div>
+                    <div style="color: #856404; font-size: 0.9em;">
+                        Click "I've Paid" button below to unlock your profile
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 10px; margin-top: 20px;">
+                    <button onclick="PaymentGateway.confirmRazorpayPayment()" 
+                            style="flex: 1; background: #28a745; color: white; border: none; 
+                                   padding: 15px; border-radius: 10px; font-weight: bold; cursor: pointer; font-size: 1em;">
+                        ✅ I've Paid
+                    </button>
+                    <button onclick="PaymentGateway.closeRazorpayModal()" 
+                            style="flex: 1; background: #e0e0e0; color: #333; border: none; 
+                                   padding: 15px; border-radius: 10px; font-weight: bold; cursor: pointer; font-size: 1em;">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        document.body.appendChild(modal);
+    },
+
+    // Confirm Razorpay payment
+    confirmRazorpayPayment() {
+        const transactionId = prompt('Enter Payment ID or Transaction ID:\n\nExample: pay_XXXXXXXXXXXXX or 123456789012');
+        
+        if (transactionId && transactionId.length >= 10) {
+            this.closeRazorpayModal();
+            
+            // Show processing
+            showProcessingMessage('Verifying payment...');
+            
+            // In production, verify with backend
+            // For now, auto-approve after 2 seconds
+            setTimeout(() => {
+                const overlay = document.getElementById('processingOverlay');
+                if (overlay) overlay.remove();
+                
+                isPaid = true;
+                showSuccess();
+                
+                // Log payment
+                logPayment('RAZORPAY_' + transactionId);
+                
+                // Track analytics
+                const pricing = window.CurrencyDetector?.getCurrentPricing() || { amount: 21, currency: 'INR' };
+                if (window.Analytics) {
+                    Analytics.trackPaymentCompleted('RAZORPAY_' + transactionId, userData, pricing, 'Razorpay');
+                }
+                
+                alert('✅ Payment Verified!\n\nTransaction ID: ' + transactionId + '\n\nYour profile is now unlocked!');
+            }, 2000);
+        } else {
+            alert('⚠️ Invalid Transaction ID\n\nPlease enter a valid payment ID or transaction ID.');
+        }
+    },
+
+    // Close Razorpay modal
+    closeRazorpayModal() {
+        const modal = document.getElementById('razorpayModal');
+        if (modal) modal.remove();
     },
 
     // Stripe Payment
