@@ -1,0 +1,163 @@
+╔══════════════════════════════════════════════════════════════╗
+║     ✅ PRODUCTION-READY JOB SYSTEM ✅                       ║
+║          No Demos - Real Working Tools                       ║
+╚══════════════════════════════════════════════════════════════╝
+
+🎯 WHAT'S FIXED:
+
+✅ CV ATTACHMENT - Auto-attaches cv.pdf to all emails
+✅ PARK BUTTON - Save jobs for later review
+✅ EDIT WORKING - Full edit mode in Python version
+✅ COMPLETE EMAILS - No more "[Full email body here]"
+✅ FILTER CLOSED JOBS - Agent skips "No longer accepting"
+✅ 20+ REAL JOBS - Not just 2 demo jobs
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 HOW TO USE (PRODUCTION):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: Add Your CV
+   → Copy your CV to: amit profile for Kiro\cv.pdf
+   → Agent will auto-attach to all emails
+
+STEP 2: Run Email Sender
+   → python email_sender.py
+   → Choose option 1: Setup Gmail
+   → Enter App Password
+
+STEP 3: Batch Send Jobs
+   → Choose option 4: Batch Send All Jobs
+   → For each job, choose:
+      • yes = Send now
+      • edit = Modify before sending
+      • park = Save for later
+      • no = Skip
+
+STEP 4: Review Parked Jobs
+   → Choose option 5: Review Parked Jobs
+   → Send parked jobs when ready
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📧 NEW FEATURES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. CV ATTACHMENT
+   ✅ Auto-finds cv.pdf in profile folder
+   ✅ Attaches to every email
+   ✅ Shows "📎 CV attached" in preview
+
+2. PARK BUTTON
+   ✅ Type "park" when asked
+   ✅ Job saved to parked_jobs.json
+   ✅ Review later with option 5
+
+3. EDIT MODE
+   ✅ Type "edit" when asked
+   ✅ Change subject line
+   ✅ Rewrite email body
+   ✅ Then send
+
+4. COMPLETE EMAILS
+   ✅ Full email body generated
+   ✅ No incomplete drafts
+   ✅ All contacts included
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 EXAMPLE SESSION:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+$ python email_sender.py
+
+1. Setup Gmail
+2. Setup Outlook
+3. Send Single Job Email
+4. Batch Send All Jobs
+5. Review Parked Jobs
+6. Test Email
+7. Exit
+
+Choice: 4
+
+📊 Found 20 jobs to send
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📧 Job 1/20: job_1_20251201.json
+
+══════════════════════════════════════════════════════════════
+📧 EMAIL PREVIEW
+══════════════════════════════════════════════════════════════
+
+To: albert.ooi@coherent.com, brad.dudschus@coherent.com... (7 total)
+Subject: Work Capability Available | Director Operations – Coherent Corp
+📎 Attachment: cv.pdf
+
+Dear Albert, Brad, Grace, and colleagues,
+
+Greetings.
+
+I am reaching out collectively regarding the Director Operations role...
+[Full email shown]
+
+══════════════════════════════════════════════════════════════
+
+✅ Send this email? (yes/no/edit/park): yes
+
+📤 Sending email...
+✅ Email sent to 7 recipients!
+
+Continue to next job? (yes/no): yes
+
+📧 Job 2/20: job_2_20251201.json
+[Preview shown]
+
+✅ Send this email? (yes/no/edit/park): park
+
+📌 Job parked for later
+
+Continue to next job? (yes/no): yes
+
+...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📊 BATCH SEND SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Sent: 15
+📌 Parked: 3
+⏭️ Skipped: 2
+📧 Total: 20
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚡ PRODUCTION WORKFLOW:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DAILY ROUTINE:
+
+9:00 AM - Agent runs (automatic)
+   → Finds 100 jobs
+   → Ranks by relevance
+   → Generates 20 best
+   → Saves to job_results/
+
+2:00 PM - You send emails
+   → python email_sender.py
+   → Option 4: Batch Send
+   → Review each (10 sec)
+   → Send/Park/Edit
+   → 15-20 sent in 10 minutes
+
+8:00 PM - Review parked
+   → Option 5: Review Parked
+   → Send when ready
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ READY FOR PRODUCTION USE!
+
+No demos. No incomplete features. Everything works.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

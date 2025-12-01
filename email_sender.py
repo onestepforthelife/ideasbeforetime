@@ -7,6 +7,8 @@ import json
 import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
 from datetime import datetime
 
 class EmailSender:
@@ -88,15 +90,16 @@ class EmailSender:
         with open("email_config.json", 'w') as f:
             json.dump(self.config, f, indent=2)
     
-    def send_email(self, to_emails, subject, body, require_approval=True):
+    def send_email(self, to_emails, subject, body, require_approval=True, cv_path=None):
         """
-        Send email with optional approval
+        Send email with optional approval and CV attachment
         
         Args:
             to_emails: List of recipient emails
             subject: Email subject
             body: Email body
             require_approval: If True, ask for approval before sending
+            cv_path: Path to CV PDF to attach
         """
         
         # Show preview
@@ -105,15 +108,21 @@ class EmailSender:
         print("="*60)
         print(f"\nTo: {', '.join(to_emails[:3])}... ({len(to_emails)} total)")
         print(f"Subject: {subject}")
+        if cv_path:
+            print(f"📎 Attachment: {cv_path}")
         print(f"\n{body[:500]}...")
         print("\n" + "="*60)
         
         # Ask for approval
         if require_approval:
-            response = input("\n✅ Send this email? (yes/no/edit): ").lower()
+            response = input("\n✅ Send this email? (yes/no/edit/park): ").lower()
             
             if response == 'no':
                 print("❌ Email cancelled")
+                return False
+            elif response == 'park':
+                print("🅿️ Job parked for later")
+                self.park_job(to_emails, subject, body, cv_path)
                 return False
             elif response == 'edit':
                 print("\n📝 Edit mode:")
@@ -147,6 +156,26 @@ class EmailSender:
             # Attach body
             msg.attach(MIMEText(body, 'plain'))
             
+            # Attach CV if provided
+            if cv_path and os.path.exists(cv_path):
+                from email.mime.application import MIMEApplication
+                with open(cv_path, 'rb') as f:
+                    cv_attachment = MIMEApplication(f.read(), _subtype='pdf')
+                    cv_attachment.add_header('Content-Disposition', 'attachment', 
+                                           filename=os.path.basename(cv_path))
+                    msg.attach(cv_attachment)
+                print(f"   📎 CV attached: {os.path.basename(cv_path)}")
+            
+            # Attach CV if provided
+            if cv_path and os.path.exists(cv_path):
+                with open(cv_path, 'rb') as f:
+                    part = MIMEBase('application', 'octet-stream')
+                    part.set_payload(f.read())
+                    encoders.encode_base64(part)
+                    part.add_header('Content-Disposition', f'attachment; filename={os.path.basename(cv_path)}')
+                    msg.attach(part)
+                print(f"📎 CV attached: {os.path.basename(cv_path)}")
+            
             # Connect to SMTP server
             server = smtplib.SMTP(self.config['smtp_server'], self.config['smtp_port'])
             server.starttls()
@@ -175,6 +204,64 @@ class EmailSender:
             print("3. For Outlook: Enable 'Less secure app access'")
             return False
     
+    def park_job(self, to_emails, subject, body, cv_path):
+        """Park job for later"""
+        parked_entry = {
+            "timestamp": datetime.now().isoformat(),
+            "to": to_emails,
+            "subject": subject,
+            "body": body,
+            "cv_path": cv_path,
+            "status": "parked"
+        }
+        
+        parked_file = "parked_jobs.json"
+        parked = []
+        
+        if os.path.exists(parked_file):
+            with open(parked_file, 'r') as f:
+                parked = json.load(f)
+        
+        parked.append(parked_entry)
+        
+        with open(parked_file, 'w') as f:
+            json.dump(parked, f, indent=2)
+        
+        print(f"✅ Job parked! View parked jobs with option 7")
+    
+    def view_parked_jobs(self):
+        """View and send parked jobs"""
+        parked_file = "parked_jobs.json"
+        
+        if not os.path.exists(parked_file):
+            print("\n📭 No parked jobs")
+            return
+        
+        with open(parked_file, 'r') as f:
+            parked = json.load(f)
+        
+        if len(parked) == 0:
+            print("\n📭 No parked jobs")
+            return
+        
+        print(f"\n🅿️ PARKED JOBS ({len(parked)})")
+        print("="*60)
+        
+        for i, job in enumerate(parked, 1):
+            print(f"\n{i}. {job['subject']}")
+            print(f"   To: {', '.join(job['to'][:2])}...")
+            print(f"   Parked: {job['timestamp'][:10]}")
+        
+        choice = input("\nSend parked job (number) or 'back': ")
+        
+        if choice.isdigit() and 1 <= int(choice) <= len(parked):
+            job = parked[int(choice) - 1]
+            if self.send_email(job['to'], job['subject'], job['body'], True, job.get('cv_path')):
+                # Remove from parked
+                parked.pop(int(choice) - 1)
+                with open(parked_file, 'w') as f:
+                    json.dump(parked, f, indent=2)
+    
     def log_sent_email(self, to_emails, subject):
         """Log sent emails for tracking"""
         log_entry = {
@@ -196,12 +283,13 @@ class EmailSender:
         with open(log_file, 'w') as f:
             json.dump(logs, f, indent=2)
     
-    def send_job_application(self, job_result_file):
+    def send_job_application(self, job_result_file, cv_path=None):
         """
-        Send email from job result file
+        Send email from job result file with CV attachment
         
         Args:
             job_result_file: Path to job result JSON file
+            cv_path: Path to CV PDF
         """
         
         # Load job result
@@ -220,8 +308,14 @@ class EmailSender:
         # Get recipient emails
         to_emails = [c['email'] for c in contacts]
         
-        # Send with approval
-        return self.send_email(to_emails, subject, body, require_approval=True)
+        # Use CV from profile folder if not specified
+        if not cv_path:
+            cv_path = os.path.join('amit profile for Kiro', 'cv.pdf')
+            if not os.path.exists(cv_path):
+                cv_path = None
+        
+        # Send with approval and CV
+        return self.send_email(to_emails, subject, body, require_approval=True, cv_path=cv_path)
     
     def batch_send_jobs(self, job_results_folder="job_results"):
         """
@@ -241,13 +335,19 @@ class EmailSender:
         
         sent_count = 0
         skipped_count = 0
+        parked_count = 0
+        parked_jobs = []
         
         for i, job_file in enumerate(job_files, 1):
             print(f"\n📧 Job {i}/{len(job_files)}: {job_file}")
             
             job_path = os.path.join(job_results_folder, job_file)
             
-            if self.send_job_application(job_path):
+            result = self.send_job_application(job_path)
+            if result == 'parked':
+                parked_count += 1
+                parked_jobs.append(job_file)
+            elif result:
                 sent_count += 1
             else:
                 skipped_count += 1
@@ -258,13 +358,62 @@ class EmailSender:
                 if cont != 'yes':
                     break
         
+        # Save parked jobs
+        if parked_jobs:
+            with open('parked_jobs.json', 'w') as f:
+                json.dump(parked_jobs, f, indent=2)
+            print(f"\n📌 {parked_count} jobs parked. Run option 5 to review parked jobs.")
+        
         print("\n" + "="*60)
         print("📊 BATCH SEND SUMMARY")
         print("="*60)
         print(f"✅ Sent: {sent_count}")
+        print(f"📌 Parked: {parked_count}")
         print(f"⏭️ Skipped: {skipped_count}")
         print(f"📧 Total: {len(job_files)}")
         print("="*60)
+    
+    def review_parked_jobs(self):
+        """Review and send parked jobs"""
+        if not os.path.exists('parked_jobs.json'):
+            print("📌 No parked jobs found")
+            return
+        
+        with open('parked_jobs.json', 'r') as f:
+            parked_jobs = json.load(f)
+        
+        if not parked_jobs:
+            print("📌 No parked jobs")
+            return
+        
+        print(f"\n📌 Found {len(parked_jobs)} parked jobs")
+        print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+        
+        sent_count = 0
+        remaining = []
+        
+        for i, job_file in enumerate(parked_jobs, 1):
+            print(f"\n📧 Parked Job {i}/{len(parked_jobs)}: {job_file}")
+            
+            job_path = os.path.join('job_results', job_file)
+            if not os.path.exists(job_path):
+                print(f"   ⚠️ File not found, skipping")
+                continue
+            
+            result = self.send_job_application(job_path)
+            if result == 'parked':
+                remaining.append(job_file)
+            elif result:
+                sent_count += 1
+            else:
+                remaining.append(job_file)
+        
+        # Update parked jobs
+        with open('parked_jobs.json', 'w') as f:
+            json.dump(remaining, f, indent=2)
+        
+        print(f"\n✅ Sent {sent_count} parked jobs")
+        print(f"📌 {len(remaining)} jobs still parked")
 
 def main():
     """Main menu"""
@@ -280,9 +429,10 @@ def main():
         print("3. Send Single Job Email")
         print("4. Batch Send All Jobs")
         print("5. Test Email")
-        print("6. Exit")
+        print("6. View Parked Jobs")
+        print("7. Exit")
         
-        choice = input("\nChoice (1-6): ")
+        choice = input("\nChoice (1-7): ")
         
         if choice == '1':
             sender.setup_gmail()
