@@ -18,7 +18,7 @@ echo Step 2: Add all files
 
 echo.
 echo Step 3: Commit changes with timestamp
-%GIT% commit -m "CV: Increased font sizes for readability (9pt→11pt base, all text larger)"
+%GIT% commit -m "Fix market reports - remove password, fix links, fix footer, add AWS reports"
 
 echo.
 echo Step 4: Connect to GitHub (if not done)
