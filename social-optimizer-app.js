@@ -11,6 +11,32 @@ let uploadedFile = null;
 document.addEventListener('DOMContentLoaded', function() {
     setupOptionCards();
     checkDevModePrompt();
+    
+    // Restore user data from localStorage if it exists
+    try {
+        const savedData = localStorage.getItem('spoUserData');
+        if (savedData) {
+            const restored = JSON.parse(savedData);
+            Object.assign(userData, restored);
+            console.log('✓ User data restored from localStorage');
+            
+            // Restore form fields if on step 1
+            if (currentStep === 1 && restored.platform) {
+                document.getElementById('platform').value = restored.platform;
+                if (restored.inputMethod) {
+                    selectInputMethod(restored.inputMethod);
+                    if (restored.inputMethod === 'text') {
+                        if (restored.currentBio) document.getElementById('currentBio').value = restored.currentBio;
+                        if (restored.currentHeadline) document.getElementById('currentHeadline').value = restored.currentHeadline;
+                    } else if (restored.inputMethod === 'link' && restored.profileLink) {
+                        document.getElementById('profileLink').value = restored.profileLink;
+                    }
+                }
+            }
+        }
+    } catch (e) {
+        console.error('Failed to restore from localStorage:', e);
+    }
 });
 
 // Fill demo data for testing
@@ -206,30 +232,35 @@ function validateStep1() {
         let html = '';
         
         if (errors.length > 0) {
-            html += '<div class="validation-error">';
-            html += '<strong>⚠️ Missing Information:</strong><ul style="margin: 10px 0 0 20px;">';
-            errors.forEach(err => html += `<li>${err}</li>`);
+            html += '<div class="validation-error" style="background: #fee; border: 3px solid #e74c3c; padding: 20px; margin: 20px 0; border-radius: 10px; font-size: 1.1em;">';
+            html += '<strong style="color: #e74c3c; font-size: 1.3em;">⚠️ Cannot Proceed - Missing Information:</strong><ul style="margin: 15px 0 0 30px; line-height: 1.8;">';
+            errors.forEach(err => html += `<li style="color: #c0392b; font-weight: 600;">${err}</li>`);
             html += '</ul></div>';
         }
         
         if (warnings.length > 0) {
-            html += '<div class="validation-error" style="background: #e7f3ff; border-left-color: #2196F3; color: #0c5460;">';
-            html += '<strong>💡 Suggestions:</strong><ul style="margin: 10px 0 0 20px;">';
+            html += '<div class="validation-error" style="background: #e7f3ff; border: 2px solid #2196F3; padding: 15px; margin: 15px 0; border-radius: 8px;">';
+            html += '<strong style="color: #0c5460;">💡 Suggestions:</strong><ul style="margin: 10px 0 0 20px;">';
             warnings.forEach(warn => html += `<li>${warn}</li>`);
             html += '</ul></div>';
         }
         
         validationDiv.innerHTML = html;
+        validationDiv.style.display = 'block';
         
         if (errors.length > 0) {
-            validationDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Scroll to top of validation messages
+            validationDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Also show alert for extra visibility
+            alert('⚠️ Please fill in all required information before proceeding.\n\nScroll up to see what\'s missing.');
             return false;
         }
     } else {
-        validationDiv.innerHTML = '<div class="validation-success"><strong>✓ All information provided!</strong> Ready to proceed.</div>';
+        validationDiv.innerHTML = '<div class="validation-success" style="background: #d4edda; border: 2px solid #28a745; padding: 15px; margin: 15px 0; border-radius: 8px;"><strong style="color: #155724;">✓ All information provided!</strong> Ready to proceed.</div>';
+        validationDiv.style.display = 'block';
     }
     
-    // Store data
+    // Store data in userData AND localStorage (so it persists if user refreshes)
     userData.platform = platform;
     userData.inputMethod = inputMethod;
     
@@ -244,6 +275,14 @@ function validateStep1() {
         userData.uploadedFile = uploadedFile.name;
         // In production, you'd use OCR/PDF parsing to extract text
         userData.currentBio = `Extracted from ${inputMethod}: ${uploadedFile.name}`;
+    }
+    
+    // Save to localStorage so data persists across page navigation
+    try {
+        localStorage.setItem('spoUserData', JSON.stringify(userData));
+        console.log('✓ User data saved to localStorage');
+    } catch (e) {
+        console.error('Failed to save to localStorage:', e);
     }
     
     // Track analytics
