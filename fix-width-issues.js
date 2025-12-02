@@ -1,29 +1,27 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔍 Finding files with width issues...\n');
-
 const htmlFiles = fs.readdirSync('.')
-    .filter(file => file.endsWith('.html'))
-    .sort();
+    .filter(f => f.endsWith('.html') && !f.startsWith('common-'));
 
-const filesToFix = [];
+console.log('Checking width consistency...\n');
+
+const issues = [];
 
 htmlFiles.forEach(file => {
     const content = fs.readFileSync(file, 'utf8');
     
-    // Check if file has max-width: 1400px
-    const has1400 = content.includes('max-width: 1400px') || 
-                    content.includes('max-width:1400px');
+    // Check for max-width: 1400px in various places
+    const hasWidth = content.includes('max-width: 1400px') || 
+                     content.includes('max-width:1400px') ||
+                     content.includes('maxWidth: "1400px"');
     
-    if (!has1400) {
-        filesToFix.push(file);
+    if (!hasWidth) {
+        issues.push(file);
+        console.log(`❌ ${file} - Missing 1400px width`);
     }
 });
 
-console.log(`Found ${filesToFix.length} files without 1400px width:\n`);
-filesToFix.forEach(file => console.log(`  - ${file}`));
-
-console.log('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
-console.log('📝 Files to fix:');
-console.log(JSON.stringify(filesToFix, null, 2));
+console.log(`\n📊 Total files without 1400px: ${issues.length}`);
+console.log('\nFiles needing fix:');
+issues.forEach(f => console.log(`   - ${f}`));
