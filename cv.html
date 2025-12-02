@@ -10,79 +10,95 @@
     <meta property="og:title" content="Amit Kumar - Professional CV">
     <meta property="og:url" content="https://ideas-before-time.pages.dev/cv.html">
     <link rel="canonical" href="https://ideas-before-time.pages.dev/cv.html">
-    <link rel="stylesheet" href="common-watermark.css">
     <link rel="stylesheet" href="common-navigation.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Calibri', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 3px;
-            line-height: 1.2;
+            background: #f5f5f5;
+            padding: 0;
+            line-height: 1.5;
             font-size: 8.5pt;
+        }
+        
+        @media print {
+            body {
+                background: white !important;
+                padding: 0 !important;
+            }
+            .container {
+                max-width: 100% !important;
+                box-shadow: none !important;
+            }
+        }
+
+        .page-wrapper {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 10px;
         }
 
         .container {
-            max-width: 210mm;
-            margin: 0 auto;
             background: white;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
         }
 
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 10px 15px;
+            padding: 8px 12px;
             display: grid;
-            grid-template-columns: 80px 1fr;
-            gap: 12px;
+            grid-template-columns: 70px 1fr;
+            gap: 10px;
             align-items: center;
         }
 
         .profile-photo {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             border: 3px solid white;
             object-fit: cover;
         }
 
         .header h1 {
-            font-size: 18pt;
-            margin-bottom: 2px;
+            font-size: 16pt;
+            margin-bottom: 1px;
             font-weight: 700;
         }
 
         .header .title {
-            font-size: 8.5pt;
-            margin-bottom: 3px;
-            line-height: 1.2;
+            font-size: 8pt;
+            margin-bottom: 2px;
+            line-height: 1.15;
         }
 
         .contact-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            font-size: 7.5pt;
-            margin-top: 3px;
+            gap: 6px;
+            font-size: 7pt;
+            margin-top: 2px;
         }
 
         .contact-info span {
             background: rgba(255,255,255,0.2);
-            padding: 2px 6px;
+            padding: 1px 5px;
             border-radius: 8px;
         }
 
         .content {
             padding: 8px 15px;
-            column-count: 2;
-            column-gap: 15px;
+            display: grid;
+            grid-template-columns: 28% 72%;
+            column-gap: 8px;
         }
 
         .section {
             break-inside: avoid;
-            margin-bottom: 6px;
+            margin-bottom: 2px;
         }
 
         .section h2 {
@@ -94,27 +110,27 @@
         }
 
         .summary-box {
-            background: rgba(102, 126, 234, 0.06);
-            padding: 5px 6px;
+            background: #f8f9fa;
+            padding: 4px 5px;
             border-radius: 3px;
             border-left: 2px solid #667eea;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
             font-size: 8pt;
-            line-height: 1.25;
+            line-height: 1.5;
         }
 
         .highlights {
             display: grid;
-            gap: 3px;
+            gap: 2px;
             font-size: 7.5pt;
         }
 
         .highlight-item {
-            padding: 3px 5px;
+            padding: 2px 4px;
             background: #f5f5f5;
             border-radius: 2px;
             border-left: 2px solid #764ba2;
-            line-height: 1.2;
+            line-height: 1.5;
         }
 
         .highlight-item::before {
@@ -124,8 +140,8 @@
         }
 
         .exp-item {
-            margin-bottom: 5px;
-            padding: 5px 6px;
+            margin-bottom: 3px;
+            padding: 4px 5px;
             background: #f8f9fa;
             border-radius: 3px;
             border-left: 2px solid #667eea;
@@ -136,14 +152,14 @@
         .exp-item h3 {
             color: #333;
             font-size: 9pt;
-            margin-bottom: 1px;
+            margin-bottom: 2px;
         }
 
         .exp-item .role {
             color: #667eea;
             font-weight: 600;
             font-size: 8pt;
-            margin-bottom: 1px;
+            margin-bottom: 2px;
         }
 
         .exp-item .date {
@@ -155,7 +171,7 @@
         .exp-item .details {
             font-size: 7pt;
             color: #555;
-            margin: 1px 0;
+            margin: 2px 0;
         }
 
         .exp-item ul {
@@ -165,10 +181,10 @@
         }
 
         .exp-item li {
-            padding: 0.5px 0 0.5px 8px;
+            padding: 0 0 0 8px;
             position: relative;
             font-size: 7pt;
-            line-height: 1.2;
+            line-height: 1.5;
         }
 
         .exp-item li::before {
@@ -185,16 +201,16 @@
         }
 
         .comp-item {
-            padding: 3px 5px;
-            background: rgba(102, 126, 234, 0.06);
+            padding: 2px 4px;
+            background: rgba(102, 126, 234, 0.04);
             border-radius: 2px;
             border-left: 2px solid #667eea;
         }
 
         .edu-item {
-            margin-bottom: 4px;
-            padding: 4px 5px;
-            background: #f8f9fa;
+            margin-bottom: 3px;
+            padding: 3px 4px;
+            background: rgba(248, 249, 250, 0.75);
             border-radius: 2px;
             border-left: 2px solid #764ba2;
             break-inside: avoid;
@@ -204,7 +220,7 @@
         .edu-item h3 {
             color: #333;
             font-size: 8.5pt;
-            margin-bottom: 1px;
+            margin-bottom: 2px;
         }
 
         .edu-item .institution {
@@ -221,12 +237,12 @@
         .themes {
             display: flex;
             flex-wrap: wrap;
-            gap: 3px;
-            font-size: 7pt;
+            gap: 2px;
+            font-size: 6.5pt;
         }
 
         .theme-tag {
-            padding: 2px 6px;
+            padding: 1px 5px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border-radius: 8px;
@@ -234,14 +250,20 @@
 
         .back-button {
             display: inline-block;
-            margin: 8px 15px;
-            padding: 6px 15px;
+            margin: 0 0 8px 0;
+            padding: 6px 16px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-decoration: none;
-            border-radius: 15px;
+            border-radius: 20px;
             font-size: 9pt;
             font-weight: 600;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
         }
 
         .print-button {
@@ -260,37 +282,34 @@
             z-index: 1000;
         }
 
-        .tools-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            margin-top: 5px;
-        }
-
-        .tools-grid img {
-            width: 100%;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            object-fit: cover;
-        }
-
         @media print {
-            body { background: white; padding: 0; font-size: 10pt; }
-            .container { box-shadow: none; max-width: 100%; }
+            body { 
+                background: white !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                padding: 0; 
+                font-size: 10pt; 
+            }
+            .container { 
+                box-shadow: none; 
+                max-width: 100%;
+                margin: 0;
+            }
+            .container::before { opacity: 0.02; }
             .content { padding: 6px 12px; font-size: 10pt; }
             .section { page-break-inside: avoid; }
             .section h2 { font-size: 11pt; }
             .summary-box { font-size: 9.5pt; }
             .back-button, .print-button { display: none; }
-            .tools-grid img { max-height: 120px; }
             @page { size: A4; margin: 8mm 12mm; }
         }
     </style>
 </head>
 <body>
-    <a href="library.html" class="back-button">← Back to Library</a>
+    <div class="page-wrapper">
+        <a href="library.html" class="back-button">← Back to Library</a>
 
-    <div class="container">
+        <div class="container">
         <div class="header">
             <img src="images/CV Image.png" alt="Amit Kumar" class="profile-photo">
             <div>
@@ -318,13 +337,13 @@
                 <div class="highlights">
                     <div class="highlight-item">P&L: $150–180M across BASF, DSM, 3M—25%+ CAGR</div>
                     <div class="highlight-item">Market Expansion: Built $3M→$30M business (60% CAGR); removed 25-year legacy agents; won 60-100% market share</div>
-                    <div class="highlight-item">Semiconductor Supply Chain: Supported wafer cleaning, etching, precision coating solutions for electronics manufacturing; FAB governance frameworks</div>
+                    <div class="highlight-item"><strong style="color: #667eea;">Semiconductor Supply Chain:</strong> Supported <strong>wafer cleaning, etching, precision coating</strong> solutions for <strong>electronics manufacturing</strong>; <strong>FAB governance</strong> frameworks</div>
                     <div class="highlight-item">Team & Operational Excellence: Zero incidents, 30% faster delivery, 200% customer focus enhancement, cross-functional APAC collaboration</div>
                     <div class="highlight-item">Strategic: 3-year South-Asia business consolidation; Japan integration; distribution optimization</div>
                     <div class="highlight-item">Digital: 50% cycle cut, $50M+ uplift; SAP S/4HANA, Salesforce, Power BI, AI Dashboards</div>
                     <div class="highlight-item">ESG: 100% compliance frameworks; 10% VOC reduction; waste management optimization</div>
-                    <div class="highlight-item">Tech Fluency: AWS KIRO, Agentic AI, Cloudflare, GitHub, OS installation & hardware assembly</div>
-                    <div class="highlight-item">Learning Agility: Rapidly self-learned new platforms and industrial systems, bridging pharma → chemicals → semiconductor</div>
+                    <div class="highlight-item"><strong>Tech Fluency:</strong> <strong>AWS KIRO, Agentic AI, Cloudflare, GitHub</strong>, OS installation & hardware assembly</div>
+                    <div class="highlight-item">Learning Agility: Rapidly self-learned new platforms and industrial systems, bridging pharma → chemicals → <strong>semiconductor</strong></div>
                 </div>
             </div>
 
@@ -441,31 +460,34 @@
             </div>
 
             <div class="section">
-                <h2>Professional Memberships</h2>
-                <div class="summary-box">
-                    <strong>Life Member:</strong> IIICA · QCFI · IEI · PCI · IIChe
+                <h2>Professional Memberships & Certifications</h2>
+                <div class="comp-grid">
+                    <div class="comp-item"><strong>Fellow and Chartered Engineer (CEng), India</strong> - Institution of Engineers India (IEI)</div>
+                    <div class="comp-item"><strong>Independent Director</strong> - Indian Institute of Corporate Affairs (IICA), DIN: 10870413</div>
+                    <div class="comp-item"><strong>Life Member</strong> - Indian Institute of Chemical Engineers (IIChE), India</div>
+                    <div class="comp-item"><strong>Life Member</strong> - Quality Circle Forum of India (QCFI)</div>
+                    <div class="comp-item"><strong>Life Member</strong> - Polymer Council of India (PCI)</div>
+                    <div class="comp-item"><strong>Participant</strong> - BASF Global Business Excellence Program (Germany)</div>
                 </div>
             </div>
 
             <div class="section">
-                <h2>Passions & Additional Skills</h2>
+                <h2>Electronics & Systems Expertise</h2>
                 <div class="highlights">
-                    <div class="highlight-item">Exploring AI platforms (Copilot, Agentic AI) for governance automation</div>
-                    <div class="highlight-item">Building and assembling laptops/PCs; OS installation and hardware troubleshooting</div>
-                    <div class="highlight-item">Practical electronics literacy (soldering, multimeter, PLC awareness)</div>
-                    <div class="highlight-item">Launching a YouTube channel on smell testing & scent reviews (creative exploration)</div>
+                    <div class="highlight-item"><strong>Electronics Proficiency:</strong> Skilled in hands-on hardware troubleshooting, precision soldering, diagnostic multimeter usage, and instrumentation testing</div>
+                    <div class="highlight-item"><strong>Industrial Systems:</strong> Working knowledge of PLC automation and foundational industrial control systems</div>
+                    <div class="highlight-item"><strong>AI & Governance Automation:</strong> Exploring AI platforms (Copilot, Agentic AI) for governance and compliance automation</div>
+                    <div class="highlight-item"><strong>Creative Exploration:</strong> Launching YouTube channel on sensory analysis & scent reviews (olfactory science)</div>
                 </div>
             </div>
 
             <div class="section">
                 <h2>Professional Tools & Technical Fluency</h2>
-                <div class="tools-grid">
-                    <img src="images/Professional tools i.png" alt="Professional Tools - Director & Engineer Level">
-                    <img src="images/Collage-style image .png" alt="Technical Tools Collage">
+                <div class="highlights">
+                    <div class="highlight-item">Strategic Tools: AWS KIRO, Agentic AI, Cloudflare, GitHub, SAP S/4HANA, Salesforce, Power BI</div>
+                    <div class="highlight-item">Hands-on Engineering: Soldering, multimeter, PLC awareness, hardware assembly, OS installation</div>
+                    <div class="highlight-item">Dual-perspective fluency bridging director-level strategy and engineer-level execution</div>
                 </div>
-                <p style="font-size: 6.5pt; color: #666; margin-top: 3px; text-align: center; font-style: italic;">
-                    Dual-perspective technical fluency: Strategic tools (AWS, KIRO, Agentic AI, Cloudflare, GitHub) + Hands-on engineering (soldering, multimeter, PLC, hardware assembly)
-                </p>
             </div>
 
             <div class="section">
@@ -530,6 +552,9 @@
                     </ul>
                 </div>
             </div>
+        </div>
+    </div>
+
         </div>
     </div>
 

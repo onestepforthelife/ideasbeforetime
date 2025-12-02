@@ -77,6 +77,19 @@ priority: highest
 
 **But only protect what needs protection!**
 
+**SPO SECURITY REQUIREMENT:**
+- All 6 SPO HTML files have security comments at the top (invisible to users)
+- Comments remind: MUST use Cloudflare Access, NOT JavaScript passwords
+- Path to protect in Cloudflare: /social-optimizer-*
+- Setup guide: SPO_CLOUDFLARE_ACCESS_SETUP.txt
+- Files protected:
+  1. social-optimizer-index.html
+  2. social-optimizer-app.html
+  3. social-optimizer-dashboard.html
+  4. social-optimizer-admin.html
+  5. social-optimizer-success.html
+  6. social-optimizer-quickstart.html
+
 ---
 
 ## 🏆 GOLDEN RULE #1: SPO IS FREE + NO REFUNDS

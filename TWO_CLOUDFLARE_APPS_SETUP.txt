@@ -61,7 +61,7 @@ Click "Next" → "Add application"
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📍 APPLICATION 2: CHEMICAL REPORTS
+📍 APPLICATION 2: MARKET REPORTS - PART 1 (Preview)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 1. Go to: Access → Applications
@@ -70,24 +70,51 @@ Click "Next" → "Add application"
 
 Application name:
 ┌──────────────────────────────────────────────────────────┐
-│ Chemical Reports                                         │
+│ Market Reports - Preview Part 1                          │
 └──────────────────────────────────────────────────────────┘
 
 Session Duration:
 ┌──────────────────────────────────────────────────────────┐
-│ 24 hours                                                 │
+│ 15 minutes                                               │
 └──────────────────────────────────────────────────────────┘
+(Users auto-logout after 15 min)
 
 Public hostname 1:
 ┌──────────────────────────────────────────────────────────┐
 │ Domain: ideasbeforetime.pages.dev                        │
-│ Path: /*Chemical*.html                                   │
+│ Path: /market-reports.html                               │
 └──────────────────────────────────────────────────────────┘
+(Landing page - users choose which report to view)
 
 Public hostname 2 (click "Add public hostname"):
 ┌──────────────────────────────────────────────────────────┐
 │ Domain: ideasbeforetime.pages.dev                        │
-│ Path: /nickel*.html                                      │
+│ Path: /Specialty_Chemicals_Market_Intelligence_Report_  │
+│       Consolidated.html                                  │
+└──────────────────────────────────────────────────────────┘
+
+Public hostname 3 (click "Add public hostname"):
+┌──────────────────────────────────────────────────────────┐
+│ Domain: ideasbeforetime.pages.dev                        │
+│ Path: /Specialty_Chemicals_Report_UPDATED.html          │
+└──────────────────────────────────────────────────────────┘
+
+Public hostname 4 (click "Add public hostname"):
+┌──────────────────────────────────────────────────────────┐
+│ Domain: ideasbeforetime.pages.dev                        │
+│ Path: /Specialty_Chemicals_Market_Report_Merged.html    │
+└──────────────────────────────────────────────────────────┘
+
+Public hostname 5 (click "Add public hostname"):
+┌──────────────────────────────────────────────────────────┐
+│ Domain: ideasbeforetime.pages.dev                        │
+│ Path: /Final_Acrylic_Market_Report.html                 │
+└──────────────────────────────────────────────────────────┘
+
+Public hostname 6 (click "Add public hostname"):
+┌──────────────────────────────────────────────────────────┐
+│ Domain: ideasbeforetime.pages.dev                        │
+│ Path: /nickel-esg-report.html                            │
 └──────────────────────────────────────────────────────────┘
 
 Click "Next"
@@ -166,9 +193,15 @@ Application 1: CV - Personal
 ✅ 1 path (ideasbeforetime.pages.dev)
 ✅ Only you
 
-Application 2: Chemical Reports
-✅ 2 paths (ideasbeforetime.pages.dev, all reports)
-✅ You + clients/partners
+Application 2: Market Reports - Part 1 (Preview Access)
+✅ 4 paths (landing + 3 reports)
+✅ 15-minute session (auto-logout)
+✅ Anyone can request access
+
+Application 3: Market Reports - Part 2 (Preview Access)
+✅ 2 paths (remaining 2 reports)
+✅ 15-minute session (auto-logout)
+✅ Same users as Part 1
 
 Both use real Cloudflare Access security (cannot be bypassed!)
 

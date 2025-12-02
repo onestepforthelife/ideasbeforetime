@@ -1,9 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en">
+<!-- 
+    🔒 SECURITY: This page MUST be protected by Cloudflare Access
+    - This is a PAID product (₹21)
+    - DO NOT use JavaScript passwords (bypassable)
+    - MUST use Cloudflare Access (server-side, cannot be bypassed)
+    - Setup guide: SPO_CLOUDFLARE_ACCESS_SETUP.txt
+    - Path to protect: /social-optimizer-*
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Social Profile Optimizer AI</title>
+    <link rel="stylesheet" href="common-navigation.css">
+    <link rel="stylesheet" href="common-footer.css">
     <link rel="stylesheet" href="common-watermark.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -29,7 +40,7 @@
             user-select: none;
         }
         .dashboard-container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
         header {
@@ -142,6 +153,21 @@
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">💡 Ideas Before Time</a>
+            <button class="mobile-menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="library.html">Innovation Library</a></li>
+                <li><a href="social-optimizer-index.html" class="active">Social Optimizer</a></li>
+                <li><a href="job-tools.html">Job Tools</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="dashboard-container">
         <header>
             <div>
@@ -288,6 +314,25 @@
         // Load on page load
         loadHistory();
     </script>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="timeline.html">Timeline</a>
+            </div>
+            <div class="footer-contact">
+                <p>Contact: <a href="mailto:onestepforthelife@gmail.com">onestepforthelife@gmail.com</a></p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Ideas Before Time. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
 <!-- Google Analytics 4 - Universal Tracking -->
 <script src="universal-analytics.js"></script>
 

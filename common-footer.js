@@ -12,7 +12,7 @@ function addSiteFooter() {
                 <a href="library.html">Innovation Library</a>
                 <a href="about.html">About</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms-and-disclaimer.html">Terms</a>
+                <a href="disclaimer.html">Terms & Disclaimer</a>
             </nav>
             <p class="footer-contact">Contact: <a href="mailto:onestepforthelife@gmail.com">onestepforthelife@gmail.com</a></p>
             <p class="footer-copyright">© 2025 Amit Kumar / Onestepforthelife</p>
