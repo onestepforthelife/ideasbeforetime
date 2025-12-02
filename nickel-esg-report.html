@@ -190,15 +190,7 @@
 </head>
 <body>
     <!-- Password Protection -->
-    <div class="password-overlay" id="passwordOverlay">
-        <div class="password-box">
-            <h2>🔒 Protected Content</h2>
-            <p>Enter password to view the Nickel ESG Report</p>
-            <input type="password" id="passwordInput" placeholder="Enter password" />
-            <button onclick="checkPassword()">Access Report</button>
-            <p class="error-msg" id="errorMsg">Incorrect password. Please try again.</p>
-        </div>
-    </div>
+    
 
     <!-- Report Content -->
     <div class="report-container" id="reportContent">
@@ -488,28 +480,7 @@
 
     <script src="common-navigation.js"></script>
     <script src="common-footer.js"></script>
-    <script>
-        function checkPassword() {
-            const password = document.getElementById('passwordInput').value;
-            const correctPassword = 'guruji'; // Master password
-            
-            if (password === correctPassword) {
-                document.getElementById('passwordOverlay').style.display = 'none';
-                document.getElementById('reportContent').style.display = 'block';
-                document.getElementById('errorMsg').style.display = 'none';
-            } else {
-                document.getElementById('errorMsg').style.display = 'block';
-                document.getElementById('passwordInput').value = '';
-            }
-        }
-
-        // Allow Enter key to submit password
-        document.getElementById('passwordInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                checkPassword();
-            }
-        });
-    </script>
+    
 <script src="universal-analytics.js"></script>
 </body>
 </html>

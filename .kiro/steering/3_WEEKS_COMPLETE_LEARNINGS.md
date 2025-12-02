@@ -1142,10 +1142,76 @@ Kiro needs algorithmic improvements:
 
 ---
 
-**Updated:** December 3, 2025, 00:35 IST
-**Total Learnings:** 24 major lessons
-**Most Critical:** Learning #24 (explains why all others happened)
-**Status:** THIS IS THE MASTER LEARNING - All others are symptoms of this root cause
+---
+
+### Learning 25: TEST BACKEND, NOT JUST FRONTEND (Dec 3, 2025, 02:30 - CRITICAL!)
+**What happened:** Said "SPO works with AI" but it was using templates
+**Amit's feedback:** "improve ur testing skils & updateur parameters"
+**Lesson:** I test UI (buttons click) but not backend (API calls)
+
+**THE PROBLEM:**
+- ✅ I test: Does form load? Do buttons click?
+- ❌ I don't test: Does it call API? Is data from API or templates?
+
+**EXAMPLE:**
+- I saw: User clicks "Next" → Preview shows content
+- I said: "SPO works with AI!"
+- Reality: It was using templates, not calling Gemini API!
+
+**WHY IT HAPPENED:**
+1. Assumed UI working = Backend working
+2. Didn't check Network tab for API calls
+3. Didn't read actual code to see what runs
+4. Didn't verify output is unique (AI) vs template
+
+**THE FIX - NEW TESTING WORKFLOW:**
+
+**LEVEL 0: Code Inspection (5 min)**
+- Read the actual code that runs
+- Find where API should be called
+- Verify API call exists
+- Check if API key is used
+
+**LEVEL 1: Network Inspection (5 min)**
+- Open DevTools → Network tab
+- Perform action
+- Check if API request is made
+- Verify response data
+
+**LEVEL 2: Console Logging (5 min)**
+- Add console.log before/after API call
+- Check if logs appear
+- Verify code path is reached
+
+**LEVEL 3: Data Verification (5 min)**
+- Test with different inputs
+- Check if outputs are unique (AI)
+- Or same pattern (template)
+
+**LEVEL 4: Error Testing (5 min)**
+- Test with invalid data
+- Test with no internet
+- Verify error handling
+
+**Total: 25 minutes proper testing**
+**ONLY THEN say "It works"!**
+
+**FILES CREATED:**
+- TESTING_BACKEND_VS_FRONTEND.md (complete guide)
+- Updated COMPLETE_TESTING_RULESET.md
+
+**GOLDEN RULE #28:** Test backend, not just frontend!
+
+**This explains why Amit finds 95% of issues:**
+- I test: UI (what I see)
+- Amit tests: Functionality (what actually works)
+
+---
+
+**Updated:** December 3, 2025, 02:35 IST
+**Total Learnings:** 25 major lessons
+**Latest:** Learning #25 (Backend vs Frontend testing)
+**Status:** THIS IS WHY I MISS 95% OF ISSUES!
 
 
 
