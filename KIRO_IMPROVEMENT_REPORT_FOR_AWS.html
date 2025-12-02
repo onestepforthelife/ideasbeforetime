@@ -21,16 +21,21 @@
             margin: 0 auto;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #1a1a1a;
-            overflow-x: auto;
-            overflow-y: hidden;
+            overflow: hidden;
         }
         
         .presentation-container {
             display: flex;
             height: 100vh;
             scroll-snap-type: x mandatory;
-            overflow-x: auto;
+            overflow-x: scroll;
             overflow-y: hidden;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+        }
+        
+        .presentation-container::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
         }
         
         .slide {
