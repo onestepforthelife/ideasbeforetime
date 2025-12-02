@@ -7,8 +7,10 @@ class AutoHealSystem {
     constructor() {
         this.healingStrategies = new Map();
         this.healingHistory = [];
+        this.lastNavigationClick = 0;
         this.setupStrategies();
         this.init();
+        this.trackNavigationClicks();
     }
 
     init() {
@@ -196,7 +198,18 @@ class AutoHealSystem {
 
     // HEALING STRATEGY 3: Broken Link
     healBrokenLink(error) {
-        // Redirect to homepage after 3 seconds
+        // Only redirect if it's actually a 404 error, not navigation clicks
+        if (error.status !== 404) {
+            return { success: false, action: 'Not a broken link' };
+        }
+        
+        // Don't redirect if user is actively navigating (clicked a link recently)
+        const recentNavigation = Date.now() - this.lastNavigationClick < 5000;
+        if (recentNavigation) {
+            return { success: false, action: 'User navigating - not redirecting' };
+        }
+        
+        // Only redirect for actual 404 pages
         this.showHealingMessage(
             '🏥 Page Not Found - Redirecting...',
             'This page doesn\'t exist. Taking you to homepage in 3 seconds.'
@@ -300,6 +313,16 @@ class AutoHealSystem {
         document.querySelectorAll('button').forEach(btn => {
             if (!btn.textContent.trim() && !btn.innerHTML.includes('<')) {
                 btn.textContent = 'Click Here';
+            }
+        });
+    }
+
+    // Track navigation clicks to avoid interfering with user navigation
+    trackNavigationClicks() {
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('a');
+            if (link && link.href) {
+                this.lastNavigationClick = Date.now();
             }
         });
     }
