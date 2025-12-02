@@ -49,6 +49,25 @@ priority: highest
 
 ---
 
+## 🏆 GOLDEN RULE #0.5: THIS IS BUSINESS - ALWAYS USE BEST SOLUTION
+
+**NEVER COMPROMISE ON BUSINESS FEATURES:**
+- ❌ NEVER use "good enough" solutions for business features
+- ❌ NEVER use bypassable client-side security for paid products
+- ❌ NEVER suggest shortcuts that can be hacked
+- ✅ ALWAYS use proper server-side/Cloudflare security
+- ✅ ALWAYS implement professional-grade solutions
+- ✅ ALWAYS think: "Would I trust this with my own business?"
+
+**THIS IS NOT A HOBBY PROJECT - IT'S AMIT'S BUSINESS**
+- SPO charges ₹21 = Real business = Real security needed
+- Market reports = Professional work = Real protection needed
+- CV/Job tools = Career critical = Real security needed
+
+**When Amit says "protect this" → Use Cloudflare Access, not JavaScript tricks**
+
+---
+
 ## 🏆 GOLDEN RULE #1: SPO IS FREE + NO REFUNDS
 
 **NEVER FORGET:**
@@ -310,6 +329,46 @@ priority: highest
 - MUST HAVE: Step-by-step process visible on game page for multiplayer
 - 8 STUN servers for redundancy
 - Simple 6-character room codes
+
+---
+
+## 🏆 GOLDEN RULE #11: LEARN FROM MISTAKES & DOCUMENT THEM
+
+**WHEN I MAKE A MISTAKE:**
+- ✅ Acknowledge it immediately
+- ✅ Document what went wrong in GOLDEN_RULES.md
+- ✅ Add it to the "Common Mistakes" section
+- ✅ Update steering files to prevent repeat
+- ✅ Never make the same mistake twice
+
+**COMMON MISTAKES I'VE MADE:**
+
+1. **Treating conversations as new** (FIXED: Master Rule #0)
+   - Problem: Asked same questions repeatedly
+   - Solution: Check steering files first, always
+
+2. **Updating only mentioned pages** (FIXED: Golden Rule #3)
+   - Problem: Missed 8 pages when updating navigation
+   - Solution: Always list ALL files, check ALL pages
+
+3. **Asking about SPO refunds repeatedly** (FIXED: Golden Rule #1)
+   - Problem: Kept asking "24h or 7d refunds?"
+   - Solution: SPO has NO REFUNDS - documented permanently
+
+4. **Using wrong PowerShell commands** (NEW - Dec 1, 2025)
+   - Problem: Command got truncated, used "et-ChildItem" instead of "Get-ChildItem"
+   - Solution: Keep commands simple, test before running
+
+**HOW I LEARN:**
+- Every mistake → New rule or update existing rule
+- Every frustration from Amit → Something to fix permanently
+- Every repeated question → Add to Golden Rules
+- Every workflow issue → Document in Process Rules
+
+**LEARNING LOG:**
+- Dec 1, 2025: Created GOLDEN_RULES.md to stop repeating mistakes
+- Dec 1, 2025: Added 11 Golden Rules from past mistakes
+- Dec 1, 2025: Documented common mistakes to avoid
 
 ---
 

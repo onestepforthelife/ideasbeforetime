@@ -41,12 +41,12 @@ MARKET RESEARCH PAGES:
 28. nickel-esg-report.html ✅
 
 SOCIAL PROFILE OPTIMIZER (SPO) PAGES:
-29. social-optimizer-index.html ⚠️ (refund: 24h vs 7d issue)
-30. social-optimizer-app.html ⚠️ (need to check)
-31. social-optimizer-dashboard.html ⚠️ (need to check)
-32. social-optimizer-admin.html ⚠️ (need to check)
-33. social-optimizer-quickstart.html ⚠️ (need to check)
-34. social-optimizer-success.html ⚠️ (need to check)
+29. social-optimizer-index.html 🔒 (client-side password - needs Cloudflare Access)
+30. social-optimizer-app.html 🔒 (client-side password - needs Cloudflare Access)
+31. social-optimizer-dashboard.html 🔒 (client-side password - needs Cloudflare Access)
+32. social-optimizer-admin.html 🔒 (client-side password - needs Cloudflare Access)
+33. social-optimizer-quickstart.html 🔒 (client-side password - needs Cloudflare Access)
+34. social-optimizer-success.html 🔒 (client-side password - needs Cloudflare Access)
 35. profile-optimizer.html ⚠️ (need to check)
 
 JOB TOOLS PAGES:
@@ -141,10 +141,18 @@ NEED TO CHECK (19 pages):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 CRITICAL:
-1. ❌ REFUND POLICY INCONSISTENCY
-   - social-optimizer-index.html: "24 hours"
-   - refund-policy.html: "7 days"
-   - ACTION NEEDED: Amit to decide which is correct
+1. 🔒 SPO SECURITY - CLIENT-SIDE PASSWORD (BYPASSABLE!)
+   - Current: JavaScript password protection (can be bypassed via console)
+   - Status: NOT PRODUCTION READY
+   - Solution: Cloudflare Access (real server-side security)
+   - Guide: SPO_CLOUDFLARE_ACCESS_SETUP.txt
+   - Time needed: 20 minutes
+   - ACTION REQUIRED: Set up Cloudflare Access before launch
+
+2. ❌ REFUND POLICY INCONSISTENCY (RESOLVED per Golden Rules)
+   - SPO has NO REFUNDS (tool is free, ₹21 is backend cost only)
+   - Need to remove all refund promises from SPO pages
+   - ACTION NEEDED: Update all SPO pages to remove refund text
 
 HIGH PRIORITY:
 2. ⚠️ Specialty_Chemicals_Report_UPDATED.html missing left-side index

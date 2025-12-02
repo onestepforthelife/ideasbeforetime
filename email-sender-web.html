@@ -95,9 +95,10 @@
                 <h3 style="margin: 0; color: #333;">📧 Job Applications</h3>
                 <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">Review and send your personalized emails</p>
             </div>
-            <div style="display: flex; gap: 10px;">
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button class="btn btn-success" onclick="triggerJobSearch()">🚀 Run Job Search</button>
                 <button class="btn" onclick="loadJobs()">🔄 Refresh</button>
-                <button class="btn btn-warning" onclick="startFreshSearch()">🆕 Start Fresh Search</button>
+                <button class="btn btn-warning" onclick="startFreshSearch()">🆕 Clear All</button>
             </div>
         </div>
 
@@ -133,6 +134,7 @@
     </div>
 
     <script src="common-navigation.js"></script>
+    <script src="job-api-client.js"></script>
     
     <!-- Load Credit System UI -->
     <script>
@@ -248,37 +250,43 @@
         }
 
         // Clear all jobs and start fresh
-        function startFreshSearch() {
+        async function startFreshSearch() {
             if (confirm('🔄 This will clear all current jobs and start fresh. Continue?')) {
-                jobs = [];
-                localStorage.removeItem('jobSearchResults');
-                displayJobs();
-                updateStats();
-                alert('✅ Cleared! Now run your job search to populate new results.');
+                try {
+                    const result = await jobAPI.clearJobs();
+                    if (result.success) {
+                        jobs = [];
+                        localStorage.removeItem('jobSearchResults');
+                        displayJobs();
+                        updateStats();
+                        alert('✅ ' + result.message);
+                    } else {
+                        alert('❌ Error: ' + result.error);
+                    }
+                } catch (error) {
+                    console.error('Error clearing jobs:', error);
+                    // Fallback to local clear
+                    jobs = [];
+                    localStorage.removeItem('jobSearchResults');
+                    displayJobs();
+                    updateStats();
+                    alert('✅ Cleared locally!');
+                }
             }
         }
 
-        // Load jobs from localStorage (simulated - in real version would load from job_results folder)
-        function loadJobs() {
-            // Check localStorage first
-            const stored = localStorage.getItem('jobSearchResults');
-            if (stored) {
-                jobs = JSON.parse(stored);
+        // Load jobs from backend API
+        async function loadJobs() {
+            try {
+                jobs = await jobAPI.loadJobs();
                 displayJobs();
                 updateStats();
-                return;
+            } catch (error) {
+                console.error('Error loading jobs:', error);
+                jobs = [];
+                displayJobs();
+                updateStats();
             }
-            
-            // Empty by default - no test data
-            jobs = [];
-                    contacts: [
-                        { name: 'Albert Ooi', email: 'albert.ooi@coherent.com' },
-                        { name: 'Brad Dudschus', email: 'brad.dudschus@coherent.com' },
-                        { name: 'Grace Lee', email: 'grace.lee@coherent.com' }
-                    ],
-            
-            displayJobs();
-            updateStats();
         }
 
         // Display jobs
@@ -395,6 +403,33 @@
             document.getElementById('totalJobs').textContent = jobs.length;
             document.getElementById('sentJobs').textContent = sentCount;
             document.getElementById('pendingJobs').textContent = jobs.length - sentCount;
+        }
+
+        // Trigger job search agent
+        async function triggerJobSearch() {
+            const keywords = prompt('Enter job keywords (e.g., "Director Operations"):');
+            if (!keywords) return;
+            
+            const location = prompt('Enter location (default: Singapore):', 'Singapore');
+            
+            try {
+                const result = await jobAPI.triggerAgent(keywords, location || 'Singapore');
+                if (result.success) {
+                    alert('✅ Job search started! Results will appear shortly.');
+                    // Poll for results
+                    setTimeout(() => loadJobs(), 5000);
+                } else {
+                    alert('❌ Error: ' + result.error);
+                }
+            } catch (error) {
+                console.error('Error triggering job search:', error);
+                alert('❌ Backend not available. Make sure to run START_BACKEND.bat first.');
+            }
+        }
+
+        // Import jobs from file
+        function importJobs() {
+            alert('📥 Import feature coming soon! For now, run job_agent.py to generate jobs.');
         }
 
         // Load on page load

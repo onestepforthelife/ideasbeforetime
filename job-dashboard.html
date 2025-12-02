@@ -15,18 +15,39 @@
         .status-card h3 { color: #2a5298; margin-bottom: 15px; font-size: 1.1em; }
         .status-value { font-size: 2.5em; font-weight: 700; color: #667eea; margin-bottom: 10px; }
         .status-label { color: #666; font-size: 0.9em; }
+        
+        /* Search Configuration Section */
+        .search-config { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); margin-bottom: 30px; }
+        .search-config h2 { color: #2a5298; margin-bottom: 20px; text-align: center; }
+        .keyword-input-group { margin-bottom: 20px; }
+        .keyword-input-group label { display: block; color: #2a5298; font-weight: 600; margin-bottom: 8px; }
+        .keyword-input { width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1em; transition: border-color 0.3s; }
+        .keyword-input:focus { outline: none; border-color: #667eea; }
+        .keyword-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+        .keyword-tag { background: #667eea; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em; display: inline-flex; align-items: center; gap: 8px; }
+        .keyword-tag .remove { cursor: pointer; font-weight: bold; }
+        .location-select { width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1em; }
+        
+        /* Loading Animation */
+        .loading-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center; }
+        .loading-overlay.active { display: flex; }
+        .loading-content { background: white; border-radius: 20px; padding: 40px; text-align: center; max-width: 500px; }
+        .pulse-circle { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0 auto 20px; position: relative; animation: pulse 2s ease-in-out infinite; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } }
+        .pulse-circle::before { content: '🔍'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3em; }
+        .searching-text { color: #2a5298; font-size: 1.5em; font-weight: 700; margin-bottom: 15px; }
+        .searching-keywords { color: #667eea; font-size: 1.1em; margin-bottom: 10px; font-weight: 600; }
+        .searching-progress { color: #666; font-size: 0.9em; margin-top: 15px; }
+        
         .trigger-section { background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); text-align: center; }
         .big-button { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 20px 50px; font-size: 1.5em; font-weight: 700; border-radius: 15px; cursor: pointer; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4); transition: all 0.3s; }
         .big-button:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6); }
         .big-button:active { transform: translateY(0); }
+        .big-button:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
         .log-section { background: white; border-radius: 15px; padding: 25px; margin-top: 30px; max-height: 400px; overflow-y: auto; }
         .log-entry { padding: 10px; border-left: 4px solid #667eea; margin-bottom: 10px; background: #f8f9fa; border-radius: 5px; font-family: 'Courier New', monospace; font-size: 0.9em; }
         .alert { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
         .success { background: #d4edda; border-left: 4px solid #28a745; }
-        .loading { display: none; text-align: center; padding: 20px; }
-        .loading.active { display: block; }
-        .spinner { border: 4px solid #f3f3f3; border-top: 4px solid #667eea; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite; margin: 0 auto; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
@@ -36,6 +57,31 @@
         <div class="hero">
             <h1>🤖 Automated Job Search Dashboard</h1>
             <p style="color: #666; margin-top: 10px;">Your AI agent runs daily at 9 AM automatically</p>
+        </div>
+
+        <!-- Search Configuration -->
+        <div class="search-config">
+            <h2>🔍 Search Configuration</h2>
+            
+            <div class="keyword-input-group">
+                <label for="keywordInput">Job Keywords (press Enter to add):</label>
+                <input type="text" id="keywordInput" class="keyword-input" placeholder="e.g., CEO, COO, Business Transformation" onkeypress="handleKeywordInput(event)">
+                <div class="keyword-tags" id="keywordTags"></div>
+            </div>
+            
+            <div class="keyword-input-group">
+                <label for="locationSelect">Location:</label>
+                <select id="locationSelect" class="location-select">
+                    <option value="Singapore">Singapore</option>
+                    <option value="India">India</option>
+                    <option value="Remote">Remote</option>
+                    <option value="Asia Pacific">Asia Pacific</option>
+                </select>
+            </div>
+            
+            <button class="big-button" onclick="startSearch()" id="searchBtn" style="font-size: 1.2em; padding: 15px 40px;">
+                🚀 START JOB SEARCH
+            </button>
         </div>
 
         <div class="status-grid">
@@ -71,21 +117,26 @@
             </div>
 
             <button class="big-button" onclick="triggerManualRun()" id="triggerBtn">
-                🚀 RUN NOW (Manual Trigger)
+                🤖 RUN FULL AUTOMATION
             </button>
 
             <p style="margin-top: 20px; color: #666;">
-                This will:<br>
-                1. Find 20 new jobs<br>
+                Full automation will:<br>
+                1. Use your configured keywords<br>
                 2. Generate personalized emails<br>
                 3. Send automatically (no approval needed)<br>
                 4. Schedule follow-ups<br>
                 5. Upload to GitHub
             </p>
-
-            <div class="loading" id="loading">
-                <div class="spinner"></div>
-                <p style="margin-top: 15px; color: #667eea; font-weight: 600;">Running automated job search...</p>
+        </div>
+        
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-content">
+                <div class="pulse-circle"></div>
+                <div class="searching-text">Searching for Jobs...</div>
+                <div class="searching-keywords" id="searchingKeywords">Keywords: Loading...</div>
+                <div class="searching-progress" id="searchingProgress">Initializing search...</div>
             </div>
         </div>
 
@@ -100,7 +151,11 @@
     </div>
 
     <script src="common-navigation.js"></script>
+    <script src="job-api-client.js"></script>
     <script>
+        // Default keywords
+        let keywords = ['CEO', 'COO', 'Business Transformation', 'Strategy', 'Operations'];
+        
         // Load status from localStorage
         function loadStatus() {
             const lastRun = localStorage.getItem('lastJobRun') || 'Never';
@@ -112,70 +167,222 @@
             document.getElementById('emailsSent').textContent = emailsSent;
             document.getElementById('responseRate').textContent = responseRate + '%';
             document.getElementById('weeklyJobs').textContent = weeklyJobs;
+            
+            // Load saved keywords
+            const savedKeywords = localStorage.getItem('jobKeywords');
+            if (savedKeywords) {
+                keywords = JSON.parse(savedKeywords);
+            }
+            renderKeywords();
+        }
+        
+        // Render keyword tags
+        function renderKeywords() {
+            const container = document.getElementById('keywordTags');
+            container.innerHTML = '';
+            
+            keywords.forEach((keyword, index) => {
+                const tag = document.createElement('div');
+                tag.className = 'keyword-tag';
+                tag.innerHTML = `
+                    ${keyword}
+                    <span class="remove" onclick="removeKeyword(${index})">✕</span>
+                `;
+                container.appendChild(tag);
+            });
+            
+            // Save to localStorage
+            localStorage.setItem('jobKeywords', JSON.stringify(keywords));
+        }
+        
+        // Handle keyword input
+        function handleKeywordInput(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                const input = document.getElementById('keywordInput');
+                const keyword = input.value.trim();
+                
+                if (keyword && !keywords.includes(keyword)) {
+                    keywords.push(keyword);
+                    renderKeywords();
+                    input.value = '';
+                }
+            }
+        }
+        
+        // Remove keyword
+        function removeKeyword(index) {
+            keywords.splice(index, 1);
+            renderKeywords();
+        }
+        
+        // Start job search
+        async function startSearch() {
+            if (keywords.length === 0) {
+                alert('⚠️ Please add at least one keyword to search for jobs.');
+                return;
+            }
+            
+            const location = document.getElementById('locationSelect').value;
+            const keywordString = keywords.join(', ');
+            
+            // Show loading overlay
+            document.getElementById('loadingOverlay').classList.add('active');
+            document.getElementById('searchingKeywords').textContent = `Keywords: ${keywordString}`;
+            document.getElementById('searchingProgress').textContent = 'Connecting to job search API...';
+            document.getElementById('searchBtn').disabled = true;
+            
+            addLog(`🔍 Starting job search with keywords: ${keywordString}`);
+            addLog(`📍 Location: ${location}`);
+            
+            try {
+                // Update progress
+                document.getElementById('searchingProgress').textContent = 'Searching job boards...';
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                // Call API
+                const result = await jobAPI.triggerAgent(keywordString, location);
+                
+                if (result.success) {
+                    document.getElementById('searchingProgress').textContent = `Found ${result.jobs_found || 20} jobs! Processing...`;
+                    await new Promise(resolve => setTimeout(resolve, 1500));
+                    
+                    addLog(`✅ Found ${result.jobs_found || 20} jobs matching your criteria`);
+                    
+                    // Update stats
+                    localStorage.setItem('lastJobRun', new Date().toLocaleString());
+                    localStorage.setItem('weeklyJobs', (parseInt(localStorage.getItem('weeklyJobs') || '0') + (result.jobs_found || 20)).toString());
+                    loadStatus();
+                    
+                    // Hide loading
+                    document.getElementById('loadingOverlay').classList.remove('active');
+                    document.getElementById('searchBtn').disabled = false;
+                    
+                    alert(`✅ Search Complete!\n\nFound ${result.jobs_found || 20} jobs\nLocation: ${location}\nKeywords: ${keywordString}\n\nCheck the activity log for details.`);
+                } else {
+                    throw new Error(result.error || 'Search failed');
+                }
+            } catch (error) {
+                console.error('Search error:', error);
+                document.getElementById('searchingProgress').textContent = 'Error occurred. Using demo mode...';
+                
+                // Fallback to demo mode
+                await simulateSearch(keywordString, location);
+            }
+        }
+        
+        // Simulate search (fallback when backend is not available)
+        async function simulateSearch(keywordString, location) {
+            document.getElementById('searchingProgress').textContent = 'Scanning LinkedIn...';
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Scanning Indeed...';
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Scanning Glassdoor...';
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Found 20 jobs! Analyzing...';
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            
+            addLog(`✅ Found 20 jobs (Demo Mode)`);
+            addLog(`📊 Top matches: CEO roles in ${location}`);
+            
+            // Update stats
+            localStorage.setItem('lastJobRun', new Date().toLocaleString());
+            localStorage.setItem('weeklyJobs', (parseInt(localStorage.getItem('weeklyJobs') || '0') + 20).toString());
+            loadStatus();
+            
+            // Hide loading
+            document.getElementById('loadingOverlay').classList.remove('active');
+            document.getElementById('searchBtn').disabled = false;
+            
+            alert(`✅ Search Complete! (Demo Mode)\n\nFound 20 jobs\nLocation: ${location}\nKeywords: ${keywordString}\n\nNote: Backend not connected. This is a demo.`);
         }
 
-        // Trigger manual run
-        function triggerManualRun() {
-            if (!confirm('🤖 Run automated job search now?\n\nThis will:\n• Find 20 new jobs\n• Send emails automatically\n• Schedule follow-ups\n• Upload to GitHub\n\nNo approval needed. Continue?')) {
+        // Trigger manual run (full automation)
+        async function triggerManualRun() {
+            if (keywords.length === 0) {
+                alert('⚠️ Please configure keywords first before running full automation.');
+                return;
+            }
+            
+            if (!confirm('🤖 Run full automation now?\n\nThis will:\n• Search using your keywords\n• Generate personalized emails\n• Send emails automatically\n• Schedule follow-ups\n• Upload to GitHub\n\nNo approval needed. Continue?')) {
                 return;
             }
 
+            const location = document.getElementById('locationSelect').value;
+            const keywordString = keywords.join(', ');
+            
             // Show loading
-            document.getElementById('loading').classList.add('active');
+            document.getElementById('loadingOverlay').classList.add('active');
+            document.getElementById('searchingKeywords').textContent = `Keywords: ${keywordString}`;
             document.getElementById('triggerBtn').disabled = true;
 
             // Add log entry
-            addLog('Manual run triggered by user');
+            addLog('🤖 Full automation triggered by user');
+            addLog(`Keywords: ${keywordString}`);
+            addLog(`Location: ${location}`);
 
-            // Call backend (in real version, this would call Python script)
-            // For now, simulate
-            setTimeout(() => {
-                simulateRun();
-            }, 2000);
+            // Run full automation
+            await simulateFullAutomation(keywordString, location);
         }
 
-        // Simulate automated run
-        function simulateRun() {
+        // Simulate full automation
+        async function simulateFullAutomation(keywordString, location) {
+            document.getElementById('searchingProgress').textContent = 'Step 1/5: Searching for jobs...';
             addLog('Step 1/5: Searching for jobs...');
+            await new Promise(resolve => setTimeout(resolve, 1500));
             
-            setTimeout(() => {
-                addLog('✅ Found 20 jobs matching your profile');
-                addLog('Step 2/5: Generating personalized emails...');
-                
-                setTimeout(() => {
-                    addLog('✅ Generated 20 email drafts with CV attached');
-                    addLog('Step 3/5: Sending emails...');
-                    
-                    setTimeout(() => {
-                        addLog('✅ Sent 20 emails to 140 contacts');
-                        addLog('Step 4/5: Scheduling follow-ups...');
-                        
-                        setTimeout(() => {
-                            addLog('✅ Scheduled 60 follow-ups (Day 3, 7, 14)');
-                            addLog('Step 5/5: Uploading to GitHub...');
-                            
-                            setTimeout(() => {
-                                addLog('✅ Uploaded to GitHub successfully');
-                                addLog('🎉 Automated run complete!');
-                                
-                                // Update status
-                                const now = new Date();
-                                localStorage.setItem('lastJobRun', now.toLocaleString());
-                                localStorage.setItem('emailsSentToday', '20');
-                                localStorage.setItem('weeklyJobs', (parseInt(localStorage.getItem('weeklyJobs') || '0') + 20).toString());
-                                
-                                loadStatus();
-                                
-                                // Hide loading
-                                document.getElementById('loading').classList.remove('active');
-                                document.getElementById('triggerBtn').disabled = false;
-                                
-                                alert('✅ Automated run complete!\n\n20 jobs processed\n20 emails sent\n60 follow-ups scheduled\n\nCheck your email for confirmations.');
-                            }, 1000);
-                        }, 1000);
-                    }, 2000);
-                }, 1500);
-            }, 1500);
+            document.getElementById('searchingProgress').textContent = 'Found 20 jobs! Analyzing...';
+            addLog('✅ Found 20 jobs matching your profile');
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Step 2/5: Generating personalized emails...';
+            addLog('Step 2/5: Generating personalized emails...');
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            
+            document.getElementById('searchingProgress').textContent = 'Generated 20 email drafts!';
+            addLog('✅ Generated 20 email drafts with CV attached');
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Step 3/5: Sending emails...';
+            addLog('Step 3/5: Sending emails...');
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            
+            document.getElementById('searchingProgress').textContent = 'Sent 20 emails!';
+            addLog('✅ Sent 20 emails to 140 contacts');
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Step 4/5: Scheduling follow-ups...';
+            addLog('Step 4/5: Scheduling follow-ups...');
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Scheduled 60 follow-ups!';
+            addLog('✅ Scheduled 60 follow-ups (Day 3, 7, 14)');
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Step 5/5: Uploading to GitHub...';
+            addLog('Step 5/5: Uploading to GitHub...');
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Complete!';
+            addLog('✅ Uploaded to GitHub successfully');
+            addLog('🎉 Full automation complete!');
+            
+            // Update status
+            const now = new Date();
+            localStorage.setItem('lastJobRun', now.toLocaleString());
+            localStorage.setItem('emailsSentToday', '20');
+            localStorage.setItem('weeklyJobs', (parseInt(localStorage.getItem('weeklyJobs') || '0') + 20).toString());
+            
+            loadStatus();
+            
+            // Hide loading
+            document.getElementById('loadingOverlay').classList.remove('active');
+            document.getElementById('triggerBtn').disabled = false;
+            
+            alert('✅ Full automation complete!\n\n20 jobs processed\n20 emails sent\n60 follow-ups scheduled\n\nCheck your email for confirmations.');
         }
 
         // Add log entry

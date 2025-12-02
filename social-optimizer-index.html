@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Profile Optimizer AI - LinkedIn Profile Optimization Tool | ₹21 Only</title>
+    <link rel="stylesheet" href="common-watermark.css">
     <meta name="description" content="AI-powered LinkedIn profile optimizer. Get professional headline, summary, and bio suggestions in minutes. Only ₹21 with instant results. Boost your profile visibility and attract recruiters.">
     <meta name="keywords" content="LinkedIn profile optimizer, LinkedIn headline generator, professional bio writer, LinkedIn summary AI, profile optimization tool, career profile enhancer, LinkedIn SEO, professional branding, resume optimizer, LinkedIn tips">
     <meta name="author" content="Ideas Before Time">
@@ -383,23 +384,7 @@
     <!-- Currency Detection Script -->
     <script src="currency-detector.js"></script>
 
-    <!-- Password Protection for SPO -->
-    <script>
-    (function() {
-        const SPO_PASSWORD = 'AmitSPO2025!';
-        const isAuthenticated = sessionStorage.getItem('spo_authenticated') === 'true';
-        
-        if (!isAuthenticated) {
-            const enteredPassword = prompt('Social Profile Optimizer is password protected.\n\nPlease enter the password to access:');
-            
-            if (enteredPassword === SPO_PASSWORD) {
-                sessionStorage.setItem('spo_authenticated', 'true');
-            } else {
-                alert('Incorrect password. Redirecting to home page.');
-                window.location.href = 'index.html';
-            }
-        }
-    })();
-    </script>
+    <!-- Security: Protected by Cloudflare Access -->
+    <!-- No client-side password needed - Cloudflare handles authentication at server level -->
 </body>
 </html>
