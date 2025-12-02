@@ -49,22 +49,33 @@ priority: highest
 
 ---
 
-## 🏆 GOLDEN RULE #0.5: THIS IS BUSINESS - ALWAYS USE BEST SOLUTION
+## 🏆 GOLDEN RULE #0.5: SECURITY POLICY - WHAT'S PUBLIC VS PRIVATE
 
-**NEVER COMPROMISE ON BUSINESS FEATURES:**
-- ❌ NEVER use "good enough" solutions for business features
-- ❌ NEVER use bypassable client-side security for paid products
-- ❌ NEVER suggest shortcuts that can be hacked
-- ✅ ALWAYS use proper server-side/Cloudflare security
-- ✅ ALWAYS implement professional-grade solutions
+**PUBLIC (Open to Everyone):**
+- ✅ SPO (Social Profile Optimizer) - Anyone can access and pay ₹21
+- ✅ Job search tools - Free for everyone
+- ✅ Innovation library - Free for everyone
+- ✅ All other pages - Public access
+
+**PRIVATE (Password Protected with Cloudflare Access):**
+- 🔒 Chemical industry reports (market research data)
+- 🔒 CV pages (cv.html, cv-preview.html)
+
+**NEVER protect SPO or job tools with passwords!**
+- SPO payment happens INSIDE the app (after user enters data)
+- Job tools are free services
+- Only protect confidential business data (reports, CV)
+
+---
+
+## 🏆 GOLDEN RULE #0.6: THIS IS BUSINESS - ALWAYS USE BEST SOLUTION
+
+**WHEN PROTECTION IS NEEDED:**
+- ✅ ALWAYS use Cloudflare Access (server-side, cannot be bypassed)
+- ❌ NEVER use client-side JavaScript passwords (can be bypassed)
 - ✅ ALWAYS think: "Would I trust this with my own business?"
 
-**THIS IS NOT A HOBBY PROJECT - IT'S AMIT'S BUSINESS**
-- SPO charges ₹21 = Real business = Real security needed
-- Market reports = Professional work = Real protection needed
-- CV/Job tools = Career critical = Real security needed
-
-**When Amit says "protect this" → Use Cloudflare Access, not JavaScript tricks**
+**But only protect what needs protection!**
 
 ---
 

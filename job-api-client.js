@@ -1,6 +1,6 @@
 /* Job Search Tool - API Client */
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://orange-lab-a038.onestepforthelife.workers.dev/api';
 
 // API Client Class
 class JobAPI {
