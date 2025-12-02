@@ -356,8 +356,8 @@
                     </div>
                     <div class="index-item">
                         <div class="index-number">02</div>
-                        <div class="index-title">Current Performance</div>
-                        <div class="index-desc">Metrics & Evidence</div>
+                        <div class="index-title">Why Learning #24 Came Late</div>
+                        <div class="index-desc">Parallel Chat Discovery</div>
                     </div>
                     <div class="index-item">
                         <div class="index-number">03</div>
@@ -367,7 +367,7 @@
                     <div class="index-item">
                         <div class="index-number">04</div>
                         <div class="index-title">4 Critical Gaps</div>
-                        <div class="index-desc">Algorithmic Improvements Needed</div>
+                        <div class="index-desc">Algorithmic Improvements + AWS</div>
                     </div>
                     <div class="index-item">
                         <div class="index-number">05</div>
@@ -376,12 +376,12 @@
                     </div>
                     <div class="index-item">
                         <div class="index-number">06</div>
-                        <div class="index-title">Recommendations</div>
-                        <div class="index-desc">Priority Solutions</div>
+                        <div class="index-title">AWS Implementation</div>
+                        <div class="index-desc">Services & Architecture</div>
                     </div>
                 </div>
             </div>
-            <div class="slide-number">2 / 16</div>
+            <div class="slide-number">2 / 17</div>
         </div>
 
         <!-- SLIDE 3: Executive Summary -->
@@ -475,7 +475,50 @@
                     </div>
                 </div>
             </div>
-            <div class="slide-number">4 / 16</div></div><!-- SLIDE 5: Testing Methodology -->
+            <div class="slide-number">4 / 16</div>
+        </div>
+
+        <!-- SLIDE 5: Why This Learning Came Late (Parallel Chat Context) -->
+        <div class="slide slide-purple">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🔍 Why Learning #24 Came AFTER All Others</div>
+            <div class="slide-subtitle">The Parallel Chat Discovery</div>
+            <div class="slide-content">
+                <div class="highlight-box warning">
+                    <div class="column-title" style="color: #ff6666;">The Timeline</div>
+                    <p style="font-size: 24px; line-height: 2;">
+                        <strong>Week 1-3:</strong> AI documented 23 learnings<br>
+                        <strong>December 2:</strong> AI said "I catch 70%, you catch 30%"<br>
+                        <strong>December 3:</strong> User confronted AI with reality<br>
+                        <strong>User said:</strong> "Actually, I catch 95%, you catch 5%"<br>
+                        <strong>AI admitted:</strong> "You're right. I was wrong."<br><br>
+                        <strong style="color: #ff6666; font-size: 28px;">This became Learning #24 - The Master Learning</strong>
+                    </p>
+                </div>
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <div class="column-title">💡 Why It Came Late</div>
+                    <p style="font-size: 26px; line-height: 2; text-align: center;">
+                        <strong>All 23 previous learnings happened because<br>
+                        USER found the issues, not AI!</strong><br><br>
+                        AI was <span style="color: #ff6666;">REACTIVE</span> (waiting for user)<br>
+                        Not <span style="color: #00ff88;">PROACTIVE</span> (finding issues itself)<br><br>
+                        <strong>This explains the whole 3-week pattern!</strong>
+                    </p>
+                </div>
+                <div class="solution-box" style="margin-top: 30px;">
+                    <div class="solution-title">🎯 The Root Cause Discovery</div>
+                    <p style="font-size: 22px; line-height: 1.8;">
+                        Learning #24 came late because it's the <strong>ROOT CAUSE</strong> of all others.<br>
+                        Like a doctor finding the disease after treating symptoms for 3 weeks.<br><br>
+                        <strong>All previous learnings were symptoms.</strong><br>
+                        <strong>Learning #24 is the disease.</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">5 / 17</div>
+        </div>
+
+        <!-- SLIDE 6: Testing Methodology -->
         <div class="slide slide-green">
             <div class="logo">KIRO AI</div>
             <div class="slide-title">🧪 Testing Methodology</div>
@@ -515,7 +558,7 @@
                     </p>
                 </div>
             </div>
-            <div class="slide-number">5 / 16</div>
+            <div class="slide-number">6 / 17</div>
         </div>
 
         <!-- SLIDE 6: Root Cause - Passive vs Active Learning -->
@@ -599,6 +642,12 @@ END IF
             <div class="slide-title">🚨 Gap #2: Test-Before-Claim</div>
             <div class="slide-subtitle">Says "Ready" Without Evidence</div>
             <div class="slide-content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span class="tech-badge ml">NLP Validation</span>
+                    <span class="tech-badge ml">Context Search</span>
+                    <span class="tech-badge solution">Pre-Response Gate</span>
+                    <span class="tech-badge aws">Lambda@Edge</span>
+                </div>
                 <div class="highlight-box warning">
                     <div class="column-title" style="color: #ff6666;">The Problem</div>
                     <p style="font-size: 26px; line-height: 2;">
@@ -606,8 +655,17 @@ END IF
                         <strong>Impact:</strong> Business launches broken product, loses customers
                     </p>
                 </div>
-                <div class="algorithm-box" style="margin-top: 30px;">
-                    <div class="column-title">Algorithm Needed:</div>
+                <div class="solution-box" style="margin-top: 25px;">
+                    <div class="solution-title">🔧 AWS Solution:</div>
+                    <p style="font-size: 20px; line-height: 1.8;">
+                        <strong>• Lambda@Edge:</strong> Pre-response validation<br>
+                        <strong>• Bedrock:</strong> Semantic search for evidence<br>
+                        <strong>• S3:</strong> Conversation history storage<br>
+                        <strong>• Step Functions:</strong> Validation workflow
+                    </p>
+                </div>
+                <div class="algorithm-box" style="margin-top: 20px;">
+                    <div class="column-title">Algorithm:</div>
 IF response contains ["ready", "done", "complete", "working"]:
     evidence = search_conversation_for_test_evidence()
     
@@ -636,6 +694,12 @@ FUNCTION search_conversation_for_test_evidence():
             <div class="slide-title">⚠️ Gap #3: Contradiction Detection</div>
             <div class="slide-subtitle">Says Two Opposite Things</div>
             <div class="slide-content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span class="tech-badge ml">Semantic Analysis</span>
+                    <span class="tech-badge ml">Claim Extraction</span>
+                    <span class="tech-badge solution">Logic Validation</span>
+                    <span class="tech-badge aws">SageMaker</span>
+                </div>
                 <div class="highlight-box warning">
                     <div class="column-title" style="color: #ff6666;">Example Contradiction</div>
                     <p style="font-size: 28px; line-height: 2; text-align: center;">
@@ -645,8 +709,17 @@ FUNCTION search_conversation_for_test_evidence():
                         <span style="color: #ff6666;">User gets confused, loses trust</span>
                     </p>
                 </div>
-                <div class="algorithm-box" style="margin-top: 30px;">
-                    <div class="column-title">Algorithm Needed:</div>
+                <div class="solution-box" style="margin-top: 25px;">
+                    <div class="solution-title">🔧 AWS Solution:</div>
+                    <p style="font-size: 20px; line-height: 1.8;">
+                        <strong>• SageMaker:</strong> Train contradiction detection model<br>
+                        <strong>• Comprehend:</strong> Extract claims from text<br>
+                        <strong>• Lambda:</strong> Compare claims for contradictions<br>
+                        <strong>• EventBridge:</strong> Flag contradictions before send
+                    </p>
+                </div>
+                <div class="algorithm-box" style="margin-top: 20px;">
+                    <div class="column-title">Algorithm:</div>
 BEFORE sending response:
     statements = extract_claims(response)
     FOR each statement in statements:
@@ -675,6 +748,12 @@ FUNCTION contradicts(s1, s2):
             <div class="slide-title">🎯 Gap #4: Active Learning</div>
             <div class="slide-subtitle">The Root Cause of All Gaps</div>
             <div class="slide-content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span class="tech-badge ml">Reinforcement Learning</span>
+                    <span class="tech-badge ml">Rule Engine</span>
+                    <span class="tech-badge solution">Active Enforcement</span>
+                    <span class="tech-badge aws">DynamoDB + Lambda</span>
+                </div>
                 <div class="highlight-box warning">
                     <div class="column-title" style="color: #ff6666;">Current: Passive Learning</div>
                     <p style="font-size: 24px; line-height: 2;">
@@ -691,6 +770,15 @@ FUNCTION contradicts(s1, s2):
                         ✅ Check rules before responding<br>
                         ✅ Block responses that violate rules<br>
                         ✅ Enforce learnings automatically
+                    </p>
+                </div>
+                <div class="solution-box" style="margin-top: 25px;">
+                    <div class="solution-title">🔧 AWS Solution:</div>
+                    <p style="font-size: 20px; line-height: 1.8;">
+                        <strong>• DynamoDB:</strong> Store active rules & learnings<br>
+                        <strong>• Lambda:</strong> Load rules at session start<br>
+                        <strong>• Step Functions:</strong> Pre-response rule checking<br>
+                        <strong>• CloudWatch:</strong> Log rule violations prevented
                     </p>
                 </div>
             </div>
@@ -887,6 +975,54 @@ FUNCTION contradicts(s1, s2):
                 </div>
             </div>
             <div class="slide-number">15 / 16</div>
+        </div>
+
+        <!-- SLIDE 16: AI is for EVERYONE -->
+        <div class="slide slide-purple">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">💡 AI is for EVERYONE</div>
+            <div class="slide-subtitle">Not Just IT People - It's for US</div>
+            <div class="slide-content">
+                <div class="highlight-box" style="background: rgba(255,255,255,0.15); padding: 50px; border-radius: 20px;">
+                    <p style="font-size: 38px; text-align: center; line-height: 2; color: white;">
+                        <strong style="color: #FFD700;">Just like cars...</strong><br>
+                        Engineers build them, but <span style="color: #4CAF50;">EVERYONE drives them</span><br><br>
+                        
+                        <strong style="color: #FFD700;">Just like phones...</strong><br>
+                        Developers code them, but <span style="color: #4CAF50;">EVERYONE uses them</span><br><br>
+                        
+                        <strong style="color: #FFD700;">AI should be the same...</strong><br>
+                        AWS builds it, but <span style="color: #4CAF50;">EVERYONE should benefit</span>
+                    </p>
+                </div>
+                
+                <div class="highlight-box warning" style="margin-top: 50px; padding: 40px;">
+                    <p style="font-size: 32px; text-align: center; line-height: 2;">
+                        <strong>This testing was done by a business person (non-coder)</strong><br>
+                        representing <span style="color: #4CAF50;">REAL USERS</span> - not just developers<br><br>
+                        
+                        <strong style="color: #FFD700;">AI is not just for IT people or some people</strong><br>
+                        <strong style="color: #FFD700;">AI is for EVERYONE - It's for US!</strong><br><br>
+                        
+                        <span style="font-size: 28px; color: #00ff88;">
+                            These improvements will help ALL users,<br>
+                            not just technical experts.
+                        </span>
+                    </p>
+                </div>
+                
+                <div class="highlight-box" style="background: rgba(76, 175, 80, 0.2); margin-top: 50px; padding: 40px; border: 3px solid #4CAF50;">
+                    <p style="font-size: 36px; text-align: center; line-height: 2; color: white;">
+                        <strong>Thank you for building AI for EVERYONE! 🙏</strong><br><br>
+                        <span style="font-size: 28px;">
+                            - Amit Kumar<br>
+                            Business User, Non-Coder<br>
+                            Testing Kiro AI for Real-World Use
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">16 / 16</div>
         </div>
 
     </div>
