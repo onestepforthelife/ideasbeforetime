@@ -18,7 +18,7 @@ echo Step 2: Add all files
 
 echo.
 echo Step 3: Commit changes with timestamp
-%GIT% commit -m "CV: 1400px width + CSS columns (no blank spaces) - compact 2-column layout"
+%GIT% commit -m "CV: Increased font sizes for readability (9pt→11pt base, all text larger)"
 
 echo.
 echo Step 4: Connect to GitHub (if not done)

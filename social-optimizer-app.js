@@ -317,24 +317,62 @@ function validateStep2() {
 }
 
 // Generate preview
-function generatePreview() {
+async function generatePreview() {
     if (!validateStep2()) return;
     
-    // Generate optimized profile using AI Engine
-    generatedProfile = AIEngine.generate(userData);
+    // Show loading indicator
+    const loadingDiv = document.createElement('div');
+    loadingDiv.id = 'aiLoading';
+    loadingDiv.innerHTML = `
+        <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 9999; display: flex; align-items: center; justify-content: center;">
+            <div style="background: white; padding: 40px; border-radius: 20px; text-align: center; max-width: 400px;">
+                <div style="font-size: 3em; margin-bottom: 20px;">🤖</div>
+                <h2 style="margin-bottom: 15px;">AI is Optimizing Your Profile...</h2>
+                <p style="color: #666; margin-bottom: 20px;">Using Gemini AI to generate personalized suggestions</p>
+                <div style="width: 100%; height: 4px; background: #f0f0f0; border-radius: 2px; overflow: hidden;">
+                    <div style="width: 0%; height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); animation: loading 2s ease-in-out infinite;"></div>
+                </div>
+            </div>
+        </div>
+        <style>
+            @keyframes loading {
+                0% { width: 0%; }
+                50% { width: 70%; }
+                100% { width: 100%; }
+            }
+        </style>
+    `;
+    document.body.appendChild(loadingDiv);
     
-    // Display preview (blurred)
-    displayPreview(true);
-    
-    // Track analytics
-    if (window.Analytics) {
-        Analytics.trackCombination(userData.platform, userData.persona, userData.tone, userData.goal);
-        Analytics.trackPreviewGenerated(userData);
-        Analytics.trackStepCompleted(2, 'Customization');
+    try {
+        // Generate optimized profile using REAL AI
+        generatedProfile = await AIEngine.generate(userData);
+        
+        // Remove loading indicator
+        document.body.removeChild(loadingDiv);
+        
+        // Display preview (blurred)
+        displayPreview(true);
+        
+        // Track analytics
+        if (window.Analytics) {
+            Analytics.trackCombination(userData.platform, userData.persona, userData.tone, userData.goal);
+            Analytics.trackPreviewGenerated(userData);
+            Analytics.trackStepCompleted(2, 'Customization');
+        }
+        
+        // Move to step 3
+        nextStep(3);
+        
+    } catch (error) {
+        // Remove loading indicator
+        if (document.getElementById('aiLoading')) {
+            document.body.removeChild(loadingDiv);
+        }
+        
+        alert('⚠️ AI generation failed. Please try again.\n\nError: ' + error.message);
+        console.error('AI generation error:', error);
     }
-    
-    // Move to step 3
-    nextStep(3);
 }
 
 // Display preview or full content

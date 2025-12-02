@@ -1,7 +1,171 @@
-// AI Optimization Engine - Platform-specific templates and generation logic
+// AI Optimization Engine - Real Gemini API Integration
 
 const AIEngine = {
-    // Template library for different combinations
+    // Gemini API Configuration
+    apiKey: 'AIzaSyBi2TD5oDtTLKax9cj1ClxLtZYQRg0s9a8',
+    apiUrl: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent',
+    
+    // Generate profile using REAL Gemini AI
+    async generate(userData) {
+        try {
+            // Build prompt for Gemini
+            const prompt = this.buildPrompt(userData);
+            
+            // Call Gemini API
+            const response = await fetch(`${this.apiUrl}?key=${this.apiKey}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    contents: [{
+                        parts: [{
+                            text: prompt
+                        }]
+                    }]
+                })
+            });
+            
+            if (!response.ok) {
+                throw new Error(`API error: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            const aiText = data.candidates[0].content.parts[0].text;
+            
+            // Parse AI response into structured format
+            return this.parseAIResponse(aiText, userData);
+            
+        } catch (error) {
+            console.error('Gemini API error:', error);
+            // Fallback to templates if API fails
+            return this.generateFromTemplate(userData);
+        }
+    },
+    
+    // Build prompt for Gemini
+    buildPrompt(userData) {
+        const platform = userData.platform || 'LinkedIn';
+        const persona = userData.persona || 'professional';
+        const tone = userData.tone || 'formal';
+        const goal = userData.goal || 'hired';
+        const bio = userData.currentBio || '';
+        const headline = userData.currentHeadline || '';
+        
+        return `You are a professional ${platform} profile optimizer. Create an optimized profile for:
+
+Platform: ${platform}
+Current Bio: ${bio}
+Current Headline: ${headline}
+Persona: ${persona}
+Tone: ${tone}
+Goal: ${goal}
+
+Generate:
+1. HEADLINE: A compelling ${platform} headline (max 120 characters)
+2. ABOUT: An engaging about section (200-300 words)
+3. CONTENT_IDEAS: 5 specific content ideas for this profile
+4. KEYWORDS: 5-7 relevant keywords for SEO
+${platform === 'instagram' || platform === 'twitter' ? '5. HASHTAGS: 8-10 relevant hashtags' : ''}
+
+Format your response EXACTLY like this:
+HEADLINE:
+[your headline here]
+
+ABOUT:
+[your about section here]
+
+CONTENT_IDEAS:
+1. [idea 1]
+2. [idea 2]
+3. [idea 3]
+4. [idea 4]
+5. [idea 5]
+
+KEYWORDS:
+[keyword1, keyword2, keyword3, etc]
+
+${platform === 'instagram' || platform === 'twitter' ? 'HASHTAGS:\n#hashtag1 #hashtag2 #hashtag3 etc' : ''}`;
+    },
+    
+    // Parse AI response into structured format
+    parseAIResponse(aiText, userData) {
+        const result = {
+            headline: '',
+            about: '',
+            contentIdeas: [],
+            keywords: [],
+            hashtags: []
+        };
+        
+        // Extract headline
+        const headlineMatch = aiText.match(/HEADLINE:\s*\n(.+?)(?=\n\n|ABOUT:)/s);
+        if (headlineMatch) {
+            result.headline = headlineMatch[1].trim();
+        }
+        
+        // Extract about
+        const aboutMatch = aiText.match(/ABOUT:\s*\n(.+?)(?=\n\nCONTENT_IDEAS:|CONTENT IDEAS:)/s);
+        if (aboutMatch) {
+            result.about = aboutMatch[1].trim();
+        }
+        
+        // Extract content ideas
+        const ideasMatch = aiText.match(/CONTENT_IDEAS:|CONTENT IDEAS:\s*\n((?:\d+\..+?\n?)+)/s);
+        if (ideasMatch) {
+            result.contentIdeas = ideasMatch[1]
+                .split('\n')
+                .filter(line => line.trim())
+                .map(line => line.replace(/^\d+\.\s*/, '').trim());
+        }
+        
+        // Extract keywords
+        const keywordsMatch = aiText.match(/KEYWORDS:\s*\n(.+?)(?=\n\n|HASHTAGS:|$)/s);
+        if (keywordsMatch) {
+            result.keywords = keywordsMatch[1]
+                .split(',')
+                .map(k => k.trim())
+                .filter(k => k);
+        }
+        
+        // Extract hashtags (if applicable)
+        const hashtagsMatch = aiText.match(/HASHTAGS:\s*\n(.+?)$/s);
+        if (hashtagsMatch) {
+            result.hashtags = hashtagsMatch[1]
+                .split(/\s+/)
+                .filter(h => h.startsWith('#'));
+        }
+        
+        return result;
+    },
+    
+    // Fallback: Generate from templates if API fails
+    generateFromTemplate(userData) {
+        return this.templates_fallback(userData);
+    },
+    
+    // Template library for fallback
+    templates_fallback(userData) {
+        const platform = userData.platform || 'linkedin';
+        const keywords = userData.currentBio || 'Professional';
+        
+        return {
+            headline: `${keywords.split(' ').slice(0, 3).join(' ')} | Driving Results`,
+            about: `Experienced professional with expertise in ${keywords}.\n\nI specialize in delivering measurable outcomes through strategic planning and execution.`,
+            contentIdeas: [
+                'Share industry insights and analysis',
+                'Post about professional achievements',
+                'Write thought leadership articles',
+                'Engage with industry leaders',
+                'Share case studies and examples'
+            ],
+            keywords: ['Leadership', 'Strategy', 'Innovation', 'Professional Development'],
+            hashtags: platform === 'instagram' || platform === 'twitter' ? 
+                ['#Professional', '#Career', '#Success', '#Growth'] : []
+        };
+    },
+    
+    // Old template library (kept for reference)
     templates: {
         linkedin: {
             professional: {

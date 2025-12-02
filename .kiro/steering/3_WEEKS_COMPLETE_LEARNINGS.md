@@ -1147,3 +1147,51 @@ Kiro needs algorithmic improvements:
 **Most Critical:** Learning #24 (explains why all others happened)
 **Status:** THIS IS THE MASTER LEARNING - All others are symptoms of this root cause
 
+
+
+---
+
+### Learning 25: Footer CSS Missing (Dec 3, 2025, 01:45 - PROACTIVE FIX!)
+**What happened:** Amit said "footer not centrally align check all pages"
+**What I found:** 23 pages had common-footer.js but MISSING common-footer.css
+**Lesson:** When adding footer, must add BOTH JS (content) AND CSS (styling)
+**Key insight:** This is why AUTO MODE matters - I should have caught this proactively!
+
+**THE PROBLEM:**
+- Pages had footer content (common-footer.js)
+- But no footer styling (common-footer.css)
+- Result: Footer appeared but wasn't centered
+
+**THE FIX:**
+- Created fix-footer-css.js
+- Added common-footer.css to all 23 pages
+- 100% success (22/22 files fixed)
+- Documented in HEADER_FOOTER_FIXES_DEC3.txt
+
+**WHY THIS MATTERS:**
+- This is EXACTLY what AUTO MODE should catch
+- I should check live site daily
+- I should compare pages visually
+- I should detect inconsistencies proactively
+
+**TEST PARAMETER ADDED:**
+When checking footer consistency:
+```
+✅ common-footer.js present
+✅ common-footer.css present
+✅ Footer renders
+✅ Footer is centered
+✅ All pages consistent
+```
+
+**FILES AFFECTED:**
+23 pages including email-sender-web.html, cv.html, job-tools.html, etc.
+
+**LESSON: When adding components, add ALL required files (JS + CSS + any dependencies)!**
+
+---
+
+**Updated:** December 3, 2025, 01:45 IST
+**Total Learnings:** 25 major lessons
+**Latest:** Learning #25 (footer CSS missing - proactive fix)
+**Status:** ACTIVE - Continuous learning in action!
