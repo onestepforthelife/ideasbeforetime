@@ -399,4 +399,15 @@ priority: highest
 **Created:** December 1, 2025
 **Status:** PERMANENT - Never delete or ignore
 **Priority:** HIGHEST - Check first, always
-**Last Updated:** December 1, 2025
+**Last Updated:** December 2, 2025
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⏰ SCHEDULED REMINDERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**DECEMBER 15, 2025:**
+🔔 REMIND AMIT: Activate real payments for SPO
+   - Switch DEMO_MODE = false
+   - Add Razorpay/Stripe API keys
+   - Guide: ACTIVATE_REAL_PAYMENTS_DEC15.txt
+   - This is CRITICAL - SPO currently in demo mode
