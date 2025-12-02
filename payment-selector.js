@@ -41,7 +41,7 @@ const PaymentGateway = {
         const pricing = window.CurrencyDetector?.getCurrentPricing() || { amount: 21, currency: 'INR', symbol: '₹' };
         
         let html = '<div style="max-width: 500px; margin: 0 auto;">';
-        html += '<h3 style="text-align: center; color: #667eea; margin-bottom: 20px;">Choose Payment Method</h3>';
+        html += '<h3 style="text-align: center; color: #5a6c7d; margin-bottom: 20px;">Choose Payment Method</h3>';
         
         gateways.forEach(gateway => {
             if (!this.config[gateway].enabled) return;
@@ -61,7 +61,7 @@ const PaymentGateway = {
                                 ${option.badge}</div>` : ''}
                         </div>
                         <div style="text-align: right;">
-                            <div style="font-size: 1.3em; font-weight: bold; color: #667eea;">
+                            <div style="font-size: 1.3em; font-weight: bold; color: #5a6c7d;">
                                 ${pricing.symbol}${pricing.amount}
                             </div>
                             <div style="font-size: 0.8em; color: #999;">${option.fee}</div>
@@ -77,7 +77,7 @@ const PaymentGateway = {
         html += `
             <style>
                 .payment-option:hover {
-                    border-color: #667eea !important;
+                    border-color: #5a6c7d !important;
                     background: #f8f9ff !important;
                     transform: translateY(-2px);
                     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
@@ -105,7 +105,7 @@ const PaymentGateway = {
                 description: 'Scan QR or pay via link - All methods accepted',
                 fee: '2% fees',
                 badge: pricing.country === 'IN' ? 'POPULAR' : null,
-                badgeColor: '#667eea'
+                badgeColor: '#5a6c7d'
             },
             stripe: {
                 name: 'International Cards',
@@ -169,11 +169,11 @@ const PaymentGateway = {
         
         modal.innerHTML = `
             <div style="background: white; border-radius: 20px; padding: 40px; max-width: 500px; width: 100%; text-align: center;">
-                <h2 style="color: #667eea; margin-bottom: 20px;">Pay via UPI</h2>
+                <h2 style="color: #5a6c7d; margin-bottom: 20px;">Pay via UPI</h2>
                 
                 <div style="background: #f8f9ff; padding: 30px; border-radius: 15px; margin: 20px 0;">
                     <div style="font-size: 3em; margin-bottom: 15px;">📱</div>
-                    <div style="font-size: 2em; font-weight: bold; color: #667eea; margin-bottom: 10px;">
+                    <div style="font-size: 2em; font-weight: bold; color: #5a6c7d; margin-bottom: 10px;">
                         ₹${pricing.amount}
                     </div>
                     <div style="color: #666; margin-bottom: 20px;">Pay to: ${upiConfig.upiId}</div>
@@ -181,7 +181,7 @@ const PaymentGateway = {
                     <div id="qrcode" style="display: inline-block; padding: 20px; background: white; border-radius: 10px; margin: 20px 0;"></div>
                     
                     <div style="margin: 20px 0;">
-                        <a href="${upiLink}" style="display: inline-block; background: #667eea; color: white; 
+                        <a href="${upiLink}" style="display: inline-block; background: #5a6c7d; color: white; 
                            padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.1em;">
                             Open UPI App
                         </a>
@@ -306,7 +306,7 @@ const PaymentGateway = {
                 }
             },
             prefill: { name: '', email: '', contact: '' },
-            theme: { color: '#667eea' }
+            theme: { color: '#5a6c7d' }
         };
         
         const rzp = new Razorpay(options);
@@ -325,11 +325,11 @@ const PaymentGateway = {
         
         modal.innerHTML = `
             <div style="background: white; border-radius: 20px; padding: 40px; max-width: 500px; width: 100%; text-align: center;">
-                <h2 style="color: #667eea; margin-bottom: 20px;">Pay via Razorpay</h2>
+                <h2 style="color: #5a6c7d; margin-bottom: 20px;">Pay via Razorpay</h2>
                 
                 <div style="background: #f8f9ff; padding: 30px; border-radius: 15px; margin: 20px 0;">
                     <div style="font-size: 3em; margin-bottom: 15px;">💳</div>
-                    <div style="font-size: 2em; font-weight: bold; color: #667eea; margin-bottom: 10px;">
+                    <div style="font-size: 2em; font-weight: bold; color: #5a6c7d; margin-bottom: 10px;">
                         ₹${pricing.amount}
                     </div>
                     <div style="color: #666; margin-bottom: 20px;">Secure payment powered by Razorpay</div>
@@ -347,7 +347,7 @@ const PaymentGateway = {
                     
                     <div style="margin: 20px 0;">
                         <a href="${config.paymentLink}" target="_blank" 
-                           style="display: inline-block; background: #667eea; color: white; 
+                           style="display: inline-block; background: #5a6c7d; color: white; 
                                   padding: 15px 40px; border-radius: 10px; text-decoration: none; 
                                   font-weight: bold; font-size: 1.1em;">
                             Pay Now
@@ -474,3 +474,4 @@ const PaymentGateway = {
 
 // Make it globally available
 window.PaymentGateway = PaymentGateway;
+

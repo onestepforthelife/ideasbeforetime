@@ -155,3 +155,4 @@ const jobAPI = new JobAPI();
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { JobAPI, jobAPI };
 }
+

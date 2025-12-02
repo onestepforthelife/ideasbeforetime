@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Kumar - Professional CV</title>
+    <meta name="description" content="Professional CV and resume of Amit Kumar Agrawal - Innovation strategist, technology leader, and business transformation expert">
+    <meta name="author" content="Amit Kumar Agrawal">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Amit Kumar - Professional CV">
+    <meta property="og:url" content="https://ideas-before-time.pages.dev/cv.html">
+    <link rel="canonical" href="https://ideas-before-time.pages.dev/cv.html">
+    <link rel="stylesheet" href="common-navigation.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Calibri', Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 0;
+            line-height: 1.4;
+            font-size: 9.5pt;
+        }
+        
+        @media print {
+            body {
+                background: white !important;
+                padding: 0 !important;
+            }
+            .container {
+                max-width: 100% !important;
+                box-shadow: none !important;
+            }
+        }
+
+        .page-wrapper {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .container {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            color: white;
+            padding: 8px 12px;
+            display: grid;
+            grid-template-columns: 70px 1fr;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .profile-photo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid white;
+            object-fit: cover;
+        }
+
+        .header h1 {
+            font-size: 18pt;
+            margin-bottom: 2px;
+            font-weight: 700;
+        }
+
+        .header .title {
+            font-size: 9pt;
+            margin-bottom: 3px;
+            line-height: 1.2;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            font-size: 8pt;
+            margin-top: 3px;
+        }
+
+        .contact-info span {
+            background: rgba(255,255,255,0.2);
+            padding: 1px 5px;
+            border-radius: 8px;
+        }
+
+        .content {
+            padding: 6px 12px;
+            display: grid;
+            grid-template-columns: 28% 72%;
+            column-gap: 8px;
+        }
+
+        .section {
+            break-inside: avoid;
+            margin-bottom: 1px;
+        }
+
+        .section h2 {
+            color: #5a6c7d;
+            font-size: 10pt;
+            margin-bottom: 2px;
+            padding-bottom: 1px;
+            border-bottom: 2px solid #5a6c7d;
+        }
+
+        .summary-box {
+            background: #f8f9fa;
+            padding: 3px 5px;
+            border-radius: 3px;
+            border-left: 2px solid #5a6c7d;
+            margin-bottom: 2px;
+            font-size: 8.5pt;
+            line-height: 1.3;
+        }
+
+        .highlights {
+            display: grid;
+            gap: 2px;
+            font-size: 8pt;
+        }
+
+        .highlight-item {
+            padding: 2px 4px;
+            background: #f5f5f5;
+            border-radius: 2px;
+            border-left: 2px solid #8b9aa7;
+            line-height: 1.3;
+        }
+
+        .highlight-item::before {
+            content: "▸ ";
+            color: #5a6c7d;
+            font-weight: bold;
+        }
+
+        .exp-item {
+            margin-bottom: 2px;
+            padding: 3px 5px;
+            background: #f8f9fa;
+            border-radius: 3px;
+            border-left: 2px solid #5a6c7d;
+            break-inside: avoid;
+            font-size: 8pt;
+        }
+
+        .exp-item h3 {
+            color: #333;
+            font-size: 8.5pt;
+            margin-bottom: 1px;
+        }
+
+        .exp-item .role {
+            color: #5a6c7d;
+            font-weight: 600;
+            font-size: 7.5pt;
+            margin-bottom: 1px;
+        }
+
+        .exp-item .date {
+            color: #666;
+            font-size: 6.5pt;
+            margin-bottom: 1px;
+        }
+
+        .exp-item .details {
+            font-size: 6.5pt;
+            color: #555;
+            margin: 1px 0;
+        }
+
+        .exp-item ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1px;
+        }
+
+        .exp-item li {
+            padding: 0 0 0 8px;
+            position: relative;
+            font-size: 6.5pt;
+            line-height: 1.4;
+        }
+
+        .exp-item li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #5a6c7d;
+        }
+
+        .comp-grid {
+            display: grid;
+            gap: 1px;
+            font-size: 7pt;
+        }
+
+        .comp-item {
+            padding: 1px 3px;
+            background: rgba(102, 126, 234, 0.04);
+            border-radius: 2px;
+            border-left: 2px solid #5a6c7d;
+        }
+
+        .edu-item {
+            margin-bottom: 2px;
+            padding: 2px 3px;
+            background: rgba(248, 249, 250, 0.75);
+            border-radius: 2px;
+            border-left: 2px solid #8b9aa7;
+            break-inside: avoid;
+            font-size: 7pt;
+        }
+
+        .edu-item h3 {
+            color: #333;
+            font-size: 8pt;
+            margin-bottom: 1px;
+        }
+
+        .edu-item .institution {
+            color: #5a6c7d;
+            font-weight: 600;
+            font-size: 7pt;
+        }
+
+        .edu-item .date {
+            color: #666;
+            font-size: 6.5pt;
+        }
+
+        .themes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px;
+            font-size: 6.5pt;
+        }
+
+        .theme-tag {
+            padding: 1px 5px;
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            color: white;
+            border-radius: 8px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 0 0 8px 0;
+            padding: 6px 16px;
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 9pt;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .print-button {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 10pt;
+            font-weight: 600;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        @media print {
+            body { 
+                background: white !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                padding: 0; 
+                font-size: 9pt; 
+            }
+            .container { 
+                box-shadow: none; 
+                max-width: 100%;
+                margin: 0;
+            }
+            .container::before { opacity: 0.02; }
+            .content { padding: 4px 10px; font-size: 9pt; }
+            .section { page-break-inside: avoid; margin-bottom: 1px; }
+            .section h2 { font-size: 10pt; margin-bottom: 2px; }
+            .summary-box { font-size: 8.5pt; padding: 2px 4px; margin-bottom: 1px; }
+            .highlight-item { padding: 1px 3px; font-size: 7.5pt; }
+            .exp-item { padding: 2px 4px; margin-bottom: 1px; font-size: 7.5pt; }
+            .exp-item h3 { font-size: 8pt; }
+            .exp-item .role { font-size: 7pt; }
+            .exp-item li { font-size: 6.5pt; line-height: 1.3; }
+            .comp-item { padding: 1px 3px; font-size: 6.5pt; }
+            .edu-item { padding: 2px 3px; margin-bottom: 1px; font-size: 6.5pt; }
+            .back-button, .print-button { display: none; }
+            .page-wrapper { padding: 0; }
+            @page { size: A4; margin: 6mm 10mm; }
+        }
+    </style>
+    <link rel="stylesheet" href="common-watermark.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <a href="library.html" class="back-button">← Back to Library</a>
+
+        <div class="container">
+        <div class="header">
+            <img src="images/CV Image.png" alt="Amit Kumar" class="profile-photo">
+            <div>
+                <h1>AMIT KUMAR</h1>
+                <div class="title">Board-Ready Transformation Architect | Governance & DEI Steward | APAC Institutional Advisor</div>
+                <div class="title">IEI Fellow, CEng | DIN: 10870413 | Mumbai, India</div>
+                <div class="contact-info">
+                    <span>📞 +91-9811409022</span>
+                    <span>✉️ annikavashist@gmail.com</span>
+                    <span>🔗 linkedin.com/in/leadershipexpertamit</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>Professional Summary</h2>
+                <div class="summary-box">
+                    <strong>Board-Ready Transformation Architect</strong> with 20+ years across chemicals, pharma, automotive, and semiconductor supply chains. Proven ability to master new technical domains (AWS KIRO, Agentic AI, hardware/process literacy) and apply them to governance, compliance, and precision manufacturing environments. Architected multi-billion-dollar growth strategies, built governance frameworks, advised CXOs on ESG, DEI, institutional reform.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Executive Highlights</h2>
+                <div class="highlights">
+                    <div class="highlight-item">P&L: $150–180M across BASF, DSM, 3M—25%+ CAGR</div>
+                    <div class="highlight-item">Market Expansion: Built $3M→$30M business (60% CAGR); removed 25-year legacy agents; won 60-100% market share</div>
+                    <div class="highlight-item"><strong style="color: #5a6c7d;">Semiconductor Supply Chain:</strong> Supported <strong>wafer cleaning, etching, precision coating</strong> solutions for <strong>electronics manufacturing</strong>; <strong>FAB governance</strong> frameworks</div>
+                    <div class="highlight-item">Team & Operational Excellence: Zero incidents, 30% faster delivery, 200% customer focus enhancement, cross-functional APAC collaboration</div>
+                    <div class="highlight-item">Strategic: 3-year South-Asia business consolidation; Japan integration; distribution optimization</div>
+                    <div class="highlight-item">Digital: 50% cycle cut, $50M+ uplift; SAP S/4HANA, Salesforce, Power BI, AI Dashboards</div>
+                    <div class="highlight-item">ESG: 100% compliance frameworks; 10% VOC reduction; waste management optimization</div>
+                    <div class="highlight-item"><strong>Tech Fluency:</strong> <strong>AWS KIRO, Agentic AI, Cloudflare, GitHub</strong>, OS installation & hardware assembly</div>
+                    <div class="highlight-item">Learning Agility: Rapidly self-learned new platforms and industrial systems, bridging pharma → chemicals → <strong>semiconductor</strong></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Core Competencies</h2>
+                <div class="comp-grid">
+                    <div class="comp-item">Strategic Growth & P&L Ownership</div>
+                    <div class="comp-item">Digital Transformation (SAP, Salesforce, CPQ)</div>
+                    <div class="comp-item">Semiconductor Supply Chain Integration</div>
+                    <div class="comp-item">Contract Lifecycle & Governance</div>
+                    <div class="comp-item">CXO Dashboarding & Engagement</div>
+                    <div class="comp-item">ESG Compliance & Value Realization</div>
+                    <div class="comp-item">Industrial Engineering & Preventive Maintenance</div>
+                    <div class="comp-item">Hardware & Systems Literacy (Assembly, PLC, Multimeter)</div>
+                    <div class="comp-item">AI & Cloud Platforms (AWS KIRO, Copilot, Cloudflare, GitHub)</div>
+                    <div class="comp-item">Agile Delivery & Business Intelligence</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Professional Experience</h2>
+
+                <div class="exp-item">
+                    <h3>BASF India Ltd.</h3>
+                    <div class="role">Head – Business Excellence, Projects & Institutional Sales</div>
+                    <div class="date">Jul 2024 – Present</div>
+                    <div class="details"><strong>Tools:</strong> Salesforce, SAP S/4HANA, Power BI, AI Dashboards</div>
+                    <ul>
+                        <li>Operational Excellence: Enhanced customer focus 200%; built CXO compliance dashboards</li>
+                        <li>Team Leadership: Led cross-functional teams across sales, projects, institutional accounts</li>
+                        <li>Governance: Created BIS certification framework; enabled CRM customer lifecycle</li>
+                        <li>Digital Transformation: Implemented AI-powered dashboards for real-time decision-making</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="role">Head – EP South Asia | Japan Integration</div>
+                    <div class="date">Jul 2023 – Jun 2024</div>
+                    <div class="details">~$100M | 11% Growth</div>
+                    <ul>
+                        <li>Semiconductor Focus: Strengthened APAC collaboration for semiconductor supply chain surfactants (wafer cleaning, precision coating, etching)</li>
+                        <li>Operational Excellence: Built CXO dashboards for churn & SLA; embedded compliance dashboards adaptable to semiconductor FAB governance</li>
+                        <li>Team & Market Expansion: Led Japan integration; optimized distribution across South Asia</li>
+                        <li>Strategic Execution: Delivered 11% growth in mature $100M market</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="role">Regional Manager Automotive</div>
+                    <div class="date">Apr 2016 – Jun 2022</div>
+                    <div class="details">EP: $20M→$70M (25%) | PU: $35M→$45M (5%)</div>
+                    <ul>
+                        <li>Market Expansion: Removed 25-year legacy agents; built direct OEM relationships</li>
+                        <li>Team Leadership: Led cross-functional teams across sales, technical, supply chain</li>
+                        <li>Operational Excellence: Localized global products; cut VOC emissions via reformulation</li>
+                        <li>Cost Optimization: Reduced cost to serve 0.5%; streamlined distribution</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="role">Regional Manager – North & East India</div>
+                    <div class="date">Feb 2011 – Mar 2016</div>
+                    <div class="details">$3M → $30M (60% CAGR)</div>
+                    <ul>
+                        <li>Market Expansion: Built 100% clean business from scratch; won 60–100% market share</li>
+                        <li>Team Building: Recruited, trained & led 15+ member sales & technical team</li>
+                        <li>Operational Excellence: Built OEM relationships (Maruti, Hero, Honda); reduced sales cycle 30%</li>
+                        <li>Strategic Execution: Established distribution network across 8 states</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <p style="font-size: 7.5pt; font-style: italic; margin-bottom: 4px;">All-India Merit Scholar from Elite Govt Colleges</p>
+                
+                <div class="edu-item">
+                    <h3>MBA - Master of Business Administration</h3>
+                    <div class="institution">Indira Gandhi National Open University</div>
+                    <div class="date">Dec 2024 | First Division</div>
+                </div>
+
+                <div class="edu-item">
+                    <h3>B.E. - Polymer Science & Chemical Technology</h3>
+                    <div class="institution">Delhi College of Engineering, Delhi University</div>
+                    <div class="date">2002-2006 | First Division</div>
+                </div>
+
+                <div class="edu-item">
+                    <h3>Diploma in Pharmacy</h3>
+                    <div class="institution">Directorate of Technical Education, Delhi Govt</div>
+                    <div class="date">2000-2002 | First Division</div>
+                </div>
+
+                <div class="edu-item">
+                    <h3>LLB - Law (Contracts, Anti-Trust, Torts)</h3>
+                    <div class="institution">Faculty of Law, Delhi University</div>
+                    <div class="date">2012-2013 | 1 year Coursework</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Training & Certifications</h2>
+                <div class="comp-grid">
+                    <div class="comp-item">Business Excellence Program, BASF Germany</div>
+                    <div class="comp-item">Miller Heiman Strategic Selling</div>
+                    <div class="comp-item">Executive Conflict Resolution</div>
+                    <div class="comp-item">Red & Blue Ocean Strategy</div>
+                    <div class="comp-item">Advanced Negotiation</div>
+                    <div class="comp-item">Self-taught hardware/software integration (OS installation, PC assembly, soldering, PLC basics)</div>
+                    <div class="comp-item">Continuous learning via online platforms (cloud, AI, industrial systems)</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Professional Memberships & Certifications</h2>
+                <div class="comp-grid">
+                    <div class="comp-item"><strong>Fellow and Chartered Engineer (CEng), India</strong> - Institution of Engineers India (IEI)</div>
+                    <div class="comp-item"><strong>Independent Director</strong> - Indian Institute of Corporate Affairs (IICA), DIN: 10870413</div>
+                    <div class="comp-item"><strong>Life Member</strong> - Indian Institute of Chemical Engineers (IIChE), India</div>
+                    <div class="comp-item"><strong>Life Member</strong> - Quality Circle Forum of India (QCFI)</div>
+                    <div class="comp-item"><strong>Life Member</strong> - Polymer Council of India (PCI)</div>
+                    <div class="comp-item"><strong>Participant</strong> - BASF Global Business Excellence Program (Germany)</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Electronics & Systems Expertise</h2>
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Electronics Proficiency:</strong> Skilled in hands-on hardware troubleshooting, precision soldering, diagnostic multimeter usage, and instrumentation testing</div>
+                    <div class="highlight-item"><strong>Industrial Systems:</strong> Working knowledge of PLC automation and foundational industrial control systems</div>
+                    <div class="highlight-item"><strong>AI & Governance Automation:</strong> Exploring AI platforms (Copilot, Agentic AI) for governance and compliance automation</div>
+                    <div class="highlight-item"><strong>Creative Exploration:</strong> Launching YouTube channel on sensory analysis & scent reviews (olfactory science)</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Professional Tools & Technical Fluency</h2>
+                <div class="highlights">
+                    <div class="highlight-item">Strategic Tools: AWS KIRO, Agentic AI, Cloudflare, GitHub, SAP S/4HANA, Salesforce, Power BI</div>
+                    <div class="highlight-item">Hands-on Engineering: Soldering, multimeter, PLC awareness, hardware assembly, OS installation</div>
+                    <div class="highlight-item">Dual-perspective fluency bridging director-level strategy and engineer-level execution</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Board Readiness & Global Impact</h2>
+                <div class="highlights">
+                    <div class="highlight-item">Built CXO dashboards for governance at APAC</div>
+                    <div class="highlight-item">Created BIS certification & contract frameworks</div>
+                    <div class="highlight-item">Asian Development Bank consultant</div>
+                    <div class="highlight-item">Advocated chemical safety & citizen equity</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Legacy Domains & Board Themes</h2>
+                <div class="themes">
+                    <div class="theme-tag">Governance</div>
+                    <div class="theme-tag">CXO Succession</div>
+                    <div class="theme-tag">ESG Stewardship</div>
+                    <div class="theme-tag">Semiconductor Ecosystem Building</div>
+                    <div class="theme-tag">ASEAN Partnerships</div>
+                    <div class="theme-tag">DEI Advocacy</div>
+                    <div class="theme-tag">Institutional Reform</div>
+                    <div class="theme-tag">APAC Strategy</div>
+                    <div class="theme-tag">Board Advisory</div>
+                    <div class="theme-tag">Digital Transformation</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Earlier Career Highlights</h2>
+
+                <div class="exp-item">
+                    <h3>3M India Pvt. Ltd.</h3>
+                    <div class="role">Manager (Sales & Marketing) - Energy & Advanced Materials</div>
+                    <div class="date">Mar 2010 – Jan 2011</div>
+                    <div class="details">3M Euro Fluoropolymers | 40% CAGR</div>
+                    <ul>
+                        <li>Led high-performance materials for semiconductor & electronics</li>
+                        <li>Built cross-functional teams for market penetration</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <h3>DSM Engineering Plastics (Envalior)</h3>
+                    <div class="role">Business Development - North India</div>
+                    <div class="date">Aug 2007 – Feb 2010</div>
+                    <div class="details">6M Euro | 40% CAGR | Automotive & Electrical</div>
+                    <ul>
+                        <li>Expanded market share in precision engineering plastics</li>
+                        <li>Managed multi-site operations & distributor networks</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <h3>Avery Dennison India Pvt. Ltd.</h3>
+                    <div class="role">Leadership Development - Plant Operations</div>
+                    <div class="date">Jun 2006 – Aug 2007</div>
+                    <ul>
+                        <li>Reduced VOC emissions 10% (ESG operational excellence)</li>
+                        <li>Optimized waste management & preventive maintenance</li>
+                        <li>Led cross-functional teams for process improvements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+    <button class="print-button" onclick="window.print()">🖨️ Print / Save PDF</button>
+
+<script>
+// Password protection for CV
+(function() {
+    const CV_PASSWORD = 'guruji';
+    const isAuthenticated = sessionStorage.getItem('cv_authenticated') === 'true';
+    
+    if (!isAuthenticated) {
+        const enteredPassword = prompt('This CV is password protected.\n\nPlease enter the password to view:');
+        
+        if (enteredPassword === CV_PASSWORD) {
+            sessionStorage.setItem('cv_authenticated', 'true');
+        } else {
+            alert('Incorrect password. Redirecting to home page.');
+            window.location.href = 'index.html';
+        }
+    }
+})();
+</script>
+
+<!-- Google Analytics 4 - Universal Tracking -->
+<script src="universal-analytics.js"></script>
+
+<script src="common-navigation.js"></script>
+
+<script src="common-footer.js"></script>
+</body>
+</html>
+

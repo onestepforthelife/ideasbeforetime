@@ -181,3 +181,4 @@ if (document.readyState === 'loading') {
  * B2B/Chemical industry content typically has higher CPM
  * Social Profile Optimizer tool can generate direct revenue (₹21 per use)
  */
+

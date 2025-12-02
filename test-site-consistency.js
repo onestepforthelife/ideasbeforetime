@@ -138,3 +138,4 @@ if (totalChecks === 0) {
     console.log(`❌ FOUND ${totalChecks} ISSUES - Need to fix!\n`);
     process.exit(1);
 }
+

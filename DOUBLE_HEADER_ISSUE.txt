@@ -1,0 +1,42 @@
+DOUBLE HEADER ISSUE - December 2, 2025
+=======================================
+
+PROBLEM:
+--------
+Some pages have BOTH:
+1. Their own <header> tag in HTML
+2. common-navigation.js adds <nav> at top
+
+Result: TWO headers appear!
+
+PAGES WITH DOUBLE HEADERS:
+--------------------------
+1. social-optimizer-index.html - Has <header> + common-nav
+2. social-optimizer-dashboard.html - Has <header> + common-nav
+3. social-optimizer-admin.html - Has <header> + common-nav
+4. profile-optimizer.html - Has <header> + common-nav
+
+SOLUTION:
+---------
+Option 1: Remove <header> tags from these pages (use only common-nav)
+Option 2: Don't load common-navigation.js on these pages
+Option 3: Rename their <header> to <div class="page-header">
+
+RECOMMENDATION:
+---------------
+Option 3 is best - keeps both but avoids confusion
+Change <header> to <div class="hero-section">
+
+ALIGNMENT ISSUE:
+----------------
+Different pages have different top padding:
+- Some: padding: 20px
+- Some: padding: 40px
+- Some: padding: 80px (for navigation space)
+
+FIX:
+----
+Standardize body padding to account for sticky navigation:
+body { padding-top: 80px; } (for sticky nav)
+OR
+body { padding: 20px; } (if nav is not sticky)

@@ -15,6 +15,8 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
+            max-width: 1400px;
+            margin: 0 auto;
             font-family: 'Calibri', Arial, sans-serif;
             background: #f5f5f5;
             padding: 0;
@@ -46,7 +48,7 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
             color: white;
             padding: 8px 12px;
             display: grid;
@@ -102,18 +104,18 @@
         }
 
         .section h2 {
-            color: #667eea;
+            color: #5a6c7d;
             font-size: 10pt;
             margin-bottom: 2px;
             padding-bottom: 1px;
-            border-bottom: 2px solid #667eea;
+            border-bottom: 2px solid #5a6c7d;
         }
 
         .summary-box {
             background: #f8f9fa;
             padding: 3px 5px;
             border-radius: 3px;
-            border-left: 2px solid #667eea;
+            border-left: 2px solid #5a6c7d;
             margin-bottom: 2px;
             font-size: 8.5pt;
             line-height: 1.3;
@@ -129,13 +131,13 @@
             padding: 2px 4px;
             background: #f5f5f5;
             border-radius: 2px;
-            border-left: 2px solid #764ba2;
+            border-left: 2px solid #8b9aa7;
             line-height: 1.3;
         }
 
         .highlight-item::before {
             content: "▸ ";
-            color: #667eea;
+            color: #5a6c7d;
             font-weight: bold;
         }
 
@@ -144,7 +146,7 @@
             padding: 3px 5px;
             background: #f8f9fa;
             border-radius: 3px;
-            border-left: 2px solid #667eea;
+            border-left: 2px solid #5a6c7d;
             break-inside: avoid;
             font-size: 8pt;
         }
@@ -156,7 +158,7 @@
         }
 
         .exp-item .role {
-            color: #667eea;
+            color: #5a6c7d;
             font-weight: 600;
             font-size: 7.5pt;
             margin-bottom: 1px;
@@ -191,7 +193,7 @@
             content: "→";
             position: absolute;
             left: 0;
-            color: #667eea;
+            color: #5a6c7d;
         }
 
         .comp-grid {
@@ -204,7 +206,7 @@
             padding: 1px 3px;
             background: rgba(102, 126, 234, 0.04);
             border-radius: 2px;
-            border-left: 2px solid #667eea;
+            border-left: 2px solid #5a6c7d;
         }
 
         .edu-item {
@@ -212,7 +214,7 @@
             padding: 2px 3px;
             background: rgba(248, 249, 250, 0.75);
             border-radius: 2px;
-            border-left: 2px solid #764ba2;
+            border-left: 2px solid #8b9aa7;
             break-inside: avoid;
             font-size: 7pt;
         }
@@ -224,7 +226,7 @@
         }
 
         .edu-item .institution {
-            color: #667eea;
+            color: #5a6c7d;
             font-weight: 600;
             font-size: 7pt;
         }
@@ -243,7 +245,7 @@
 
         .theme-tag {
             padding: 1px 5px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
             color: white;
             border-radius: 8px;
         }
@@ -252,7 +254,7 @@
             display: inline-block;
             margin: 0 0 8px 0;
             padding: 6px 16px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
             color: white;
             text-decoration: none;
             border-radius: 20px;
@@ -271,7 +273,7 @@
             bottom: 15px;
             right: 15px;
             padding: 10px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
             color: white;
             border: none;
             border-radius: 20px;
@@ -312,6 +314,7 @@
             @page { size: A4; margin: 6mm 10mm; }
         }
     </style>
+    <link rel="stylesheet" href="common-watermark.css">
 </head>
 <body>
     <div class="page-wrapper">
@@ -345,7 +348,7 @@
                 <div class="highlights">
                     <div class="highlight-item">P&L: $150–180M across BASF, DSM, 3M—25%+ CAGR</div>
                     <div class="highlight-item">Market Expansion: Built $3M→$30M business (60% CAGR); removed 25-year legacy agents; won 60-100% market share</div>
-                    <div class="highlight-item"><strong style="color: #667eea;">Semiconductor Supply Chain:</strong> Supported <strong>wafer cleaning, etching, precision coating</strong> solutions for <strong>electronics manufacturing</strong>; <strong>FAB governance</strong> frameworks</div>
+                    <div class="highlight-item"><strong style="color: #5a6c7d;">Semiconductor Supply Chain:</strong> Supported <strong>wafer cleaning, etching, precision coating</strong> solutions for <strong>electronics manufacturing</strong>; <strong>FAB governance</strong> frameworks</div>
                     <div class="highlight-item">Team & Operational Excellence: Zero incidents, 30% faster delivery, 200% customer focus enhancement, cross-functional APAC collaboration</div>
                     <div class="highlight-item">Strategic: 3-year South-Asia business consolidation; Japan integration; distribution optimization</div>
                     <div class="highlight-item">Digital: 50% cycle cut, $50M+ uplift; SAP S/4HANA, Salesforce, Power BI, AI Dashboards</div>
@@ -592,5 +595,7 @@
 
 <script src="common-navigation.js"></script>
 
+<script src="common-footer.js"></script>
 </body>
 </html>
+

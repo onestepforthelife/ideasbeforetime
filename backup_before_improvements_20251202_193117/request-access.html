@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request Access - Ideas Before Time</title>
+<link rel="stylesheet" href="common-watermark.css">
+<link rel="stylesheet" href="common-navigation.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    max-width: 600px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+h1 {
+    color: #5a6c7d;
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #5a6c7d;
+}
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+.checkbox-group {
+    margin: 20px 0;
+}
+.checkbox-item {
+    margin: 10px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+.checkbox-item input {
+    width: auto;
+    margin-right: 10px;
+}
+.checkbox-item label {
+    display: inline;
+    font-weight: normal;
+}
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.submit-btn:hover {
+    transform: translateY(-2px);
+}
+.success-message {
+    display: none;
+    background: #d4edda;
+    color: #155724;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #5a6c7d;
+    font-size: 18px;
+    text-decoration: none;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🔐 Request Access</h1>
+    <p class="subtitle">Fill out this form to request access to premium content. You'll receive an email once approved.</p>
+    
+    <form id="accessForm">
+        <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="company">Company/Organization</label>
+            <input type="text" id="company" name="company">
+        </div>
+        
+        <div class="form-group">
+            <label for="role">Your Role *</label>
+            <select id="role" name="role" required>
+                <option value="">Select your role...</option>
+                <option value="recruiter">Recruiter</option>
+                <option value="hiring-manager">Hiring Manager</option>
+                <option value="business-partner">Business Partner</option>
+                <option value="investor">Investor</option>
+                <option value="consultant">Consultant</option>
+                <option value="student">Student/Researcher</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label>What would you like access to? *</label>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="cv" name="access[]" value="cv">
+                    <label for="cv">📄 Professional CV</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="research" name="access[]" value="research">
+                    <label for="research">📊 Market Research Reports</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="insights" name="access[]" value="insights">
+                    <label for="insights">💡 Business Insights</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="purpose">Purpose of Access *</label>
+            <textarea id="purpose" name="purpose" placeholder="Please briefly explain why you need access..." required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Submit Request</button>
+    </form>
+    
+    <div id="successMessage" class="success-message">
+        <h3>✅ Request Submitted!</h3>
+        <p>Thank you for your request. You'll receive an email with access credentials once approved (usually within 24 hours).</p>
+    </div>
+    
+    <a href="index.html" class="back-link">← Back to Home</a>
+</div>
+
+<script>
+document.getElementById('accessForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(this);
+    const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        company: formData.get('company'),
+        role: formData.get('role'),
+        access: formData.getAll('access[]'),
+        purpose: formData.get('purpose'),
+        timestamp: new Date().toISOString()
+    };
+    
+    // Create email body
+    const emailBody = `
+ACCESS REQUEST RECEIVED
+========================
+
+Name: ${data.name}
+Email: ${data.email}
+Company: ${data.company || 'Not provided'}
+Role: ${data.role}
+
+Requested Access:
+${data.access.map(item => '- ' + item.toUpperCase()).join('\n')}
+
+Purpose:
+${data.purpose}
+
+Timestamp: ${data.timestamp}
+
+========================
+
+TO APPROVE:
+1. Review the request details above
+2. Send approval email to: ${data.email}
+3. Include access credentials/passwords
+
+APPROVAL EMAIL TEMPLATE:
+------------------------
+Subject: Access Approved - Ideas Before Time
+
+Dear ${data.name},
+
+Your access request has been approved! Here are your credentials:
+
+${data.access.includes('cv') ? '📄 CV Access\nPassword: AmitCV2025!\nURL: https://ideas-before-time.pages.dev/cv.html\n\n' : ''}${data.access.includes('research') ? '📊 Market Research\nPassword: AmitResearch2025!\nURL: https://ideas-before-time.pages.dev/Final_Acrylic_Market_Report.html\n\n' : ''}${data.access.includes('insights') ? '💡 Business Insights\nURL: https://ideas-before-time.pages.dev/business-insights.html\n\n' : ''}
+Please keep these credentials confidential.
+
+Best regards,
+Amit Kumar
+Ideas Before Time
+    `.trim();
+    
+    // Create mailto link
+    const mailtoLink = `mailto:onestepforthelife@gmail.com?subject=New Access Request from ${encodeURIComponent(data.name)}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    document.getElementById('accessForm').style.display = 'none';
+    document.getElementById('successMessage').style.display = 'block';
+    
+    // Optional: Also log to console for debugging
+    console.log('Access Request:', data);
+});
+</script>
+
+<script src="universal-analytics.js"></script>
+
+<script src="common-navigation.js"></script>
+
+<script src="common-footer.js"></script>
+</body>
+</html>
+

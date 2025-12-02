@@ -310,3 +310,4 @@ if (window.location.pathname.includes('social-optimizer-app.html')) {
         Analytics.trackWizardStart();
     }, 1000);
 }
+

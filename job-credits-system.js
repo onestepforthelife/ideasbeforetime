@@ -183,7 +183,7 @@ class CreditSystem {
                 contact: ''
             },
             theme: {
-                color: '#667eea'
+                color: '#5a6c7d'
             },
             modal: {
                 ondismiss: () => {
@@ -238,3 +238,4 @@ document.addEventListener('visibilitychange', () => {
 window.addEventListener('beforeunload', () => {
     creditSystem.stopTimer();
 });
+

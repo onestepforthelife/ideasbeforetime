@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    🔒 SECURITY: This page MUST be protected by Cloudflare Access
+    - This is a PAID product (₹21)
+    - DO NOT use JavaScript passwords (bypassable)
+    - MUST use Cloudflare Access (server-side, cannot be bypassed)
+    - Setup guide: SPO_CLOUDFLARE_ACCESS_SETUP.txt
+    - Path to protect: /social-optimizer-*
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Social Profile Optimizer AI</title>
+    <link rel="stylesheet" href="common-navigation.css">
+    <link rel="stylesheet" href="common-footer.css">
+    <link rel="stylesheet" href="common-watermark.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
+        body::before {
+            content: "AV © Onestepforthelife";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 80px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.03);
+            pointer-events: none;
+            z-index: 0;
+            white-space: nowrap;
+            user-select: none;
+        }
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        h1 { color: #5a6c7d; }
+        .btn-new {
+            background: #5a6c7d;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-new:hover { background: #5568d3; }
+        .history-grid {
+            display: grid;
+            gap: 20px;
+        }
+        .history-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .history-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .platform-badge {
+            background: #5a6c7d;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .date { color: #999; font-size: 0.9em; }
+        .meta-info {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        .meta-tag {
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+        }
+        .preview-text {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 3px solid #5a6c7d;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .btn-small {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .btn-view {
+            background: #5a6c7d;
+            color: white;
+        }
+        .btn-download {
+            background: #28a745;
+            color: white;
+        }
+        .btn-delete {
+            background: #dc3545;
+            color: white;
+        }
+        .empty-state {
+            background: white;
+            padding: 60px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .empty-state h2 {
+            color: #5a6c7d;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation injected by common-navigation.js -->
+
+    <div class="dashboard-container">
+        <header>
+            <div>
+                <h1>📊 Your Dashboard</h1>
+                <p style="color: #666; margin-top: 10px;">View and manage your optimized profiles</p>
+            </div>
+            <a href="social-optimizer-app.html" class="btn-new">+ Create New Optimization</a>
+        </header>
+
+        <div id="historyContainer"></div>
+    </div>
+
+    <script>
+        // Load and display history
+        function loadHistory() {
+            const history = JSON.parse(localStorage.getItem('optimizationHistory') || '[]');
+            const container = document.getElementById('historyContainer');
+            
+            if (history.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <h2>No Optimizations Yet</h2>
+                        <p style="color: #666; margin-bottom: 30px;">Create your first optimized profile to get started</p>
+                        <a href="social-optimizer-app.html" class="btn-new">Create Your First Profile</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            let html = '<div class="history-grid">';
+            
+            history.forEach(record => {
+                const date = new Date(record.date).toLocaleDateString();
+                const preview = record.profile.headline.substring(0, 150) + (record.profile.headline.length > 150 ? '...' : '');
+                
+                html += `
+                    <div class="history-card">
+                        <div class="history-header">
+                            <span class="platform-badge">${record.platform.toUpperCase()}</span>
+                            <span class="date">${date}</span>
+                        </div>
+                        
+                        <div class="meta-info">
+                            <span class="meta-tag">👤 ${record.persona}</span>
+                            <span class="meta-tag">🎨 ${record.tone}</span>
+                            <span class="meta-tag">🎯 ${record.goal}</span>
+                        </div>
+                        
+                        <div class="preview-text">${preview}</div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn-small btn-view" onclick="viewProfile(${record.id})">👁️ View Full</button>
+                            <button class="btn-small btn-download" onclick="downloadProfile(${record.id})">📥 Download</button>
+                            <button class="btn-small btn-delete" onclick="deleteProfile(${record.id})">🗑️ Delete</button>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            container.innerHTML = html;
+        }
+        
+        // View full profile
+        function viewProfile(id) {
+            const history = JSON.parse(localStorage.getItem('optimizationHistory') || '[]');
+            const record = history.find(r => r.id === id);
+            
+            if (!record) return;
+            
+            let content = `HEADLINE/BIO:\n${record.profile.headline}\n\n`;
+            
+            if (record.profile.about) {
+                content += `ABOUT:\n${record.profile.about}\n\n`;
+            }
+            
+            content += `CONTENT IDEAS:\n${record.profile.contentIdeas.join('\n')}\n\n`;
+            
+            if (record.profile.keywords) {
+                content += `KEYWORDS:\n${record.profile.keywords.join(', ')}\n\n`;
+            }
+            
+            if (record.profile.hashtags) {
+                content += `HASHTAGS:\n${record.profile.hashtags.join(' ')}`;
+            }
+            
+            alert(content);
+        }
+        
+        // Download profile
+        function downloadProfile(id) {
+            const history = JSON.parse(localStorage.getItem('optimizationHistory') || '[]');
+            const record = history.find(r => r.id === id);
+            
+            if (!record) return;
+            
+            let content = `OPTIMIZED SOCIAL MEDIA PROFILE\n`;
+            content += `Platform: ${record.platform.toUpperCase()}\n`;
+            content += `Generated: ${new Date(record.date).toLocaleDateString()}\n`;
+            content += `\n${'='.repeat(50)}\n\n`;
+            
+            content += `HEADLINE/BIO:\n${record.profile.headline}\n\n`;
+            
+            if (record.profile.about) {
+                content += `ABOUT SECTION:\n${record.profile.about}\n\n`;
+            }
+            
+            content += `CONTENT IDEAS:\n`;
+            record.profile.contentIdeas.forEach((idea, i) => {
+                content += `${i + 1}. ${idea}\n`;
+            });
+            content += `\n`;
+            
+            if (record.profile.keywords && record.profile.keywords.length > 0) {
+                content += `KEYWORDS:\n${record.profile.keywords.join(', ')}\n\n`;
+            }
+            
+            if (record.profile.hashtags && record.profile.hashtags.length > 0) {
+                content += `HASHTAGS:\n${record.profile.hashtags.join(' ')}\n\n`;
+            }
+            
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `profile-${record.platform}-${id}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        
+        // Delete profile
+        function deleteProfile(id) {
+            if (!confirm('Are you sure you want to delete this optimization?')) return;
+            
+            let history = JSON.parse(localStorage.getItem('optimizationHistory') || '[]');
+            history = history.filter(r => r.id !== id);
+            localStorage.setItem('optimizationHistory', JSON.stringify(history));
+            
+            loadHistory();
+        }
+        
+        // Load on page load
+        loadHistory();
+    </script>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="timeline.html">Timeline</a>
+            </div>
+            <div class="footer-contact">
+                <p>Contact: <a href="mailto:onestepforthelife@gmail.com">onestepforthelife@gmail.com</a></p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Ideas Before Time. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- Google Analytics 4 - Universal Tracking -->
+<script src="universal-analytics.js"></script>
+<script src="common-navigation.js"></script>
+
+<script src="common-footer.js"></script>
+</body>
+</html>
+
+

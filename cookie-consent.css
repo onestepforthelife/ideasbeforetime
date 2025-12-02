@@ -5,7 +5,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
     color: white;
     padding: 20px;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
@@ -66,7 +66,7 @@
 
 .btn-accept {
     background: white;
-    color: #667eea;
+    color: #5a6c7d;
 }
 
 .btn-accept:hover {
@@ -174,3 +174,4 @@
         display: none !important;
     }
 }
+

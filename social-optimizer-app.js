@@ -113,7 +113,7 @@ function handleFileUpload(event, type) {
             previewDiv.innerHTML = `
                 <div class="file-preview">
                     <img src="${e.target.result}" style="max-width: 100%; border-radius: 8px;">
-                    <p style="margin-top: 10px; color: #667eea; font-weight: bold;">✓ Image uploaded successfully</p>
+                    <p style="margin-top: 10px; color: #5a6c7d; font-weight: bold;">✓ Image uploaded successfully</p>
                     <p style="color: #666; font-size: 0.9em;">Our AI will analyze this screenshot to extract your profile information</p>
                 </div>
             `;
@@ -123,7 +123,7 @@ function handleFileUpload(event, type) {
         previewDiv.innerHTML = `
             <div class="file-preview">
                 <div style="font-size: 3em; text-align: center;">📄</div>
-                <p style="margin-top: 10px; color: #667eea; font-weight: bold;">✓ ${file.name}</p>
+                <p style="margin-top: 10px; color: #5a6c7d; font-weight: bold;">✓ ${file.name}</p>
                 <p style="color: #666; font-size: 0.9em;">PDF uploaded successfully. Our AI will extract your profile information.</p>
             </div>
         `;
@@ -330,7 +330,7 @@ function displayPreview(isBlurred) {
     // Add watermark branding (only on unlocked version)
     if (!isBlurred) {
         html += `
-            <div style="text-align: center; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; color: white;">
+            <div style="text-align: center; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%); border-radius: 15px; color: white;">
                 <div style="font-size: 1.2em; margin-bottom: 10px;">✨ Optimized by</div>
                 <div style="font-size: 2em; font-weight: bold; margin-bottom: 10px;">Social Profile Optimizer AI</div>
                 <div style="font-size: 0.9em; opacity: 0.9; margin-bottom: 15px;">AI-Powered Profile Optimization • Only ₹11</div>
@@ -881,3 +881,4 @@ Feedback ID: ${feedback.id}
     // In production, use a backend service to send emails
     console.log('Feedback email:', { subject, body });
 }
+

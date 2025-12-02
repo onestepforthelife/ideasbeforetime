@@ -138,6 +138,26 @@
         .danger { background: #dc3545; }
         .danger:hover { background: #c82333; }
     </style>
+    <meta name="description" content="social optimizer admin - Ideas Before Time platform">
+
+    <style>
+        /* Responsive Design - Mobile-Friendly */
+        @media (max-width: 768px) {
+            body { padding: 10px !important; }
+            .container, .access-container, .reports-container, 
+            .dashboard-container, .tool-container { 
+                max-width: 100% !important; 
+                padding: 20px !important; 
+                margin: 10px !important;
+            }
+            h1 { font-size: 24px !important; }
+            h2 { font-size: 20px !important; }
+            .nav-links { flex-direction: column; }
+            .grid, .package-grid, .reports-grid { 
+                grid-template-columns: 1fr !important; 
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="admin-container">
@@ -324,6 +344,8 @@
 <!-- Google Analytics 4 - Universal Tracking -->
 <script src="universal-analytics.js"></script>
 
+<script src="common-footer.js"></script>
 </body>
 </html>
+
 

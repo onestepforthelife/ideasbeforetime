@@ -7,8 +7,10 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
+            max-width: 1400px;
+            margin: 0 auto;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -21,7 +23,7 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
         h1 {
-            color: #667eea;
+            color: #5a6c7d;
             text-align: center;
             margin-bottom: 10px;
         }
@@ -37,7 +39,7 @@
             margin: 40px 0;
         }
         .option-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
             color: white;
             padding: 30px;
             border-radius: 15px;
@@ -85,11 +87,11 @@
             padding: 20px;
             margin: 15px 0;
             border-radius: 10px;
-            border-left: 5px solid #667eea;
+            border-left: 5px solid #5a6c7d;
         }
         .step-number {
             display: inline-block;
-            background: #667eea;
+            background: #5a6c7d;
             color: white;
             width: 35px;
             height: 35px;
@@ -118,7 +120,7 @@
             font-family: 'Courier New', monospace;
         }
         .btn {
-            background: #667eea;
+            background: #5a6c7d;
             color: white;
             padding: 12px 30px;
             border: none;
@@ -149,7 +151,7 @@
             border-bottom: 1px solid #e0e0e0;
         }
         .comparison-table th {
-            background: #667eea;
+            background: #5a6c7d;
             color: white;
         }
         .highlight {
@@ -158,6 +160,27 @@
             border-radius: 10px;
             border-left: 5px solid #ffc107;
             margin: 20px 0;
+        }
+    </style>
+    <link rel="stylesheet" href="common-watermark.css">
+    <meta name="description" content="PAYMENT_VISUAL_GUIDE - Ideas Before Time platform">
+
+    <style>
+        /* Responsive Design - Mobile-Friendly */
+        @media (max-width: 768px) {
+            body { padding: 10px !important; }
+            .container, .access-container, .reports-container, 
+            .dashboard-container, .tool-container { 
+                max-width: 100% !important; 
+                padding: 20px !important; 
+                margin: 10px !important;
+            }
+            h1 { font-size: 24px !important; }
+            h2 { font-size: 20px !important; }
+            .nav-links { flex-direction: column; }
+            .grid, .package-grid, .reports-grid { 
+                grid-template-columns: 1fr !important; 
+            }
         }
     </style>
 </head>
@@ -212,7 +235,7 @@
 
         <!-- Razorpay Setup -->
         <div id="razorpay-setup" class="setup-section">
-            <h2 style="color: #667eea; margin-bottom: 20px;">🚀 Razorpay Setup (Recommended)</h2>
+            <h2 style="color: #5a6c7d; margin-bottom: 20px;">🚀 Razorpay Setup (Recommended)</h2>
             
             <div class="step">
                 <span class="step-number">1</span>
@@ -330,7 +353,7 @@
 
         <!-- Instamojo Setup -->
         <div id="instamojo-setup" class="setup-section">
-            <h2 style="color: #667eea; margin-bottom: 20px;">🔗 Instamojo Setup (No Coding)</h2>
+            <h2 style="color: #5a6c7d; margin-bottom: 20px;">🔗 Instamojo Setup (No Coding)</h2>
             
             <div class="step">
                 <span class="step-number">1</span>
@@ -380,7 +403,7 @@
         </div>
 
         <!-- Comparison Table -->
-        <h2 style="color: #667eea; margin: 40px 0 20px;">📊 Quick Comparison</h2>
+        <h2 style="color: #5a6c7d; margin: 40px 0 20px;">📊 Quick Comparison</h2>
         <table class="comparison-table">
             <thead>
                 <tr>
@@ -437,9 +460,9 @@
         </table>
 
         <div style="text-align: center; margin: 40px 0; padding: 30px; background: #f8f9ff; border-radius: 15px;">
-            <h3 style="color: #667eea; margin-bottom: 15px;">Need Help?</h3>
+            <h3 style="color: #5a6c7d; margin-bottom: 15px;">Need Help?</h3>
             <p style="color: #666; margin-bottom: 20px;">Questions about payment setup?</p>
-            <p style="font-size: 1.2em; color: #667eea; font-weight: bold; margin-bottom: 20px;">
+            <p style="font-size: 1.2em; color: #5a6c7d; font-weight: bold; margin-bottom: 20px;">
                 📧 onestepforthelife@gmail.com
             </p>
             <button class="btn" onclick="location.href='mailto:onestepforthelife@gmail.com?subject=Payment Setup Help'">
@@ -467,5 +490,7 @@
     </script>
     <script src="common-navigation.js"></script>
     <script src="universal-analytics.js"></script>
+<script src="common-footer.js"></script>
 </body>
 </html>
+

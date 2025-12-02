@@ -252,3 +252,4 @@ if (typeof window !== 'undefined') {
     // Also export as Analytics for SPO compatibility
     window.Analytics = window.Analytics || UniversalAnalytics;
 }
+

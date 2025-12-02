@@ -49,7 +49,7 @@ body::before {
 .header {
     text-align: center;
     padding-bottom: 30px;
-    border-bottom: 3px solid #667eea;
+    border-bottom: 3px solid #5a6c7d;
     margin-bottom: 40px;
 }
 .header h1 {
@@ -58,7 +58,7 @@ body::before {
     margin-bottom: 10px;
 }
 .header .tagline {
-    color: #667eea;
+    color: #5a6c7d;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -71,7 +71,7 @@ body::before {
     margin-bottom: 40px;
 }
 .category h2 {
-    color: #667eea;
+    color: #5a6c7d;
     font-size: 24px;
     margin-bottom: 20px;
     padding-bottom: 10px;
@@ -85,7 +85,7 @@ body::before {
     background: #f9f9f9;
     border-radius: 8px;
     margin-bottom: 15px;
-    border-left: 4px solid #667eea;
+    border-left: 4px solid #5a6c7d;
 }
 .insight-item h3 {
     color: #333;
@@ -111,7 +111,7 @@ body::before {
 }
 .stat-box {
     padding: 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
     color: white;
     border-radius: 8px;
     text-align: center;
@@ -144,7 +144,7 @@ body::before {
     border-top: 2px solid #e0e0e0;
 }
 .footer a {
-    color: #667eea;
+    color: #5a6c7d;
     text-decoration: none;
     margin: 0 10px;
 }
@@ -152,7 +152,7 @@ body::before {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 30px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
     color: white !important;
     text-decoration: none;
     border-radius: 5px;
@@ -164,6 +164,25 @@ body::before {
     transform: translateY(-2px);
 }
 </style>
+
+    <style>
+        /* Responsive Design - Mobile-Friendly */
+        @media (max-width: 768px) {
+            body { padding: 10px !important; }
+            .container, .access-container, .reports-container, 
+            .dashboard-container, .tool-container { 
+                max-width: 100% !important; 
+                padding: 20px !important; 
+                margin: 10px !important;
+            }
+            h1 { font-size: 24px !important; }
+            h2 { font-size: 20px !important; }
+            .nav-links { flex-direction: column; }
+            .grid, .package-grid, .reports-grid { 
+                grid-template-columns: 1fr !important; 
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -366,5 +385,7 @@ body::before {
 
 <script src="common-navigation.js"></script>
 <script src="common-footer.js"></script>
+<script src="universal-analytics.js"></script>
 </body>
 </html>
+
