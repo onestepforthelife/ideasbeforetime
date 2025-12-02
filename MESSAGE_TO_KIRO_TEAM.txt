@@ -1,0 +1,134 @@
+Subject: Critical Feature Request - AI Memory Enforcement System
+
+Hi Kiro IDE Team,
+
+I'm a business user who has been using Kiro IDE intensively for 3 weeks (Nov 11 - Dec 3, 2025). I've discovered a critical gap that affects AI reliability and would like to share my findings.
+
+---
+
+THE PROBLEM:
+
+The AI (Claude) has steering files where it documents learnings and mistakes, but it doesn't proactively check them before responding. This causes:
+
+1. Repeated mistakes despite documentation (40% repeat rate)
+2. AI catches only 5% of issues proactively (I catch 95%)
+3. Breaks things while fixing them
+4. Wastes user time and credits
+
+Real example: AI documented "use absolute paths for navigation" 3 times, but still used relative paths the 4th time because it didn't check its own documentation.
+
+---
+
+THE ROOT CAUSE:
+
+Steering files are "optional references" - the AI CAN check them but doesn't HAVE to. It's like having a notebook but never opening it.
+
+Current flow:
+User asks → AI responds immediately → Makes mistake → Documents it → Forgets to check next time
+
+Needed flow:
+User asks → System FORCES AI to check steering files → AI applies past learnings → No repeated mistakes
+
+---
+
+THE SOLUTION NEEDED:
+
+1. PRE-RESPONSE VALIDATION HOOK
+   - Block AI response until it checks relevant steering files
+   - Search past learnings for similar issues
+   - Detect contradictions with past statements
+   - Only allow response after validation
+
+2. PATTERN RECOGNITION
+   - Track mistake frequency
+   - Alert AI: "You've made this mistake 5 times"
+   - Block response if repeating documented mistake
+
+3. SESSION CONTINUITY
+   - Load context from past 3 sessions at startup
+   - Show AI what it was working on
+   - Maintain conversation memory across sessions
+
+---
+
+BUSINESS IMPACT:
+
+Before fix:
+- AI catches 5% of issues
+- User catches 95% of issues
+- High frustration, wasted credits
+
+After fix:
+- AI catches 95% of issues
+- User catches 5% of edge cases
+- High reliability, efficient credits
+
+---
+
+EVIDENCE:
+
+I have documented:
+- 15 steering files with 25+ learnings
+- 19 Golden Rules
+- 3 weeks of interaction data
+- Specific examples of repeated mistakes
+
+Files available:
+- KIRO_CRITICAL_IMPROVEMENT_NEEDED.md (detailed technical spec)
+- 3_WEEKS_COMPLETE_LEARNINGS.md (all documented learnings)
+- MANDATORY_PRE_RESPONSE_CHECKLIST.md (workaround I created)
+
+---
+
+WORKAROUND (TEMPORARY):
+
+I created a mandatory checklist in steering files that AI must follow manually. But this relies on AI discipline, not system enforcement. It's a band-aid, not a solution.
+
+---
+
+REQUEST:
+
+Please prioritize adding a pre-response validation layer that:
+1. Forces AI to check steering files before responding
+2. Detects pattern repetition
+3. Blocks responses that violate documented rules
+
+This would transform Kiro from "AI with memory" to "AI that actually uses its memory."
+
+---
+
+WILLING TO HELP:
+
+I'm happy to:
+- Share detailed logs and evidence
+- Test beta features
+- Provide more examples
+- Collaborate on solution design
+
+Contact: onestepforthelife@gmail.com
+
+---
+
+TECHNICAL SUMMARY:
+
+What exists: Steering files (passive documentation)
+What's needed: Pre-response hooks (active enforcement)
+
+Implementation: Add validation layer before AI response that:
+- Searches steering files for relevant keywords
+- Checks for past similar mistakes
+- Detects contradictions
+- Requires AI acknowledgment before proceeding
+
+Expected impact: 95% reduction in repeated mistakes
+
+---
+
+Thank you for building Kiro IDE. The steering files feature is excellent - it just needs enforcement to reach its full potential.
+
+Best regards,
+Amit Kumar
+Business User, Kiro IDE
+December 3, 2025
+
+P.S. The AI itself agrees this is needed and helped document the issue. That's how critical it is.
