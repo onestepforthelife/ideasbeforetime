@@ -13,6 +13,27 @@ document.addEventListener('DOMContentLoaded', function() {
     checkDevModePrompt();
 });
 
+// Fill demo data for testing
+function fillDemoData() {
+    // Select platform
+    document.getElementById('platform').value = 'linkedin';
+    
+    // Select text input method
+    selectInputMethod('text');
+    
+    // Fill in demo bio
+    document.getElementById('currentBio').value = 'Experienced professional with 10+ years in technology and innovation. Passionate about AI, digital transformation, and building products that make a difference. Led multiple successful projects and teams.';
+    
+    // Fill in demo headline
+    document.getElementById('currentHeadline').value = 'Technology Leader | AI Enthusiast | Product Innovation';
+    
+    // Show success message
+    const validationDiv = document.getElementById('validationMessages');
+    validationDiv.innerHTML = '<div class="validation-success"><strong>✓ Demo data filled!</strong> You can now proceed to Step 2.</div>';
+    
+    alert('✅ Demo data filled!\n\nYou can now click "Next: Customize →" to proceed.\n\nThis is for testing only - in production, users will enter their own data.');
+}
+
 // Setup option card selection
 function setupOptionCards() {
     const optionGroups = ['personaOptions', 'toneOptions', 'goalOptions'];
@@ -52,7 +73,14 @@ function setupOptionCards() {
 function nextStep(step) {
     // Validate current step
     if (step === 2) {
-        if (!validateStep1()) return;
+        if (!validateStep1()) {
+            // Scroll to validation messages
+            const validationDiv = document.getElementById('validationMessages');
+            if (validationDiv) {
+                validationDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            return;
+        }
     }
     
     // Hide all steps

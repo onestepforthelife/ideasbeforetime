@@ -136,6 +136,15 @@ const tests = {
 
 ## 🎯 PRIORITY TESTING LEVELS
 
+### LEVEL 0: PRIMARY USER FLOW (MUST TEST FIRST - BEFORE ANYTHING ELSE!)
+1. ❌ **SPO: Can user enter data → click Next → see preview → pay → get results?**
+2. ❌ **Job Tools: Can user add job → track → update status?**
+3. ❌ **Market Reports: Can user request → get approved → access?**
+4. ❌ **Navigation: Can user click all links → reach destinations?**
+5. ❌ **Forms: Can user fill → submit → see confirmation?**
+
+**NEVER SAY "READY" WITHOUT TESTING THESE FIRST!**
+
 ### LEVEL 1: CRITICAL (Must Pass Before Deploy)
 1. ✅ Navigation on all pages
 2. ✅ Footer on all pages

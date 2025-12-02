@@ -80,11 +80,17 @@
             </div>
             
             <div style="background: #e7f3ff; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
-                <p><strong>📧 Email:</strong> onestepforthelife@gmail.com</p>
+                <p><strong>📧 Your Email:</strong> <span id="displayEmail">Not set</span></p>
                 <p style="margin-top: 10px;"><strong>Status:</strong> <span id="emailStatus" style="color: #dc3545;">⚠️ Not Configured</span></p>
             </div>
             
             <div id="passwordSection" style="display: none;">
+                <label><strong>Your Gmail Address:</strong></label>
+                <input type="email" id="userEmail" placeholder="your.email@gmail.com" style="margin-bottom: 15px;">
+                <small style="display: block; color: #666; margin-bottom: 15px;">
+                    Enter the Gmail address you want to send emails from
+                </small>
+                
                 <label><strong>Gmail App Password:</strong></label>
                 <input type="password" id="appPassword" placeholder="Enter 16-character App Password">
                 <small style="display: block; color: #666; margin-bottom: 15px;">
@@ -213,6 +219,7 @@
         // Update email status display
         function updateEmailStatus(isConfigured) {
             const statusEl = document.getElementById('emailStatus');
+            const displayEmailEl = document.getElementById('displayEmail');
             const notConfiguredSection = document.getElementById('notConfiguredSection');
             const configuredSection = document.getElementById('configuredSection');
             const passwordSection = document.getElementById('passwordSection');
@@ -220,12 +227,18 @@
             if (isConfigured) {
                 statusEl.innerHTML = '✅ Configured & Ready';
                 statusEl.style.color = '#28a745';
+                displayEmailEl.textContent = emailConfig.email;
+                displayEmailEl.style.color = '#28a745';
+                displayEmailEl.style.fontWeight = '600';
                 notConfiguredSection.style.display = 'none';
                 configuredSection.style.display = 'block';
                 passwordSection.style.display = 'none';
             } else {
                 statusEl.innerHTML = '⚠️ Not Configured';
                 statusEl.style.color = '#dc3545';
+                displayEmailEl.textContent = 'Not set';
+                displayEmailEl.style.color = '#dc3545';
+                displayEmailEl.style.fontWeight = 'normal';
                 notConfiguredSection.style.display = 'block';
                 configuredSection.style.display = 'none';
                 passwordSection.style.display = 'none';
@@ -237,41 +250,65 @@
             document.getElementById('passwordSection').style.display = 'block';
             document.getElementById('notConfiguredSection').style.display = 'none';
             document.getElementById('configuredSection').style.display = 'none';
-            document.getElementById('appPassword').focus();
+            
+            // Pre-fill email if already configured
+            if (emailConfig && emailConfig.email) {
+                document.getElementById('userEmail').value = emailConfig.email;
+                document.getElementById('appPassword').focus();
+            } else {
+                document.getElementById('userEmail').focus();
+            }
         }
 
         // Cancel password entry
         function cancelPasswordEntry() {
+            document.getElementById('userEmail').value = '';
             document.getElementById('appPassword').value = '';
             updateEmailStatus(emailConfig !== null);
         }
 
         // Save email config
         function saveEmailConfig() {
+            const email = document.getElementById('userEmail').value.trim();
             const password = document.getElementById('appPassword').value.trim();
+
+            if (!email) {
+                alert('⚠️ Please enter your Gmail address');
+                document.getElementById('userEmail').focus();
+                return;
+            }
+
+            if (!email.endsWith('@gmail.com')) {
+                alert('⚠️ Please use a Gmail address (must end with @gmail.com)');
+                document.getElementById('userEmail').focus();
+                return;
+            }
 
             if (!password) {
                 alert('⚠️ Please enter your Gmail App Password');
+                document.getElementById('appPassword').focus();
                 return;
             }
 
             if (password.length !== 16) {
                 alert('⚠️ Gmail App Password should be 16 characters');
+                document.getElementById('appPassword').focus();
                 return;
             }
 
             emailConfig = { 
                 provider: 'gmail',
-                email: 'onestepforthelife@gmail.com',
+                email: email,
                 password: password 
             };
             
             localStorage.setItem('emailConfig', JSON.stringify(emailConfig));
             
+            document.getElementById('userEmail').value = '';
             document.getElementById('appPassword').value = '';
             updateEmailStatus(true);
             
-            alert('✅ Email sending enabled!\n\nYou can now send job applications.\nYour password is stored securely in your browser only.');
+            alert('✅ Email sending enabled!\n\nFrom: ' + email + '\n\nYou can now send job applications.\nYour credentials are stored securely in your browser only.');
         }
 
         // Revoke access
