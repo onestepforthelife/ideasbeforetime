@@ -15,7 +15,7 @@
  */
 
 // Your Google AdSense Publisher ID
-const ADSENSE_PUBLISHER_ID = 'ca-pub-XXXXXXXXXXXXXXXX'; // Replace with your ID
+const ADSENSE_PUBLISHER_ID = 'ca-pub-3181510462001437'; // Amit's Publisher ID
 
 // Ad placement configuration
 const AD_CONFIG = {

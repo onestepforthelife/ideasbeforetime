@@ -18,7 +18,7 @@ echo Step 2: Add all files
 
 echo.
 echo Step 3: Commit changes with timestamp
-%GIT% commit -m "Auto-update: %date% %time%"
+%GIT% commit -m "Fixed: Home header padding, footer alignment (3 pages), CV blank spaces & footer - Dec 3, 2025"
 
 echo.
 echo Step 4: Connect to GitHub (if not done)

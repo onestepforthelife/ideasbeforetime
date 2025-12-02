@@ -96,11 +96,31 @@
             display: grid;
             grid-template-columns: 28% 72%;
             column-gap: 4px;
+            grid-auto-flow: dense;
+            align-items: start;
         }
 
         .section {
             break-inside: avoid;
-            margin-bottom: 1px;
+            margin-bottom: 0px;
+            padding-bottom: 2px;
+        }
+        
+        /* Fix footer alignment - override any left alignment */
+        .site-footer {
+            text-align: center !important;
+        }
+        
+        .site-footer * {
+            text-align: center !important;
+        }
+        
+        .footer-content {
+            text-align: center !important;
+        }
+        
+        .footer-links {
+            justify-content: center !important;
         }
 
         .section h2 {
@@ -315,6 +335,11 @@
         }
     </style>
     <link rel="stylesheet" href="common-watermark.css">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3181510462001437"
+            crossorigin="anonymous"></script>
+    <script src="google-adsense.js"></script>
 </head>
 <body>
     <div class="page-wrapper">
