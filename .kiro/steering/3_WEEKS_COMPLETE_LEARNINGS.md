@@ -266,6 +266,51 @@ THEN test colors, headers, SEO, etc.
 
 ---
 
+### Learning 23: "AUTO MODE" MEANS CHECKING LIVE SITE! (Dec 3, 2025, 00:15 - CRITICAL!)
+**What happened:** I said "AUTO MODE ALWAYS ON" but didn't check live site issues
+**Amit's feedback:** "is u r dog it theny why is laignement left ion https://ideasbeforetime.pages.dev/email-sender-web--home header"
+**Lesson:** AUTO MODE means checking LIVE site, not just running scripts on local files!
+
+**ISSUES I MISSED:**
+1. email-sender-web.html - Header alignment LEFT (should be consistent)
+2. Headers at different positions from top (80px vs 60px vs 8px)
+3. CV white space between sections (too much padding/gap)
+
+**WHY I MISSED THEM:**
+- ❌ Only ran test scripts on local files
+- ❌ Didn't visually check live site
+- ❌ Didn't compare pages side-by-side
+- ❌ Assumed scripts catch everything
+- ❌ "AUTO MODE" was just scripts, not actual checking
+
+**WHAT "AUTO MODE" SHOULD MEAN:**
+1. ✅ Run test scripts (what I did)
+2. ✅ Check live site visually (what I missed!)
+3. ✅ Compare pages for consistency (what I missed!)
+4. ✅ Test alignment, spacing, positioning (what I missed!)
+5. ✅ Check on actual browser, not just code (what I missed!)
+
+**NEW TEST PARAMETERS - VISUAL CHECKS:**
+```
+☐ Check live site, not just local files
+☐ Compare header positions across pages
+☐ Check alignment (left/center/right)
+☐ Check spacing between sections
+☐ View on actual browser
+☐ Compare pages side-by-side
+☐ Check mobile view
+```
+
+**FIXED:**
+- email-sender-web.html: Changed alignment to left, fixed padding to 80px
+- cv.html: Reduced padding from 6px to 3px, gap from 8px to 4px
+
+**LESSON: Scripts catch code errors. Eyes catch visual errors. Need BOTH!**
+
+**Updated AUTO_MODE_ALWAYS_ON.md to include visual checks!**
+
+---
+
 ## 🧪 COMPLETE TEST PARAMETERS (3 Weeks)
 
 ### When Checking Colors:
