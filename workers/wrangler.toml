@@ -1,0 +1,24 @@
+name = "job-search-api"
+main = "job-search-api.js"
+compatibility_date = "2024-12-01"
+
+# Account ID - Get from Cloudflare dashboard
+# account_id = "YOUR_ACCOUNT_ID"
+
+# Workers AI binding (optional - for AI features)
+# [ai]
+# binding = "AI"
+
+# KV namespace for storing job data (optional)
+# [[kv_namespaces]]
+# binding = "JOB_DATA"
+# id = "YOUR_KV_ID"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "production"
+
+# Secrets (set via: wrangler secret put SECRET_NAME)
+# - OPENAI_API_KEY (for AI email generation)
+# - SENDGRID_API_KEY (for email sending)
+# - RAZORPAY_KEY_SECRET (for payment verification)

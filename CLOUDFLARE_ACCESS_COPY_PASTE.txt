@@ -46,7 +46,7 @@ Session Duration:
 
 Application domain:
 ┌──────────────────────────────────────────────────────────┐
-│ ideas-before-time.pages.dev                              │
+│ ideasbeforetime.pages.dev                                │
 └──────────────────────────────────────────────────────────┘
 
 Path (IMPORTANT - Copy exactly):
@@ -103,7 +103,7 @@ Click "Next" → "Add application"
 
 2. Go to this URL:
    ┌──────────────────────────────────────────────────────────┐
-   │ https://ideas-before-time.pages.dev/social-optimizer-   │
+   │ https://ideasbeforetime.pages.dev/social-optimizer-     │
    │ index.html                                               │
    └──────────────────────────────────────────────────────────┘
 
