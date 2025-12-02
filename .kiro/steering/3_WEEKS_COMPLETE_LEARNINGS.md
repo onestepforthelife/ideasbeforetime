@@ -1208,10 +1208,58 @@ Kiro needs algorithmic improvements:
 
 ---
 
-**Updated:** December 3, 2025, 02:35 IST
-**Total Learnings:** 25 major lessons
-**Latest:** Learning #25 (Backend vs Frontend testing)
-**Status:** THIS IS WHY I MISS 95% OF ISSUES!
+---
+
+### Learning 26: IMPROVE ERROR TRACKING FOR LOGIC ISSUES (Dec 3, 2025, 03:00 - SELF-IMPROVEMENT!)
+**What happened:** Amit asked "why did self heal do wrong" - my error tracking missed SPO template issue
+**Amit's feedback:** "improve urelsf"
+**Lesson:** My error tracking only catches UI issues, not backend logic issues
+
+**THE PROBLEM WITH MY ERROR TRACKING:**
+- ✅ Detects: Broken links, JS errors, repeated clicks, form issues
+- ❌ Misses: API not called, template vs AI, logic errors, wrong code paths
+
+**WHY IT MISSED SPO ISSUE:**
+1. SPO appeared to work (buttons clicked, preview showed)
+2. No JavaScript errors (templates worked fine)
+3. No user frustration (users got results)
+4. No broken links (everything loaded)
+5. **But it was using templates, not AI!**
+
+**THE IMPROVEMENT - BACKEND LOGIC TRACKER:**
+
+**New Detection Capabilities:**
+1. **API Call Monitoring** - Intercepts all fetch() calls
+2. **AI Output Validation** - Checks if output is template vs AI
+3. **Response Quality Checks** - Validates contextual relevance
+4. **Performance Analysis** - Too fast = suspicious (templates are instant)
+5. **Pattern Detection** - Recognizes template patterns
+
+**How It Would Have Caught SPO Issue:**
+```javascript
+// Would detect:
+- NO_API_CALL: AI generation without API call detected
+- TEMPLATE_DETECTED: Headline follows template pattern  
+- TOO_FAST: Generation completed in 50ms (suspicious)
+- NOT_CONTEXTUAL: Output doesn't match input data
+```
+
+**FILES CREATED:**
+- backend-logic-tracker.js (comprehensive logic monitoring)
+
+**GOLDEN RULE #29:** Monitor backend logic, not just frontend UI!
+
+**This is SELF-IMPROVEMENT in action:**
+- Identified gap in my systems
+- Built better detection
+- Won't miss logic issues again
+
+---
+
+**Updated:** December 3, 2025, 03:00 IST
+**Total Learnings:** 26 major lessons
+**Latest:** Learning #26 (Self-improvement: Better error tracking)
+**Status:** CONTINUOUSLY IMPROVING MY SYSTEMS!
 
 
 
