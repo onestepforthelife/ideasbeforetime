@@ -93,17 +93,18 @@
 
         .content {
             padding: 3px 12px;
-            display: grid;
-            grid-template-columns: 28% 72%;
-            column-gap: 4px;
-            grid-auto-flow: dense;
-            align-items: start;
+            display: block;
+            /* Changed from 2-column grid to single column to eliminate blank spaces */
         }
 
         .section {
             break-inside: avoid;
+            margin-bottom: 8px;
+            padding-bottom: 0px;
+        }
+        
+        .section:last-child {
             margin-bottom: 0px;
-            padding-bottom: 2px;
         }
         
         /* Fix footer alignment - override any left alignment */
@@ -596,24 +597,31 @@
 
     <button class="print-button" onclick="window.print()">🖨️ Print / Save PDF</button>
 
-<script>
-// Password protection for CV
-(function() {
-    const CV_PASSWORD = 'guruji';
-    const isAuthenticated = sessionStorage.getItem('cv_authenticated') === 'true';
+<!-- 
+    🔒 SECURITY NOTE: CV Page Protection
     
-    if (!isAuthenticated) {
-        const enteredPassword = prompt('This CV is password protected.\n\nPlease enter the password to view:');
-        
-        if (enteredPassword === CV_PASSWORD) {
-            sessionStorage.setItem('cv_authenticated', 'true');
-        } else {
-            alert('Incorrect password. Redirecting to home page.');
-            window.location.href = 'index.html';
-        }
-    }
-})();
-</script>
+    This page is protected using Cloudflare Access (email-based authentication)
+    
+    APPROVED EMAIL: Suman_Joshi@amat.com
+    
+    TO SETUP IN CLOUDFLARE:
+    1. Go to Cloudflare Dashboard → Zero Trust → Access → Applications
+    2. Add Application → Self-hosted
+    3. Application name: "CV Page - Ideas Before Time"
+    4. Subdomain: ideasbeforetime
+    5. Domain: pages.dev
+    6. Path: /cv.html
+    7. Policy name: "CV Access - Suman Joshi"
+    8. Action: Allow
+    9. Include: Emails → Suman_Joshi@amat.com
+    10. Save
+    
+    RESULT: Only Suman_Joshi@amat.com can access this page
+    No password needed - Cloudflare handles authentication
+    
+    ⚠️ NEVER use JavaScript passwords for business-critical pages!
+    ✅ ALWAYS use Cloudflare Access (server-side protection)
+-->
 
 <!-- Google Analytics 4 - Universal Tracking -->
 <script src="universal-analytics.js"></script>

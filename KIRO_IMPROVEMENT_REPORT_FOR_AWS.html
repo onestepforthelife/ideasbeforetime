@@ -17,80 +17,32 @@
         }
         
         body {
-            margin: 0;
+            max-width: 1400px;
+            margin: 0 auto;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0a0a0a;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            background: #1a1a1a;
+            overflow-x: auto;
+            overflow-y: hidden;
         }
         
         .presentation-container {
             display: flex;
-            width: 100vw;
             height: 100vh;
-            max-width: 1920px;
-            max-height: 1080px;
             scroll-snap-type: x mandatory;
             overflow-x: auto;
             overflow-y: hidden;
-            scroll-behavior: smooth;
-            box-shadow: 0 0 50px rgba(0,0,0,0.5);
-        }
-        
-        /* A4 Landscape aspect ratio: 1.414:1 (297mm x 210mm) */
-        @media (min-aspect-ratio: 16/9) {
-            .presentation-container {
-                height: 100vh;
-                width: calc(100vh * 1.414);
-            }
-        }
-        
-        @media (max-aspect-ratio: 16/9) {
-            .presentation-container {
-                width: 100vw;
-                height: calc(100vw / 1.414);
-            }
-        }
-        
-        /* Hide navigation arrows - just scroll naturally */
-        .nav-arrow {
-            display: none;
         }
         
         .slide {
-            min-width: 100%;
-            width: 100%;
-            height: 100%;
+            min-width: 100vw;
+            height: 100vh;
             scroll-snap-align: start;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
-            padding: 4% 5%;
+            padding: 60px;
             position: relative;
-            flex-shrink: 0;
-            overflow-y: auto;
-            overflow-x: hidden;
-        }
-        
-        .slide::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        .slide::-webkit-scrollbar-track {
-            background: rgba(255,255,255,0.1);
-        }
-        
-        .slide::-webkit-scrollbar-thumb {
-            background: rgba(255,255,255,0.3);
-            border-radius: 4px;
-        }
-        
-        .slide::-webkit-scrollbar-thumb:hover {
-            background: rgba(255,255,255,0.5);
         }
         
         /* Slide Color Themes */
