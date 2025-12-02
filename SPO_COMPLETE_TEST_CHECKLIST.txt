@@ -1,0 +1,293 @@
+╔══════════════════════════════════════════════════════════════╗
+║     SPO COMPLETE TESTING CHECKLIST                          ║
+║     Test EVERY Step Like a Real User                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+🎯 TESTING APPROACH: Pretend I'm a customer paying ₹21
+If ANY step fails → CRITICAL BUG → Cannot launch
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEST 1: LANDING PAGE (social-optimizer-index.html)
+===================================================
+
+Starting URL: https://ideasbeforetime.pages.dev/social-optimizer-index.html
+
+□ Step 1.1: Page loads without errors
+   - Check browser console for errors
+   - Check if all images load
+   - Check if text is readable
+
+□ Step 1.2: Find "Start" button
+   - Is it visible?
+   - Is it obvious what to click?
+   - Does it stand out?
+
+□ Step 1.3: Click "Start Free Preview" button
+   - Does it navigate to social-optimizer-app.html?
+   - Does page load correctly?
+   - Any console errors?
+
+RESULT: _______________________________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEST 2: PAGE 1 - DATA ENTRY (Empty Form)
+=========================================
+
+Current URL: social-optimizer-app.html (Step 1)
+
+□ Step 2.1: Try clicking "Next" without filling anything
+   - Does validation error show?
+   - Is error message VISIBLE and CLEAR?
+   - Does it say what's missing?
+   - Is error in RED or prominent color?
+
+□ Step 2.2: Check if user knows what to do
+   - Are instructions clear?
+   - Is it obvious what fields are required?
+   - Are there labels on all fields?
+
+RESULT: _______________________________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEST 3: PAGE 1 - FILL FORM (Using Demo Data)
+=============================================
+
+□ Step 3.1: Click "Fill Demo Data" button
+   - Does it fill all fields?
+   - Is data visible in form?
+   - Platform selected?
+   - Input method selected?
+   - Bio filled?
+
+□ Step 3.2: Verify all fields are filled
+   - Platform dropdown: _______________
+   - Input method: _______________
+   - Bio text: _______________
+   - Headline: _______________
+
+RESULT: _______________________________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEST 4: PAGE 1 → PAGE 2 NAVIGATION
+===================================
+
+□ Step 4.1: Click "Next: Customize →" button
+   - Does page change to Step 2?
+   - Does URL stay same or change?
+   - Any console errors?
+   - Does progress bar update?
+
+□ Step 4.2: Verify on Page 2
+   - Can see "Step 2" or "Customize" heading?
+   - Can see tone selection options?
+   - Can see style selection options?
+
+□ Step 4.3: Check if data persisted
+   - Is user data from Page 1 still available?
+   - Can see platform selected?
+   - Can see bio entered?
+
+RESULT: _______________________________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEST 5: PAGE 2 - CUSTOMIZATION
+===============================
+
+□ Step 5.1: Select tone (Professional/Casual/etc.)
+   - Do options show?
+   - Can click on options?
+   - Does selection highlight?
+
+□ Step 5.2: Select style
+   - Do options show?
+   - Can click on options?
+   - Does selection highlight?
+
+□ Step 5.3: Test "Back" button
+   - Click "← Back" button
+   - Does it go to Page 1?
+   - Is data still there on Page 1?
+   - Can see previously entered bio?
+
+□ Step 5.4: Navigate forward again
+   - Click "Next" from Page 1
+   - Does it go back to Page 2?
+   - Are tone/style selections preserved?
+
+RESULT: _______________________________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEST 6: PAGE 2 → PAGE 3 NAVIGATION
+===================================
+
+□ Step 6.1: Click "Next" or "Preview" button
+   - Does page change to Step 3?
+   - Does progress bar update?
+   - Any console errors?
+
+□ Step 6.2: Verify on Page 3
+   - Can see "Preview" or "Results" heading?
+   - Can see AI-generated suggestions?
+   - Can see preview of optimized profile?
+
+RESULT: _______________________________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEST 7: PAGE 3 - PREVIEW
+=========================
+
+□ Step 7.1: Check preview content
+   - Does it show optimized headline?
+   - Does it show optimized bio?
+   - Does it look good?
+   - Is it based on user's input?
+
+□ Step 7.2: Test "Back" button
+   - Click "← Back"
+   - Does it go to Page 2?
+   - Is data preserved?
+
+□ Step 7.3: Navigate forward again
+   - Click "Next" from Page 2
+   - Does it go back to Page 3?
+   - Is preview still there?
+
+RESULT: _______________________________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEST 8: PAGE 3 → PAGE 4 (PAYMENT)
+==================================
+
+□ Step 8.1: Find payment button
+   - Is "Unlock Full Access" button visible?
+   - Is ₹21 price clearly shown?
+   - Is it obvious this is payment step?
+
+□ Step 8.2: Click payment button
+   - Does it navigate to payment page?
+   - OR does Razorpay modal open?
+   - Is price shown as ₹21?
+
+RESULT: _______________________________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEST 9: PAYMENT FLOW (DEMO MODE)
+=================================
+
+□ Step 9.1: Check if demo mode works
+   - Is there a "Test Payment" option?
+   - Can test without real money?
+   - Does demo payment work?
+
+□ Step 9.2: After payment (demo)
+   - Does it show success message?
+   - Does it show full results?
+   - Can download results?
+   - Can copy results?
+
+RESULT: _______________________________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEST 10: ERROR SCENARIOS
+=========================
+
+□ Step 10.1: Test with empty fields
+   - Leave platform empty → Click Next
+   - Does it show clear error?
+   - Does it prevent navigation?
+
+□ Step 10.2: Test with partial data
+   - Fill platform only → Click Next
+   - Does it show what's missing?
+
+□ Step 10.3: Test browser back button
+   - Click browser back button
+   - Does data persist?
+   - Does app still work?
+
+□ Step 10.4: Test page refresh
+   - Refresh page on Step 2
+   - Does data persist?
+   - OR does it ask to re-enter?
+
+RESULT: _______________________________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEST 11: MOBILE TESTING
+========================
+
+□ Step 11.1: Open on mobile browser
+   - Does page load?
+   - Is text readable?
+   - Are buttons clickable?
+
+□ Step 11.2: Test complete flow on mobile
+   - Can fill form?
+   - Can navigate pages?
+   - Can see preview?
+   - Can complete payment?
+
+RESULT: _______________________________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEST 12: CONSOLE ERRORS
+========================
+
+□ Step 12.1: Check browser console throughout
+   - Any JavaScript errors?
+   - Any 404 errors (missing files)?
+   - Any warnings?
+
+□ Step 12.2: Check network tab
+   - Are all files loading?
+   - Any failed requests?
+   - Any slow requests?
+
+RESULT: _______________________________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FINAL CHECKLIST:
+================
+
+□ Complete user flow works (Page 1 → 2 → 3 → 4)
+□ All navigation buttons work (Next, Back)
+□ Data persists across pages
+□ Validation errors are clear and visible
+□ User knows what to click at each step
+□ Payment flow works (at least in demo mode)
+□ Mobile responsive
+□ No console errors
+□ No broken links
+□ Legal requirements met (price clear, no refund stated)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TESTING INSTRUCTIONS FOR AMIT:
+===============================
+
+1. Open: https://ideasbeforetime.pages.dev/social-optimizer-index.html
+2. Follow this checklist step by step
+3. Mark each item as PASS or FAIL
+4. Note any issues found
+5. Send me the results
+
+I CANNOT say "SPO is ready" until ALL items are PASS.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Last Updated: December 3, 2025, 00:50 IST
+Status: TESTING CHECKLIST READY
+Next Step: AMIT TESTS, I FIX ISSUES FOUND

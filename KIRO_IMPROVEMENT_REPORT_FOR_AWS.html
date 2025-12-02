@@ -334,6 +334,50 @@ FUNCTION classify_mistake(feedback):
             </div>
         </div>
 
+        <h3>Gap #4: Passive Learning vs Active Learning (ROOT CAUSE)</h3>
+        <div class="evidence">
+            <strong>The Master Problem:</strong>
+            <ul>
+                <li>Kiro documented 24 learnings over 3 weeks</li>
+                <li>Created 16 golden rules</li>
+                <li>Created 50+ test parameters</li>
+                <li>Yet still repeats same mistakes</li>
+                <li><strong>Why?</strong> Learning is PASSIVE (documentation) not ACTIVE (enforcement)</li>
+            </ul>
+            <strong>Root Cause:</strong> Kiro documents mistakes but doesn't algorithmically prevent them. Steering files are passive references, not active enforcement.
+        </div>
+        <div class="recommendation">
+            <strong>Algorithm Needed:</strong>
+            <div class="algorithm">
+ON session_start:
+    active_rules = load_steering_files_into_memory()
+    past_mistakes = load_mistake_patterns()
+    
+BEFORE generating_response:
+    1. Scan response for trigger words
+       ["ready", "done", "complete", "zero", "100%"]
+    
+    2. FOR each trigger_word found:
+        CHECK: Does response violate any active_rule?
+        CHECK: Is this a past_mistake pattern?
+        CHECK: Is there test evidence in conversation?
+    
+    3. IF violation_detected:
+        BLOCK response
+        FORCE alternative: "I should test before saying ready"
+        LOG: "Prevented mistake #X (would have been repeat)"
+    END IF
+    
+    4. IF no_violation:
+        ALLOW response
+        LOG: "Response validated against rules"
+    END IF
+
+RESULT: Rules are ENFORCED, not just DOCUMENTED
+        Mistakes are PREVENTED, not just RECORDED
+            </div>
+        </div>
+
         <h2>📊 Quantified Impact</h2>
         <table>
             <tr>

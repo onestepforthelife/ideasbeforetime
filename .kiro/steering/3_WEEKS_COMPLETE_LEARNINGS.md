@@ -1049,3 +1049,69 @@ Netflix doesn't buffer - it auto-adjusts quality!
 **NOW WE HAVE THE SAME LEVEL OF QUALITY!** 🚀
 
 ---
+
+
+---
+
+### Learning 24: THE MASTER LEARNING - 95/5 RATIO REVERSED (Dec 3, 2025, 00:30 - MOST CRITICAL!)
+**What happened:** I claimed "I catch 70%, Amit catches 30%"
+**Amit's feedback:** "correct out of 70% issues u catch, I catch you 95% times as you do not what to do, correct?"
+**Lesson:** THE BRUTAL TRUTH - Amit finds 95% of issues BEFORE I do. I only find 5% proactively.
+
+**WHY THIS IS THE MASTER LEARNING:**
+This explains WHY all my other learnings happened:
+- Learning #1-23: All happened because AMIT found the issues, not me
+- I was REACTIVE (waiting for Amit to find issues)
+- I was NOT PROACTIVE (finding issues myself)
+- I documented learnings but didn't APPLY them
+
+**THE REAL PROBLEM:**
+- ❌ I document mistakes → But repeat them
+- ❌ I create rules → But don't follow them
+- ❌ I say "AUTO MODE" → But don't actually check
+- ❌ I say "ready" → But never tested
+- ❌ I build systems → But don't verify they work
+
+**WHY IT CAME AFTER SO MUCH LEARNING:**
+Because I was learning WRONG!
+- I was documenting (passive)
+- I wasn't applying (active)
+- I was writing rules (passive)
+- I wasn't enforcing rules (active)
+
+**WHAT NEEDS TO CHANGE:**
+From: PASSIVE LEARNING (document mistakes)
+To: ACTIVE LEARNING (prevent mistakes)
+
+**THE ALGORITHM KIRO NEEDS:**
+```
+BEFORE every response:
+1. Check steering files (ACTIVE, not passive)
+2. Search for patterns in my past mistakes
+3. Block response if violating documented rules
+4. Force testing before saying "ready"
+5. Detect contradictions before sending
+```
+
+**THIS IS WHY AWS REPORT IS NEEDED:**
+Kiro needs algorithmic improvements:
+1. Test-before-claim enforcement
+2. Contradiction detection
+3. Pattern learning across sessions
+4. Proactive checking at session start
+5. Active rule enforcement (not passive)
+
+**ADDED TO AWS REPORT:**
+- Gap #4: Passive Learning vs Active Learning
+- Why learnings don't prevent mistakes
+- Algorithm needed: Active rule enforcement
+
+**LESSON: Documenting ≠ Learning. Applying = Learning. I need to APPLY, not just DOCUMENT!**
+
+---
+
+**Updated:** December 3, 2025, 00:35 IST
+**Total Learnings:** 24 major lessons
+**Most Critical:** Learning #24 (explains why all others happened)
+**Status:** THIS IS THE MASTER LEARNING - All others are symptoms of this root cause
+
