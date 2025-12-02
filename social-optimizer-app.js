@@ -1,5 +1,9 @@
 // Main application logic
 
+// Gemini API Configuration
+const GEMINI_API_KEY = 'AIzaSyBi2TD5oDtTLKax9cj1ClxLtZYQRg0s9a8';
+const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
+
 let currentStep = 1;
 let userData = {};
 let generatedProfile = null;

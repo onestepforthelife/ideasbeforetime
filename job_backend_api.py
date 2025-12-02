@@ -16,6 +16,7 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for localhost testing
 
 # Configuration
+GEMINI_API_KEY = 'AIzaSyBi2TD5oDtTLKax9cj1ClxLtZYQRg0s9a8'  # Amit's Gemini API Key
 JOB_RESULTS_FOLDER = 'job_results'
 PROFILE_FOLDER = 'amit profile for Kiro'
 
