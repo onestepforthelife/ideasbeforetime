@@ -260,6 +260,20 @@
             z-index: 1000;
         }
 
+        .tools-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .tools-grid img {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            object-fit: cover;
+        }
+
         @media print {
             body { background: white; padding: 0; font-size: 10pt; }
             .container { box-shadow: none; max-width: 100%; }
@@ -268,6 +282,7 @@
             .section h2 { font-size: 11pt; }
             .summary-box { font-size: 9.5pt; }
             .back-button, .print-button { display: none; }
+            .tools-grid img { max-height: 120px; }
             @page { size: A4; margin: 8mm 12mm; }
         }
     </style>
@@ -294,7 +309,7 @@
             <div class="section">
                 <h2>Professional Summary</h2>
                 <div class="summary-box">
-                    <strong>Board-Ready Transformation Architect</strong> with 20+ years across chemicals, pharma, automotive. Architected multi-billion-dollar growth strategies, built governance frameworks, advised CXOs on ESG, DEI, institutional reform.
+                    <strong>Board-Ready Transformation Architect</strong> with 20+ years across chemicals, pharma, automotive, and semiconductor supply chains. Proven ability to master new technical domains (AWS KIRO, Agentic AI, hardware/process literacy) and apply them to governance, compliance, and precision manufacturing environments. Architected multi-billion-dollar growth strategies, built governance frameworks, advised CXOs on ESG, DEI, institutional reform.
                 </div>
             </div>
 
@@ -302,10 +317,14 @@
                 <h2>Executive Highlights</h2>
                 <div class="highlights">
                     <div class="highlight-item">P&L: $150–180M across BASF, DSM, 3M—25%+ CAGR</div>
-                    <div class="highlight-item">Strategic: 3-year South-Asia business consolidation</div>
-                    <div class="highlight-item">Operations: Zero incidents, 30% faster delivery</div>
-                    <div class="highlight-item">Digital: 50% cycle cut, $50M+ uplift</div>
-                    <div class="highlight-item">ESG: 100% compliance frameworks</div>
+                    <div class="highlight-item">Market Expansion: Built $3M→$30M business (60% CAGR); removed 25-year legacy agents; won 60-100% market share</div>
+                    <div class="highlight-item">Semiconductor Supply Chain: Supported wafer cleaning, etching, precision coating solutions for electronics manufacturing; FAB governance frameworks</div>
+                    <div class="highlight-item">Team & Operational Excellence: Zero incidents, 30% faster delivery, 200% customer focus enhancement, cross-functional APAC collaboration</div>
+                    <div class="highlight-item">Strategic: 3-year South-Asia business consolidation; Japan integration; distribution optimization</div>
+                    <div class="highlight-item">Digital: 50% cycle cut, $50M+ uplift; SAP S/4HANA, Salesforce, Power BI, AI Dashboards</div>
+                    <div class="highlight-item">ESG: 100% compliance frameworks; 10% VOC reduction; waste management optimization</div>
+                    <div class="highlight-item">Tech Fluency: AWS KIRO, Agentic AI, Cloudflare, GitHub, OS installation & hardware assembly</div>
+                    <div class="highlight-item">Learning Agility: Rapidly self-learned new platforms and industrial systems, bridging pharma → chemicals → semiconductor</div>
                 </div>
             </div>
 
@@ -314,9 +333,13 @@
                 <div class="comp-grid">
                     <div class="comp-item">Strategic Growth & P&L Ownership</div>
                     <div class="comp-item">Digital Transformation (SAP, Salesforce, CPQ)</div>
+                    <div class="comp-item">Semiconductor Supply Chain Integration</div>
                     <div class="comp-item">Contract Lifecycle & Governance</div>
                     <div class="comp-item">CXO Dashboarding & Engagement</div>
                     <div class="comp-item">ESG Compliance & Value Realization</div>
+                    <div class="comp-item">Industrial Engineering & Preventive Maintenance</div>
+                    <div class="comp-item">Hardware & Systems Literacy (Assembly, PLC, Multimeter)</div>
+                    <div class="comp-item">AI & Cloud Platforms (AWS KIRO, Copilot, Cloudflare, GitHub)</div>
                     <div class="comp-item">Agile Delivery & Business Intelligence</div>
                 </div>
             </div>
@@ -330,10 +353,10 @@
                     <div class="date">Jul 2024 – Present</div>
                     <div class="details"><strong>Tools:</strong> Salesforce, SAP S/4HANA, Power BI, AI Dashboards</div>
                     <ul>
-                        <li>Enhanced customer focus 200%</li>
-                        <li>Built CXO compliance dashboards</li>
-                        <li>Created BIS certification framework</li>
-                        <li>Enabled CRM customer lifecycle</li>
+                        <li>Operational Excellence: Enhanced customer focus 200%; built CXO compliance dashboards</li>
+                        <li>Team Leadership: Led cross-functional teams across sales, projects, institutional accounts</li>
+                        <li>Governance: Created BIS certification framework; enabled CRM customer lifecycle</li>
+                        <li>Digital Transformation: Implemented AI-powered dashboards for real-time decision-making</li>
                     </ul>
                 </div>
 
@@ -342,9 +365,10 @@
                     <div class="date">Jul 2023 – Jun 2024</div>
                     <div class="details">~$100M | 11% Growth</div>
                     <ul>
-                        <li>CXO dashboards for churn & SLA</li>
-                        <li>APAC collaboration strengthened</li>
-                        <li>Distribution optimization</li>
+                        <li>Semiconductor Focus: Strengthened APAC collaboration for semiconductor supply chain surfactants (wafer cleaning, precision coating, etching)</li>
+                        <li>Operational Excellence: Built CXO dashboards for churn & SLA; embedded compliance dashboards adaptable to semiconductor FAB governance</li>
+                        <li>Team & Market Expansion: Led Japan integration; optimized distribution across South Asia</li>
+                        <li>Strategic Execution: Delivered 11% growth in mature $100M market</li>
                     </ul>
                 </div>
 
@@ -353,10 +377,10 @@
                     <div class="date">Apr 2016 – Jun 2022</div>
                     <div class="details">EP: $20M→$70M (25%) | PU: $35M→$45M (5%)</div>
                     <ul>
-                        <li>Removed 25-year legacy agents</li>
-                        <li>Localized global products</li>
-                        <li>Cut VOC emissions via reformulation</li>
-                        <li>Reduced cost to serve 0.5%</li>
+                        <li>Market Expansion: Removed 25-year legacy agents; built direct OEM relationships</li>
+                        <li>Team Leadership: Led cross-functional teams across sales, technical, supply chain</li>
+                        <li>Operational Excellence: Localized global products; cut VOC emissions via reformulation</li>
+                        <li>Cost Optimization: Reduced cost to serve 0.5%; streamlined distribution</li>
                     </ul>
                 </div>
 
@@ -365,36 +389,13 @@
                     <div class="date">Feb 2011 – Mar 2016</div>
                     <div class="details">$3M → $30M (60% CAGR)</div>
                     <ul>
-                        <li>Built 100% clean business from scratch</li>
-                        <li>Won 60–100% market share</li>
-                        <li>Built OEM relationships (Maruti, Hero, Honda)</li>
-                        <li>Reduced sales cycle 30%</li>
+                        <li>Market Expansion: Built 100% clean business from scratch; won 60–100% market share</li>
+                        <li>Team Building: Recruited, trained & led 15+ member sales & technical team</li>
+                        <li>Operational Excellence: Built OEM relationships (Maruti, Hero, Honda); reduced sales cycle 30%</li>
+                        <li>Strategic Execution: Established distribution network across 8 states</li>
                     </ul>
                 </div>
 
-                <div class="exp-item">
-                    <h3>3M India Pvt. Ltd.</h3>
-                    <div class="role">Manager (Sales & Marketing) - Energy & Advanced Materials</div>
-                    <div class="date">Mar 2010 – Jan 2011</div>
-                    <div class="details">3M Euro Fluoropolymers | 40% CAGR</div>
-                </div>
-
-                <div class="exp-item">
-                    <h3>DSM Engineering Plastics (Envalior)</h3>
-                    <div class="role">Business Development - North India</div>
-                    <div class="date">Aug 2007 – Feb 2010</div>
-                    <div class="details">6M Euro | 40% CAGR | Automotive & Electrical</div>
-                </div>
-
-                <div class="exp-item">
-                    <h3>Avery Dennison India Pvt. Ltd.</h3>
-                    <div class="role">Leadership Development - Plant Operations</div>
-                    <div class="date">Jun 2006 – Aug 2007</div>
-                    <ul>
-                        <li>Reduced VOC emissions 10%</li>
-                        <li>Optimized waste management (ESG)</li>
-                    </ul>
-                </div>
             </div>
 
             <div class="section">
@@ -434,6 +435,8 @@
                     <div class="comp-item">Executive Conflict Resolution</div>
                     <div class="comp-item">Red & Blue Ocean Strategy</div>
                     <div class="comp-item">Advanced Negotiation</div>
+                    <div class="comp-item">Self-taught hardware/software integration (OS installation, PC assembly, soldering, PLC basics)</div>
+                    <div class="comp-item">Continuous learning via online platforms (cloud, AI, industrial systems)</div>
                 </div>
             </div>
 
@@ -442,6 +445,27 @@
                 <div class="summary-box">
                     <strong>Life Member:</strong> IIICA · QCFI · IEI · PCI · IIChe
                 </div>
+            </div>
+
+            <div class="section">
+                <h2>Passions & Additional Skills</h2>
+                <div class="highlights">
+                    <div class="highlight-item">Exploring AI platforms (Copilot, Agentic AI) for governance automation</div>
+                    <div class="highlight-item">Building and assembling laptops/PCs; OS installation and hardware troubleshooting</div>
+                    <div class="highlight-item">Practical electronics literacy (soldering, multimeter, PLC awareness)</div>
+                    <div class="highlight-item">Launching a YouTube channel on smell testing & scent reviews (creative exploration)</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Professional Tools & Technical Fluency</h2>
+                <div class="tools-grid">
+                    <img src="images/Professional tools i.png" alt="Professional Tools - Director & Engineer Level">
+                    <img src="images/Collage-style image .png" alt="Technical Tools Collage">
+                </div>
+                <p style="font-size: 6.5pt; color: #666; margin-top: 3px; text-align: center; font-style: italic;">
+                    Dual-perspective technical fluency: Strategic tools (AWS, KIRO, Agentic AI, Cloudflare, GitHub) + Hands-on engineering (soldering, multimeter, PLC, hardware assembly)
+                </p>
             </div>
 
             <div class="section">
@@ -460,12 +484,50 @@
                     <div class="theme-tag">Governance</div>
                     <div class="theme-tag">CXO Succession</div>
                     <div class="theme-tag">ESG Stewardship</div>
+                    <div class="theme-tag">Semiconductor Ecosystem Building</div>
                     <div class="theme-tag">ASEAN Partnerships</div>
                     <div class="theme-tag">DEI Advocacy</div>
                     <div class="theme-tag">Institutional Reform</div>
                     <div class="theme-tag">APAC Strategy</div>
                     <div class="theme-tag">Board Advisory</div>
                     <div class="theme-tag">Digital Transformation</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Earlier Career Highlights</h2>
+
+                <div class="exp-item">
+                    <h3>3M India Pvt. Ltd.</h3>
+                    <div class="role">Manager (Sales & Marketing) - Energy & Advanced Materials</div>
+                    <div class="date">Mar 2010 – Jan 2011</div>
+                    <div class="details">3M Euro Fluoropolymers | 40% CAGR</div>
+                    <ul>
+                        <li>Led high-performance materials for semiconductor & electronics</li>
+                        <li>Built cross-functional teams for market penetration</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <h3>DSM Engineering Plastics (Envalior)</h3>
+                    <div class="role">Business Development - North India</div>
+                    <div class="date">Aug 2007 – Feb 2010</div>
+                    <div class="details">6M Euro | 40% CAGR | Automotive & Electrical</div>
+                    <ul>
+                        <li>Expanded market share in precision engineering plastics</li>
+                        <li>Managed multi-site operations & distributor networks</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <h3>Avery Dennison India Pvt. Ltd.</h3>
+                    <div class="role">Leadership Development - Plant Operations</div>
+                    <div class="date">Jun 2006 – Aug 2007</div>
+                    <ul>
+                        <li>Reduced VOC emissions 10% (ESG operational excellence)</li>
+                        <li>Optimized waste management & preventive maintenance</li>
+                        <li>Led cross-functional teams for process improvements</li>
+                    </ul>
                 </div>
             </div>
         </div>
