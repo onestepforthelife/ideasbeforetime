@@ -9,6 +9,7 @@ function addSiteFooter() {
                 <a href="index.html">Home</a>
                 <a href="social-optimizer-index.html">SPO Tool</a>
                 <a href="email-sender-web.html">Job Search Tool</a>
+                <a href="market-reports.html">Chemical Reports</a>
                 <a href="library.html">Innovation Library</a>
                 <a href="about.html">About</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
