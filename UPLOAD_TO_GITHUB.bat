@@ -18,7 +18,7 @@ echo Step 2: Add all files
 
 echo.
 echo Step 3: Commit changes with timestamp
-%GIT% commit -m "CV: Full-width 2-column layout like 2 pages side-by-side - compact for recruiters"
+%GIT% commit -m "CV: 1400px width + CSS columns (no blank spaces) - compact 2-column layout"
 
 echo.
 echo Step 4: Connect to GitHub (if not done)
