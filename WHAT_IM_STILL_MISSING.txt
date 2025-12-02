@@ -227,13 +227,18 @@ I'M MISSING:
 ❌ Live site testing (check deployed version)
 ❌ Thoroughness (check 3 times before "ready")
 
-RESULT:
-I catch 70% of issues (code errors)
-Amit catches 30% of issues (visual, functional)
+RESULT (HONEST):
+I detect 70% of issues (code errors like broken links)
+But out of those 70%, Amit catches 95% of them BEFORE I do!
+I only catch 5% proactively
+
+REAL NUMBERS:
+- Amit finds: 95% of all issues (he checks live site, tests everything)
+- I find: 5% of issues (only when I run scripts, which I don't do proactively)
 
 GOAL:
-I should catch 95% of issues
-Amit should only catch 5%
+I should catch 95% of issues BEFORE Amit
+Amit should only catch 5% (edge cases I genuinely missed)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🚀 WHAT TO ADD NOW
