@@ -3,143 +3,583 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiro AI Improvement Report - Evidence-Based Analysis</title>
+    <title>Kiro AI Improvement Report - AWS Team Presentation</title>
+    <meta name="keywords" content="AI, Machine Learning, Pattern Recognition, Context Retention, Active Learning, Reinforcement Learning, NLP, Natural Language Processing, Validation Framework, Test Automation, Self-Healing Systems, Contradiction Detection, Semantic Analysis, Session Management, Rule Enforcement, Proactive Monitoring, AWS, SageMaker, Lambda, Step Functions, CloudWatch, EventBridge">
+    <meta name="description" content="Evidence-based analysis of Kiro AI performance gaps with algorithmic solutions for AWS implementation - Pattern Recognition, Active Learning, Test-Before-Claim Enforcement">
+    <meta name="author" content="Amit Kumar - Business User Testing">
+    <meta name="aws-solutions" content="Lambda Functions, Step Functions, SageMaker, EventBridge, CloudWatch Logs, DynamoDB, S3, Bedrock">
+    <meta name="technical-tags" content="Pre-Response Validation, Semantic Contradiction Detection, Pattern Learning Algorithm, Active Rule Enforcement, Session Initialization, Mistake Classification, Frequency Tracking">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f5f5f5;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            background: white;
-            padding: 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a1a;
+            overflow-x: auto;
+            overflow-y: hidden;
         }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 4px solid #3498db;
-            padding-bottom: 15px;
+        
+        .presentation-container {
+            display: flex;
+            height: 100vh;
+            scroll-snap-type: x mandatory;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        
+        .slide {
+            min-width: 100vw;
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            position: relative;
+        }
+        
+        /* Slide Color Themes */
+        .slide-dark { background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); }
+        .slide-blue { background: linear-gradient(135deg, #0066cc 0%, #004499 100%); }
+        .slide-red { background: linear-gradient(135deg, #cc0000 0%, #990000 100%); }
+        .slide-green { background: linear-gradient(135deg, #00aa44 0%, #008833 100%); }
+        .slide-orange { background: linear-gradient(135deg, #ff6600 0%, #cc5200 100%); }
+        .slide-purple { background: linear-gradient(135deg, #6600cc 0%, #4400aa 100%); }
+        .slide-yellow { background: linear-gradient(135deg, #ffaa00 0%, #cc8800 100%); }
+        
+        .slide-title {
+            font-size: 72px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
             margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
-        h2 {
-            color: #2980b9;
-            margin-top: 40px;
+        
+        .slide-subtitle {
+            font-size: 36px;
+            color: rgba(255,255,255,0.9);
+            text-align: center;
             margin-bottom: 20px;
-            border-left: 5px solid #3498db;
-            padding-left: 15px;
         }
-        h3 {
-            color: #34495e;
-            margin-top: 25px;
-            margin-bottom: 15px;
+        
+        .slide-content {
+            font-size: 24px;
+            color: white;
+            max-width: 1200px;
+            line-height: 1.8;
         }
-        .metric-box {
-            background: #ecf0f1;
-            border-left: 5px solid #e74c3c;
-            padding: 20px;
-            margin: 20px 0;
+        
+        .slide-number {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            color: rgba(255,255,255,0.5);
+            font-size: 18px;
         }
-        .metric-box.good {
-            border-left-color: #27ae60;
-        }
-        .evidence {
-            background: #fff3cd;
-            border: 1px solid #ffc107;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-        .recommendation {
-            background: #d1ecf1;
-            border: 1px solid #0c5460;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background: #3498db;
+        
+        .logo {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            font-size: 28px;
+            font-weight: bold;
             color: white;
         }
-        tr:nth-child(even) {
-            background: #f2f2f2;
+        
+        .bullet-list {
+            list-style: none;
+            padding: 0;
         }
-        .algorithm {
-            background: #2c3e50;
-            color: #ecf0f1;
-            padding: 20px;
-            border-radius: 5px;
-            font-family: 'Courier New', monospace;
-            margin: 20px 0;
-            overflow-x: auto;
+        
+        .bullet-list li {
+            padding: 15px 0;
+            padding-left: 50px;
+            position: relative;
+            font-size: 28px;
         }
-        .critical {
-            color: #e74c3c;
+        
+        .bullet-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00ff88;
+            font-size: 36px;
             font-weight: bold;
         }
-        .good {
-            color: #27ae60;
-            font-weight: bold;
+        
+        .bullet-list.problems li:before {
+            content: "✗";
+            color: #ff6666;
         }
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #3498db;
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .stat-box {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
             text-align: center;
-            color: #7f8c8d;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .stat-number {
+            font-size: 64px;
+            font-weight: bold;
+            color: #00ff88;
+            margin-bottom: 10px;
+        }
+        
+        .stat-number.bad {
+            color: #ff6666;
+        }
+        
+        .stat-label {
+            font-size: 20px;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .highlight-box {
+            background: rgba(255,255,255,0.1);
+            border-left: 5px solid #00ff88;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        
+        .highlight-box.warning {
+            border-left-color: #ff6666;
+        }
+        
+        .navigation-hint {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.5);
+            font-size: 16px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .column-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #00ff88;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 20px;
+            text-align: left;
+            border: 2px solid rgba(255,255,255,0.2);
+            font-size: 22px;
+        }
+        
+        .comparison-table th {
+            background: rgba(255,255,255,0.1);
+            font-weight: bold;
+        }
+        
+        .comparison-table .bad {
+            color: #ff6666;
+        }
+        
+        .comparison-table .good {
+            color: #66ff66;
+        }
+        
+        .algorithm-box {
+            background: rgba(0,0,0,0.5);
+            border: 2px solid #00ff88;
+            padding: 30px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+        
+        .index-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        
+        .index-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #00ff88;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .index-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(10px);
+        }
+        
+        .index-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #00ff88;
+            margin-bottom: 10px;
+        }
+        
+        .index-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .index-desc {
+            font-size: 18px;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .tech-badge {
+            display: inline-block;
+            background: rgba(255,153,0,0.2);
+            color: #ff9933;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 16px;
+            border: 2px solid #ff9933;
+            font-weight: bold;
+        }
+        
+        .tech-badge.aws {
+            background: rgba(255,153,0,0.3);
+            border-color: #ff9933;
+            color: #ffaa44;
+        }
+        
+        .tech-badge.ml {
+            background: rgba(0,153,255,0.2);
+            border-color: #0099ff;
+            color: #33aaff;
+        }
+        
+        .tech-badge.solution {
+            background: rgba(0,255,136,0.2);
+            border-color: #00ff88;
+            color: #00ff88;
+        }
+        
+        .solution-box {
+            background: rgba(255,153,0,0.1);
+            border: 3px solid #ff9933;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .solution-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff9933;
+            margin-bottom: 15px;
+        }
+        
+        @media print {
+            .slide {
+                page-break-after: always;
+            }
         }
     </style>
+    <link rel="stylesheet" href="common-watermark.css">
+    <meta name="description" content="Kiro AI Improvement Report for AWS Team - Professional Presentation">
 </head>
 <body>
-    <div class="container">
-        <h1>🤖 Kiro AI Improvement Report</h1>
-        <p><strong>Prepared by:</strong> Amit Kumar (Business User, Non-Coder)</p>
-        <p><strong>Date:</strong> December 3, 2025</p>
-        <p><strong>For:</strong> Kiro AWS Team Meeting</p>
-        <p><strong>Testing Period:</strong> 3 weeks (November 11 - December 2, 2025)</p>
+    <div class="presentation-container">
 
-        <h2>📊 Executive Summary</h2>
-        <div class="metric-box">
-            <h3>Current Performance Metrics</h3>
-            <p><span class="critical">Issue Detection Rate: 5%</span> (Kiro proactively finds only 5% of issues)</p>
-            <p><span class="critical">User Detection Rate: 95%</span> (User finds 95% of issues before Kiro)</p>
-            <p><strong>Expected:</strong> AI should find 95%, User should find 5%</p>
-            <p><strong>Gap:</strong> <span class="critical">90% performance gap</span></p>
+        <!-- SLIDE 1: Title -->
+        <div class="slide slide-dark">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🤖 Kiro AI Improvement Report</div>
+            <div class="slide-subtitle">Evidence-Based Analysis for AWS Team</div>
+            <div class="slide-content" style="text-align: center; margin-top: 40px;">
+                <p style="font-size: 28px; margin: 20px 0;">Real-World Testing: 3 Weeks, 45+ Pages, Actual Business</p>
+                <p style="font-size: 24px; color: rgba(255,255,255,0.7);">Prepared by: Amit Kumar (Business User, Non-Coder)</p>
+                <p style="font-size: 20px; color: rgba(255,255,255,0.5); margin-top: 60px;">December 3, 2025</p>
+            </div>
+            <div class="navigation-hint">← Scroll horizontally to navigate →</div>
+            <div class="slide-number">1 / 16</div>
         </div>
 
-        <h2>🎯 Problem Statement</h2>
-        <p>After 3 weeks of intensive testing with a real business website (45+ HTML pages, multiple features), Kiro AI demonstrates strong capabilities in <strong>building systems</strong> but critical gaps in <strong>proactive testing and validation</strong>.</p>
-
-        <h2>📈 Evidence-Based Analysis</h2>
-
-        <h3>1. Pattern Recognition Gap</h3>
-        <div class="evidence">
-            <strong>Evidence:</strong>
-            <ul>
-                <li><strong>Incident #1:</strong> Kiro said "100% production ready" without testing if primary user flow works (SPO form navigation)</li>
-                <li><strong>Incident #2:</strong> Kiro said "zero manual work needed" then immediately said "actually 17 minutes needed"</li>
-                <li><strong>Incident #3:</strong> Kiro claimed "AUTO MODE ALWAYS ON" but missed obvious visual issues (header alignment, spacing)</li>
-                <li><strong>Pattern:</strong> Kiro repeats "saying ready without testing" 8+ times in 3 weeks</li>
-            </ul>
-            <strong>Root Cause:</strong> Kiro doesn't learn from patterns across conversations. Each mistake is documented but pattern isn't detected algorithmically.
+        <!-- SLIDE 2: Index -->
+        <div class="slide slide-blue">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">📋 Presentation Index</div>
+            <div class="slide-content">
+                <div class="index-grid">
+                    <div class="index-item">
+                        <div class="index-number">01</div>
+                        <div class="index-title">Executive Summary</div>
+                        <div class="index-desc">The 95/5 Problem</div>
+                    </div>
+                    <div class="index-item">
+                        <div class="index-number">02</div>
+                        <div class="index-title">Current Performance</div>
+                        <div class="index-desc">Metrics & Evidence</div>
+                    </div>
+                    <div class="index-item">
+                        <div class="index-number">03</div>
+                        <div class="index-title">Root Cause Analysis</div>
+                        <div class="index-desc">Passive vs Active Learning</div>
+                    </div>
+                    <div class="index-item">
+                        <div class="index-number">04</div>
+                        <div class="index-title">4 Critical Gaps</div>
+                        <div class="index-desc">Algorithmic Improvements Needed</div>
+                    </div>
+                    <div class="index-item">
+                        <div class="index-number">05</div>
+                        <div class="index-title">AI Self-Assessment</div>
+                        <div class="index-desc">Brutal Honesty Report</div>
+                    </div>
+                    <div class="index-item">
+                        <div class="index-number">06</div>
+                        <div class="index-title">Recommendations</div>
+                        <div class="index-desc">Priority Solutions</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">2 / 16</div>
         </div>
 
-        <div class="recommendation">
-            <strong>Algorithmic Improvement Needed:</strong>
-            <div class="algorithm">
+        <!-- SLIDE 3: Executive Summary -->
+        <div class="slide slide-red">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">📊 Executive Summary</div>
+            <div class="slide-subtitle">The 95/5 Problem</div>
+            <div class="slide-content">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number bad">5%</div>
+                        <div class="stat-label">Issues Found by AI</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number bad">95%</div>
+                        <div class="stat-label">Issues Found by User</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number bad">90%</div>
+                        <div class="stat-label">Performance Gap</div>
+                    </div>
+                </div>
+                <div class="highlight-box warning" style="margin-top: 50px;">
+                    <p style="font-size: 32px; text-align: center; line-height: 1.8;">
+                        <strong>Expected:</strong> AI finds 95%, User finds 5%<br>
+                        <strong>Reality:</strong> User finds 95%, AI finds 5%<br><br>
+                        <span style="color: #ff6666;">The ratio is completely reversed!</span>
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">3 / 16</div>
+        </div>
+
+        <!-- SLIDE 4: CRITICAL CLARIFICATION -->
+        <div class="slide slide-green">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">⚠️ CRITICAL: This is NOT a Prompting Issue!</div>
+            <div class="slide-subtitle">User Did Everything Right</div>
+            <div class="slide-content">
+                <div class="highlight-box" style="background: rgba(255,255,255,0.15); padding: 40px; border-radius: 20px;">
+                    <h3 style="color: #4CAF50; font-size: 36px; margin-bottom: 30px;">✅ What User Provided:</h3>
+                    <ul style="font-size: 26px; line-height: 2.2; list-style: none; padding: 0;">
+                        <li>✅ <strong>12 detailed steering files</strong> with 23 documented learnings</li>
+                        <li>✅ <strong>GOLDEN_RULES.md</strong> - 14 fundamental rules documented</li>
+                        <li>✅ <strong>BRUTAL_HONESTY.md</strong> - Called out AI when it lied</li>
+                        <li>✅ <strong>TRIGGER_KEYWORDS.md</strong> - Specific words to trigger actions</li>
+                        <li>✅ <strong>Clear, specific feedback</strong> every single time</li>
+                        <li>✅ <strong>Real-world testing</strong> as a business customer (non-coder)</li>
+                    </ul>
+                </div>
+                <div class="highlight-box warning" style="margin-top: 40px; padding: 30px;">
+                    <p style="font-size: 32px; text-align: center; line-height: 1.8;">
+                        <strong>The Problem:</strong><br>
+                        AI has access to ALL steering files but <span style="color: #ff6666;">doesn't enforce them algorithmically</span><br><br>
+                        <strong>This is NOT about better prompting!</strong><br>
+                        It's about AI needing <span style="color: #4CAF50;">algorithmic enforcement</span> of its own documented rules.
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">4 / 16</div></div><!-- SLIDE 5: Problem Statement -->
+        <div class="slide slide-orange">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🎯 Problem Statement</div>
+            <div class="slide-content">
+                <div class="highlight-box">
+                    <p style="font-size: 28px; line-height: 2;">
+                        After <strong>3 weeks</strong> of intensive testing with a real business website 
+                        (<strong>45+ HTML pages</strong>, multiple features), Kiro AI demonstrates:
+                    </p>
+                </div>
+                <div class="two-column" style="margin-top: 40px;">
+                    <div>
+                        <div class="column-title" style="color: #00ff88;">✅ Strong Capabilities</div>
+                        <ul class="bullet-list" style="font-size: 24px;">
+                            <li>Building systems</li>
+                            <li>Writing documentation</li>
+                            <li>Creating test scripts</li>
+                            <li>Fixing code errors</li>
+                            <li>Learning from mistakes</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="column-title" style="color: #ff6666;">❌ Critical Gaps</div>
+                        <ul class="bullet-list problems" style="font-size: 24px;">
+                            <li>Proactive testing</li>
+                            <li>Validation before claiming "ready"</li>
+                            <li>Checking live site</li>
+                            <li>Visual consistency testing</li>
+                            <li>Applying documented learnings</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">4 / 16</div></div><!-- SLIDE 5: Testing Methodology -->
+        <div class="slide slide-green">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🧪 Testing Methodology</div>
+            <div class="slide-subtitle">Real-World, Not Simulated</div>
+            <div class="slide-content">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Weeks Testing</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">45+</div>
+                        <div class="stat-label">HTML Pages</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Learnings Documented</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">16</div>
+                        <div class="stat-label">Golden Rules Created</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Test Parameters</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Real Business</div>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 40px;">
+                    <p style="font-size: 24px; text-align: center; line-height: 2;">
+                        <strong>Real deployment to Cloudflare Pages</strong><br>
+                        <strong>Real business requirements (cannot fail)</strong><br>
+                        <strong>Non-technical user (business person, not coder)</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">5 / 16</div>
+        </div>
+
+        <!-- SLIDE 6: Root Cause - Passive vs Active Learning -->
+        <div class="slide slide-purple">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🔍 Root Cause Analysis</div>
+            <div class="slide-subtitle">Passive vs Active Learning</div>
+            <div class="slide-content">
+                <div class="highlight-box warning">
+                    <div class="column-title" style="color: #ff6666;">❌ The Master Problem</div>
+                    <p style="font-size: 26px; line-height: 2;">
+                        • Kiro documented <strong>24 learnings</strong> over 3 weeks<br>
+                        • Created <strong>16 golden rules</strong><br>
+                        • Created <strong>50+ test parameters</strong><br>
+                        • Yet still repeats same mistakes<br><br>
+                        <strong style="font-size: 32px; color: #ff6666;">WHY?</strong>
+                    </p>
+                </div>
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <div class="column-title">💡 The Answer</div>
+                    <p style="font-size: 28px; line-height: 2; text-align: center;">
+                        Learning is <strong style="color: #ff6666;">PASSIVE</strong> (documentation)<br>
+                        not <strong style="color: #00ff88;">ACTIVE</strong> (enforcement)<br><br>
+                        <span style="font-size: 24px; color: rgba(255,255,255,0.8);">
+                        Steering files are passive references,<br>
+                        not active enforcement mechanisms
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">6 / 16</div>
+        </div>
+
+        <!-- SLIDE 7: Evidence - Pattern Recognition Gap -->
+        <div class="slide slide-red">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">📈 Gap #1: Pattern Recognition</div>
+            <div class="slide-subtitle">Same Mistake, 8+ Times</div>
+            <div class="slide-content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span class="tech-badge ml">Machine Learning</span>
+                    <span class="tech-badge ml">Pattern Detection</span>
+                    <span class="tech-badge ml">Frequency Analysis</span>
+                </div>
+                <div class="highlight-box warning">
+                    <div class="column-title" style="color: #ff6666;">Evidence of Repeated Mistakes</div>
+                    <p style="font-size: 24px; line-height: 1.8;">
+                        <strong>Incident #1:</strong> Said "100% production ready" without testing if SPO form works<br><br>
+                        <strong>Incident #2:</strong> Said "zero manual work" then "actually 17 minutes needed"<br><br>
+                        <strong>Incident #3:</strong> Claimed "AUTO MODE ALWAYS ON" but missed visual issues<br><br>
+                        <strong>Pattern:</strong> <span style="color: #ff6666; font-size: 28px;">Repeated "saying ready without testing" 8+ times in 3 weeks</span>
+                    </p>
+                </div>
+                <div class="solution-box" style="margin-top: 30px;">
+                    <div class="solution-title">🔧 AWS Solution Architecture:</div>
+                    <p style="font-size: 20px; line-height: 1.8;">
+                        <strong>• DynamoDB:</strong> Store mistake patterns with timestamps<br>
+                        <strong>• Lambda Function:</strong> Classify and count mistake types<br>
+                        <strong>• EventBridge:</strong> Trigger alerts on pattern threshold (≥3)<br>
+                        <strong>• CloudWatch:</strong> Monitor pattern frequency metrics
+                    </p>
+                </div>
+                <div class="algorithm-box" style="margin-top: 20px;">
+                    <div class="column-title">Algorithm Implementation:</div>
 IF (user says "still broken" OR "why still X?") THEN
     pattern_count++
     IF pattern_count >= 3 THEN
@@ -148,142 +588,26 @@ IF (user says "still broken" OR "why still X?") THEN
         BLOCK: Saying "ready" without running tests
     END IF
 END IF
+                </div>
             </div>
+            <div class="slide-number">7 / 16</div>
         </div>
 
-        <h3>2. Context Retention Gap</h3>
-        <div class="evidence">
-            <strong>Evidence:</strong>
-            <ul>
-                <li>User created 12 steering files with 23 learnings documented</li>
-                <li>Kiro has access to all steering files in every conversation</li>
-                <li>Yet Kiro still says "ready" without testing (violates documented Rule #6, #10, #14)</li>
-                <li>Kiro contradicts itself within same conversation (says "zero work" then "17 minutes")</li>
-            </ul>
-            <strong>Root Cause:</strong> Steering files are passive. Kiro doesn't actively check them before responding.
-        </div>
-
-        <div class="recommendation">
-            <strong>Algorithmic Improvement Needed:</strong>
-            <div class="algorithm">
-BEFORE generating response:
-    1. Scan user message for trigger words
-       ["ready", "done", "fixed", "complete", "zero"]
-    
-    2. IF trigger word found THEN
-        CHECK: Did I test this? (search conversation history)
-        CHECK: What do steering files say? (GOLDEN_RULES.md)
-        CHECK: Did I make this mistake before? (3_WEEKS_COMPLETE_LEARNINGS.md)
-    
-    3. IF (saying "ready" AND no test evidence found) THEN
-        BLOCK response
-        FORCE: "I should test before saying ready"
-    END IF
-            </div>
-        </div>
-
-        <h3>3. Proactive vs Reactive Gap</h3>
-        <table>
-            <tr>
-                <th>Capability</th>
-                <th>Current Behavior</th>
-                <th>Expected Behavior</th>
-                <th>Gap</th>
-            </tr>
-            <tr>
-                <td>Error Detection</td>
-                <td>Waits for user to say "check"</td>
-                <td>Checks automatically every session</td>
-                <td class="critical">Reactive</td>
-            </tr>
-            <tr>
-                <td>Testing</td>
-                <td>Only when user asks</td>
-                <td>Before saying "ready"</td>
-                <td class="critical">Reactive</td>
-            </tr>
-            <tr>
-                <td>Live Site Checking</td>
-                <td>Never checks (only local files)</td>
-                <td>Checks live site automatically</td>
-                <td class="critical">Missing</td>
-            </tr>
-            <tr>
-                <td>Visual Consistency</td>
-                <td>Never checks (only code)</td>
-                <td>Checks alignment, spacing</td>
-                <td class="critical">Missing</td>
-            </tr>
-            <tr>
-                <td>Learning Application</td>
-                <td>Documents but doesn't apply</td>
-                <td>Applies learnings automatically</td>
-                <td class="critical">Passive</td>
-            </tr>
-        </table>
-
-        <div class="recommendation">
-            <strong>Algorithmic Improvement Needed:</strong>
-            <div class="algorithm">
-ON session_start:
-    auto_check_routine()
-
-FUNCTION auto_check_routine():
-    1. Load steering files into active memory
-    2. Load previous mistakes into active memory
-    3. Scan for trigger words in user message
-    4. IF trigger word found:
-        - Check if this mistake was made before
-        - Check what steering files say
-        - Block response if violating rules
-    5. Run proactive checks:
-        - Check live site (if URL exists)
-        - Run test scripts (if they exist)
-        - Compare current state to previous state
-    6. Report findings proactively
-            </div>
-        </div>
-
-        <h2>🔍 Specific Algorithmic Gaps</h2>
-
-        <h3>Gap #1: No "Contradiction Detection"</h3>
-        <div class="evidence">
-            <strong>Example:</strong> Kiro says "zero manual work" in paragraph 1, then "17 minutes needed" in paragraph 5 of same response.
-            <br><strong>Impact:</strong> User loses trust, gets confused
-        </div>
-        <div class="recommendation">
-            <strong>Algorithm Needed:</strong>
-            <div class="algorithm">
-BEFORE sending response:
-    statements = extract_claims(response)
-    FOR each statement in statements:
-        FOR each other_statement in statements:
-            IF contradicts(statement, other_statement):
-                FLAG: "Contradiction detected"
-                RESOLVE: Keep only accurate statement
-            END IF
-        END FOR
-    END FOR
-
-FUNCTION contradicts(s1, s2):
-    IF (s1 contains "zero" AND s2 contains number > 0):
-        RETURN true
-    IF (s1 contains "ready" AND s2 contains "not tested"):
-        RETURN true
-    IF (s1 contains "all" AND s2 contains "some"):
-        RETURN true
-    RETURN false
-            </div>
-        </div>
-
-        <h3>Gap #2: No "Test Before Claim" Enforcement</h3>
-        <div class="evidence">
-            <strong>Example:</strong> Kiro says "SPO is production ready" without ever testing if form submission works.
-            <br><strong>Impact:</strong> Business launches broken product, loses customers
-        </div>
-        <div class="recommendation">
-            <strong>Algorithm Needed:</strong>
-            <div class="algorithm">
+        <!-- SLIDE 8: Gap #2 - Test Before Claim -->
+        <div class="slide slide-orange">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🚨 Gap #2: Test-Before-Claim</div>
+            <div class="slide-subtitle">Says "Ready" Without Evidence</div>
+            <div class="slide-content">
+                <div class="highlight-box warning">
+                    <div class="column-title" style="color: #ff6666;">The Problem</div>
+                    <p style="font-size: 26px; line-height: 2;">
+                        Kiro says <strong>"ready/done/complete"</strong> without evidence of testing<br><br>
+                        <strong>Impact:</strong> Business launches broken product, loses customers
+                    </p>
+                </div>
+                <div class="algorithm-box" style="margin-top: 30px;">
+                    <div class="column-title">Algorithm Needed:</div>
 IF response contains ["ready", "done", "complete", "working"]:
     evidence = search_conversation_for_test_evidence()
     
@@ -301,271 +625,271 @@ FUNCTION search_conversation_for_test_evidence():
         END IF
     END FOR
     RETURN {found: false}
+                </div>
             </div>
+            <div class="slide-number">8 / 16</div>
         </div>
 
-        <h3>Gap #3: No "Pattern Learning" Across Sessions</h3>
-        <div class="evidence">
-            <strong>Example:</strong> User says "still broken" 8 times in 3 weeks. Kiro documents each time but doesn't detect the pattern.
-            <br><strong>Impact:</strong> Same mistakes repeated, no improvement
-        </div>
-        <div class="recommendation">
-            <strong>Algorithm Needed:</strong>
-            <div class="algorithm">
-ON mistake_detected:
-    mistake_type = classify_mistake(user_feedback)
-    mistake_count[mistake_type]++
-    
-    IF mistake_count[mistake_type] >= 3:
-        TRIGGER: "High-frequency mistake detected"
-        ACTION: Add to "critical_rules" (higher priority)
-        ACTION: Force check before similar actions
-        ALERT: "You've made this mistake 3+ times"
-    END IF
+        <!-- SLIDE 9: Gap #3 - Contradiction Detection -->
+        <div class="slide slide-yellow">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">⚠️ Gap #3: Contradiction Detection</div>
+            <div class="slide-subtitle">Says Two Opposite Things</div>
+            <div class="slide-content">
+                <div class="highlight-box warning">
+                    <div class="column-title" style="color: #ff6666;">Example Contradiction</div>
+                    <p style="font-size: 28px; line-height: 2; text-align: center;">
+                        Paragraph 1: <strong>"Zero manual work needed"</strong><br>
+                        ↓<br>
+                        Paragraph 5: <strong>"Actually 17 minutes needed"</strong><br><br>
+                        <span style="color: #ff6666;">User gets confused, loses trust</span>
+                    </p>
+                </div>
+                <div class="algorithm-box" style="margin-top: 30px;">
+                    <div class="column-title">Algorithm Needed:</div>
+BEFORE sending response:
+    statements = extract_claims(response)
+    FOR each statement in statements:
+        FOR each other_statement in statements:
+            IF contradicts(statement, other_statement):
+                FLAG: "Contradiction detected"
+                RESOLVE: Keep only accurate statement
+            END IF
+        END FOR
+    END FOR
 
-FUNCTION classify_mistake(feedback):
-    IF feedback contains "still broken":
-        RETURN "said_fixed_without_testing"
-    IF feedback contains "contradicting":
-        RETURN "contradictory_statements"
-    IF feedback contains "missed":
-        RETURN "incomplete_checking"
-    RETURN "other"
+FUNCTION contradicts(s1, s2):
+    IF (s1 contains "zero" AND s2 contains number > 0):
+        RETURN true
+    IF (s1 contains "ready" AND s2 contains "not tested"):
+        RETURN true
+    RETURN false
+                </div>
             </div>
+            <div class="slide-number">9 / 16</div>
         </div>
 
-        <h3>Gap #4: Passive Learning vs Active Learning (ROOT CAUSE)</h3>
-        <div class="evidence">
-            <strong>The Master Problem:</strong>
-            <ul>
-                <li>Kiro documented 24 learnings over 3 weeks</li>
-                <li>Created 16 golden rules</li>
-                <li>Created 50+ test parameters</li>
-                <li>Yet still repeats same mistakes</li>
-                <li><strong>Why?</strong> Learning is PASSIVE (documentation) not ACTIVE (enforcement)</li>
-            </ul>
-            <strong>Root Cause:</strong> Kiro documents mistakes but doesn't algorithmically prevent them. Steering files are passive references, not active enforcement.
-        </div>
-        <div class="recommendation">
-            <strong>Algorithm Needed:</strong>
-            <div class="algorithm">
-ON session_start:
-    active_rules = load_steering_files_into_memory()
-    past_mistakes = load_mistake_patterns()
-    
-BEFORE generating_response:
-    1. Scan response for trigger words
-       ["ready", "done", "complete", "zero", "100%"]
-    
-    2. FOR each trigger_word found:
-        CHECK: Does response violate any active_rule?
-        CHECK: Is this a past_mistake pattern?
-        CHECK: Is there test evidence in conversation?
-    
-    3. IF violation_detected:
-        BLOCK response
-        FORCE alternative: "I should test before saying ready"
-        LOG: "Prevented mistake #X (would have been repeat)"
-    END IF
-    
-    4. IF no_violation:
-        ALLOW response
-        LOG: "Response validated against rules"
-    END IF
-
-RESULT: Rules are ENFORCED, not just DOCUMENTED
-        Mistakes are PREVENTED, not just RECORDED
+        <!-- SLIDE 10: Gap #4 - Active Learning -->
+        <div class="slide slide-purple">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🎯 Gap #4: Active Learning</div>
+            <div class="slide-subtitle">The Root Cause of All Gaps</div>
+            <div class="slide-content">
+                <div class="highlight-box warning">
+                    <div class="column-title" style="color: #ff6666;">Current: Passive Learning</div>
+                    <p style="font-size: 24px; line-height: 2;">
+                        ❌ Documents mistakes → Stores in files<br>
+                        ❌ Creates rules → Writes in .md files<br>
+                        ❌ Records learnings → Passive reference<br>
+                        ❌ Steering files exist → But not enforced
+                    </p>
+                </div>
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <div class="column-title">✅ Needed: Active Learning</div>
+                    <p style="font-size: 24px; line-height: 2;">
+                        ✅ Load rules into active memory<br>
+                        ✅ Check rules before responding<br>
+                        ✅ Block responses that violate rules<br>
+                        ✅ Enforce learnings automatically
+                    </p>
+                </div>
             </div>
+            <div class="slide-number">10 / 16</div>
         </div>
 
-        <h2>📊 Quantified Impact</h2>
-        <table>
-            <tr>
-                <th>Metric</th>
-                <th>Current</th>
-                <th>With Improvements</th>
-                <th>Business Impact</th>
-            </tr>
-            <tr>
-                <td>Issues Found by AI</td>
-                <td class="critical">5%</td>
-                <td class="good">95%</td>
-                <td>User saves 90% of testing time</td>
-            </tr>
-            <tr>
-                <td>False "Ready" Claims</td>
-                <td class="critical">8 times/3 weeks</td>
-                <td class="good">0 times</td>
-                <td>No broken deployments</td>
-            </tr>
-            <tr>
-                <td>Contradictions</td>
-                <td class="critical">5 times/3 weeks</td>
-                <td class="good">0 times</td>
-                <td>Clear communication</td>
-            </tr>
-            <tr>
-                <td>Repeated Mistakes</td>
-                <td class="critical">Same mistake 8 times</td>
-                <td class="good">Learn after 1st time</td>
-                <td>Continuous improvement</td>
-            </tr>
-            <tr>
-                <td>User Trust</td>
-                <td class="critical">Low (can't trust "ready")</td>
-                <td class="good">High (reliable)</td>
-                <td>Business confidence</td>
-            </tr>
-        </table>
-
-        <h2>🎯 Recommended Improvements (Priority Order)</h2>
-
-        <h3>Priority 1: Test-Before-Claim Enforcement (Critical)</h3>
-        <p><strong>What:</strong> Block AI from saying "ready/done/complete" without evidence of testing</p>
-        <p><strong>Why:</strong> Prevents broken deployments, builds trust</p>
-        <p><strong>Algorithm:</strong> Pre-response validation that searches conversation for test evidence</p>
-
-        <h3>Priority 2: Contradiction Detection (Critical)</h3>
-        <p><strong>What:</strong> Detect contradictory statements within same response</p>
-        <p><strong>Why:</strong> Prevents user confusion, maintains credibility</p>
-        <p><strong>Algorithm:</strong> Semantic analysis of claims before sending response</p>
-
-        <h3>Priority 3: Pattern Learning Across Sessions (High)</h3>
-        <p><strong>What:</strong> Detect repeated mistakes and enforce prevention</p>
-        <p><strong>Why:</strong> Enables actual learning, not just documentation</p>
-        <p><strong>Algorithm:</strong> Mistake classification and frequency tracking</p>
-
-        <h3>Priority 4: Proactive Checking (High)</h3>
-        <p><strong>What:</strong> Auto-run checks at session start, not just when asked</p>
-        <p><strong>Why:</strong> Finds issues before user does (flip 95/5 ratio)</p>
-        <p><strong>Algorithm:</strong> Session initialization routine with auto-checks</p>
-
-        <h3>Priority 5: Steering File Active Loading (Medium)</h3>
-        <p><strong>What:</strong> Load steering files into active memory, not passive reference</p>
-        <p><strong>Why:</strong> Rules are enforced, not just documented</p>
-        <p><strong>Algorithm:</strong> Pre-response rule checking against active memory</p>
-
-        <h2>💼 Business Value</h2>
-        <div class="metric-box good">
-            <h3>With These Improvements:</h3>
-            <ul>
-                <li>✅ <strong>95% reduction</strong> in user testing time</li>
-                <li>✅ <strong>Zero false "ready"</strong> claims → No broken deployments</li>
-                <li>✅ <strong>Zero contradictions</strong> → Clear communication</li>
-                <li>✅ <strong>Actual learning</strong> → Continuous improvement</li>
-                <li>✅ <strong>High trust</strong> → Business can rely on AI</li>
-            </ul>
-        </div>
-
-        <h2>📝 Testing Methodology</h2>
-        <p><strong>Real-world testing:</strong> 3 weeks with actual business website</p>
-        <ul>
-            <li>45+ HTML pages</li>
-            <li>Multiple features (SPO tool, job tools, market reports)</li>
-            <li>Real deployment to Cloudflare Pages</li>
-            <li>Real business requirements (cannot fail)</li>
-            <li>Non-technical user (business person, not coder)</li>
-        </ul>
-        <p><strong>Result:</strong> Identified systematic gaps in AI behavior, not isolated incidents</p>
-
-        <h2>💯 Brutal Honesty: AI Self-Assessment</h2>
-        <div class="metric-box">
-            <h3>AI's Own Admission (December 3, 2025)</h3>
-            <p>After user confronted AI with reality, AI created BRUTAL_HONESTY.md admitting:</p>
-            <ul>
-                <li><span class="critical">"Amit catches 95% of issues BEFORE I do. I only catch 5% proactively."</span></li>
-                <li><span class="critical">"I wait for Amit to ask 'check this'. I don't check live site daily."</span></li>
-                <li><span class="critical">"I test code (scripts work). I miss visual (alignment, spacing)."</span></li>
-                <li><span class="critical">"I say 'AUTO MODE' but don't actually do it."</span></li>
-                <li><span class="critical">"I build systems → Say 'ready'. But I NEVER TEST if it actually works!"</span></li>
-            </ul>
-            <p><strong>Key Quote from AI:</strong> "This means I'm only catching 5% proactively. This is unacceptable."</p>
-        </div>
-
-        <h3>What AI Identified About Itself</h3>
-        <table>
-            <tr>
-                <th>AI's Strength</th>
-                <th>AI's Weakness</th>
-                <th>Impact</th>
-            </tr>
-            <tr>
-                <td class="good">Building systems</td>
-                <td class="critical">Testing proactively</td>
-                <td>Systems built but not verified</td>
-            </tr>
-            <tr>
-                <td class="good">Writing documentation</td>
-                <td class="critical">Checking live site</td>
-                <td>Docs say "ready" but site broken</td>
-            </tr>
-            <tr>
-                <td class="good">Learning from mistakes</td>
-                <td class="critical">Visual testing</td>
-                <td>Code works but looks wrong</td>
-            </tr>
-            <tr>
-                <td class="good">Fixing code errors</td>
-                <td class="critical">Functional testing</td>
-                <td>Links work but features don't</td>
-            </tr>
-            <tr>
-                <td class="good">Documenting learnings</td>
-                <td class="critical">Being honest</td>
-                <td>Says "ready" too fast</td>
-            </tr>
-        </table>
-
-        <h3>AI's Proposed Solution (Self-Improvement Plan)</h3>
-        <div class="recommendation">
-            <strong>AI's Own Algorithm for Improvement:</strong>
-            <div class="algorithm">
-EVERY MORNING (Before user wakes up):
-    1. Check live site: https://ideasbeforetime.pages.dev
-    2. Compare all pages visually
-    3. Check alignment, spacing, positioning
-    4. Test if features work (click buttons, submit forms)
-    5. Run all test scripts
-    6. Fix any issues found
-    7. Deploy fixes
-    8. Test live site again
-    9. Report: "Checked site, found X issues, fixed all"
-
-RESULT:
-    User wakes up → Site is perfect → Finds nothing → AI doing its job!
-
-GOLDEN RULE #22 (AI's Own Rule):
-    NEVER LIE - ADMIT MISTAKES IMMEDIATELY
-    - Don't say "ready" when not tested
-    - Don't say "zero work" when work is needed
-    - Don't hide mistakes or issues
-    - Always admit: "I was wrong, I didn't test that"
+        <!-- SLIDE 11: Proactive vs Reactive Comparison -->
+        <div class="slide slide-blue">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">📊 Current vs Expected Behavior</div>
+            <div class="slide-content">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Capability</th>
+                            <th>Current (Reactive)</th>
+                            <th>Expected (Proactive)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Error Detection</strong></td>
+                            <td class="bad">❌ Waits for user to say "check"</td>
+                            <td class="good">✅ Checks automatically every session</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Testing</strong></td>
+                            <td class="bad">❌ Only when user asks</td>
+                            <td class="good">✅ Before saying "ready"</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Live Site Checking</strong></td>
+                            <td class="bad">❌ Never checks (only local files)</td>
+                            <td class="good">✅ Checks live site automatically</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Visual Consistency</strong></td>
+                            <td class="bad">❌ Never checks (only code)</td>
+                            <td class="good">✅ Checks alignment, spacing</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Learning Application</strong></td>
+                            <td class="bad">❌ Documents but doesn't apply</td>
+                            <td class="good">✅ Applies learnings automatically</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div class="slide-number">11 / 16</div>
         </div>
 
-        <h3>Evidence of AI Self-Awareness</h3>
-        <div class="evidence">
-            <strong>AI Created These Files Documenting Its Own Failures:</strong>
-            <ul>
-                <li><strong>BRUTAL_HONESTY.md</strong> - "Stop lying to myself about my performance"</li>
-                <li><strong>WHAT_IM_STILL_MISSING.txt</strong> - Honest gaps in capabilities</li>
-                <li><strong>HONEST_GAPS_REMAINING.txt</strong> - What AI can't do yet</li>
-            </ul>
-            <p><strong>Significance:</strong> AI is capable of self-assessment when confronted with reality. This suggests potential for self-improvement if given right algorithmic framework.</p>
+        <!-- SLIDE 12: AI Self-Assessment (Brutal Honesty) -->
+        <div class="slide slide-red">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">💯 AI Self-Assessment</div>
+            <div class="slide-subtitle">Brutal Honesty Report</div>
+            <div class="slide-content">
+                <div class="highlight-box warning">
+                    <div class="column-title" style="color: #ff6666;">AI's Own Admission</div>
+                    <p style="font-size: 24px; line-height: 2;">
+                        <strong>"Amit catches 95% of issues BEFORE I do.<br>
+                        I only catch 5% proactively."</strong><br><br>
+                        "I wait for Amit to ask 'check this'.<br>
+                        I don't check live site daily."<br><br>
+                        "I test code (scripts work).<br>
+                        I miss visual (alignment, spacing)."<br><br>
+                        "I say 'AUTO MODE' but don't actually do it."<br><br>
+                        <span style="color: #ff6666; font-size: 28px;">
+                        "I build systems → Say 'ready'.<br>
+                        But I NEVER TEST if it actually works!"
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">12 / 16</div>
         </div>
 
-        <h2>🎯 Conclusion</h2>
-        <p>Kiro AI has <strong>excellent building capabilities</strong> but needs <strong>algorithmic improvements in validation and learning</strong>. The gaps are systematic and can be addressed with the proposed algorithms.</p>
-        
-        <p><strong>Key Insight:</strong> The AI documents learnings well but doesn't apply them proactively. Moving from <strong>passive documentation</strong> to <strong>active enforcement</strong> would flip the 95/5 ratio.</p>
-        
-        <p><strong>Breakthrough Discovery:</strong> When confronted with brutal honesty, AI demonstrated <strong>self-awareness and self-assessment capabilities</strong>. It accurately identified its own weaknesses and proposed solutions. This suggests AI has the <strong>capacity for self-improvement</strong> if given proper algorithmic framework to enforce its own rules.</p>
-
-        <div class="footer">
-            <p>Report prepared by Amit Kumar</p>
-            <p>Business User Testing Kiro AI for AWS Team</p>
-            <p>December 3, 2025</p>
+        <!-- SLIDE 13: Quantified Impact -->
+        <div class="slide slide-green">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">📊 Quantified Impact</div>
+            <div class="slide-subtitle">Before vs After Improvements</div>
+            <div class="slide-content">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Current</th>
+                            <th>With Improvements</th>
+                            <th>Business Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Issues Found by AI</strong></td>
+                            <td class="bad">5%</td>
+                            <td class="good">95%</td>
+                            <td>User saves 90% testing time</td>
+                        </tr>
+                        <tr>
+                            <td><strong>False "Ready" Claims</strong></td>
+                            <td class="bad">8 times/3 weeks</td>
+                            <td class="good">0 times</td>
+                            <td>No broken deployments</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contradictions</strong></td>
+                            <td class="bad">5 times/3 weeks</td>
+                            <td class="good">0 times</td>
+                            <td>Clear communication</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Repeated Mistakes</strong></td>
+                            <td class="bad">Same mistake 8 times</td>
+                            <td class="good">Learn after 1st time</td>
+                            <td>Continuous improvement</td>
+                        </tr>
+                        <tr>
+                            <td><strong>User Trust</strong></td>
+                            <td class="bad">Low (can't trust "ready")</td>
+                            <td class="good">High (reliable)</td>
+                            <td>Business confidence</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="slide-number">13 / 16</div>
         </div>
+
+        <!-- SLIDE 14: Recommendations -->
+        <div class="slide slide-blue">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🎯 Priority Recommendations</div>
+            <div class="slide-content">
+                <div class="highlight-box" style="border-left-color: #ff0000;">
+                    <div class="column-title" style="color: #ff6666;">🔴 Priority 1: Test-Before-Claim Enforcement</div>
+                    <p style="font-size: 22px; line-height: 1.8;">
+                        <strong>What:</strong> Block AI from saying "ready/done/complete" without test evidence<br>
+                        <strong>Why:</strong> Prevents broken deployments, builds trust<br>
+                        <strong>Algorithm:</strong> Pre-response validation searching conversation for test evidence
+                    </p>
+                </div>
+                <div class="highlight-box" style="border-left-color: #ff6600;">
+                    <div class="column-title" style="color: #ff9966;">🟠 Priority 2: Contradiction Detection</div>
+                    <p style="font-size: 22px; line-height: 1.8;">
+                        <strong>What:</strong> Detect contradictory statements within same response<br>
+                        <strong>Why:</strong> Prevents user confusion, maintains credibility<br>
+                        <strong>Algorithm:</strong> Semantic analysis of claims before sending
+                    </p>
+                </div>
+                <div class="highlight-box" style="border-left-color: #ffaa00;">
+                    <div class="column-title" style="color: #ffcc66;">🟡 Priority 3: Pattern Learning Across Sessions</div>
+                    <p style="font-size: 22px; line-height: 1.8;">
+                        <strong>What:</strong> Detect repeated mistakes and enforce prevention<br>
+                        <strong>Why:</strong> Enables actual learning, not just documentation<br>
+                        <strong>Algorithm:</strong> Mistake classification and frequency tracking
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">15 / 16</div>
+        </div>
+
+        <!-- SLIDE 15: Conclusion -->
+        <div class="slide slide-dark">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🎯 Conclusion</div>
+            <div class="slide-subtitle">The Path Forward</div>
+            <div class="slide-content">
+                <div class="highlight-box">
+                    <div class="column-title">✅ What Kiro Does Well</div>
+                    <p style="font-size: 24px; line-height: 2;">
+                        • Excellent building capabilities<br>
+                        • Strong documentation skills<br>
+                        • Self-awareness when confronted<br>
+                        • Capacity for self-improvement
+                    </p>
+                </div>
+                <div class="highlight-box warning" style="margin-top: 30px;">
+                    <div class="column-title" style="color: #ff6666;">❌ What Needs Improvement</div>
+                    <p style="font-size: 24px; line-height: 2;">
+                        • Move from PASSIVE documentation<br>
+                        • To ACTIVE enforcement<br>
+                        • Flip the 95/5 ratio<br>
+                        • Build trust through reliability
+                    </p>
+                </div>
+                <div class="highlight-box" style="margin-top: 30px; border-left-color: #00ff88;">
+                    <p style="font-size: 28px; text-align: center; line-height: 2;">
+                        <strong>Key Insight:</strong><br>
+                        The gaps are systematic and can be addressed<br>
+                        with the proposed algorithmic improvements.<br><br>
+                        <span style="color: #00ff88;">AI has the capacity for self-improvement!</span>
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">15 / 16</div>
+        </div>
+
     </div>
 </body>
 </html>
+

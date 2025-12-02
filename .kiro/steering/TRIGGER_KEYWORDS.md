@@ -1,7 +1,26 @@
 # 🎯 TRIGGER KEYWORDS - Auto-Run Tests & Checks
 
 **Created:** December 2, 2025  
+**Updated:** December 3, 2025 (Added "record it" keyword)
 **Purpose:** Keywords that make Kiro automatically run all tests
+
+---
+
+## 🆕 MASTER KEYWORD (HIGHEST PRIORITY)
+
+### **"record it"** | **"update rules"** | **"record & update"**
+
+**When Amit says this, I AUTOMATICALLY update ALL relevant files:**
+1. ✅ 3_WEEKS_COMPLETE_LEARNINGS.md (add new learning)
+2. ✅ GOLDEN_RULES.md (if fundamental rule)
+3. ✅ COMPLETE_TESTING_RULESET.md (if new test needed)
+4. ✅ TRIGGER_KEYWORDS.md (if new keyword)
+5. ✅ BRUTAL_HONESTY.md (if performance issue)
+6. ✅ MASTER_RULES_ORGANIZED.md (if workflow change)
+
+**Then report:** "Recorded in [list of files]"
+
+**This means:** LIVE LEARNING - No repeated mistakes!
 
 ---
 
