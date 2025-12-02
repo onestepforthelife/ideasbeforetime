@@ -89,6 +89,30 @@
             </div>
         </div>
 
+        <!-- Job Search Section -->
+        <div style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); border-radius: 15px; padding: 25px; margin-bottom: 20px; color: white;">
+            <h3 style="margin: 0 0 10px 0;">🔍 AI Job Search & Email Generator</h3>
+            <p style="margin: 0 0 15px 0; font-size: 14px; opacity: 0.95;">Search jobs, generate personalized emails, and send - all on this page</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr auto; gap: 15px; align-items: end;">
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-size: 13px; font-weight: 600;">Job Keywords *</label>
+                    <input type="text" id="jobKeywords" placeholder="e.g., Director Operations, VP Supply Chain" 
+                           style="width: 100%; padding: 12px; border: 2px solid white; border-radius: 8px; font-size: 14px;">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-size: 13px; font-weight: 600;">Location</label>
+                    <input type="text" id="jobLocation" placeholder="Singapore" value="Singapore"
+                           style="width: 100%; padding: 12px; border: 2px solid white; border-radius: 8px; font-size: 14px;">
+                </div>
+                <button class="btn btn-success" onclick="triggerJobSearch()" style="background: white; color: #28a745; padding: 12px 30px; font-weight: 700;">
+                    🚀 Search Jobs
+                </button>
+            </div>
+            <div style="background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; margin-top: 15px; font-size: 13px;">
+                <strong>✨ What happens:</strong> AI finds jobs → Generates personalized emails → You review & send (all here on this page)
+            </div>
+        </div>
+
         <!-- Action Bar -->
         <div style="background: white; border-radius: 15px; padding: 20px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
             <div>
@@ -96,7 +120,6 @@
                 <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">Review and send your personalized emails</p>
             </div>
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                <button class="btn btn-success" onclick="triggerJobSearch()">🚀 Run Job Search</button>
                 <button class="btn" onclick="loadJobs()">🔄 Refresh</button>
                 <button class="btn btn-warning" onclick="startFreshSearch()">🆕 Clear All</button>
             </div>
@@ -297,9 +320,9 @@
                 container.innerHTML = `
                     <div style="text-align: center; padding: 40px; color: #6c757d;">
                         <div style="font-size: 3em; margin-bottom: 15px;">📭</div>
-                        <p style="margin-bottom: 20px;">No jobs loaded yet. Import your job search results or run the AI agent.</p>
-                        <button class="btn" onclick="loadJobs()">🔄 Refresh</button>
-                        <button class="btn btn-success" onclick="importJobs()">📥 Import Jobs</button>
+                        <h3 style="color: #333; margin-bottom: 10px;">No Jobs Yet</h3>
+                        <p style="margin-bottom: 20px;">Enter keywords above and click "Search Jobs" to get started</p>
+                        <p style="font-size: 14px; color: #999;">Everything happens on this page - no downloads needed!</p>
                     </div>
                 `;
                 return;
@@ -407,15 +430,27 @@
 
         // Trigger job search agent
         async function triggerJobSearch() {
-            const keywords = prompt('Enter job keywords (e.g., "Director Operations"):');
-            if (!keywords) return;
+            const keywords = document.getElementById('jobKeywords').value.trim();
+            const location = document.getElementById('jobLocation').value.trim() || 'Singapore';
             
-            const location = prompt('Enter location (default: Singapore):', 'Singapore');
+            if (!keywords) {
+                alert('⚠️ Please enter job keywords');
+                document.getElementById('jobKeywords').focus();
+                return;
+            }
+            
+            // Disable button during search
+            const btn = event.target;
+            const originalText = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '⏳ Searching...';
             
             try {
-                const result = await jobAPI.triggerAgent(keywords, location || 'Singapore');
+                const result = await jobAPI.triggerAgent(keywords, location);
                 if (result.success) {
                     alert('✅ Job search started! Results will appear shortly.');
+                    // Clear inputs
+                    document.getElementById('jobKeywords').value = '';
                     // Poll for results
                     setTimeout(() => loadJobs(), 5000);
                 } else {
@@ -424,13 +459,13 @@
             } catch (error) {
                 console.error('Error triggering job search:', error);
                 alert('❌ Backend not available. Make sure to run START_BACKEND.bat first.');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
             }
         }
 
-        // Import jobs from file
-        function importJobs() {
-            alert('📥 Import feature coming soon! For now, run job_agent.py to generate jobs.');
-        }
+
 
         // Load on page load
         window.addEventListener('load', () => {
