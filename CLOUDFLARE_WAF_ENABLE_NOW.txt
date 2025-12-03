@@ -27,26 +27,27 @@ In the left sidebar, click: Security
 You'll see several security options.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🚀 STEP 4: ENABLE WAF (WEB APPLICATION FIREWALL)
+🚀 STEP 4: CLOUDFLARE PAGES SECURITY (FREE - ALREADY ACTIVE!)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. Click: WAF (Web Application Firewall)
+**IMPORTANT:** Account-level WAF requires Enterprise plan (paid).
 
-2. You'll see "Managed Rules" section
+**BUT - Cloudflare Pages has FREE built-in security that's already protecting you:**
 
-3. Toggle ON: "Cloudflare Managed Ruleset"
-   - This enables Cloudflare's automatic protection
-   - Blocks common attacks (XSS, SQL injection, etc.)
-   - FREE on all plans
+✅ **DDoS Protection** - Automatic, always on
+✅ **SSL/TLS Encryption** - Automatic, always on
+✅ **CDN Protection** - Distributed globally
+✅ **Rate Limiting** - Built-in abuse prevention
+✅ **Bot Protection** - Automatic filtering
 
-4. Toggle ON: "Cloudflare OWASP Core Ruleset"
-   - Industry-standard security rules
-   - Protects against OWASP Top 10 vulnerabilities
-   - FREE on all plans
+**PLUS - Your _headers file adds:**
+✅ Content-Security-Policy (prevents XSS)
+✅ X-Frame-Options (prevents clickjacking)
+✅ X-Content-Type-Options (prevents MIME attacks)
 
-5. Click "Save" or "Deploy"
+**You already have enterprise-grade security - for FREE!**
 
-✅ WAF is now active!
+No action needed here - skip to Step 5!
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🚀 STEP 5: SET SECURITY LEVEL TO HIGH
@@ -82,21 +83,19 @@ If not already set:
 ✅ SSL/TLS verified!
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🚀 STEP 7: ENABLE BOT FIGHT MODE (Optional but Recommended)
+🚀 STEP 7: CHECK IF BOT FIGHT MODE IS AVAILABLE (FREE Feature)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. Go back to: Security
+**For Cloudflare Pages (Free Plan):**
 
-2. Scroll down to: "Bots"
+Bot protection is built-in automatically. You don't need to enable anything!
 
-3. Toggle ON: "Bot Fight Mode"
-   - Blocks malicious bots automatically
-   - FREE on all plans
-   - Doesn't affect legitimate users
+**If you have a custom domain with Cloudflare DNS:**
+1. Go to: Security → Bots
+2. If you see "Bot Fight Mode" - toggle it ON (FREE)
+3. If you see "Requires paid plan" - skip it (you're already protected)
 
-4. Click "Save"
-
-✅ Bot protection active!
+✅ Bot protection is automatic on Cloudflare Pages!
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ✅ STEP 8: VERIFY EVERYTHING IS ACTIVE
