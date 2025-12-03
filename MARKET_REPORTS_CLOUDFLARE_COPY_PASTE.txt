@@ -1,0 +1,164 @@
+╔══════════════════════════════════════════════════════════════╗
+║   📋 MARKET REPORTS - CLOUDFLARE ACCESS COPY & PASTE         ║
+║        Exact values to enter in dashboard                    ║
+╚══════════════════════════════════════════════════════════════╝
+
+Created: December 3, 2025, 04:15 AM
+Time needed: 2 minutes (you already know how!)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 STEP 1: GO TO CLOUDFLARE (Same place as CV & SPO)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+URL: https://dash.cloudflare.com
+→ Select: ideasbeforetime.pages.dev
+→ Click: Zero Trust (left sidebar)
+→ Click: Access → Applications
+→ Click: "Add an application"
+→ Select: "Self-hosted"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 STEP 2: APPLICATION CONFIGURATION (Copy these exact values)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+┌──────────────────────────────────────────────────────────┐
+│ Application name:                                        │
+│ Market Research Reports                                  │
+│                                                          │
+│ Session Duration:                                        │
+│ 24 hours                                                 │
+│                                                          │
+│ Application domain:                                      │
+│ Subdomain: ideasbeforetime                              │
+│ Domain: pages.dev                                        │
+│                                                          │
+│ Path:                                                    │
+│ /*Report*.html                                           │
+│                                                          │
+│ ✅ This protects ALL files with "Report" in name!       │
+└──────────────────────────────────────────────────────────┘
+
+Click: "Next"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 STEP 3: POLICY CONFIGURATION (Your email gets full access)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+┌──────────────────────────────────────────────────────────┐
+│ Policy name:                                             │
+│ Amit Full Access                                         │
+│                                                          │
+│ Action:                                                  │
+│ Allow                                                    │
+│                                                          │
+│ Configure rules:                                         │
+│ Include:                                                 │
+│   Selector: Emails                                       │
+│   Value: onestepforthelife@gmail.com                    │
+│                                                          │
+│ Click "Add" to add this email                           │
+└──────────────────────────────────────────────────────────┘
+
+Click: "Next"
+Click: "Add application"
+
+✅ DONE!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 STEP 4: TEST YOUR ACCESS (2 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Open incognito/private window
+
+2. Go to any report:
+   https://ideasbeforetime.pages.dev/Poloxamer_Market_Report.html
+
+3. You'll see Cloudflare Access login page
+
+4. Enter: onestepforthelife@gmail.com
+
+5. Check your email for one-time code
+
+6. Enter code
+
+7. ✅ Full report opens (no blur, no preview overlay)!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 WHAT HAPPENS NOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FOR YOU (onestepforthelife@gmail.com):
+✅ Enter email → Get code → Full access
+✅ No blur, no preview overlay
+✅ See 100% of report
+✅ Session lasts 24 hours
+
+FOR OTHERS (not in approved list):
+⚠️  See 30% preview (first part clear)
+⚠️  Remaining 70% blurred
+⚠️  See "Request Access" button
+⚠️  Can email you to request access
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📧 TO ADD CLIENT EMAILS LATER (When someone requests access)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Go to: Cloudflare Dashboard → Zero Trust → Access
+2. Click: "Market Research Reports" application
+3. Click: "Edit"
+4. Under Policy → Include → Add email
+5. Enter: client@company.com
+6. Click: "Save"
+
+✅ Client can now access with their email!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 PROTECTED FILES (All at once with /*Report*.html)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Final_Acrylic_Market_Report.html
+✅ nickel-esg-report.html
+✅ Paper_Pulp_Specialty_Chemicals_Report.html
+✅ Poloxamer_Market_Report.html
+✅ Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html
+
+All protected with ONE application!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💰 COST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FREE (up to 50 users)
+You already have Cloudflare Access for CV & SPO
+This is just one more application (still free!)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Same process as CV & SPO, just different values:
+- Name: Market Research Reports
+- Path: /*Report*.html
+- Email: onestepforthelife@gmail.com
+
+Takes 2 minutes since you already know how!
+
+Last Updated: December 3, 2025, 04:15 AM
+

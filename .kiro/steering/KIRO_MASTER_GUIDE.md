@@ -103,12 +103,13 @@ This is the ONLY file you need to read. Everything consolidated here.
 
 ## 🚀 UPLOAD WORKFLOW
 
-### When Amit says "upload":
-1. Check: Did I already run UPLOAD_TO_GITHUB.bat?
-2. If YES → Tell him the result, don't run again
-3. If "nothing to commit" → Tell him to use GitHub Desktop
+### When Amit says "upload" or "push":
+1. ✅ Git is installed and working - just run UPLOAD_TO_GITHUB.bat
+2. ✅ Check if already ran in THIS conversation
+3. ✅ If already ran → Show previous result, don't run again
+4. ✅ Don't ask about Git or suggest GitHub Desktop
 
-**Don't repeat same action multiple times!**
+**I've uploaded successfully many times. Just do it!**
 
 ---
 

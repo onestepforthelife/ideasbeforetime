@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper & Pulp Specialty Chemicals Industry Report (CY24/FY24) | Ideas Before Time</title>
+    <link rel="stylesheet" href="common-watermark.css">
+    <link rel="stylesheet" href="common-footer.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .page-layout { display: flex; max-width: 1400px; margin: 20px auto; gap: 20px; }
+        .side-index {
+            position: sticky; top: 20px; width: 250px; background: white;
+            padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: fit-content; max-height: 90vh; overflow-y: auto;
+        }
+        .side-index h3 { font-size: 1.1em; margin-bottom: 15px; color: #2c3e50; }
+        .side-index ul { list-style: none; padding: 0; }
+        .side-index li { margin: 8px 0; }
+        .side-index a { color: #3498db; text-decoration: none; font-size: 0.9em; }
+        .side-index a:hover { color: #2980b9; }
+        .main-content {
+            flex: 1; background: white; padding: 40px;
+            border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { font-size: 2.5em; color: #2c3e50; margin-bottom: 20px; border-bottom: 4px solid #3498db; padding-bottom: 15px; }
+        h2 { font-size: 2em; color: #2980b9; margin-top: 40px; margin-bottom: 20px; border-left: 5px solid #3498db; padding-left: 15px; }
+        h3 { font-size: 1.5em; color: #34495e; margin-top: 30px; margin-bottom: 15px; }
+        h4 { font-size: 1.2em; color: #555; margin-top: 20px; margin-bottom: 10px; }
+        p { margin-bottom: 15px; font-size: 1.05em; }
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background: #3498db; color: white; font-weight: bold; }
+        tr:nth-child(even) { background: #f2f2f2; }
+        .highlight-box { background: #ecf0f1; border-left: 5px solid #3498db; padding: 20px; margin: 20px 0; border-radius: 5px; }
+        .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 25px 0; }
+        .stat-box { background: #34495e; color: white; padding: 25px; border-radius: 8px; text-align: center; }
+        .stat-number { font-size: 2.5em; font-weight: bold; color: #3498db; }
+        .stat-label { font-size: 0.9em; margin-top: 10px; opacity: 0.9; }
+        ul { margin: 15px 0; padding-left: 30px; }
+        li { margin: 8px 0; }
+        .style-divider {
+            margin: 60px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .cheat-sheet {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+    </style>
+
+<style>
+/* 30% PREVIEW SYSTEM */
+.preview-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 30%,
+        rgba(255, 255, 255, 0.95) 30%,
+        rgba(255, 255, 255, 0.98) 100%
+    );
+    z-index: 9998;
+    pointer-events: none;
+}
+
+.preview-message {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+    text-align: center;
+    z-index: 9999;
+    max-width: 600px;
+    border: 3px solid #2563eb;
+}
+
+.preview-message h2 {
+    color: #1e40af;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.preview-message p {
+    color: #374151;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.preview-message .highlight {
+    background: #fef3c7;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid #f59e0b;
+}
+
+.preview-message .access-info {
+    background: #dbeafe;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.preview-message .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 10px 5px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.preview-message .btn:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.preview-message .btn-secondary {
+    background: #6b7280;
+}
+
+.preview-message .btn-secondary:hover {
+    background: #4b5563;
+}
+
+/* Blur content below 30% */
+body::after {
+    content: '';
+    position: fixed;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    backdrop-filter: blur(8px);
+    z-index: 9997;
+    pointer-events: none;
+}
+</style>
+
+</head>
+<body>
+
+<!-- 30% PREVIEW OVERLAY -->
+<div class="preview-overlay"></div>
+<div class="preview-message">
+    <h2>🔒 Preview Mode (30% Visible)</h2>
+    
+    <p><strong>You're viewing a preview of this market research report.</strong></p>
+    
+    <div class="highlight">
+        <strong>📊 Full Report Includes:</strong><br>
+        • Complete market analysis & trends<br>
+        • Detailed pricing & supply chain data<br>
+        • Competitor analysis & insights<br>
+        • Future projections & recommendations
+    </div>
+    
+    <div class="access-info">
+        <strong>🔐 This report is protected by Cloudflare Access</strong><br>
+        Professional server-side authentication for enterprise security
+    </div>
+    
+    <p><strong>To access the full report:</strong></p>
+    
+    <a href="mailto:onestepforthelife@gmail.com?subject=Request Access to Market Report&body=Hi Amit,%0D%0A%0D%0AI would like to request access to the market research report.%0D%0A%0D%0AName:%0D%0ACompany:%0D%0AEmail:%0D%0APurpose:%0D%0A%0D%0AThank you!" 
+       class="btn">
+        📧 Request Access
+    </a>
+    
+    <a href="https://ideasbeforetime.pages.dev/market-reports.html" 
+       class="btn btn-secondary">
+        ← Back to Reports
+    </a>
+    
+    <p style="margin-top: 20px; font-size: 14px; color: #6b7280;">
+        <strong>Already have access?</strong><br>
+        Cloudflare Access will authenticate you automatically when you visit this page.
+    </p>
+</div>
+
+<!-- CLOUDFLARE ACCESS REMINDER -->
+<!-- 
+    ⚠️ IMPORTANT: This file MUST be protected with Cloudflare Access
+    
+    Setup Instructions:
+    1. Go to Cloudflare Dashboard → Zero Trust → Access
+    2. Create Application: "Market Research Reports"
+    3. Path: /*Report*.html
+    4. Add Policy: Emails (onestepforthelife@gmail.com + approved clients)
+    5. Save & Deploy
+    
+    Guide: MARKET_REPORTS_CLOUDFLARE_ACCESS.txt
+    
+    Once Cloudflare Access is active, this preview overlay can be removed
+    for authenticated users (Cloudflare handles authentication).
+-->
+
+
+    <div class="page-layout">
+        <aside class="side-index">
+            <h3>📑 Report Index</h3>
+            <ul>
+                <li><a href="#executive-summary">Executive Summary</a></li>
+                <li><a href="#market-matrix">Market Size & Growth</a></li>
+                <li><a href="#margins">Margins & Pricing</a></li>
+                <li><a href="#competitive">Competitive Landscape</a></li>
+                <li><a href="#india-deepdive">India Deep Dive</a></li>
+                <li><a href="#investment">Investment & Barriers</a></li>
+                <li><a href="#technology">Technology & Innovation</a></li>
+                <li><a href="#environment">Environmental Impact</a></li>
+                <li><a href="#supply-chain">Supply Chain</a></li>
+                <li><a href="#recommendations">Strategic Recommendations</a></li>
+                <li><a href="#top10">Top 10 India Prospects</a></li>
+                <li><a href="#cheat-sheet">Cheat Sheet</a></li>
+                <li><a href="#bonus">Bonus Information</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h1>📑 Paper & Pulp Specialty Chemicals Industry Report (CY24/FY24)</h1>
+            
+            <div class="style-divider">
+                <h2 style="color: white; border: none; margin: 0;">🧭 Style 1: Executive Board Format</h2>
+                <p style="margin: 10px 0 0 0; opacity: 0.9;">Concise, Metric-Driven, Decision-Focused</p>
+            </div>
+
+            <section id="executive-summary">
+                <h2>📌 Executive Summary</h2>
+                
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">$24.26B</div>
+                        <div class="stat-label">Global Specialty Market (CY24)</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">₹10,000 Cr</div>
+                        <div class="stat-label">India Specialty Market (FY24)</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">4.6-6.5%</div>
+                        <div class="stat-label">India CAGR Growth</div>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>🎯 Strategic Imperative</h3>
+                    <p><strong>India's ban on waste paper imports</strong> forces mills to use lower-quality domestic recycled fiber → surge in <strong>Retention Aids (cPAMs)</strong> and <strong>Strength Resins</strong> demand.</p>
+                </div>
+
+                <h3>Growth Outlook (CAGR)</h3>
+                <ul>
+                    <li><strong>Global:</strong> 3.3–4.7%</li>
+                    <li><strong>India:</strong> 4.6–6.5%</li>
+                </ul>
+            </section>
+
+            <section id="market-matrix">
+                <h2>📊 Market Size & Growth Matrix</h2>
+                
+                <table>
+                    <tr>
+                        <th>Product Segment</th>
+                        <th>Global Size</th>
+                        <th>India Size</th>
+                        <th>India CAGR</th>
+                        <th>Strategic Logic</th>
+                    </tr>
+                    <tr>
+                        <td><strong>cPAMs (Polymers)</strong></td>
+                        <td>~USD 8.0B</td>
+                        <td>INR ~2,200 Cr</td>
+                        <td>6–7%</td>
+                        <td>Highest growth; critical for recycled fiber</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sizing (AKD/ASA)</strong></td>
+                        <td>~USD 3.5B</td>
+                        <td>INR ~1,200 Cr</td>
+                        <td>4–6%</td>
+                        <td>Packaging boom drives ASA demand</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Defoamers</strong></td>
+                        <td>~USD 3.7B</td>
+                        <td>INR ~1,000 Cr</td>
+                        <td>6–7%</td>
+                        <td>Higher machine speeds → foam control</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Biocides</strong></td>
+                        <td>~USD 2.0B</td>
+                        <td>INR ~600 Cr</td>
+                        <td>4–6%</td>
+                        <td>Closed water loops → slime control</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OBAs</strong></td>
+                        <td>~USD 3.0B</td>
+                        <td>INR ~800 Cr</td>
+                        <td>4–5%</td>
+                        <td>Essential for copier paper whiteness</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="margins">
+                <h2>💰 Gross Margins & Pricing Power</h2>
+                
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Margin Range</th>
+                        <th>Examples</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Specialties</strong></td>
+                        <td>30–35%+</td>
+                        <td>cPAMs, ASA/AKD, OBAs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Commodities</strong></td>
+                        <td>15–20%</td>
+                        <td>Mineral defoamers, basic coagulants</td>
+                    </tr>
+                </table>
+
+                <div class="highlight-box">
+                    <p><strong>India Note:</strong> Raw material costs = 60–70% of sales due to import dependence (acrylamide, DAC, silicones).</p>
+                </div>
+            </section>
+
+            <section id="competitive">
+                <h2>🏭 Competitive Landscape</h2>
+                
+                <h3>Global Giants</h3>
+                <table>
+                    <tr>
+                        <th>Player</th>
+                        <th>Core Competence</th>
+                        <th>Global Capacity</th>
+                        <th>India Strategy</th>
+                    </tr>
+                    <tr>
+                        <td><strong>SNF</strong></td>
+                        <td>cPAM polymerization</td>
+                        <td>1,465 KT</td>
+                        <td>Expanding Gujarat plant to 458 KT → price leader</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Solenis</strong></td>
+                        <td>End-to-end wet-end solutions</td>
+                        <td>Top 3 globally</td>
+                        <td>Focus on digital dosing & TCO contracts</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kemira</strong></td>
+                        <td>Bleaching & strength resins</td>
+                        <td>Top 3 globally</td>
+                        <td>APAC investments in ASA sizing & resins</td>
+                    </tr>
+                </table>
+
+                <h3>India Local Players</h3>
+                <table>
+                    <tr>
+                        <th>Player</th>
+                        <th>Type</th>
+                        <th>Key Strength</th>
+                        <th>Risk / Note</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Black Rose Industries</strong></td>
+                        <td>Monomer producer</td>
+                        <td>Acrylamide liquid (only South Asia producer)</td>
+                        <td>Strategic supplier; backward integrated</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Arjun Chemicals</strong></td>
+                        <td>Formulator</td>
+                        <td>AKD/ASA sizing</td>
+                        <td>Dominant in South India</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Thermax</strong></td>
+                        <td>Utility chemicals</td>
+                        <td>Water + paper overlap</td>
+                        <td>Cross-sell into mills</td>
+                    </tr>
+                </table>
+            </section>
+
+            <div class="style-divider">
+                <h2 style="color: white; border: none; margin: 0;">🧭 Style 2: India Deep Dive</h2>
+                <p style="margin: 10px 0 0 0; opacity: 0.9;">Strategic, Operational, Action-Oriented</p>
+            </div>
+
+            <section id="india-deepdive">
+                <h2>🇮🇳 India Market Deep Dive</h2>
+                
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">₹10,000 Cr</div>
+                        <div class="stat-label">India Market Size (FY24)</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">~$1.2B</div>
+                        <div class="stat-label">USD Equivalent</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">4.6-6.5%</div>
+                        <div class="stat-label">CAGR Growth</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="investment">
+                <h2>💸 Investment Requirement & Entry Barriers</h2>
+                
+                <table>
+                    <tr>
+                        <th>Technology</th>
+                        <th>Investment Required</th>
+                        <th>Barrier Level</th>
+                        <th>Notes</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Polymerization (cPAM)</strong></td>
+                        <td>USD 30–50M</td>
+                        <td>High</td>
+                        <td>Neurotoxic acrylamide handling</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Emulsification (AKD/ASA)</strong></td>
+                        <td>USD 5–10M</td>
+                        <td>Moderate</td>
+                        <td>On-site emulsification skids</td>
+                    </tr>
+                </table>
+
+                <div class="highlight-box">
+                    <p><strong>Entry Barrier:</strong> Qualification cycles 3–6 months; downtime risk INR 5–10 Lakhs/hour → mills risk-averse.</p>
+                </div>
+            </section>
+
+            <section id="technology">
+                <h2>⚙️ Technology Intensity & Innovation</h2>
+                
+                <ul>
+                    <li><strong>High:</strong> Retention polymers (cPAM) → structured, high-charge MW polymers for dirty recycled water</li>
+                    <li><strong>Medium:</strong> ASA sizing → requires on-site emulsification skids</li>
+                    <li><strong>Emerging:</strong> Enzymatic refining → ESG play, reduces energy consumption</li>
+                </ul>
+            </section>
+
+            <section id="environment">
+                <h2>🌱 Environmental Impact</h2>
+                
+                <div class="highlight-box">
+                    <p><strong>India:</strong> CPCB tightening AOX/COD norms; push for Zero Liquid Discharge.</p>
+                    <p><strong>Opportunity:</strong> Closed loops → "chemical soup" → demand for advanced biocides & deposit control agents.</p>
+                </div>
+            </section>
+
+            <section id="supply-chain">
+                <h2>🔗 Supply Chain & Trade Flow</h2>
+                
+                <h3>Critical Imports</h3>
+                <ul>
+                    <li><strong>Acrylamide monomer:</strong> China or Black Rose</li>
+                    <li><strong>Silicones:</strong> Imported from China/EU</li>
+                </ul>
+
+                <h3>Logistics</h3>
+                <p><strong>AKD/ASA emulsions:</strong> Shelf-life 3–4 weeks → must be produced regionally</p>
+            </section>
+
+            <section id="recommendations">
+                <h2>🎯 Strategic Recommendations</h2>
+                
+                <div class="highlight-box">
+                    <h3>Key Actions</h3>
+                    <ul>
+                        <li><strong>Defend Wet-End:</strong> Sell "Runnability" bundles (cPAM + defoamer + biocide)</li>
+                        <li><strong>Target Packaging Mills:</strong> Brown paper segment growing 8–10% CAGR</li>
+                        <li><strong>Secure Monomer Supply:</strong> Lock contracts with Black Rose or diversify imports</li>
+                        <li><strong>Digital Dosing:</strong> Smart pumps + analytics → stickiness, competitor barrier</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="top10">
+                <h2>🎯 Strategic Account Targeting: Top 10 India Prospects</h2>
+                <p style="font-style: italic; color: #666;">Spend potential based on INR 2,500–3,500/ton specialty chemicals</p>
+                
+                <table>
+                    <tr>
+                        <th>Account</th>
+                        <th>Capacity (TPA)</th>
+                        <th>Focus</th>
+                        <th>Est. Spend (INR Cr)</th>
+                        <th>Strategic Hook</th>
+                    </tr>
+                    <tr>
+                        <td><strong>ITC PSPD</strong></td>
+                        <td>~800,000+</td>
+                        <td>Premium packaging</td>
+                        <td>250–300</td>
+                        <td>Zero-odor biocides, barrier coatings</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JK Paper</strong></td>
+                        <td>~761,000</td>
+                        <td>Copier & packaging</td>
+                        <td>200–240</td>
+                        <td>High-stability OBAs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Century Pulp</strong></td>
+                        <td>~480,000</td>
+                        <td>Tissue + board</td>
+                        <td>140–160</td>
+                        <td>Wet strength resins, softeners</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TNPL</strong></td>
+                        <td>~600,000</td>
+                        <td>Bagasse-based</td>
+                        <td>150–180</td>
+                        <td>High-charge cPAMs for drainage</td>
+                    </tr>
+                    <tr>
+                        <td><strong>N R Agarwal</strong></td>
+                        <td>~440,000</td>
+                        <td>Recycled board</td>
+                        <td>110–130</td>
+                        <td>Stickies control, defoamers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>West Coast</strong></td>
+                        <td>~320,000</td>
+                        <td>Printing, cups</td>
+                        <td>80–100</td>
+                        <td>Hard sizing (AKD) for cup stock</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Trident</strong></td>
+                        <td>~175,000</td>
+                        <td>Wheat straw copier</td>
+                        <td>50–60</td>
+                        <td>Anti-scalants for silica</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Emami Paper</strong></td>
+                        <td>~350,000</td>
+                        <td>Newsprint → board</td>
+                        <td>90–110</td>
+                        <td>Dry strength resins for stiffness</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Satia Industries</strong></td>
+                        <td>~205,000</td>
+                        <td>Govt supplies</td>
+                        <td>50–65</td>
+                        <td>Bulk cPAMs, cost efficiency</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Seshasayee (SPB)</strong></td>
+                        <td>~255,000</td>
+                        <td>Fine papers</td>
+                        <td>60–75</td>
+                        <td>Formation aids, surface sizing</td>
+                    </tr>
+                </table>
+            </section>
+
+            <div class="style-divider">
+                <h2 style="color: white; border: none; margin: 0;">📋 Cheat Sheet: One-Page Executive Summary</h2>
+                <p style="margin: 10px 0 0 0; opacity: 0.9;">Quick Reference for Boardroom</p>
+            </div>
+
+            <section id="cheat-sheet" class="cheat-sheet">
+                <h2>📊 Quick Stats</h2>
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">$24.26B</div>
+                        <div class="stat-label">Global Market</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">₹10,000 Cr</div>
+                        <div class="stat-label">India Market</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">6-7%</div>
+                        <div class="stat-label">Highest CAGR (cPAMs)</div>
+                    </div>
+                </div>
+
+                <h3>✨ Highlight Insights</h3>
+                <ul>
+                    <li><strong>SNF Expansion:</strong> Gujarat plant scaling to 458,000 MT → price leader in polymers</li>
+                    <li><strong>Black Rose:</strong> Only acrylamide monomer producer in South Asia → supply chain dependency</li>
+                    <li><strong>Packaging Boom:</strong> India's brown paper/board segment growing 8–10% CAGR</li>
+                    <li><strong>Qualification Barrier:</strong> Trials take 3–6 months; sticky programs lock suppliers in</li>
+                </ul>
+
+                <h3>⚠️ Risk Watchlist</h3>
+                <ul>
+                    <li>Raw material volatility (acrylamide, silicones)</li>
+                    <li>Regulatory tightening (AOX, COD norms)</li>
+                    <li>SNF's scale advantage → price pressure</li>
+                    <li>Black Rose dependency → supply chain risk</li>
+                </ul>
+
+                <h3>🎯 Strategic Imperatives</h3>
+                <ul>
+                    <li><strong>Defend Wet-End:</strong> Sell "Runnability" bundles (cPAM + defoamer + biocide)</li>
+                    <li><strong>Target Packaging Mills:</strong> Brown paper segment = fastest CAGR</li>
+                    <li><strong>Secure Monomer Supply:</strong> Lock contracts with Black Rose or diversify imports</li>
+                    <li><strong>Digital Dosing:</strong> Smart pumps + analytics → stickiness, competitor barrier</li>
+                </ul>
+            </section>
+
+            <section id="bonus">
+                <h2>🎁 Bonus Information</h2>
+                
+                <h3>🔎 Competitive Nuances</h3>
+                <ul>
+                    <li><strong>SNF Expansion:</strong> Gujarat plant scaling to 458,000 MT → price pressure in polymers</li>
+                    <li><strong>Black Rose:</strong> Only acrylamide monomer producer in South Asia → supply chain risk</li>
+                    <li><strong>China+1 Strategy:</strong> India gaining traction as alternative sourcing hub for emulsions and defoamers</li>
+                </ul>
+
+                <h3>📈 Emerging Trends</h3>
+                <ul>
+                    <li><strong>Bio-based sizing & enzymatic aids</strong> → ESG compliance</li>
+                    <li><strong>Digital dosing systems</strong> → KPI-linked contracts, higher stickiness</li>
+                    <li><strong>Packaging demand</strong> → fastest CAGR in India (8–10%)</li>
+                </ul>
+
+                <h3>📖 Glossary</h3>
+                <table>
+                    <tr>
+                        <th>Term</th>
+                        <th>Definition</th>
+                    </tr>
+                    <tr>
+                        <td><strong>cPAM</strong></td>
+                        <td>Cationic polyacrylamide, retention/drainage aid</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AKD/ASA</strong></td>
+                        <td>Internal sizing agents for hydrophobicity</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OBAs</strong></td>
+                        <td>Optical brightening agents, whiteness enhancers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AOX</strong></td>
+                        <td>Adsorbable organic halides, effluent metric</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CPCB</strong></td>
+                        <td>Central Pollution Control Board (India)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TCO</strong></td>
+                        <td>Total Cost of Ownership</td>
+                    </tr>
+                </table>
+            </section>
+
+            <footer style="margin-top: 60px; padding-top: 30px; border-top: 2px solid #ddd; text-align: center; color: #7f8c8d;">
+                <p><strong>Report prepared by Ideas Before Time</strong></p>
+                <p>Paper & Pulp Specialty Chemicals Industry Analysis</p>
+                <p>CY24/FY24 | December 2025</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="common-navigation.js"></script>
+    <script src="universal-analytics.js"></script>
+    <script src="common-footer.js"></script>
+</body>
+</html>
