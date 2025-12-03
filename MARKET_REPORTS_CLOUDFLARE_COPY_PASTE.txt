@@ -41,6 +41,7 @@ URL: https://dash.cloudflare.com
 │ /Paper_Pulp_Specialty_Chemicals_Report.html             │
 │ /Poloxamer_Market_Report.html                           │
 │ /Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html │
+│ /Specialty_Chemicals_Report_UPDATED.html                │
 │                                                          │
 │ ⚠️  Cloudflare allows only ONE wildcard per path!       │
 │ ⚠️  /*Report*.html is INVALID (2 wildcards)             │
@@ -103,16 +104,22 @@ Click: "Add application"
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 FOR YOU (onestepforthelife@gmail.com):
-✅ Enter email → Get code → Full access
-✅ No blur, no preview overlay
-✅ See 100% of report
-✅ Session lasts 24 hours
+✅ FULL PAGE BLOCKED until login (complete blur)
+✅ Enter email → Get OTP code → Login
+✅ After login: See 100% of ALL reports
+✅ Session lasts 24 hours (login once, access all day)
+✅ Login from ANY report → Access ALL 6 reports
 
 FOR OTHERS (not in approved list):
-⚠️  See 30% preview (first part clear)
-⚠️  Remaining 70% blurred
-⚠️  See "Request Access" button
-⚠️  Can email you to request access
+❌ COMPLETELY BLOCKED (can't see anything)
+❌ Cloudflare shows "Access Denied" page
+❌ Must request access from you
+
+🔐 SECURITY NOTE:
+- Cloudflare Access ALWAYS requires OTP (for security)
+- But you only enter OTP ONCE per day (24-hour session)
+- After first login, you can access all 6 reports freely
+- This is the same as CV pages - maximum security!
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -140,8 +147,9 @@ FOR OTHERS (not in approved list):
 ✅ /Paper_Pulp_Specialty_Chemicals_Report.html
 ✅ /Poloxamer_Market_Report.html
 ✅ /Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html
+✅ /Specialty_Chemicals_Report_UPDATED.html
 
-All protected with ONE application (multiple paths)!
+All 6 reports protected with ONE application (6 paths)!
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
