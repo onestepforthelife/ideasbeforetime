@@ -75,19 +75,33 @@
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🎯 SUMMARY
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Total Reports: 5
+📍 REPORT #6: PAPER & PULP SPECIALTY CHEMICALS REPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-NEW Reports (Created 1 hour ago - 01:25 AM):
-1. ✨ Poloxamer Market Report
-2. ✨ Nickel ESG Report  
-3. ✨ Specialty Chemicals Consolidated Report
+📄 File: Paper_Pulp_Specialty_Chemicals_Report.html
+📅 Created: December 2025
+🎯 Focus: Paper & Pulp industry specialty chemicals (CY24/FY24)
+📊 Content: Industry analysis, chemicals used in paper manufacturing
 
-Existing Reports:
-4. Specialty Chemicals Updated Report
-5. Acrylic Emulsions Market Report
+✅ DISTINCT NAME: "Paper & Pulp Specialty Chemicals Report"
+✅ UNIQUE IDENTIFIER: Paper & Pulp industry focus
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 SUMMARY - SEQUENTIAL ORDER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Total Reports: 6
+
+1. 📊 Poloxamer Market Report
+2. 📊 Nickel ESG Report  
+3. 📊 Specialty Chemicals Consolidated Report
+4. 📊 Specialty Chemicals Updated Report
+5. 📊 Acrylic Emulsions Market Report
+6. 📊 Paper & Pulp Specialty Chemicals Report
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
