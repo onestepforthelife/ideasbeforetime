@@ -79,7 +79,13 @@ STEP 2: SET UP CLOUDFLARE ACCESS (5 MINUTES)
    5. Configure:
       • Name: Market Research Reports
       • Domain: ideasbeforetime.pages.dev
-      • Path: /*Report*.html
+      • Paths (add each):
+        - /Final_Acrylic_Market_Report.html
+        - /nickel-esg-report.html
+        - /Paper_Pulp_Specialty_Chemicals_Report.html
+        - /Poloxamer_Market_Report.html
+        - /Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html
+        - /Specialty_Chemicals_Report_UPDATED.html
    6. Add Policy:
       • Emails: onestepforthelife@gmail.com
    7. Save & Deploy

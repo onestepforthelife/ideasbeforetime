@@ -35,10 +35,16 @@ URL: https://dash.cloudflare.com
 │ Subdomain: ideasbeforetime                              │
 │ Domain: pages.dev                                        │
 │                                                          │
-│ Path:                                                    │
-│ /*Report*.html                                           │
+│ Path (add each separately):                              │
+│ /Final_Acrylic_Market_Report.html                       │
+│ /nickel-esg-report.html                                  │
+│ /Paper_Pulp_Specialty_Chemicals_Report.html             │
+│ /Poloxamer_Market_Report.html                           │
+│ /Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html │
 │                                                          │
-│ ✅ This protects ALL files with "Report" in name!       │
+│ ⚠️  Cloudflare allows only ONE wildcard per path!       │
+│ ⚠️  /*Report*.html is INVALID (2 wildcards)             │
+│ ✅ Must add each file path separately                    │
 └──────────────────────────────────────────────────────────┘
 
 Click: "Next"
@@ -126,16 +132,16 @@ FOR OTHERS (not in approved list):
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📋 PROTECTED FILES (All at once with /*Report*.html)
+📋 PROTECTED FILES (Add each path separately)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✅ Final_Acrylic_Market_Report.html
-✅ nickel-esg-report.html
-✅ Paper_Pulp_Specialty_Chemicals_Report.html
-✅ Poloxamer_Market_Report.html
-✅ Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html
+✅ /Final_Acrylic_Market_Report.html
+✅ /nickel-esg-report.html
+✅ /Paper_Pulp_Specialty_Chemicals_Report.html
+✅ /Poloxamer_Market_Report.html
+✅ /Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html
 
-All protected with ONE application!
+All protected with ONE application (multiple paths)!
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -155,7 +161,7 @@ This is just one more application (still free!)
 
 Same process as CV & SPO, just different values:
 - Name: Market Research Reports
-- Path: /*Report*.html
+- Paths: Add each report file separately (5 paths)
 - Email: onestepforthelife@gmail.com
 
 Takes 2 minutes since you already know how!
