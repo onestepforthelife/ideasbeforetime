@@ -289,7 +289,14 @@ priority: highest
 4. Does core feature work?
 5. Can user go Step 1 → Step 2 → Step 3 → Success?
 
-### LEVEL 2: ERROR HANDLING
+### LEVEL 2: INPUT VALIDATION (MUST DO FIRST!)
+1. Are user inputs validated?
+2. Email format correct?
+3. Numbers in valid range?
+4. Required fields filled?
+5. Data sanitized (no XSS)?
+
+### LEVEL 3: ERROR HANDLING
 1. What if form invalid?
 2. What if network fails?
 3. What if button clicked multiple times?

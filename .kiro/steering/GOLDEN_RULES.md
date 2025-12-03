@@ -979,7 +979,87 @@ Don't just DETECT errors → **AUTOMATICALLY FIX THEM!**
 
 ---
 
-## 🏆 GOLDEN RULE #17: AUTO-HEALING MUST NOT INTERFERE WITH USER NAVIGATION
+## 🏆 GOLDEN RULE #17: NEVER TRUST USER INPUT - ALWAYS VALIDATE
+
+**CRITICAL SECURITY & QUALITY RULE:**
+NEVER assume user inputs are correct. ALWAYS validate!
+
+**WHY THIS MATTERS:**
+- Users make typos
+- Users enter wrong formats
+- Malicious users try to break things
+- Invalid data breaks systems
+- Bad data = bad results
+
+**WHAT TO VALIDATE:**
+1. ✅ **Format** - Is email actually email format?
+2. ✅ **Type** - Is number actually a number?
+3. ✅ **Range** - Is age between 0-120?
+4. ✅ **Required** - Are mandatory fields filled?
+5. ✅ **Length** - Is text within limits?
+6. ✅ **Pattern** - Does it match expected pattern?
+7. ✅ **Sanitize** - Remove dangerous characters
+
+**EXAMPLES:**
+
+**Email Validation:**
+```javascript
+// ❌ WRONG - Trust input
+const email = userInput;
+
+// ✅ RIGHT - Validate first
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailRegex.test(userInput)) {
+    showError("Please enter valid email");
+    return;
+}
+```
+
+**Number Validation:**
+```javascript
+// ❌ WRONG - Assume it's a number
+const age = userInput;
+
+// ✅ RIGHT - Validate and convert
+const age = parseInt(userInput);
+if (isNaN(age) || age < 0 || age > 120) {
+    showError("Please enter valid age (0-120)");
+    return;
+}
+```
+
+**Text Sanitization:**
+```javascript
+// ❌ WRONG - Use raw input
+element.innerHTML = userInput;
+
+// ✅ RIGHT - Sanitize first
+element.textContent = userInput; // Auto-escapes HTML
+// OR
+const sanitized = userInput.replace(/[<>]/g, '');
+```
+
+**WHEN TO VALIDATE:**
+- ✅ On form submission (always!)
+- ✅ On field blur (user leaves field)
+- ✅ On input change (real-time feedback)
+- ✅ On server-side (NEVER trust client-side only!)
+
+**DIFFERENCE FOR OUR RULES:**
+This affects EVERY form, EVERY input, EVERY user interaction:
+- SPO form inputs
+- Job tracker data
+- Market report requests
+- Email sender
+- Contact forms
+- Search boxes
+- All user data!
+
+**LESSON: Users are human. Humans make mistakes. Validate everything!**
+
+---
+
+## 🏆 GOLDEN RULE #18: AUTO-HEALING MUST NOT INTERFERE WITH USER NAVIGATION
 
 **CRITICAL RULE:**
 Auto-healing systems must be smart enough to distinguish between:

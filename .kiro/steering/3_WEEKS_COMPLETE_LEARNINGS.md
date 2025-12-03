@@ -1256,9 +1256,107 @@ Kiro needs algorithmic improvements:
 
 ---
 
-**Updated:** December 3, 2025, 03:00 IST
-**Total Learnings:** 26 major lessons
-**Latest:** Learning #26 (Self-improvement: Better error tracking)
+### Learning 27: NEVER TRUST USER INPUT - ALWAYS VALIDATE (Dec 4, 2025 - CRITICAL!)
+**What happened:** Amit asked "do u also believe inputs are correct what difference here for our rules?"
+**Amit's feedback:** Questioning if I validate user inputs
+**Lesson:** NEVER assume user inputs are correct - ALWAYS validate!
+
+**THE PROBLEM:**
+- I was building forms but not validating inputs properly
+- Assumed users enter correct data
+- No validation = bad data = broken systems
+- Security risk (XSS, injection attacks)
+
+**WHAT THIS AFFECTS:**
+1. **SPO Form** - User enters profile data
+   - ✅ Must validate: email format, URL format, text length
+   - ✅ Must sanitize: remove HTML/scripts
+   - ✅ Must check: required fields filled
+
+2. **Job Tracker** - User enters job details
+   - ✅ Must validate: dates, numbers, text
+   - ✅ Must check: valid company names, positions
+
+3. **Email Sender** - User enters email data
+   - ✅ Must validate: email format, message length
+   - ✅ Must sanitize: prevent injection
+
+4. **Market Reports** - User requests access
+   - ✅ Must validate: email, company name
+   - ✅ Must check: not spam/bot
+
+**THE FIX - VALIDATION RULES:**
+
+**Level 1: Format Validation**
+- Email must match email pattern
+- URLs must be valid URLs
+- Numbers must be actual numbers
+- Dates must be valid dates
+
+**Level 2: Range Validation**
+- Text length: min/max characters
+- Numbers: min/max values
+- Dates: not in past/future (as needed)
+
+**Level 3: Required Fields**
+- Check all mandatory fields filled
+- Show clear error messages
+- Prevent submission if invalid
+
+**Level 4: Sanitization**
+- Remove HTML tags
+- Escape special characters
+- Prevent XSS attacks
+- Prevent SQL injection
+
+**Level 5: Server-Side Validation**
+- NEVER trust client-side only
+- Validate again on server
+- Double-check everything
+
+**EXAMPLES:**
+
+**Email Validation:**
+```javascript
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailRegex.test(email)) {
+    showError("Please enter valid email");
+    return false;
+}
+```
+
+**Text Sanitization:**
+```javascript
+// Remove HTML tags
+const sanitized = input.replace(/<[^>]*>/g, '');
+// Or use textContent instead of innerHTML
+element.textContent = userInput;
+```
+
+**Number Validation:**
+```javascript
+const age = parseInt(input);
+if (isNaN(age) || age < 0 || age > 120) {
+    showError("Please enter valid age");
+    return false;
+}
+```
+
+**GOLDEN RULE #17:** Never trust user input - always validate!
+
+**This is SECURITY + QUALITY:**
+- Prevents bad data
+- Prevents attacks
+- Prevents errors
+- Professional quality
+
+**LESSON: Users are human. Humans make mistakes. Malicious users exist. VALIDATE EVERYTHING!**
+
+---
+
+**Updated:** December 4, 2025
+**Total Learnings:** 27 major lessons
+**Latest:** Learning #27 (Input validation - critical security & quality)
 **Status:** CONTINUOUSLY IMPROVING MY SYSTEMS!
 
 
