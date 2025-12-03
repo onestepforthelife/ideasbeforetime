@@ -95,8 +95,13 @@ function createAdUnit(containerId, adConfig) {
 
 /**
  * Add ad placeholders to page
+ * DISABLED: Only show ads after AdSense approval
  */
 function addAdPlaceholders() {
+    // Placeholders disabled until AdSense is approved
+    // Once approved, uncomment the code below
+    
+    /*
     // Homepage top banner
     const homepageHero = document.querySelector('.access-container, .container');
     if (homepageHero && window.location.pathname === '/index.html') {
@@ -126,6 +131,7 @@ function addAdPlaceholders() {
         footer.appendChild(adDiv);
         createAdUnit('ad-footer-banner', AD_CONFIG.footer_banner);
     }
+    */
 }
 
 /**
