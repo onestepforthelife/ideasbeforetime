@@ -27,3 +27,8 @@ backup_*/
 # Cloudflare
 .wrangler/
 wrangler.toml
+
+# Personal/Private Pages (DO NOT UPLOAD)
+family-lifetime-timeline.html
+family-prediction-report.html
+FAMILY_TIMELINE_FEATURES.txt

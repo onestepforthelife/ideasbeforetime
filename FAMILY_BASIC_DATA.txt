@@ -1,0 +1,30 @@
+📋 CORRECT FAMILY DATA - MASTER REFERENCE
+==========================================
+
+👩 Mother: Renu Sharma
+- DOB: 23 December 1985
+- Age in 2025: 40 years old
+- Place of Birth: Delhi
+- Time of Birth: 2:45 PM
+
+👨 Father: Amit Vashisht
+- DOB: 01 August 1982
+- Age in 2025: 43 years old
+- Place of Birth: Pathankot, Punjab
+- Time of Birth: 12:45 PM
+
+👧 Elder Daughter: Annika Vashist
+- DOB: 05 January 2015
+- Age in 2025: 10 years old
+- Place of Birth: New Delhi
+- Time of Birth: 1:07 PM
+
+👧 Younger Daughter: Avni Vashist
+- DOB: 22 February 2019
+- Age in 2025: 6 years old
+- Place of Birth: New Delhi
+- Time of Birth: 3:57 PM
+
+==========================================
+ALWAYS USE THIS AS THE SOURCE OF TRUTH!
+==========================================
