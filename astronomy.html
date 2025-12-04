@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomy & You - Educational Celestial Calculator | Ideas Before Time</title>
+    <meta name="description" content="Educational astronomy tool showing planetary positions, Vedic calendar, and astronomical calculations. Science, mathematics, and cultural education - for learning only.">
+    <link rel="stylesheet" href="common-navigation.css">
+    <link rel="stylesheet" href="common-footer.css">
+    <link rel="stylesheet" href="solar-system-3d.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .page-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Educational Disclaimer - TOP */
+        .disclaimer-top {
+            background: rgba(255, 193, 7, 0.15);
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .disclaimer-top h2 {
+            color: #ffc107;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .disclaimer-top p {
+            color: #fff;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            background: linear-gradient(135deg, #fdb813 0%, #ff6b6b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #b0b0b0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Input Form Section */
+        .input-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .input-section h2 {
+            color: #fdb813;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            color: #fff;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 14px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #fdb813;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Calculation Method Selection */
+        .method-selection {
+            margin: 30px 0;
+        }
+
+        .method-selection h3 {
+            color: #fdb813;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .method-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .method-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #fdb813;
+            transform: translateY(-3px);
+        }
+
+        .method-card.selected {
+            background: rgba(253, 184, 19, 0.2);
+            border-color: #fdb813;
+        }
+
+        .method-card input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .method-card h4 {
+            color: #fdb813;
+            margin: 10px 0 5px 0;
+        }
+
+        .method-card p {
+            color: #b0b0b0;
+            font-size: 13px;
+        }
+
+        /* Compare Toggle */
+        .compare-toggle {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .compare-toggle label {
+            font-size: 18px;
+            color: #fdb813;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .compare-toggle input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        /* Calculate Button */
+        .calculate-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #fdb813 0%, #ff6b6b 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(253, 184, 19, 0.5);
+        }
+
+        /* Results Section - Side by Side */
+        .results-section {
+            margin: 40px 0;
+            display: none;
+        }
+
+        .results-section.active {
+            display: block;
+        }
+
+        .results-section h2 {
+            color: #fdb813;
+            margin-bottom: 20px;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        /* Single Column Result */
+        .single-result {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        /* Side-by-Side Results (Like CV) */
+        .comparison-results {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            column-count: 2;
+            column-gap: 40px;
+            column-rule: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .result-column {
+            break-inside: avoid;
+            margin-bottom: 20px;
+        }
+
+        .result-column h3 {
+            color: #fdb813;
+            margin-bottom: 15px;
+            font-size: 24px;
+            border-bottom: 2px solid #fdb813;
+            padding-bottom: 10px;
+        }
+
+        .data-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 3px solid #fdb813;
+        }
+
+        .data-item strong {
+            color: #fdb813;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .data-item span {
+            color: #fff;
+        }
+
+        /* Educational Disclaimer - BOTTOM */
+        .disclaimer-bottom {
+            background: rgba(255, 87, 34, 0.15);
+            border: 2px solid #ff5722;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .disclaimer-bottom h3 {
+            color: #ff5722;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .disclaimer-bottom p {
+            color: #fff;
+            line-height: 1.8;
+            margin: 10px 0;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .comparison-results {
+                column-count: 1;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .method-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3181510462001437"
+            crossorigin="anonymous"></script>
+    <script src="google-adsense.js"></script>
+</head>
+<body>
+
+<div class="page-container">
+    <!-- Educational Disclaimer TOP -->
+    <div class="disclaimer-top">
+        <h2>🔭 EDUCATIONAL ASTRONOMY TOOL</h2>
+        <p><strong>This tool demonstrates:</strong></p>
+        <p>• Astronomical calculations (planetary positions)</p>
+        <p>• Mathematical formulas (orbital mechanics)</p>
+        <p>• Cultural calendar systems (Vedic/Hindu traditions)</p>
+        <p><strong>FOR EDUCATIONAL PURPOSES ONLY</strong></p>
+        <p>Not for making life decisions or predictions</p>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>🌌 Astronomy & You</h1>
+        <p>Explore the cosmos through science and mathematics. Calculate planetary positions, discover Vedic calendar systems, and learn about astronomical phenomena.</p>
+    </div>
+
+    <!-- 3D Solar System Visualization -->
+    <section class="solar-system-section">
+        <div class="solar-system-content">
+            <div class="solar-system-header">
+                <h2>🪐 Interactive Solar System</h2>
+                <p>Real-time planetary positions based on your selected date</p>
+            </div>
+            <div id="solar-system-container">
+                <div class="solar-system-loading">Loading 3D visualization</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Input Form Section -->
+    <div class="input-section">
+        <h2>📅 Enter Your Details</h2>
+        
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="time">Time</label>
+                <input type="time" id="time" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="place">Place (City)</label>
+                <input type="text" id="place" placeholder="Mumbai, India" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="region">Region (Calendar System)</label>
+                <select id="region">
+                    <option value="north">North India (Purnimanta)</option>
+                    <option value="south">South India (Amanta)</option>
+                    <option value="west">West India</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="language">Language</label>
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी (Hindi)</option>
+                    <option value="ta">தமிழ் (Tamil)</option>
+                    <option value="te">తెలుగు (Telugu)</option>
+                    <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                    <option value="ml">മലയാളം (Malayalam)</option>
+                    <option value="bn">বাংলা (Bengali)</option>
+                    <option value="mr">मराठी (Marathi)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Calculation Method Selection -->
+        <div class="method-selection">
+            <h3>🔬 Select Calculation Method(s)</h3>
+            <p style="color: #b0b0b0; margin-bottom: 15px;">Choose one or two methods to compare results side-by-side</p>
+            
+            <div class="method-grid">
+                <div class="method-card" onclick="toggleMethod('vedic')">
+                    <input type="checkbox" id="method-vedic" value="vedic">
+                    <h4>🕉️ Vedic Astrology</h4>
+                    <p>Traditional Indian calculations</p>
+                </div>
+                
+                <div class="method-card" onclick="toggleMethod('swiss')">
+                    <input type="checkbox" id="method-swiss" value="swiss">
+                    <h4>🇨🇭 Swiss Ephemeris</h4>
+                    <p>High-precision astronomical data</p>
+                </div>
+                
+                <div class="method-card" onclick="toggleMethod('drik')">
+                    <input type="checkbox" id="method-drik" value="drik">
+                    <h4>📅 Drik Panchang</h4>
+                    <p>Hindu calendar calculations</p>
+                </div>
+                
+                <div class="method-card" onclick="toggleMethod('western')">
+                    <input type="checkbox" id="method-western" value="western">
+                    <h4>⭐ Western Astrology</h4>
+                    <p>Tropical zodiac system</p>
+                </div>
+                
+                <div class="method-card" onclick="toggleMethod('nasa')">
+                    <input type="checkbox" id="method-nasa" value="nasa">
+                    <h4>🚀 NASA Horizons</h4>
+                    <p>Scientific planetary positions</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compare Toggle -->
+        <div class="compare-toggle">
+            <label>
+                <input type="checkbox" id="compareMode">
+                <span>📊 Compare 2 Methods Side-by-Side (like CV layout)</span>
+            </label>
+        </div>
+
+        <button class="calculate-btn" onclick="calculateResults()">🔮 Calculate Astronomical Data</button>
+    </div>
+
+    <!-- Results Section -->
+    <div class="results-section" id="resultsSection">
+        <h2>📊 Calculation Results</h2>
+        
+        <!-- Single Result Container -->
+        <div id="singleResult" class="single-result"></div>
+        
+        <!-- Comparison Results Container (2 columns like CV) -->
+        <div id="comparisonResults" class="comparison-results"></div>
+    </div>
+
+    <!-- Educational Disclaimer BOTTOM -->
+    <div class="disclaimer-bottom">
+        <h3>⚠️ DISCLAIMER</h3>
+        <p>This is an <strong>educational tool</strong> showing astronomical calculations and traditional calendar systems.</p>
+        <p>Results are based on <strong>mathematical formulas</strong> and should <strong>NOT</strong> be used for making important life decisions.</p>
+        <p>For professional astrological consultations, please consult qualified practitioners.</p>
+        <p><strong>Science • Mathematics • Cultural Education</strong></p>
+    </div>
+</div>
+
+<!-- Three.js for 3D Solar System -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="solar-system-3d.js"></script>
+
+<script>
+// Selected methods tracking
+let selectedMethods = [];
+
+// Toggle method selection
+function toggleMethod(method) {
+    const checkbox = document.getElementById(`method-${method}`);
+    const card = checkbox.parentElement;
+    
+    checkbox.checked = !checkbox.checked;
+    
+    if (checkbox.checked) {
+        card.classList.add('selected');
+        if (!selectedMethods.includes(method)) {
+            selectedMethods.push(method);
+        }
+    } else {
+        card.classList.remove('selected');
+        selectedMethods = selectedMethods.filter(m => m !== method);
+    }
+    
+    // Limit to 2 methods for comparison
+    if (selectedMethods.length > 2) {
+        const firstMethod = selectedMethods.shift();
+        const firstCheckbox = document.getElementById(`method-${firstMethod}`);
+        firstCheckbox.checked = false;
+        firstCheckbox.parentElement.classList.remove('selected');
+    }
+}
+
+// Calculate Results
+function calculateResults() {
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const place = document.getElementById('place').value;
+    const region = document.getElementById('region').value;
+    const language = document.getElementById('language').value;
+    const compareMode = document.getElementById('compareMode').checked;
+    
+    // Validation
+    if (!date || !time || !place) {
+        alert('Please fill in all required fields (Date, Time, Place)');
+        return;
+    }
+    
+    if (selectedMethods.length === 0) {
+        alert('Please select at least one calculation method');
+        return;
+    }
+    
+    if (compareMode && selectedMethods.length < 2) {
+        alert('Please select 2 methods to compare side-by-side');
+        return;
+    }
+    
+    // Show results section
+    document.getElementById('resultsSection').classList.add('active');
+    
+    // Generate results based on mode
+    if (compareMode && selectedMethods.length === 2) {
+        showComparisonResults(date, time, place, region, language);
+    } else {
+        showSingleResult(date, time, place, region, language);
+    }
+    
+    // Scroll to results
+    document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Show Single Result
+function showSingleResult(date, time, place, region, language) {
+    const singleResult = document.getElementById('singleResult');
+    const comparisonResults = document.getElementById('comparisonResults');
+    
+    singleResult.style.display = 'block';
+    comparisonResults.style.display = 'none';
+    
+    const method = selectedMethods[0];
+    const data = generateMockData(method, date, time, place, region);
+    
+    singleResult.innerHTML = `
+        <h3>${getMethodName(method)} Results</h3>
+        ${generateResultHTML(data)}
+    `;
+}
+
+// Show Comparison Results (Side-by-Side like CV)
+function showComparisonResults(date, time, place, region, language) {
+    const singleResult = document.getElementById('singleResult');
+    const comparisonResults = document.getElementById('comparisonResults');
+    
+    singleResult.style.display = 'none';
+    comparisonResults.style.display = 'block';
+    
+    const method1 = selectedMethods[0];
+    const method2 = selectedMethods[1];
+    
+    const data1 = generateMockData(method1, date, time, place, region);
+    const data2 = generateMockData(method2, date, time, place, region);
+    
+    comparisonResults.innerHTML = `
+        <div class="result-column">
+            <h3>${getMethodName(method1)}</h3>
+            ${generateResultHTML(data1)}
+        </div>
+        
+        <div class="result-column">
+            <h3>${getMethodName(method2)}</h3>
+            ${generateResultHTML(data2)}
+        </div>
+    `;
+}
+
+// Generate Result HTML
+function generateResultHTML(data) {
+    return `
+        <div class="data-item">
+            <strong>📅 Date & Time</strong>
+            <span>${data.datetime}</span>
+        </div>
+        
+        <div class="data-item">
+            <strong>📍 Location</strong>
+            <span>${data.location}</span>
+        </div>
+        
+        <div class="data-item">
+            <strong>🌅 Sunrise</strong>
+            <span>${data.sunrise}</span>
+        </div>
+        
+        <div class="data-item">
+            <strong>🌇 Sunset</strong>
+            <span>${data.sunset}</span>
+        </div>
+        
+        <div class="data-item">
+            <strong>🌙 Moon Phase</strong>
+            <span>${data.moonPhase}</span>
+        </div>
+        
+        <div class="data-item">
+            <strong>🕉️ Tithi (Lunar Day)</strong>
+            <span>${data.tithi}</span>
+        </div>
+        
+        <div class="data-item">
+            <strong>⭐ Nakshatra (Lunar Mansion)</strong>
+            <span>${data.nakshatra}</span>
+        </div>
+        
+        <div class="data-item">
+            <strong>🔗 Yoga</strong>
+            <span>${data.yoga}</span>
+        </div>
+        
+        <div class="data-item">
+            <strong>📊 Karana</strong>
+            <span>${data.karana}</span>
+        </div>
+        
+        <div class="data-item">
+            <strong>🌞 Sun Position</strong>
+            <span>${data.sunPosition}</span>
+        </div>
+        
+        <div class="data-item">
+            <strong>🌙 Moon Position</strong>
+            <span>${data.moonPosition}</span>
+        </div>
+        
+        <div class="data-item">
+            <strong>🐉 Rahu (Ascending Node)</strong>
+            <span>${data.rahu}</span>
+        </div>
+        
+        <div class="data-item">
+            <strong>🐉 Ketu (Descending Node)</strong>
+            <span>${data.ketu}</span>
+        </div>
+    `;
+}
+
+// Get Method Name
+function getMethodName(method) {
+    const names = {
+        'vedic': '🕉️ Vedic Astrology',
+        'swiss': '🇨🇭 Swiss Ephemeris',
+        'drik': '📅 Drik Panchang',
+        'western': '⭐ Western Astrology',
+        'nasa': '🚀 NASA Horizons'
+    };
+    return names[method] || method;
+}
+
+// Generate Mock Data (Replace with real API calls)
+function generateMockData(method, date, time, place, region) {
+    // This is DEMO data - Replace with actual API integration
+    return {
+        datetime: `${date} at ${time}`,
+        location: place,
+        sunrise: '06:30 AM',
+        sunset: '06:15 PM',
+        moonPhase: 'Waxing Crescent (25%)',
+        tithi: 'Shukla Saptami (7th day)',
+        nakshatra: 'Rohini',
+        yoga: 'Siddha',
+        karana: 'Bava',
+        sunPosition: 'Sagittarius 15° 23\'',
+        moonPosition: 'Taurus 8° 45\'',
+        rahu: 'Pisces 27° 12\'',
+        ketu: 'Virgo 27° 12\''
+    };
+}
+
+// Set today's date as default
+document.getElementById('date').valueAsDate = new Date();
+document.getElementById('time').value = new Date().toTimeString().slice(0, 5);
+</script>
+
+<script src="universal-analytics.js"></script>
+<script src="error-tracker.js"></script>
+<script src="common-navigation.js"></script>
+<script src="common-footer.js"></script>
+
+</body>
+</html>

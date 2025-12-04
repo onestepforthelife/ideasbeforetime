@@ -1,0 +1,15 @@
+# Cloudflare Pages Redirects
+# This ensures HTML files are served correctly, not falling back to index.html
+
+# Serve HTML files directly (no redirect)
+/*.html 200
+
+# Serve static assets
+/images/* 200
+/innovations/* 200
+/linkedin-portfolio/* 200
+/workers/* 200
+/.well-known/* 200
+
+# Fallback to index.html for SPA routes (only if file doesn't exist)
+/* /index.html 404
