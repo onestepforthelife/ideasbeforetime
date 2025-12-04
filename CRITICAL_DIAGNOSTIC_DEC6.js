@@ -1,273 +1,301 @@
+#!/usr/bin/env node
+
+/**
+ * CRITICAL DIAGNOSTIC TOOL - December 6, 2025
+ * 
+ * Purpose: Find root cause of live site issues
+ * - Check navigation links format (relative vs absolute)
+ * - Verify page content matches navigation
+ * - Check all pages have header/footer
+ * - Identify file issues vs server issues
+ * 
+ * MANDATORY: Run this BEFORE every push!
+ */
+
 const fs = require('fs');
 const path = require('path');
 
-console.log('🚨 CRITICAL DIAGNOSTIC - December 6, 2025');
-console.log('Finding ROOT CAUSE of non-working features\n');
-console.log('='.repeat(70));
+console.log('🔍 CRITICAL DIAGNOSTIC STARTING...\n');
+console.log('=' .repeat(60));
 
-const issues = [];
-const findings = [];
+const issues = {
+    file: [],
+    server: [],
+    critical: [],
+    high: [],
+    medium: [],
+    low: []
+};
 
-// PROBLEM 1: SPO Tool Not Working
-console.log('\n🔍 PROBLEM 1: SPO TOOL NOT WORKING');
-console.log('-'.repeat(70));
+// Get all HTML files
+const htmlFiles = fs.readdirSync('.')
+    .filter(f => f.endsWith('.html') && !f.startsWith('backup'));
 
-// Check SPO files exist
-const spoFiles = [
-    'social-optimizer-index.html',
-    'social-optimizer-app.html',
-    'social-optimizer-app.js',
-    'social-optimizer-ai-engine.js',
-    'spo.html'
-];
+console.log(`\n📊 Found ${htmlFiles.length} HTML files to check\n`);
 
-spoFiles.forEach(file => {
-    if (fs.existsSync(file)) {
-        findings.push(`✅ ${file} exists`);
-        
-        // Check if it has actual functionality
-        const content = fs.readFileSync(file, 'utf8');
-        
-        if (file.includes('.js')) {
-            // Check for API calls
-            if (content.includes('fetch(') || content.includes('XMLHttpRequest')) {
-                findings.push(`   ✅ ${file} has API calls`);
-            } else {
-                issues.push(`   ❌ ${file} has NO API calls - frontend only!`);
-            }
-            
-            // Check for API keys
-            if (content.includes('API_KEY') || content.includes('apiKey')) {
-                findings.push(`   ✅ ${file} references API keys`);
-            } else {
-                issues.push(`   ⚠️  ${file} has no API key references`);
-            }
-        }
-        
-        if (file.includes('.html')) {
-            // Check if it links to backend
-            if (content.includes('action=') || content.includes('fetch(')) {
-                findings.push(`   ✅ ${file} has form/API integration`);
-            } else {
-                issues.push(`   ❌ ${file} is static HTML only - no backend!`);
-            }
-        }
+// Check 1: Navigation Links Format
+console.log('CHECK 1: Navigation Links Format (Relative vs Absolute)');
+console.log('-'.repeat(60));
+
+const navFile = 'common-navigation.js';
+if (fs.existsSync(navFile)) {
+    const navContent = fs.readFileSync(navFile, 'utf8');
+    
+    // Check for absolute paths (starting with /)
+    const absolutePaths = navContent.match(/href="\/[^"]+"/g) || [];
+    
+    if (absolutePaths.length > 0) {
+        issues.critical.push({
+            type: 'FILE',
+            file: navFile,
+            issue: `Found ${absolutePaths.length} absolute paths (with "/" prefix)`,
+            paths: absolutePaths,
+            fix: 'Remove "/" prefix from all href attributes'
+        });
+        console.log(`❌ CRITICAL: Found ${absolutePaths.length} absolute paths in navigation`);
+        absolutePaths.forEach(p => console.log(`   ${p}`));
     } else {
-        issues.push(`❌ ${file} MISSING`);
-    }
-});
-
-// PROBLEM 2: Job Search Not Working
-console.log('\n🔍 PROBLEM 2: JOB SEARCH TOOL NOT WORKING');
-console.log('-'.repeat(70));
-
-const jobFiles = [
-    'email-sender-web.html',
-    'job-tools.html',
-    'job-dashboard.html',
-    'job_backend_api.py',
-    'job_agent.py'
-];
-
-jobFiles.forEach(file => {
-    if (fs.existsSync(file)) {
-        findings.push(`✅ ${file} exists`);
-        
-        const content = fs.readFileSync(file, 'utf8');
-        
-        if (file.endsWith('.py')) {
-            // Check if Python backend is configured
-            if (content.includes('Flask') || content.includes('FastAPI')) {
-                findings.push(`   ✅ ${file} has backend framework`);
-            } else {
-                issues.push(`   ❌ ${file} has no backend framework!`);
-            }
-            
-            // Check for database
-            if (content.includes('database') || content.includes('db')) {
-                findings.push(`   ✅ ${file} has database integration`);
-            } else {
-                issues.push(`   ❌ ${file} has no database!`);
-            }
-        }
-        
-        if (file.endsWith('.html')) {
-            // Check if it connects to backend
-            if (content.includes('http://') || content.includes('https://')) {
-                findings.push(`   ✅ ${file} has backend URL`);
-            } else {
-                issues.push(`   ❌ ${file} has no backend connection!`);
-            }
-        }
-    } else {
-        issues.push(`❌ ${file} MISSING`);
-    }
-});
-
-// PROBLEM 3: Cloudflare Access Not Working
-console.log('\n🔍 PROBLEM 3: CLOUDFLARE ACCESS (ADMIN BYPASS) NOT WORKING');
-console.log('-'.repeat(70));
-
-// Check if Cloudflare Access is configured
-if (fs.existsSync('_headers')) {
-    const headers = fs.readFileSync('_headers', 'utf8');
-    if (headers.includes('CF-Access')) {
-        findings.push('✅ _headers has Cloudflare Access config');
-    } else {
-        issues.push('❌ _headers has NO Cloudflare Access config');
+        console.log('✅ All navigation links are relative (no "/" prefix)');
     }
 } else {
-    issues.push('❌ _headers file MISSING - Cloudflare Access cannot work!');
+    issues.critical.push({
+        type: 'FILE',
+        file: navFile,
+        issue: 'Navigation file missing',
+        fix: 'Create common-navigation.js'
+    });
+    console.log(`❌ CRITICAL: ${navFile} not found`);
 }
 
-// Check for access control files
-const accessFiles = [
-    'admin-control-panel.html',
-    'CLOUDFLARE_ACCESS_SETUP_5MIN.txt',
-    'CLOUDFLARE_ACCESS_POLICY_FINAL.txt'
+// Check 2: Page Content vs Navigation Match
+console.log('\nCHECK 2: Page Content vs Navigation Links');
+console.log('-'.repeat(60));
+
+const navLinks = [
+    'index.html',
+    'blog.html',
+    'astronomy.html',
+    'ro.html',
+    'social-optimizer-index.html',
+    'email-sender-web.html',
+    'market-reports.html',
+    'innovations.html',
+    'library.html',
+    'about.html',
+    'cv.html',
+    'spo.html',
+    'jobs.html',
+    'admin-control-panel.html'
 ];
 
-accessFiles.forEach(file => {
-    if (fs.existsSync(file)) {
-        findings.push(`✅ ${file} exists (documentation)`);
+const missingPages = [];
+const existingPages = [];
+
+navLinks.forEach(link => {
+    if (fs.existsSync(link)) {
+        existingPages.push(link);
+        console.log(`✅ ${link} exists`);
     } else {
-        issues.push(`❌ ${file} MISSING`);
+        missingPages.push(link);
+        issues.high.push({
+            type: 'FILE',
+            file: link,
+            issue: 'Page linked in navigation but file missing',
+            fix: `Create ${link} or remove from navigation`
+        });
+        console.log(`❌ ${link} MISSING (linked in nav but file not found)`);
     }
 });
 
-// PROBLEM 4: Check if pages have correct links
-console.log('\n🔍 PROBLEM 4: PAGE CONTENT VS LINKS MISMATCH');
-console.log('-'.repeat(70));
+// Check 3: All Pages Have Navigation & Footer
+console.log('\nCHECK 3: Header & Footer Linkage');
+console.log('-'.repeat(60));
 
-// Check index.html links
-if (fs.existsSync('index.html')) {
-    const index = fs.readFileSync('index.html', 'utf8');
+let pagesWithNav = 0;
+let pagesWithFooter = 0;
+const pagesWithoutNav = [];
+const pagesWithoutFooter = [];
+
+htmlFiles.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
     
-    const expectedLinks = [
-        'blog.html',
-        'social-optimizer-index.html',
-        'email-sender-web.html',
-        'market-reports.html',
-        'about.html'
-    ];
+    const hasNav = content.includes('common-navigation.js');
+    const hasFooter = content.includes('common-footer.js');
     
-    expectedLinks.forEach(link => {
-        if (index.includes(link)) {
-            findings.push(`✅ index.html links to ${link}`);
+    if (hasNav) pagesWithNav++;
+    else pagesWithoutNav.push(file);
+    
+    if (hasFooter) pagesWithFooter++;
+    else pagesWithoutFooter.push(file);
+});
+
+console.log(`✅ ${pagesWithNav}/${htmlFiles.length} pages have navigation`);
+console.log(`✅ ${pagesWithFooter}/${htmlFiles.length} pages have footer`);
+
+if (pagesWithoutNav.length > 0) {
+    issues.high.push({
+        type: 'FILE',
+        files: pagesWithoutNav,
+        issue: `${pagesWithoutNav.length} pages missing navigation`,
+        fix: 'Add <script src="common-navigation.js"></script>'
+    });
+    console.log(`\n❌ Pages without navigation (${pagesWithoutNav.length}):`);
+    pagesWithoutNav.forEach(f => console.log(`   - ${f}`));
+}
+
+if (pagesWithoutFooter.length > 0) {
+    issues.medium.push({
+        type: 'FILE',
+        files: pagesWithoutFooter,
+        issue: `${pagesWithoutFooter.length} pages missing footer`,
+        fix: 'Add <script src="common-footer.js"></script>'
+    });
+    console.log(`\n⚠️  Pages without footer (${pagesWithoutFooter.length}):`);
+    pagesWithoutFooter.forEach(f => console.log(`   - ${f}`));
+}
+
+// Check 4: Critical Tools Functionality
+console.log('\nCHECK 4: Critical Tools Functionality');
+console.log('-'.repeat(60));
+
+const criticalTools = [
+    { file: 'spo.html', name: 'SPO Tool', requiredFiles: ['social-optimizer-app.js', 'social-optimizer-ai-engine.js'] },
+    { file: 'jobs.html', name: 'Job Search', requiredFiles: ['job-api-client.js'] },
+    { file: 'admin-control-panel.html', name: 'Admin Panel', requiredFiles: [] }
+];
+
+criticalTools.forEach(tool => {
+    if (fs.existsSync(tool.file)) {
+        const content = fs.readFileSync(tool.file, 'utf8');
+        
+        // Check if it's a redirect file
+        if (content.includes('window.location') && content.length < 1000) {
+            issues.critical.push({
+                type: 'FILE',
+                file: tool.file,
+                issue: `${tool.name} is a redirect file, not actual tool`,
+                fix: `Replace with actual ${tool.name} implementation`
+            });
+            console.log(`❌ CRITICAL: ${tool.name} (${tool.file}) is a redirect file`);
         } else {
-            issues.push(`❌ index.html does NOT link to ${link}`);
+            console.log(`✅ ${tool.name} (${tool.file}) exists and is not a redirect`);
+            
+            // Check required files
+            tool.requiredFiles.forEach(reqFile => {
+                if (!content.includes(reqFile)) {
+                    issues.high.push({
+                        type: 'FILE',
+                        file: tool.file,
+                        issue: `Missing required file: ${reqFile}`,
+                        fix: `Add <script src="${reqFile}"></script> to ${tool.file}`
+                    });
+                    console.log(`   ⚠️  Missing: ${reqFile}`);
+                }
+            });
+        }
+    } else {
+        issues.critical.push({
+            type: 'FILE',
+            file: tool.file,
+            issue: `${tool.name} file missing`,
+            fix: `Create ${tool.file}`
+        });
+        console.log(`❌ CRITICAL: ${tool.name} (${tool.file}) NOT FOUND`);
+    }
+});
+
+// Check 5: Server Issues (Cannot test from local)
+console.log('\nCHECK 5: Server Issues (Cloudflare)');
+console.log('-'.repeat(60));
+
+issues.server.push({
+    type: 'SERVER',
+    issue: 'Cannot test server issues from local files',
+    note: 'Must test on live site with browser DevTools',
+    checks: [
+        'HTTP status codes (200, 308, 404)',
+        'Cloudflare Access configuration',
+        'Cache purge status',
+        'Actual page loading'
+    ]
+});
+
+console.log('⚠️  Cannot test server issues from local files');
+console.log('   Must test on live site: https://onestepforthelife.com');
+console.log('   Use browser DevTools → Network tab');
+console.log('   Check for:');
+console.log('   - 308 redirects (cache issue)');
+console.log('   - 404 errors (file not found)');
+console.log('   - Cloudflare Access blocking');
+
+// Summary
+console.log('\n' + '='.repeat(60));
+console.log('📊 DIAGNOSTIC SUMMARY');
+console.log('='.repeat(60));
+
+const totalIssues = issues.critical.length + issues.high.length + issues.medium.length + issues.low.length;
+
+console.log(`\n🚨 CRITICAL Issues: ${issues.critical.length}`);
+console.log(`⚠️  HIGH Issues: ${issues.high.length}`);
+console.log(`📌 MEDIUM Issues: ${issues.medium.length}`);
+console.log(`ℹ️  LOW Issues: ${issues.low.length}`);
+console.log(`📡 SERVER Issues: ${issues.server.length} (need live testing)`);
+console.log(`\n📊 TOTAL: ${totalIssues} file issues found`);
+
+// Detailed Issues
+if (issues.critical.length > 0) {
+    console.log('\n🚨 CRITICAL ISSUES (FIX IMMEDIATELY):');
+    console.log('-'.repeat(60));
+    issues.critical.forEach((issue, i) => {
+        console.log(`\n${i + 1}. ${issue.issue}`);
+        console.log(`   File: ${issue.file || issue.files?.join(', ')}`);
+        console.log(`   Fix: ${issue.fix}`);
+        if (issue.paths) {
+            console.log(`   Paths found:`);
+            issue.paths.forEach(p => console.log(`      ${p}`));
         }
     });
 }
 
-// Check if all pages have navigation
-console.log('\n🔍 PROBLEM 5: NAVIGATION/FOOTER CONSISTENCY');
-console.log('-'.repeat(70));
-
-const htmlFiles = fs.readdirSync('.').filter(f => f.endsWith('.html'));
-let pagesWithNav = 0;
-let pagesWithoutNav = 0;
-
-htmlFiles.slice(0, 20).forEach(file => {
-    const content = fs.readFileSync(file, 'utf8');
-    if (content.includes('common-navigation.js')) {
-        pagesWithNav++;
-    } else {
-        pagesWithoutNav++;
-        issues.push(`❌ ${file} has NO navigation`);
-    }
-});
-
-findings.push(`✅ ${pagesWithNav} pages have navigation`);
-if (pagesWithoutNav > 0) {
-    issues.push(`❌ ${pagesWithoutNav} pages MISSING navigation`);
+if (issues.high.length > 0) {
+    console.log('\n⚠️  HIGH PRIORITY ISSUES:');
+    console.log('-'.repeat(60));
+    issues.high.forEach((issue, i) => {
+        console.log(`\n${i + 1}. ${issue.issue}`);
+        console.log(`   File: ${issue.file || issue.files?.join(', ')}`);
+        console.log(`   Fix: ${issue.fix}`);
+    });
 }
 
-// ROOT CAUSE ANALYSIS
-console.log('\n' + '='.repeat(70));
-console.log('🎯 ROOT CAUSE ANALYSIS\n');
+// Save report
+const report = {
+    timestamp: new Date().toISOString(),
+    totalFiles: htmlFiles.length,
+    totalIssues,
+    issues,
+    summary: {
+        critical: issues.critical.length,
+        high: issues.high.length,
+        medium: issues.medium.length,
+        low: issues.low.length,
+        server: issues.server.length
+    }
+};
 
-console.log('📋 FINDINGS:');
-findings.forEach(f => console.log(f));
+fs.writeFileSync('DIAGNOSTIC_REPORT_DEC6.json', JSON.stringify(report, null, 2));
+console.log('\n✅ Full report saved to: DIAGNOSTIC_REPORT_DEC6.json');
 
-console.log('\n🚨 CRITICAL ISSUES:');
-issues.forEach(i => console.log(i));
-
-console.log('\n' + '='.repeat(70));
-console.log('💡 ROOT CAUSES IDENTIFIED:\n');
-
-console.log('1. SPO TOOL:');
-console.log('   ❌ Frontend exists but NO BACKEND');
-console.log('   ❌ No API server running');
-console.log('   ❌ No database connection');
-console.log('   ✅ SOLUTION: Need to deploy backend API\n');
-
-console.log('2. JOB SEARCH TOOL:');
-console.log('   ❌ Frontend exists but NO BACKEND');
-console.log('   ❌ Python files exist but NOT DEPLOYED');
-console.log('   ❌ No server running to handle requests');
-console.log('   ✅ SOLUTION: Need to deploy Python backend\n');
-
-console.log('3. CLOUDFLARE ACCESS:');
-console.log('   ❌ _headers file missing or not configured');
-console.log('   ❌ Cloudflare Access NOT enabled in dashboard');
-console.log('   ❌ No access policies created');
-console.log('   ✅ SOLUTION: Configure in Cloudflare dashboard\n');
-
-console.log('4. FILE vs SERVER ISSUE:');
-console.log('   ✅ FILES are correct (HTML/JS exist)');
-console.log('   ❌ SERVER/BACKEND is missing');
-console.log('   ❌ This is DEPLOYMENT issue, not file issue\n');
-
-console.log('='.repeat(70));
-console.log('\n📝 PRACTICAL SOLUTION RULEBOOK:\n');
-
-console.log('RULE #1: Frontend ≠ Working Feature');
-console.log('   - Having HTML/JS files does NOT mean feature works');
-console.log('   - Need backend API + database + deployment\n');
-
-console.log('RULE #2: Static Site Limitations');
-console.log('   - Cloudflare Pages = Static hosting only');
-console.log('   - Cannot run Python/Node.js backends');
-console.log('   - Need separate backend deployment\n');
-
-console.log('RULE #3: Backend Deployment Options');
-console.log('   - Option A: Cloudflare Workers (JavaScript only)');
-console.log('   - Option B: External API (Heroku, Railway, Render)');
-console.log('   - Option C: Serverless (AWS Lambda, Vercel Functions)\n');
-
-console.log('RULE #4: Cloudflare Access Setup');
-console.log('   - Must configure in Cloudflare dashboard');
-console.log('   - Cannot be done via files alone');
-console.log('   - Need to create access policies manually\n');
-
-console.log('='.repeat(70));
-console.log('\n✅ NEXT STEPS:\n');
-
-console.log('1. Deploy SPO backend:');
-console.log('   - Convert to Cloudflare Worker OR');
-console.log('   - Deploy to external API service\n');
-
-console.log('2. Deploy Job Search backend:');
-console.log('   - Deploy Python API to Heroku/Railway OR');
-console.log('   - Convert to Cloudflare Worker\n');
-
-console.log('3. Configure Cloudflare Access:');
-console.log('   - Go to Cloudflare dashboard');
-console.log('   - Enable Zero Trust');
-console.log('   - Create access policies\n');
-
-console.log('4. Update files with backend URLs:');
-console.log('   - Point frontend to deployed backend');
-console.log('   - Test end-to-end flow\n');
-
-console.log('='.repeat(70));
-
-if (issues.length > 10) {
-    console.log('\n❌ CRITICAL: Multiple issues found');
-    console.log('Root cause: BACKEND NOT DEPLOYED');
+// Exit code
+if (issues.critical.length > 0) {
+    console.log('\n❌ DIAGNOSTIC FAILED: Critical issues found');
+    console.log('   DO NOT PUSH until critical issues are fixed!');
     process.exit(1);
+} else if (issues.high.length > 0) {
+    console.log('\n⚠️  DIAGNOSTIC WARNING: High priority issues found');
+    console.log('   Recommend fixing before push');
+    process.exit(0);
 } else {
-    console.log('\n✅ Diagnostic complete');
+    console.log('\n✅ DIAGNOSTIC PASSED: No critical issues found');
+    console.log('   Safe to push (but test on live site after deployment)');
     process.exit(0);
 }
