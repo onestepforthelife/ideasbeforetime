@@ -3,7 +3,7 @@
 
 const https = require('https');
 
-const LIVE_SITE = 'https://ideasbeforetime.pages.dev';
+const LIVE_SITE = 'https://onestepforthelife.com';
 
 const checks = [
     // Blog visibility
