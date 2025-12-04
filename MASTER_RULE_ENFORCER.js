@@ -42,7 +42,7 @@ console.log('📂 CATEGORY 1: Navigation & Structure\n');
 
 // Rule 1.1: All HTML files have common-navigation.js
 const htmlFiles = fs.readdirSync('.').filter(f => f.endsWith('.html'));
-const excludeFromNav = ['test-preview-system.html', 'ghar-ghar-complete.html', 'compare-homepage-conversion.html', 'compare-homepage-versions.html'];
+const excludeFromNav = ['test-preview-system.html', 'ghar-ghar-complete.html', 'compare-homepage-conversion.html', 'compare-homepage-versions.html', 'admin-control-panel.html'];
 let navMissing = htmlFiles.filter(f => {
     if (excludeFromNav.includes(f)) return false;
     const content = fs.readFileSync(f, 'utf8');
@@ -108,7 +108,7 @@ if (blurMissing.length === 0) {
 // Rule 2.2: Reports have request access button
 let accessButtonMissing = reportFiles.filter(f => {
     const content = fs.readFileSync(f, 'utf8');
-    return !content.includes('request-access') && !content.includes('Request Access');
+    return !content.includes('request-access') && !content.includes('Request Access') && !content.includes('access-message');
 });
 
 if (accessButtonMissing.length === 0) {

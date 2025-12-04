@@ -1,9 +1,9 @@
 {
-  "timestamp": "2025-12-04T12:45:22.279Z",
+  "timestamp": "2025-12-04T16:01:32.491Z",
   "summary": {
-    "totalIssues": 16,
+    "totalIssues": 8,
     "blogPostsChecked": 100,
-    "filesChecked": 173
+    "filesChecked": 174
   },
   "details": {
     "blogPosts": {
@@ -12,11 +12,7 @@
     },
     "navigation": {
       "checked": 1,
-      "issues": [
-        "blog.html: Missing category \"Leadership & Management\"",
-        "blog.html: Missing category \"Technology & Innovation\"",
-        "blog.html: Missing category \"Career Development\""
-      ]
+      "issues": []
     },
     "crossLinking": {
       "checked": 7,
@@ -30,19 +26,14 @@
       ]
     },
     "consistency": {
-      "checked": 173,
+      "checked": 174,
       "issues": [
-        "acrylic.html: Missing common-navigation.js",
-        "acrylic.html: Missing analytics",
+        "admin-control-panel.html: Missing common-navigation.js",
+        "admin-control-panel.html: Missing common-footer.js",
+        "admin-control-panel.html: Missing analytics",
         "ghar-ghar-complete.html: Missing common-navigation.js",
         "ghar-ghar-complete.html: Missing common-footer.js",
-        "ghar-ghar-complete.html: Missing analytics",
-        "nickel.html: Missing common-navigation.js",
-        "nickel.html: Missing analytics",
-        "paper.html: Missing common-navigation.js",
-        "paper.html: Missing analytics",
-        "poloxamer.html: Missing common-navigation.js",
-        "poloxamer.html: Missing analytics"
+        "ghar-ghar-complete.html: Missing analytics"
       ]
     },
     "sitemap": {
