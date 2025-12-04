@@ -1,6 +1,6 @@
 {
-  "passed": 14,
-  "failed": 15,
+  "passed": 22,
+  "failed": 7,
   "warnings": 0,
   "tests": [
     {
@@ -70,7 +70,7 @@
     },
     {
       "name": "Razorpay integration exists",
-      "passed": false,
+      "passed": true,
       "details": "Should have Razorpay live key"
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "name": "Transaction ID verification exists",
-      "passed": false,
+      "passed": true,
       "details": "Should allow manual transaction verification"
     },
     {
@@ -90,12 +90,12 @@
     },
     {
       "name": "Multiple download formats available",
-      "passed": false,
+      "passed": true,
       "details": "Should offer PDF and Word formats"
     },
     {
       "name": "Data persistence with localStorage",
-      "passed": false,
+      "passed": true,
       "details": "Should save user data to prevent loss"
     },
     {
@@ -115,22 +115,22 @@
     },
     {
       "name": "Form validation exists",
-      "passed": false,
+      "passed": true,
       "details": "Should validate user inputs"
     },
     {
       "name": "Error handling exists",
-      "passed": false,
+      "passed": true,
       "details": "Should handle errors gracefully"
     },
     {
       "name": "Loading indicators exist",
-      "passed": false,
+      "passed": true,
       "details": "Should show loading during AI generation"
     },
     {
       "name": "Gemini API integration exists",
-      "passed": false,
+      "passed": true,
       "details": "Should call Gemini API for AI generation"
     },
     {

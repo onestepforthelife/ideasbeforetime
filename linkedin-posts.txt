@@ -1,0 +1,39 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📝 LINKEDIN POSTS - PASTE YOUR POSTS HERE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+INSTRUCTIONS:
+1. Copy your LinkedIn post
+2. Paste below in this format
+3. Save this file
+4. Tell Kiro: "add posts"
+5. Done!
+
+FORMAT:
+---POST---
+TITLE: Your Post Title
+DATE: YYYY-MM-DD
+CATEGORY: Choose from (Industry Insights, Leadership, Technology, Business Strategy, Career Advice, Innovation, Sustainability, Digital Transformation, Personal Growth, Market Analysis)
+
+Your post content here...
+
+---POST---
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PASTE YOUR POSTS BELOW THIS LINE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+---POST---
+TITLE: Example Post Title
+DATE: 2025-12-04
+CATEGORY: Industry Insights
+
+This is an example. Replace with your actual LinkedIn post content.
+
+Delete this example and paste your real posts!
+
+---POST---
+
+
+(Add more posts below - just keep using ---POST--- separator)
+
