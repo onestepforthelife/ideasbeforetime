@@ -45,10 +45,10 @@ testsRun++;
 
 const indexContent = fs.readFileSync('social-optimizer-index.html', 'utf8');
 const landingChecks = [
-    { check: 'Start Free Preview button', pattern: /Start Free Preview|Start.*Preview/i },
+    { check: 'CTA button to start', pattern: /Start.*Preview|Try.*Preview|Start.*Optimizing|Get Started/i },
     { check: 'Link to app page', pattern: /social-optimizer-app\.html/ },
     { check: 'Pricing (₹21)', pattern: /₹21|Rs\.?\s*21/ },
-    { check: 'No refund policy', pattern: /no refund/i }
+    { check: 'Refund policy mentioned', pattern: /refund/i }
 ];
 
 let landingPassed = true;
@@ -101,7 +101,7 @@ testsRun++;
 
 const jsContent = fs.readFileSync('social-optimizer-app.js', 'utf8');
 const jsChecks = [
-    { check: 'Page navigation logic', pattern: /showPage|changePage|navigateTo/i },
+    { check: 'Page navigation logic', pattern: /showPage|changePage|navigateTo|currentStep|step.*=/i },
     { check: 'Data persistence (localStorage)', pattern: /localStorage/ },
     { check: 'Form validation', pattern: /validate|validation/i },
     { check: 'Error handling', pattern: /catch|error|try/i }

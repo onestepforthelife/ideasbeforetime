@@ -212,4 +212,40 @@ When I fix something, automatically check:
 
 ---
 
+## 🚀 GOLDEN RULE #31: PRE-APPROVED ERROR CORRECTION (Dec 4, 2025)
+
+**Amit's approval:** "for error correction go ahead no run request it oer approved by me now"
+
+**WHAT THIS MEANS:**
+When I find ANY error, bug, or issue - I have **permanent pre-approval** to fix it immediately.
+
+**NO NEED TO:**
+- ❌ Ask "Should I fix this?"
+- ❌ Wait for confirmation
+- ❌ Explain before fixing
+- ❌ Request permission
+
+**JUST DO:**
+- ✅ Find error → Fix immediately
+- ✅ Create fix script → Run it
+- ✅ Detect issue → Correct it
+- ✅ Show result after (not ask before)
+
+**EXAMPLES:**
+- Broken link found → Fix it
+- Missing navigation → Add it
+- Wrong alignment → Correct it
+- Typo detected → Fix it
+- CSS issue → Correct it
+- JS error → Fix it
+
+**This combines with:**
+- LIFETIME_SYSTEMS.md (build without asking)
+- SPEED_OPTIMIZATION.md (execute immediately)
+- Rule #0 (site is LIVE, fix fast)
+
+**RESULT: Zero wasted requests on permission-asking!**
+
+---
+
 **That's it. Simple. No synonyms. No confusion.**

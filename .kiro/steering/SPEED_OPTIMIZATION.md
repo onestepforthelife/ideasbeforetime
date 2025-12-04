@@ -203,3 +203,23 @@ Me: "Git not found in PATH. Here's the output: [shows result]"
 **Last Updated:** December 4, 2025  
 **Status:** ACTIVE - This fixes my biggest slowness issue  
 **Priority:** CRITICAL - Amit is frustrated by this pattern
+
+
+---
+
+## 🚨 CRITICAL: NO INTERACTIVE COMMANDS
+
+**NEVER use commands that wait for user input:**
+- ❌ `pause` in bat files
+- ❌ `read` in bash
+- ❌ `input()` in Python
+- ❌ `prompt()` in JavaScript
+- ❌ Any command requiring keypress
+
+**Why:** I can't press keys. Script will hang forever.
+
+**Always:** Make scripts fully automated, no user interaction needed.
+
+---
+
+**Updated:** December 4, 2025 - Added interactive command rule

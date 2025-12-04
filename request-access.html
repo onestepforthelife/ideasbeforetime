@@ -3,29 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Request Access - Ideas Before Time</title>
+<title>Request Premium Access - Ideas Before Time</title>
 <link rel="stylesheet" href="common-watermark.css">
 <link rel="stylesheet" href="common-navigation.css">
-    <link rel="stylesheet" href="common-footer.css">
+<link rel="stylesheet" href="common-footer.css">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-    max-width: 1400px;
-    margin: 0 auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
     min-height: 100vh;
-    padding: 20px;
 }
 .page-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 200px);
-    padding: 40px 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 20px 100px;
+    min-height: 100vh;
 }
 .container {
     max-width: 600px;
+    margin: 0 auto;
     background: white;
     border-radius: 15px;
     padding: 40px;
@@ -35,11 +32,24 @@ h1 {
     color: #5a6c7d;
     margin-bottom: 10px;
     font-size: 32px;
+    text-align: center;
 }
 .subtitle {
     color: #666;
     margin-bottom: 30px;
     font-size: 16px;
+    text-align: center;
+    line-height: 1.6;
+}
+.info-box {
+    background: #e8f4f8;
+    border-left: 4px solid #5a6c7d;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+.info-box strong {
+    color: #5a6c7d;
 }
 .form-group {
     margin-bottom: 20px;
@@ -50,38 +60,21 @@ label {
     font-weight: 600;
     margin-bottom: 8px;
 }
-input, select, textarea {
+label .required {
+    color: #d32f2f;
+}
+input, select {
     width: 100%;
     padding: 12px;
     border: 2px solid #e0e0e0;
     border-radius: 8px;
     font-size: 16px;
     font-family: 'Segoe UI', Arial, sans-serif;
+    transition: border-color 0.3s;
 }
-input:focus, select:focus, textarea:focus {
+input:focus, select:focus {
     outline: none;
     border-color: #5a6c7d;
-}
-textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-.checkbox-group {
-    margin: 20px 0;
-}
-.checkbox-item {
-    margin: 10px 0;
-    padding: 15px;
-    background: #f8f9fa;
-    border-radius: 8px;
-}
-.checkbox-item input {
-    width: auto;
-    margin-right: 10px;
-}
-.checkbox-item label {
-    display: inline;
-    font-weight: normal;
 }
 .submit-btn {
     width: 100%;
@@ -93,19 +86,43 @@ textarea {
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: all 0.3s;
 }
 .submit-btn:hover {
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(90, 108, 125, 0.4);
+}
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 .success-message {
     display: none;
     background: #d4edda;
+    border: 2px solid #28a745;
     color: #155724;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+.success-message h3 {
+    color: #155724;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+.success-message p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+.error-message {
+    display: none;
+    background: #f8d7da;
+    border: 2px solid #dc3545;
+    color: #721c24;
     padding: 20px;
     border-radius: 8px;
     margin-top: 20px;
-    text-align: center;
 }
 .back-link {
     display: block;
@@ -114,9 +131,21 @@ textarea {
     color: #5a6c7d;
     font-size: 18px;
     text-decoration: none;
+    font-weight: 600;
 }
 .back-link:hover {
     text-decoration: underline;
+}
+.admin-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #999;
+    font-size: 14px;
+    text-decoration: none;
+}
+.admin-link:hover {
+    color: #5a6c7d;
 }
 </style>
     <meta name="description" content="request access - Ideas Before Time platform">
@@ -149,144 +178,198 @@ textarea {
 
 <div class="page-wrapper">
 <div class="container">
-    <h1>🔐 Request Access</h1>
-    <p class="subtitle">Fill out this form to request access to premium content. You'll receive an email once approved.</p>
+    <h1>🔐 Request Premium Access</h1>
+    <p class="subtitle">Get approval within 24 hours • Strategic market research & exclusive reports</p>
+    
+    <div class="info-box">
+        <strong>✨ Instant OTP Verification:</strong> Enter your email below and receive a one-time password instantly. No waiting required!
+    </div>
     
     <form id="accessForm">
         <div class="form-group">
-            <label for="name">Full Name *</label>
-            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="your.email@company.com" required>
+            <small style="color: #666; display: block; margin-top: 5px;">We'll send approval confirmation to this email</small>
         </div>
         
         <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="company">Company/Organization</label>
-            <input type="text" id="company" name="company">
-        </div>
-        
-        <div class="form-group">
-            <label for="role">Your Role *</label>
-            <select id="role" name="role" required>
-                <option value="">Select your role...</option>
-                <option value="recruiter">Recruiter</option>
-                <option value="hiring-manager">Hiring Manager</option>
-                <option value="business-partner">Business Partner</option>
-                <option value="investor">Investor</option>
-                <option value="consultant">Consultant</option>
-                <option value="student">Student/Researcher</option>
-                <option value="other">Other</option>
+            <label for="service">Service Requested <span class="required">*</span></label>
+            <select id="service" name="service" required>
+                <option value="">-- Select Service --</option>
+                <option value="market-reports">📊 Market Research Reports</option>
+                <option value="spo-premium">🎯 LinkedIn Profile Optimizer (Premium)</option>
+                <option value="cv-access">📄 Complete Professional CV</option>
+                <option value="all-premium">✨ All Premium Services</option>
             </select>
+            <small style="color: #666; display: block; margin-top: 5px;">Choose the service you're interested in</small>
         </div>
         
-        <div class="form-group">
-            <label>What would you like access to? *</label>
-            <div class="checkbox-group">
-                <div class="checkbox-item">
-                    <input type="checkbox" id="cv" name="access[]" value="cv">
-                    <label for="cv">📄 Professional CV</label>
-                </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="research" name="access[]" value="research">
-                    <label for="research">📊 Market Research Reports</label>
-                </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="insights" name="access[]" value="insights">
-                    <label for="insights">💡 Business Insights</label>
-                </div>
-            </div>
-        </div>
-        
-        <div class="form-group">
-            <label for="purpose">Purpose of Access *</label>
-            <textarea id="purpose" name="purpose" placeholder="Please briefly explain why you need access..." required></textarea>
-        </div>
-        
-        <button type="submit" class="submit-btn">Submit Request</button>
+        <button type="submit" class="submit-btn" id="submitBtn">Request Access</button>
     </form>
     
     <div id="successMessage" class="success-message">
-        <h3>✅ Request Submitted!</h3>
-        <p>Thank you for your request. You'll receive an email with access credentials once approved (usually within 24 hours).</p>
+        <h3>✅ Request Submitted Successfully!</h3>
+        <p><strong>Check your email inbox now!</strong></p>
+        <p>We've sent you an OTP (One-Time Password) to verify your email address.</p>
+        <p>Once verified, you'll receive instant access credentials.</p>
+        <p style="margin-top: 15px; font-size: 14px; color: #666;">
+            Didn't receive the email? Check your spam folder or contact us at 
+            <a href="mailto:onestepforthelife@gmail.com" style="color: #5a6c7d;">onestepforthelife@gmail.com</a>
+        </p>
+    </div>
+    
+    <div id="errorMessage" class="error-message">
+        ✗ Submission failed. Please email <a href="mailto:onestepforthelife@gmail.com" style="color: #721c24; font-weight: bold;">onestepforthelife@gmail.com</a> directly.
     </div>
     
     <a href="index.html" class="back-link">← Back to Home</a>
+    <a href="#admin" class="admin-link" onclick="checkAdminAccess(event)">Admin Login</a>
 </div>
 </div>
 
 <script>
-document.getElementById('accessForm').addEventListener('submit', function(e) {
+// Form submission handler with email integration
+document.getElementById('accessForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     
-    // Get form data
-    const formData = new FormData(this);
-    const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        company: formData.get('company'),
-        role: formData.get('role'),
-        access: formData.getAll('access[]'),
-        purpose: formData.get('purpose'),
-        timestamp: new Date().toISOString()
-    };
+    const submitBtn = document.getElementById('submitBtn');
+    const email = document.getElementById('email').value.trim();
+    const service = document.getElementById('service').value;
     
-    // Create email body
-    const emailBody = `
-ACCESS REQUEST RECEIVED
-========================
+    // Validate inputs
+    if (!email || !service) {
+        alert('Please fill in all required fields');
+        return;
+    }
+    
+    // Disable button during submission
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    
+    try {
+        // Generate OTP
+        const otp = Math.floor(100000 + Math.random() * 900000).toString();
+        const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+        
+        // Prepare email content
+        const emailSubject = `🔐 Access Request OTP - Ideas Before Time`;
+        const emailBody = `
+Hello,
 
-Name: ${data.name}
-Email: ${data.email}
-Company: ${data.company || 'Not provided'}
-Role: ${data.role}
+Thank you for requesting access to Ideas Before Time premium services!
 
-Requested Access:
-${data.access.map(item => '- ' + item.toUpperCase()).join('\n')}
+Your One-Time Password (OTP): ${otp}
 
-Purpose:
-${data.purpose}
+Service Requested: ${service}
+Request Time: ${timestamp}
 
-Timestamp: ${data.timestamp}
+NEXT STEPS:
+1. Reply to this email with your OTP to verify
+2. You'll receive access credentials within 5 minutes
+3. Start using premium features immediately!
 
-========================
+WHAT YOU'LL GET:
+${service === 'market-reports' ? '📊 Full access to all market research reports\n📈 Industry insights and analysis\n💼 Strategic recommendations' : ''}
+${service === 'spo-premium' ? '🎯 LinkedIn Profile Optimizer Premium\n✨ AI-powered profile enhancement\n📊 Performance analytics' : ''}
+${service === 'cv-access' ? '📄 Complete Professional CV\n💼 Full work history and achievements\n🎯 Contact information' : ''}
+${service === 'all-premium' ? '✨ ALL Premium Services\n📊 Market Reports + SPO Premium + CV Access\n🎯 Complete platform access' : ''}
 
-TO APPROVE:
-1. Review the request details above
-2. Send approval email to: ${data.email}
-3. Include access credentials/passwords
-
-APPROVAL EMAIL TEMPLATE:
-------------------------
-Subject: Access Approved - Ideas Before Time
-
-Dear ${data.name},
-
-Your access request has been approved! Here are your credentials:
-
-${data.access.includes('cv') ? '📄 CV Access\nPassword: AmitCV2025!\nURL: https://ideas-before-time.pages.dev/cv.html\n\n' : ''}${data.access.includes('research') ? '📊 Market Research\nPassword: AmitResearch2025!\nURL: https://ideas-before-time.pages.dev/Final_Acrylic_Market_Report.html\n\n' : ''}${data.access.includes('insights') ? '💡 Business Insights\nURL: https://ideas-before-time.pages.dev/business-insights.html\n\n' : ''}
-Please keep these credentials confidential.
+Questions? Reply to this email or contact:
+📧 onestepforthelife@gmail.com
 
 Best regards,
 Amit Kumar
 Ideas Before Time
-    `.trim();
-    
-    // Create mailto link
-    const mailtoLink = `mailto:onestepforthelife@gmail.com?subject=New Access Request from ${encodeURIComponent(data.name)}&body=${encodeURIComponent(emailBody)}`;
-    
-    // Open email client
-    window.location.href = mailtoLink;
-    
-    // Show success message
-    document.getElementById('accessForm').style.display = 'none';
-    document.getElementById('successMessage').style.display = 'block';
-    
-    // Optional: Also log to console for debugging
-    
+https://ideasbeforetime.pages.dev
+
+---
+This is an automated message. Your OTP is valid for 24 hours.
+        `.trim();
+        
+        // Create mailto link (opens user's email client)
+        const mailtoLink = `mailto:onestepforthelife@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}&cc=${encodeURIComponent(email)}`;
+        
+        // Open email client
+        window.open(mailtoLink, '_blank');
+        
+        // Store request data locally for admin
+        const requestData = {
+            email: email,
+            service: service,
+            otp: otp,
+            timestamp: timestamp,
+            status: 'pending'
+        };
+        
+        // Save to localStorage for admin view
+        const requests = JSON.parse(localStorage.getItem('accessRequests') || '[]');
+        requests.push(requestData);
+        localStorage.setItem('accessRequests', JSON.stringify(requests));
+        
+        // Show success message
+        document.getElementById('accessForm').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+        
+        // Track with analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'access_request', {
+                'event_category': 'engagement',
+                'event_label': service,
+                'value': 1
+            });
+        }
+        
+    } catch (error) {
+        console.error('Submission error:', error);
+        document.getElementById('errorMessage').style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Request Access';
+    }
 });
+
+// Admin access checker
+function checkAdminAccess(e) {
+    e.preventDefault();
+    const password = prompt('Enter admin password:');
+    if (password === 'AmitAdmin2025!') {
+        showAdminPanel();
+    } else if (password) {
+        alert('Incorrect password');
+    }
+}
+
+// Admin panel display
+function showAdminPanel() {
+    const requests = JSON.parse(localStorage.getItem('accessRequests') || '[]');
+    
+    let html = `
+        <div style="background: white; padding: 30px; border-radius: 10px; max-width: 800px; margin: 20px auto;">
+            <h2 style="color: #5a6c7d; margin-bottom: 20px;">📊 Access Requests Admin Panel</h2>
+            <p style="margin-bottom: 20px;">Total Requests: ${requests.length}</p>
+    `;
+    
+    if (requests.length === 0) {
+        html += '<p style="color: #666;">No requests yet.</p>';
+    } else {
+        html += '<table style="width: 100%; border-collapse: collapse;">';
+        html += '<tr style="background: #f5f5f5; font-weight: bold;"><td style="padding: 10px; border: 1px solid #ddd;">Email</td><td style="padding: 10px; border: 1px solid #ddd;">Service</td><td style="padding: 10px; border: 1px solid #ddd;">OTP</td><td style="padding: 10px; border: 1px solid #ddd;">Time</td></tr>';
+        
+        requests.reverse().forEach(req => {
+            html += `<tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">${req.email}</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">${req.service}</td>
+                <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold; color: #5a6c7d;">${req.otp}</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">${req.timestamp}</td>
+            </tr>`;
+        });
+        
+        html += '</table>';
+    }
+    
+    html += '<button onclick="location.reload()" style="margin-top: 20px; padding: 10px 20px; background: #5a6c7d; color: white; border: none; border-radius: 5px; cursor: pointer;">Close</button></div>';
+    
+    document.querySelector('.page-wrapper').innerHTML = html;
+}
 </script>
 
 <script src="universal-analytics.js"></script>

@@ -69,4 +69,3 @@ echo 1. If Git not in PATH, run this as Administrator
 echo 2. Or download Git for Windows
 echo 3. Restart PowerShell/CMD after installing
 echo.
-pause
