@@ -18,7 +18,7 @@ echo Step 2: Add all files
 
 echo.
 echo Step 3: Commit changes with timestamp
-%GIT% commit -m "Add short redirect URLs for all major pages"
+%GIT% commit -m "Fixed CV preview blur, colors to green, navigation complete"
 
 echo.
 echo Step 4: Connect to GitHub (if not done)
