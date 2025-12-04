@@ -137,7 +137,42 @@ ME: "I already ran UPLOAD_TO_GITHUB.bat at [time].
 
 ---
 
-**Last Updated:** December 3, 2025, 01:35 IST  
+---
+
+## 🎯 GOLDEN RULE #29: REMOVE PAUSE FROM BAT FILES
+
+**Created:** December 4, 2025, 18:30 IST
+
+**THE ISSUE:**
+- Bat files had `pause` command at the end
+- This makes terminal wait for key press
+- Annoying when running from Kiro IDE
+- Blocks automation
+
+**THE FIX:**
+Remove the `pause` command from end of bat file:
+
+```bat
+echo ========================================
+echo DONE! Changes uploaded to GitHub
+echo ========================================
+REM pause  <- REMOVE THIS LINE
+```
+
+**WHY THIS MATTERS:**
+- ✅ Bat file completes automatically
+- ✅ No manual intervention needed
+- ✅ Better for automation
+- ✅ Cleaner workflow
+
+**APPLIED TO:**
+- UPLOAD_TO_GITHUB.bat ✅
+
+**RULE:** Never add `pause` to bat files that will be run from IDE or automation!
+
+---
+
+**Last Updated:** December 4, 2025, 18:30 IST  
 **Status:** ACTIVE - Remember this always  
 **Priority:** HIGH - Don't repeat same actions
 

@@ -35,4 +35,3 @@ echo ========================================
 echo DONE! Changes uploaded to GitHub
 echo Cloudflare Pages will auto-deploy
 echo ========================================
-pause
