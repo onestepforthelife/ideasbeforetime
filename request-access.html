@@ -10,15 +10,19 @@
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-            max-width: 1400px;
-            margin: 0 auto;
+    max-width: 1400px;
+    margin: 0 auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
     min-height: 100vh;
     padding: 20px;
+}
+.page-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: calc(100vh - 200px);
+    padding: 40px 0;
 }
 .container {
     max-width: 600px;
@@ -143,6 +147,7 @@ textarea {
 </head>
 <body>
 
+<div class="page-wrapper">
 <div class="container">
     <h1>🔐 Request Access</h1>
     <p class="subtitle">Fill out this form to request access to premium content. You'll receive an email once approved.</p>
@@ -209,6 +214,7 @@ textarea {
     </div>
     
     <a href="index.html" class="back-link">← Back to Home</a>
+</div>
 </div>
 
 <script>
