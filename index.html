@@ -441,9 +441,7 @@ const APPROVED_EMAILS = [
     'onestepforthelife@gmail.com'
 ];
 
-// Admin password
-const ADMIN_PASSWORD = 'guruji';
-
+// Cloudflare Access handles authentication
 // Check if user is already approved
 const userEmail = sessionStorage.getItem('userEmail');
 if (userEmail && APPROVED_EMAILS.includes(userEmail.toLowerCase())) {
@@ -499,16 +497,7 @@ document.getElementById('accessForm').addEventListener('submit', async function(
     }
 });
 
-// Admin login
-document.getElementById('adminLink').addEventListener('click', function(e) {
-    e.preventDefault();
-    const password = prompt('Enter admin password:');
-    if (password === ADMIN_PASSWORD) {
-        sessionStorage.setItem('userEmail', 'onestepforthelife@gmail.com');
-        window.location.href = 'library.html';
-    } else if (password !== null) {
-        alert('Incorrect password');
-    }
+// Cloudflare Access only - no password needed
 });
 </script>
 

@@ -170,22 +170,7 @@
 
     <script src="common-navigation.js"></script>
     <script>
-        // Password protection
-        (function() {
-            const JOB_TOOLS_PASSWORD = 'guruji';
-            const isAuthenticated = sessionStorage.getItem('jobtools_authenticated') === 'true';
-            
-            if (!isAuthenticated) {
-                const enteredPassword = prompt('These job search tools are password protected.\n\nPlease enter the password to access:');
-                
-                if (enteredPassword === JOB_TOOLS_PASSWORD) {
-                    sessionStorage.setItem('jobtools_authenticated', 'true');
-                } else {
-                    alert('Incorrect password. Redirecting to home page.');
-                    window.location.href = 'index.html';
-                }
-            }
-        })();
+        // Cloudflare Access handles authentication
     </script>
 <script src="common-footer.js"></script>
 <script src="universal-analytics.js"></script>

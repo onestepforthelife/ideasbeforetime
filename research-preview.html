@@ -241,7 +241,7 @@
     🔒 RESEARCH REPORT PREVIEW - Limited Access
     <br>
     <button onclick="requestAccess()">📧 Request Full Report</button>
-    <button onclick="enterPassword()">🔑 Enter Password</button>
+    
 </div>
 
 <div class="container">
@@ -340,10 +340,10 @@
                 </p>
 
                 <button class="unlock-btn" onclick="requestAccess()">📧 Request Full Access</button>
-                <button class="unlock-btn secondary" onclick="enterPassword()">🔑 I Have Password</button>
+                
 
                 <p style="font-size: 13px; color: #999; margin-top: 25px;">
-                    Password-protected content | Contact: onestepforthelife@gmail.com
+                    Protected by Cloudflare Access | Contact: onestepforthelife@gmail.com
                 </p>
             </div>
         </div>
@@ -355,11 +355,7 @@ function requestAccess() {
     window.location.href = 'request-access.html?type=research';
 }
 
-function enterPassword() {
-    const password = prompt('Enter Research Report password:');
-    if (password === 'guruji') {
-        window.location.href = 'Final_Acrylic_Market_Report.html';
-    } else if (password) {
+// Password removed - use Cloudflare Access else if (password) {
         alert('❌ Incorrect password. Please request access or contact Amit Kumar at onestepforthelife@gmail.com');
     }
 }
