@@ -1,13 +1,25 @@
-# Keep these folders tracked
-!.github/
-!.kiro/
-!ghar-ghar/
+# API Keys and Secrets
+ai-config.js
+config.js
+*.env
+.env
+.env.local
 
-# Ignore system files
+# API Key Backups
+API_KEYS_BACKUP.txt
+
+# Node modules
+node_modules/
+
+# OS files
 .DS_Store
 Thumbs.db
-desktop.ini
 
-# Ignore temp files
-*.tmp
-*.log
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backup folders
+backup_*/

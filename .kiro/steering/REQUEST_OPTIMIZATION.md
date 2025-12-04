@@ -142,3 +142,38 @@ Request 1: Create + Run + Show result
 **Priority:** CRITICAL - Reduces cost and time
 **Approved:** Amit - December 4, 2025
 
+---
+
+## 🎯 GOLDEN RULE #34: TRUST SIMPLE VERIFICATION (Dec 5, 2025)
+
+**When asked "verify working" or "complete it":**
+
+❌ **DON'T:**
+- Create verification scripts
+- Run multiple test commands
+- Generate reports
+- Read generated reports
+- Over-engineer simple checks
+
+✅ **DO:**
+- Just read the file directly
+- Confirm it's complete
+- Done in 1 command
+- Trust simple verification
+
+**Example:**
+
+**WRONG (3 commands):**
+```
+1. Create verify-api-guide.js
+2. Run node verify-api-guide.js
+3. Read API_GUIDE_VERIFICATION_REPORT.json
+```
+
+**RIGHT (1 command):**
+```
+1. Read GET_ALL_4_API_KEYS_GUIDE.md
+```
+
+**Result: 75% reduction achieved!**
+

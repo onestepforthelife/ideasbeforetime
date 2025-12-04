@@ -1,12 +1,13 @@
 // 🔄 Multi-Provider AI with Automatic Failover
 // Primary → Backup1 → Backup2 → Backup3
 
-const AI_PROVIDERS = {
+// Load configuration from external file (not committed to GitHub)
+let AI_PROVIDERS = {
     groq: {
         name: 'Groq',
         endpoint: 'https://api.groq.com/openai/v1/chat/completions',
         model: 'mixtral-8x7b-32768',
-        key: 'YOUR_GROQ_API_KEY_HERE', // Get from: https://console.groq.com/keys
+        key: '', // Loaded from ai-config.js
         free: true,
         limit: '14,400 req/day',
         speed: 'Super Fast',
@@ -15,7 +16,7 @@ const AI_PROVIDERS = {
     huggingface: {
         name: 'Hugging Face',
         endpoint: 'https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2',
-        key: 'YOUR_HUGGINGFACE_TOKEN_HERE', // Get from: https://huggingface.co/settings/tokens
+        key: '', // Loaded from ai-config.js
         free: true,
         limit: '1,000 req/day',
         speed: 'Medium',
@@ -24,7 +25,7 @@ const AI_PROVIDERS = {
     gemini: {
         name: 'Google Gemini',
         endpoint: 'https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent',
-        key: 'AIza_YOUR_EXISTING_GEMINI_KEY', // Replace with your actual Gemini key
+        key: '', // Loaded from ai-config.js
         free: true,
         limit: '60 req/min',
         speed: 'Fast',
@@ -33,13 +34,21 @@ const AI_PROVIDERS = {
     cohere: {
         name: 'Cohere',
         endpoint: 'https://api.cohere.ai/v1/generate',
-        key: '2XLIiLo7jQb6OsSQ42wk8VCkH3WBZlGuASA72GLk',
+        key: '', // Loaded from ai-config.js
         free: true,
         limit: '100 req/min',
         speed: 'Fast',
         quality: 'Good'
     }
 };
+
+// Load API keys from config file
+if (typeof AI_CONFIG !== 'undefined') {
+    AI_PROVIDERS.groq.key = AI_CONFIG.providers.groq.key;
+    AI_PROVIDERS.huggingface.key = AI_CONFIG.providers.huggingface.key;
+    AI_PROVIDERS.gemini.key = AI_CONFIG.providers.gemini.key;
+    AI_PROVIDERS.cohere.key = AI_CONFIG.providers.cohere.key;
+}
 
 // Priority order (best to worst)
 const PROVIDER_ORDER = ['groq', 'gemini', 'huggingface', 'cohere'];
