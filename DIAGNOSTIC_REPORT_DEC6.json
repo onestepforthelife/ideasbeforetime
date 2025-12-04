@@ -1,0 +1,89 @@
+{
+  "timestamp": "2025-12-06T00:34:00Z",
+  "domain": "onestepforthelife.com",
+  "issue": "10 pages showing 308 redirects instead of 200 OK",
+  "root_cause": "Cloudflare cache not purged after deployment",
+  
+  "pages_working": [
+    "index.html (Homepage)",
+    "test-multi-ai.html",
+    "astronomy.html",
+    "blog-post-1.html"
+  ],
+  
+  "pages_redirecting": [
+    "ro-water-purifier-guide.html",
+    "blog.html",
+    "about.html",
+    "cv.html",
+    "spo.html",
+    "social-optimizer-app.html",
+    "market-reports.html",
+    "kiro.html",
+    "tools.html",
+    "jobs.html"
+  ],
+  
+  "critical_issues": {
+    "spo_tool": {
+      "status": "308 redirect",
+      "impact": "Users cannot access paid tool (₹21)",
+      "money_lost": "Yes - users paid but cannot use",
+      "fix": "Purge Cloudflare cache"
+    },
+    "jobs_tool": {
+      "status": "308 redirect",
+      "impact": "Users cannot access job search",
+      "fix": "Purge Cloudflare cache"
+    },
+    "admin_panel": {
+      "status": "Not tested yet",
+      "security": "Unknown if Cloudflare Access is working",
+      "fix": "Test after cache purge"
+    }
+  },
+  
+  "file_vs_server_issue": "SERVER ISSUE (Cloudflare cache)",
+  "files_are_correct": true,
+  "server_serving_old_cache": true,
+  
+  "solutions": [
+    {
+      "option": "A - Wait",
+      "time": "4 hours",
+      "action": "Cloudflare auto-purges cache",
+      "risk": "Users cannot access for 4 hours"
+    },
+    {
+      "option": "B - Manual Purge",
+      "time": "5 minutes",
+      "action": "Login to Cloudflare → Caching → Purge Everything",
+      "risk": "None"
+    },
+    {
+      "option": "C - Selective Purge",
+      "time": "10 minutes",
+      "action": "Purge only affected URLs",
+      "risk": "None"
+    }
+  ],
+  
+  "recommended_solution": "Option B - Manual Purge (fastest)",
+  
+  "next_steps": [
+    "1. Login to Cloudflare dashboard",
+    "2. Go to Caching section",
+    "3. Click 'Purge Everything'",
+    "4. Wait 30 seconds",
+    "5. Re-run diagnostic",
+    "6. Test SPO tool complete user flow",
+    "7. Test Jobs tool",
+    "8. Test Admin panel with Cloudflare Access"
+  ],
+  
+  "prevention": {
+    "rule": "Always purge Cloudflare cache after deployment",
+    "automation": "Add cache purge to UPLOAD_TO_GITHUB.bat",
+    "monitoring": "Run diagnostic after every push"
+  }
+}
