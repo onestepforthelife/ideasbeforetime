@@ -1,0 +1,202 @@
+═══════════════════════════════════════════════════════════
+  🗺️ COMPLETE SITEMAP - Ideas Before Time
+  Total Pages: 170+
+═══════════════════════════════════════════════════════════
+
+## 🏠 MAIN PAGES (Priority 1.0 - 0.9)
+
+📍 Homepage
+   └─ index.html
+
+📖 Core Pages
+   ├─ about.html (About Amit Kumar)
+   ├─ cv.html (Professional CV)
+   ├─ blog.html (100 Blog Posts Hub)
+   ├─ market-reports.html (Premium Reports Hub)
+   └─ social-optimizer-index.html (SPO Tool)
+
+═══════════════════════════════════════════════════════════
+## 📚 BLOG POSTS (100 Posts - Priority 0.7)
+
+📝 LinkedIn-Based Articles
+   ├─ blog-post-1.html (Reflections on Global Success)
+   ├─ blog-post-2.html (Leadership Insights)
+   ├─ blog-post-3.html (Technology Trends)
+   ├─ blog-post-4.html (Industry Analysis)
+   ├─ blog-post-5.html (Career Growth)
+   ├─ ... (continues)
+   └─ blog-post-100.html (Latest Insights)
+
+Categories:
+   • Leadership (30+ posts)
+   • Technology (25+ posts)
+   • Industry Insights (25+ posts)
+   • Career Growth (20+ posts)
+
+═══════════════════════════════════════════════════════════
+## 💎 PREMIUM REPORTS (Priority 0.8)
+
+📊 Market Research Reports
+   ├─ acrylic.html (Acrylic Emulsions Landing)
+   ├─ Final_Acrylic_Market_Report.html (Full Report)
+   ├─ poloxamer.html (Poloxamer Landing)
+   ├─ Poloxamer_Market_Report.html (Full Report)
+   ├─ paper.html (Paper Pulp Landing)
+   ├─ Paper_Pulp_Specialty_Chemicals_Report.html (Full Report)
+   ├─ nickel.html (Nickel ESG Landing)
+   ├─ nickel-esg-report.html (Full Report)
+   ├─ specialty.html (Specialty Chemicals Landing)
+   └─ Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html
+
+🔐 Access Pages
+   ├─ request-access.html (Request Premium Access)
+   └─ research-preview.html (Preview System)
+
+═══════════════════════════════════════════════════════════
+## 🆓 FREE TOOLS (Priority 0.8)
+
+🎨 Social Profile Optimizer (SPO) - ₹21
+   ├─ spo.html (Short Link)
+   ├─ social-optimizer-index.html (Main Landing)
+   ├─ social-optimizer-app.html (Application)
+   ├─ social-optimizer-dashboard.html (Dashboard)
+   ├─ social-optimizer-quickstart.html (Quick Start)
+   ├─ social-optimizer-success.html (Success Page)
+   ├─ social-optimizer-admin.html (Admin Panel)
+   └─ profile-optimizer.html (Profile Tool)
+
+💼 Job Search Tools - FREE
+   ├─ jobs.html (Job Search Hub)
+   ├─ job-tools.html (Tools Overview)
+   ├─ job-dashboard.html (Dashboard)
+   ├─ job-credits-ui.html (Credits System)
+   ├─ JOB_TRACKER_DAILY.html (Daily Tracker)
+   ├─ JOB_OUTREACH_AUTOMATION_TOOL.html (Automation)
+   └─ JOB_POWER_FEATURES.html (Power Features)
+
+💧 RO Water Purifier Guide - FREE
+   ├─ ro.html (Main Hub)
+   ├─ ro-guide.html (Complete Guide)
+   ├─ ro-water-purifier-guide.html (Detailed Guide)
+   └─ ro-service-checklist.html (Service Checklist)
+
+🌟 Astronomy Calculator - FREE
+   └─ astronomy.html (Vedic Astronomy Tool)
+
+═══════════════════════════════════════════════════════════
+## 💡 CONTENT LIBRARY (Priority 0.8)
+
+📚 Innovation Library
+   ├─ library.html (Main Library)
+   └─ innovations.html (Innovation Showcase)
+
+🔗 LinkedIn Content
+   ├─ linkedin.html (LinkedIn Hub)
+   ├─ linkedin-auto-scroller.html (Auto Scroller)
+   ├─ linkedin-complete-book.html (Complete Book)
+   ├─ linkedin-network-map.html (Network Map)
+   ├─ linkedin-post-copier.html (Post Copier)
+   └─ linkedin-skills-dashboard.html (Skills Dashboard)
+
+📖 Special Content
+   ├─ teaching-ai-to-think.html (AI Thinking Guide)
+   ├─ timeline.html (Career Timeline)
+   ├─ business-insights.html (Business Insights)
+   ├─ business-news.html (Business News)
+   └─ ghar-ghar-complete.html (Ghar Ghar Project)
+
+═══════════════════════════════════════════════════════════
+## 🛠️ TOOLS & UTILITIES (Priority 0.8)
+
+🔧 General Tools
+   ├─ tools.html (Tools Hub)
+   ├─ email.html (Email Tools)
+   └─ kiro.html (Kiro AI Guide)
+
+📊 Training & Guides
+   └─ kiro-training-guide.html (Kiro Training)
+
+═══════════════════════════════════════════════════════════
+## 📄 LEGAL & POLICIES (Priority 0.8)
+
+⚖️ Legal Pages
+   ├─ privacy-policy.html (Privacy Policy)
+   ├─ refund-policy.html (Refund Policy - NO REFUNDS)
+   └─ terms-and-disclaimer.html (Terms & Disclaimer)
+
+═══════════════════════════════════════════════════════════
+## 🔧 ADMIN & TESTING (Priority 0.5)
+
+🔐 Admin Tools
+   ├─ admin-control-panel.html (Admin Panel)
+   ├─ error-dashboard.html (Error Dashboard)
+   └─ cv-preview.html (CV Preview)
+
+🧪 Testing Pages
+   ├─ test-preview-system.html (Preview System Test)
+   ├─ TEST_CREDITS.html (Credits Test)
+   └─ vertical-nav-option.html (Nav Test)
+
+📊 Reports & Proposals
+   ├─ BASF_IT_SECURITY_PROPOSAL.html (BASF Proposal)
+   ├─ KIRO_AWS_REPORT_CLEAN.html (Kiro AWS Report)
+   ├─ KIRO_IMPROVEMENT_REPORT_FOR_AWS.html (Improvement Report)
+   └─ PAYMENT_VISUAL_GUIDE.html (Payment Guide)
+
+═══════════════════════════════════════════════════════════
+## 📊 SUMMARY BY CATEGORY
+
+Category                    | Count | Priority
+----------------------------|-------|----------
+Homepage                    | 1     | 1.0
+Core Pages                  | 5     | 0.9
+Blog Posts                  | 100   | 0.7
+Premium Reports             | 10    | 0.8
+SPO Tool Pages              | 8     | 0.8
+Job Tools                   | 7     | 0.8
+RO Guide Pages              | 4     | 0.8
+Astronomy Tool              | 1     | 0.8
+Content Library             | 10    | 0.8
+LinkedIn Tools              | 6     | 0.8
+General Tools               | 3     | 0.8
+Legal Pages                 | 3     | 0.8
+Admin/Testing               | 13    | 0.5
+----------------------------|-------|----------
+TOTAL PAGES                 | 171   |
+
+═══════════════════════════════════════════════════════════
+## 🎯 USER JOURNEY PATHS
+
+### Path 1: Free User
+Homepage → Blog → LinkedIn Tools → Job Tools → RO Guide
+
+### Path 2: Premium User
+Homepage → Market Reports → Request Access → Premium Reports
+
+### Path 3: Tool User
+Homepage → SPO Tool → Profile Optimization → Success
+
+### Path 4: Job Seeker
+Homepage → Job Tools → Job Dashboard → Job Tracker
+
+### Path 5: Content Consumer
+Homepage → Blog → Innovation Library → LinkedIn Content
+
+═══════════════════════════════════════════════════════════
+## 🔍 MISSING FROM SITEMAP (Need to Add)
+
+❌ astronomy.html (NEW - not in sitemap yet)
+❌ Any other new pages created today
+
+═══════════════════════════════════════════════════════════
+## ✅ SITEMAP STATUS
+
+Current: 171 pages listed
+Missing: 1-2 new pages (astronomy, etc.)
+Action: Update sitemap.xml to include new pages
+
+═══════════════════════════════════════════════════════════
+Last Updated: December 5, 2025
+Status: COMPREHENSIVE - All major pages mapped
+Priority: Reference for navigation and SEO
+═══════════════════════════════════════════════════════════
