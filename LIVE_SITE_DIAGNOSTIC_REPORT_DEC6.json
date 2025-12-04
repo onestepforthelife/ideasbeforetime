@@ -1,0 +1,95 @@
+{
+  "timestamp": "2025-12-04T22:56:29.674Z",
+  "domain": "https://onestepforthelife.com",
+  "totalIssues": 12,
+  "fileIssues": 3,
+  "serverIssues": 9,
+  "issues": {
+    "critical": [
+      {
+        "type": "SERVER",
+        "page": "Blog",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "About",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "CV",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "Market Reports",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "SPO Tool",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "SPO Landing",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "Job Search",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "Innovations",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "Library",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      }
+    ],
+    "high": [
+      {
+        "type": "FILE",
+        "page": "Homepage",
+        "issue": "Missing link to blog.html",
+        "fix": "Add link to blog.html in navigation or content"
+      },
+      {
+        "type": "FILE",
+        "page": "Homepage",
+        "issue": "Missing link to about.html",
+        "fix": "Add link to about.html in navigation or content"
+      },
+      {
+        "type": "FILE",
+        "page": "Homepage",
+        "issue": "Missing link to cv.html",
+        "fix": "Add link to cv.html in navigation or content"
+      }
+    ],
+    "medium": [],
+    "low": []
+  },
+  "summary": {
+    "critical": 9,
+    "high": 3,
+    "medium": 0,
+    "low": 0,
+    "file": 3,
+    "server": 9
+  }
+}
