@@ -1,0 +1,146 @@
+# 🔄 LINKEDIN PROFILE SYNC CHECK
+
+**Date:** December 4, 2025
+**Purpose:** Verify site content matches LinkedIn profile
+**Profile:** https://www.linkedin.com/in/leadershipexpertamit/
+
+---
+
+## ✅ WHAT TO VERIFY ON LINKEDIN
+
+### 1. Current Position (Most Critical)
+**Site says:** BASF - Head of Projects, Business Excellence (Nov 2024 - Present)
+**LinkedIn should show:** Same title and date
+**Action needed:** Confirm this is your LATEST position on LinkedIn
+
+### 2. Previous Position
+**Site says:** BASF - Sales & Marketing Head, South Asia (July 2023 - Oct 2024)
+**LinkedIn should show:** Same dates
+**Action needed:** Verify end date is Oct 2024 (not July 2024)
+
+### 3. Experience Count
+**Site says:** 19+ years (should be 20+ now in 2025)
+**LinkedIn should show:** 20+ years
+**Action needed:** Update to "20+ years" everywhere
+
+### 4. Key Achievements
+**Site mentions:**
+- 25%+ CAGR delivered
+- XX Mio Euro business
+- 12+ years Japanese Transplant
+- ESG frameworks (10% VOC reduction)
+
+**LinkedIn should have:** Same achievements with specific numbers
+
+### 5. Education
+**Site lists:**
+- MBA - IIT Kanpur (2006-2008)
+- MBA - IGNOU (2024)
+- LLB - Delhi University (2012-2015)
+- B.E. - Delhi College of Engineering (2002-2006)
+- Healthcare/Pharmacy - Surajmal Institute (2000-2002)
+
+**LinkedIn should match:** All degrees listed
+
+### 6. Certifications
+**Site lists:**
+- Fellowship (F.I.E.) C.Eng. (I) - Government Approved Valuer
+- Data Science Analytics
+- Copilot AI Driven Data Analysis
+- Microsoft Azure AI Essentials
+- Adding Value through Diversity
+
+**LinkedIn should have:** All certifications
+
+### 7. Skills
+**Site emphasizes:**
+- Specialty Chemicals
+- ESG Governance
+- Digital Transformation
+- P&L Management
+- Japanese Transplant Business
+- Pattern Recognition
+- Innovation Foresight
+
+**LinkedIn should highlight:** Same skills
+
+### 8. About Section
+**Site says:** "Solo creator of Ideas Before Time. AI + Human Expertise model. 20+ years in specialty chemicals."
+
+**LinkedIn should mention:** Ideas Before Time project
+
+---
+
+## 🔧 CORRECTIONS NEEDED
+
+### Update 1: Years of Experience
+**Current:** "19+ years"
+**Correct:** "20+ years" (we're in 2025 now)
+**Files to update:**
+- about.html
+- cv.html
+- index.html
+
+### Update 2: Latest Position Date
+**Verify:** Nov 2024 start date for Head of Projects
+**If different:** Update about.html career timeline
+
+### Update 3: Previous Position End Date
+**Current:** July 2023 - Oct 2024
+**Verify:** Should it be July 2024 instead of Oct 2024?
+
+---
+
+## 📋 LINKEDIN PROFILE CHECKLIST
+
+Check these on your LinkedIn:
+
+```
+☐ Headline matches: "Specialty Chemicals Leader | Innovation Futurist | Pattern Recognition Expert"
+☐ Current position: BASF Head of Projects, Business Excellence (Nov 2024)
+☐ Previous position end date: Oct 2024 or July 2024?
+☐ Experience: Shows 20+ years
+☐ About section mentions: Ideas Before Time
+☐ All 5 education degrees listed
+☐ All certifications listed
+☐ Skills include: Specialty Chemicals, ESG, Digital Transformation
+☐ Featured section has: Ideas Before Time link
+☐ Recommendations present
+☐ Profile photo matches site
+```
+
+---
+
+## 🎯 WHAT I NEED FROM YOU
+
+**Please check your LinkedIn and tell me:**
+
+1. **Current position start date:** Nov 2024 or different?
+2. **Previous position end date:** Oct 2024 or July 2024?
+3. **Total experience:** Does LinkedIn show 20+ years?
+4. **Ideas Before Time:** Is it mentioned in About or Featured?
+5. **Any other differences:** Between LinkedIn and site?
+
+**Then I'll update site to match LinkedIn exactly.**
+
+---
+
+## 🔄 AUTO-UPDATE SCRIPT READY
+
+Once you confirm LinkedIn details, I'll run:
+```bash
+node sync-with-linkedin.js
+```
+
+This will:
+1. Update years of experience to 20+
+2. Correct any date mismatches
+3. Ensure all positions match
+4. Verify achievements listed
+5. Push updates live
+
+---
+
+**Status:** WAITING FOR YOUR LINKEDIN VERIFICATION
+**Next:** You check LinkedIn, tell me differences, I fix immediately
+
