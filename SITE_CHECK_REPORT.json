@@ -1,0 +1,1104 @@
+{
+  "timestamp": "2025-12-04T11:36:56.416Z",
+  "summary": {
+    "totalPages": 173,
+    "overallScore": "81.4%",
+    "navigation": "166/173",
+    "footer": "166/173",
+    "analytics": "165/173",
+    "errorTracker": "167/173",
+    "watermark": "151/173",
+    "adSense": "147/173",
+    "metaTags": "144/173",
+    "canonicalURL": "21/173"
+  },
+  "issues": [
+    {
+      "file": "access.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "acrylic.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "BASF_IT_SECURITY_PROPOSAL.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-1.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-10.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-100.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-11.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-12.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-13.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-14.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-15.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-16.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-17.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-18.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-19.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-2.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-20.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-21.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-22.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-23.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-24.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-25.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-26.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-27.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-28.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-29.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-3.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-30.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-31.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-32.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-33.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-34.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-35.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-36.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-37.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-38.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-39.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-4.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-40.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-41.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-42.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-43.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-44.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-45.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-46.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-47.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-48.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-49.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-5.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-50.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-51.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-52.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-53.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-54.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-55.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-56.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-57.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-58.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-59.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-6.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-60.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-61.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-62.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-63.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-64.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-65.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-66.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-67.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-68.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-69.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-7.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-70.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-71.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-72.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-73.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-74.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-75.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-76.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-77.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-78.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-79.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-8.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-80.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-81.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-82.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-83.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-84.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-85.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-86.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-87.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-88.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-89.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-9.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-90.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-91.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-92.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-93.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-94.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-95.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-96.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-97.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-98.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog-post-99.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "blog.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "business-insights.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "business-news.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "compare-homepage-conversion.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "compare-homepage-versions.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "cv-preview.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "disclaimer.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "email-sender-web.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "email.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "error-dashboard.html",
+      "issues": [
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "Final_Acrylic_Market_Report.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "ghar-ghar-complete.html",
+      "issues": [
+        "Missing navigation",
+        "Missing footer",
+        "Missing analytics",
+        "Missing error tracker",
+        "Missing AdSense",
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "index-v2-conversion-optimized.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "index.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "innovations.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "job-credits-ui.html",
+      "issues": [
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "job-dashboard.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "job-tools.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "jobs.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "JOB_OUTREACH_AUTOMATION_TOOL.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "JOB_POWER_FEATURES.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "JOB_TRACKER_DAILY.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "kiro-training-guide.html",
+      "issues": [
+        "Missing AdSense",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "kiro.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "KIRO_AWS_REPORT_CLEAN.html",
+      "issues": [
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "KIRO_IMPROVEMENT_REPORT_FOR_AWS.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "library.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "linkedin-auto-scroller.html",
+      "issues": [
+        "Missing navigation",
+        "Missing footer",
+        "Missing analytics",
+        "Missing error tracker",
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "linkedin-complete-book.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "linkedin-network-map.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "linkedin-portfolio-index.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "linkedin-post-copier.html",
+      "issues": [
+        "Missing navigation",
+        "Missing footer",
+        "Missing analytics",
+        "Missing error tracker",
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "linkedin-skills-dashboard.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "linkedin.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "market-reports.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "nickel-esg-report.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "nickel.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "paper.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "Paper_Pulp_Specialty_Chemicals_Report.html",
+      "issues": [
+        "Missing AdSense",
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "PAYMENT_VISUAL_GUIDE.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "poloxamer.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "Poloxamer_Market_Report.html",
+      "issues": [
+        "Missing AdSense",
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "privacy-policy.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "profile-optimizer.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "refund-policy.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "reports.html",
+      "issues": [
+        "Missing navigation",
+        "Missing footer",
+        "Missing analytics",
+        "Missing error tracker",
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "request-access.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "research-preview.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "ro-guide.html",
+      "issues": [
+        "Missing navigation",
+        "Missing footer",
+        "Missing analytics",
+        "Missing error tracker",
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "ro-service-checklist.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "ro.html",
+      "issues": [
+        "Missing navigation",
+        "Missing footer",
+        "Missing analytics",
+        "Missing error tracker",
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "social-optimizer-admin.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "social-optimizer-dashboard.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "social-optimizer-success.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "specialty.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "spo.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "teaching-ai-to-think.html",
+      "issues": [
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "terms-and-disclaimer.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "test-preview-system.html",
+      "issues": [
+        "Missing navigation",
+        "Missing footer",
+        "Missing analytics",
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "TEST_CREDITS.html",
+      "issues": [
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "tools.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "vertical-nav-option.html",
+      "issues": [
+        "Missing analytics",
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    }
+  ]
+}
