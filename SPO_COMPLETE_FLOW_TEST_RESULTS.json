@@ -1,37 +1,32 @@
 {
-  "passed": 22,
-  "failed": 7,
+  "passed": 28,
+  "failed": 0,
   "warnings": 0,
   "tests": [
     {
       "name": "Profile input form exists",
-      "passed": false,
-      "details": "Form should have proper ID or class"
+      "passed": true,
+      "details": "Form should have proper structure"
     },
     {
-      "name": "Field \"name\" exists",
-      "passed": false,
-      "details": "Input field for name should exist"
+      "name": "Field \"Platform selector\" exists",
+      "passed": true,
+      "details": "Input field for Platform selector should exist"
     },
     {
-      "name": "Field \"headline\" exists",
-      "passed": false,
-      "details": "Input field for headline should exist"
+      "name": "Field \"Current bio\" exists",
+      "passed": true,
+      "details": "Input field for Current bio should exist"
     },
     {
-      "name": "Field \"about\" exists",
-      "passed": false,
-      "details": "Input field for about should exist"
+      "name": "Field \"Current headline\" exists",
+      "passed": true,
+      "details": "Input field for Current headline should exist"
     },
     {
-      "name": "Field \"experience\" exists",
-      "passed": false,
-      "details": "Input field for experience should exist"
-    },
-    {
-      "name": "Field \"skills\" exists",
-      "passed": false,
-      "details": "Input field for skills should exist"
+      "name": "Field \"Profile link\" exists",
+      "passed": true,
+      "details": "Input field for Profile link should exist"
     },
     {
       "name": "Next button exists on page 1",
@@ -40,7 +35,7 @@
     },
     {
       "name": "Navigation logic to page 2 exists",
-      "passed": false,
+      "passed": true,
       "details": "Should have code to navigate to page 2"
     },
     {

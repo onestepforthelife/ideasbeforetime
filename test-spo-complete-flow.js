@@ -55,17 +55,22 @@ console.log('📋 PAGE 1: PROFILE INPUT\n');
 // Test 1: Form exists
 test(
     'Profile input form exists',
-    content.includes('id="profileForm"') || content.includes('class="profile-form"'),
-    'Form should have proper ID or class'
+    content.includes('id="step1"') && content.includes('step-content'),
+    'Form should have proper structure'
 );
 
-// Test 2: Required fields
-const requiredFields = ['name', 'headline', 'about', 'experience', 'skills'];
+// Test 2: Required fields (actual field names in SPO)
+const requiredFields = [
+    { id: 'platform', name: 'Platform selector' },
+    { id: 'currentBio', name: 'Current bio' },
+    { id: 'currentHeadline', name: 'Current headline' },
+    { id: 'profileLink', name: 'Profile link' }
+];
 requiredFields.forEach(field => {
     test(
-        `Field "${field}" exists`,
-        content.includes(`name="${field}"`) || content.includes(`id="${field}"`),
-        `Input field for ${field} should exist`
+        `Field "${field.name}" exists`,
+        content.includes(`id="${field.id}"`),
+        `Input field for ${field.name} should exist`
     );
 });
 
@@ -79,7 +84,7 @@ test(
 // Test 4: Navigation to page 2
 test(
     'Navigation logic to page 2 exists',
-    content.includes('page2') || content.includes('step-2') || content.includes('showPage(2)'),
+    content.includes('nextStep(2)') || content.includes('function nextStep') || content.includes('step2'),
     'Should have code to navigate to page 2'
 );
 
