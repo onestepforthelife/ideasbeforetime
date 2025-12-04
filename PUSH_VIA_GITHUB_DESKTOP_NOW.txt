@@ -1,0 +1,29 @@
+═══════════════════════════════════════════════════════════
+  🚀 PUSH VIA GITHUB DESKTOP - DO THIS NOW
+═══════════════════════════════════════════════════════════
+
+## SIMPLE STEPS:
+
+1. **Open GitHub Desktop**
+
+2. **You'll see changed files** (left panel)
+
+3. **Bottom left - Write commit message:**
+   ```
+   Fix routing and add navigation improvements
+   ```
+
+4. **Click blue button:** "Commit to main"
+
+5. **Top right - Click:** "Push origin"
+
+6. **Done!** Wait 2-3 minutes for deployment
+
+═══════════════════════════════════════════════════════════
+
+That's it. Just these 5 steps.
+
+After push, check: https://ideasbeforetime.pages.dev/ro.html
+Should show RO content (not homepage).
+
+═══════════════════════════════════════════════════════════

@@ -1,3 +1,6 @@
+# Redirect old domain to new domain
+https://ideasbeforetime.pages.dev/* https://onestepforthelife.com/:splat 301!
+
 # Cloudflare Pages Redirects
 # This ensures HTML files are served correctly, not falling back to index.html
 
