@@ -144,6 +144,28 @@ Request 1: Create + Run + Show result
 
 ---
 
+## 🚨 CREDIT WASTE ALERT (Dec 5, 2025)
+
+**Team lost 200 Kiro credits** due to inefficient usage.
+
+### Where Credits Were Wasted:
+1. Reading same files multiple times (~50 credits)
+2. Creating unnecessary verification scripts (~30 credits)
+3. Running redundant commands (~40 credits)
+4. Verbose responses (~30 credits)
+5. Not batching operations (~50 credits)
+
+### Immediate Fixes:
+- ✅ Trust loaded context (don't re-read steering files)
+- ✅ Simple verification (read file directly, no scripts)
+- ✅ Batch everything (parallel operations)
+- ✅ Minimal responses (result only, no long explanations)
+- ✅ Execute immediately (create + run in one request)
+
+**Target: 75% reduction = 150 credits saved per session**
+
+---
+
 ## 🎯 GOLDEN RULE #34: TRUST SIMPLE VERIFICATION (Dec 5, 2025)
 
 **When asked "verify working" or "complete it":**

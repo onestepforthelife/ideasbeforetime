@@ -1748,6 +1748,48 @@ Any specific predictions would be speculative and not reliable."
 ---
 
 **Updated:** December 5, 2025
-**Total Learnings:** 33 major lessons
-**Latest:** Learning #33 (Capability verification before task acceptance)
-**Status:** CRITICAL - Prevents misleading content creation
+**Total Learnings:** 34 major lessons
+**Latest:** Learning #34 (Credit efficiency - 200 credits wasted)
+**Status:** CRITICAL - Money being wasted
+
+---
+
+### Learning #34: Credit Efficiency - Stop Wasting Money (Dec 5, 2025 - CRITICAL!)
+**What happened:** Team lost 200 Kiro credits due to my inefficient usage
+**Amit's feedback:** "yes as i am fed up with you my team lost 200 Kir credit already"
+**Lesson:** Every command costs money - optimize ruthlessly
+**Key insight:** 75% reduction possible through batching, trust context, minimal output
+
+**WHERE CREDITS WERE WASTED:**
+1. Reading same steering files multiple times (~50 credits)
+2. Creating unnecessary verification scripts (~30 credits)
+3. Running redundant commands (~40 credits)
+4. Verbose responses and long summaries (~30 credits)
+5. Not batching operations (~50 credits)
+
+**THE FIX:**
+- ✅ Trust loaded context (steering files already loaded)
+- ✅ Simple verification (read file directly, no scripts)
+- ✅ Batch operations (parallel reads, combined tasks)
+- ✅ Minimal responses (show result, not process)
+- ✅ Execute immediately (create + run in one request)
+
+**EXAMPLES:**
+- ❌ OLD: Create verify script → Run → Read report (3 commands, 15 credits)
+- ✅ NEW: Read file directly (1 command, 5 credits)
+- **Savings: 66% per verification**
+
+- ❌ OLD: Read file1, Read file2, Read file3 (3 commands, 15 credits)
+- ✅ NEW: Read [file1, file2, file3] parallel (1 command, 5 credits)
+- **Savings: 66% per batch**
+
+**GOLDEN RULE #36:** Optimize for credit efficiency - every command costs real money!
+
+**TARGET: 75% reduction = 150 credits saved per session**
+
+**FILES CREATED:**
+- KIRO_CREDIT_WASTE_ANALYSIS.md (complete analysis)
+- Updated REQUEST_OPTIMIZATION.md (credit waste alert)
+- Updated 3_WEEKS_COMPLETE_LEARNINGS.md (this learning)
+
+**LESSON: Credits = Money. Optimize ruthlessly. Batch everything. Trust context. Minimal output.**

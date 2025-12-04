@@ -1,0 +1,222 @@
+# VEDIC ASTRONOMY CALCULATOR - REQUIREMENTS
+
+**Created:** December 5, 2025
+**Purpose:** Educational astronomy tool with Vedic calendar integration
+**Approach:** Science, mathematics, and cultural education
+
+---
+
+## MUST HAVE FEATURES:
+
+### 1. Date/Time Input
+- User enters: Date, Time, Place (city/coordinates)
+- Can select ANY date (past, present, future)
+- Timezone auto-detection
+- Location search with autocomplete
+
+### 2. 3D Solar System Visualization
+- Shows planetary positions for selected date
+- 9 planets + Moon + Sun
+- Rahu & Ketu (lunar nodes) marked
+- Interactive - rotate, zoom, click for info
+- Real astronomical calculations
+
+### 3. Vedic/Hindu Calendar Data
+- **Tithi** (lunar day)
+- **Nakshatra** (lunar mansion - 27 divisions)
+- **Yoga** (combination of sun-moon)
+- **Karana** (half of tithi)
+- **Paksha** (bright/dark fortnight)
+- **Masa** (month name)
+- **Samvatsara** (year in 60-year cycle)
+
+### 4. Regional Variations
+- **North India** - Purnimanta system
+- **South India** - Amanta system
+- **West India** - Regional variations
+- User selects region, calendar adjusts
+
+### 5. Multi-Language Support
+- **English** (default)
+- **Hindi** (हिंदी)
+- **Tamil** (தமிழ்)
+- **Telugu** (తెలుగు)
+- **Kannada** (ಕನ್ನಡ)
+- **Malayalam** (മലയാളം)
+- **Bengali** (বাংলা)
+- **Marathi** (मराठी)
+
+### 6. Astronomical Data Display
+- Sunrise/Sunset times
+- Moonrise/Moonset times
+- Moon phase (visual)
+- Planetary positions (degrees)
+- Rahu/Ketu positions (ascending/descending nodes)
+
+### 7. Educational Content
+- **How calculations work** (math formulas shown)
+- **Astronomical basis** (orbital mechanics)
+- **Cultural significance** (historical context)
+- **No predictions** - pure astronomy/calendar
+
+---
+
+## MUST NOT HAVE:
+
+1. ❌ Fortune telling or predictions
+2. ❌ Life advice based on planets
+3. ❌ Compatibility matching
+4. ❌ "Lucky" days or times
+5. ❌ Any claims of accuracy for life decisions
+
+---
+
+## DISCLAIMERS (MANDATORY):
+
+### Top of Page:
+```
+🔭 EDUCATIONAL ASTRONOMY TOOL
+
+This tool demonstrates:
+• Astronomical calculations (planetary positions)
+• Mathematical formulas (orbital mechanics)
+• Cultural calendar systems (Vedic/Hindu traditions)
+
+FOR EDUCATIONAL PURPOSES ONLY
+Not for making life decisions or predictions
+```
+
+### Bottom of Page:
+```
+DISCLAIMER:
+This is an educational tool showing astronomical calculations
+and traditional calendar systems. Results are based on
+mathematical formulas and should not be used for making
+important life decisions. For professional astrological
+consultations, please consult qualified practitioners.
+```
+
+---
+
+## TECHNICAL APPROACH:
+
+### Astronomical Calculations:
+- Use Swiss Ephemeris formulas (open source)
+- Or integrate with free astronomy API
+- Show formulas used (transparency)
+
+### Vedic Calendar:
+- Use established algorithms (Drik Panchang formulas)
+- Regional variations documented
+- Cultural context provided
+
+### 3D Visualization:
+- Three.js library (already created)
+- Real-time planetary positions
+- Educational labels
+
+---
+
+## USER FLOW:
+
+1. User lands on page
+2. Sees 3D solar system (today's date by default)
+3. Form to enter: Date, Time, Place, Region, Language
+4. Clicks "Calculate"
+5. 3D updates to show that date
+6. Vedic calendar data displayed
+7. Astronomical data shown
+8. Educational explanations provided
+9. Can download/share results
+
+---
+
+## PAGE STRUCTURE:
+
+```
+vedic-astronomy.html
+├── Hero Section (title, description, disclaimer)
+├── 3D Solar System Container
+├── Input Form (date, time, place, region, language)
+├── Results Section
+│   ├── Vedic Calendar Data
+│   ├── Astronomical Data
+│   ├── Planetary Positions
+│   └── Educational Explanations
+├── How It Works (formulas, science)
+└── Footer (disclaimers, links)
+```
+
+---
+
+## NAVIGATION:
+
+Add to header under "Tools" or "Services":
+- "Vedic Astronomy Calculator"
+- Or "Celestial Calendar"
+- Or "Astronomical Calendar"
+
+---
+
+## SUCCESS CRITERIA:
+
+✅ User can see planetary positions for any date
+✅ Vedic calendar data is accurate (verified against Drik Panchang)
+✅ Regional variations work correctly
+✅ Multi-language displays properly
+✅ Educational disclaimers are prominent
+✅ No misleading claims
+✅ Professional appearance
+✅ Mobile responsive
+
+---
+
+## TESTING CHECKLIST:
+
+☐ Test with known dates (verify against Drik Panchang)
+☐ Test all regional variations
+☐ Test all languages
+☐ Test 3D visualization on mobile
+☐ Verify disclaimers are visible
+☐ Check astronomical accuracy
+☐ Ensure no prediction language
+
+---
+
+## FREE RESOURCES TO USE:
+
+1. **Swiss Ephemeris** - Planetary calculations (free)
+2. **Drik Panchang API** - Vedic calendar (free tier available)
+3. **Three.js** - 3D visualization (free)
+4. **Google Fonts** - Multi-language support (free)
+
+---
+
+## IMPLEMENTATION PRIORITY:
+
+**Phase 1 (MVP):**
+- Basic 3D solar system
+- Date/time/place input
+- English language only
+- North India calendar
+- Basic astronomical data
+
+**Phase 2:**
+- Regional variations
+- Multi-language support
+- Enhanced 3D features
+- More astronomical data
+
+**Phase 3:**
+- Download/share features
+- Historical date comparisons
+- Educational tutorials
+- API integration
+
+---
+
+**Status:** READY TO BUILD
+**Estimated Time:** 2-3 hours for Phase 1
+**Dependencies:** Three.js (already created), Swiss Ephemeris or API
+
+**REMEMBER: Education & Science ONLY. No predictions!**
