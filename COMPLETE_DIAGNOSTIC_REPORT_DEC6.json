@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-12-04T23:11:55.133Z",
+  "totalFiles": 176,
+  "issues": {
+    "critical": [],
+    "high": [
+      "Major page \"spo.html\" not in navigation",
+      "Major page \"jobs.html\" not in navigation",
+      "Major page \"admin-control-panel.html\" not in navigation",
+      "SPO Tool: Not linked in navigation",
+      "Job Search: Not linked in navigation",
+      "Admin Panel: Not linked in navigation"
+    ],
+    "medium": [
+      "Orphaned page: access.html",
+      "Orphaned page: acrylic.html",
+      "Orphaned page: admin-control-panel.html",
+      "Orphaned page: astronomy.html",
+      "Orphaned page: BASF_IT_SECURITY_PROPOSAL.html",
+      "Orphaned page: business-news.html",
+      "Orphaned page: compare-homepage-conversion.html",
+      "Orphaned page: compare-homepage-versions.html",
+      "Orphaned page: email-sender-web.html",
+      "Orphaned page: email.html"
+    ],
+    "low": []
+  },
+  "fileIssues": 6,
+  "serverIssues": 0
+}

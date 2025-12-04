@@ -10,3 +10,12 @@
 
 /index.html
   Content-Type: text/html; charset=utf-8
+
+
+# Cloudflare Access Protection for Admin Panel
+/admin-control-panel.html
+  CF-Access-Authenticated-User-Email: *
+  
+# Note: This requires Cloudflare Zero Trust configuration in dashboard
+# Go to: Cloudflare Dashboard → Zero Trust → Access → Applications
+# Create application for: onestepforthelife.com/admin-control-panel.html

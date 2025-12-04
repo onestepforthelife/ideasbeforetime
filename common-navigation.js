@@ -15,13 +15,14 @@ function addSiteNavigation() {
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="astronomy.html">🔭 Astronomy</a></li>
                 <li><a href="ro.html">RO Water Guide</a></li>
-                <li><a href="social-optimizer-index.html">SPO Tool</a></li>
-                <li><a href="email-sender-web.html">Job Search Tool</a></li>
+                <li><a href="spo.html">🚀 SPO Tool</a></li>
+                <li><a href="jobs.html">💼 Job Search</a></li>
                 <li><a href="market-reports.html">Chemical Reports</a></li>
                 <li><a href="innovations.html">💡 Innovations</a></li>
                 <li><a href="library.html">Innovation Library</a></li>
                 <li><a href="about.html">About Creator</a></li>
-                <li><a href="cv.html">CV</a></li>
+                <li><a href="cv.html">📄 CV</a></li>
+                <li><a href="admin-control-panel.html">⚙️ Admin</a></li>
             </ul>
         </div>
     `;
@@ -63,7 +64,7 @@ function addBreadcrumb(items) {
         if (index === items.length - 1) {
             html += `<span>${item.text}</span>`;
         } else {
-            html += `<a href="${item.url}">${item.text}</a>`;
+            html += `<a href="index.html">${item.text}</a>`;
         }
     });
     
