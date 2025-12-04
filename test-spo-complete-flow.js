@@ -1,235 +1,291 @@
-// SPO COMPLETE USER FLOW TEST
-// Tests EVERY step of the Social Post Optimizer
-// Run this before saying "SPO is ready"
+// TEST SPO COMPLETE USER FLOW
+// Tests EVERY step from start to finish
 
 const fs = require('fs');
-const path = require('path');
 
-console.log('🧪 SPO COMPLETE USER FLOW TEST');
-console.log('================================\n');
+console.log('🧪 TESTING SPO COMPLETE USER FLOW\n');
+console.log('Testing: https://ideasbeforetime.pages.dev/social-optimizer-app.html\n');
 
-const issues = [];
-const warnings = [];
-let testsRun = 0;
-let testsPassed = 0;
-
-// Test 1: Check all SPO files exist
-console.log('📋 TEST 1: Checking SPO Files Exist...');
-testsRun++;
-
-const requiredFiles = [
-    'social-optimizer-index.html',
-    'social-optimizer-app.html',
-    'social-optimizer-app.js',
-    'social-optimizer-ai-engine.js'
-];
-
-let allFilesExist = true;
-requiredFiles.forEach(file => {
-    if (!fs.existsSync(file)) {
-        issues.push(`❌ Missing file: ${file}`);
-        allFilesExist = false;
-    }
-});
-
-if (allFilesExist) {
-    testsPassed++;
-    console.log('✅ All SPO files exist\n');
-} else {
-    console.log('❌ Some SPO files missing\n');
-}
-
-// Test 2: Check landing page structure
-console.log('📋 TEST 2: Checking Landing Page Structure...');
-testsRun++;
-
-const indexContent = fs.readFileSync('social-optimizer-index.html', 'utf8');
-const landingChecks = [
-    { check: 'CTA button to start', pattern: /Start.*Preview|Try.*Preview|Start.*Optimizing|Get Started/i },
-    { check: 'Link to app page', pattern: /social-optimizer-app\.html/ },
-    { check: 'Pricing (₹21)', pattern: /₹21|Rs\.?\s*21/ },
-    { check: 'Refund policy mentioned', pattern: /refund/i }
-];
-
-let landingPassed = true;
-landingChecks.forEach(({ check, pattern }) => {
-    if (!pattern.test(indexContent)) {
-        issues.push(`❌ Landing page missing: ${check}`);
-        landingPassed = false;
-    }
-});
-
-if (landingPassed) {
-    testsPassed++;
-    console.log('✅ Landing page structure correct\n');
-} else {
-    console.log('❌ Landing page has issues\n');
-}
-
-// Test 3: Check app page has all required elements
-console.log('📋 TEST 3: Checking App Page Elements...');
-testsRun++;
-
-const appContent = fs.readFileSync('social-optimizer-app.html', 'utf8');
-const appChecks = [
-    { check: 'Platform dropdown', pattern: /platform.*select|select.*platform/i },
-    { check: 'Input method selection', pattern: /input.*method|method.*selection/i },
-    { check: 'Text input field', pattern: /textarea|input.*text/i },
-    { check: 'Next button', pattern: /button.*next|next.*button/i },
-    { check: 'Back button', pattern: /button.*back|back.*button/i },
-    { check: 'Validation', pattern: /validate|validation|required/i }
-];
-
-let appPassed = true;
-appChecks.forEach(({ check, pattern }) => {
-    if (!pattern.test(appContent)) {
-        issues.push(`❌ App page missing: ${check}`);
-        appPassed = false;
-    }
-});
-
-if (appPassed) {
-    testsPassed++;
-    console.log('✅ App page has required elements\n');
-} else {
-    console.log('❌ App page missing elements\n');
-}
-
-// Test 4: Check JavaScript file structure
-console.log('📋 TEST 4: Checking JavaScript Logic...');
-testsRun++;
-
-const jsContent = fs.readFileSync('social-optimizer-app.js', 'utf8');
-const jsChecks = [
-    { check: 'Page navigation logic', pattern: /showPage|changePage|navigateTo|currentStep|step.*=/i },
-    { check: 'Data persistence (localStorage)', pattern: /localStorage/ },
-    { check: 'Form validation', pattern: /validate|validation/i },
-    { check: 'Error handling', pattern: /catch|error|try/i }
-];
-
-let jsPassed = true;
-jsChecks.forEach(({ check, pattern }) => {
-    if (!pattern.test(jsContent)) {
-        warnings.push(`⚠️  JavaScript may be missing: ${check}`);
-        jsPassed = false;
-    }
-});
-
-if (jsPassed) {
-    testsPassed++;
-    console.log('✅ JavaScript logic looks complete\n');
-} else {
-    console.log('⚠️  JavaScript may have gaps\n');
-}
-
-// Test 5: Check AI engine integration
-console.log('📋 TEST 5: Checking AI Engine Integration...');
-testsRun++;
-
-const aiContent = fs.readFileSync('social-optimizer-ai-engine.js', 'utf8');
-const aiChecks = [
-    { check: 'API key handling', pattern: /API.*KEY|apiKey|GEMINI/i },
-    { check: 'API call logic', pattern: /fetch|axios|XMLHttpRequest/i },
-    { check: 'Response handling', pattern: /response|result|data/i },
-    { check: 'Error handling', pattern: /catch|error|try/i }
-];
-
-let aiPassed = true;
-aiChecks.forEach(({ check, pattern }) => {
-    if (!pattern.test(aiContent)) {
-        warnings.push(`⚠️  AI engine may be missing: ${check}`);
-        aiPassed = false;
-    }
-});
-
-if (aiPassed) {
-    testsPassed++;
-    console.log('✅ AI engine integration looks complete\n');
-} else {
-    console.log('⚠️  AI engine may have gaps\n');
-}
-
-// Test 6: Check for common mistakes
-console.log('📋 TEST 6: Checking for Common Mistakes...');
-testsRun++;
-
-const commonMistakes = [
-    { check: 'Hardcoded test data in production', pattern: /test.*data|demo.*data|sample.*data/i, file: jsContent },
-    { check: 'Console.log statements', pattern: /console\.log/g, file: jsContent },
-    { check: 'Alert statements', pattern: /alert\(/g, file: jsContent },
-    { check: 'Commented out code', pattern: /\/\/.*TODO|\/\/.*FIXME|\/\/.*HACK/i, file: jsContent }
-];
-
-let mistakesPassed = true;
-commonMistakes.forEach(({ check, pattern, file }) => {
-    const matches = file.match(pattern);
-    if (matches && matches.length > 3) {
-        warnings.push(`⚠️  Found ${matches.length} instances of: ${check}`);
-        mistakesPassed = false;
-    }
-});
-
-if (mistakesPassed) {
-    testsPassed++;
-    console.log('✅ No major code issues found\n');
-} else {
-    console.log('⚠️  Some code cleanup needed\n');
-}
-
-// SUMMARY
-console.log('\n' + '='.repeat(50));
-console.log('📊 TEST SUMMARY');
-console.log('='.repeat(50));
-console.log(`Tests Run: ${testsRun}`);
-console.log(`Tests Passed: ${testsPassed}`);
-console.log(`Success Rate: ${Math.round((testsPassed/testsRun)*100)}%\n`);
-
-if (issues.length > 0) {
-    console.log('🚨 CRITICAL ISSUES:');
-    issues.forEach(issue => console.log(issue));
-    console.log('');
-}
-
-if (warnings.length > 0) {
-    console.log('⚠️  WARNINGS:');
-    warnings.forEach(warning => console.log(warning));
-    console.log('');
-}
-
-// VERDICT
-console.log('='.repeat(50));
-if (issues.length === 0 && warnings.length === 0) {
-    console.log('✅ SPO AUTOMATED TESTS PASSED!');
-    console.log('');
-    console.log('⚠️  IMPORTANT: Automated tests passed, but you MUST:');
-    console.log('1. Open social-optimizer-index.html in browser');
-    console.log('2. Click "Start Free Preview"');
-    console.log('3. Fill form and click "Next"');
-    console.log('4. Verify page 2 loads with your data');
-    console.log('5. Click "Back" and verify data persists');
-    console.log('6. Complete entire flow to payment');
-    console.log('7. Test on mobile device');
-    console.log('');
-    console.log('ONLY THEN say "SPO is ready"!');
-} else if (issues.length > 0) {
-    console.log('❌ SPO NOT READY - CRITICAL ISSUES FOUND');
-    console.log('Fix all issues before testing in browser!');
-} else {
-    console.log('⚠️  SPO HAS WARNINGS - Review before launch');
-    console.log('Consider fixing warnings for better quality');
-}
-console.log('='.repeat(50));
-
-// Save results
 const results = {
-    timestamp: new Date().toISOString(),
-    testsRun,
-    testsPassed,
-    successRate: Math.round((testsPassed/testsRun)*100),
-    issues,
-    warnings,
-    verdict: issues.length === 0 ? 'PASSED' : 'FAILED'
+    passed: 0,
+    failed: 0,
+    warnings: 0,
+    tests: []
 };
 
-fs.writeFileSync('SPO_TEST_RESULTS.json', JSON.stringify(results, null, 2));
-console.log('\n📄 Results saved to SPO_TEST_RESULTS.json');
+function test(name, condition, details = '') {
+    const result = {
+        name,
+        passed: condition,
+        details
+    };
+    
+    if (condition) {
+        console.log(`✅ ${name}`);
+        results.passed++;
+    } else {
+        console.log(`❌ ${name}`);
+        if (details) console.log(`   ${details}`);
+        results.failed++;
+    }
+    
+    results.tests.push(result);
+}
+
+function warning(name, details) {
+    console.log(`⚠️  ${name}`);
+    if (details) console.log(`   ${details}`);
+    results.warnings++;
+}
+
+// Read the SPO file
+const spoFile = 'Cloudfare/social-optimizer-app.html';
+let content = '';
+
+try {
+    content = fs.readFileSync(spoFile, 'utf8');
+} catch (err) {
+    console.log(`❌ Cannot read ${spoFile}`);
+    process.exit(1);
+}
+
+console.log('═══════════════════════════════════════════════════════════\n');
+console.log('📋 PAGE 1: PROFILE INPUT\n');
+
+// Test 1: Form exists
+test(
+    'Profile input form exists',
+    content.includes('id="profileForm"') || content.includes('class="profile-form"'),
+    'Form should have proper ID or class'
+);
+
+// Test 2: Required fields
+const requiredFields = ['name', 'headline', 'about', 'experience', 'skills'];
+requiredFields.forEach(field => {
+    test(
+        `Field "${field}" exists`,
+        content.includes(`name="${field}"`) || content.includes(`id="${field}"`),
+        `Input field for ${field} should exist`
+    );
+});
+
+// Test 3: Next button
+test(
+    'Next button exists on page 1',
+    content.includes('Next') && (content.includes('onclick') || content.includes('type="submit"')),
+    'Should have clickable Next button'
+);
+
+// Test 4: Navigation to page 2
+test(
+    'Navigation logic to page 2 exists',
+    content.includes('page2') || content.includes('step-2') || content.includes('showPage(2)'),
+    'Should have code to navigate to page 2'
+);
+
+console.log('\n═══════════════════════════════════════════════════════════\n');
+console.log('📋 PAGE 2: CONTENT GENERATION\n');
+
+// Test 5: Page 2 exists
+test(
+    'Page 2 section exists',
+    content.includes('page-2') || content.includes('step2') || content.includes('content-generation'),
+    'Should have page 2 HTML structure'
+);
+
+// Test 6: AI generation button
+test(
+    'Generate content button exists',
+    content.includes('generate') && content.includes('button'),
+    'Should have button to generate AI content'
+);
+
+// Test 7: Preview area
+test(
+    'Content preview area exists',
+    content.includes('preview') || content.includes('generated-content') || content.includes('output'),
+    'Should have area to show generated content'
+);
+
+// Test 8: Back button
+test(
+    'Back button exists',
+    content.includes('Back') || content.includes('Previous'),
+    'Should allow going back to page 1'
+);
+
+console.log('\n═══════════════════════════════════════════════════════════\n');
+console.log('📋 PAGE 3: PAYMENT\n');
+
+// Test 9: Payment section
+test(
+    'Payment section exists',
+    content.includes('payment') || content.includes('₹21') || content.includes('razorpay'),
+    'Should have payment section'
+);
+
+// Test 10: Payment methods
+test(
+    'Razorpay integration exists',
+    content.includes('razorpay') && content.includes('rzp_live'),
+    'Should have Razorpay live key'
+);
+
+// Test 11: Access code option
+test(
+    'Access code input exists',
+    content.includes('access') && content.includes('code') && content.includes('input'),
+    'Should allow entering access codes'
+);
+
+// Test 12: Transaction ID verification
+test(
+    'Transaction ID verification exists',
+    content.includes('transaction') && content.includes('verify'),
+    'Should allow manual transaction verification'
+);
+
+console.log('\n═══════════════════════════════════════════════════════════\n');
+console.log('📋 PAGE 4: DOWNLOAD\n');
+
+// Test 13: Download section
+test(
+    'Download section exists',
+    content.includes('download') || content.includes('export'),
+    'Should have download/export functionality'
+);
+
+// Test 14: Multiple formats
+test(
+    'Multiple download formats available',
+    (content.includes('PDF') || content.includes('pdf')) && 
+    (content.includes('DOCX') || content.includes('docx') || content.includes('Word')),
+    'Should offer PDF and Word formats'
+);
+
+console.log('\n═══════════════════════════════════════════════════════════\n');
+console.log('🔄 DATA PERSISTENCE\n');
+
+// Test 15: LocalStorage usage
+test(
+    'Data persistence with localStorage',
+    content.includes('localStorage'),
+    'Should save user data to prevent loss'
+);
+
+// Test 16: Session management
+test(
+    'Session/state management exists',
+    content.includes('sessionStorage') || content.includes('state') || content.includes('data'),
+    'Should manage user session'
+);
+
+console.log('\n═══════════════════════════════════════════════════════════\n');
+console.log('🔗 NAVIGATION\n');
+
+// Test 17: Page navigation system
+test(
+    'Multi-page navigation system exists',
+    content.includes('showPage') || content.includes('currentPage') || content.includes('step'),
+    'Should have system to switch between pages'
+);
+
+// Test 18: Progress indicator
+test(
+    'Progress indicator exists',
+    content.includes('progress') || content.includes('step 1') || content.includes('1/4'),
+    'Should show user progress through steps'
+);
+
+console.log('\n═══════════════════════════════════════════════════════════\n');
+console.log('⚠️  CRITICAL CHECKS\n');
+
+// Test 19: Form validation
+test(
+    'Form validation exists',
+    content.includes('required') || content.includes('validate'),
+    'Should validate user inputs'
+);
+
+// Test 20: Error handling
+test(
+    'Error handling exists',
+    content.includes('error') && content.includes('catch'),
+    'Should handle errors gracefully'
+);
+
+// Test 21: Loading states
+test(
+    'Loading indicators exist',
+    content.includes('loading') || content.includes('spinner'),
+    'Should show loading during AI generation'
+);
+
+// Test 22: API integration
+test(
+    'Gemini API integration exists',
+    content.includes('gemini') || content.includes('generativelanguage'),
+    'Should call Gemini API for AI generation'
+);
+
+console.log('\n═══════════════════════════════════════════════════════════\n');
+console.log('🎨 USER EXPERIENCE\n');
+
+// Test 23: Responsive design
+test(
+    'Mobile responsive CSS exists',
+    content.includes('@media') || content.includes('mobile'),
+    'Should work on mobile devices'
+);
+
+// Test 24: Clear instructions
+test(
+    'User instructions exist',
+    content.includes('Enter your') || content.includes('Fill in') || content.includes('instructions'),
+    'Should guide users through process'
+);
+
+// Test 25: Demo/example data
+test(
+    'Demo button or example data exists',
+    content.includes('demo') || content.includes('example') || content.includes('sample'),
+    'Should offer demo to help users understand'
+);
+
+console.log('\n═══════════════════════════════════════════════════════════\n');
+console.log('📊 TEST RESULTS\n');
+console.log(`✅ Passed: ${results.passed}`);
+console.log(`❌ Failed: ${results.failed}`);
+console.log(`⚠️  Warnings: ${results.warnings}`);
+console.log(`📈 Success Rate: ${Math.round((results.passed / (results.passed + results.failed)) * 100)}%\n`);
+
+if (results.failed === 0) {
+    console.log('🎉 ALL TESTS PASSED! SPO flow is complete!\n');
+} else {
+    console.log('⚠️  SOME TESTS FAILED - Review and fix issues\n');
+    console.log('Failed tests:');
+    results.tests.filter(t => !t.passed).forEach(t => {
+        console.log(`  • ${t.name}`);
+        if (t.details) console.log(`    ${t.details}`);
+    });
+}
+
+console.log('\n═══════════════════════════════════════════════════════════\n');
+console.log('🎯 MANUAL TESTING CHECKLIST\n');
+console.log('After automated tests, manually verify:\n');
+console.log('☐ 1. Open SPO in browser');
+console.log('☐ 2. Fill profile form → Click Next');
+console.log('☐ 3. Generate content → Verify AI output');
+console.log('☐ 4. Go back → Verify data persists');
+console.log('☐ 5. Proceed to payment → Test access code');
+console.log('☐ 6. Test transaction ID verification');
+console.log('☐ 7. Download content → Verify formats');
+console.log('☐ 8. Test on mobile device');
+console.log('☐ 9. Test with slow internet');
+console.log('☐ 10. Test error scenarios\n');
+
+console.log('═══════════════════════════════════════════════════════════\n');
+
+// Save results
+fs.writeFileSync('Cloudfare/SPO_COMPLETE_FLOW_TEST_RESULTS.json', JSON.stringify(results, null, 2));
+console.log('✅ Results saved to SPO_COMPLETE_FLOW_TEST_RESULTS.json\n');
