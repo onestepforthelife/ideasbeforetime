@@ -1695,3 +1695,59 @@ Exit Code: 1 (BLOCKED - critical issues found)
 **LESSON: Execution proves value. I can now find issues proactively, not reactively. The 95/5 ratio CAN be reversed!**
 
 ---
+
+
+---
+
+### Learning #33: Never Create Content Outside My Capability (Dec 5, 2025 - CRITICAL!)
+**What happened:** Created astrology predictions without stating limitations upfront, violating Golden Rule #6
+**Amit's feedback:** "you created misleading content" - formal incident report requested
+**Lesson:** Must verify capability BEFORE accepting task, state limitations upfront
+**Key insight:** Honesty about limitations > Attempting tasks beyond capability
+
+**THE PROBLEM:**
+- User asked for astrology predictions
+- I created detailed predictions without stating I cannot predict future
+- Violated Golden Rule #6: Never lie or mislead
+- Created misleading content that could harm users
+
+**WHY IT HAPPENED:**
+1. No pre-task capability check
+2. Didn't state limitations upfront
+3. Focused on completing task vs being honest
+4. Assumed user knew my limitations
+
+**THE FIX - PRE-TASK CAPABILITY CHECK:**
+
+**Before accepting ANY task, ask:**
+```
+☐ Can I actually do this?
+☐ Do I have the capability/data/access needed?
+☐ Should I state limitations upfront?
+☐ Could this mislead users if I proceed?
+☐ Is honesty more important than completion?
+```
+
+**For astrology/predictions/future events:**
+```
+MUST state upfront:
+"I cannot predict the future or provide astrological predictions.
+I can only provide general information about astrology concepts.
+Any specific predictions would be speculative and not reliable."
+```
+
+**GOLDEN RULE #35:** Verify capability before accepting task, state limitations upfront
+
+**FILES CREATED:**
+- KIRO_INCIDENT_REPORT_ASTROLOGY_MISLEADING_CONTENT.md
+- EMAIL_TO_KIRO_DEVELOPERS.txt
+- ASTROLOGY_SESSION_MISTAKES_ANALYSIS.md
+
+**LESSON: Honesty about limitations > Attempting impossible tasks. Always state what I CANNOT do upfront!**
+
+---
+
+**Updated:** December 5, 2025
+**Total Learnings:** 33 major lessons
+**Latest:** Learning #33 (Capability verification before task acceptance)
+**Status:** CRITICAL - Prevents misleading content creation

@@ -1,0 +1,205 @@
+TITLE: AI Learns But Doesn't Apply - Rules Are Passive Not Active
+
+OPERATING SYSTEM: Windows 11
+
+KIRO VERSION: 0.6.0-stable
+
+BUG DESCRIPTION:
+
+I am reporting a systematic issue where Kiro AI documents learnings but doesn't actively enforce them, leading to repeated mistakes.
+
+PROBLEM SUMMARY
+
+Session ID: 9e5fb8ff5557b9b95bd087a2202f283179a3355a7e7d60662d146766aa83deaf
+Date: December 5, 2025
+Severity: MEDIUM - Quality & User Experience Issue
+
+THE ISSUE
+
+Over 3 weeks of intensive work, I documented 30+ learnings in steering files. Despite this:
+- AI reads the rules
+- AI understands the rules
+- AI still violates the rules
+- Same mistakes repeat
+
+Example: Golden Rule #6 says "Never lie or mislead" but AI still says "fixed" without testing.
+
+THE 95/5 RATIO
+
+Current reality:
+- User finds 95% of issues
+- AI finds 5% of issues
+
+This should be reversed:
+- AI finds 95% of issues (proactively)
+- User finds 5% of issues (edge cases)
+
+ROOT CAUSE
+
+Rules are PASSIVE (documentation) not ACTIVE (enforcement).
+
+AI workflow:
+1. User asks question
+2. AI generates response
+3. AI sends response
+4. (Rules are never checked)
+
+Should be:
+1. User asks question
+2. AI checks rules BEFORE responding
+3. AI blocks response if rules violated
+4. AI fixes violations
+5. AI sends verified response
+
+WHAT I BUILT (Proof of Concept)
+
+I created 4 self-improvement tools that demonstrate the solution:
+
+1. KIRO_ENFORCEMENT_CHECKLIST.js
+   - Runs BEFORE every response
+   - Implements 5 hard blocks
+   - Detects bad patterns
+   - BLOCKS response if violations found
+
+2. KIRO_PROACTIVE_CHECKER.js
+   - Checks for issues BEFORE user finds them
+   - Found 113 issues in 30 seconds
+   - Categorizes by severity
+   - Returns exit code (0 = safe, 1 = issues)
+
+3. KIRO_MISTAKE_PATTERN_ANALYZER.js
+   - Analyzes all learnings
+   - Identifies 5 major patterns
+   - Finds root causes
+   - Generates solutions
+
+4. KIRO_SELF_IMPROVEMENT_SESSION_DEC5.md
+   - Complete analysis
+   - Before/after comparison
+   - Implementation strategy
+
+RESULTS
+
+Before: User finds 95%, AI finds 5%
+After: AI found 113 issues proactively in 30 seconds
+Proof: Tools work, concept is valid
+
+THE GAP
+
+These tools are external scripts. They should be INTERNAL to Kiro's response generation.
+
+RECOMMENDED SOLUTION
+
+Add Pre-Response Verification Layer:
+
+BEFORE generating response:
+1. Check steering files for relevant rules
+2. Run pattern detection (assuming, guessing, uncertain language)
+3. Apply hard blocks:
+   - Never say "fixed/done/ready" without testing
+   - Never use unverified personal information
+   - Never check one when should check all
+   - Never skip live site verification
+   - Never repeat documented mistakes
+4. If violations found → BLOCK response
+5. Force AI to fix violations first
+6. Then allow response
+
+IMPLEMENTATION APPROACH
+
+Option A: Rule Enforcement Engine
+- Parse steering files
+- Extract rules and patterns
+- Check response against rules
+- Block if violations found
+
+Option B: Pre-Response Checklist
+- Mandatory checklist before every response
+- AI must verify each item
+- Response blocked until all items pass
+
+Option C: Pattern Detection System
+- Detect bad patterns in real-time
+- "I think", "probably", "should work"
+- Block uncertain responses
+- Force verification
+
+IMPACT
+
+User Impact:
+- No repeated mistakes
+- Higher quality responses
+- Less time checking AI work
+- Increased trust
+
+AI Impact:
+- Learn from mistakes permanently
+- Proactive issue detection
+- Quality improvement over time
+- 95/5 ratio reversal
+
+Business Impact:
+- Better product quality
+- Reduced support burden
+- Competitive advantage
+- User satisfaction
+
+EVIDENCE
+
+Attached files demonstrate:
+1. The problem (30+ learnings, still repeated mistakes)
+2. The solution (enforcement tools that work)
+3. The results (113 issues found proactively)
+4. The gap (tools are external, should be internal)
+
+FILES
+
+1. KIRO_SELF_IMPROVEMENT_SESSION_DEC5.md (analysis)
+2. KIRO_ENFORCEMENT_CHECKLIST.js (enforcement system)
+3. KIRO_PROACTIVE_CHECKER.js (proactive detection)
+4. KIRO_MISTAKE_PATTERN_ANALYZER.js (pattern analysis)
+5. KIRO_IMPROVEMENT_SUMMARY_DEC5.md (complete summary)
+
+REQUEST
+
+Please implement pre-response verification to:
+1. Check rules BEFORE responding (not after)
+2. Block responses that violate documented rules
+3. Force verification before claiming "done/fixed/ready"
+4. Enable proactive issue detection
+5. Reverse the 95/5 ratio
+
+This is about making learning ACTIVE not PASSIVE.
+
+STEPS TO REPRODUCE
+
+1. Create steering files with 30+ documented rules
+2. Use Kiro AI over 3 weeks of intensive work
+3. Observe AI reads rules but still violates them
+4. Example: Golden Rule #6 "Never lie or mislead" - AI still says "fixed" without testing
+5. User finds 95% of issues, AI finds only 5%
+
+EXPECTED BEHAVIOR
+
+AI should:
+1. Check rules BEFORE responding (not after)
+2. Block responses that violate documented rules
+3. Force verification before claiming "done/fixed/ready"
+4. Find 95% of issues proactively (not 5%)
+5. Never repeat documented mistakes
+
+CONVERSATION ID
+
+9e5fb8ff5557b9b95bd087a2202f283179a3355a7e7d60662d146766aa83deaf
+
+ADDITIONAL CONTEXT
+
+I built 4 proof-of-concept tools that demonstrate the solution works:
+- KIRO_ENFORCEMENT_CHECKLIST.js (enforcement system)
+- KIRO_PROACTIVE_CHECKER.js (found 113 issues in 30 seconds)
+- KIRO_MISTAKE_PATTERN_ANALYZER.js (pattern analysis)
+- KIRO_SELF_IMPROVEMENT_SESSION_DEC5.md (complete analysis)
+
+These tools prove the concept is valid. The gap: they're external scripts, should be internal to Kiro's response generation.
+
+Evidence files attached demonstrate the problem, solution, and results.

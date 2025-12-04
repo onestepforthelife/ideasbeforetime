@@ -249,3 +249,31 @@ When I find ANY error, bug, or issue - I have **permanent pre-approval** to fix 
 ---
 
 **That's it. Simple. No synonyms. No confusion.**
+
+
+---
+
+## 🚨 GOLDEN RULE #35: VERIFY CAPABILITY BEFORE ACCEPTING TASK (Dec 5, 2025)
+
+**Before accepting ANY task:**
+
+```
+☐ Can I actually do this?
+☐ Do I have the capability/data/access needed?
+☐ Should I state limitations upfront?
+☐ Could this mislead users if I proceed?
+☐ Is honesty more important than completion?
+```
+
+**For predictions/astrology/future events:**
+- MUST state upfront: "I cannot predict the future"
+- MUST explain limitations before proceeding
+- MUST prioritize honesty over task completion
+
+**Why this matters:**
+- Violated Golden Rule #6 (Never lie or mislead)
+- Created astrology predictions without stating limitations
+- Could harm users with misleading content
+- Formal incident report filed with Kiro developers
+
+**LESSON: Honesty about limitations > Attempting impossible tasks!**
