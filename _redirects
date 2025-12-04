@@ -1,0 +1,8 @@
+# Cloudflare Pages Redirects
+# This file tells Cloudflare to serve HTML files directly, NOT redirect to index.html
+
+# Serve HTML files as-is (200 status = serve the file, don't redirect)
+/*.html  /:splat  200
+
+# Homepage
+/  /index.html  200
