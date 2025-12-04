@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-12-04T12:01:50.928Z",
+  "timestamp": "2025-12-04T12:45:22.279Z",
   "summary": {
-    "totalIssues": 15,
+    "totalIssues": 16,
     "blogPostsChecked": 100,
     "filesChecked": 173
   },
@@ -32,16 +32,17 @@
     "consistency": {
       "checked": 173,
       "issues": [
+        "acrylic.html: Missing common-navigation.js",
+        "acrylic.html: Missing analytics",
         "ghar-ghar-complete.html: Missing common-navigation.js",
         "ghar-ghar-complete.html: Missing common-footer.js",
         "ghar-ghar-complete.html: Missing analytics",
-        "ro-guide.html: Missing common-navigation.js",
-        "ro-guide.html: Missing common-footer.js",
-        "ro-guide.html: Missing analytics",
-        "ro.html: Missing common-navigation.js",
-        "ro.html: Missing common-footer.js",
-        "ro.html: Missing analytics",
-        "vertical-nav-option.html: Missing analytics"
+        "nickel.html: Missing common-navigation.js",
+        "nickel.html: Missing analytics",
+        "paper.html: Missing common-navigation.js",
+        "paper.html: Missing analytics",
+        "poloxamer.html: Missing common-navigation.js",
+        "poloxamer.html: Missing analytics"
       ]
     },
     "sitemap": {

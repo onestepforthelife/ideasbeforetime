@@ -96,7 +96,7 @@ const reportFiles = htmlFiles.filter(f =>
 
 let blurMissing = reportFiles.filter(f => {
     const content = fs.readFileSync(f, 'utf8');
-    return !content.includes('preview-overlay') && !content.includes('preview-message');
+    return !content.includes('blur-overlay') && !content.includes('preview-overlay') && !content.includes('preview-message');
 });
 
 if (blurMissing.length === 0) {

@@ -6,7 +6,7 @@ const AI_PROVIDERS = {
         name: 'Groq',
         endpoint: 'https://api.groq.com/openai/v1/chat/completions',
         model: 'mixtral-8x7b-32768',
-        key: 'gsk_YOUR_KEY', // Get from console.groq.com
+        key: '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',
         free: true,
         limit: '14,400 req/day',
         speed: 'Super Fast',
@@ -15,7 +15,7 @@ const AI_PROVIDERS = {
     huggingface: {
         name: 'Hugging Face',
         endpoint: 'https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2',
-        key: 'hf_YOUR_KEY', // Get from huggingface.co
+        key: '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',
         free: true,
         limit: '1,000 req/day',
         speed: 'Medium',
@@ -24,7 +24,7 @@ const AI_PROVIDERS = {
     gemini: {
         name: 'Google Gemini',
         endpoint: 'https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent',
-        key: 'AIza_YOUR_KEY', // Already have
+        key: 'AIza_YOUR_EXISTING_GEMINI_KEY', // Replace with your actual Gemini key
         free: true,
         limit: '60 req/min',
         speed: 'Fast',
@@ -33,7 +33,7 @@ const AI_PROVIDERS = {
     cohere: {
         name: 'Cohere',
         endpoint: 'https://api.cohere.ai/v1/generate',
-        key: 'YOUR_KEY', // Get from cohere.com
+        key: '2XLIiLo7jQb6OsSQ42wk8VCkH3WBZlGuASA72GLk',
         free: true,
         limit: '100 req/min',
         speed: 'Fast',

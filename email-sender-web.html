@@ -97,7 +97,7 @@
             
             <div id="passwordSection" style="display: none;">
                 <label><strong>Your Gmail Address:</strong></label>
-                <input type="email" id="userEmail" placeholder="onestepforthelife@gmail.com" style="margin-bottom: 15px;">
+                <input type="email" id="userEmail" placeholder="onestepforthelife@gmail.com" style="margin-bottom: 15px;" required>
                 <small style="display: block; color: #666; margin-bottom: 15px;">
                     Enter the Gmail address you want to send emails from
                 </small>
@@ -136,12 +136,12 @@
                 <div>
                     <label style="display: block; margin-bottom: 5px; font-size: 13px; font-weight: 600;">Job Keywords *</label>
                     <input type="text" id="jobKeywords" placeholder="e.g., Director Operations, VP Supply Chain" 
-                           style="width: 100%; padding: 12px; border: 2px solid white; border-radius: 8px; font-size: 14px;">
+                           style="width: 100%; padding: 12px; border: 2px solid white; border-radius: 8px; font-size: 14px;" required>
                 </div>
                 <div>
                     <label style="display: block; margin-bottom: 5px; font-size: 13px; font-weight: 600;">Location</label>
                     <input type="text" id="jobLocation" placeholder="Singapore" value="Singapore"
-                           style="width: 100%; padding: 12px; border: 2px solid white; border-radius: 8px; font-size: 14px;">
+                           style="width: 100%; padding: 12px; border: 2px solid white; border-radius: 8px; font-size: 14px;" required>
                 </div>
                 <button class="btn btn-success" onclick="triggerJobSearch()" style="background: white; color: #28a745; padding: 12px 30px; font-weight: 700;">
                     🚀 Search Jobs

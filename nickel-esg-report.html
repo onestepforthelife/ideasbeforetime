@@ -9,373 +9,67 @@
     <link rel="stylesheet" href="common-navigation.css">
     <link rel="stylesheet" href="common-footer.css">
     <link rel="stylesheet" href="common-watermark.css">
-    <style>
-        body {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .password-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10000;
-        }
-
-        .password-box {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            text-align: center;
-            max-width: 400px;
-        }
-
-        .password-box h2 {
-            color: #1e3c72;
-            margin-bottom: 20px;
-        }
-
-        .password-box input {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 16px;
-            margin: 15px 0;
-        }
-
-        .password-box button {
-            background: #1e3c72;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .password-box button:hover {
-            background: #2a5298;
-        }
-
-        .error-msg {
-            color: #d32f2f;
-            margin-top: 10px;
-            display: none;
-        }
-
-        .report-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            display: none;
-        }
-
-        .report-header {
-            text-align: center;
-            border-bottom: 3px solid #1e3c72;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-
-        .report-header h1 {
-            color: #1e3c72;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .report-header .subtitle {
-            color: #666;
-            font-size: 1.2em;
-        }
-
-        .section {
-            margin: 40px 0;
-        }
-
-        .section h2 {
-            color: #1e3c72;
-            font-size: 2em;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .section h3 {
-            color: #2a5298;
-            font-size: 1.5em;
-            margin: 25px 0 15px 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        table th {
-            background: #1e3c72;
-            color: white;
-            padding: 15px;
-            text-align: left;
-            font-weight: bold;
-        }
-
-        table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        table tr:hover {
-            background: #f5f5f5;
-        }
-
-        .highlight-box {
-            background: #e3f2fd;
-            border-left: 4px solid #1e3c72;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-
-        .icon {
-            font-size: 1.2em;
-        }
-
-        .takeaway {
-            background: #fff3e0;
-            border-left: 4px solid #ff9800;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 5px;
-        }
-
-        .takeaway h3 {
-            color: #ff9800;
-            margin-top: 0;
-        }
-
-        @media print {
-            body {
-                background: white;
-            }
-            .password-overlay {
-                display: none !important;
-            }
-            .report-container {
-                display: block !important;
-                box-shadow: none;
-            }
-        }
     
-        /* 70% Blur System */
-        .blur-overlay {
-            position: fixed;
-            top: 30%;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            background: rgba(255, 255, 255, 0.7);
-            z-index: 999;
-            pointer-events: none;
-        }
-        .access-popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            z-index: 1000;
-            max-width: 500px;
-            text-align: center;
-        }
-        .access-popup h3 {
-            color: #e74c3c;
-            margin-bottom: 15px;
-            font-size: 24px;
-        }
-        .access-popup p {
-            color: #666;
-            margin-bottom: 25px;
-            line-height: 1.6;
-            font-size: 16px;
-        }
-        .access-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .btn-request, .btn-back {
-            padding: 12px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.2s;
-            font-size: 16px;
-        }
-        .btn-request {
-            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
-            color: white;
-        }
-        .btn-request:hover {
-            transform: translateY(-2px);
-        }
-        .btn-back {
-            background: #95a5a6;
-            color: white;
-        }
-        .btn-back:hover {
-            transform: translateY(-2px);
-        }
 
-    </style>
-
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3181510462001437"
-            crossorigin="anonymous"></script>
-    <script src="google-adsense.js"></script>
+    <link rel="canonical" href="https://ideasbeforetime.pages.dev/nickel-esg-report.html">
 
 <style>
-/* 30% PREVIEW SYSTEM */
-.preview-overlay {
+/* Blur overlay - starts AFTER navigation */
+.blur-overlay {
     position: fixed;
-    top: 0;
+    top: 80px; /* Below navigation */
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(8px);
     background: linear-gradient(
         to bottom,
         transparent 0%,
         transparent 30%,
-        rgba(255, 255, 255, 0.95) 30%,
+        rgba(255, 255, 255, 0.95) 50%,
         rgba(255, 255, 255, 0.98) 100%
     );
-    z-index: 9998;
+    z-index: 999;
     pointer-events: none;
 }
 
-.preview-message {
+/* Access message - positioned in content area */
+.access-message {
     position: fixed;
-    top: 35%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     background: white;
-    padding: 40px;
+    padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 50px rgba(0,0,0,0.3);
     text-align: center;
-    z-index: 9999;
-    max-width: 600px;
-    border: 3px solid #2563eb;
+    z-index: 1000;
+    max-width: 500px;
+    border: 3px solid #e74c3c;
 }
 
-.preview-message h2 {
-    color: #1e40af;
-    margin-bottom: 20px;
-    font-size: 28px;
-}
-
-.preview-message p {
-    color: #374151;
+.access-message h3 {
+    color: #e74c3c;
     margin-bottom: 15px;
-    font-size: 16px;
-    line-height: 1.6;
 }
 
-.preview-message .highlight {
-    background: #fef3c7;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 20px 0;
-    border-left: 4px solid #f59e0b;
-}
-
-.preview-message .access-info {
-    background: #dbeafe;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 20px 0;
-    font-size: 14px;
-}
-
-.preview-message .btn {
+.access-message .btn {
     display: inline-block;
     padding: 12px 30px;
-    background: #2563eb;
+    background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
     color: white;
     text-decoration: none;
     border-radius: 8px;
     margin: 10px 5px;
     font-weight: 600;
-    transition: all 0.3s;
-}
-
-.preview-message .btn:hover {
-    background: #1e40af;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
-}
-
-.preview-message .btn-secondary {
-    background: #6b7280;
-}
-
-.preview-message .btn-secondary:hover {
-    background: #4b5563;
-}
-
-/* Blur content below 30% */
-body::after {
-    content: '';
-    position: fixed;
-    top: 30%;
-    left: 0;
-    width: 100%;
-    height: 70%;
-    backdrop-filter: blur(8px);
-    z-index: 9997;
-    pointer-events: none;
 }
 </style>
 
-    <link rel="canonical" href="https://ideasbeforetime.pages.dev/nickel-esg-report.html">
 </head>
 <body>
 
-<!-- 30% PREVIEW OVERLAY -->
-<div class="preview-overlay"></div>
-<div class="preview-message">
-    <h2>🔒 Preview Mode (30% Visible)</h2>
-    
-    <p><strong>You're viewing a preview of this market research report.</strong></p>
-    
-    <div class="highlight">
-        <strong>📊 Full Report Includes:</strong><br>
-        • Complete market analysis & trends<br>
-        • Detailed pricing & supply chain data<br>
-        • Competitor analysis & insights<br>
-        • Future projections & recommendations
-    </div>
+
     
     <div class="access-info">
         <strong>🔐 This report is protected by Cloudflare Access</strong><br>

@@ -1,0 +1,46 @@
+# 🔑 API Keys Backup - Multi-Provider AI
+**Date:** December 5, 2025
+**KEEP THIS FILE SECURE - DO NOT SHARE**
+
+---
+
+## Groq (Primary)
+Key: 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
+Name: SPO Production
+Limit: 14,400 requests/day
+Speed: Super Fast (500 tokens/sec)
+Quality: Excellent
+
+---
+
+## Hugging Face (Backup 2)
+Key: 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
+Name: SPO Production
+Permission: READ
+Limit: 1,000 requests/day
+Quality: Good
+
+---
+
+## Cohere (Backup 3)
+Key: 2XLIiLo7jQb6OsSQ42wk8VCkH3WBZlGuASA72GLk
+Limit: 100 requests/minute
+Quality: Good
+
+---
+
+## Gemini (Backup 1 - Already Have)
+Key: [Your existing Gemini key]
+Limit: 60 requests/minute
+Quality: Very Good
+
+---
+
+## Total Capacity
+Combined: 15,400+ requests/day
+Uptime: 99.99% (4 providers with failover)
+Cost: $0 forever
+
+---
+
+**NEXT STEP:** Update AI_MULTI_PROVIDER_FAILOVER.js with these keys
