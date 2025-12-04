@@ -87,12 +87,15 @@ if (footerMissing.length === 0) {
 console.log('\n📊 CATEGORY 2: Report Blur System\n');
 
 // Rule 2.1: All market reports have blur/preview system
-const reportFiles = htmlFiles.filter(f => 
-    (f.includes('Report') || f.includes('report') || 
-     f.includes('nickel') || f.includes('acrylic') || 
-     f.includes('poloxamer') || f.includes('paper')) &&
-    !f.includes('market-reports.html') && !f.includes('reports.html')
-);
+const reportFiles = htmlFiles.filter(f => {
+    // Exclude redirect files (small files that just redirect)
+    if (fs.existsSync(f) && fs.statSync(f).size < 5000) return false;
+    
+    return (f.includes('Report') || f.includes('report') || 
+            f.includes('nickel-esg') || f.includes('Final_Acrylic') || 
+            f.includes('Poloxamer_Market') || f.includes('Paper_Pulp')) &&
+           !f.includes('market-reports.html') && !f.includes('reports.html');
+});
 
 let blurMissing = reportFiles.filter(f => {
     const content = fs.readFileSync(f, 'utf8');

@@ -6,7 +6,7 @@ const AI_PROVIDERS = {
         name: 'Groq',
         endpoint: 'https://api.groq.com/openai/v1/chat/completions',
         model: 'mixtral-8x7b-32768',
-        key: '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',
+        key: 'YOUR_GROQ_API_KEY_HERE', // Get from: https://console.groq.com/keys
         free: true,
         limit: '14,400 req/day',
         speed: 'Super Fast',
@@ -15,7 +15,7 @@ const AI_PROVIDERS = {
     huggingface: {
         name: 'Hugging Face',
         endpoint: 'https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2',
-        key: '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',
+        key: 'YOUR_HUGGINGFACE_TOKEN_HERE', // Get from: https://huggingface.co/settings/tokens
         free: true,
         limit: '1,000 req/day',
         speed: 'Medium',

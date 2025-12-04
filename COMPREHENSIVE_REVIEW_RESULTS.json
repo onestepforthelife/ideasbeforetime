@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-12-04T16:01:32.491Z",
+  "timestamp": "2025-12-04T16:04:41.446Z",
   "summary": {
-    "totalIssues": 8,
+    "totalIssues": 5,
     "blogPostsChecked": 100,
     "filesChecked": 174
   },
@@ -28,9 +28,6 @@
     "consistency": {
       "checked": 174,
       "issues": [
-        "admin-control-panel.html: Missing common-navigation.js",
-        "admin-control-panel.html: Missing common-footer.js",
-        "admin-control-panel.html: Missing analytics",
         "ghar-ghar-complete.html: Missing common-navigation.js",
         "ghar-ghar-complete.html: Missing common-footer.js",
         "ghar-ghar-complete.html: Missing analytics"
