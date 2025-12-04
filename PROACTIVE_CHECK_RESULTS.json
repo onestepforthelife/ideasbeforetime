@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-12-04T18:12:04.710Z",
+  "checksPerformed": 213,
+  "issuesFound": 1,
+  "issues": [
+    {
+      "type": "Missing Blur",
+      "count": 3,
+      "files": [
+        "family-prediction-report.html",
+        "market-reports.html",
+        "reports.html"
+      ]
+    }
+  ],
+  "status": "NEEDS_FIXES"
+}
