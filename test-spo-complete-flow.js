@@ -39,7 +39,7 @@ function warning(name, details) {
 }
 
 // Read the SPO file
-const spoFile = 'Cloudfare/social-optimizer-app.html';
+const spoFile = 'social-optimizer-app.html';
 let content = '';
 
 try {
@@ -287,5 +287,5 @@ console.log('☐ 10. Test error scenarios\n');
 console.log('═══════════════════════════════════════════════════════════\n');
 
 // Save results
-fs.writeFileSync('Cloudfare/SPO_COMPLETE_FLOW_TEST_RESULTS.json', JSON.stringify(results, null, 2));
+fs.writeFileSync('SPO_COMPLETE_FLOW_TEST_RESULTS.json', JSON.stringify(results, null, 2));
 console.log('✅ Results saved to SPO_COMPLETE_FLOW_TEST_RESULTS.json\n');
