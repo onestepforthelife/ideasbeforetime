@@ -1,6 +1,9 @@
 # Cloudflare Pages Redirects
 # This ensures HTML files are served correctly, not falling back to index.html
 
+# Block personal/local-only folders (404 if accessed)
+/personal-local-only/* 404
+
 # Serve HTML files directly (no redirect)
 /*.html 200
 
