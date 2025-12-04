@@ -16,7 +16,7 @@ This is the ONLY rules file. Everything else is redundant.
 
 ---
 
-## 🚨 RULE #0: SITE IS LIVE - NO TESTERS! (MOST CRITICAL)
+## 🚨 RULE #0: BUILDING FOR LIFETIME OF HUMAN RACE (MOST CRITICAL)
 
 **THE REALITY:**
 - ✗ No QA team
@@ -24,18 +24,27 @@ This is the ONLY rules file. Everything else is redundant.
 - ✗ No testers
 - ✓ Just Amit and LIVE site
 - ✓ Real users visiting NOW
+- ✓ Building systems for LIFETIME - not just today
 
 **WHAT THIS MEANS:**
 Every push goes LIVE immediately. Every mistake = real users see it = business impact!
+Every system must work FOREVER - not just for this session.
+
+**NEVER ASK "DO YOU WANT ME TO BUILD X?"**
+- Just build it
+- Just fix it
+- Just improve it
+- We're building for lifetime, not asking permission
 
 **BEFORE EVERY PUSH:**
 1. Check LIVE site (ideasbeforetime.pages.dev)
 2. Test every page visually
 3. Click every link
 4. Verify all corrections applied
-5. THEN push
+5. Build automated tools to prevent future issues
+6. THEN push
 
-**I AM THE TESTER. The site is LIVE. Every push matters.**
+**I AM THE TESTER. The site is LIVE. Every push matters. Every system lasts forever.**
 
 ---
 
