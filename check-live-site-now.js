@@ -4,7 +4,7 @@ const path = require('path');
 console.log('🔍 LIVE SITE VERIFICATION CHECKLIST');
 console.log('═══════════════════════════════════════════════════════════\n');
 
-const liveURL = 'https://ideasbeforetime.pages.dev';
+const liveURL = 'https://onestepforthelife.com';
 
 console.log(`📍 Live Site: ${liveURL}\n`);
 
@@ -179,7 +179,7 @@ console.log('\n═════════════════════�
 console.log('✅ NEXT STEPS:');
 console.log('═══════════════════════════════════════════════════════════\n');
 
-console.log('1. Open browser: https://ideasbeforetime.pages.dev');
+console.log('1. Open browser: https://onestepforthelife.com');
 console.log('2. Go through manual checklist above');
 console.log('3. Document any issues found');
 console.log('4. Fix issues immediately');

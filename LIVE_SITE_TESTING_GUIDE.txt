@@ -1,7 +1,7 @@
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                    🌐 LIVE SITE TESTING GUIDE                               ║
-║                    https://ideasbeforetime.pages.dev                        ║
+║                    https://onestepforthelife.com                        ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
@@ -29,14 +29,14 @@ Success Rate: 100%
 📋 MANUAL TESTING CHECKLIST
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Open: https://ideasbeforetime.pages.dev
+Open: https://onestepforthelife.com
 
 
 ═══════════════════════════════════════════════════════════════════════════════
 TEST 1: HOMEPAGE (5 min)
 ═══════════════════════════════════════════════════════════════════════════════
 
-URL: https://ideasbeforetime.pages.dev
+URL: https://onestepforthelife.com
 
 ☐ Page loads (no 404)
 ☐ Navigation bar visible at top
@@ -71,7 +71,7 @@ Expected: All links work, no 404 errors
 TEST 3: BLOG FUNCTIONALITY (10 min)
 ═══════════════════════════════════════════════════════════════════════════════
 
-URL: https://ideasbeforetime.pages.dev/blog.html
+URL: https://onestepforthelife.com/blog.html
 
 ☐ Blog page loads
 ☐ Category filters visible at top
@@ -94,7 +94,7 @@ Expected: Full blog functionality with filtering and navigation
 TEST 4: MARKET REPORTS (10 min)
 ═══════════════════════════════════════════════════════════════════════════════
 
-URL: https://ideasbeforetime.pages.dev/market-reports.html
+URL: https://onestepforthelife.com/market-reports.html
 
 ☐ Reports page loads
 ☐ All reports listed with cards
@@ -118,7 +118,7 @@ Expected: 30% preview + 70% blur + Request Access button
 TEST 5: SPO TOOL (10 min)
 ═══════════════════════════════════════════════════════════════════════════════
 
-URL: https://ideasbeforetime.pages.dev/social-optimizer-index.html
+URL: https://onestepforthelife.com/social-optimizer-index.html
 
 ☐ SPO page loads
 ☐ "Start Optimizing" button visible
@@ -140,7 +140,7 @@ Expected: Complete user flow from start to payment
 TEST 6: REQUEST ACCESS PAGE (5 min)
 ═══════════════════════════════════════════════════════════════════════════════
 
-URL: https://ideasbeforetime.pages.dev/request-access.html
+URL: https://onestepforthelife.com/request-access.html
 
 ☐ Page loads
 ☐ Navigation at TOP (not centered)
@@ -350,7 +350,7 @@ Site is READY when:
 📞 NEXT STEPS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. Open https://ideasbeforetime.pages.dev
+1. Open https://onestepforthelife.com
 2. Go through all 10 tests
 3. Document any issues found
 4. Report issues to Kiro

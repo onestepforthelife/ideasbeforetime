@@ -8,22 +8,22 @@ console.log('🔍 CHECKING BLOG VISIBILITY ON LIVE SITE...\n');
 const checks = [
     {
         name: 'Homepage has blog section',
-        url: 'https://ideasbeforetime.pages.dev/',
+        url: 'https://onestepforthelife.com/',
         test: (html) => html.includes('Latest from LinkedIn') || html.includes('📝 Latest Insights')
     },
     {
         name: 'Navigation has blog link',
-        url: 'https://ideasbeforetime.pages.dev/',
+        url: 'https://onestepforthelife.com/',
         test: (html) => html.includes('href="/blog.html"') || html.includes('href="blog.html"')
     },
     {
         name: 'Blog page exists',
-        url: 'https://ideasbeforetime.pages.dev/blog.html',
+        url: 'https://onestepforthelife.com/blog.html',
         test: (html) => html.includes('Blog & Insights') || html.includes('blog-post')
     },
     {
         name: 'Blog posts exist',
-        url: 'https://ideasbeforetime.pages.dev/blog-post-1.html',
+        url: 'https://onestepforthelife.com/blog-post-1.html',
         test: (html) => html.length > 1000
     }
 ];

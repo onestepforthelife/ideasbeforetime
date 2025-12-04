@@ -40,15 +40,15 @@ SUPPORTING FILES:
 4. Click "Commit to main"
 5. Click "Push origin"
 6. Wait 2-3 minutes for Cloudflare Pages to deploy
-7. Test: https://ideasbeforetime.pages.dev/blog.html
+7. Test: https://onestepforthelife.com/blog.html
 
 ═══════════════════════════════════════════════════════════════
 ✅ VERIFICATION AFTER PUSH
 ═══════════════════════════════════════════════════════════════
 
 Visit these URLs to confirm:
-1. https://ideasbeforetime.pages.dev/blog.html (should show blog page)
-2. https://ideasbeforetime.pages.dev/blog-post-1.html (should work)
+1. https://onestepforthelife.com/blog.html (should show blog page)
+2. https://onestepforthelife.com/blog-post-1.html (should work)
 3. Check navigation has "Blog" link
 4. Search should work on blog page
 5. Categories should filter posts

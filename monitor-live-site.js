@@ -1,9 +1,9 @@
 const https = require('https');
 
 console.log('🌐 LIVE SITE MONITOR - LIFETIME SYSTEM\n');
-console.log('Checking https://ideasbeforetime.pages.dev...\n');
+console.log('Checking https://onestepforthelife.com...\n');
 
-const SITE_URL = 'https://ideasbeforetime.pages.dev';
+const SITE_URL = 'https://onestepforthelife.com';
 const PAGES_TO_CHECK = [
     '/',
     '/blog.html',

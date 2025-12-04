@@ -15,7 +15,7 @@ let failed = 0;
 
 function checkPage(page) {
   return new Promise((resolve) => {
-    const url = `https://ideasbeforetime.pages.dev/${page}`;
+    const url = `https://onestepforthelife.com/${page}`;
     
     https.get(url, (res) => {
       let data = '';

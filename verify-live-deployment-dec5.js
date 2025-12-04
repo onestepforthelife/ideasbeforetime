@@ -4,7 +4,7 @@ console.log('══════════════════════�
 console.log('  🌐 LIVE SITE VERIFICATION - December 5, 2025');
 console.log('═══════════════════════════════════════════════════════════\n');
 
-const baseUrl = 'https://ideasbeforetime.pages.dev';
+const baseUrl = 'https://onestepforthelife.com';
 
 // Key pages to check
 const pagesToCheck = [

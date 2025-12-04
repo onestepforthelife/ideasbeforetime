@@ -24,7 +24,7 @@ HOW TO PUSH VIA GITHUB DESKTOP:
 4. Click "Commit to main"
 5. Click "Push origin"
 6. Wait 2-3 minutes for Cloudflare Pages to deploy
-7. Check https://ideasbeforetime.pages.dev
+7. Check https://onestepforthelife.com
 
 WHAT WILL BE FIXED:
 ✅ Blog.html will be accessible

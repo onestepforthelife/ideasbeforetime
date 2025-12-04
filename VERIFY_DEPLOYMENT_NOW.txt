@@ -1,7 +1,7 @@
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                    ✅ VERIFY DEPLOYMENT - CHECK THESE NOW                   ║
-║                    https://ideasbeforetime.pages.dev                        ║
+║                    https://onestepforthelife.com                        ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
@@ -14,30 +14,30 @@ Purpose: Quick verification checklist after deployment
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 1. HOMEPAGE
-   URL: https://ideasbeforetime.pages.dev
+   URL: https://onestepforthelife.com
    ☐ Loads correctly
    ☐ No errors visible
    ☐ Navigation works
 
 2. BLOG POST (Check width fix)
-   URL: https://ideasbeforetime.pages.dev/blog-post-1.html
+   URL: https://onestepforthelife.com/blog-post-1.html
    ☐ Page loads
    ☐ Content width looks good (not too narrow)
    ☐ Should be 1400px wide (not 900px)
    ☐ Professional appearance
 
 3. ANOTHER BLOG POST
-   URL: https://ideasbeforetime.pages.dev/blog-post-10.html
+   URL: https://onestepforthelife.com/blog-post-10.html
    ☐ Page loads
    ☐ Width consistent with blog-post-1
 
 4. FAMILY PAGES (Should NOT be accessible)
-   URL: https://ideasbeforetime.pages.dev/family-lifetime-timeline.html
+   URL: https://onestepforthelife.com/family-lifetime-timeline.html
    ☐ Should show 404 error (page not found)
    ☐ This is CORRECT - family pages excluded
 
 5. DOCUMENTATION (Should be accessible)
-   URL: https://ideasbeforetime.pages.dev/3_DAY_REVIEW_COMPLETE_DEC3_TO_DEC5.txt
+   URL: https://onestepforthelife.com/3_DAY_REVIEW_COMPLETE_DEC3_TO_DEC5.txt
    ☐ File loads (or shows in browser)
    ☐ Documentation deployed
 
@@ -138,5 +138,5 @@ IF ISSUES:
 
 
 ═══════════════════════════════════════════════════════════════════════════════
-Check the site now: https://ideasbeforetime.pages.dev
+Check the site now: https://onestepforthelife.com
 ═══════════════════════════════════════════════════════════════════════════════

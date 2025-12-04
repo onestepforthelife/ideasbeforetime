@@ -3,17 +3,17 @@
 const checks = [
     {
         name: 'Homepage',
-        url: 'https://ideasbeforetime.pages.dev/',
+        url: 'https://onestepforthelife.com/',
         expected: 'Ideas Before Time'
     },
     {
         name: 'AI Config Endpoint',
-        url: 'https://ideasbeforetime.pages.dev/api/ai-config',
+        url: 'https://onestepforthelife.com/api/ai-config',
         expected: 'AI_CONFIG'
     },
     {
         name: 'Functions Deployed',
-        url: 'https://ideasbeforetime.pages.dev/functions/api/ai-config.js',
+        url: 'https://onestepforthelife.com/functions/api/ai-config.js',
         expected: 'onRequest'
     }
 ];

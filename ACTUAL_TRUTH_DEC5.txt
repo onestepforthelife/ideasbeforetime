@@ -36,9 +36,9 @@ This is why you see homepage everywhere.
 5. Wait 2-3 minutes for deployment
 
 6. Test these URLs:
-   - https://ideasbeforetime.pages.dev/ro.html
-   - https://ideasbeforetime.pages.dev/blog-post-1.html
-   - https://ideasbeforetime.pages.dev/family-lifetime-timeline.html
+   - https://onestepforthelife.com/ro.html
+   - https://onestepforthelife.com/blog-post-1.html
+   - https://onestepforthelife.com/family-lifetime-timeline.html
 
 7. They should show CORRECT content now, not homepage
 
@@ -58,7 +58,7 @@ VERIFICATION AFTER PUSH:
 ═══════════════════════════════════════════════════════════
 
 Run this to verify:
-curl https://ideasbeforetime.pages.dev/ro.html | findstr "RO Water"
+curl https://onestepforthelife.com/ro.html | findstr "RO Water"
 
 Should show RO content, not homepage content.
 

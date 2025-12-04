@@ -4,7 +4,7 @@
 const https = require('https');
 const fs = require('fs');
 
-const LIVE_SITE = 'https://ideasbeforetime.pages.dev';
+const LIVE_SITE = 'https://onestepforthelife.com';
 
 async function checkURL(url) {
     return new Promise((resolve) => {

@@ -3,7 +3,7 @@
 ═══════════════════════════════════════════════════════════════
 
 PROBLEM IDENTIFIED:
-❌ Live site (ideasbeforetime.pages.dev) is missing:
+❌ Live site (onestepforthelife.com) is missing:
    - Blog section on homepage
    - Blog link in navigation
    - Blog.html page (308 redirect)

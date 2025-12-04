@@ -2,7 +2,7 @@ const https = require('https');
 
 console.log('Checking blog posts on live site...\n');
 
-const baseUrl = 'https://ideasbeforetime.pages.dev';
+const baseUrl = 'https://onestepforthelife.com';
 const postsToCheck = [1, 2, 3, 50, 100]; // Sample posts
 
 let results = { success: 0, fail: 0 };

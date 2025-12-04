@@ -107,7 +107,7 @@ This checks everything in 5 seconds!
 ==============
 
 1. Deploy the site (GitHub or manual)
-2. Visit: https://ideasbeforetime.pages.dev
+2. Visit: https://onestepforthelife.com
 3. Verify everything looks good
 4. Share with customers!
 
