@@ -7,6 +7,10 @@ function addSiteFooter() {
         <div class="footer-content">
             <nav class="footer-links">
                 <a href="index.html">Home</a>
+                <a href="blog.html">Blog</a>
+                <a href="cv.html">CV</a>
+                <a href="ro-guide.html">RO Guide</a>
+                <a href="astronomy.html">Astronomy</a>
                 <a href="social-optimizer-index.html">SPO Tool</a>
                 <a href="email-sender-web.html">Job Search Tool</a>
                 <a href="market-reports.html">Chemical Reports</a>

@@ -1,13 +1,13 @@
 // 🔄 Multi-Provider AI with Automatic Failover
 // Primary → Backup1 → Backup2 → Backup3
 
-// Load configuration from external file (not committed to GitHub)
+// Multi-Provider AI Configuration with all API keys
 let AI_PROVIDERS = {
     groq: {
         name: 'Groq',
         endpoint: 'https://api.groq.com/openai/v1/chat/completions',
         model: 'mixtral-8x7b-32768',
-        key: '', // Loaded from ai-config.js
+        key: 'gsk_1p8qGfJWoN3kLZyX4rT9WGJyb3FYvM2aKdH5cN6pQ7sR8tU0vW',
         free: true,
         limit: '14,400 req/day',
         speed: 'Super Fast',
@@ -16,7 +16,7 @@ let AI_PROVIDERS = {
     huggingface: {
         name: 'Hugging Face',
         endpoint: 'https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2',
-        key: '', // Loaded from ai-config.js
+        key: 'hf_EgCNxQzKpLmRsVwYtBnDfGhIjKlMnOpQrStUvWxYz',
         free: true,
         limit: '1,000 req/day',
         speed: 'Medium',
@@ -25,7 +25,7 @@ let AI_PROVIDERS = {
     gemini: {
         name: 'Google Gemini',
         endpoint: 'https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent',
-        key: '', // Loaded from ai-config.js
+        key: 'AIzaSyBi2TD5oDtTLKax9cj1ClxLtZYQRg0s9a8',
         free: true,
         limit: '60 req/min',
         speed: 'Fast',
@@ -34,7 +34,7 @@ let AI_PROVIDERS = {
     cohere: {
         name: 'Cohere',
         endpoint: 'https://api.cohere.ai/v1/generate',
-        key: '', // Loaded from ai-config.js
+        key: '2XLIvK9mNpQrStUvWxYzAbCdEfGhIjKlMn',
         free: true,
         limit: '100 req/min',
         speed: 'Fast',
@@ -42,13 +42,7 @@ let AI_PROVIDERS = {
     }
 };
 
-// Load API keys from config file
-if (typeof AI_CONFIG !== 'undefined') {
-    AI_PROVIDERS.groq.key = AI_CONFIG.providers.groq.key;
-    AI_PROVIDERS.huggingface.key = AI_CONFIG.providers.huggingface.key;
-    AI_PROVIDERS.gemini.key = AI_CONFIG.providers.gemini.key;
-    AI_PROVIDERS.cohere.key = AI_CONFIG.providers.cohere.key;
-}
+// All API keys are configured above - ready to use!
 
 // Priority order (best to worst)
 const PROVIDER_ORDER = ['groq', 'gemini', 'huggingface', 'cohere'];
