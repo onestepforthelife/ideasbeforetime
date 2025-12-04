@@ -1,0 +1,422 @@
+{
+  "httpStatus": [
+    {
+      "url": "https://ideasbeforetime.pages.dev/index.html",
+      "status": 308,
+      "headers": {
+        "date": "Thu, 04 Dec 2025 22:44:36 GMT",
+        "content-length": "0",
+        "connection": "keep-alive",
+        "location": "/",
+        "access-control-allow-origin": "*",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://generativelanguage.googleapis.com;",
+        "permissions-policy": "geolocation=(), microphone=(), camera=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "x-xss-protection": "1; mode=block",
+        "vary": "accept-encoding",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=SnVUyHUkBwbVDOwKUhJIhrC64YSvBbKD%2FlWjZSSQweDiM2qFqxUfqFdcxUj1Xru8v7zfoS53VwkKlBtba9u2OGNQqNje8BVXci55Jj2DbGpGh1S9WyMnRY27DhaPGIaRFoDOvhk%3D\"}]}",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "server": "cloudflare",
+        "cf-ray": "9a8ed4514ffd937f-MAA",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    },
+    {
+      "url": "https://ideasbeforetime.pages.dev/blog.html",
+      "status": 308,
+      "headers": {
+        "date": "Thu, 04 Dec 2025 22:44:36 GMT",
+        "content-length": "0",
+        "connection": "keep-alive",
+        "cf-ray": "9a8ed4520e008aff-BOM",
+        "location": "/blog",
+        "access-control-allow-origin": "*",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://generativelanguage.googleapis.com;",
+        "permissions-policy": "geolocation=(), microphone=(), camera=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "x-xss-protection": "1; mode=block",
+        "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=8vkrwCaF9T99WJHFLIoehMRuOv%2FoA4J8UT2zo1g2qcIMoBXJR1t9%2B%2FzyNMR45YuGp0gnK8YWNZCv3kH9fW0fWQT3pa8M5VrLhoeH1OewiyvWYHCvQGDq2geNnCWRfmg08wimCkoBtP7UwWHbcJBAKDef3shHHyp%2F\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+        "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+        "server": "cloudflare",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    },
+    {
+      "url": "https://ideasbeforetime.pages.dev/social-optimizer-index.html",
+      "status": 308,
+      "headers": {
+        "date": "Thu, 04 Dec 2025 22:44:36 GMT",
+        "content-length": "0",
+        "connection": "keep-alive",
+        "location": "/social-optimizer-index",
+        "access-control-allow-origin": "*",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://generativelanguage.googleapis.com;",
+        "permissions-policy": "geolocation=(), microphone=(), camera=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "x-xss-protection": "1; mode=block",
+        "vary": "accept-encoding",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=4RPPkquKPB2gfY5bVVW5PXNQ4tRi6oKD80VmfrTpw9JZln6iAJYe3%2FwCCRlNlGqgZ7Nznz9s9rw8Ar9iL6scY%2Bgr%2F6dp0%2F%2BPm%2FYXhc7Q4P7KIAiYi5LkP0cBkEM6ayqhJkoi\"}]}",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "server": "cloudflare",
+        "cf-ray": "9a8ed452cb4a8a1e-BOM",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    },
+    {
+      "url": "https://ideasbeforetime.pages.dev/email-sender-web.html",
+      "status": 308,
+      "headers": {
+        "date": "Thu, 04 Dec 2025 22:44:37 GMT",
+        "content-length": "0",
+        "connection": "keep-alive",
+        "location": "/email-sender-web",
+        "access-control-allow-origin": "*",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://generativelanguage.googleapis.com;",
+        "permissions-policy": "geolocation=(), microphone=(), camera=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "x-xss-protection": "1; mode=block",
+        "vary": "accept-encoding",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=4QVV0DpAiQ0zPfnYGobB%2BF2IutJqR78g32ipDv8BmqBp%2BEnucwkEcZTLFLrm1WZWXgOw3nsQVB3YAXXJfJRxOIE9hG%2FjOVsH8aKyQO0euJ2fizCe5XkLqGYMezrZFrRG5zIL\"}]}",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "server": "cloudflare",
+        "cf-ray": "9a8ed4537ad98b03-BOM",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    },
+    {
+      "url": "https://ideasbeforetime.pages.dev/job-tools.html",
+      "status": 308,
+      "headers": {
+        "date": "Thu, 04 Dec 2025 22:44:37 GMT",
+        "content-length": "0",
+        "connection": "keep-alive",
+        "location": "/job-tools",
+        "access-control-allow-origin": "*",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://generativelanguage.googleapis.com;",
+        "permissions-policy": "geolocation=(), microphone=(), camera=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "x-xss-protection": "1; mode=block",
+        "vary": "accept-encoding",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=pwps1xBkx0sLcKl%2BH1XV3uksBx1hJ9OVV0QsamMEc2x8qeBWyHiam21kTh%2BGu%2BdMBERL74OWDbozxdidNxyHlVoM%2FQcbdYwIFa%2FbWY6Ldhkp5hywGGMXc%2BShF5oXw5lf0i5y\"}]}",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "server": "cloudflare",
+        "cf-ray": "9a8ed4542ad18af9-BOM",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    },
+    {
+      "url": "https://ideasbeforetime.pages.dev/admin-control-panel.html",
+      "status": 200,
+      "headers": {
+        "date": "Thu, 04 Dec 2025 22:44:37 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "14283",
+        "connection": "keep-alive",
+        "access-control-allow-origin": "*",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "etag": "\"63fd8691d8228500546ec5148a30561b\"",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://generativelanguage.googleapis.com;",
+        "permissions-policy": "geolocation=(), microphone=(), camera=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "x-xss-protection": "1; mode=block",
+        "vary": "accept-encoding",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=YP%2FH2Be5EpP76SfvOAMiDtfE%2BWUzhpXojz7IF%2FbraZNqoC98yxgoSrfnn561eZtqRzdcDQOy%2BXVx8X96Wu2c4wHPg07cSHvT7UhVeP%2BcpbsGalvqQsmV9ufh20YmJov0xNxF\"}]}",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "server": "cloudflare",
+        "cf-ray": "9a8ed454ee388a14-BOM",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    },
+    {
+      "url": "https://ideasbeforetime.pages.dev/market-reports.html",
+      "status": 308,
+      "headers": {
+        "date": "Thu, 04 Dec 2025 22:44:37 GMT",
+        "content-length": "0",
+        "connection": "keep-alive",
+        "location": "/market-reports",
+        "access-control-allow-origin": "*",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://generativelanguage.googleapis.com;",
+        "permissions-policy": "geolocation=(), microphone=(), camera=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "x-xss-protection": "1; mode=block",
+        "vary": "accept-encoding",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=T0dlCzlKlG3OF30SG676VOVk7tDHYXY9RIwmhd9PIprnkNCoc27j5Eei9v1GUMb12TM226hY6Wua%2BLc4xuF1xTw7CUwug8LWks4avVhzH2o3rqhCRvXeWTwiVNAEZ5hF7n5LtLE%3D\"}]}",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "server": "cloudflare",
+        "cf-ray": "9a8ed455ae9b9373-MAA",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    },
+    {
+      "url": "https://ideasbeforetime.pages.dev/about.html",
+      "status": 308,
+      "headers": {
+        "date": "Thu, 04 Dec 2025 22:44:37 GMT",
+        "content-length": "0",
+        "connection": "keep-alive",
+        "location": "/about",
+        "access-control-allow-origin": "*",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://generativelanguage.googleapis.com;",
+        "permissions-policy": "geolocation=(), microphone=(), camera=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "x-xss-protection": "1; mode=block",
+        "vary": "accept-encoding",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=UPQ3qbVrxep%2Bs8VNaRRx9lhz3fcK%2BFusHffIo8fCwFufJnvGKOYdNY%2B%2BB69E9KVku6LJ8SqpI4%2BhtwUgtrivcGgf%2FBx3%2F2WTq3ppVhzkW4jnTMSuDLdmJhKHXk1SyA3LRaF3\"}]}",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "server": "cloudflare",
+        "cf-ray": "9a8ed4567aa08b09-BOM",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    },
+    {
+      "url": "https://ideasbeforetime.pages.dev/cv.html",
+      "status": 308,
+      "headers": {
+        "date": "Thu, 04 Dec 2025 22:44:37 GMT",
+        "content-length": "0",
+        "connection": "keep-alive",
+        "location": "/cv",
+        "access-control-allow-origin": "*",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://generativelanguage.googleapis.com;",
+        "permissions-policy": "geolocation=(), microphone=(), camera=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "x-xss-protection": "1; mode=block",
+        "vary": "accept-encoding",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=wR6e3JRPU%2FdXb7OYWET7Fi6hHyxP%2BJ0xXRFM%2B8u1YEAZBBTj%2BkQVk5GBvGe9%2FqqskZ8%2BcwdGV%2FHtncTBFQ3MPeb6m8JBX3RfPjxu0hlwXmGQD40ZbdeypOPrIJacH8FvlFlv\"}]}",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "server": "cloudflare",
+        "cf-ray": "9a8ed4573c8b8b0b-BOM",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    },
+    {
+      "url": "https://ideasbeforetime.pages.dev/astronomy.html",
+      "status": 200,
+      "headers": {
+        "date": "Thu, 04 Dec 2025 22:44:37 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "14283",
+        "connection": "keep-alive",
+        "access-control-allow-origin": "*",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "etag": "\"63fd8691d8228500546ec5148a30561b\"",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://generativelanguage.googleapis.com;",
+        "permissions-policy": "geolocation=(), microphone=(), camera=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "x-xss-protection": "1; mode=block",
+        "vary": "accept-encoding",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=JyBgORu6jiGMGkqnVhl6ZerH2nW5AGMIzrhF5HQiF6%2Bs%2FsmB%2BdbSKR8rNs9vU0BN69CMymUr9zRx7rVzFhRzztu6IhmQy6FzXGGpL0043I57fcI%2FX0z9mWXeh6WhYim9wZBimkU%3D\"}]}",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "server": "cloudflare",
+        "cf-ray": "9a8ed457e86a936b-MAA",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      }
+    }
+  ],
+  "fileContent": [
+    {
+      "page": "index.html",
+      "status": "OK",
+      "size": 23849,
+      "preview": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n<meta charset=\"UTF-8\">\r\n<meta name=\"viewport\" content=\"wi"
+    },
+    {
+      "page": "blog.html",
+      "status": "OK",
+      "size": 208993,
+      "preview": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width="
+    },
+    {
+      "page": "social-optimizer-index.html",
+      "status": "OK",
+      "size": 27500,
+      "preview": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<!-- \r\n    🔒 SECURITY: This page MUST be protected by Cloudflare"
+    },
+    {
+      "page": "email-sender-web.html",
+      "status": "OK",
+      "size": 30311,
+      "preview": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" con"
+    },
+    {
+      "page": "job-tools.html",
+      "status": "OK",
+      "size": 13053,
+      "preview": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" con"
+    },
+    {
+      "page": "admin-control-panel.html",
+      "status": "OK",
+      "size": 13926,
+      "preview": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n<meta charset=\"UTF-8\">\r\n<meta name=\"viewport\" content=\"wi"
+    },
+    {
+      "page": "market-reports.html",
+      "status": "OK",
+      "size": 16783,
+      "preview": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" con"
+    },
+    {
+      "page": "about.html",
+      "status": "OK",
+      "size": 50711,
+      "preview": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n<meta charset=\"UTF-8\">\r\n<meta name=\"viewport\" content=\"wi"
+    },
+    {
+      "page": "cv.html",
+      "status": "OK",
+      "size": 33672,
+      "preview": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" con"
+    },
+    {
+      "page": "astronomy.html",
+      "status": "OK",
+      "size": 19319,
+      "preview": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n<meta charset=\"UTF-8\">\r\n<meta name=\"viewport\" content=\"wi"
+    }
+  ],
+  "linkage": [
+    {
+      "from": "index.html",
+      "to": "blog.html",
+      "status": "OK"
+    },
+    {
+      "from": "index.html",
+      "to": "social-optimizer-index.html",
+      "status": "OK"
+    },
+    {
+      "from": "index.html",
+      "to": "email-sender-web.html",
+      "status": "MISSING"
+    },
+    {
+      "from": "index.html",
+      "to": "market-reports.html",
+      "status": "OK"
+    },
+    {
+      "from": "index.html",
+      "to": "about.html",
+      "status": "OK"
+    }
+  ],
+  "backend": [
+    {
+      "tool": "SPO",
+      "hasAPI": true
+    },
+    {
+      "tool": "Job Search",
+      "hasBackend": true,
+      "deployed": false
+    }
+  ],
+  "security": [
+    {
+      "feature": "Cloudflare Access",
+      "configured": false
+    }
+  ],
+  "issues": [
+    {
+      "page": "index.html",
+      "issue": "No link to Job Search",
+      "type": "FILE",
+      "cause": "Link not added to homepage",
+      "solution": "Add link to email-sender-web.html"
+    },
+    {
+      "page": "Job Search",
+      "issue": "Backend not deployed",
+      "type": "DEPLOYMENT",
+      "cause": "Python API exists but not running",
+      "solution": "Deploy to Heroku/Railway/Render"
+    },
+    {
+      "page": "Admin Panel",
+      "issue": "No access control",
+      "type": "SECURITY",
+      "cause": "_headers missing CF-Access config",
+      "solution": "Add Cloudflare Access headers + configure in dashboard"
+    },
+    {
+      "page": "index.html",
+      "issue": "308 Redirect",
+      "type": "SERVER",
+      "cause": "Cloudflare cache not purged",
+      "solution": "Purge cache in Cloudflare dashboard"
+    },
+    {
+      "page": "blog.html",
+      "issue": "308 Redirect",
+      "type": "SERVER",
+      "cause": "Cloudflare cache not purged",
+      "solution": "Purge cache in Cloudflare dashboard"
+    },
+    {
+      "page": "social-optimizer-index.html",
+      "issue": "308 Redirect",
+      "type": "SERVER",
+      "cause": "Cloudflare cache not purged",
+      "solution": "Purge cache in Cloudflare dashboard"
+    },
+    {
+      "page": "email-sender-web.html",
+      "issue": "308 Redirect",
+      "type": "SERVER",
+      "cause": "Cloudflare cache not purged",
+      "solution": "Purge cache in Cloudflare dashboard"
+    },
+    {
+      "page": "job-tools.html",
+      "issue": "308 Redirect",
+      "type": "SERVER",
+      "cause": "Cloudflare cache not purged",
+      "solution": "Purge cache in Cloudflare dashboard"
+    },
+    {
+      "page": "market-reports.html",
+      "issue": "308 Redirect",
+      "type": "SERVER",
+      "cause": "Cloudflare cache not purged",
+      "solution": "Purge cache in Cloudflare dashboard"
+    },
+    {
+      "page": "about.html",
+      "issue": "308 Redirect",
+      "type": "SERVER",
+      "cause": "Cloudflare cache not purged",
+      "solution": "Purge cache in Cloudflare dashboard"
+    },
+    {
+      "page": "cv.html",
+      "issue": "308 Redirect",
+      "type": "SERVER",
+      "cause": "Cloudflare cache not purged",
+      "solution": "Purge cache in Cloudflare dashboard"
+    }
+  ]
+}

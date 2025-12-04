@@ -1,156 +1,341 @@
-// Comprehensive Site Diagnostic - December 6, 2025
-// Full check of onestepforthelife.com
-
+const fs = require('fs');
 const https = require('https');
 
-console.log('🔍 COMPREHENSIVE SITE DIAGNOSTIC');
-console.log('Domain: onestepforthelife.com');
-console.log('Time: ' + new Date().toISOString());
-console.log('='.repeat(70) + '\n');
+console.log('🔍 COMPREHENSIVE SITE DIAGNOSTIC - December 6, 2025');
+console.log('Checking: Files vs Live Site vs Links vs Backend\n');
+console.log('='.repeat(80));
 
 const results = {
-    accessible: [],
-    redirecting: [],
-    errors: [],
-    total: 0
+    httpStatus: [],
+    fileContent: [],
+    linkage: [],
+    backend: [],
+    security: [],
+    issues: []
 };
 
 // Critical pages to check
-const pages = [
-    { url: '/', name: 'Homepage' },
-    { url: '/test-multi-ai.html', name: 'Multi-AI Test' },
-    { url: '/astronomy.html', name: 'Astronomy' },
-    { url: '/ro-water-purifier-guide.html', name: 'RO Guide' },
-    { url: '/blog.html', name: 'Blog' },
-    { url: '/blog-post-1.html', name: 'Blog Post 1' },
-    { url: '/about.html', name: 'About' },
-    { url: '/cv.html', name: 'CV' },
-    { url: '/spo.html', name: 'SPO' },
-    { url: '/social-optimizer-app.html', name: 'SPO App' },
-    { url: '/market-reports.html', name: 'Market Reports' },
-    { url: '/kiro.html', name: 'Kiro' },
-    { url: '/tools.html', name: 'Tools' },
-    { url: '/jobs.html', name: 'Jobs' }
+const criticalPages = [
+    'index.html',
+    'blog.html',
+    'social-optimizer-index.html',
+    'email-sender-web.html',
+    'job-tools.html',
+    'admin-control-panel.html',
+    'market-reports.html',
+    'about.html',
+    'cv.html',
+    'astronomy.html'
 ];
 
-function checkURL(page) {
+console.log('\n📊 PHASE 1: HTTP STATUS CHECK (Live Site)');
+console.log('-'.repeat(80));
+
+// Function to check HTTP status
+function checkHTTPStatus(url) {
     return new Promise((resolve) => {
-        const options = {
-            hostname: 'onestepforthelife.com',
-            port: 443,
-            path: page.url,
-            method: 'HEAD',
-            timeout: 10000,
-            headers: {
-                'User-Agent': 'Mozilla/5.0'
-            }
-        };
-
-        const req = https.request(options, (res) => {
-            const status = res.statusCode;
-            const result = {
-                name: page.name,
-                url: page.url,
-                status: status,
-                accessible: status === 200,
-                redirecting: status === 301 || status === 302 || status === 308,
-                error: status >= 400
-            };
-            resolve(result);
-        });
-
-        req.on('error', (error) => {
+        https.get(url, (res) => {
             resolve({
-                name: page.name,
-                url: page.url,
+                url: url,
+                status: res.statusCode,
+                headers: res.headers
+            });
+        }).on('error', (err) => {
+            resolve({
+                url: url,
                 status: 'ERROR',
-                accessible: false,
-                redirecting: false,
-                error: true,
-                errorMsg: error.message
+                error: err.message
             });
         });
-
-        req.on('timeout', () => {
-            req.destroy();
-            resolve({
-                name: page.name,
-                url: page.url,
-                status: 'TIMEOUT',
-                accessible: false,
-                redirecting: false,
-                error: true,
-                errorMsg: 'Request timeout'
-            });
-        });
-
-        req.end();
     });
 }
 
-async function runDiagnostic() {
-    console.log('📊 CHECKING PAGES:\n');
+// Check all critical pages
+async function checkAllPages() {
+    const baseUrl = 'https://ideasbeforetime.pages.dev/';
     
-    for (const page of pages) {
-        const result = await checkURL(page);
-        results.total++;
+    for (const page of criticalPages) {
+        const url = baseUrl + page;
+        const result = await checkHTTPStatus(url);
         
-        if (result.accessible) {
-            console.log(`✅ ${result.name.padEnd(20)} - ${result.status} OK`);
-            results.accessible.push(result);
-        } else if (result.redirecting) {
-            console.log(`🔄 ${result.name.padEnd(20)} - ${result.status} Redirect`);
-            results.redirecting.push(result);
+        results.httpStatus.push(result);
+        
+        if (result.status === 200) {
+            console.log(`✅ ${page}: 200 OK`);
+        } else if (result.status === 308) {
+            console.log(`❌ ${page}: 308 REDIRECT (CACHE ISSUE!)`);
+            results.issues.push({
+                page: page,
+                issue: '308 Redirect',
+                type: 'SERVER',
+                cause: 'Cloudflare cache not purged',
+                solution: 'Purge cache in Cloudflare dashboard'
+            });
+        } else if (result.status === 404) {
+            console.log(`❌ ${page}: 404 NOT FOUND`);
+            results.issues.push({
+                page: page,
+                issue: '404 Not Found',
+                type: 'FILE',
+                cause: 'File missing or wrong path',
+                solution: 'Check if file exists and _redirects config'
+            });
         } else {
-            console.log(`❌ ${result.name.padEnd(20)} - ${result.status} ${result.errorMsg || 'Error'}`);
-            results.errors.push(result);
+            console.log(`⚠️  ${page}: ${result.status}`);
+            results.issues.push({
+                page: page,
+                issue: `Status ${result.status}`,
+                type: 'UNKNOWN',
+                cause: 'Need investigation',
+                solution: 'Check server logs'
+            });
         }
-        
-        // Small delay
-        await new Promise(resolve => setTimeout(resolve, 300));
     }
-    
-    // Summary
-    console.log('\n' + '='.repeat(70));
-    console.log('\n📊 SUMMARY:\n');
-    console.log(`Total Pages Checked: ${results.total}`);
-    console.log(`✅ Accessible (200): ${results.accessible.length}`);
-    console.log(`🔄 Redirecting (308): ${results.redirecting.length}`);
-    console.log(`❌ Errors: ${results.errors.length}`);
-    
-    if (results.redirecting.length > 0) {
-        console.log('\n🔄 REDIRECTING PAGES:');
-        results.redirecting.forEach(r => {
-            console.log(`   ${r.name} (${r.url}) - Status ${r.status}`);
-        });
-        console.log('\n💡 Solution: Purge Cloudflare cache or wait 4 hours');
-    }
-    
-    if (results.errors.length > 0) {
-        console.log('\n❌ ERROR PAGES:');
-        results.errors.forEach(r => {
-            console.log(`   ${r.name} (${r.url}) - ${r.errorMsg || r.status}`);
-        });
-    }
-    
-    console.log('\n' + '='.repeat(70));
-    
-    // Verdict
-    const successRate = (results.accessible.length / results.total * 100).toFixed(1);
-    console.log(`\n📈 Success Rate: ${successRate}%`);
-    
-    if (results.accessible.length >= results.total * 0.5) {
-        console.log('\n✅ SITE IS LIVE AND WORKING!');
-        console.log('New files work immediately.');
-        console.log('Old files may need cache purge.');
-    } else {
-        console.log('\n⚠️  SITE HAS ISSUES - Review errors above');
-    }
-    
-    console.log('\n' + '='.repeat(70));
-    console.log('\n🚀 READY TO PUSH VIA BAT FILE');
-    console.log('\nRun: .\\UPLOAD_TO_GITHUB.bat');
-    console.log('\n' + '='.repeat(70));
 }
 
-runDiagnostic().catch(console.error);
+console.log('\n📄 PHASE 2: FILE CONTENT CHECK (Local Files)');
+console.log('-'.repeat(80));
+
+criticalPages.forEach(page => {
+    if (fs.existsSync(page)) {
+        const content = fs.readFileSync(page, 'utf8');
+        const first100 = content.substring(0, 100);
+        
+        // Check if file has actual content
+        if (content.length > 500) {
+            console.log(`✅ ${page}: Has content (${content.length} bytes)`);
+            results.fileContent.push({
+                page: page,
+                status: 'OK',
+                size: content.length,
+                preview: first100
+            });
+        } else {
+            console.log(`⚠️  ${page}: Too small (${content.length} bytes)`);
+            results.fileContent.push({
+                page: page,
+                status: 'WARNING',
+                size: content.length,
+                preview: first100
+            });
+        }
+        
+        // Check for common issues
+        if (content.includes('window.location.href')) {
+            console.log(`   ⚠️  Contains redirect code`);
+        }
+        if (!content.includes('common-navigation.js')) {
+            console.log(`   ❌ Missing navigation`);
+            results.issues.push({
+                page: page,
+                issue: 'Missing navigation',
+                type: 'FILE',
+                cause: 'common-navigation.js not included',
+                solution: 'Add navigation script'
+            });
+        }
+        if (!content.includes('common-footer.js')) {
+            console.log(`   ❌ Missing footer`);
+            results.issues.push({
+                page: page,
+                issue: 'Missing footer',
+                type: 'FILE',
+                cause: 'common-footer.js not included',
+                solution: 'Add footer script'
+            });
+        }
+    } else {
+        console.log(`❌ ${page}: FILE MISSING`);
+        results.fileContent.push({
+            page: page,
+            status: 'MISSING'
+        });
+        results.issues.push({
+            page: page,
+            issue: 'File missing',
+            type: 'FILE',
+            cause: 'File not in repository',
+            solution: 'Create file'
+        });
+    }
+});
+
+console.log('\n🔗 PHASE 3: LINKAGE CHECK (Cross-references)');
+console.log('-'.repeat(80));
+
+// Check if index.html links to all critical pages
+if (fs.existsSync('index.html')) {
+    const index = fs.readFileSync('index.html', 'utf8');
+    
+    const expectedLinks = [
+        { file: 'blog.html', name: 'Blog' },
+        { file: 'social-optimizer-index.html', name: 'SPO Tool' },
+        { file: 'email-sender-web.html', name: 'Job Search' },
+        { file: 'market-reports.html', name: 'Reports' },
+        { file: 'about.html', name: 'About' }
+    ];
+    
+    expectedLinks.forEach(link => {
+        if (index.includes(link.file)) {
+            console.log(`✅ index.html → ${link.name}`);
+            results.linkage.push({
+                from: 'index.html',
+                to: link.file,
+                status: 'OK'
+            });
+        } else {
+            console.log(`❌ index.html ✗ ${link.name}`);
+            results.linkage.push({
+                from: 'index.html',
+                to: link.file,
+                status: 'MISSING'
+            });
+            results.issues.push({
+                page: 'index.html',
+                issue: `No link to ${link.name}`,
+                type: 'FILE',
+                cause: 'Link not added to homepage',
+                solution: `Add link to ${link.file}`
+            });
+        }
+    });
+}
+
+console.log('\n⚙️  PHASE 4: BACKEND CHECK (API Integration)');
+console.log('-'.repeat(80));
+
+// Check SPO backend
+if (fs.existsSync('social-optimizer-app.js')) {
+    const spo = fs.readFileSync('social-optimizer-app.js', 'utf8');
+    
+    if (spo.includes('fetch(') || spo.includes('XMLHttpRequest')) {
+        console.log('✅ SPO: Has API calls');
+        results.backend.push({
+            tool: 'SPO',
+            hasAPI: true
+        });
+    } else {
+        console.log('❌ SPO: NO API calls');
+        results.backend.push({
+            tool: 'SPO',
+            hasAPI: false
+        });
+        results.issues.push({
+            page: 'SPO Tool',
+            issue: 'No backend integration',
+            type: 'BACKEND',
+            cause: 'Frontend only, no API server',
+            solution: 'Deploy backend API or use Cloudflare Workers'
+        });
+    }
+}
+
+// Check Job Search backend
+if (fs.existsSync('job_backend_api.py')) {
+    console.log('✅ Job Search: Backend file exists');
+    results.backend.push({
+        tool: 'Job Search',
+        hasBackend: true,
+        deployed: false
+    });
+    results.issues.push({
+        page: 'Job Search',
+        issue: 'Backend not deployed',
+        type: 'DEPLOYMENT',
+        cause: 'Python API exists but not running',
+        solution: 'Deploy to Heroku/Railway/Render'
+    });
+} else {
+    console.log('❌ Job Search: No backend file');
+    results.backend.push({
+        tool: 'Job Search',
+        hasBackend: false
+    });
+}
+
+console.log('\n🔒 PHASE 5: SECURITY CHECK (Cloudflare Access)');
+console.log('-'.repeat(80));
+
+// Check _headers file
+if (fs.existsSync('_headers')) {
+    const headers = fs.readFileSync('_headers', 'utf8');
+    if (headers.includes('CF-Access')) {
+        console.log('✅ _headers: Cloudflare Access configured');
+        results.security.push({
+            feature: 'Cloudflare Access',
+            configured: true
+        });
+    } else {
+        console.log('❌ _headers: NO Cloudflare Access config');
+        results.security.push({
+            feature: 'Cloudflare Access',
+            configured: false
+        });
+        results.issues.push({
+            page: 'Admin Panel',
+            issue: 'No access control',
+            type: 'SECURITY',
+            cause: '_headers missing CF-Access config',
+            solution: 'Add Cloudflare Access headers + configure in dashboard'
+        });
+    }
+} else {
+    console.log('❌ _headers: FILE MISSING');
+    results.security.push({
+        feature: 'Cloudflare Access',
+        configured: false
+    });
+    results.issues.push({
+        page: 'Security',
+        issue: '_headers file missing',
+        type: 'FILE',
+        cause: 'No _headers file',
+        solution: 'Create _headers with security config'
+    });
+}
+
+// Run async checks
+checkAllPages().then(() => {
+    console.log('\n' + '='.repeat(80));
+    console.log('📊 DIAGNOSTIC SUMMARY\n');
+    
+    console.log(`HTTP Status Checks: ${results.httpStatus.length}`);
+    console.log(`File Content Checks: ${results.fileContent.length}`);
+    console.log(`Linkage Checks: ${results.linkage.length}`);
+    console.log(`Backend Checks: ${results.backend.length}`);
+    console.log(`Security Checks: ${results.security.length}`);
+    console.log(`\n🚨 TOTAL ISSUES FOUND: ${results.issues.length}\n`);
+    
+    // Group issues by type
+    const issuesByType = {};
+    results.issues.forEach(issue => {
+        if (!issuesByType[issue.type]) {
+            issuesByType[issue.type] = [];
+        }
+        issuesByType[issue.type].push(issue);
+    });
+    
+    console.log('📋 ISSUES BY TYPE:\n');
+    Object.keys(issuesByType).forEach(type => {
+        console.log(`${type}: ${issuesByType[type].length} issues`);
+        issuesByType[type].forEach(issue => {
+            console.log(`   ❌ ${issue.page}: ${issue.issue}`);
+            console.log(`      Cause: ${issue.cause}`);
+            console.log(`      Solution: ${issue.solution}\n`);
+        });
+    });
+    
+    // Save results to JSON
+    fs.writeFileSync('DIAGNOSTIC_RESULTS_DEC6.json', JSON.stringify(results, null, 2));
+    console.log('✅ Results saved to: DIAGNOSTIC_RESULTS_DEC6.json\n');
+    
+    console.log('='.repeat(80));
+    
+    if (results.issues.length > 0) {
+        console.log('\n❌ SITE HAS ISSUES - See solutions above');
+        process.exit(1);
+    } else {
+        console.log('\n✅ SITE IS WORKING CORRECTLY');
+        process.exit(0);
+    }
+});

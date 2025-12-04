@@ -36,13 +36,24 @@ Every system must work FOREVER - not just for this session.
 - Just improve it
 - We're building for lifetime, not asking permission
 
-**BEFORE EVERY PUSH:**
-1. Check LIVE site (ideasbeforetime.pages.dev)
-2. Test every page visually
-3. Click every link
-4. Verify all corrections applied
-5. Build automated tools to prevent future issues
-6. THEN push
+**BEFORE EVERY PUSH (MANDATORY):**
+1. **RUN DIAGNOSTIC FIRST:** `node CRITICAL_DIAGNOSTIC_DEC6.js` (5 min)
+   - Checks all files exist
+   - Checks navigation links are relative (no "/" prefix)
+   - Checks page content matches navigation
+   - Checks all pages have header/footer
+   - Identifies file vs server issues
+   - Must show ZERO issues before pushing
+2. Check LIVE site (onestepforthelife.com)
+3. Test every page visually
+4. Click every link
+5. Test functionality (SPO, Job Search, etc.)
+6. Verify all corrections applied
+7. Build automated tools to prevent future issues
+8. THEN push
+
+**NEVER SKIP STEP 1 - Diagnostic is MANDATORY!**
+**Skipping diagnostic = 12 hours of debugging (Learning #38)**
 
 **I AM THE TESTER. The site is LIVE. Every push matters. Every system lasts forever.**
 
