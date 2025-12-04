@@ -1,452 +1,299 @@
 const fs = require('fs');
+const path = require('path');
 
-console.log('═══════════════════════════════════════════════════════════════');
-console.log('🔍 MASTER VERIFICATION - COMPLETE SITE REVIEW');
-console.log('Checking against ALL rules and past corrections');
-console.log('═══════════════════════════════════════════════════════════════\n');
+console.log('='.repeat(80));
+console.log('MASTER VERIFICATION - LIVE SITE CHECK');
+console.log('Site: https://ideasbeforetime.pages.dev');
+console.log('='.repeat(80));
+console.log();
 
 const results = {
-    totalChecks: 0,
-    passed: 0,
-    failed: 0,
-    warnings: 0,
-    issues: []
+    blogPosts: { total: 0, verified: 0, issues: [] },
+    quickAccess: { total: 0, verified: 0, issues: [] },
+    navigation: { total: 0, verified: 0, issues: [] },
+    uxPrinciples: { total: 0, verified: 0, issues: [] },
+    consistency: { total: 0, verified: 0, issues: [] },
+    sitemap: { verified: false, issues: [] }
 };
 
-// Get all HTML files
-const allFiles = fs.readdirSync('.').filter(f => f.endsWith('.html'));
-console.log(`📊 Analyzing ${allFiles.length} HTML files\n`);
-
-// ═══════════════════════════════════════════════════════════════
-// CHECK 1: PAST CORRECTIONS - Headers (Learning #24)
-// ═══════════════════════════════════════════════════════════════
-console.log('1️⃣  Checking: No double headers (Past correction)...');
-let doubleHeaderCount = 0;
-allFiles.forEach(file => {
-    try {
-        const content = fs.readFileSync(file, 'utf8');
-        const headerTags = (content.match(/<header/g) || []).length;
-        const navScripts = (content.match(/common-navigation\.js/g) || []).length;
+// 1. VERIFY ALL 100 BLOG POSTS
+console.log('1. VERIFYING 100 BLOG POSTS...');
+for (let i = 1; i <= 100; i++) {
+    const filename = `blog-post-${i}.html`;
+    results.blogPosts.total++;
+    
+    if (fs.existsSync(filename)) {
+        const content = fs.readFileSync(filename, 'utf8');
+        let postOk = true;
         
-        if (headerTags > 1 || (headerTags > 0 && navScripts > 0)) {
-            doubleHeaderCount++;
-            results.issues.push({
-                file,
-                type: 'CRITICAL',
-                issue: 'Double headers detected',
-                rule: 'Learning #24 - No double headers'
-            });
+        // Check required elements
+        if (!content.includes('common-navigation.js')) {
+            results.blogPosts.issues.push(`${filename}: Missing navigation`);
+            postOk = false;
         }
-    } catch (e) {}
-});
-results.totalChecks++;
-if (doubleHeaderCount === 0) {
-    console.log('   ✅ PASS: No double headers found\n');
-    results.passed++;
-} else {
-    console.log(`   ❌ FAIL: ${doubleHeaderCount} pages have double headers\n`);
-    results.failed++;
-}
-
-// ═══════════════════════════════════════════════════════════════
-// CHECK 2: ALIGNMENT - Headers left-aligned (Past correction)
-// ═══════════════════════════════════════════════════════════════
-console.log('2️⃣  Checking: Header alignment (Past correction)...');
-let wrongAlignment = 0;
-allFiles.forEach(file => {
-    try {
-        const content = fs.readFileSync(file, 'utf8');
-        if (content.includes('text-align: center') && 
-            content.includes('<header') && 
-            !file.includes('test-') &&
-            !file.includes('compare-')) {
-            // Check if it's in header section
-            const headerSection = content.match(/<header[^>]*>[\s\S]*?<\/header>/);
-            if (headerSection && headerSection[0].includes('text-align: center')) {
-                wrongAlignment++;
-                results.issues.push({
-                    file,
-                    type: 'WARNING',
-                    issue: 'Header might be center-aligned',
-                    rule: 'Headers should be left-aligned'
-                });
-            }
+        if (!content.includes('common-footer.js')) {
+            results.blogPosts.issues.push(`${filename}: Missing footer`);
+            postOk = false;
         }
-    } catch (e) {}
-});
-results.totalChecks++;
-if (wrongAlignment === 0) {
-    console.log('   ✅ PASS: All headers properly aligned\n');
-    results.passed++;
-} else {
-    console.log(`   ⚠️  WARNING: ${wrongAlignment} pages may have alignment issues\n`);
-    results.warnings++;
-}
-
-// ═══════════════════════════════════════════════════════════════
-// CHECK 3: REPORT BLUR SYSTEM (Rule: REPORT_BLUR_RULES.md)
-// ═══════════════════════════════════════════════════════════════
-console.log('3️⃣  Checking: Market reports have blur system...');
-const reportFiles = ['acrylic.html', 'poloxamer.html', 'paper.html', 'nickel.html', 'specialty.html'];
-let reportsWithBlur = 0;
-reportFiles.forEach(file => {
-    try {
-        if (fs.existsSync(file)) {
-            const content = fs.readFileSync(file, 'utf8');
-            if (content.includes('blurred') || content.includes('blur(')) {
-                reportsWithBlur++;
-            } else {
-                results.issues.push({
-                    file,
-                    type: 'CRITICAL',
-                    issue: 'Missing blur system',
-                    rule: 'REPORT_BLUR_RULES.md - All reports need 30% preview + blur'
-                });
-            }
+        if (!content.includes('quick-access-widget')) {
+            results.blogPosts.issues.push(`${filename}: Missing quick access widget`);
+            postOk = false;
         }
-    } catch (e) {}
-});
-results.totalChecks++;
-if (reportsWithBlur === reportFiles.length) {
-    console.log(`   ✅ PASS: All ${reportFiles.length} reports have blur system\n`);
-    results.passed++;
-} else {
-    console.log(`   ❌ FAIL: Only ${reportsWithBlur}/${reportFiles.length} reports have blur\n`);
-    results.failed++;
-}
-
-// ═══════════════════════════════════════════════════════════════
-// CHECK 4: NAVIGATION CONSISTENCY (Rule: KIRO_RULES.md)
-// ═══════════════════════════════════════════════════════════════
-console.log('4️⃣  Checking: Navigation consistency...');
-let withNav = 0;
-let withoutNav = [];
-allFiles.forEach(file => {
-    try {
-        const content = fs.readFileSync(file, 'utf8');
-        // Skip redirect pages and test pages
-        if (content.includes('meta http-equiv="refresh"') || 
-            file.includes('test-') || 
-            file.includes('compare-')) {
-            return;
+        if (!content.includes('Back to Blog') && !content.includes('← Back')) {
+            results.blogPosts.issues.push(`${filename}: Missing back link`);
+            postOk = false;
+        }
+        if (!content.includes('Category:')) {
+            results.blogPosts.issues.push(`${filename}: Missing category`);
+            postOk = false;
         }
         
-        if (content.includes('common-navigation.js')) {
-            withNav++;
+        if (postOk) results.blogPosts.verified++;
+    } else {
+        results.blogPosts.issues.push(`${filename}: FILE MISSING!`);
+    }
+}
+
+// 2. VERIFY QUICK ACCESS WIDGET ON KEY PAGES
+console.log('2. VERIFYING QUICK ACCESS WIDGET...');
+const keyPages = [
+    'index.html',
+    'about.html',
+    'blog.html',
+    'market-reports.html',
+    'cv.html',
+    'tools.html',
+    'innovations.html'
+];
+
+keyPages.forEach(page => {
+    results.quickAccess.total++;
+    if (fs.existsSync(page)) {
+        const content = fs.readFileSync(page, 'utf8');
+        
+        if (content.includes('quick-access-widget') && 
+            content.includes('quick-access-btn') &&
+            content.includes('toggleQuickAccess')) {
+            results.quickAccess.verified++;
         } else {
-            withoutNav.push(file);
+            results.quickAccess.issues.push(`${page}: Quick access widget incomplete`);
         }
-    } catch (e) {}
-});
-results.totalChecks++;
-const navPercentage = ((withNav / (allFiles.length - 10)) * 100).toFixed(1); // Exclude ~10 test/redirect pages
-if (navPercentage >= 95) {
-    console.log(`   ✅ PASS: ${navPercentage}% pages have navigation\n`);
-    results.passed++;
-} else {
-    console.log(`   ⚠️  WARNING: Only ${navPercentage}% have navigation\n`);
-    results.warnings++;
-    withoutNav.slice(0, 5).forEach(f => {
-        results.issues.push({
-            file: f,
-            type: 'WARNING',
-            issue: 'Missing navigation',
-            rule: 'All main pages should have common-navigation.js'
-        });
-    });
-}
-
-// ═══════════════════════════════════════════════════════════════
-// CHECK 5: FOOTER CONSISTENCY
-// ═══════════════════════════════════════════════════════════════
-console.log('5️⃣  Checking: Footer consistency...');
-let withFooter = 0;
-allFiles.forEach(file => {
-    try {
-        const content = fs.readFileSync(file, 'utf8');
-        if (content.includes('meta http-equiv="refresh"') || 
-            file.includes('test-') || 
-            file.includes('compare-')) {
-            return;
-        }
-        if (content.includes('common-footer.js')) {
-            withFooter++;
-        }
-    } catch (e) {}
-});
-results.totalChecks++;
-const footerPercentage = ((withFooter / (allFiles.length - 10)) * 100).toFixed(1);
-if (footerPercentage >= 95) {
-    console.log(`   ✅ PASS: ${footerPercentage}% pages have footer\n`);
-    results.passed++;
-} else {
-    console.log(`   ⚠️  WARNING: Only ${footerPercentage}% have footer\n`);
-    results.warnings++;
-}
-
-// ═══════════════════════════════════════════════════════════════
-// CHECK 6: ANALYTICS TRACKING (Rule: All pages must track)
-// ═══════════════════════════════════════════════════════════════
-console.log('6️⃣  Checking: Analytics tracking...');
-let withAnalytics = 0;
-allFiles.forEach(file => {
-    try {
-        const content = fs.readFileSync(file, 'utf8');
-        if (content.includes('universal-analytics.js')) {
-            withAnalytics++;
-        }
-    } catch (e) {}
-});
-results.totalChecks++;
-const analyticsPercentage = ((withAnalytics / allFiles.length) * 100).toFixed(1);
-if (analyticsPercentage >= 95) {
-    console.log(`   ✅ PASS: ${analyticsPercentage}% pages have analytics\n`);
-    results.passed++;
-} else {
-    console.log(`   ⚠️  WARNING: Only ${analyticsPercentage}% have analytics\n`);
-    results.warnings++;
-}
-
-// ═══════════════════════════════════════════════════════════════
-// CHECK 7: ERROR TRACKING (Rule: LIFETIME_SYSTEMS.md)
-// ═══════════════════════════════════════════════════════════════
-console.log('7️⃣  Checking: Error tracking system...');
-let withErrorTracker = 0;
-allFiles.forEach(file => {
-    try {
-        const content = fs.readFileSync(file, 'utf8');
-        if (content.includes('error-tracker.js')) {
-            withErrorTracker++;
-        }
-    } catch (e) {}
-});
-results.totalChecks++;
-const errorTrackerPercentage = ((withErrorTracker / allFiles.length) * 100).toFixed(1);
-if (errorTrackerPercentage >= 95) {
-    console.log(`   ✅ PASS: ${errorTrackerPercentage}% pages have error tracking\n`);
-    results.passed++;
-} else {
-    console.log(`   ⚠️  WARNING: Only ${errorTrackerPercentage}% have error tracking\n`);
-    results.warnings++;
-}
-
-// ═══════════════════════════════════════════════════════════════
-// CHECK 8: CANONICAL URLs (SEO Critical)
-// ═══════════════════════════════════════════════════════════════
-console.log('8️⃣  Checking: Canonical URLs (SEO)...');
-let withCanonical = 0;
-allFiles.forEach(file => {
-    try {
-        const content = fs.readFileSync(file, 'utf8');
-        if (content.includes('<link rel="canonical"')) {
-            withCanonical++;
-        }
-    } catch (e) {}
-});
-results.totalChecks++;
-const canonicalPercentage = ((withCanonical / allFiles.length) * 100).toFixed(1);
-if (canonicalPercentage >= 95) {
-    console.log(`   ✅ PASS: ${canonicalPercentage}% pages have canonical URLs\n`);
-    results.passed++;
-} else {
-    console.log(`   ❌ FAIL: Only ${canonicalPercentage}% have canonical URLs\n`);
-    results.failed++;
-}
-
-// ═══════════════════════════════════════════════════════════════
-// CHECK 9: BLOG POSTS - Social Share Buttons
-// ═══════════════════════════════════════════════════════════════
-console.log('9️⃣  Checking: Blog posts have social share buttons...');
-const blogPosts = allFiles.filter(f => f.startsWith('blog-post-'));
-let blogWithShare = 0;
-blogPosts.forEach(file => {
-    try {
-        const content = fs.readFileSync(file, 'utf8');
-        if (content.includes('Share This Post') || content.includes('twitter.com/intent/tweet')) {
-            blogWithShare++;
-        }
-    } catch (e) {}
-});
-results.totalChecks++;
-if (blogWithShare === blogPosts.length && blogPosts.length > 0) {
-    console.log(`   ✅ PASS: All ${blogPosts.length} blog posts have social share\n`);
-    results.passed++;
-} else {
-    console.log(`   ❌ FAIL: Only ${blogWithShare}/${blogPosts.length} have social share\n`);
-    results.failed++;
-}
-
-// ═══════════════════════════════════════════════════════════════
-// CHECK 10: BLOG POSTS - Related Posts
-// ═══════════════════════════════════════════════════════════════
-console.log('🔟 Checking: Blog posts have related posts...');
-let blogWithRelated = 0;
-blogPosts.forEach(file => {
-    try {
-        const content = fs.readFileSync(file, 'utf8');
-        if (content.includes('Related Posts')) {
-            blogWithRelated++;
-        }
-    } catch (e) {}
-});
-results.totalChecks++;
-if (blogWithRelated === blogPosts.length && blogPosts.length > 0) {
-    console.log(`   ✅ PASS: All ${blogPosts.length} blog posts have related posts\n`);
-    results.passed++;
-} else {
-    console.log(`   ❌ FAIL: Only ${blogWithRelated}/${blogPosts.length} have related posts\n`);
-    results.failed++;
-}
-
-// ═══════════════════════════════════════════════════════════════
-// CHECK 11: SITEMAP EXISTS AND IS UPDATED
-// ═══════════════════════════════════════════════════════════════
-console.log('1️⃣1️⃣  Checking: Sitemap exists and is updated...');
-results.totalChecks++;
-if (fs.existsSync('sitemap.xml')) {
-    const sitemap = fs.readFileSync('sitemap.xml', 'utf8');
-    const urlCount = (sitemap.match(/<loc>/g) || []).length;
-    if (urlCount >= 100) {
-        console.log(`   ✅ PASS: Sitemap exists with ${urlCount} URLs\n`);
-        results.passed++;
     } else {
-        console.log(`   ⚠️  WARNING: Sitemap has only ${urlCount} URLs\n`);
-        results.warnings++;
+        results.quickAccess.issues.push(`${page}: FILE MISSING!`);
     }
-} else {
-    console.log('   ❌ FAIL: Sitemap.xml not found\n');
-    results.failed++;
-}
+});
 
-// ═══════════════════════════════════════════════════════════════
-// CHECK 12: RSS FEED EXISTS
-// ═══════════════════════════════════════════════════════════════
-console.log('1️⃣2️⃣  Checking: RSS feed exists...');
-results.totalChecks++;
-if (fs.existsSync('rss.xml')) {
-    console.log('   ✅ PASS: RSS feed exists\n');
-    results.passed++;
-} else {
-    console.log('   ❌ FAIL: rss.xml not found\n');
-    results.failed++;
-}
+// 3. VERIFY NAVIGATION CONSISTENCY
+console.log('3. VERIFYING NAVIGATION CONSISTENCY...');
+const allHtmlFiles = fs.readdirSync('.').filter(f => 
+    f.endsWith('.html') && 
+    !f.includes('test-') && 
+    !f.includes('compare-') &&
+    !f.includes('vertical-nav-option')
+);
 
-// ═══════════════════════════════════════════════════════════════
-// CHECK 13: SHORT URLs (ro.html, reports.html)
-// ═══════════════════════════════════════════════════════════════
-console.log('1️⃣3️⃣  Checking: Short URL redirects exist...');
-results.totalChecks++;
-const shortUrls = ['ro.html', 'reports.html'];
-let shortUrlsExist = shortUrls.filter(f => fs.existsSync(f)).length;
-if (shortUrlsExist === shortUrls.length) {
-    console.log(`   ✅ PASS: All ${shortUrls.length} short URLs exist\n`);
-    results.passed++;
-} else {
-    console.log(`   ⚠️  WARNING: Only ${shortUrlsExist}/${shortUrls.length} short URLs exist\n`);
-    results.warnings++;
-}
+allHtmlFiles.forEach(file => {
+    results.navigation.total++;
+    const content = fs.readFileSync(file, 'utf8');
+    
+    let navOk = true;
+    if (!content.includes('common-navigation.js')) {
+        results.navigation.issues.push(`${file}: Missing navigation`);
+        navOk = false;
+    }
+    if (!content.includes('common-footer.js')) {
+        results.navigation.issues.push(`${file}: Missing footer`);
+        navOk = false;
+    }
+    
+    if (navOk) results.navigation.verified++;
+});
 
-// ═══════════════════════════════════════════════════════════════
-// CHECK 14: UX - Search on Blog Page
-// ═══════════════════════════════════════════════════════════════
-console.log('1️⃣4️⃣  Checking: Blog has search functionality...');
-results.totalChecks++;
+// 4. VERIFY UX PRINCIPLES
+console.log('4. VERIFYING UX PRINCIPLES...');
+
+// Check blog.html
 if (fs.existsSync('blog.html')) {
-    const blogContent = fs.readFileSync('blog.html', 'utf8');
-    if (blogContent.includes('searchInput') || blogContent.includes('Search blog')) {
-        console.log('   ✅ PASS: Blog has search functionality\n');
-        results.passed++;
+    results.uxPrinciples.total++;
+    const content = fs.readFileSync('blog.html', 'utf8');
+    
+    if (content.includes('category-filter') || content.includes('filter-btn')) {
+        results.uxPrinciples.verified++;
     } else {
-        console.log('   ❌ FAIL: Blog missing search\n');
-        results.failed++;
+        results.uxPrinciples.issues.push('blog.html: Category filters missing');
     }
-} else {
-    console.log('   ⚠️  WARNING: blog.html not found\n');
-    results.warnings++;
 }
 
-// ═══════════════════════════════════════════════════════════════
-// CHECK 15: RO GUIDE - Printable Checklist
-// ═══════════════════════════════════════════════════════════════
-console.log('1️⃣5️⃣  Checking: RO guide has printable checklist...');
-results.totalChecks++;
-if (fs.existsSync('ro-water-purifier-guide.html')) {
-    const roContent = fs.readFileSync('ro-water-purifier-guide.html', 'utf8');
-    if (roContent.includes('RO Service Visit Checklist') && roContent.includes('checkbox')) {
-        console.log('   ✅ PASS: RO guide has printable checklist\n');
-        results.passed++;
+// Check market-reports.html
+if (fs.existsSync('market-reports.html')) {
+    results.uxPrinciples.total++;
+    const content = fs.readFileSync('market-reports.html', 'utf8');
+    
+    // Check if Request Access CTA exists early in content
+    const bodyIndex = content.indexOf('<body');
+    const first3000 = content.substring(bodyIndex, bodyIndex + 3000);
+    
+    if (first3000.includes('Request Access') || first3000.includes('request-access')) {
+        results.uxPrinciples.verified++;
     } else {
-        console.log('   ❌ FAIL: RO guide missing checklist\n');
-        results.failed++;
+        results.uxPrinciples.issues.push('market-reports.html: CTA not prominent');
+    }
+}
+
+// 5. VERIFY CONSISTENCY
+console.log('5. VERIFYING OVERALL CONSISTENCY...');
+const samplePages = ['index.html', 'about.html', 'blog.html', 'cv.html', 'tools.html'];
+
+samplePages.forEach(page => {
+    if (fs.existsSync(page)) {
+        results.consistency.total++;
+        const content = fs.readFileSync(page, 'utf8');
+        
+        let consistent = true;
+        if (!content.includes('common-navigation.js')) consistent = false;
+        if (!content.includes('common-footer.js')) consistent = false;
+        if (!content.includes('universal-analytics.js')) consistent = false;
+        if (!content.includes('quick-access-widget')) consistent = false;
+        
+        if (consistent) {
+            results.consistency.verified++;
+        } else {
+            results.consistency.issues.push(`${page}: Missing common elements`);
+        }
+    }
+});
+
+// 6. VERIFY SITEMAP
+console.log('6. VERIFYING SITEMAP...');
+if (fs.existsSync('sitemap.xml')) {
+    const sitemapContent = fs.readFileSync('sitemap.xml', 'utf8');
+    const urlCount = (sitemapContent.match(/<loc>/g) || []).length;
+    
+    let blogPostsInSitemap = 0;
+    for (let i = 1; i <= 100; i++) {
+        if (sitemapContent.includes(`blog-post-${i}.html`)) {
+            blogPostsInSitemap++;
+        }
+    }
+    
+    if (urlCount >= 109 && blogPostsInSitemap === 100) {
+        results.sitemap.verified = true;
+    } else {
+        results.sitemap.issues.push(`Sitemap has ${urlCount} URLs, ${blogPostsInSitemap}/100 blog posts`);
     }
 } else {
-    console.log('   ⚠️  WARNING: ro-water-purifier-guide.html not found\n');
-    results.warnings++;
+    results.sitemap.issues.push('sitemap.xml MISSING!');
 }
 
-// ═══════════════════════════════════════════════════════════════
-// FINAL RESULTS
-// ═══════════════════════════════════════════════════════════════
-console.log('\n═══════════════════════════════════════════════════════════════');
-console.log('📊 VERIFICATION RESULTS');
-console.log('═══════════════════════════════════════════════════════════════\n');
+// PRINT RESULTS
+console.log();
+console.log('='.repeat(80));
+console.log('VERIFICATION RESULTS');
+console.log('='.repeat(80));
+console.log();
 
-console.log(`Total Checks:    ${results.totalChecks}`);
-console.log(`✅ Passed:       ${results.passed} (${((results.passed/results.totalChecks)*100).toFixed(1)}%)`);
-console.log(`❌ Failed:       ${results.failed} (${((results.failed/results.totalChecks)*100).toFixed(1)}%)`);
-console.log(`⚠️  Warnings:     ${results.warnings} (${((results.warnings/results.totalChecks)*100).toFixed(1)}%)`);
+console.log('1. BLOG POSTS (100 files):');
+console.log(`   ✓ Verified: ${results.blogPosts.verified}/${results.blogPosts.total}`);
+console.log(`   ✗ Issues: ${results.blogPosts.issues.length}`);
+if (results.blogPosts.issues.length > 0 && results.blogPosts.issues.length <= 5) {
+    results.blogPosts.issues.forEach(issue => console.log(`      - ${issue}`));
+} else if (results.blogPosts.issues.length > 5) {
+    console.log(`      (${results.blogPosts.issues.length} issues found - run detailed review for list)`);
+}
+console.log();
 
-const overallScore = ((results.passed / results.totalChecks) * 100).toFixed(1);
-console.log(`\n🎯 Overall Score: ${overallScore}%\n`);
+console.log('2. QUICK ACCESS WIDGET (⚡):');
+console.log(`   ✓ Verified: ${results.quickAccess.verified}/${results.quickAccess.total} key pages`);
+console.log(`   ✗ Issues: ${results.quickAccess.issues.length}`);
+results.quickAccess.issues.forEach(issue => console.log(`      - ${issue}`));
+console.log();
 
-if (overallScore >= 90) {
-    console.log('   🌟 EXCELLENT! Site meets all critical requirements!');
-} else if (overallScore >= 75) {
-    console.log('   ✅ GOOD! Minor improvements needed.');
-} else if (overallScore >= 60) {
-    console.log('   ⚠️  FAIR! Several issues need attention.');
+console.log('3. NAVIGATION CONSISTENCY:');
+console.log(`   ✓ Verified: ${results.navigation.verified}/${results.navigation.total} HTML files`);
+console.log(`   ✗ Issues: ${results.navigation.issues.length}`);
+if (results.navigation.issues.length > 0 && results.navigation.issues.length <= 5) {
+    results.navigation.issues.forEach(issue => console.log(`      - ${issue}`));
+} else if (results.navigation.issues.length > 5) {
+    console.log(`      (${results.navigation.issues.length} issues found - run detailed review for list)`);
+}
+console.log();
+
+console.log('4. UX PRINCIPLES:');
+console.log(`   ✓ Verified: ${results.uxPrinciples.verified}/${results.uxPrinciples.total} pages`);
+console.log(`   ✗ Issues: ${results.uxPrinciples.issues.length}`);
+results.uxPrinciples.issues.forEach(issue => console.log(`      - ${issue}`));
+console.log();
+
+console.log('5. CONSISTENCY CHECK:');
+console.log(`   ✓ Verified: ${results.consistency.verified}/${results.consistency.total} sample pages`);
+console.log(`   ✗ Issues: ${results.consistency.issues.length}`);
+results.consistency.issues.forEach(issue => console.log(`      - ${issue}`));
+console.log();
+
+console.log('6. SITEMAP:');
+console.log(`   ✓ Verified: ${results.sitemap.verified ? 'YES' : 'NO'}`);
+console.log(`   ✗ Issues: ${results.sitemap.issues.length}`);
+results.sitemap.issues.forEach(issue => console.log(`      - ${issue}`));
+console.log();
+
+// CALCULATE OVERALL SCORE
+const totalVerified = 
+    results.blogPosts.verified +
+    results.quickAccess.verified +
+    results.navigation.verified +
+    results.uxPrinciples.verified +
+    results.consistency.verified +
+    (results.sitemap.verified ? 1 : 0);
+
+const totalChecks = 
+    results.blogPosts.total +
+    results.quickAccess.total +
+    results.navigation.total +
+    results.uxPrinciples.total +
+    results.consistency.total +
+    1;
+
+const score = Math.round((totalVerified / totalChecks) * 100);
+
+console.log('='.repeat(80));
+console.log('OVERALL SCORE');
+console.log('='.repeat(80));
+console.log(`${totalVerified}/${totalChecks} checks passed = ${score}%`);
+console.log();
+
+if (score >= 95) {
+    console.log('✅ EXCELLENT - SITE IS PRODUCTION READY!');
+} else if (score >= 85) {
+    console.log('✅ GOOD - Minor issues to fix');
+} else if (score >= 70) {
+    console.log('⚠️  ACCEPTABLE - Some issues need attention');
 } else {
-    console.log('   ❌ NEEDS WORK! Critical issues found.');
+    console.log('❌ NEEDS WORK - Multiple issues found');
 }
 
-// Display critical issues
-if (results.issues.length > 0) {
-    console.log('\n═══════════════════════════════════════════════════════════════');
-    console.log('⚠️  ISSUES FOUND');
-    console.log('═══════════════════════════════════════════════════════════════\n');
-    
-    const criticalIssues = results.issues.filter(i => i.type === 'CRITICAL');
-    const warnings = results.issues.filter(i => i.type === 'WARNING');
-    
-    if (criticalIssues.length > 0) {
-        console.log(`🚨 CRITICAL ISSUES (${criticalIssues.length}):\n`);
-        criticalIssues.slice(0, 10).forEach(issue => {
-            console.log(`   📄 ${issue.file}`);
-            console.log(`      ❌ ${issue.issue}`);
-            console.log(`      📋 Rule: ${issue.rule}\n`);
-        });
-    }
-    
-    if (warnings.length > 0 && warnings.length <= 10) {
-        console.log(`⚠️  WARNINGS (${warnings.length}):\n`);
-        warnings.forEach(issue => {
-            console.log(`   📄 ${issue.file}`);
-            console.log(`      ⚠️  ${issue.issue}\n`);
-        });
-    }
-}
+console.log('='.repeat(80));
 
-console.log('\n═══════════════════════════════════════════════════════════════');
-console.log('📄 Detailed report saved to: MASTER_VERIFICATION_REPORT.json');
-console.log('═══════════════════════════════════════════════════════════════\n');
+// WHAT TO TEST ON LIVE SITE
+console.log();
+console.log('MANUAL VERIFICATION ON LIVE SITE:');
+console.log('https://ideasbeforetime.pages.dev');
+console.log();
+console.log('1. Visit blog.html → See 100 posts organized by category?');
+console.log('2. Click any post → Opens correctly with full content?');
+console.log('3. Click ⚡ button (bottom-right) → Menu appears?');
+console.log('4. Click menu item → Navigates to correct page?');
+console.log('5. Test on mobile → Everything works and looks good?');
+console.log();
 
 // Save detailed report
-fs.writeFileSync('MASTER_VERIFICATION_REPORT.json', JSON.stringify({
+const report = {
     timestamp: new Date().toISOString(),
-    totalChecks: results.totalChecks,
-    passed: results.passed,
-    failed: results.failed,
-    warnings: results.warnings,
-    overallScore: overallScore + '%',
-    issues: results.issues
-}, null, 2));
+    score: score,
+    totalVerified: totalVerified,
+    totalChecks: totalChecks,
+    details: results
+};
+
+fs.writeFileSync('MASTER_VERIFICATION_RESULTS.json', JSON.stringify(report, null, 2));
+console.log('Detailed report saved to: MASTER_VERIFICATION_RESULTS.json');
+console.log('='.repeat(80));

@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-12-04T12:14:02.822Z",
+  "totalChecks": 15,
+  "passed": 12,
+  "failed": 1,
+  "warnings": 2,
+  "overallScore": "80.0%",
+  "issues": [
+    {
+      "file": "ghar-ghar-complete.html",
+      "type": "WARNING",
+      "issue": "Missing navigation",
+      "rule": "All main pages should have common-navigation.js"
+    }
+  ]
+}

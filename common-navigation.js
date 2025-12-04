@@ -12,6 +12,8 @@ function addSiteNavigation() {
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="/index.html">Home</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/ro.html">RO Water Guide</a></li>
                 <li><a href="/social-optimizer-index.html">SPO Tool</a></li>
                 <li><a href="/email-sender-web.html">Job Search Tool</a></li>
                 <li><a href="/market-reports.html">Chemical Reports</a></li>

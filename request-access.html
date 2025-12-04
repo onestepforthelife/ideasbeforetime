@@ -183,7 +183,7 @@ input:focus, select:focus {
     <p class="subtitle">Get approval within 24 hours • Strategic market research & exclusive reports</p>
     
     <div class="info-box">
-        <strong>✨ Instant OTP Verification:</strong> Enter your email below and receive a one-time password instantly. No waiting required!
+        <strong>✨ Smart Access System:</strong> Pre-approved emails get instant access. Others receive approval within 24 hours. No email popups!
     </div>
     
     <form id="accessForm">
@@ -248,50 +248,19 @@ document.getElementById('accessForm').addEventListener('submit', async function(
     submitBtn.textContent = 'Sending...';
     
     try {
+        // Pre-approved email list (instant access)
+        const preApprovedEmails = [
+            'onestepforthelife@gmail.com',
+            'amit@ideasbeforetime.com',
+            'amitkumar@example.com' // Add more pre-approved emails here
+        ];
+        
+        // Check if email is pre-approved
+        const isPreApproved = preApprovedEmails.includes(email.toLowerCase());
+        
         // Generate OTP
         const otp = Math.floor(100000 + Math.random() * 900000).toString();
         const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
-        
-        // Prepare email content
-        const emailSubject = `🔐 Access Request OTP - Ideas Before Time`;
-        const emailBody = `
-Hello,
-
-Thank you for requesting access to Ideas Before Time premium services!
-
-Your One-Time Password (OTP): ${otp}
-
-Service Requested: ${service}
-Request Time: ${timestamp}
-
-NEXT STEPS:
-1. Reply to this email with your OTP to verify
-2. You'll receive access credentials within 5 minutes
-3. Start using premium features immediately!
-
-WHAT YOU'LL GET:
-${service === 'market-reports' ? '📊 Full access to all market research reports\n📈 Industry insights and analysis\n💼 Strategic recommendations' : ''}
-${service === 'spo-premium' ? '🎯 LinkedIn Profile Optimizer Premium\n✨ AI-powered profile enhancement\n📊 Performance analytics' : ''}
-${service === 'cv-access' ? '📄 Complete Professional CV\n💼 Full work history and achievements\n🎯 Contact information' : ''}
-${service === 'all-premium' ? '✨ ALL Premium Services\n📊 Market Reports + SPO Premium + CV Access\n🎯 Complete platform access' : ''}
-
-Questions? Reply to this email or contact:
-📧 onestepforthelife@gmail.com
-
-Best regards,
-Amit Kumar
-Ideas Before Time
-https://ideasbeforetime.pages.dev
-
----
-This is an automated message. Your OTP is valid for 24 hours.
-        `.trim();
-        
-        // Create mailto link (opens user's email client)
-        const mailtoLink = `mailto:onestepforthelife@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}&cc=${encodeURIComponent(email)}`;
-        
-        // Open email client
-        window.open(mailtoLink, '_blank');
         
         // Store request data locally for admin
         const requestData = {
@@ -299,7 +268,8 @@ This is an automated message. Your OTP is valid for 24 hours.
             service: service,
             otp: otp,
             timestamp: timestamp,
-            status: 'pending'
+            status: isPreApproved ? 'approved' : 'pending',
+            preApproved: isPreApproved
         };
         
         // Save to localStorage for admin view
@@ -307,8 +277,36 @@ This is an automated message. Your OTP is valid for 24 hours.
         requests.push(requestData);
         localStorage.setItem('accessRequests', JSON.stringify(requests));
         
-        // Show success message
+        // Show appropriate success message
         document.getElementById('accessForm').style.display = 'none';
+        
+        if (isPreApproved) {
+            // Instant approval for pre-approved emails
+            document.getElementById('successMessage').innerHTML = `
+                <h3>✅ Instant Access Granted!</h3>
+                <p><strong>Welcome back! Your email is pre-approved.</strong></p>
+                <p>Your Access Code: <strong style="font-size: 24px; color: #5a6c7d;">${otp}</strong></p>
+                <p>You can now access all premium features immediately.</p>
+                <p style="margin-top: 15px;">
+                    <a href="market-reports.html" style="display: inline-block; padding: 12px 24px; background: #5a6c7d; color: white; text-decoration: none; border-radius: 8px; margin: 5px;">📊 View Reports</a>
+                    <a href="cv.html" style="display: inline-block; padding: 12px 24px; background: #5a6c7d; color: white; text-decoration: none; border-radius: 8px; margin: 5px;">📄 View CV</a>
+                </p>
+            `;
+        } else {
+            // Regular approval process
+            document.getElementById('successMessage').innerHTML = `
+                <h3>✅ Request Submitted Successfully!</h3>
+                <p><strong>Your request has been received!</strong></p>
+                <p>Request ID: <strong>${otp}</strong></p>
+                <p>We'll review your request and send approval within 24 hours to:</p>
+                <p style="font-weight: bold; color: #5a6c7d;">${email}</p>
+                <p style="margin-top: 15px; font-size: 14px; color: #666;">
+                    Questions? Contact us at 
+                    <a href="mailto:onestepforthelife@gmail.com" style="color: #5a6c7d;">onestepforthelife@gmail.com</a>
+                </p>
+            `;
+        }
+        
         document.getElementById('successMessage').style.display = 'block';
         
         // Track with analytics
@@ -316,7 +314,7 @@ This is an automated message. Your OTP is valid for 24 hours.
             gtag('event', 'access_request', {
                 'event_category': 'engagement',
                 'event_label': service,
-                'value': 1
+                'value': isPreApproved ? 10 : 1
             });
         }
         

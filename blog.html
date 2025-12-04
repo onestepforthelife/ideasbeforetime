@@ -296,6 +296,13 @@ body {
         <a href="#post-ai-chemical-industry" class="read-more">Read Full Article →</a>
     </div>
 
+    <!-- Search Box -->
+    <div style="max-width: 600px; margin: 30px auto 40px;">
+        <input type="text" id="searchInput" placeholder="🔍 Search blog posts by title or topic..." 
+               style="width: 100%; padding: 15px 20px; font-size: 16px; border: 2px solid #5a6c7d; border-radius: 10px; outline: none; transition: border-color 0.3s;">
+        <p id="searchResults" style="text-align: center; margin-top: 10px; color: #666; font-size: 14px;"></p>
+    </div>
+
     <!-- Blog Grid -->
     <div class="blog-grid">
 
@@ -3844,6 +3851,44 @@ document.querySelectorAll('a[href="#post-ai-chemical-industry"]').forEach(link =
 <script src="common-footer.js"></script>
 <script src="universal-analytics.js"></script>
 <script src="error-tracker.js"></script>
+
+<script>
+// Blog Search Functionality
+document.getElementById('searchInput').addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    const cards = document.querySelectorAll('.blog-card');
+    let visibleCount = 0;
+    
+    cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const excerpt = card.querySelector('.excerpt').textContent.toLowerCase();
+        const category = card.querySelector('.category').textContent.toLowerCase();
+        
+        if (title.includes(searchTerm) || excerpt.includes(searchTerm) || category.includes(searchTerm)) {
+            card.style.display = 'block';
+            visibleCount++;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+    
+    // Update search results count
+    const resultsText = document.getElementById('searchResults');
+    if (searchTerm) {
+        resultsText.textContent = `Found ${visibleCount} post${visibleCount !== 1 ? 's' : ''}`;
+    } else {
+        resultsText.textContent = '';
+    }
+});
+
+// Focus effect
+document.getElementById('searchInput').addEventListener('focus', function() {
+    this.style.borderColor = '#8b9aa7';
+});
+document.getElementById('searchInput').addEventListener('blur', function() {
+    this.style.borderColor = '#5a6c7d';
+});
+</script>
 
 <!-- Quick Links Widget -->
 <div class="quick-links-widget" style="position: fixed; right: 20px; bottom: 80px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); padding: 20px; width: 250px; z-index: 999; display: none;" id="quickLinksWidget">
