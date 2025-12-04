@@ -112,5 +112,13 @@
     "blog-post-98.html",
     "blog-post-99.html",
     "blog-post-100.html"
+  ],
+  "organization": "logical-flow-by-category",
+  "categoryOrder": [
+    "Leadership",
+    "Technology",
+    "Industry Insights",
+    "Career Advice",
+    "Business Strategy"
   ]
 }
