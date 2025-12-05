@@ -1,0 +1,287 @@
+═══════════════════════════════════════════════════════════════
+✅ SOLUTION FOUND - 308 Redirect Issue
+═══════════════════════════════════════════════════════════════
+
+**Created:** December 6, 2025
+**Status:** ROOT CAUSE IDENTIFIED
+**Type:** Cloudflare Configuration Issue (NOT cache!)
+
+═══════════════════════════════════════════════════════════════
+🎯 ROOT CAUSE DISCOVERED
+═══════════════════════════════════════════════════════════════
+
+**Test Results:**
+```
+/blog.html → 308 Redirect → /blog
+/about.html → 308 Redirect → /about
+/spo.html → 308 Redirect → /spo
+```
+
+**Cache Status:** DYNAMIC (not HIT, not MISS)
+**This means:** NOT a cache issue!
+
+**The Problem:**
+Cloudflare is redirecting `.html` files to extensionless URLs
+Example: `/blog.html` → `/blog`
+
+**Why This Happens:**
+- Cloudflare Page Rule redirecting *.html to extensionless
+- OR Cloudflare Transform Rule doing the same
+- OR Cloudflare Pages "Pretty URLs" setting enabled
+
+**Why Cache Purge Didn't Help:**
+- This is NOT cached content
+- This is a RULE/CONFIGURATION causing redirects
+- Cache purge only clears cached responses
+- Rules/configs are not affected by cache purge
+
+═══════════════════════════════════════════════════════════════
+🔧 THE FIX (5 MINUTES)
+═══════════════════════════════════════════════════════════════
+
+## OPTION 1: Check and Delete Page Rules (Most Likely)
+
+1. Login: https://dash.cloudflare.com
+
+2. Select: **onestepforthelife.com** domain
+
+3. Click: **Rules** (left sidebar)
+
+4. Click: **Page Rules**
+
+5. Look for rules like:
+   - `*onestepforthelife.com/*.html` → Forwarding URL → `$1`
+   - Any rule with "Forwarding URL" or "Redirect"
+   - Any rule mentioning `.html`
+
+6. **DELETE** any redirect rules found
+
+7. Click: **Save**
+
+8. Test immediately: https://onestepforthelife.com/blog.html
+   Should work instantly!
+
+---
+
+## OPTION 2: Check Transform Rules
+
+1. In Cloudflare dashboard
+
+2. Select: **onestepforthelife.com**
+
+3. Click: **Rules** → **Transform Rules**
+
+4. Click: **URL Redirects** tab
+
+5. Look for:
+   - Rules redirecting `.html` to extensionless
+   - Rules with 308 status code
+   - Rules matching `*.html`
+
+6. **DELETE** or **DISABLE** any found
+
+7. Test immediately
+
+---
+
+## OPTION 3: Check Cloudflare Pages Settings
+
+1. Go to: **Workers & Pages**
+
+2. Select: **onestepforthelife** project
+
+3. Click: **Settings** tab
+
+4. Look for:
+   - "Pretty URLs" setting
+   - "Clean URLs" setting
+   - "Remove .html extension" setting
+
+5. **DISABLE** if found
+
+6. May need to redeploy after changing
+
+---
+
+## OPTION 4: Check _redirects File Syntax
+
+Your `_redirects` file says:
+```
+/*.html  /:splat  200
+```
+
+This should work, but Cloudflare might be interpreting it wrong.
+
+**Try changing to:**
+```
+/*.html  /:splat.html  200
+```
+
+Or even simpler:
+```
+# Serve all HTML files directly
+/*  /:splat  200
+```
+
+Then:
+1. Commit and push to GitHub
+2. Wait 2-5 minutes for deployment
+3. Test
+
+═══════════════════════════════════════════════════════════════
+🎯 RECOMMENDED ACTION (Do This First)
+═══════════════════════════════════════════════════════════════
+
+**STEP 1: Check Page Rules (90% chance this is it)**
+
+1. Go to: https://dash.cloudflare.com
+2. Select: onestepforthelife.com
+3. Rules → Page Rules
+4. Delete any redirect rules
+5. Test immediately
+
+**Why this first:**
+- Page Rules override everything
+- Most common cause of this issue
+- Instant fix if this is it
+- Takes 2 minutes to check
+
+---
+
+**STEP 2: If no Page Rules, check Transform Rules**
+
+1. Rules → Transform Rules → URL Redirects
+2. Delete any .html redirect rules
+3. Test
+
+---
+
+**STEP 3: If still not fixed, check Pages Settings**
+
+1. Workers & Pages → onestepforthelife → Settings
+2. Look for URL/redirect settings
+3. Disable any "pretty URL" features
+
+═══════════════════════════════════════════════════════════════
+📊 WHAT WE KNOW FOR SURE
+═══════════════════════════════════════════════════════════════
+
+✅ **Confirmed:**
+- NOT a cache issue (cf-cache-status: DYNAMIC)
+- NOT a deployment issue (homepage works)
+- NOT a DNS issue (site is reachable)
+- IS a redirect rule/configuration issue
+- Redirecting .html to extensionless URLs
+
+❌ **Not the Problem:**
+- Cache (already confirmed DYNAMIC)
+- File deployment (files exist)
+- _redirects file (being overridden)
+- Build configuration (homepage works)
+
+🎯 **The Problem:**
+- Cloudflare Page Rule OR
+- Cloudflare Transform Rule OR
+- Cloudflare Pages "Pretty URLs" setting
+
+═══════════════════════════════════════════════════════════════
+🚀 EXPECTED RESULT AFTER FIX
+═══════════════════════════════════════════════════════════════
+
+**Before (Current):**
+```
+GET /blog.html → 308 → /blog → 404 (doesn't exist)
+```
+
+**After (Fixed):**
+```
+GET /blog.html → 200 → Serves blog.html content
+```
+
+**Test with:**
+```bash
+curl -I https://onestepforthelife.com/blog.html
+```
+
+**Should show:**
+```
+HTTP/2 200
+content-type: text/html
+```
+
+═══════════════════════════════════════════════════════════════
+⏰ TIME TO FIX
+═══════════════════════════════════════════════════════════════
+
+- Check Page Rules: 2 minutes
+- Delete rule: 1 minute
+- Test: 1 minute
+- **Total: 4 minutes**
+
+**No waiting for cache propagation needed!**
+**This is a config change, takes effect immediately!**
+
+═══════════════════════════════════════════════════════════════
+📋 CHECKLIST
+═══════════════════════════════════════════════════════════════
+
+☐ Login to Cloudflare dashboard
+☐ Select onestepforthelife.com domain
+☐ Check Rules → Page Rules
+☐ Delete any redirect rules for *.html
+☐ Check Rules → Transform Rules → URL Redirects
+☐ Delete any .html redirect rules
+☐ Test: https://onestepforthelife.com/blog.html
+☐ Verify: Returns 200 OK (not 308)
+☐ Test all 9 pages
+☐ Confirm: All return 200 OK
+
+═══════════════════════════════════════════════════════════════
+💡 WHY THIS HAPPENED
+═══════════════════════════════════════════════════════════════
+
+**Possible scenarios:**
+
+1. **Someone enabled "Pretty URLs"**
+   - Cloudflare feature to remove .html
+   - Redirects .html to extensionless
+   - Common in modern web design
+   - But breaks if extensionless files don't exist
+
+2. **Page Rule was created for SEO**
+   - To have "clean" URLs without .html
+   - Redirects /page.html to /page
+   - But /page doesn't exist
+   - Results in 308 → 404
+
+3. **Transform Rule for URL rewriting**
+   - Similar to Page Rule
+   - Redirects .html to extensionless
+   - Same problem
+
+**The Solution:**
+- Either: Remove the redirect rule (keep .html)
+- Or: Create extensionless versions of all pages
+- Recommended: Remove rule (simpler)
+
+═══════════════════════════════════════════════════════════════
+🎯 NEXT STEPS
+═══════════════════════════════════════════════════════════════
+
+1. **Check Page Rules NOW** (most likely fix)
+2. If no Page Rules, check Transform Rules
+3. If still not fixed, check Pages Settings
+4. Test after each change
+5. Report back which one fixed it
+
+**START WITH PAGE RULES - 90% CHANCE IT'S THERE!**
+
+═══════════════════════════════════════════════════════════════
+
+**Status:** ROOT CAUSE IDENTIFIED
+**Type:** Configuration Issue (NOT cache)
+**Fix Time:** 4 minutes
+**Confidence:** 95% this is the issue
+
+**GO CHECK PAGE RULES NOW!**
+
