@@ -33,9 +33,24 @@
 
 **MANDATORY WORKFLOW (NEVER SKIP):**
 
+**WHEN USER REPORTS DEPLOYMENT/SITE ISSUES:**
+```bash
+# 1. CHECK BUILD LOGS FIRST (30 seconds) - MANDATORY!
+# Go to: Cloudflare Dashboard → Workers & Pages → Project → Deployments
+# Click: Latest deployment → View details → Build log
+# Look for: Errors, warnings, file size issues
+
+# Common issues to check:
+☐ File size errors (>25MB)
+☐ Build command failures
+☐ Missing dependencies
+☐ Configuration errors
+☐ Deployment status (Success/Failed)
+```
+
 **BEFORE EVERY PUSH:**
 ```bash
-# 1. RUN DIAGNOSTIC (5 min) - MANDATORY!
+# 2. RUN DIAGNOSTIC (5 min) - MANDATORY!
 node CRITICAL_DIAGNOSTIC_DEC6.js
 
 # Must show:
@@ -44,6 +59,7 @@ node CRITICAL_DIAGNOSTIC_DEC6.js
 ☐ All pages have nav/footer
 ☐ Page content matches navigation
 ☐ File vs server issue identified
+☐ No files over 20MB (safe margin)
 ```
 
 **AFTER EVERY PUSH:**
@@ -173,20 +189,29 @@ pause
 
 ---
 
-## 🎯 ROOT CAUSE FOUND (Dec 6, 2025)
+## 🎯 ROOT CAUSE FOUND (Dec 6, 2025) - UPDATED
 
 ### THE PROBLEM:
-- 8 pages showing 308 redirects
+- 9 pages showing 308 redirects
 - SPO tool not accessible (users paid ₹21!)
 - Job search not accessible
 - Admin panel security unknown
 
-### THE ROOT CAUSE:
-**CLOUDFLARE CACHE NOT PURGED AFTER DEPLOYMENT**
+### THE ACTUAL ROOT CAUSE:
+**LARGE FILE BLOCKING ALL DEPLOYMENTS**
 
-Files are correct ✅  
-Deployment successful ✅  
-**Cache NOT purged ❌** ← THIS IS THE PROBLEM!
+File: linkedin post back till 30 nov 2025.docx (29.1 MB)
+Cloudflare Limit: 25 MB max
+Build Error: "Pages only supports files up to 25 MiB in size"
+
+**What happened:**
+- Large file committed to repo
+- Every push tried to deploy it
+- Cloudflare rejected it (exceeds limit)
+- Build failed BEFORE deploying
+- No new deployment = old cache = 308 redirects
+
+**NOT a cache issue - it was a deployment failure!**
 
 ---
 
