@@ -1,0 +1,144 @@
+✅ CONFIRMED: NOT IN RULES SECTION
+═══════════════════════════════════════════════════════════════
+
+We checked:
+- Page Rules: 0 used ✅
+- Bulk Redirects: 0 used ✅
+- Managed Transforms: Only headers ✅
+
+So the 308 redirect is coming from **Cloudflare Pages** itself!
+
+═══════════════════════════════════════════════════════════════
+🎯 CHECK WORKERS & PAGES SETTINGS (This is it!)
+═══════════════════════════════════════════════════════════════
+
+1. At the TOP of Cloudflare dashboard, click: **Workers & Pages**
+
+2. You'll see your project: **onestepforthelife**
+
+3. Click on: **onestepforthelife**
+
+4. Click: **Settings** tab (at the top)
+
+5. Scroll down and look for these sections:
+   - **Build configuration**
+   - **Environment variables**
+   - **Functions**
+   - **Compatibility flags**
+   - **Redirects & Headers**
+
+6. Take screenshots of ALL settings you see
+
+═══════════════════════════════════════════════════════════════
+🔍 WHAT TO LOOK FOR
+═══════════════════════════════════════════════════════════════
+
+**Most likely causes:**
+
+1. **Build configuration** might have:
+   - Build command that creates redirects
+   - Output directory setting
+   - Root directory setting
+
+2. **Functions** might have:
+   - A _worker.js or function intercepting requests
+   - Middleware redirecting .html files
+
+3. **Compatibility flags** might have:
+   - Something about URL handling
+   - Pretty URLs feature
+
+4. **Environment variables** might have:
+   - REDIRECT_HTML or similar
+   - URL_REWRITE settings
+
+═══════════════════════════════════════════════════════════════
+📸 PLEASE SHARE SCREENSHOTS OF:
+═══════════════════════════════════════════════════════════════
+
+1. Workers & Pages → onestepforthelife → Settings → **Build configuration**
+2. Workers & Pages → onestepforthelife → Settings → **Environment variables**
+3. Workers & Pages → onestepforthelife → Settings → **Functions** (if exists)
+4. Workers & Pages → onestepforthelife → **Deployments** → Latest deployment details
+
+═══════════════════════════════════════════════════════════════
+⚡ QUICK TEST WHILE WE INVESTIGATE
+═══════════════════════════════════════════════════════════════
+
+Let's test if bypassing Cloudflare processing helps:
+
+1. Go to: **Caching** (left sidebar)
+
+2. Click: **Configuration** tab
+
+3. Find: **Development Mode**
+
+4. Toggle: **ON** (lasts 3 hours)
+
+5. Wait: 30 seconds
+
+6. Test: https://onestepforthelife.com/blog.html
+
+**If it works:**
+- Confirms Cloudflare is processing/redirecting
+- Issue is in Pages configuration
+
+**If still 308:**
+- Issue is in Pages build/deployment
+- Not in Cloudflare processing
+
+═══════════════════════════════════════════════════════════════
+💡 MY THEORY
+═══════════════════════════════════════════════════════════════
+
+Based on the redirect pattern (/blog.html → /blog), I believe:
+
+**Cloudflare Pages has a built-in feature** that:
+- Automatically redirects .html to extensionless URLs
+- This is called "Pretty URLs" or "Clean URLs"
+- It's probably enabled by default
+- We need to find where to disable it
+
+**OR**
+
+**Your _redirects file is being misinterpreted:**
+- Your _redirects says: `/*.html  /:splat  200`
+- Cloudflare might be reading this as: redirect .html to extensionless
+- Instead of: serve .html files as-is
+
+═══════════════════════════════════════════════════════════════
+🔧 POSSIBLE FIX: MODIFY _redirects FILE
+═══════════════════════════════════════════════════════════════
+
+While we wait for screenshots, let's try fixing the _redirects file:
+
+**Current _redirects:**
+```
+/*.html  /:splat  200
+/  /index.html  200
+```
+
+**Try changing to:**
+```
+# Serve all files as-is, no redirects
+/*  /:splat  200
+```
+
+Or even simpler:
+```
+# No redirects, serve everything directly
+```
+(Empty file or comment only)
+
+**Then:**
+1. Commit and push to GitHub
+2. Wait 2-5 minutes for deployment
+3. Test: https://onestepforthelife.com/blog.html
+
+═══════════════════════════════════════════════════════════════
+
+**NEXT STEP: Go to Workers & Pages → onestepforthelife → Settings**
+**Take screenshots of all settings!**
+
+**OR: Try enabling Development Mode and test!**
+
