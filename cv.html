@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Performance: Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preload" href="common-styles.css" as="style">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amit Kumar - Professional CV</title>
@@ -359,6 +364,27 @@
     content: "▼ Click to Expand";
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Ideas Before Time",
+  "alternateName": "One Step For The Life",
+  "url": "https://onestepforthelife.com",
+  "description": "AI tools, market research, business insights, and professional resources",
+  "author": {
+    "@type": "Person",
+    "name": "Amit Kumar",
+    "jobTitle": "Business Analyst & AI Specialist"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://onestepforthelife.com/blog.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 </head>
 <body>
     <div class="page-wrapper">
@@ -366,7 +392,7 @@
 
         <div class="container">
         <div class="header">
-            <img src="images/CV Image.png" alt="Amit Kumar" class="profile-photo">
+            <img loading="lazy" src="images/CV Image.png" alt="Amit Kumar" class="profile-photo">
             <div>
                 <h1>AMIT KUMAR</h1>
                 <div class="title">Board-Ready Transformation Architect | Governance & DEI Steward | APAC Institutional Advisor</div>
