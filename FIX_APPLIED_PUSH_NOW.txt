@@ -1,0 +1,112 @@
+✅ FIX APPLIED TO _redirects FILE
+═══════════════════════════════════════════════════════════════
+
+I've modified your `_redirects` file to fix the 308 redirect issue.
+
+**What Changed:**
+
+**OLD _redirects:**
+```
+/*.html  /:splat  200
+/  /index.html  200
+```
+
+**NEW _redirects:**
+```
+/*  /:splat  200
+```
+
+**Why This Fixes It:**
+- The old rule `/*.html  /:splat  200` was being misinterpreted
+- Cloudflare was redirecting /blog.html → /blog (308)
+- New rule `/*  /:splat  200` serves everything directly
+- No more redirects!
+
+═══════════════════════════════════════════════════════════════
+🚀 PUSH THIS CHANGE TO GITHUB
+═══════════════════════════════════════════════════════════════
+
+**Option 1: Use GitHub Desktop (Easiest)**
+
+1. Open GitHub Desktop
+
+2. You'll see: "_redirects" file changed
+
+3. Write commit message: "Fix 308 redirects"
+
+4. Click: **Commit to main**
+
+5. Click: **Push origin**
+
+6. Wait: 2-5 minutes for Cloudflare to deploy
+
+7. Test: https://onestepforthelife.com/blog.html
+
+---
+
+**Option 2: Use UPLOAD_TO_GITHUB.bat**
+
+1. Double-click: **UPLOAD_TO_GITHUB.bat**
+
+2. Wait for it to complete
+
+3. Wait: 2-5 minutes for deployment
+
+4. Test: https://onestepforthelife.com/blog.html
+
+═══════════════════════════════════════════════════════════════
+⏰ AFTER PUSHING
+═══════════════════════════════════════════════════════════════
+
+1. **Wait 2-5 minutes** for Cloudflare Pages to deploy
+
+2. **Purge cache** (just to be safe):
+   - Cloudflare dashboard → Caching → Purge Everything
+
+3. **Test these URLs:**
+   - https://onestepforthelife.com/blog.html
+   - https://onestepforthelife.com/about.html
+   - https://onestepforthelife.com/spo.html
+   - https://onestepforthelife.com/jobs.html
+
+4. **All should work!** (200 OK, not 308)
+
+═══════════════════════════════════════════════════════════════
+🎯 EXPECTED RESULT
+═══════════════════════════════════════════════════════════════
+
+**Before (Current):**
+```
+GET /blog.html → 308 Redirect → /blog → 404
+```
+
+**After (Fixed):**
+```
+GET /blog.html → 200 OK → Blog page loads
+```
+
+═══════════════════════════════════════════════════════════════
+📊 WHY THIS WORKS
+═══════════════════════════════════════════════════════════════
+
+The problem was the `/*.html  /:splat  200` rule.
+
+Cloudflare Pages was interpreting `:splat` as "remove the .html extension"
+
+So:
+- `/blog.html` matched `/*.html`
+- `:splat` captured "blog"
+- Result: Redirect to `/blog` (308)
+
+The new rule `/*  /:splat  200` means:
+- Match everything
+- Serve it as-is
+- No redirects
+- Status 200
+
+═══════════════════════════════════════════════════════════════
+
+**PUSH THIS CHANGE NOW USING GITHUB DESKTOP!**
+
+**Then wait 5 minutes and test!**
+
