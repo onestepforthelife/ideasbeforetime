@@ -2,6 +2,7 @@
 
 **Created:** December 6, 2025  
 **Project Type:** Drain Cleaning Business Automation  
+**Platform:** Mobile App (Android + iOS)  
 **Status:** Documentation Phase
 
 ---
@@ -11,6 +12,11 @@
 **Core Concept:** Integrate Google Ads (Lead Source) + Conditional Call Forwarding (Trigger) + GoHighLevel (GHL) Automation Engine (Execution) with Agentic AI orchestration.
 
 **Business Model:** "Shoulder Approach" - AI acts as backup when technician misses calls, ensuring zero lost leads.
+
+**Delivery:** Mobile app for Android and iOS (not web app)
+- Technician app: Manage calls, bookings, job status
+- Customer app: Book services, track technician, pay
+- Business owner app: Dashboard, analytics, AI controls
 
 ---
 
@@ -93,12 +99,16 @@ AgenticAI-ShoulderApproach/
 ## 🚀 NEXT STEPS
 
 1. ✅ Create project folder structure
-2. ⏳ Document complete strategy
-3. ⏳ Define system architecture
-4. ⏳ Create GHL workflow specifications
-5. ⏳ Define AI agent specifications
-6. ⏳ Document integration requirements
-7. ⏳ Create implementation roadmap
+2. ✅ Document complete strategy
+3. ✅ Define system architecture
+4. ⏳ Add mobile app layer to architecture
+5. ⏳ Define mobile app specifications (Android + iOS)
+6. ⏳ Choose tech stack (React Native vs Flutter)
+7. ⏳ Design mobile UI/UX
+8. ⏳ Create GHL workflow specifications
+9. ⏳ Define AI agent specifications
+10. ⏳ Document integration requirements
+11. ⏳ Create implementation roadmap
 
 ---
 

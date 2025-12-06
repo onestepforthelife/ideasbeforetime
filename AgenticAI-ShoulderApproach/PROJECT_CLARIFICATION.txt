@@ -1,0 +1,69 @@
+# GHL AGENTIC AI PROJECT - CLARIFICATION
+
+**Created:** December 6, 2025
+**Status:** LOCAL DOCUMENTATION ONLY
+
+---
+
+## IMPORTANT: THIS IS NOT WEBSITE CONTENT
+
+This folder (`AgenticAI-ShoulderApproach/`) contains:
+- Strategic planning documentation
+- Business case for future SaaS project
+- Technical architecture designs
+- Implementation roadmaps
+
+**THIS IS NOT:**
+- Website content for onestepforthelife.com
+- To be pushed to website's GitHub repository
+- Live product or service
+
+---
+
+## STORAGE DECISION: OPTION A (LOCAL ONLY)
+
+**Amit's Decision:** Keep GHL documentation local only
+
+**What this means:**
+- Files stay in `Cloudfare/AgenticAI-ShoulderApproach/` folder
+- NOT pushed to GitHub with website files
+- For reference and planning only
+- When ready to build, create separate GitHub repo
+
+---
+
+## FUTURE OPTIONS
+
+**When ready to actually build GHL system:**
+
+**Option 1:** Create separate GitHub repository
+- Repo name: `agentic-ai-shoulder-approach`
+- Move this folder there
+- Keep completely separate from website
+
+**Option 2:** Keep local until MVP ready
+- Build locally first
+- Test thoroughly
+- Then decide on GitHub hosting
+
+---
+
+## WHAT GETS PUSHED TO GITHUB
+
+**Website content only:**
+- HTML pages (nickel-compounds-technical-data.html, etc.)
+- CSS/JS files
+- Market reports updates
+- Blog posts
+- Tools and features
+
+**NOT pushed:**
+- This GHL documentation folder
+- Strategic planning documents
+- Business case documents
+- Architecture designs (until separate repo created)
+
+---
+
+**Status:** CLARIFIED - No confusion about what goes where
+**Next:** Push nickel page to website's GitHub (separate from GHL docs)
