@@ -1,0 +1,219 @@
+# 🎯 SIMPLE MCP SETUP - Read PDFs & Links
+
+**Goal:** Make Kiro read PDFs and web links automatically
+
+---
+
+## ⚡ QUICK SETUP (5 Minutes)
+
+### Step 1: Install PDF Converter
+
+**Choose ONE:**
+
+**Option A: Poppler (Recommended)**
+```bash
+choco install poppler
+```
+
+**Option B: Python PyPDF2**
+```bash
+pip install PyPDF2
+```
+
+---
+
+### Step 2: Create MCP Config
+
+**Location:** `Cloudfare\.kiro\settings\mcp.json`
+
+**Content:**
+```json
+{
+  "mcpServers": {
+    "fetch": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-fetch"],
+      "disabled": false
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "disabled": false
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:/Users/araag/Documents/Cloudfare",
+        "C:/Users/araag/OneDrive/amit Pics personal",
+        "C:/Users/araag/Downloads"
+      ],
+      "disabled": false
+    }
+  }
+}
+```
+
+---
+
+### Step 3: Restart Kiro IDE
+
+Close and reopen Kiro completely.
+
+---
+
+## 📄 HOW TO USE WITH PDFs
+
+### When you have a PDF:
+
+**You say:** "Read this PDF: Downloads/report.pdf"
+
+**I do:**
+```bash
+# I run automatically:
+node pdf-to-text-auto.js "Downloads/report.pdf"
+
+# This creates: Downloads/report.txt
+
+# Then I read it:
+readFile("Downloads/report.txt")
+
+# Result: I read the PDF content!
+```
+
+**You see:** I summarize the PDF content
+
+---
+
+## 🌐 HOW TO USE WITH LINKS
+
+### When you share a link:
+
+**You say:** "Read this: https://example.com/article"
+
+**I do:**
+```
+# I use fetch MCP:
+fetch_url("https://example.com/article")
+
+# I read the content
+# I summarize key points
+# I store in memory MCP
+```
+
+**You see:** I explain what the article says
+
+---
+
+## 🧠 MEMORY ACROSS SESSIONS
+
+### How it works:
+
+**Session 1:**
+```
+You: "Read this PDF about LangChain"
+Me: [Reads PDF, stores in memory]
+Me: "Learned about LangChain. Key points: [summary]"
+```
+
+**Session 2 (Next day):**
+```
+You: "What did we learn about LangChain?"
+Me: [Retrieves from memory MCP]
+Me: "From the PDF you shared yesterday: [details]"
+```
+
+**Forever:** I remember everything you teach me!
+
+---
+
+## ✅ WHAT THIS GIVES YOU
+
+**BEFORE:**
+- ❌ Share link → I say "cannot browse"
+- ❌ Share PDF → I say "cannot read"
+- ❌ Next session → I forget everything
+
+**AFTER:**
+- ✅ Share link → I read and summarize
+- ✅ Share PDF → I convert and read automatically
+- ✅ Next session → I remember everything
+
+---
+
+## 🎯 TESTING IT
+
+### Test 1: Web Link
+```
+You: "Read this: https://python.langchain.com/docs/get_started/introduction"
+Me: [Uses fetch MCP]
+Me: "Read LangChain docs. It's a framework for..."
+```
+
+### Test 2: PDF File
+```
+You: "Read Downloads/report.pdf"
+Me: [Converts to text automatically]
+Me: [Reads the text]
+Me: "Read 50-page report. Key findings: ..."
+```
+
+### Test 3: Memory
+```
+You: "What did we learn yesterday?"
+Me: [Retrieves from memory MCP]
+Me: "We learned about [topic] from [source]..."
+```
+
+---
+
+## 🚀 THAT'S IT!
+
+**3 MCP servers:**
+1. **fetch** - Read web links
+2. **memory** - Remember forever
+3. **filesystem** - Read/write files
+
+**1 helper script:**
+- **pdf-to-text-auto.js** - Auto-convert PDFs
+
+**Result:** Matrix-style knowledge upload! 🧠
+
+---
+
+## 💡 TROUBLESHOOTING
+
+**If PDF conversion fails:**
+```bash
+# Check if pdftotext installed:
+pdftotext --version
+
+# Or check if PyPDF2 installed:
+python -c "import PyPDF2; print('OK')"
+
+# If neither works, install one:
+choco install poppler
+# OR
+pip install PyPDF2
+```
+
+**If MCP servers don't start:**
+```bash
+# Check Node.js version:
+node --version
+# Should be v18 or higher
+
+# Restart Kiro IDE completely
+```
+
+**If memory doesn't persist:**
+- Memory MCP stores in: `~/.mcp/memory/`
+- Check if folder exists
+- Restart Kiro if needed
+
+---
+
+**Status:** READY TO USE  
+**Time:** 5 minutes setup  
+**Result:** Read PDFs + Links + Remember forever!
