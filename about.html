@@ -108,7 +108,11 @@
             <div class="comic-strip">
                 <div class="comic-panel">
                     <div style="position: relative; width: 50%; height: 350px; border-bottom: 3px solid #333; overflow: hidden;">
-                        <img decoding="async" fetchpriority="high" loading="lazy" src="images/panel-1-foundation-grit.jpg" alt="Panel 1: Foundation of Grit" style="width: 50%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+                        <picture>
+    <source srcset="images/panel-1-foundation-grit.avif" type="image/avif">
+    <source srcset="images/panel-1-foundation-grit.webp" type="image/webp">
+    <img decoding="async" fetchpriority="high" loading="lazy" src="images/panel-1-foundation-grit.jpg" alt="Panel 1: Foundation of Grit" style="width: 50%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+</picture>
                         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(139, 115, 85, 0.7), rgba(101, 84, 63, 0.7));"></div>
                         <div class="panel-caption">Panel 1: The Foundation of Grit (Early 2000s)</div>
                     </div>
@@ -567,11 +571,11 @@
 </div>
 
 <!-- Google Analytics 4 - Universal Tracking -->
-<script src="universal-analytics.js"></script>
+<script defer src="universal-analytics.js"></script>
 
 <script src="common-navigation.js"></script>
 <script src="common-footer.js"></script>
-    <script src="error-tracker.js"></script>
+    <script defer src="error-tracker.js"></script>
 
 <!-- Quick Links Widget -->
 <div class="quick-links-widget" style="position: fixed; right: 20px; bottom: 80px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); padding: 20px; width: 250px; z-index: 999; display: none;" id="quickLinksWidget">

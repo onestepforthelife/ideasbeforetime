@@ -57,7 +57,11 @@
 
         <div class="container">
         <div class="header">
-            <img decoding="async" fetchpriority="high" loading="lazy" src="images/CV Image.png" alt="Amit Kumar" class="profile-photo">
+            <picture>
+    <source srcset="images/CV Image.avif" type="image/avif">
+    <source srcset="images/CV Image.webp" type="image/webp">
+    <img decoding="async" fetchpriority="high" loading="lazy" src="images/CV Image.png" alt="Amit Kumar" class="profile-photo">
+</picture>
             <div>
                 <h1>AMIT KUMAR</h1>
                 <div class="title">Board-Ready Transformation Architect | Governance & DEI Steward | APAC Institutional Advisor</div>
@@ -347,12 +351,12 @@
 -->
 
 <!-- Google Analytics 4 - Universal Tracking -->
-<script src="universal-analytics.js"></script>
+<script defer src="universal-analytics.js"></script>
 
 <script src="common-navigation.js"></script>
 
 <script src="common-footer.js"></script>
-    <script src="error-tracker.js"></script>
+    <script defer src="error-tracker.js"></script>
 
 <!-- Quick Links Widget -->
 <div class="quick-links-widget" style="position: fixed; right: 20px; bottom: 80px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); padding: 20px; width: 250px; z-index: 999; display: none;" id="quickLinksWidget">
