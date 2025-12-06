@@ -172,7 +172,7 @@
 
         <!-- ESG Impact -->
         <div class="section collapsible-section">
-<button class="section-toggle" onclick="this.parentElement.classList.toggle('expanded')" style="background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-bottom: 15px; font-size: 14px; font-weight: 600;">
+<button class="section-toggle" onclick="this.parentElement.classList.toggle('expanded')" style="background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%); color: #2c3e50; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-bottom: 15px; font-size: 14px; font-weight: 600;">
     <span class="toggle-text">▼ Click to Expand</span>
 </button>
 <div class="section-content" style="display: none;">
@@ -192,7 +192,7 @@
 
 <!-- Technical Specifications Section -->
 <div class="section collapsible-section">
-<button class="section-toggle" onclick="this.parentElement.classList.toggle('expanded')" style="background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-bottom: 15px; font-size: 14px; font-weight: 600;">
+<button class="section-toggle" onclick="this.parentElement.classList.toggle('expanded')" style="background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%); color: #2c3e50; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-bottom: 15px; font-size: 14px; font-weight: 600;">
     <span class="toggle-text">▼ Click to Expand</span>
 </button>
 <div class="section-content" style="display: none;">
@@ -225,7 +225,7 @@
     <div style="overflow-x: auto; margin: 20px 0;">
         <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
             <thead>
-                <tr style="background: #1e3c72; color: white;">
+                <tr style="background: #1e3c72; color: #2c3e50;">
                     <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Property / Element</th>
                     <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">NiO (Primary)</th>
                     <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">NiO (Recycled)</th>
@@ -496,7 +496,7 @@
     <div style="overflow-x: auto; margin: 20px 0;">
         <table style="width: 100%; border-collapse: collapse; font-size: 0.85em;">
             <thead>
-                <tr style="background: #6a1b9a; color: white;">
+                <tr style="background: #6a1b9a; color: #2c3e50;">
                     <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Property / Element</th>
                     <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Ni(OH)₂</th>
                     <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">NiCl₂·6H₂O</th>
@@ -779,7 +779,7 @@
 
                 <!-- Part 2: Detailed ESG Recycling Analysis -->
         <div class="section collapsible-section">
-<button class="section-toggle" onclick="this.parentElement.classList.toggle('expanded')" style="background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-bottom: 15px; font-size: 14px; font-weight: 600;">
+<button class="section-toggle" onclick="this.parentElement.classList.toggle('expanded')" style="background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%); color: #2c3e50; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-bottom: 15px; font-size: 14px; font-weight: 600;">
     <span class="toggle-text">▼ Click to Expand</span>
 </button>
 <div class="section-content" style="display: none;">
@@ -798,7 +798,7 @@
             <div style="overflow-x: auto;">
                 <table style="width: 50%; border-collapse: collapse; margin: 20px 0;">
                     <thead>
-                        <tr style="background: #1e3c72; color: white;">
+                        <tr style="background: #1e3c72; color: #2c3e50;">
                             <th style="padding: 12px; text-align: left;">Scrap Source</th>
                             <th style="padding: 12px; text-align: left;">Recycling Process</th>
                             <th style="padding: 12px; text-align: left;">Output Compound(s)</th>
@@ -844,7 +844,7 @@
             <div style="overflow-x: auto;">
                 <table style="width: 50%; border-collapse: collapse; margin: 20px 0;">
                     <thead>
-                        <tr style="background: #1e3c72; color: white;">
+                        <tr style="background: #1e3c72; color: #2c3e50;">
                             <th style="padding: 12px; text-align: left;">Compound (Recycled)</th>
                             <th style="padding: 12px; text-align: left;">India Supply (kt)</th>
                             <th style="padding: 12px; text-align: left;">Share of Total Demand</th>
@@ -928,8 +928,8 @@
 
     <script src="common-navigation.js"></script>
     <script src="common-footer.js"></script>
-    <script src="universal-analytics.js"></script>
-    <script src="error-tracker.js"></script>
+    <script defer src="universal-analytics.js"></script>
+    <script defer src="error-tracker.js"></script>
 
 <!-- Quick Links Widget -->
 <div class="quick-links-widget" style="position: fixed; right: 20px; bottom: 80px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); padding: 20px; width: 250px; z-index: 999; display: none;" id="quickLinksWidget">
@@ -966,11 +966,11 @@
 </div>
 
 <!-- Quick Links Toggle Button -->
-<button onclick="document.getElementById('quickLinksWidget').style.display='block'" style="position: fixed; right: 20px; bottom: 20px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%); color: white; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 998; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+<button onclick="document.getElementById('quickLinksWidget').style.display='block'" style="position: fixed; right: 20px; bottom: 20px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%); color: #2c3e50; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 998; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
     🔗
 </button>
 
-<style>.quick-links-widget a:hover{background:#5a6c7d !important;color:white !important;}@media (max-width:768px){.quick-links-widget{right:10px;bottom:70px;width:200px;padding:15px;}}</style>
+<style>.quick-links-widget a:hover{background:#5a6c7d !important;color: #2c3e50 !important;}@media (max-width:768px){.quick-links-widget{right:10px;bottom:70px;width:200px;padding:15px;}}</style>
 
 
 <!-- Reading Progress Bar -->
@@ -985,7 +985,7 @@ window.addEventListener('scroll', function() {
 </script>
 
 <!-- Back to Top Button -->
-<button id="back-to-top-btn" style="position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 24px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: none; z-index: 9998; transition: all 0.3s;" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">↑</button>
+<button id="back-to-top-btn" style="position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%); color: #2c3e50; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 24px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: none; z-index: 9998; transition: all 0.3s;" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">↑</button>
 <script>
 window.addEventListener('scroll', function() {
     const btn = document.getElementById('back-to-top-btn');
