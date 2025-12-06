@@ -106,6 +106,8 @@ function createShareLinks() {
 trackReferral();
 </script>
 
+<!-- GODA AI Chatbot Widget - Free for all users -->
+<script src="goda-chat-widget.js"></script>
 
 
 <!-- Advanced Analytics -->
