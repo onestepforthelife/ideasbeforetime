@@ -696,6 +696,250 @@ onestepforthelife@gmail.com
 4. **Balanced** - Show opportunities AND challenges
 5. **Current** - Use latest data (2024 actual, 2025-2030 forecast)
 
+---
+
+## 🚨 CRITICAL: DATA vs GENERIC COMMENTARY
+
+### ❌ WHAT AI OFTEN DOES WRONG (7-Page Generic Commentary)
+
+**Problem:** AI generates 7 pages of generic strategy/dialogue without actual data:
+- "The market is growing due to increasing demand..."
+- "Companies should focus on innovation..."
+- "Sustainability is becoming important..."
+- "Regional dynamics are shifting..."
+
+**This is USELESS! No nouns, no numbers, no specifics!**
+
+---
+
+### ✅ WHAT PROFESSIONAL REPORTS MUST HAVE
+
+**RULE: Strategy/Dialogue = English sentences ONLY for section introductions**
+
+**Everything else = NOUNS + DATA + ADJECTIVES + LOGIC**
+
+#### Example - WRONG (Generic Commentary):
+```
+❌ "The acrylic emulsions market is experiencing significant growth 
+driven by increasing demand from various end-use industries. 
+Companies are focusing on innovation and sustainability to gain 
+competitive advantage. Regional dynamics are evolving with emerging 
+markets showing strong potential."
+```
+**Problem:** 3 sentences, ZERO data, ZERO specifics, ZERO value!
+
+---
+
+#### Example - RIGHT (Data-Driven):
+```
+✅ MARKET SIZE & GROWTH
+• Global market: $8.2B (2024) → $12.8B (2030)
+• CAGR: 7.8% (2024-2030)
+• Asia-Pacific: 45% share, fastest growth at 9.2% CAGR
+• Top 5 players: 62% market share (BASF 18%, Dow 15%, Arkema 12%, etc.)
+
+✅ PRICE DYNAMICS
+• Standard grade: $2,800-3,200/MT (2024)
+• Specialty grade: $4,500-6,000/MT (2024)
+• Raw material impact: Acrylic acid (40% of cost), volatile ±15-20%
+• Regional premium: EU/US +25% vs Asia due to quality/compliance
+
+✅ APPLICATION BREAKDOWN
+• Paints & Coatings: 55% ($4.5B), growing 6.8% CAGR
+• Adhesives: 25% ($2.0B), growing 8.5% CAGR
+• Textiles: 12% ($1.0B), growing 7.2% CAGR
+• Paper: 8% ($0.7B), stable growth 5.5% CAGR
+```
+
+**See the difference?**
+- ✅ Every sentence has NUMBERS
+- ✅ Every claim has DATA
+- ✅ Every statement has LOGIC
+- ✅ NOUNS (market, price, application) + ADJECTIVES (volatile, premium, stable) + DATA ($X.XB, X.X%)
+
+---
+
+### 📊 DATA DENSITY REQUIREMENTS
+
+**Per Section Minimum:**
+
+| Section | Min Data Points | Min Tables | Min Numbers |
+|---------|----------------|------------|-------------|
+| Executive Summary | 10 | 1 | 20+ |
+| Market Overview | 20 | 2-3 | 50+ |
+| Competitive Landscape | 15 | 2 | 40+ |
+| Drivers & Restraints | 10 | 1 | 30+ |
+| Regional Analysis | 25 | 3-4 | 60+ |
+| Technology | 8 | 1 | 20+ |
+| Sustainability | 10 | 1-2 | 25+ |
+| Supply Chain | 12 | 2 | 35+ |
+| Pricing | 15 | 2-3 | 40+ |
+| Recommendations | 8 | 1 | 20+ |
+
+**Total Report: 130+ data points, 18-22 tables, 340+ numbers**
+
+---
+
+### 🎯 WRITING FORMULA
+
+**For EVERY paragraph:**
+
+```
+1. Topic sentence (English dialogue - 1 sentence)
+2. Data point 1 (noun + number + logic)
+3. Data point 2 (noun + number + logic)
+4. Data point 3 (noun + number + logic)
+5. Conclusion/implication (noun + adjective + logic)
+```
+
+**Example:**
+
+```
+✅ Raw material costs dominate acrylic emulsion production economics. 
+[Topic - English]
+
+Acrylic acid accounts for 40-45% of total production cost at 
+$1,800-2,000/MT (2024). [Data point 1 - noun + number + logic]
+
+Butyl acrylate contributes 15-20% at $1,600-1,800/MT, while 
+styrene adds 10-12% at $1,200-1,400/MT. [Data point 2 - noun + number]
+
+Combined raw materials represent 65-75% of cash cost, making 
+producers highly sensitive to petrochemical price volatility 
+(±15-20% annual swings). [Data point 3 - noun + number + logic]
+
+This cost structure drives vertical integration strategies among 
+top-tier manufacturers (BASF, Dow) who control upstream acrylic 
+acid capacity. [Conclusion - noun + adjective + logic]
+```
+
+**Result:** 1 topic sentence + 4 data-rich sentences = Professional content!
+
+---
+
+### 🚫 BANNED PHRASES (Generic Fluff)
+
+**NEVER use these without immediate data:**
+
+❌ "The market is growing..."
+❌ "Companies are focusing on..."
+❌ "Increasing demand from..."
+❌ "Sustainability is becoming important..."
+❌ "Regional dynamics are evolving..."
+❌ "Innovation is key to..."
+❌ "Competitive landscape is changing..."
+❌ "Future outlook is positive..."
+
+**Instead, ALWAYS follow with:**
+✅ Specific number/percentage
+✅ Company name + action + data
+✅ Application + volume/value + growth rate
+✅ Regulation + compliance cost + timeline
+✅ Region + market size + CAGR
+✅ Technology + adoption rate + investment
+✅ Player + market share + strategy
+✅ Forecast period + CAGR + drivers
+
+---
+
+### 📐 QUALITY CHECK FORMULA
+
+**Before submitting ANY section:**
+
+```
+Word count ÷ Number of data points = Data Density Score
+
+Target: <50 words per data point
+
+Example:
+• 500 words ÷ 15 data points = 33 words/data point ✅ GOOD
+• 500 words ÷ 5 data points = 100 words/data point ❌ TOO GENERIC
+```
+
+**If score >50:** Section has too much commentary, not enough data!
+
+---
+
+### 🎯 SECTION-BY-SECTION DATA REQUIREMENTS
+
+#### Executive Summary (300-500 words)
+**Must include:**
+- Market size (current + forecast) with $ values
+- CAGR with % and time period
+- Top 3 segments with % share
+- Top 3 regions with % share
+- Top 3 players with % share
+- 3-5 key trends with quantified impact
+- Price range for main products
+
+#### Market Overview (500-800 words)
+**Must include:**
+- Historical data (3-5 years) with $ values
+- Forecast data (5-7 years) with $ values
+- Segmentation breakdown (product, application, region) with %
+- Value chain with cost breakdown %
+- Market concentration (HHI or CR5) with numbers
+
+#### Competitive Landscape (800-1200 words)
+**Must include:**
+- Top 10 players with market share %
+- Revenue figures for top 5 players
+- Capacity data (ktpa) for manufacturers
+- Geographic presence (countries/regions)
+- Product portfolio (number of grades/types)
+- Recent investments ($ value + timeline)
+- M&A activity (deal value + date)
+
+#### Regional Analysis (800-1200 words)
+**Must include:**
+- Market size per region ($ value)
+- Growth rate per region (CAGR %)
+- Top 3 countries per region with data
+- Import/export volumes (MT or $ value)
+- Price differentials between regions ($)
+- Regulatory differences (compliance cost $)
+
+---
+
+### ✅ FINAL DATA CHECKLIST
+
+**Before calling report "complete":**
+
+```
+☐ Every paragraph has 3+ data points
+☐ Every claim backed by number/percentage
+☐ Every table has source citation
+☐ Every forecast has methodology note
+☐ Every price has currency + unit + timeframe
+☐ Every company has specific data (not just name)
+☐ Every region has market size + growth rate
+☐ Every product has specifications + price range
+☐ Data density score <50 words per data point
+☐ Total data points >130 across all sections
+☐ Total tables >18 across all sections
+☐ Total numbers >340 across all sections
+☐ Zero generic commentary without data
+☐ Strategy/dialogue limited to topic sentences only
+```
+
+**If ANY ☐ = NO → Report is NOT complete!**
+
+---
+
+### 💡 REMEMBER
+
+**Professional Market Report =**
+- 10% Strategy/Dialogue (English sentences for context)
+- 90% Data/Facts (Nouns + Numbers + Adjectives + Logic)
+
+**NOT:**
+- 70% Generic commentary (AI fluff)
+- 30% Data (insufficient)
+
+**This is the difference between:**
+- ❌ 7-page generic AI report (worthless)
+- ✅ Professional market intelligence (valuable)
+
 ### Writing Best Practices
 1. **Clear & Concise** - Short sentences, active voice
 2. **Professional Tone** - Objective, third-person
