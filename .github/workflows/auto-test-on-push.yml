@@ -1,0 +1,53 @@
+name: Auto-Test on Push
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    
+    - name: Install dependencies
+      run: |
+        npm install
+        npx playwright install chromium
+    
+    - name: Run diagnostic tests
+      run: |
+        node CRITICAL_DIAGNOSTIC_DEC6.js
+        node test-site-consistency.js
+        node test-content-consistency.js
+    
+    - name: Run Playwright live site tests
+      run: |
+        node .kiro/tools/playwright-live-site-test.js
+    
+    - name: Check file sizes
+      run: |
+        find . -type f -size +20M -exec ls -lh {} \; | awk '{print $9, $5}'
+    
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results
+        path: |
+          DIAGNOSTIC_REPORT_DEC6.json
+          LIVE_SITE_TEST_RESULTS.json
+    
+    - name: Notify on failure
+      if: failure()
+      run: |
+        echo "Tests failed! Check artifacts for details."
+        exit 1

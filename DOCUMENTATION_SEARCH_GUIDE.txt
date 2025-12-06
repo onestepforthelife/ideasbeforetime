@@ -1,0 +1,178 @@
+# DOCUMENTATION SEARCH GUIDE - 3 Remaining Sites
+
+**Date:** December 6, 2025
+**Status:** Need manual search for 3 sites (GTmetrix, IKS India, BHASHINI)
+
+---
+
+## ✅ COMPLETED: WebPageTest Documentation
+
+**Successfully Fetched:** https://docs.webpagetest.org/
+
+**Key Content Retrieved:**
+- Quick Start Guide (how to run tests)
+- Metrics explained (TTFB, Start Render, FCP, Speed Index, LCP, CLS, TBT)
+- Test locations and browsers
+- Advanced scripting capabilities
+- Custom metrics capture
+- Result interpretation
+
+**Status:** COMPLETE ✅
+
+---
+
+## 🔍 SEARCH INSTRUCTIONS FOR REMAINING 3 SITES
+
+### 1. GTmetrix Documentation
+
+**What to search on Google:**
+```
+"GTmetrix documentation" OR "GTmetrix help" OR "GTmetrix guide"
+```
+
+**What we need:**
+- How to interpret GTmetrix scores
+- Performance metrics explanation
+- Waterfall chart reading guide
+- Recommendations interpretation
+- API documentation (if available)
+
+**Look for URLs like:**
+- gtmetrix.com/help/
+- gtmetrix.com/docs/
+- gtmetrix.com/guide/
+- blog.gtmetrix.com/
+- Any official GTmetrix resource page
+
+**What to copy:**
+Once you find the page, copy the FULL URL and share it with me.
+Example: "https://gtmetrix.com/help/performance-reports"
+
+---
+
+### 2. IKS India (Indian Knowledge Systems)
+
+**What to search on Google:**
+```
+"IKS India documentation" OR "Indian Knowledge Systems resources" OR "IKS AICTE" OR "IKS Ministry of Education"
+```
+
+**What we need:**
+- IKS framework overview
+- Traditional knowledge integration
+- Academic resources
+- Implementation guidelines
+- NEP 2020 IKS integration
+
+**Look for URLs like:**
+- aicte-india.org/iks
+- education.gov.in/iks
+- ugc.ac.in/iks
+- Any official government IKS portal
+- Academic institution IKS pages
+
+**Alternative sources:**
+- AICTE official website
+- UGC (University Grants Commission)
+- Ministry of Education portals
+- IIT/NIT IKS centers
+
+**What to copy:**
+The main IKS resource page URL that has documentation/guidelines.
+
+---
+
+### 3. BHASHINI (National Language Translation Mission)
+
+**What to search on Google:**
+```
+"BHASHINI documentation" OR "BHASHINI API" OR "National Language Translation Mission" OR "BHASHINI MeitY"
+```
+
+**What we need:**
+- BHASHINI platform overview
+- API documentation
+- Language support list
+- Integration guidelines
+- Use cases and examples
+
+**Look for URLs like:**
+- bhashini.gov.in/documentation
+- bhashini.gov.in/api
+- meity.gov.in/bhashini
+- Digital India BHASHINI pages
+- GitHub repositories (if public)
+
+**Alternative sources:**
+- MeitY (Ministry of Electronics & IT) website
+- Digital India portal
+- AI4Bharat (academic partner)
+- NPTEL courses on BHASHINI
+
+**What to copy:**
+The official documentation or API guide URL.
+
+---
+
+## 📝 HOW TO SHARE WITH ME
+
+**Format:**
+```
+GTmetrix: [paste full URL here]
+IKS India: [paste full URL here]
+BHASHINI: [paste full URL here]
+```
+
+**Example:**
+```
+GTmetrix: https://gtmetrix.com/help/performance-reports
+IKS India: https://aicte-india.org/iks/resources
+BHASHINI: https://bhashini.gov.in/api-documentation
+```
+
+---
+
+## ⚡ ONCE YOU SHARE URLS
+
+I will:
+1. Attempt to fetch each URL via MCP
+2. If blocked, try alternative approaches
+3. Extract key documentation
+4. Add to ALL_DOCUMENTATION_FETCHED_DEC6.txt
+5. Update DOCUMENTATION_LINKS_STATUS_DEC6.txt
+6. Mark as 100% complete
+
+---
+
+## 🎯 WHY THIS APPROACH WORKS
+
+**Instead of me guessing URLs:**
+- You search with human access (no bot blocking)
+- You can see search results I cannot
+- You can verify the page loads before sharing
+- You can pick the best documentation page
+
+**This is efficient:**
+- 3 Google searches (2 minutes)
+- Copy 3 URLs (30 seconds)
+- Share with me (10 seconds)
+- I fetch and process (2 minutes)
+- **Total: 5 minutes vs hours of trial-and-error**
+
+---
+
+## 💡 TIPS FOR SEARCHING
+
+1. **Use quotes** for exact phrases: "GTmetrix documentation"
+2. **Add site:** to search specific domains: site:gtmetrix.com documentation
+3. **Look for official sources** (not third-party blogs)
+4. **Check if page loads** before sharing URL
+5. **Prefer documentation/help/guide pages** over marketing pages
+
+---
+
+**Status:** WAITING FOR 3 URLS
+**Priority:** Medium (we have 80% coverage already)
+**Benefit:** Complete documentation collection for all future work
+
+**Ready when you are!**
