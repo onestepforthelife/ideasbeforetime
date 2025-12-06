@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The ₹5 Lakh/Month Recurring Blueprint: High-Ticket SaaS Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Chart Container Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .active-tab {
+            border-bottom: 2px solid #0f172a;
+            color: #0f172a;
+            font-weight: 600;
+        }
+        .inactive-tab {
+            color: #64748b;
+            border-bottom: 2px solid transparent;
+        }
+        .inactive-tab:hover {
+            color: #334155;
+            border-bottom: 2px solid #cbd5e1;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div>
+                    <h1 class="text-2xl font-bold text-slate-900">🚀 The ₹5 Lakh Recurring Blueprint</h1>
+                    <p class="text-sm text-slate-500">Automated High-Ticket SaaS Strategy | Target: US Technicians</p>
+                </div>
+                <div class="mt-4 md:mt-0 flex gap-2">
+                    <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Status: Ready to Launch</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Model: B2B SaaS</span>
+                </div>
+            </div>
+            <!-- Navigation -->
+            <nav class="mt-6 flex space-x-8 overflow-x-auto pb-2" aria-label="Tabs">
+                <button onclick="switchTab('summary')" id="tab-summary" class="active-tab whitespace-nowrap py-4 px-1 text-sm transition-colors duration-200">Executive Summary</button>
+                <button onclick="switchTab('financials')" id="tab-financials" class="inactive-tab whitespace-nowrap py-4 px-1 text-sm transition-colors duration-200">Financial Engine</button>
+                <button onclick="switchTab('strategy')" id="tab-strategy" class="inactive-tab whitespace-nowrap py-4 px-1 text-sm transition-colors duration-200">The Shoulder Strategy</button>
+                <button onclick="switchTab('launch')" id="tab-launch" class="inactive-tab whitespace-nowrap py-4 px-1 text-sm transition-colors duration-200">7-Day Launchpad</button>
+                <button onclick="switchTab('legal')" id="tab-legal" class="inactive-tab whitespace-nowrap py-4 px-1 text-sm transition-colors duration-200">Legal & Compliance</button>
+                <button onclick="switchTab('ai')" id="tab-ai" class="inactive-tab whitespace-nowrap py-4 px-1 text-sm transition-colors duration-200">Agentic AI</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 min-h-screen">
+        <!-- SECTION 1: EXECUTIVE SUMMARY -->
+        <section id="content-summary" class="block animate-fade-in">
+            <div class="bg-white rounded-lg shadow p-6 mb-6">
+                <h2 class="text-xl font-bold mb-4 text-slate-900">The Core Mission</h2>
+                <p class="mb-4">The objective is to generate <strong>₹5 Lakh ($6,000+) per month in recurring profit</strong> with minimal manual intervention. Traditional service models fail this goal due to high labor requirements. The only viable path is the <strong>High-Ticket SaaS Reseller Model</strong> targeting the US market.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                    <div class="bg-slate-100 p-4 rounded-lg border-l-4 border-indigo-500">
+                        <h3 class="font-bold text-indigo-900">The Product</h3>
+                        <p class="text-sm mt-1">GoHighLevel (GHL) White-Label. You sell a pre-built "Job Saver System" to US plumbers/electricians.</p>
+                        <p class="text-xs mt-2 text-slate-500">Why? Recurring commission (40-100%) & High retention.</p>
+                    </div>
+                    <div class="bg-slate-100 p-4 rounded-lg border-l-4 border-indigo-500">
+                        <h3 class="font-bold text-indigo-900">The Market</h3>
+                        <p class="text-sm mt-1">USA & UK Tradesmen (Blue Collar). Specifically targeting "Missed Call" pain points.</p>
+                        <p class="text-xs mt-2 text-slate-500">Why? High willingness to pay ($297/mo) vs. India.</p>
+                    </div>
+                    <div class="bg-slate-100 p-4 rounded-lg border-l-4 border-indigo-500">
+                        <h3 class="font-bold text-indigo-900">The Method</h3>
+                        <p class="text-sm mt-1">Google Ads (Search Intent) + Agentic AI (Qualification).</p>
+                        <p class="text-xs mt-2 text-slate-500">Why? Speed (7 days to customer) & Automation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="font-bold mb-4">Why This Works: The Economic Arbitrage</h3>
+                    <p class="text-sm mb-4">Comparing the economic reality of selling SaaS in India vs. the USA. This dictates why you must target the US.</p>
+                    <div class="chart-container">
+                        <canvas id="marketChart"></canvas>
+                    </div>
+                    <p class="text-xs text-center text-slate-500 mt-2">Data Source: Source Report Analysis (US High WTP vs. India Low WTP)</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="font-bold mb-4">The "Un-Copyable" Advantage</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start"><span class="mr-2">🛡️</span> <strong>The Shoulder Approach:</strong> We do not intermediate. We act as a safety net for missed calls, respecting the plumber's existing phone number.</li>
+                        <li class="flex items-start"><span class="mr-2">⚡</span> <strong>Speed to Value:</strong> Clients get a fully pre-built snapshot (automation system) that works instantly. No setup time.</li>
+                        <li class="flex items-start"><span class="mr-2">🔁</span> <strong>The Reinvestment Loop:</strong> We reinvest early profits into Google Ads data, refining the AI script faster than any copycat competitor can catch up.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: FINANCIAL ENGINE -->
+        <section id="content-financials" class="hidden animate-fade-in">
+            <div class="bg-white rounded-lg shadow p-6 mb-6">
+                <h2 class="text-xl font-bold mb-2">Recurring Revenue Calculator</h2>
+                <p class="text-sm text-slate-600 mb-6">Use this calculator to see how "The Math" works. Unlike one-time sales, SaaS revenue compounds. Adjust the inputs to see when you hit ₹5 Lakhs/month.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <!-- Controls -->
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase">Monthly Ad Spend ($)</label>
+                            <input type="number" id="adSpend" value="1000" class="w-full mt-1 p-2 border rounded shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase">Cost Per Lead (CPL) ($)</label>
+                            <input type="number" id="cpl" value="30" class="w-full mt-1 p-2 border rounded shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase">Lead to Sale %</label>
+                            <input type="number" id="conversionRate" value="5" class="w-full mt-1 p-2 border rounded shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase">Product Price ($/mo)</label>
+                            <select id="productPrice" class="w-full mt-1 p-2 border rounded shadow-sm">
+                                <option value="297">Standard ($297)</option>
+                                <option value="497">Pro ($497)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase">Your Commission %</label>
+                            <select id="commissionRate" class="w-full mt-1 p-2 border rounded shadow-sm">
+                                <option value="0.40">40% (Affiliate)</option>
+                                <option value="1.00">100% (SaaS Mode)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button onclick="updateFinancials()" class="w-full bg-indigo-600 text-white font-bold py-2 px-4 rounded hover:bg-indigo-700 transition">Calculate Growth</button>
+                        </div>
+                    </div>
+                    <!-- Results Cards -->
+                    <div class="col-span-2 grid grid-cols-2 gap-4">
+                        <div class="bg-indigo-50 p-4 rounded text-center">
+                            <h4 class="text-sm font-bold text-indigo-800">New Clients / Month</h4>
+                            <p id="res-clients" class="text-3xl font-bold text-indigo-600">--</p>
+                        </div>
+                        <div class="bg-indigo-50 p-4 rounded text-center">
+                            <h4 class="text-sm font-bold text-indigo-800">Mo. Revenue Added</h4>
+                            <p id="res-revenue-added" class="text-3xl font-bold text-indigo-600">--</p>
+                        </div>
+                        <div class="bg-green-100 p-4 rounded text-center col-span-2">
+                            <h4 class="text-sm font-bold text-green-800">Month 12 Recurring Revenue (INR)</h4>
+                            <p id="res-mrr-inr" class="text-4xl font-bold text-green-700">--</p>
+                            <p class="text-xs text-green-600 mt-1">Goal: ₹5,00,000</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Chart -->
+                <div class="chart-container border-t pt-4">
+                    <canvas id="financialChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: THE STRATEGY -->
+        <section id="content-strategy" class="hidden animate-fade-in">
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-xl font-bold mb-4">The "Shoulder Approach" Strategy</h2>
+                    <p class="mb-4 text-sm">We succeed where others fail because we do not try to be an intermediary. We respect the technician's existing business identity.</p>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full text-sm text-left">
+                            <thead class="bg-slate-100 text-slate-700 font-bold">
+                                <tr>
+                                    <th class="px-4 py-3">Feature</th>
+                                    <th class="px-4 py-3 text-indigo-700">The Shoulder Approach (Our Way)</th>
+                                    <th class="px-4 py-3 text-red-700">Traditional Marketplaces (The Wrong Way)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200">
+                                <tr>
+                                    <td class="px-4 py-3 font-semibold">Lead Ownership</td>
+                                    <td class="px-4 py-3">The Plumber owns the lead. Customer dials their number directly.</td>
+                                    <td class="px-4 py-3">Platform owns the lead. Customer calls the app.</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-semibold">Intervention</td>
+                                    <td class="px-4 py-3"><strong>Safety Net:</strong> Only acts when the plumber misses a call (Conditional Forwarding).</td>
+                                    <td class="px-4 py-3"><strong>Gatekeeper:</strong> Always sits between buyer and seller.</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-semibold">Value Prop</td>
+                                    <td class="px-4 py-3">"Stop losing money on missed calls." (Efficiency)</td>
+                                    <td class="px-4 py-3">"We find you customers." (Discovery)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="font-bold mb-3">The Product Stack: White Label Magic</h3>
+                    <div class="flex flex-col md:flex-row gap-4 items-center">
+                        <div class="flex-1 border p-4 rounded bg-slate-50">
+                            <h4 class="font-bold text-center">Technician Experience (Mobile App)</h4>
+                            <ul class="text-sm mt-2 space-y-2">
+                                <li>📱 Branded "JobSaver" App</li>
+                                <li>🔔 Instant Missed Call Text-Back</li>
+                                <li>💬 Unified Inbox (SMS/FB/Email)</li>
+                                <li>📅 Job Pipeline View</li>
+                            </ul>
+                        </div>
+                        <div class="text-2xl">⬅️ Powered By ➡️</div>
+                        <div class="flex-1 border p-4 rounded bg-slate-50">
+                            <h4 class="font-bold text-center">Your Agency Engine (Desktop)</h4>
+                            <ul class="text-sm mt-2 space-y-2">
+                                <li>🖥️ GoHighLevel (Agency Pro Plan)</li>
+                                <li>⚙️ The "Snapshot" (Workflows)</li>
+                                <li>🤖 Agentic AI Scripts</li>
+                                <li>💳 Stripe Billing Integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: 7-DAY LAUNCH -->
+        <section id="content-launch" class="hidden animate-fade-in">
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-xl font-bold mb-4">7-Day Execution Checklist</h2>
+                <p class="text-sm mb-6">This is the rapid deployment plan to go from zero to market-ready. Check items off as you complete them.</p>
+                <div class="space-y-3" id="checklist-container">
+                    <!-- Checklist items generated by JS -->
+                </div>
+                <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded text-sm">
+                    <strong>⚠️ Critical Stop:</strong> Do not launch Google Ads (Day 5) until your <strong>Privacy Policy</strong> and <strong>Affiliate Disclaimers</strong> are visible on your bridge page. This prevents ad account suspension.
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: LEGAL & OPS -->
+        <section id="content-legal" class="hidden animate-fade-in">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="font-bold text-lg mb-3">🇺🇸 Structure: US LLC (Wyoming)</h3>
+                    <p class="text-sm mb-4">The recommended structure for asset protection and ease of business.</p>
+                    <ul class="list-disc pl-5 text-sm space-y-2">
+                        <li><strong>Asset Protection:</strong> Limited Liability protects your personal Indian assets.</li>
+                        <li><strong>Low Bureaucracy:</strong> No annual audit (unlike Indian OPC). Only one annual state filing.</li>
+                        <li><strong>Cost:</strong> ~$60/year annual fee (Wyoming).</li>
+                        <li><strong>Banking:</strong> Access to Mercury/Wise Business (USD).</li>
+                        <li><strong>Tax:</strong> Disregarded Entity. Pay tax only in India on global income.</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-slate-100 rounded text-xs">
+                        <strong>Action:</strong> Use Stripe Atlas or Doola for formation. Get EIN (2-4 weeks).
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="font-bold text-lg mb-3">🇮🇳 Compliance: Indian Resident</h3>
+                    <p class="text-sm mb-4">How you remain compliant while living and working in India.</p>
+                    <ul class="list-disc pl-5 text-sm space-y-2">
+                        <li><strong>Employment:</strong> Ensure no conflict of interest. Your role is "Consultant" to the US LLC.</li>
+                        <li><strong>Banking:</strong> Open a "Proprietorship Current Account" in India for local expenses.</li>
+                        <li><strong>Tax Filing:</strong> Declare Global Income in ITR-3 under PGBP.</li>
+                        <li><strong>FEMA:</strong> Declare Foreign Assets (Schedule FA) in ITR. Receive funds via wire to Current Account if repatriating.</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-red-50 text-red-800 rounded text-xs">
+                        <strong>Warning:</strong> Do not use a personal Savings Account for business transactions.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: AGENTIC AI -->
+        <section id="content-ai" class="hidden animate-fade-in">
+            <div class="bg-white rounded-lg shadow p-6 mb-6">
+                <h2 class="text-xl font-bold mb-4">🤖 The Agentic AI Logic Flow</h2>
+                <p class="text-sm mb-6">The AI agent replaces the manual sales rep. Its job is to <strong>Filter</strong> and <strong>Qualify</strong> leads before they see the offer.</p>
+                <div class="flex flex-col items-center space-y-4">
+                    <!-- Step 1 -->
+                    <div class="w-full max-w-lg border-2 border-indigo-200 rounded p-4 bg-indigo-50 text-center">
+                        <div class="font-bold text-indigo-800">Trigger: "Get 7-Minute Job Saver"</div>
+                        <div class="text-xs mt-1">User clicks ad, lands on bridge page.</div>
+                    </div>
+                    <div class="text-2xl text-slate-400">⬇️</div>
+                    <!-- Step 2 -->
+                    <div class="w-full max-w-lg border rounded p-4 bg-white shadow-sm relative">
+                        <h4 class="font-bold mb-2">Q1: Pain Point Identification</h4>
+                        <p class="text-sm italic">"What is the single biggest bottleneck you need solved right now? (e.g. Missed Calls, Reviews)"</p>
+                        <div class="absolute -right-3 top-1/2 transform -translate-y-1/2 bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Filter 1</div>
+                    </div>
+                    <div class="text-2xl text-slate-400">⬇️</div>
+                    <!-- Step 3 -->
+                    <div class="w-full max-w-lg border rounded p-4 bg-white shadow-sm relative">
+                        <h4 class="font-bold mb-2">Q2: Budget & Authority</h4>
+                        <p class="text-sm italic">"Are you the business owner, and are you looking for a solution in the $300/mo range?"</p>
+                        <div class="absolute -right-3 top-1/2 transform -translate-y-1/2 bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Filter 2</div>
+                    </div>
+                    <div class="text-2xl text-slate-400">⬇️</div>
+                    <!-- Decision -->
+                    <div class="grid grid-cols-2 gap-8 w-full max-w-lg">
+                        <div class="border border-green-200 bg-green-50 p-3 rounded text-center">
+                            <div class="font-bold text-green-700">Qualified</div>
+                            <div class="text-xs">Redirect to Webinar/Affiliate Link</div>
+                        </div>
+                        <div class="border border-red-200 bg-red-50 p-3 rounded text-center">
+                            <div class="font-bold text-red-700">Unqualified</div>
+                            <div class="text-xs">Soft Exit -> Email Nurture Sequence</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        // --- 1. Navigation Logic ---
+        function switchTab(tabId) {
+            const sections = document.querySelectorAll('section[id^="content-"]');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(`content-${tabId}`).classList.remove('hidden');
+            const buttons = document.querySelectorAll('nav button');
+            buttons.forEach(btn => {
+                btn.classList.remove('active-tab');
+                btn.classList.add('inactive-tab');
+            });
+            document.getElementById(`tab-${tabId}`).classList.add('active-tab');
+            document.getElementById(`tab-${tabId}`).classList.remove('inactive-tab');
+        }
+
+        // --- 2. Checklist Logic ---
+        const checklistItems = [
+            { day: "Day 0", task: "Legal: Gather KYC Documents (PAN, Aadhaar)", critical: true },
+            { day: "Day 1", task: "Software: Sign up for GoHighLevel (Free Trial)", critical: false },
+            { day: "Day 1", task: "Tech: Get Tracking Number inside GHL", critical: false },
+            { day: "Day 2", task: "Process: Authenticate Business SMS (DLT/A2P)", critical: true },
+            { day: "Day 3", task: "Content: Write 'Missed Call Text Back' Script", critical: false },
+            { day: "Day 4", task: "Asset: Build 'ROI Calculator' Bridge Page", critical: false },
+            { day: "Day 5", task: "Ads: Setup Google Ads Account (US Targeting)", critical: false },
+            { day: "Day 6", task: "Review: Test Conditional Forwarding logic", critical: true },
+            { day: "Day 7", task: "Launch: Go Live with Ads", critical: true }
+        ];
+
+        const checklistContainer = document.getElementById('checklist-container');
+        checklistItems.forEach((item, index) => {
+            const div = document.createElement('div');
+            div.className = "flex items-center p-3 bg-slate-50 rounded border hover:bg-slate-100 transition";
+            div.innerHTML = `
+                <input type="checkbox" id="check-${index}" class="h-5 w-5 text-indigo-600 rounded mr-3">
+                <div class="flex-1">
+                    <span class="text-xs font-bold text-slate-500 uppercase tracking-wide">${item.day}</span>
+                    <p class="font-medium ${item.critical ? 'text-indigo-900' : 'text-slate-700'}">${item.task} ${item.critical ? '<span class="text-xs text-red-500 font-bold ml-1">*Critical</span>' : ''}</p>
+                </div>
+            `;
+            checklistContainer.appendChild(div);
+        });
+
+        // --- 3. Financial Calculator Logic & Chart ---
+        let financialChart;
+
+        function initChart() {
+            const ctx = document.getElementById('financialChart').getContext('2d');
+            financialChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: Array.from({length: 12}, (_, i) => `Month ${i+1}`),
+                    datasets: [{
+                        label: 'Monthly Recurring Revenue (INR)',
+                        data: [],
+                        borderColor: '#4f46e5',
+                        backgroundColor: 'rgba(79, 70, 229, 0.1)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: true },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return '₹ ' + context.parsed.y.toLocaleString();
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return '₹' + value.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateFinancials() {
+            const adSpend = parseFloat(document.getElementById('adSpend').value);
+            const cpl = parseFloat(document.getElementById('cpl').value);
+            const conversionRate = parseFloat(document.getElementById('conversionRate').value) / 100;
+            const price = parseFloat(document.getElementById('productPrice').value);
+            const commissionPct = parseFloat(document.getElementById('commissionRate').value);
+            const exchangeRate = 83;
+            const churnRate = 0.05;
+
+            const leadsPerMonth = adSpend / cpl;
+            const newClientsPerMonth = leadsPerMonth * conversionRate;
+            const commissionPerClient = price * commissionPct;
+            let mrr = 0;
+            let activeClients = 0;
+            const mrrData = [];
+
+            for (let i = 0; i < 12; i++) {
+                activeClients += newClientsPerMonth;
+                activeClients = activeClients * (1 - churnRate);
+                mrr = activeClients * commissionPerClient;
+                mrrData.push(mrr * exchangeRate);
+            }
+
+            document.getElementById('res-clients').innerText = Math.round(newClientsPerMonth);
+            document.getElementById('res-revenue-added').innerText = '$' + Math.round(newClientsPerMonth * commissionPerClient);
+            document.getElementById('res-mrr-inr').innerText = '₹ ' + Math.round(mrr * exchangeRate).toLocaleString();
+
+            financialChart.data.datasets[0].data = mrrData;
+            financialChart.update();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initChart();
+            updateFinancials();
+        });
+    </script>
+</body>
+</html>
