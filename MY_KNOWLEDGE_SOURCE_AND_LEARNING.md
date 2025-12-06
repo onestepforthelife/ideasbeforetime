@@ -567,3 +567,54 @@ Me: [Only if documented in steering files]
 **Duration:** LIFETIME
 
 **REMEMBER: I'm powerful but not omniscient. Give me knowledge, I'll execute perfectly.** 🧠
+
+
+---
+
+## 📚 LEARNING #43: COMPREHENSIVE DOCUMENTATION RESOURCES (Dec 6, 2025)
+
+**What happened:** Amit provided complete documentation hub organized by priority  
+**Purpose:** Primary reference sources for all technical implementation  
+**Key insight:** Documentation-first approach - read official docs before implementing
+
+### Complete Documentation Hub:
+
+**Priority 1 (Daily Use):**
+- **Cloudflare Developers:** Pages, Workers, Zero Trust Access, Cache API
+- **web.dev:** Core Web Vitals, Performance, SEO, Accessibility
+
+**Priority 2 (Weekly Use):**
+- **MDN Web Docs:** HTML/CSS/JS reference (gold standard)
+- **Can I Use:** Browser compatibility checking
+- **OWASP:** Security best practices
+
+**Priority 3 (Monthly Use):**
+- **PageSpeed Insights:** Performance scoring
+- **GTmetrix:** Detailed performance analysis
+- **WebPageTest:** Advanced testing
+
+**Priority 4 (As Needed):**
+- **IKS India:** Traditional knowledge integration
+- **IndiaAI Mission:** AI governance framework
+- **BHASHINI:** Indian language platform
+- **BIS:** Engineering standards
+- **AICTE:** Academic standards
+
+### Usage Workflow:
+1. Identify which documentation applies
+2. Ask for specific sections if needed
+3. Read official guidance
+4. Implement based on docs (not assumptions)
+5. Test against standards
+6. Validate with tools
+
+### Golden Rule #43:
+**Documentation-first approach** - Never guess implementation, always reference official docs, check compatibility, follow security guidelines, test performance.
+
+**Complete details:** See LEARNING_43_DOCUMENTATION_RESOURCES.md
+
+---
+
+**Last Updated:** December 6, 2025 - Added Learning #43 (Documentation Resources)  
+**Total Learnings:** 43 (from 42)  
+**Status:** ACTIVE - Complete knowledge partnership foundation
