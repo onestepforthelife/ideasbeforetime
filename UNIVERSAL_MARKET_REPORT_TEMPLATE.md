@@ -848,6 +848,308 @@ tr:last-child td {
 
 ---
 
+## 🚨 DATA vs GENERIC COMMENTARY (CRITICAL RULE!)
+
+### THE PROBLEM: AI-Generated Generic Fluff
+
+**What Happens:** AI creates 7 pages of generic commentary without actual data
+- "The market is growing..."
+- "Companies are focusing on innovation..."
+- "Sustainability is becoming important..."
+- "Competition is intensifying..."
+
+**Result:** 70% generic dialogue + 30% data = USELESS REPORT
+
+### THE SOLUTION: DATA-FIRST WRITING
+
+**Professional Standard:** 10% strategy/dialogue + 90% data/facts
+
+**Writing Formula:**
+```
+1 Topic Sentence (English dialogue/strategy)
++ 
+3-4 Data Sentences (NOUNS + DATA + ADJECTIVES + LOGIC)
+=
+Professional Paragraph
+```
+
+---
+
+### DATA DENSITY REQUIREMENTS
+
+**Every Report MUST Have:**
+- ✅ 130+ specific data points (numbers, percentages, values)
+- ✅ 18-22 data tables (not text descriptions)
+- ✅ 340+ numbers total (across all sections)
+- ✅ 50+ company names with specific data
+- ✅ 25+ geographic locations with specific data
+- ✅ 15+ time-specific data points (2024, 2025-2030, etc.)
+
+**Quality Check Formula:**
+```
+Word Count ÷ Data Points < 50
+
+Example:
+6,000 words ÷ 130 data points = 46 (PASS ✅)
+6,000 words ÷ 40 data points = 150 (FAIL ❌ - too much fluff)
+```
+
+---
+
+### BANNED PHRASES (Generic AI Fluff)
+
+**NEVER Use These Without Specific Data:**
+- ❌ "The market is growing" → ✅ "Market grew 15.3% to $4.2B in 2024"
+- ❌ "Companies are innovating" → ✅ "BASF filed 47 patents in 2024, up 23% YoY"
+- ❌ "Demand is increasing" → ✅ "Asia-Pacific demand rose 18% to 2.3M tons"
+- ❌ "Competition is intense" → ✅ "Top 5 players hold 67% share, HHI index 1,850"
+- ❌ "Prices are volatile" → ✅ "Price swung $200-450/ton (±38%) in Q3 2024"
+- ❌ "Sustainability matters" → ✅ "62% of buyers require ISO 14001 certification"
+- ❌ "Technology is advancing" → ✅ "Process efficiency improved 12% via catalyst X"
+- ❌ "Regulations are tightening" → ✅ "EU REACH added 8 substances to SVHC list"
+
+**Generic Fluff Indicators:**
+- Sentences without numbers
+- Vague adjectives (significant, substantial, considerable)
+- No company names
+- No geographic specifics
+- No time references
+- No units of measurement
+
+---
+
+### CORRECT WRITING EXAMPLES
+
+**❌ WRONG (Generic AI Commentary):**
+```
+The poloxamer market is experiencing significant growth driven by 
+increasing demand from pharmaceutical applications. Companies are 
+focusing on innovation and sustainability. The competitive landscape 
+is evolving with new entrants. Regulatory requirements are becoming 
+more stringent. Prices are influenced by raw material costs.
+```
+**Problems:** 5 sentences, ZERO data points, 100% generic fluff
+
+**✅ RIGHT (Data-Driven):**
+```
+The poloxamer market reached $847M in 2024, growing 8.3% YoY. 
+Pharmaceutical applications account for 58% ($492M), driven by 
+Poloxamer 188 demand for injectable formulations (23% CAGR). 
+BASF (Germany, 35% share), Croda (UK, 18%), and Solvay (Belgium, 12%) 
+dominate, with combined capacity of 180 ktpa across 14 sites. 
+EO/PO feedstock costs ($1,200-1,800/ton) drive 55-65% of production 
+cost, creating ±25% price volatility. EU REACH compliance requires 
+$2-5M per grade for registration dossiers.
+```
+**Success:** 6 sentences, 18 data points, 90% data + 10% context
+
+---
+
+### SECTION-BY-SECTION DATA REQUIREMENTS
+
+**Section 1: Executive Summary**
+- Minimum: 15 data points
+- Must include: Market size ($), CAGR (%), year, top 3 numbers
+- Example: "$4.2B market, 8.3% CAGR, 58% pharma share"
+
+**Section 2: Market Overview**
+- Minimum: 25 data points
+- Must include: Segmentation table (8+ rows), regional breakdown (6+ regions)
+- Example: "Asia-Pacific: $1.9B (45%), North America: $1.1B (26%)"
+
+**Section 3: Competitive Landscape**
+- Minimum: 30 data points
+- Must include: Top 10 companies with market share, capacity, revenue
+- Example: "BASF: 35% share, 65 ktpa capacity, €2.1B revenue"
+
+**Section 4: Drivers & Restraints**
+- Minimum: 20 data points
+- Must include: Growth rates, adoption percentages, cost impacts
+- Example: "Pharma demand +12% YoY, regulatory costs $2-5M per grade"
+
+**Section 5: Regional Analysis**
+- Minimum: 25 data points
+- Must include: Each region with size, growth, top 3 countries
+- Example: "China: $850M (45% of APAC), India: $380M (20%)"
+
+**Section 6: Technology**
+- Minimum: 15 data points
+- Must include: Patent counts, R&D spend, efficiency gains
+- Example: "47 patents filed in 2024, process efficiency +12%"
+
+**Section 7: Sustainability**
+- Minimum: 10 data points
+- Must include: Emission reductions, certification percentages, compliance costs
+- Example: "62% require ISO 14001, carbon footprint -18% since 2020"
+
+**Section 8: Supply Chain**
+- Minimum: 15 data points
+- Must include: Capacity numbers, supplier counts, lead times
+- Example: "Global capacity 180 ktpa across 14 sites, 85% utilization"
+
+**Section 9: Pricing**
+- Minimum: 12 data points
+- Must include: Price ranges, historical trends, regional differences
+- Example: "$25-40/kg pharma grade, $12-18/kg industrial, ±25% volatility"
+
+**Section 10: Recommendations**
+- Minimum: 8 data points
+- Must include: Investment amounts, ROI percentages, timeline specifics
+- Example: "Invest $5-8M in capacity, expect 18-22% ROI over 5 years"
+
+**Section 11: Appendix**
+- Minimum: 10 data points
+- Must include: Detailed tables, methodology specifics
+- Example: "142 companies surveyed, 28 data sources, 95% confidence"
+
+---
+
+### WRITING WORKFLOW (DATA-FIRST)
+
+**Step 1: Gather Data FIRST (Before Writing)**
+```
+☐ Collect 150+ data points in spreadsheet
+☐ Verify each number from 2+ sources
+☐ Organize by section
+☐ Create all tables FIRST
+☐ THEN start writing
+```
+
+**Step 2: Write Around Data (Not Data Around Writing)**
+```
+For each paragraph:
+1. Start with topic sentence (strategy/context)
+2. Add 3-4 data sentences (specific numbers)
+3. End with implication (what it means)
+
+Example:
+"Pharmaceutical applications dominate the market. [TOPIC]
+Poloxamer 188 accounts for $285M (58% of pharma segment), 
+growing 12% YoY driven by injectable formulations. 
+Poloxamer 407 contributes $142M (29%), focused on topical 
+and oral applications. Regulatory requirements (USP/EP/JP) 
+add $2-5M per grade for documentation. [DATA × 4]
+This creates high barriers for new entrants. [IMPLICATION]"
+```
+
+**Step 3: Verify Data Density**
+```
+☐ Count total data points (target: 130+)
+☐ Count total numbers (target: 340+)
+☐ Calculate word count ÷ data points (target: <50)
+☐ Check each section meets minimum
+☐ If fails, ADD MORE DATA (not more words)
+```
+
+---
+
+### QUALITY CHECK FORMULA
+
+**Before Saying "Report Complete":**
+
+```
+Total Data Points: _____ (minimum 130)
+Total Numbers: _____ (minimum 340)
+Total Tables: _____ (minimum 18)
+Word Count: _____ (target 5,000-8,000)
+
+Data Density = Word Count ÷ Data Points = _____
+
+✅ PASS if < 50
+❌ FAIL if > 50 (too much generic fluff)
+```
+
+**If FAIL:**
+- Don't add more words
+- ADD MORE DATA
+- Replace generic sentences with specific numbers
+- Add more tables
+- Include more company names with data
+- Add more geographic specifics
+
+---
+
+### EXAMPLES: BEFORE & AFTER
+
+**BEFORE (Generic AI Fluff - 150 words, 3 data points):**
+```
+The competitive landscape in the poloxamer market is characterized 
+by the presence of several key players who are focusing on innovation 
+and expansion strategies. Companies are investing in research and 
+development to create new products and improve existing ones. The 
+market is witnessing consolidation through mergers and acquisitions. 
+Players are also focusing on sustainability and environmental 
+compliance. Geographic expansion into emerging markets is a key 
+strategy. Companies are forming strategic partnerships to strengthen 
+their market position. The competitive intensity is expected to 
+increase in the coming years as new players enter the market.
+```
+
+**AFTER (Data-Driven - 150 words, 22 data points):**
+```
+BASF (Germany) leads with 35% market share ($296M revenue), operating 
+65 ktpa capacity across 3 sites (Ludwigshafen-DE, Geismar-US, 
+Shanghai-CN). Croda (UK) holds 18% ($152M), specializing in pharma-grade 
+with 22 ktpa capacity. Solvay (Belgium) commands 12% ($102M) via 
+18 ktpa capacity. Top 3 players control 65% share (HHI index 1,850). 
+BASF invested €45M in 2024 for capacity expansion (+15 ktpa by 2026). 
+Croda acquired specialty surfactant unit for $180M (2023), adding 
+8 ktpa. Patent activity: BASF 47 filings, Croda 23, Solvay 18 (2024). 
+R&D spend averages 4-6% of revenue. New entrants face $50-80M capex 
+for 10 ktpa plant plus $2-5M per grade for regulatory dossiers.
+```
+
+**Improvement:** Same word count, 7× more data points, 100% more useful
+
+---
+
+### FINAL DATA CHECKLIST
+
+**Before Publishing Report:**
+
+```
+☐ 130+ data points minimum
+☐ 340+ numbers total
+☐ 18-22 tables (not descriptions)
+☐ 50+ company names with specific data
+☐ 25+ geographic locations with data
+☐ 15+ time-specific references
+☐ Every claim backed by number
+☐ No generic sentences without data
+☐ Word count ÷ data points < 50
+☐ Each section meets minimum data requirements
+☐ All numbers verified from 2+ sources
+☐ Tables formatted consistently
+☐ Data density: 90% facts + 10% strategy
+☐ Zero generic AI fluff
+```
+
+**If ANY ☐ = NO → ADD MORE DATA (not more words)**
+
+---
+
+### THE GOLDEN RULE
+
+**Strategy/Dialogue = English Topic Sentences ONLY**
+**Everything Else = NOUNS + DATA + ADJECTIVES + LOGIC**
+
+**Professional Reports:**
+- 10% strategy/dialogue (context, implications)
+- 90% data/facts (numbers, names, specifics)
+
+**NOT:**
+- 70% generic commentary (AI fluff)
+- 30% data (useless report)
+
+**Remember:** 
+- AI generates commentary easily (worthless)
+- Data requires research (valuable)
+- Clients pay for DATA, not dialogue
+- 7 pages of fluff = waste of time
+- 7 pages of data = professional intelligence
+
+---
+
 ## 🔒 BLUR SYSTEM IMPLEMENTATION
 
 ### 30% Preview / 70% Blur Strategy
