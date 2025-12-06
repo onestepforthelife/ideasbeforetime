@@ -1,0 +1,242 @@
+# 🔄 SIMPLE BACKUP GUIDE
+## Backup Your Workspace Settings to Documents Folder
+
+**Created:** December 6, 2025  
+**Time Required:** 2 minutes  
+**Location:** C:\Users\araag\Documents
+
+---
+
+## 🎯 WHAT THIS DOES
+
+Backs up your workspace settings to Documents folder so you can:
+- ✅ Copy to OneDrive (auto-sync)
+- ✅ Copy to Google Drive
+- ✅ Access from any device
+- ✅ Restore if laptop fails
+
+---
+
+## 🚀 HOW TO BACKUP (2 MINUTES)
+
+### Step 1: Run Backup Script
+```
+1. Double-click: BACKUP_WORKSPACE_SETTINGS_NOW.bat
+2. Wait 30 seconds
+3. Done!
+```
+
+### Step 2: What Gets Backed Up
+```
+✅ All steering files (.kiro/steering/)
+   - KIRO_RULES.md
+   - 3_WEEKS_COMPLETE_LEARNINGS.md
+   - TRIGGER_KEYWORDS.md
+   - All other steering files
+
+✅ All settings (.kiro/settings/)
+   - MCP config
+   - Workspace settings
+
+✅ All documentation (.md, .txt)
+   - All guides
+   - All status files
+   - All instructions
+
+✅ All scripts (.bat)
+   - Automation scripts
+   - Backup scripts
+```
+
+### Step 3: Where It's Saved
+```
+Location: C:\Users\araag\Documents\Kiro_Workspace_Backup_[timestamp]
+
+Example: C:\Users\araag\Documents\Kiro_Workspace_Backup_20251206_1430
+
+You'll see a new folder with today's date and time!
+```
+
+---
+
+## 📤 COPY TO ONEDRIVE (1 MINUTE)
+
+### Option A: Drag and Drop
+```
+1. Open: C:\Users\araag\Documents\
+2. Find: Kiro_Workspace_Backup_[timestamp] folder
+3. Drag to: OneDrive folder
+4. OneDrive syncs automatically ✅
+```
+
+### Option B: Copy-Paste
+```
+1. Right-click: Kiro_Workspace_Backup_[timestamp] folder
+2. Click: Copy
+3. Open: OneDrive folder
+4. Right-click: Paste
+5. OneDrive syncs automatically ✅
+```
+
+---
+
+## 📤 COPY TO GOOGLE DRIVE (2 MINUTES)
+
+### Upload to Google Drive
+```
+1. Go to: drive.google.com
+2. Click: New → Folder upload
+3. Select: Kiro_Workspace_Backup_[timestamp] folder
+4. Wait for upload
+5. Done! ✅
+```
+
+---
+
+## 🆘 HOW TO RESTORE (5 MINUTES)
+
+### If You Need to Restore on New Device:
+
+**Step 1: Download Backup**
+```
+From OneDrive:
+1. Open OneDrive.com
+2. Find: Kiro_Workspace_Backup_[timestamp]
+3. Download folder
+4. Extract to: C:\Users\[new-username]\Documents\
+
+From Google Drive:
+1. Open drive.google.com
+2. Find: Kiro_Workspace_Backup_[timestamp]
+3. Download folder
+4. Extract to: C:\Users\[new-username]\Documents\
+```
+
+**Step 2: Copy Settings Back**
+```
+1. Open: Downloaded backup folder
+2. Copy: .kiro folder
+3. Paste to: Your Cloudfare workspace folder
+4. Restart Kiro
+5. All settings restored! ✅
+```
+
+---
+
+## 📋 BACKUP SCHEDULE
+
+### Daily (Automatic):
+```
+✅ GitHub auto-syncs code (already setup)
+```
+
+### Weekly (2 minutes):
+```
+1. Run: BACKUP_WORKSPACE_SETTINGS_NOW.bat
+2. Copy to: OneDrive
+3. Upload to: Google Drive
+4. Done!
+```
+
+### Monthly (5 minutes):
+```
+1. Run backup
+2. Test restore on different device
+3. Verify all files accessible
+4. Clean up old backups (keep last 3)
+```
+
+---
+
+## 🎯 WHAT'S PROTECTED
+
+### Your Kiro Brain (Steering Files):
+```
+✅ All rules and learnings
+✅ All test parameters
+✅ All workflows
+✅ All documentation
+```
+
+### Your Settings:
+```
+✅ MCP configuration
+✅ Workspace settings
+✅ Extension settings
+```
+
+### Your Work:
+```
+✅ All guides
+✅ All scripts
+✅ All documentation
+```
+
+---
+
+## 💡 QUICK TIPS
+
+### Keep Multiple Backups:
+```
+✅ OneDrive: Auto-sync (primary)
+✅ Google Drive: Weekly upload (secondary)
+✅ Documents folder: Local copy (tertiary)
+```
+
+### Name Your Backups:
+```
+The script automatically adds timestamp:
+Kiro_Workspace_Backup_20251206_1430
+
+This way you can keep multiple versions!
+```
+
+### Clean Up Old Backups:
+```
+Keep last 3 backups:
+- This week
+- Last week
+- 2 weeks ago
+
+Delete older ones to save space.
+```
+
+---
+
+## ✅ COMPLETE CHECKLIST
+
+```
+☐ Run BACKUP_WORKSPACE_SETTINGS_NOW.bat
+☐ Verify backup folder created in Documents
+☐ Copy to OneDrive folder
+☐ Upload to Google Drive
+☐ Test opening backup folder
+☐ Verify all files present
+☐ Schedule weekly backups
+```
+
+---
+
+## 🎉 YOU'RE PROTECTED!
+
+**With this simple system:**
+- ✅ 2 minutes to backup
+- ✅ 5 minutes to restore
+- ✅ Work from any device
+- ✅ Never lose your Kiro brain
+- ✅ All FREE (OneDrive + Google Drive)
+
+**Next Steps:**
+1. Run BACKUP_WORKSPACE_SETTINGS_NOW.bat now
+2. Copy to OneDrive (1 minute)
+3. Upload to Google Drive (2 minutes)
+4. Done! Your business is protected! 🎉
+
+---
+
+**Last Updated:** December 6, 2025  
+**Status:** READY TO USE  
+**Time Required:** 2 minutes backup + 3 minutes upload  
+**Cost:** FREE
+
+**REMEMBER: Run backup weekly to keep everything safe!**
