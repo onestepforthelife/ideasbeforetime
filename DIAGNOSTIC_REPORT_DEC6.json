@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-12-06T11:19:10.723Z",
-  "totalFiles": 180,
+  "timestamp": "2025-12-06T14:55:19.998Z",
+  "totalFiles": 182,
   "totalIssues": 2,
   "issues": {
     "file": [],
@@ -23,9 +23,10 @@
         "type": "FILE",
         "files": [
           "email-template.html",
-          "nickel-esg-report-protected.html"
+          "nickel-esg-report-protected.html",
+          "UNIVERSAL_MARKET_REPORT_TEMPLATE.html"
         ],
-        "issue": "2 pages missing navigation",
+        "issue": "3 pages missing navigation",
         "fix": "Add <script src=\"common-navigation.js\"></script>"
       }
     ],
@@ -34,9 +35,10 @@
         "type": "FILE",
         "files": [
           "email-template.html",
-          "nickel-esg-report-protected.html"
+          "nickel-esg-report-protected.html",
+          "UNIVERSAL_MARKET_REPORT_TEMPLATE.html"
         ],
-        "issue": "2 pages missing footer",
+        "issue": "3 pages missing footer",
         "fix": "Add <script src=\"common-footer.js\"></script>"
       }
     ],

@@ -69,7 +69,29 @@ async function testLiveSite() {
       results.failed.push('❌ Blog posts missing');
     }
 
-    // Test 7: No console errors
+    // Test 6: All links work (no broken links)
+    console.log('Test 6: Checking all links...');
+    await page.goto(SITE_URL);
+    const links = await page.locator('a[href]').all();
+    let brokenLinks = 0;
+    for (const link of links.slice(0, 20)) { // Check first 20 links
+      const href = await link.getAttribute('href');
+      if (href && href.startsWith('http')) {
+        try {
+          const response = await page.request.get(href);
+          if (response.status() >= 400) brokenLinks++;
+        } catch (e) {
+          brokenLinks++;
+        }
+      }
+    }
+    if (brokenLinks === 0) {
+      results.passed.push('✅ All links working');
+    } else {
+      results.failed.push(`❌ ${brokenLinks} broken links`);
+    }
+
+    // Test 7: Console errors with details
     console.log('Test 7: Console errors check...');
     const consoleErrors = [];
     page.on('console', msg => {
@@ -78,15 +100,88 @@ async function testLiveSite() {
       }
     });
     await page.goto(SITE_URL);
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(3000);
     if (consoleErrors.length === 0) {
       results.passed.push('✅ No console errors');
     } else {
       results.failed.push(`❌ ${consoleErrors.length} console errors`);
+      console.log('\n🔍 Console Errors Found:');
+      consoleErrors.slice(0, 5).forEach((err, i) => {
+        console.log(`   ${i + 1}. ${err.substring(0, 100)}...`);
+      });
     }
 
-    // Test 8: Mobile responsive
-    console.log('Test 8: Mobile responsive...');
+    // Test 8: Visual consistency (alignment, spacing)
+    console.log('Test 8: Visual consistency...');
+    await page.goto(SITE_URL);
+    const header = await page.locator('header, nav').first();
+    const headerBox = await header.boundingBox();
+    const body = await page.locator('body');
+    const bodyStyles = await body.evaluate(el => {
+      const styles = window.getComputedStyle(el);
+      return {
+        maxWidth: styles.maxWidth,
+        margin: styles.margin,
+        padding: styles.padding
+      };
+    });
+    
+    // Check if header is properly aligned (not centered when should be top)
+    if (headerBox && headerBox.y < 100) {
+      results.passed.push('✅ Header properly positioned');
+    } else {
+      results.warnings.push('⚠️  Header alignment issue');
+    }
+
+    // Test 9: Typography & Formatting
+    console.log('Test 9: Typography check...');
+    const h1 = await page.locator('h1').first();
+    if (await h1.count() > 0) {
+      const h1Styles = await h1.evaluate(el => {
+        const styles = window.getComputedStyle(el);
+        return {
+          fontSize: styles.fontSize,
+          fontWeight: styles.fontWeight,
+          lineHeight: styles.lineHeight
+        };
+      });
+      // Check if h1 is properly styled (not default browser styles)
+      const fontSize = parseInt(h1Styles.fontSize);
+      if (fontSize >= 24) {
+        results.passed.push('✅ Typography properly styled');
+      } else {
+        results.warnings.push('⚠️  Typography may need improvement');
+      }
+    }
+
+    // Test 10: Color consistency (no purple #667eea, #764ba2)
+    console.log('Test 10: Color consistency...');
+    const purpleElements = await page.evaluate(() => {
+      const allElements = document.querySelectorAll('*');
+      let purpleCount = 0;
+      const purpleColors = ['#667eea', '#764ba2', 'rgb(102, 126, 234)', 'rgb(118, 75, 162)'];
+      
+      allElements.forEach(el => {
+        const styles = window.getComputedStyle(el);
+        const color = styles.color;
+        const bgColor = styles.backgroundColor;
+        const borderColor = styles.borderColor;
+        
+        if (purpleColors.some(p => color.includes(p) || bgColor.includes(p) || borderColor.includes(p))) {
+          purpleCount++;
+        }
+      });
+      return purpleCount;
+    });
+    
+    if (purpleElements === 0) {
+      results.passed.push('✅ No purple colors found');
+    } else {
+      results.failed.push(`❌ ${purpleElements} elements with purple colors`);
+    }
+
+    // Test 11: Mobile responsive
+    console.log('Test 11: Mobile responsive...');
     await page.setViewportSize({ width: 375, height: 667 });
     await page.goto(SITE_URL);
     const mobileNav = await page.locator('nav').isVisible();
@@ -94,6 +189,23 @@ async function testLiveSite() {
       results.passed.push('✅ Mobile responsive');
     } else {
       results.warnings.push('⚠️  Mobile navigation unclear');
+    }
+
+    // Test 12: Page load performance
+    console.log('Test 12: Performance check...');
+    await page.goto(SITE_URL, { waitUntil: 'load' });
+    const performanceMetrics = await page.evaluate(() => {
+      const perfData = performance.getEntriesByType('navigation')[0];
+      return {
+        loadTime: perfData.loadEventEnd - perfData.fetchStart,
+        domContentLoaded: perfData.domContentLoadedEventEnd - perfData.fetchStart
+      };
+    });
+    
+    if (performanceMetrics.loadTime < 3000) {
+      results.passed.push(`✅ Fast load time (${Math.round(performanceMetrics.loadTime)}ms)`);
+    } else {
+      results.warnings.push(`⚠️  Slow load time (${Math.round(performanceMetrics.loadTime)}ms)`);
     }
 
   } catch (error) {

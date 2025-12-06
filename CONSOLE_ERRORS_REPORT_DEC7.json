@@ -1,0 +1,1462 @@
+{
+  "timestamp": "2025-12-06T15:31:56.926Z",
+  "filesChecked": 307,
+  "totalIssues": 242,
+  "high": 1,
+  "medium": 0,
+  "low": 241,
+  "issues": [
+    {
+      "file": "astronomy.html",
+      "type": "Console statements",
+      "detail": "4 console.* calls found",
+      "severity": "LOW"
+    },
+    {
+      "file": "email-sender-web.html",
+      "type": "Console statements",
+      "detail": "3 console.* calls found",
+      "severity": "LOW"
+    },
+    {
+      "file": "error-dashboard.html",
+      "type": "Missing JavaScript file",
+      "detail": "Script not found: user-error-tracker.js",
+      "severity": "HIGH"
+    },
+    {
+      "file": "job-dashboard.html",
+      "type": "Console statements",
+      "detail": "1 console.* calls found",
+      "severity": "LOW"
+    },
+    {
+      "file": "jobs.html",
+      "type": "Console statements",
+      "detail": "1 console.* calls found",
+      "severity": "LOW"
+    },
+    {
+      "file": "linkedin-auto-scroller.html",
+      "type": "Console statements",
+      "detail": "13 console.* calls found",
+      "severity": "LOW"
+    },
+    {
+      "file": "request-access.html",
+      "type": "Console statements",
+      "detail": "1 console.* calls found",
+      "severity": "LOW"
+    },
+    {
+      "file": "ro-service-checklist.html",
+      "type": "Console statements",
+      "detail": "1 console.* calls found",
+      "severity": "LOW"
+    },
+    {
+      "file": "social-optimizer-app.html",
+      "type": "Console statements",
+      "detail": "10 console.* calls found",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-30-percent-preview.js",
+      "type": "Console statements in JS",
+      "detail": "14 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-30-percent-preview.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-astronomy-to-site.js",
+      "type": "Console statements in JS",
+      "detail": "20 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-astronomy-to-site.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-basic-data-section-complete.js",
+      "type": "Console statements in JS",
+      "detail": "8 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-basic-data-section-complete.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-complete-cross-linking.js",
+      "type": "Console statements in JS",
+      "detail": "23 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-complete-cross-linking.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-linkedin-posts-to-blog.js",
+      "type": "Console statements in JS",
+      "detail": "15 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-linkedin-posts-to-blog.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-nickel-part1.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-nickel-specifications.js",
+      "type": "Console statements in JS",
+      "detail": "15 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-nickel-specifications.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-social-share-buttons.js",
+      "type": "Console statements in JS",
+      "detail": "3 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-social-share-buttons.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-solar-system-to-homepage.js",
+      "type": "Console statements in JS",
+      "detail": "2 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "add-solar-system-to-homepage.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "ADD_BLUR_AND_EMAIL_TO_REPORTS.js",
+      "type": "Console statements in JS",
+      "detail": "13 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "ADD_BLUR_AND_EMAIL_TO_REPORTS.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "ADD_BLUR_SYSTEM_FINAL.js",
+      "type": "Console statements in JS",
+      "detail": "12 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "ADD_BLUR_SYSTEM_FINAL.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "ai-config.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "AI_MULTI_PROVIDER_FAILOVER.js",
+      "type": "Console statements in JS",
+      "detail": "8 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "AI_MULTI_PROVIDER_FAILOVER.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "apply-ux-improvements.js",
+      "type": "Console statements in JS",
+      "detail": "25 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "apply-ux-improvements.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "auto-heal-system.js",
+      "type": "Console statements in JS",
+      "detail": "4 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "auto-heal-system.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "auto-verify-before-response.js",
+      "type": "Console statements in JS",
+      "detail": "37 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "auto-verify-before-response.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "automated-site-tester.js",
+      "type": "Console statements in JS",
+      "detail": "22 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "automated-site-tester.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "backend-logic-tracker.js",
+      "type": "Console statements in JS",
+      "detail": "7 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "backend-logic-tracker.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "chat-ai-widget.js",
+      "type": "Console statements in JS",
+      "detail": "2 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "chat-ai-widget.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-all-links-comprehensive.js",
+      "type": "Console statements in JS",
+      "detail": "53 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-all-links-comprehensive.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-all-pages-comprehensive.js",
+      "type": "Console statements in JS",
+      "detail": "48 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-all-pages-comprehensive.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-blog-posts-live.js",
+      "type": "Console statements in JS",
+      "detail": "7 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-blog-posts-live.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-blog-visibility-live.js",
+      "type": "Console statements in JS",
+      "detail": "20 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-blog-visibility-live.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-deployment-errors.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-homepage-links.js",
+      "type": "Console statements in JS",
+      "detail": "17 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-homepage-links.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-live-blog-status.js",
+      "type": "Console statements in JS",
+      "detail": "11 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-live-blog-status.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-live-deployment.js",
+      "type": "Console statements in JS",
+      "detail": "16 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-live-deployment.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-live-orphans.js",
+      "type": "Console statements in JS",
+      "detail": "7 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-live-orphans.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-live-site-comprehensive.js",
+      "type": "Console statements in JS",
+      "detail": "11 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-live-site-comprehensive.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-live-site-now.js",
+      "type": "Console statements in JS",
+      "detail": "35 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-live-site-now.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-live-site-visual-issues.js",
+      "type": "Console statements in JS",
+      "detail": "39 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-live-site-visual-issues.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-redirects-dec5.js",
+      "type": "Console statements in JS",
+      "detail": "15 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "check-redirects-dec5.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "common-disclaimer.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "common-footer.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "common-navigation.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "compare-backup-vs-current.js",
+      "type": "Console statements in JS",
+      "detail": "56 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "compare-backup-vs-current.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "complete-blog-enhancements.js",
+      "type": "Console statements in JS",
+      "detail": "20 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "complete-blog-enhancements.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "complete-new-page-workflow.js",
+      "type": "Console statements in JS",
+      "detail": "34 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "complete-new-page-workflow.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "COMPLETE_DIAGNOSTIC_DEC6.js",
+      "type": "Console statements in JS",
+      "detail": "14 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "COMPLETE_DIAGNOSTIC_DEC6.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "COMPLETE_SYSTEMATIC_CHECK_DEC6.js",
+      "type": "Console statements in JS",
+      "detail": "69 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "COMPLETE_SYSTEMATIC_CHECK_DEC6.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "comprehensive-final-review.js",
+      "type": "Console statements in JS",
+      "detail": "57 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "comprehensive-final-review.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "comprehensive-site-check-new-domain.js",
+      "type": "Console statements in JS",
+      "detail": "25 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "comprehensive-site-check-new-domain.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "COMPREHENSIVE_LIVE_SITE_CHECK_DEC6.js",
+      "type": "Console statements in JS",
+      "detail": "54 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "COMPREHENSIVE_LIVE_SITE_CHECK_DEC6.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "COMPREHENSIVE_SITE_AUDIT_DEC5.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "COMPREHENSIVE_SITE_AUDIT_DEC7.js",
+      "type": "Console statements in JS",
+      "detail": "15 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "COMPREHENSIVE_SITE_AUDIT_DEC7.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "COMPREHENSIVE_SITE_DIAGNOSTIC_DEC6.js",
+      "type": "Console statements in JS",
+      "detail": "49 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "COMPREHENSIVE_SITE_DIAGNOSTIC_DEC6.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "create-all-blog-posts.js",
+      "type": "Console statements in JS",
+      "detail": "25 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "create-all-blog-posts.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "create-short-links.js",
+      "type": "Console statements in JS",
+      "detail": "13 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "create-short-links.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "CRITICAL_DIAGNOSTIC_DEC6.js",
+      "type": "Console statements in JS",
+      "detail": "64 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "CRITICAL_DIAGNOSTIC_DEC6.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "CRITICAL_LIVE_SITE_DIAGNOSTIC_DEC6.js",
+      "type": "Console statements in JS",
+      "detail": "59 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "CRITICAL_LIVE_SITE_DIAGNOSTIC_DEC6.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "currency-detector.js",
+      "type": "Console statements in JS",
+      "detail": "4 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "currency-detector.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "deploy-error-tracking.js",
+      "type": "Console statements in JS",
+      "detail": "25 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "deploy-error-tracking.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "error-reporter-email.js",
+      "type": "Console statements in JS",
+      "detail": "5 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "error-reporter-email.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "error-tracker-google-analytics.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "error-tracker.js",
+      "type": "Console statements in JS",
+      "detail": "5 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "execute-daily-improvements.js",
+      "type": "Console statements in JS",
+      "detail": "31 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "execute-daily-improvements.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "final-check-before-push.js",
+      "type": "Console statements in JS",
+      "detail": "64 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "final-check-before-push.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "final-site-check-dec5.js",
+      "type": "Console statements in JS",
+      "detail": "32 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "final-site-check-dec5.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "final-verification-all-members.js",
+      "type": "Console statements in JS",
+      "detail": "32 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "final-verification-all-members.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "find-orphaned-pages.js",
+      "type": "Console statements in JS",
+      "detail": "17 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "find-orphaned-pages.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "fix-all-proactive-issues-dec6.js",
+      "type": "Console statements in JS",
+      "detail": "14 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "fix-all-proactive-issues-dec6.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "fix-all-remaining-issues-final.js",
+      "type": "Console statements in JS",
+      "detail": "17 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "fix-all-remaining-issues-final.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "fix-final-75-issues.js",
+      "type": "Console statements in JS",
+      "detail": "17 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "fix-final-75-issues.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "fix-header-consistency.js",
+      "type": "Console statements in JS",
+      "detail": "16 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "fix-header-consistency.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "fix-remaining-84-issues.js",
+      "type": "Console statements in JS",
+      "detail": "16 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "fix-remaining-84-issues.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "FIX_ALL_CRITICAL_ISSUES_DEC6.js",
+      "type": "Console statements in JS",
+      "detail": "40 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "FIX_ALL_CRITICAL_ISSUES_DEC6.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "FIX_ALL_REPORTS_FINAL.js",
+      "type": "Console statements in JS",
+      "detail": "13 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "FIX_ALL_REPORTS_FINAL.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "FIX_ALL_SITE_ISSUES_DEC7.js",
+      "type": "Console statements in JS",
+      "detail": "13 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "FIX_ALL_SITE_ISSUES_DEC7.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "generate-sitemap.js",
+      "type": "Console statements in JS",
+      "detail": "4 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "generate-sitemap.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "goda-chat-widget.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "google-adsense.js",
+      "type": "Console statements in JS",
+      "detail": "3 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "google-adsense.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "identify-console-errors.js",
+      "type": "Console statements in JS",
+      "detail": "30 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "improve-spo-complete.js",
+      "type": "Console statements in JS",
+      "detail": "55 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "improve-spo-complete.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "insert-nickel-tables.js",
+      "type": "Console statements in JS",
+      "detail": "12 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "insert-nickel-tables.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "job-api-client.js",
+      "type": "Console statements in JS",
+      "detail": "9 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "job-api-client.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "job-credits-system.js",
+      "type": "Console statements in JS",
+      "detail": "1 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "job-credits-system.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "KIRO_ENFORCEMENT_CHECKLIST.js",
+      "type": "Console statements in JS",
+      "detail": "21 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "KIRO_ENFORCEMENT_CHECKLIST.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "KIRO_MISTAKE_PATTERN_ANALYZER.js",
+      "type": "Console statements in JS",
+      "detail": "61 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "KIRO_MISTAKE_PATTERN_ANALYZER.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "KIRO_PROACTIVE_CHECKER.js",
+      "type": "Console statements in JS",
+      "detail": "47 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "KIRO_PROACTIVE_CHECKER.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "make-pages-engaging.js",
+      "type": "Console statements in JS",
+      "detail": "15 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "make-pages-engaging.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "MASTER_RULE_ENFORCER.js",
+      "type": "Console statements in JS",
+      "detail": "37 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "MASTER_RULE_ENFORCER.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "MASTER_VERIFICATION_FINAL.js",
+      "type": "Console statements in JS",
+      "detail": "70 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "MASTER_VERIFICATION_FINAL.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "monitor-live-site.js",
+      "type": "Console statements in JS",
+      "detail": "14 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "monitor-live-site.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "optimize-2025-standards.js",
+      "type": "Console statements in JS",
+      "detail": "28 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "optimize-2025-standards.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "optimize-performance-dec6.js",
+      "type": "Console statements in JS",
+      "detail": "32 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "optimize-performance-dec6.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "optimize-site-real-capabilities.js",
+      "type": "Console statements in JS",
+      "detail": "21 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "optimize-site-real-capabilities.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "payment-selector.js",
+      "type": "Console statements in JS",
+      "detail": "1 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "payment-selector.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "pdf-to-text-auto.js",
+      "type": "Console statements in JS",
+      "detail": "14 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "pdf-to-text-auto.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "PROACTIVE_FINAL_CHECK.js",
+      "type": "Console statements in JS",
+      "detail": "44 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "PROACTIVE_FINAL_CHECK.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "process-linkedin-posts.js",
+      "type": "Console statements in JS",
+      "detail": "15 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "process-linkedin-posts.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "quick-site-check.js",
+      "type": "Console statements in JS",
+      "detail": "6 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "quick-site-check.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "remove-all-passwords.js",
+      "type": "Console statements in JS",
+      "detail": "24 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "remove-all-passwords.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "remove-amazon-affiliate-from-ro.js",
+      "type": "Console statements in JS",
+      "detail": "3 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "remove-amazon-affiliate-from-ro.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "reorganize-blog-logical.js",
+      "type": "Console statements in JS",
+      "detail": "27 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "reorganize-blog-logical.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "social-optimizer-ai-engine.js",
+      "type": "Console statements in JS",
+      "detail": "1 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "social-optimizer-ai-engine.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "social-optimizer-analytics.js",
+      "type": "Console statements in JS",
+      "detail": "21 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "social-optimizer-analytics.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "social-optimizer-app.js",
+      "type": "Console statements in JS",
+      "detail": "14 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "social-optimizer-app.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "solar-system-3d.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "sw.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "sync-linkedin-profile.js",
+      "type": "Console statements in JS",
+      "detail": "8 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "sync-linkedin-profile.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "sync-linkedin-public-profile.js",
+      "type": "Console statements in JS",
+      "detail": "19 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "sync-linkedin-public-profile.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-308-redirect-details.js",
+      "type": "Console statements in JS",
+      "detail": "26 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-308-redirect-details.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-content-consistency.js",
+      "type": "Console statements in JS",
+      "detail": "53 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-content-consistency.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-double-headers.js",
+      "type": "Console statements in JS",
+      "detail": "12 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-double-headers.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-for-common-mistakes.js",
+      "type": "Console statements in JS",
+      "detail": "56 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-for-common-mistakes.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-industry-standards.js",
+      "type": "Console statements in JS",
+      "detail": "70 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-industry-standards.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-request-access.js",
+      "type": "Console statements in JS",
+      "detail": "66 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-request-access.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-site-consistency.js",
+      "type": "Console statements in JS",
+      "detail": "37 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-site-consistency.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-spo-complete-flow.js",
+      "type": "Console statements in JS",
+      "detail": "50 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-spo-complete-flow.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-spo-complete-user-flow.js",
+      "type": "Console statements in JS",
+      "detail": "92 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-spo-complete-user-flow.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-spo-payment-flow.js",
+      "type": "Console statements in JS",
+      "detail": "76 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "test-spo-payment-flow.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "universal-analytics.js",
+      "type": "Console statements in JS",
+      "detail": "13 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "universal-analytics.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "update-amazon-affiliate-id.js",
+      "type": "Console statements in JS",
+      "detail": "6 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "update-amazon-affiliate-id.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "update-to-new-domain.js",
+      "type": "Console statements in JS",
+      "detail": "12 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "update-to-new-domain.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "verify-before-push.js",
+      "type": "Console statements in JS",
+      "detail": "26 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "verify-before-push.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "verify-family-data.js",
+      "type": "Console statements in JS",
+      "detail": "31 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "verify-family-data.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "verify-live-deployment-dec5.js",
+      "type": "Console statements in JS",
+      "detail": "21 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "verify-live-deployment-dec5.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "verify-new-domain-deployment.js",
+      "type": "Console statements in JS",
+      "detail": "24 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "verify-new-domain-deployment.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "verify-orphan-fixes-live.js",
+      "type": "Console statements in JS",
+      "detail": "18 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "verify-orphan-fixes-live.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "verify-past-corrections.js",
+      "type": "Console statements in JS",
+      "detail": "21 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "verify-past-corrections.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "workspace-cleanup-dec6.js",
+      "type": "Console statements in JS",
+      "detail": "36 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "workspace-cleanup-dec6.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "workspace-cleanup-dec7.js",
+      "type": "Console statements in JS",
+      "detail": "56 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "workspace-cleanup-dec7.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    },
+    {
+      "file": "world-class-now.js",
+      "type": "Console statements in JS",
+      "detail": "44 console.* calls",
+      "severity": "LOW"
+    },
+    {
+      "file": "world-class-now.js",
+      "type": "No strict mode",
+      "detail": "Missing \"use strict\" - can cause silent errors",
+      "severity": "LOW"
+    }
+  ]
+}

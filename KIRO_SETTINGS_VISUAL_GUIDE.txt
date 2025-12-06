@@ -1,0 +1,242 @@
+# 🎯 KIRO AUTONOMY MODE - VISUAL LOCATION GUIDE
+
+**Created:** December 7, 2025
+**Purpose:** Show EXACTLY where to find the setting
+
+---
+
+## 📍 WHERE IS THE SETTING?
+
+### LOCATION: Kiro IDE Settings Panel
+
+**The setting is in Kiro IDE itself, NOT in:**
+- ❌ Windows Settings
+- ❌ Browser settings
+- ❌ File explorer
+- ❌ Command line/terminal
+- ❌ Any external program
+
+**It's in:**
+- ✅ Kiro IDE Settings (inside the Kiro application)
+
+---
+
+## 🔍 STEP-BY-STEP WITH VISUAL DESCRIPTION
+
+### Step 1: Open Kiro Settings Panel
+
+**Method 1 (Fastest):**
+```
+Press: Ctrl + , (Control key + Comma key together)
+```
+
+**Method 2 (Menu):**
+```
+1. Look at top-left corner of Kiro window
+2. Click: "File" menu
+3. Click: "Preferences" 
+4. Click: "Settings"
+```
+
+**What you'll see:**
+- A panel opens on the RIGHT side of Kiro window
+- Title at top says: "Settings"
+- Search box at the very top
+- List of settings below
+
+---
+
+### Step 2: Search for Autonomy Setting
+
+**In the search box at top of Settings panel:**
+```
+Type: autonomy
+```
+
+**What happens:**
+- Settings list filters automatically
+- You'll see only settings with "autonomy" in the name
+- Should see: "Kiro: Autonomy Mode"
+
+**Visual description:**
+```
+┌─────────────────────────────────────┐
+│ Settings                      [X]   │ ← Settings panel header
+├─────────────────────────────────────┤
+│ 🔍 Search settings...               │ ← Search box (type "autonomy" here)
+├─────────────────────────────────────┤
+│                                     │
+│ Kiro: Autonomy Mode                 │ ← This is what you're looking for!
+│ [Supervised ▼]                      │ ← Dropdown menu (click this)
+│                                     │
+│ Controls how Kiro makes changes     │ ← Description
+│                                     │
+└─────────────────────────────────────┘
+```
+
+---
+
+### Step 3: Change the Setting
+
+**Click the dropdown menu:**
+```
+Current: [Supervised ▼]
+Click: The dropdown arrow (▼)
+```
+
+**Dropdown opens showing options:**
+```
+┌─────────────────┐
+│ Supervised  ✓   │ ← Currently selected
+│ Autopilot       │ ← Click this one!
+└─────────────────┘
+```
+
+**Click: "Autopilot"**
+
+**What happens:**
+- Dropdown closes
+- Now shows: [Autopilot ▼]
+- Setting saves automatically (no save button needed)
+
+---
+
+### Step 4: Verify It Worked
+
+**Look at the dropdown:**
+```
+Before: [Supervised ▼]
+After:  [Autopilot ▼]
+```
+
+**If it says "Autopilot" → Success! ✅**
+
+---
+
+## 🖼️ VISUAL REFERENCE
+
+### Where is Kiro Settings?
+
+```
+Kiro IDE Window:
+┌────────────────────────────────────────────────────────────┐
+│ File  Edit  View  Terminal  Help              [_ □ X]     │ ← Top menu bar
+├────────────────────────────────────────────────────────────┤
+│ 📁 Explorer    📄 Your files here                          │
+│                                                            │
+│                                                            │
+│                                                            │
+│                                                            │
+│                                                            │
+│                                                            │
+└────────────────────────────────────────────────────────────┘
+
+Press Ctrl + , and Settings panel opens on RIGHT side:
+
+┌────────────────────────────────────────────────────────────┐
+│ File  Edit  View  Terminal  Help              [_ □ X]     │
+├──────────────────────────────────┬─────────────────────────┤
+│ 📁 Explorer    📄 Your files     │ ⚙️ Settings        [X] │ ← Settings panel
+│                                  ├─────────────────────────┤
+│                                  │ 🔍 Search settings...   │ ← Type "autonomy"
+│                                  ├─────────────────────────┤
+│                                  │ Kiro: Autonomy Mode     │
+│                                  │ [Supervised ▼]          │ ← Click dropdown
+│                                  │                         │
+│                                  │ Controls how Kiro...    │
+└──────────────────────────────────┴─────────────────────────┘
+```
+
+---
+
+## 🎯 EXACT LOCATION SUMMARY
+
+**Where:** Inside Kiro IDE application
+**How to open:** Press `Ctrl + ,` (or File → Preferences → Settings)
+**Where it appears:** Right side panel
+**Search for:** Type "autonomy" in search box
+**Setting name:** "Kiro: Autonomy Mode"
+**Current value:** "Supervised"
+**Change to:** "Autopilot"
+**How to change:** Click dropdown → Select "Autopilot"
+
+---
+
+## ❓ TROUBLESHOOTING
+
+### "I pressed Ctrl + , but nothing happened"
+- Make sure Kiro IDE window is active (click on it first)
+- Try: File menu → Preferences → Settings
+
+### "I don't see a search box"
+- Look at the very top of the Settings panel
+- It should say "Search settings..."
+- If not visible, try closing and reopening Settings
+
+### "I typed 'autonomy' but nothing shows"
+- Check spelling: a-u-t-o-n-o-m-y
+- Try scrolling down in Settings panel
+- Try: File → Preferences → Settings (reopen)
+
+### "I don't see 'Autopilot' option"
+- Make sure you have latest Kiro version
+- Try: Help → Check for Updates
+- Restart Kiro IDE
+
+### "The dropdown won't open"
+- Click directly on the dropdown arrow (▼)
+- Or click on the text "[Supervised ▼]"
+- Try clicking a few times
+
+---
+
+## ✅ SUCCESS INDICATORS
+
+**You'll know it worked when:**
+1. ✅ Dropdown shows "Autopilot" (not "Supervised")
+2. ✅ No error messages appear
+3. ✅ Settings panel still open (didn't crash)
+
+**To double-check:**
+1. Close Settings panel (X button or Escape key)
+2. Reopen Settings (Ctrl + ,)
+3. Search: "autonomy"
+4. Should still show: [Autopilot ▼]
+
+---
+
+## 🚀 WHAT HAPPENS AFTER CHANGE
+
+**Immediately:**
+- Setting saves automatically
+- No restart needed
+- Kiro now in Autopilot mode
+
+**Next time you ask Kiro to fix something:**
+- Before: Kiro asks "Should I make this change?"
+- After: Kiro makes change automatically ✅
+
+---
+
+## 📝 QUICK REFERENCE CARD
+
+```
+┌─────────────────────────────────────────┐
+│  KIRO AUTONOMY MODE SETTING             │
+├─────────────────────────────────────────┤
+│  Location: Kiro IDE Settings            │
+│  Shortcut: Ctrl + ,                     │
+│  Search: "autonomy"                     │
+│  Setting: Kiro: Autonomy Mode           │
+│  Change: Supervised → Autopilot         │
+│  Time: 30 seconds                       │
+└─────────────────────────────────────────┘
+```
+
+---
+
+**Status:** Complete visual guide
+**Time needed:** 30 seconds
+**Difficulty:** Very easy
+
+**JUST PRESS Ctrl + , → TYPE "autonomy" → CLICK DROPDOWN → SELECT "Autopilot" → DONE!** ✅
