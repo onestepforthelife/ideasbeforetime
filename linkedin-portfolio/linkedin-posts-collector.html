@@ -13,13 +13,13 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5a6c7d 0%, #5a6c7d 100%);
             min-height: 100vh;
             padding: 40px 20px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
             border-radius: 20px;
@@ -28,7 +28,7 @@
         }
 
         h1 {
-            color: #667eea;
+            color: #5a6c7d;
             margin-bottom: 10px;
             font-size: 2.5em;
         }
@@ -44,11 +44,11 @@
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 30px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #5a6c7d;
         }
 
         .instructions h3 {
-            color: #667eea;
+            color: #5a6c7d;
             margin-bottom: 10px;
         }
 
@@ -84,11 +84,11 @@
 
         input:focus, textarea:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #5a6c7d;
         }
 
         .btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5a6c7d 0%, #5a6c7d 100%);
             color: white;
             border: none;
             padding: 15px 30px;
@@ -117,12 +117,12 @@
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 15px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #5a6c7d;
         }
 
         .post-title {
             font-weight: 600;
-            color: #667eea;
+            color: #5a6c7d;
             margin-bottom: 5px;
         }
 
@@ -147,7 +147,7 @@
         }
 
         .stats {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5a6c7d 0%, #5a6c7d 100%);
             color: white;
             padding: 20px;
             border-radius: 10px;
@@ -320,14 +320,14 @@
         @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: #333; background: white; }
-        .book-container { max-width: 900px; margin: 0 auto; background: white; }
-        .book-cover { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 100px 60px; text-align: center; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+        .book-container { max-width: 1400px; margin: 0 auto; background: white; }
+        .book-cover { background: linear-gradient(135deg, #5a6c7d 0%, #5a6c7d 100%); color: white; padding: 100px 60px; text-align: center; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
         .book-title { font-family: 'Merriweather', serif; font-size: 4em; font-weight: 700; margin-bottom: 30px; }
         .book-subtitle { font-size: 1.8em; margin-bottom: 50px; opacity: 0.9; }
         .book-author { font-size: 2em; margin-top: 50px; font-weight: 600; }
         .book-page { padding: 80px 60px; min-height: 100vh; }
         .post { margin-bottom: 60px; page-break-inside: avoid; }
-        .post-title { font-family: 'Merriweather', serif; font-size: 1.8em; color: #764ba2; margin-bottom: 10px; }
+        .post-title { font-family: 'Merriweather', serif; font-size: 1.8em; color: #5a6c7d; margin-bottom: 10px; }
         .post-date { color: #999; margin-bottom: 20px; }
         .post-content { font-size: 1.1em; line-height: 1.8; white-space: pre-wrap; }
         @media print { .book-page, .post { page-break-after: always; } }
@@ -350,6 +350,9 @@
             `).join('')}
         </div>
     </div>
+    <script src="common-navigation.js"></script>
+    <script src="common-footer.js"></script>
+    <script src="universal-analytics.js"></script>
 </body>
 </html>`;
 
