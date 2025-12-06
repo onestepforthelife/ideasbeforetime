@@ -456,7 +456,9 @@ REPORT SCOPE:
 
 ### Visual Elements (From All Reports)
 
-**1. Tables** (Use for all data)
+**1. TABLES** (Use for all data - Multiple Formats)
+
+**Format A: Standard Data Table**
 ```html
 <table class="data-table">
   <thead>
@@ -474,29 +476,323 @@ REPORT SCOPE:
       <td>$X.X B</td>
       <td>X.X%</td>
     </tr>
+    <tr>
+      <td>Segment B</td>
+      <td>$X.X B</td>
+      <td>$X.X B</td>
+      <td>X.X%</td>
+    </tr>
   </tbody>
 </table>
 ```
 
-**2. Charts & Graphs** (Describe, don't embed)
-- Market size trends (line chart)
-- Segment breakdown (pie chart)
-- Regional comparison (bar chart)
-- Competitive landscape (bubble chart)
-
-**3. Callout Boxes** (For key insights)
+**Format B: Detailed Comparison Table** (Like Poloxamer Report)
 ```html
-<div class="insight-box">
-  <h4>💡 KEY INSIGHT</h4>
-  <p>[Important finding that deserves highlighting]</p>
+<table>
+  <tr>
+    <th>Grade/Type</th>
+    <th>HLB Range</th>
+    <th>Application</th>
+    <th>Price Range ($/kg)</th>
+    <th>Key Characteristics</th>
+  </tr>
+  <tr>
+    <td>Poloxamer 188</td>
+    <td>28-30</td>
+    <td>Pharma excipient</td>
+    <td>25-40</td>
+    <td>High purity, USP/EP grade, extensive documentation</td>
+  </tr>
+  <tr>
+    <td>Poloxamer 407</td>
+    <td>18-23</td>
+    <td>Pharma/cosmetics</td>
+    <td>20-35</td>
+    <td>Thermogelling, solubilizer, broad regulatory acceptance</td>
+  </tr>
+</table>
+```
+
+**Format C: Cost Structure Table**
+```html
+<table>
+  <tr>
+    <th>Component</th>
+    <th>Share (%)</th>
+    <th>Cost Logic / Risk</th>
+  </tr>
+  <tr>
+    <td>Raw materials (EO, PO, initiator, catalyst)</td>
+    <td>45-65%</td>
+    <td><strong>Dominant Risk:</strong> EO/PO volatility dictates majority of cost. Hedging required.</td>
+  </tr>
+  <tr>
+    <td>Utilities (steam, cooling, nitrogen, power)</td>
+    <td>5-10%</td>
+    <td>Sensitive to batch cycle time. Efficiency gains reduce this cost.</td>
+  </tr>
+</table>
+```
+
+**Format D: Geographic Mapping Table**
+```html
+<table>
+  <tr>
+    <th>Buyer Segment</th>
+    <th>Annual Volume</th>
+    <th>Procurement Mode</th>
+    <th>Region Hotspots</th>
+  </tr>
+  <tr>
+    <td>Pharma excipients</td>
+    <td>50-500 tpa</td>
+    <td>Direct + qualified distributors</td>
+    <td>US, EU, IN, SG</td>
+  </tr>
+  <tr>
+    <td>Personal care (emulsifiers/surfactants)</td>
+    <td>200-1,000+ tpa</td>
+    <td>Direct + distributors</td>
+    <td>KR, JP, FR, CN</td>
+  </tr>
+</table>
+```
+
+**Format E: Manufacturer/Capacity Table**
+```html
+<table>
+  <tr>
+    <th>Maker</th>
+    <th>Brand/Type</th>
+    <th>Region</th>
+    <th>Capacity (ktpa)</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>BASF</td>
+    <td>Pluronic</td>
+    <td>EU (DE), US, CN</td>
+    <td>100-150</td>
+    <td>Largest integrated EO/PO platform; broad grade portfolio</td>
+  </tr>
+  <tr>
+    <td>Croda</td>
+    <td>Poloxamers/specialty</td>
+    <td>UK/EU, US</td>
+    <td>10-30</td>
+    <td>High-purity, personal care and pharma focus</td>
+  </tr>
+</table>
+```
+
+**Table CSS Styling:**
+```css
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #333;
+}
+
+tr:hover {
+    background: #f8f9fa;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsive tables */
+@media (max-width: 768px) {
+    table {
+        font-size: 12px;
+    }
+    th, td {
+        padding: 8px 10px;
+    }
+}
+```
+
+---
+
+**2. HIGHLIGHT BOXES** (For key insights, formulas, action items)
+
+**Format A: Key Insight Box**
+```html
+<div class="highlight-box">
+    <h3>💡 KEY INSIGHT</h3>
+    <p><strong>Finding:</strong> [Important finding that deserves highlighting]</p>
+    <p><strong>Impact:</strong> [Business impact]</p>
+    <p><strong>Action:</strong> [What to do about it]</p>
 </div>
 ```
 
-**4. Color Coding**
-- Growth/Positive: Green (#28a745)
-- Decline/Negative: Red (#dc3545)
-- Neutral/Info: Blue (#007bff)
-- Warning: Orange (#ffc107)
+**Format B: Formula/Calculation Box**
+```html
+<div class="highlight-box">
+    <h3>Conversion Cost Formula</h3>
+    <p><strong>Per-kg conversion cost =</strong> (Labor + Utilities + Depreciation + Rent + Maintenance + SG&A + Taxes/Insurance) ÷ Output (kg)</p>
+</div>
+```
+
+**Format C: Geographic Logic Box**
+```html
+<div class="highlight-box">
+    <h3>Geographic Logic</h3>
+    <p><strong>Seller/Makers:</strong> Germany, US, UK, Japan (High regulatory environment, complex manufacturing)</p>
+    <p><strong>Buyers/Consumption:</strong> India, SE Asia, EU, US, Korea, Japan</p>
+    <p><strong>Logic:</strong> Global supply relies on advanced technical expertise of EU/US/JP manufacturers, while high consumption occurs in fast-growing emerging markets.</p>
+</div>
+```
+
+**Format D: Action Plan Box**
+```html
+<div class="highlight-box">
+    <h3>🎯 Immediate Next Steps</h3>
+    <p><strong>1. Data Plug-in:</strong> Share batch size, raw material prices, catalyst system, and energy tariffs to generate per-kg cost and sensitivity analysis.</p>
+    <p><strong>2. Supplier Mapping:</strong> Confirm target grades, then shortlist primary suppliers; add regional distributors for buffer supply.</p>
+    <p><strong>3. Pricing Validation:</strong> Request current-quarter quotes for bulk and specialty grades; set hedging bands.</p>
+</div>
+```
+
+**Highlight Box CSS:**
+```css
+.highlight-box {
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+    border-left: 5px solid #ff9800;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.highlight-box h3 {
+    margin-top: 0;
+    color: #e65100;
+    font-size: 18px;
+}
+
+.highlight-box p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.highlight-box strong {
+    color: #d84315;
+}
+```
+
+---
+
+**3. CHARTS & GRAPHS** (Describe visually, don't embed)
+
+**Chart Description Format:**
+```html
+<div class="chart-description">
+    <h4>📊 Market Size Trend (2020-2030)</h4>
+    <p><strong>Chart Type:</strong> Line chart with dual Y-axis</p>
+    <p><strong>Data Points:</strong></p>
+    <ul>
+        <li>2020: $X.X billion (actual)</li>
+        <li>2024: $X.X billion (actual)</li>
+        <li>2030: $X.X billion (forecast)</li>
+    </ul>
+    <p><strong>Key Observation:</strong> Steady growth at X.X% CAGR, accelerating post-2025 due to [driver]</p>
+</div>
+```
+
+**Chart Types to Use:**
+- **Line Chart:** Market size trends, price trends over time
+- **Pie Chart:** Market share breakdown, segment distribution
+- **Bar Chart:** Regional comparison, company comparison
+- **Stacked Bar:** Segment breakdown by region
+- **Bubble Chart:** Competitive positioning (size = market share, X = growth, Y = profitability)
+
+---
+
+**4. LISTS & BULLETS** (For features, benefits, risks)
+
+**Format A: Standard Bullet List**
+```html
+<h3>Key Risks</h3>
+<ul>
+    <li><strong>EO safety/compliance:</strong> High regulatory burden; insurance premiums</li>
+    <li><strong>EO/PO price volatility:</strong> Feedstock-linked swings impacting raw material share</li>
+    <li><strong>Quality consistency:</strong> Pharma grade requires stringent, validated processes</li>
+</ul>
+```
+
+**Format B: Numbered Action List**
+```html
+<h3>Strategic Imperatives</h3>
+<ol>
+    <li><strong>Feedstock Hedging:</strong> Lock EO contracts; exploit PO softness</li>
+    <li><strong>Compliance Readiness:</strong> Prepare BIS certification dossiers before QCO enforcement</li>
+    <li><strong>Documentation Strength:</strong> Enhance excipient disclosure packages (DMF, CoA, stability data)</li>
+</ol>
+```
+
+---
+
+**5. COLOR CODING & VISUAL HIERARCHY**
+
+**Color Palette:**
+```css
+/* Primary Colors */
+--primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+--primary-color: #667eea;
+--secondary-color: #764ba2;
+
+/* Status Colors */
+--success-color: #28a745;  /* Growth/Positive */
+--danger-color: #dc3545;   /* Decline/Negative */
+--warning-color: #ffc107;  /* Caution/Warning */
+--info-color: #007bff;     /* Neutral/Info */
+
+/* Background Colors */
+--bg-light: #f8f9fa;
+--bg-white: #ffffff;
+--bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
+/* Text Colors */
+--text-dark: #2c3e50;
+--text-medium: #555;
+--text-light: #777;
+```
+
+**Usage Examples:**
+```html
+<!-- Positive Growth -->
+<span style="color: #28a745; font-weight: bold;">↑ +15.3% CAGR</span>
+
+<!-- Negative Trend -->
+<span style="color: #dc3545; font-weight: bold;">↓ -8.2% decline</span>
+
+<!-- Warning/Caution -->
+<span style="color: #ffc107; font-weight: bold;">⚠️ High volatility</span>
+
+<!-- Neutral Info -->
+<span style="color: #007bff; font-weight: bold;">ℹ️ Stable market</span>
+```
 
 ---
 
@@ -838,4 +1134,336 @@ Disclaimer: [Standard disclaimer text]
 - Lead with: Technology trends, innovation
 - Emphasize: Technical details, patents
 - Format: Deep technical analysis
+
+
+---
+
+## 📊 DATA SOURCES & RESEARCH METHODOLOGY
+
+### Primary Data Sources (Use 3-5 minimum)
+1. **Industry Reports**
+   - Market research firms (Grand View Research, MarketsandMarkets, etc.)
+   - Trade associations
+   - Government statistics
+
+2. **Company Data**
+   - Annual reports (10-K, 20-F)
+   - Investor presentations
+   - Press releases
+   - Company websites
+
+3. **Trade Data**
+   - Import/export statistics
+   - Customs data
+   - Trade databases
+
+4. **Patents & Research**
+   - Patent databases (USPTO, EPO, WIPO)
+   - Academic journals
+   - Conference proceedings
+
+5. **Expert Interviews** (if available)
+   - Industry executives
+   - Technical experts
+   - Procurement managers
+
+### Research Methodology
+1. **Data Collection** (2-3 weeks)
+2. **Data Validation** (cross-reference 2+ sources)
+3. **Analysis** (statistical, trend, competitive)
+4. **Forecasting** (regression, scenario analysis)
+5. **Quality Check** (peer review, fact-checking)
+
+---
+
+## 🎯 QUICK START GUIDE (For Creating New Reports)
+
+### Step 1: Define Scope (30 minutes)
+```
+☐ Product/market to analyze
+☐ Geographic coverage
+☐ Time period (historical + forecast)
+☐ Target audience
+☐ Report type (standard, competitive, technical, regional)
+```
+
+### Step 2: Gather Data (2-3 days)
+```
+☐ Collect 10+ data sources
+☐ Download company reports
+☐ Extract trade statistics
+☐ Review patent databases
+☐ Compile in spreadsheet
+```
+
+### Step 3: Create Outline (1 hour)
+```
+☐ Copy this template
+☐ Customize sections for your market
+☐ Set word count targets
+☐ Identify blur point (30%)
+```
+
+### Step 4: Write Content (3-5 days)
+```
+☐ Section 1: Executive Summary (hook readers)
+☐ Section 2: Market Overview (context)
+☐ Section 3: Competitive Landscape (players)
+☐ Section 4: Drivers & Restraints (dynamics)
+☐ Section 5: Regional Analysis (geography)
+☐ Section 6: Technology (innovation)
+☐ Section 7: Sustainability (ESG)
+☐ Section 8: Supply Chain (flow)
+☐ Section 9: Pricing (economics)
+☐ Section 10: Recommendations (action)
+☐ Section 11: Appendix (support)
+```
+
+### Step 5: Format & Polish (1 day)
+```
+☐ Add tables for all data
+☐ Create callout boxes for insights
+☐ Format headings consistently
+☐ Add blur system (30/70 split)
+☐ Insert CTA button
+☐ Add email form
+☐ Proofread thoroughly
+```
+
+### Step 6: Implement & Test (2 hours)
+```
+☐ Create HTML file
+☐ Apply CSS styling
+☐ Test blur effect
+☐ Test email form
+☐ Check mobile view
+☐ Verify SEO metadata
+☐ Test on live site
+```
+
+---
+
+## 💡 BEST PRACTICES FROM 7+ REPORTS
+
+### Content Best Practices
+1. **Lead with Value** - Executive summary must hook readers
+2. **Data-Driven** - Every claim backed by numbers
+3. **Actionable** - Strategic recommendations, not just analysis
+4. **Balanced** - Show opportunities AND challenges
+5. **Current** - Use latest data (2024 actual, 2025-2030 forecast)
+
+### Writing Best Practices
+1. **Clear & Concise** - Short sentences, active voice
+2. **Professional Tone** - Objective, third-person
+3. **Consistent Terms** - Same terminology throughout
+4. **Defined Jargon** - Explain technical terms
+5. **Cited Sources** - Reference all data
+
+### Design Best Practices
+1. **Visual Hierarchy** - Clear heading structure
+2. **Data Tables** - All numbers in tables
+3. **Callout Boxes** - Highlight key insights
+4. **White Space** - Don't cram content
+5. **Mobile-First** - Responsive design
+
+### Monetization Best Practices
+1. **30% Preview** - Show enough value to want more
+2. **Clear CTA** - Obvious "Request Access" button
+3. **Simple Form** - Minimal fields (name, email)
+4. **Fast Delivery** - Auto-send report immediately
+5. **Follow-Up** - Nurture leads for custom research
+
+---
+
+## 📈 SUCCESS METRICS
+
+### Content Quality
+- Data from 10+ sources ✅
+- All numbers verified ✅
+- 5,000-8,000 words ✅
+- Professional writing ✅
+- Zero errors ✅
+
+### User Experience
+- 30% preview visible ✅
+- Blur effect smooth ✅
+- CTA button prominent ✅
+- Email form works ✅
+- Mobile responsive ✅
+
+### Business Impact
+- Email capture rate: >10%
+- Time on page: >3 minutes
+- Bounce rate: <40%
+- Custom research inquiries: >5%
+- Repeat visitors: >20%
+
+---
+
+## 🚀 TEMPLATE USAGE SUMMARY
+
+**This template consolidates:**
+- ✅ 7+ market reports created
+- ✅ 11 comprehensive sections
+- ✅ 30/70 blur strategy
+- ✅ Email collection system
+- ✅ SEO optimization
+- ✅ Mobile responsiveness
+- ✅ Professional formatting
+- ✅ Quality standards
+- ✅ Production workflow
+
+**Use this for:**
+- Chemical industry reports (current focus)
+- Any B2B market analysis
+- Competitive intelligence
+- Technical/ESG reports
+- Regional deep-dives
+- Application-specific analysis
+
+**Time to create new report:**
+- Data gathering: 2-3 days
+- Writing: 3-5 days
+- Formatting: 1 day
+- Testing: 2 hours
+- **Total: 1-2 weeks per report**
+
+---
+
+## 📝 FINAL CHECKLIST
+
+**Before Publishing ANY Report:**
+```
+☐ All 11 sections complete
+☐ Word count: 5,000-8,000
+☐ Data from 10+ sources
+☐ All numbers verified
+☐ Tables formatted
+☐ Blur at 30% mark
+☐ CTA button works
+☐ Email form tested
+☐ Mobile responsive
+☐ SEO metadata added
+☐ Proofread 2x
+☐ Tested on live site
+☐ PDF version created
+☐ Ready to publish ✅
+```
+
+---
+
+**Created:** December 6, 2025  
+**Version:** 1.0  
+**Status:** Production-Ready  
+**Based On:** 7+ successful market reports  
+**Use For:** All future chemical/industrial market reports
+
+**This is your master template. Use it. Trust it. It works.** 📊
+
+---
+
+## 🎯 EXAMPLES FROM EXISTING REPORTS
+
+### Example 1: Acrylic Emulsions Report
+- **Sections Used:** 1-11 (all)
+- **Length:** 6,500 words
+- **Blur Point:** After Executive Summary + half of Market Overview
+- **Special Features:** Technical specifications, application breakdown
+- **Target Audience:** Manufacturers, procurement
+
+### Example 2: BASF vs LyondellBasell
+- **Sections Used:** 1, 3, 4, 10 (competitive focus)
+- **Length:** 4,200 words
+- **Blur Point:** After company overview
+- **Special Features:** Side-by-side comparison tables, SWOT
+- **Target Audience:** Investors, strategic planners
+
+### Example 3: Nickel ESG Report
+- **Sections Used:** 1, 2, 6, 7, 10 (ESG focus)
+- **Length:** 5,000 words
+- **Blur Point:** After ESG overview
+- **Special Features:** Sustainability metrics, compliance checklist
+- **Target Audience:** ESG managers, compliance officers
+
+---
+
+## 📊 QUICK START GUIDE
+
+**To Create New Report:**
+
+1. **Choose Report Type** (Standard, Competitive, Technical, Regional, Application)
+2. **Copy This Template**
+3. **Fill Section by Section** (follow word counts)
+4. **Add Tables & Data** (use provided formats)
+5. **Implement Blur** (at 30% mark)
+6. **Add Email Form** (use provided code)
+7. **Test Everything** (mobile, blur, form)
+8. **Publish**
+
+**Time Estimate:**
+- Research: 4-6 hours
+- Writing: 6-8 hours
+- Formatting: 2-3 hours
+- Testing: 1 hour
+- **Total: 13-18 hours per report**
+
+---
+
+## ✅ FINAL CHECKLIST
+
+```
+☐ All 11 sections present (or appropriate subset)
+☐ Word count within range (5,000-8,000 for standard)
+☐ Executive summary compelling (hooks reader)
+☐ Data tables formatted consistently
+☐ All numbers verified (2+ sources)
+☐ Citations complete
+☐ Blur at 30% mark
+☐ Email form functional
+☐ SEO metadata added
+☐ Mobile responsive
+☐ No broken links
+☐ Professional appearance
+☐ Proofread (grammar/spelling)
+☐ PDF version generated
+☐ Ready to publish
+```
+
+---
+
+## 📝 SUMMARY
+
+**This Universal Template Covers:**
+- ✅ 11 comprehensive sections
+- ✅ 5 report type variations
+- ✅ Complete formatting standards
+- ✅ Blur system implementation
+- ✅ Email collection system
+- ✅ Quality assurance checklist
+- ✅ Production workflow
+- ✅ Examples from 7+ reports
+
+**Use This Template For:**
+- All future market reports
+- Competitive analyses
+- Technical/ESG reports
+- Regional deep-dives
+- Application-specific reports
+
+**Result:**
+- Consistent quality across all reports
+- Professional presentation
+- Effective lead generation (30% preview)
+- Scalable production process
+- World-class market intelligence
+
+---
+
+**Created:** December 6, 2025  
+**Status:** Production-Ready  
+**Version:** 1.0  
+**Based On:** 7+ successful reports  
+**Next:** Use for all future reports
+
+**UNIVERSAL TEMPLATE COMPLETE ✅**
 
