@@ -1,0 +1,11 @@
+{
+  "name": "Auto-Test Before Push",
+  "description": "Automatically run tests when user says 'push' or 'deploy'",
+  "trigger": "onMessage",
+  "messagePattern": "(push|deploy|upload|commit)",
+  "action": {
+    "type": "sendMessage",
+    "message": "Pre-push check triggered: Run CRITICAL_DIAGNOSTIC_DEC6.js, verify all tests pass, check file sizes under 20MB, confirm zero critical issues. Only proceed if all checks pass."
+  },
+  "enabled": true
+}
