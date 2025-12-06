@@ -13,76 +13,9 @@
 <link rel="stylesheet" href="common-watermark.css">
 <link rel="stylesheet" href="common-navigation.css">
 <link rel="stylesheet" href="common-footer.css">
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
-    min-height: 100vh;
-    padding: 20px;
-}
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-}
-h1 {
-    color: #5a6c7d;
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.redirect-box {
-    background: #f5f7ff;
-    padding: 40px;
-    border-radius: 10px;
-    border-left: 4px solid #5a6c7d;
-    text-align: center;
-    margin: 40px 0;
-}
-.redirect-box p {
-    color: #555;
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-.btn {
-    display: inline-block;
-    padding: 15px 40px;
-    background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: 600;
-    transition: transform 0.2s;
-}
-.btn:hover {
-    transform: translateY(-2px);
-}
-</style>
+<style>*{margin:0;padding:0;box-sizing:border-box;}body{font-family:'Segoe UI',Arial,sans-serif;background:linear-gradient(135deg,#5a6c7d 0%,#8b9aa7 100%);min-height:100vh;padding:20px;}.container{max-width:1400px;margin:0 auto;background:white;border-radius:15px;padding:40px;box-shadow:0 10px 40px rgba(0,0,0,0.3);}h1{color:#5a6c7d;font-size:36px;margin-bottom:20px;text-align:center;}.redirect-box{background:#f5f7ff;padding:40px;border-radius:10px;border-left:4px solid #5a6c7d;text-align:center;margin:40px 0;}.redirect-box p{color:#555;font-size:18px;line-height:1.8;margin-bottom:20px;}.btn{display:inline-block;padding:15px 40px;background:linear-gradient(135deg,#5a6c7d 0%,#8b9aa7 100%);color:white;text-decoration:none;border-radius:8px;font-size:18px;font-weight:600;transition:transform 0.2s;}.btn:hover{transform:translateY(-2px);}</style>
 
-    <style>
-        /* Responsive Design - Mobile-Friendly */
-        @media (max-width: 768px) {
-            body { padding: 10px !important; }
-            .container, .access-container, .reports-container, 
-            .dashboard-container, .tool-container { 
-                max-width: 100% !important; 
-                padding: 20px !important; 
-                margin: 10px !important;
-            }
-            h1 { font-size: 24px !important; }
-            h2 { font-size: 20px !important; }
-            .nav-links { flex-direction: column; }
-            .grid, .package-grid, .reports-grid { 
-                grid-template-columns: 1fr !important; 
-            }
-        }
-    </style>
+    <style>@media (max-width:768px){body{padding:10px !important;}.container,.access-container,.reports-container,.dashboard-container,.tool-container{max-width:100% !important;padding:20px !important;margin:10px !important;}h1{font-size:24px !important;}h2{font-size:20px !important;}.nav-links{flex-direction:column;}.grid,.package-grid,.reports-grid{grid-template-columns:1fr !important;}}</style>
 
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3181510462001437"
@@ -110,6 +43,9 @@ h1 {
   }
 }
 </script>
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <link rel="modulepreload" href="common-navigation.js">
 </head>
 <body>
 
@@ -167,20 +103,7 @@ h1 {
     🔗
 </button>
 
-<style>
-.quick-links-widget a:hover {
-    background: #5a6c7d !important;
-    color: white !important;
-}
-@media (max-width: 768px) {
-    .quick-links-widget {
-        right: 10px;
-        bottom: 70px;
-        width: 200px;
-        padding: 15px;
-    }
-}
-</style>
+<style>.quick-links-widget a:hover{background:#5a6c7d !important;color:white !important;}@media (max-width:768px){.quick-links-widget{right:10px;bottom:70px;width:200px;padding:15px;}}</style>
 
 </body>
 </html>

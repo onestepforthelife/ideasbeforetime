@@ -2136,10 +2136,47 @@ User reports site issues:
 
 ---
 
-**Last Updated:** December 6, 2025
-**Total Learnings:** 39 major lessons
-**Latest:** Learning #39 (Check build logs first - 12 hours saved)
-**Status:** CRITICAL - This prevents massive time waste
-**Priority:** HIGHEST - Must follow for all deployment issues
+---
 
-**REMEMBER: 30 seconds checking build logs > 12 hours debugging wrong issue!**
+### Learning #40: Information Gathering & Capability Boundaries (Dec 6, 2025)
+**What happened:** Received comprehensive plan requiring both public info and private data
+**Lesson:** State what I CAN provide vs what I NEED from user upfront
+**Key insight:** I can access public 2025 standards, but need user for analytics/feedback/industry expertise
+
+**WHAT I CAN DO:**
+- ✅ Latest 2025 documentation (Cloudflare, web.dev, OWASP, WCAG)
+- ✅ Technical implementation & optimization scripts
+- ✅ Best practices & industry standards (public knowledge)
+
+**WHAT I NEED FROM USER:**
+- ❌ Analytics data (Google/Cloudflare dashboards)
+- ❌ Industry-specific standards (chemical industry expertise)
+- ❌ Competitor analysis (user research)
+- ❌ User feedback (emails, support tickets)
+- ❌ SEO strategy (target keywords, audience)
+
+**THE FIX:**
+1. State capabilities upfront (what I can/cannot do)
+2. Provide simple template for user input
+3. Do what I can immediately (public info)
+4. Wait for user data before proceeding
+5. Combine both for world-class results
+
+**GOLDEN RULE #40:** Know your capabilities - state what you CAN do and what you NEED upfront
+
+**FILES CREATED:**
+- LEARNING_40_INFORMATION_GATHERING.md (complete analysis)
+- DATA_TEMPLATE_FOR_AMIT.txt (simple input format)
+- START_HERE_OPTION_C.txt (immediate next steps)
+
+**LESSON: Honest about capabilities + Clear templates + Efficient collaboration = Fast results!**
+
+---
+
+**Last Updated:** December 6, 2025
+**Total Learnings:** 40 major lessons
+**Latest:** Learning #40 (Information gathering & capability boundaries)
+**Status:** ACTIVE - Prevents wasted effort
+**Priority:** HIGH - Sets clear expectations
+
+**REMEMBER: State capabilities upfront, provide templates, do what you can immediately!**

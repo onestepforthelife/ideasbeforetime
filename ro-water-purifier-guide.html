@@ -16,276 +16,14 @@
 <link rel="stylesheet" href="common-watermark.css">
 <link rel="stylesheet" href="common-navigation.css">
 <link rel="stylesheet" href="common-footer.css">
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
-    min-height: 100vh;
-    padding: 20px;
-    position: relative;
-}
-body::before {
-    content: "AV © Onestepforthelife";
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    font-size: 100px;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.08);
-    pointer-events: none;
-    z-index: 1;
-    white-space: nowrap;
-    user-select: none;
-}
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 15px;
-    position: relative;
-    z-index: 2;
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-}
-.hero {
-    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
-    color: white;
-    padding: 60px 40px;
-    text-align: center;
-}
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-.hero .subtitle {
-    font-size: 22px;
-    opacity: 0.95;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-.hero .tagline {
-    font-size: 18px;
-    opacity: 0.9;
-}
-.content {
-    padding: 40px;
-}
-.alert-box {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
-    color: white;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    border-left: 5px solid #c92a2a;
-}
-.alert-box h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-.alert-box p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-.section {
-    margin-bottom: 40px;
-}
-.section h2 {
-    color: #1e88e5;
-    font-size: 28px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #1e88e5;
-}
-.section h3 {
-    color: #333;
-    font-size: 22px;
-    margin: 25px 0 15px 0;
-}
-.section p {
-    color: #444;
-    line-height: 1.8;
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-.pricing-table {
-    width: 50%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-.pricing-table thead {
-    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
-    color: white;
-}
-.pricing-table th {
-    padding: 15px;
-    text-align: left;
-    font-size: 16px;
-}
-.pricing-table td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #ddd;
-}
-.pricing-table tbody tr:hover {
-    background: #f5f5f5;
-}
-.protocol-box {
-    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-    padding: 25px;
-    border-radius: 10px;
-    border-left: 5px solid #2e7d32;
-    margin: 20px 0;
-}
-.protocol-box h3 {
-    color: #1b5e20;
-    margin-top: 0;
-}
-.protocol-box .check-item {
-    background: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border-left: 4px solid #4caf50;
-}
-.protocol-box .check-item h4 {
-    color: #2e7d32;
-    margin-bottom: 8px;
-    font-size: 18px;
-}
-.protocol-box .check-item p {
-    color: #333;
-    margin: 0;
-}
-.flow-diagram {
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 10px;
-    margin: 30px 0;
-    border: 2px solid #1e88e5;
-}
-.flow-step {
-    display: flex;
-    align-items: center;
-    margin: 15px 0;
-    padding: 15px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.flow-arrow {
-    text-align: center;
-    font-size: 24px;
-    color: #1e88e5;
-    margin: 10px 0;
-}
-.flow-step-number {
-    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 18px;
-    margin-right: 15px;
-    flex-shrink: 0;
-}
-.flow-step-content h4 {
-    color: #1e88e5;
-    margin-bottom: 5px;
-}
-.flow-step-content p {
-    color: #666;
-    margin: 0;
-    font-size: 14px;
-}
-.test-point {
-    background: #fff3cd;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border-left: 4px solid #ffc107;
-    margin: 10px 0;
-}
-.scam-indicator {
-    background: #ffebee;
-    padding: 15px;
-    border-radius: 8px;
-    border-left: 4px solid #f44336;
-    margin: 10px 0;
-}
-.scam-indicator h4 {
-    color: #c62828;
-    margin-bottom: 8px;
-}
-.quick-ref-card {
-    background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
-    padding: 25px;
-    border-radius: 10px;
-    border: 3px solid #f57f17;
-    margin: 30px 0;
-}
-.quick-ref-card h3 {
-    color: #f57f17;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.stat-highlight {
-    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin: 20px 0;
-}
-.stat-highlight .number {
-    font-size: 48px;
-    font-weight: 700;
-    color: #1565c0;
-}
-.stat-highlight .label {
-    font-size: 18px;
-    color: #333;
-    margin-top: 5px;
-}
-@media (max-width: 768px) {
-    .hero {
-        padding: 40px 20px;
-    }
-    .hero h1 {
-        font-size: 32px;
-    }
-    .content {
-        padding: 20px;
-    }
-    .pricing-table {
-        font-size: 14px;
-    }
-    .pricing-table th,
-    .pricing-table td {
-        padding: 10px 8px;
-    }
-}
-</style>
+<style>*{margin:0;padding:0;box-sizing:border-box;}body{font-family:'Segoe UI',Arial,sans-serif;background:linear-gradient(135deg,#5a6c7d 0%,#8b9aa7 100%);min-height:100vh;padding:20px;position:relative;}body::before{content:"AV © Onestepforthelife";position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-45deg);font-size:100px;font-weight:700;color:rgba(255,255,255,0.08);pointer-events:none;z-index:1;white-space:nowrap;user-select:none;}.container{max-width:1400px;margin:0 auto;background:white;border-radius:15px;position:relative;z-index:2;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.3);}.hero{background:linear-gradient(135deg,#1e88e5 0%,#1565c0 100%);color:white;padding:60px 40px;text-align:center;}.hero h1{font-size:42px;margin-bottom:15px;}.hero .subtitle{font-size:22px;opacity:0.95;margin-bottom:10px;font-weight:600;}.hero .tagline{font-size:18px;opacity:0.9;}.content{padding:40px;}.alert-box{background:linear-gradient(135deg,#ff6b6b 0%,#ee5a6f 100%);color:white;padding:25px;border-radius:10px;margin-bottom:30px;border-left:5px solid #c92a2a;}.alert-box h2{font-size:24px;margin-bottom:10px;}.alert-box p{font-size:16px;line-height:1.6;}.section{margin-bottom:40px;}.section h2{color:#1e88e5;font-size:28px;margin-bottom:20px;padding-bottom:10px;border-bottom:3px solid #1e88e5;}.section h3{color:#333;font-size:22px;margin:25px 0 15px 0;}.section p{color:#444;line-height:1.8;font-size:16px;margin-bottom:15px;}.pricing-table{width:50%;border-collapse:collapse;margin:20px 0;box-shadow:0 2px 10px rgba(0,0,0,0.1);}.pricing-table thead{background:linear-gradient(135deg,#1e88e5 0%,#1565c0 100%);color:white;}.pricing-table th{padding:15px;text-align:left;font-size:16px;}.pricing-table td{padding:12px 15px;border-bottom:1px solid #ddd;}.pricing-table tbody tr:hover{background:#f5f5f5;}.protocol-box{background:linear-gradient(135deg,#e8f5e9 0%,#c8e6c9 100%);padding:25px;border-radius:10px;border-left:5px solid #2e7d32;margin:20px 0;}.protocol-box h3{color:#1b5e20;margin-top:0;}.protocol-box .check-item{background:white;padding:15px;margin:10px 0;border-radius:8px;border-left:4px solid #4caf50;}.protocol-box .check-item h4{color:#2e7d32;margin-bottom:8px;font-size:18px;}.protocol-box .check-item p{color:#333;margin:0;}.flow-diagram{background:#f9f9f9;padding:30px;border-radius:10px;margin:30px 0;border:2px solid #1e88e5;}.flow-step{display:flex;align-items:center;margin:15px 0;padding:15px;background:white;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,0.1);}.flow-arrow{text-align:center;font-size:24px;color:#1e88e5;margin:10px 0;}.flow-step-number{background:linear-gradient(135deg,#1e88e5 0%,#1565c0 100%);color:white;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;margin-right:15px;flex-shrink:0;}.flow-step-content h4{color:#1e88e5;margin-bottom:5px;}.flow-step-content p{color:#666;margin:0;font-size:14px;}.test-point{background:#fff3cd;padding:10px 15px;border-radius:5px;border-left:4px solid #ffc107;margin:10px 0;}.scam-indicator{background:#ffebee;padding:15px;border-radius:8px;border-left:4px solid #f44336;margin:10px 0;}.scam-indicator h4{color:#c62828;margin-bottom:8px;}.quick-ref-card{background:linear-gradient(135deg,#fff9c4 0%,#fff59d 100%);padding:25px;border-radius:10px;border:3px solid #f57f17;margin:30px 0;}.quick-ref-card h3{color:#f57f17;text-align:center;margin-bottom:20px;}.stat-highlight{background:linear-gradient(135deg,#e3f2fd 0%,#bbdefb 100%);padding:20px;border-radius:10px;text-align:center;margin:20px 0;}.stat-highlight .number{font-size:48px;font-weight:700;color:#1565c0;}.stat-highlight .label{font-size:18px;color:#333;margin-top:5px;}@media (max-width:768px){.hero{padding:40px 20px;}.hero h1{font-size:32px;}.content{padding:20px;}.pricing-table{font-size:14px;}.pricing-table th,.pricing-table td{padding:10px 8px;}}</style>
 
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3181510462001437"
             crossorigin="anonymous"></script>
     <script src="google-adsense.js"></script>
 
-<style>
-.collapsible-section.expanded .section-content {
-    display: block !important;
-}
-.collapsible-section.expanded .toggle-text::before {
-    content: "▲ Click to Collapse";
-}
-.collapsible-section .toggle-text::before {
-    content: "▼ Click to Expand";
-}
-</style>
+<style>.collapsible-section.expanded .section-content{display:block !important;}.collapsible-section.expanded .toggle-text::before{content:"▲ Click to Collapse";}.collapsible-section .toggle-text::before{content:"▼ Click to Expand";}</style>
 
 <script type="application/ld+json">
 {
@@ -307,6 +45,9 @@ body::before {
   }
 }
 </script>
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <link rel="modulepreload" href="common-navigation.js">
 </head>
 <body>
 
@@ -324,7 +65,7 @@ body::before {
             <p style="font-size: 20px; font-style: italic; margin-bottom: 20px; opacity: 0.95; font-weight: 600; text-align: center;">Pause once: what do you truly earn when health is lost?</p>
             
             <div style="text-align: center; margin: 20px 0;">
-                <img loading="lazy" src="images/RO printable checklis.png" alt="RO Water Purifier Service Checklist" style="max-width: 50%; height: auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                <img decoding="async" fetchpriority="high" loading="lazy" src="images/RO printable checklis.png" alt="RO Water Purifier Service Checklist" style="max-width: 50%; height: auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
             </div>
             
             <p>You bought a water purifier to keep your family safe. But many service people replace good parts with cheap ones to make extra money. They charge you ₹3,000 for something that costs only ₹800.</p>
@@ -352,28 +93,28 @@ body::before {
                         <td>HYDRAMEM, CSM, Vontron</td>
                         <td>₹700 - ₹1,500</td>
                         <td>Ask to see the box with brand name printed on it</td>
-                        <td><a href="https://www.amazon.in/s?k=ro+membrane+75+gpd&tag=onestepforthe-21" target="_blank" style="color: #ff9900; text-decoration: none; font-weight: 600;">🛒 Amazon</a></td>
+                        <td><a href="https://www.amazon.in/s?k=ro+membrane+75+gpd&tag=onestepforthe-21" target="_blank" style="color: #ff9900; text-decoration: none; font-weight: 600;" aria-label="External link (opens in new tab)">🛒 Amazon</a></td>
                     </tr>
                     <tr>
                         <td><strong>RO Pump</strong><br>(Motor that pushes water)</td>
                         <td>Lexpure, Shapure</td>
                         <td>₹600 - ₹1,200</td>
                         <td>Should have brand name and 1-2 year warranty card</td>
-                        <td><a href="https://www.amazon.in/s?k=ro+booster+pump+100+gpd&tag=onestepforthe-21" target="_blank" style="color: #ff9900; text-decoration: none; font-weight: 600;">🛒 Amazon</a></td>
+                        <td><a href="https://www.amazon.in/s?k=ro+booster+pump+100+gpd&tag=onestepforthe-21" target="_blank" style="color: #ff9900; text-decoration: none; font-weight: 600;" aria-label="External link (opens in new tab)">🛒 Amazon</a></td>
                     </tr>
                     <tr>
                         <td><strong>Pre-Filters</strong><br>(First cleaning stage)</td>
                         <td>Shapure, Kent, Aquaguard</td>
                         <td>₹400 - ₹750</td>
                         <td>Should be sealed in plastic wrap</td>
-                        <td><a href="https://www.amazon.in/s?k=ro+pre+filter+set&tag=onestepforthe-21" target="_blank" style="color: #ff9900; text-decoration: none; font-weight: 600;">🛒 Amazon</a></td>
+                        <td><a href="https://www.amazon.in/s?k=ro+pre+filter+set&tag=onestepforthe-21" target="_blank" style="color: #ff9900; text-decoration: none; font-weight: 600;" aria-label="External link (opens in new tab)">🛒 Amazon</a></td>
                     </tr>
                     <tr>
                         <td><strong>Complete Service Kit</strong><br>(All parts together)</td>
                         <td>Universal RO Kit</td>
                         <td>₹1,800 - ₹3,000</td>
                         <td>Includes membrane + filters + pump (if needed)</td>
-                        <td><a href="https://www.amazon.in/s?k=ro+service+kit&tag=onestepforthe-21" target="_blank" style="color: #ff9900; text-decoration: none; font-weight: 600;">🛒 Amazon</a></td>
+                        <td><a href="https://www.amazon.in/s?k=ro+service+kit&tag=onestepforthe-21" target="_blank" style="color: #ff9900; text-decoration: none; font-weight: 600;" aria-label="External link (opens in new tab)">🛒 Amazon</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -409,7 +150,7 @@ body::before {
                         <div style="font-size: 28px; font-weight: 700; color: #1e88e5;">₹6,999+</div>
                         <div style="font-size: 12px; color: #999; margin-top: 5px;">Free Delivery</div>
                     </div>
-                    <a href="https://amzn.to/4iXDbKF" target="_blank" rel="nofollow" style="display: block; background: linear-gradient(135deg, #ff9900 0%, #ff7700 100%); color: white; text-align: center; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; margin-top: 15px; transition: background 0.3s;" onmouseover="this.style.background='linear-gradient(135deg, #ff7700 0%, #ff5500 100%)'" onmouseout="this.style.background='linear-gradient(135deg, #ff9900 0%, #ff7700 100%)'">
+                    <a href="https://amzn.to/4iXDbKF" target="_blank" rel="nofollow" style="display: block; background: linear-gradient(135deg, #ff9900 0%, #ff7700 100%); color: white; text-align: center; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; margin-top: 15px; transition: background 0.3s;" onmouseover="this.style.background='linear-gradient(135deg, #ff7700 0%, #ff5500 100%)'" onmouseout="this.style.background='linear-gradient(135deg, #ff9900 0%, #ff7700 100%)'" aria-label="External link (opens in new tab)">
                         🛒 View on Amazon
                     </a>
                     <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee;">
@@ -432,7 +173,7 @@ body::before {
                         <div style="font-size: 28px; font-weight: 700; color: #1e88e5;">₹899+</div>
                         <div style="font-size: 12px; color: #999; margin-top: 5px;">Save ₹1,100</div>
                     </div>
-                    <a href="https://amzn.to/49YlM1U" target="_blank" rel="nofollow" style="display: block; background: linear-gradient(135deg, #ff9900 0%, #ff7700 100%); color: white; text-align: center; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; margin-top: 15px; transition: background 0.3s;" onmouseover="this.style.background='linear-gradient(135deg, #ff7700 0%, #ff5500 100%)'" onmouseout="this.style.background='linear-gradient(135deg, #ff9900 0%, #ff7700 100%)'">
+                    <a href="https://amzn.to/49YlM1U" target="_blank" rel="nofollow" style="display: block; background: linear-gradient(135deg, #ff9900 0%, #ff7700 100%); color: white; text-align: center; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; margin-top: 15px; transition: background 0.3s;" onmouseover="this.style.background='linear-gradient(135deg, #ff7700 0%, #ff5500 100%)'" onmouseout="this.style.background='linear-gradient(135deg, #ff9900 0%, #ff7700 100%)'" aria-label="External link (opens in new tab)">
                         🛒 View on Amazon
                     </a>
                     <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee;">
@@ -455,7 +196,7 @@ body::before {
                         <div style="font-size: 28px; font-weight: 700; color: #1e88e5;">₹1,999+</div>
                         <div style="font-size: 12px; color: #999; margin-top: 5px;">Complete Set</div>
                     </div>
-                    <a href="https://amzn.to/3MEsyjs" target="_blank" rel="nofollow" style="display: block; background: linear-gradient(135deg, #ff9900 0%, #ff7700 100%); color: white; text-align: center; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; margin-top: 15px; transition: background 0.3s;" onmouseover="this.style.background='linear-gradient(135deg, #ff7700 0%, #ff5500 100%)'" onmouseout="this.style.background='linear-gradient(135deg, #ff9900 0%, #ff7700 100%)'">
+                    <a href="https://amzn.to/3MEsyjs" target="_blank" rel="nofollow" style="display: block; background: linear-gradient(135deg, #ff9900 0%, #ff7700 100%); color: white; text-align: center; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; margin-top: 15px; transition: background 0.3s;" onmouseover="this.style.background='linear-gradient(135deg, #ff7700 0%, #ff5500 100%)'" onmouseout="this.style.background='linear-gradient(135deg, #ff9900 0%, #ff7700 100%)'" aria-label="External link (opens in new tab)">
                         🛒 View on Amazon
                     </a>
                     <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee;">
@@ -478,7 +219,7 @@ body::before {
                         <div style="font-size: 28px; font-weight: 700; color: #1e88e5;">₹799+</div>
                         <div style="font-size: 12px; color: #999; margin-top: 5px;">100 GPD</div>
                     </div>
-                    <a href="https://amzn.to/4iDtvET" target="_blank" rel="nofollow" style="display: block; background: linear-gradient(135deg, #ff9900 0%, #ff7700 100%); color: white; text-align: center; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; margin-top: 15px; transition: background 0.3s;" onmouseover="this.style.background='linear-gradient(135deg, #ff7700 0%, #ff5500 100%)'" onmouseout="this.style.background='linear-gradient(135deg, #ff9900 0%, #ff7700 100%)'">
+                    <a href="https://amzn.to/4iDtvET" target="_blank" rel="nofollow" style="display: block; background: linear-gradient(135deg, #ff9900 0%, #ff7700 100%); color: white; text-align: center; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; margin-top: 15px; transition: background 0.3s;" onmouseover="this.style.background='linear-gradient(135deg, #ff7700 0%, #ff5500 100%)'" onmouseout="this.style.background='linear-gradient(135deg, #ff9900 0%, #ff7700 100%)'" aria-label="External link (opens in new tab)">
                         🛒 View on Amazon
                     </a>
                     <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee;">
@@ -501,7 +242,7 @@ body::before {
                         <div style="font-size: 28px; font-weight: 700; color: #1e88e5;">₹299+</div>
                         <div style="font-size: 12px; color: #999; margin-top: 5px;">Essential Tool</div>
                     </div>
-                    <a href="https://amzn.to/4oG6vqb" target="_blank" rel="nofollow" style="display: block; background: linear-gradient(135deg, #ff9900 0%, #ff7700 100%); color: white; text-align: center; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; margin-top: 15px; transition: background 0.3s;" onmouseover="this.style.background='linear-gradient(135deg, #ff7700 0%, #ff5500 100%)'" onmouseout="this.style.background='linear-gradient(135deg, #ff9900 0%, #ff7700 100%)'">
+                    <a href="https://amzn.to/4oG6vqb" target="_blank" rel="nofollow" style="display: block; background: linear-gradient(135deg, #ff9900 0%, #ff7700 100%); color: white; text-align: center; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; margin-top: 15px; transition: background 0.3s;" onmouseover="this.style.background='linear-gradient(135deg, #ff7700 0%, #ff5500 100%)'" onmouseout="this.style.background='linear-gradient(135deg, #ff9900 0%, #ff7700 100%)'" aria-label="External link (opens in new tab)">
                         🛒 View on Amazon
                     </a>
                     <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee;">
@@ -973,20 +714,7 @@ body::before {
     🔗
 </button>
 
-<style>
-.quick-links-widget a:hover {
-    background: #5a6c7d !important;
-    color: white !important;
-}
-@media (max-width: 768px) {
-    .quick-links-widget {
-        right: 10px;
-        bottom: 70px;
-        width: 200px;
-        padding: 15px;
-    }
-}
-</style>
+<style>.quick-links-widget a:hover{background:#5a6c7d !important;color:white !important;}@media (max-width:768px){.quick-links-widget{right:10px;bottom:70px;width:200px;padding:15px;}}</style>
 
 
 <!-- Reading Progress Bar -->
