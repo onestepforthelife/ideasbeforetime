@@ -1,19 +1,21 @@
 {
   "name": "kiro-tools",
   "version": "1.0.0",
-  "description": "Essential tools for Kiro AI Assistant",
+  "description": "Advanced tools for Kiro AI - Browser automation, error tracking, semantic search, session cache",
   "scripts": {
-    "install-all": "npm install && pip install chromadb",
-    "test": "node playwright-live-site-test.js",
+    "test:live": "node playwright-live-site-test.js",
     "search": "python chromadb-learning-search.py",
-    "cache-status": "node -e \"const SessionCache = require('./redis-session-cache.js'); new SessionCache().getSessionContext().then(console.log)\""
+    "cache:start": "node redis-session-cache.js",
+    "monitor": "node sentry-error-tracking.js"
   },
   "dependencies": {
-    "@sentry/browser": "^7.91.0",
+    "@playwright/test": "^1.40.0",
     "@sentry/node": "^7.91.0",
-    "redis": "^4.6.0"
+    "chromadb": "^1.7.0",
+    "redis": "^4.6.11",
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
-    "@playwright/test": "^1.40.0"
+    "playwright": "^1.40.0"
   }
 }

@@ -1,103 +1,115 @@
-// Redis - Fast session context storage
-// Reduces credit usage by caching within session
+// Redis Session Cache
+// Fast key-value store for within-session context
 
 const redis = require('redis');
 
 class SessionCache {
   constructor() {
-    this.client = redis.createClient({
-      url: process.env.REDIS_URL || 'redis://localhost:6379'
-    });
-    
-    this.client.on('error', (err) => console.log('Redis Error:', err));
-    this.client.connect();
+    this.client = null;
+    this.connected = false;
   }
-  
-  // Cache steering file content (avoid re-reading)
-  async cacheSteeringFile(filename, content) {
-    const key = `steering:${filename}`;
-    await this.client.set(key, content, {
-      EX: 3600 // Expire after 1 hour
-    });
+
+  async connect() {
+    try {
+      this.client = redis.createClient({
+        url: process.env.REDIS_URL || 'redis://localhost:6379'
+      });
+
+      this.client.on('error', (err) => {
+        console.error('❌ Redis error:', err);
+        this.connected = false;
+      });
+
+      await this.client.connect();
+      this.connected = true;
+      console.log('✅ Redis connected');
+      return true;
+    } catch (error) {
+      console.error('❌ Redis connection failed:', error.message);
+      console.log('💡 Falling back to in-memory cache');
+      this.fallbackCache = new Map();
+      return false;
+    }
   }
-  
-  async getSteeringFile(filename) {
-    const key = `steering:${filename}`;
-    return await this.client.get(key);
+
+  async set(key, value, expirySeconds = 3600) {
+    if (this.connected) {
+      await this.client.setEx(key, expirySeconds, JSON.stringify(value));
+    } else {
+      this.fallbackCache.set(key, value);
+    }
   }
-  
-  // Cache test results (avoid re-running)
-  async cacheTestResult(testName, result) {
-    const key = `test:${testName}`;
-    await this.client.set(key, JSON.stringify(result), {
-      EX: 300 // Expire after 5 minutes
-    });
+
+  async get(key) {
+    if (this.connected) {
+      const value = await this.client.get(key);
+      return value ? JSON.parse(value) : null;
+    } else {
+      return this.fallbackCache.get(key) || null;
+    }
   }
-  
-  async getTestResult(testName) {
-    const key = `test:${testName}`;
-    const result = await this.client.get(key);
-    return result ? JSON.parse(result) : null;
+
+  async has(key) {
+    if (this.connected) {
+      return await this.client.exists(key) === 1;
+    } else {
+      return this.fallbackCache.has(key);
+    }
   }
-  
-  // Cache file list (avoid re-listing)
-  async cacheFileList(pattern, files) {
-    const key = `files:${pattern}`;
-    await this.client.set(key, JSON.stringify(files), {
-      EX: 600 // Expire after 10 minutes
-    });
+
+  async delete(key) {
+    if (this.connected) {
+      await this.client.del(key);
+    } else {
+      this.fallbackCache.delete(key);
+    }
   }
-  
-  async getFileList(pattern) {
-    const key = `files:${pattern}`;
-    const result = await this.client.get(key);
-    return result ? JSON.parse(result) : null;
+
+  async clear() {
+    if (this.connected) {
+      await this.client.flushDb();
+    } else {
+      this.fallbackCache.clear();
+    }
   }
-  
-  // Session context (current task, files being worked on)
-  async setSessionContext(context) {
-    await this.client.set('session:context', JSON.stringify(context), {
-      EX: 7200 // Expire after 2 hours
-    });
-  }
-  
-  async getSessionContext() {
-    const result = await this.client.get('session:context');
-    return result ? JSON.parse(result) : null;
-  }
-  
-  // Clear all cache
-  async clearAll() {
-    await this.client.flushAll();
-  }
-  
-  async close() {
-    await this.client.quit();
+
+  async disconnect() {
+    if (this.connected) {
+      await this.client.quit();
+      this.connected = false;
+    }
   }
 }
 
 // Usage example
-async function example() {
+async function demo() {
   const cache = new SessionCache();
-  
-  // Cache steering file to avoid re-reading
-  const steeringContent = "... file content ...";
-  await cache.cacheSteeringFile("KIRO_RULES.md", steeringContent);
-  
-  // Get from cache (instant, no file read)
-  const cached = await cache.getSteeringFile("KIRO_RULES.md");
-  
-  // Cache test results
-  await cache.cacheTestResult("site-consistency", {
-    passed: 45,
-    failed: 2,
-    timestamp: Date.now()
+  await cache.connect();
+
+  // Cache steering file content
+  await cache.set('steering:kiro_rules', {
+    rule0: 'Site is LIVE',
+    rule31: 'Pre-approved error correction',
+    lastRead: Date.now()
   });
-  
-  // Get cached test (no need to re-run)
-  const testResult = await cache.getTestResult("site-consistency");
-  
-  await cache.close();
+
+  // Cache diagnostic results
+  await cache.set('diagnostic:last_run', {
+    timestamp: Date.now(),
+    issues: 0,
+    status: 'passed'
+  }, 1800); // 30 min expiry
+
+  // Retrieve
+  const rules = await cache.get('steering:kiro_rules');
+  console.log('📋 Cached rules:', rules);
+
+  await cache.disconnect();
 }
 
 module.exports = SessionCache;
+
+// Run demo if called directly
+if (require.main === module) {
+  demo();
+}
