@@ -1,15 +1,13 @@
 {
-  "timestamp": "2025-12-04T23:11:55.133Z",
-  "totalFiles": 176,
+  "timestamp": "2025-12-06T11:31:16.299Z",
+  "totalFiles": 181,
   "issues": {
     "critical": [],
     "high": [
-      "Major page \"spo.html\" not in navigation",
-      "Major page \"jobs.html\" not in navigation",
-      "Major page \"admin-control-panel.html\" not in navigation",
-      "SPO Tool: Not linked in navigation",
-      "Job Search: Not linked in navigation",
-      "Admin Panel: Not linked in navigation"
+      "email-template.html: Missing navigation",
+      "nickel-esg-report-protected.html: Missing navigation",
+      "UNIVERSAL_MARKET_REPORT_TEMPLATE.html: Missing navigation",
+      "Cloudflare Access not configured in _headers"
     ],
     "medium": [
       "Orphaned page: access.html",
@@ -21,10 +19,13 @@
       "Orphaned page: compare-homepage-conversion.html",
       "Orphaned page: compare-homepage-versions.html",
       "Orphaned page: email-sender-web.html",
-      "Orphaned page: email.html"
+      "Orphaned page: email-template.html",
+      "email-template.html: Missing footer",
+      "nickel-esg-report-protected.html: Missing footer",
+      "UNIVERSAL_MARKET_REPORT_TEMPLATE.html: Missing footer"
     ],
     "low": []
   },
-  "fileIssues": 6,
-  "serverIssues": 0
+  "fileIssues": 3,
+  "serverIssues": 1
 }
