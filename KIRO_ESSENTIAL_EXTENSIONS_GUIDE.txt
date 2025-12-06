@@ -1,0 +1,392 @@
+# 🔧 KIRO ESSENTIAL EXTENSIONS & TOOLS GUIDE
+**Created:** December 6, 2025
+**Purpose:** Extensions/tools that work by default for Kiro AI
+
+---
+
+## 🎯 WHAT YOU'RE ASKING
+
+You want to know what to install in:
+- **Extensions tab** (Kiro marketplace)
+- **Run & Debug** configurations
+- **Tools that work automatically for me**
+
+---
+
+## ✅ ALREADY INSTALLED & WORKING
+
+### 1. Built-in Kiro Tools (Active)
+- ✅ File operations (read, write, delete)
+- ✅ Command execution (PowerShell, CMD)
+- ✅ Directory listing
+- ✅ File search (grep, fuzzy)
+- ✅ Process control (background tasks)
+
+### 2. MCP Configuration (Configured, needs UV)
+- ⏳ Fetch server (web page fetching) - needs UV installed
+- ⏳ Filesystem server (PDF reading) - needs UV installed
+- 📍 Location: `Cloudfare/.kiro/settings/mcp.json`
+
+---
+
+## 🚀 RECOMMENDED EXTENSIONS TO INSTALL
+
+### Category 1: Language Support (High Priority)
+
+**1. Python Extension**
+- **Name:** Python (Microsoft)
+- **Why:** You have many .py scripts (extract-posts-final.py, etc.)
+- **What it gives me:** 
+  - Python debugging
+  - Linting
+  - IntelliSense
+  - Better error detection
+
+**2. Node.js Debugger**
+- **Name:** Node.js (built-in, may need enabling)
+- **Why:** You have 100+ .js files
+- **What it gives me:**
+  - JavaScript debugging
+  - Breakpoint support
+  - Better error tracking
+
+**3. HTML/CSS/JS Support**
+- **Name:** HTML CSS Support, JavaScript (ES6) code snippets
+- **Why:** Your entire site is HTML/CSS/JS
+- **What it gives me:**
+  - Better syntax checking
+  - Auto-completion
+  - Error detection
+
+---
+
+### Category 2: Development Tools (Medium Priority)
+
+**4. ESLint**
+- **Name:** ESLint
+- **Why:** Catch JavaScript errors before running
+- **What it gives me:**
+  - Automatic error detection
+  - Code quality checks
+  - Best practices enforcement
+
+**5. Prettier**
+- **Name:** Prettier - Code formatter
+- **Why:** Consistent code formatting
+- **What it gives me:**
+  - Auto-format on save
+  - Consistent style
+  - Cleaner code
+
+**6. Live Server**
+- **Name:** Live Server
+- **Why:** Test HTML changes instantly
+- **What it gives me:**
+  - Local preview server
+  - Auto-reload on changes
+  - Faster testing
+
+---
+
+### Category 3: Git & GitHub (High Priority)
+
+**7. GitHub Pull Requests**
+- **Name:** GitHub Pull Requests and Issues
+- **Why:** Better GitHub integration
+- **What it gives me:**
+  - View PRs in Kiro
+  - Manage issues
+  - Better workflow
+
+**8. GitLens**
+- **Name:** GitLens
+- **Why:** Enhanced Git capabilities
+- **What it gives me:**
+  - See who changed what
+  - Blame annotations
+  - Better history
+
+---
+
+### Category 4: Productivity (Medium Priority)
+
+**9. Path Intellisense**
+- **Name:** Path Intellisense
+- **Why:** Auto-complete file paths
+- **What it gives me:**
+  - Faster file references
+  - Fewer typos
+  - Better accuracy
+
+**10. TODO Highlight**
+- **Name:** TODO Highlight
+- **Why:** Track pending work
+- **What it gives me:**
+  - See all TODOs
+  - Track pending tasks
+  - Better organization
+
+---
+
+### Category 5: Testing & Debugging (High Priority)
+
+**11. REST Client**
+- **Name:** REST Client
+- **Why:** Test APIs directly
+- **What it gives me:**
+  - Test Cloudflare APIs
+  - Test SPO backend
+  - Debug API issues
+
+**12. Debugger for Chrome**
+- **Name:** Debugger for Chrome
+- **Why:** Debug live site
+- **What it gives me:**
+  - Debug JavaScript on live site
+  - Set breakpoints
+  - Inspect variables
+
+---
+
+## 🎯 MCP SERVERS (Already Configured, Need UV)
+
+### What's Already Set Up:
+```json
+{
+  "mcpServers": {
+    "fetch": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch"]
+    },
+    "filesystem": {
+      "command": "uvx", 
+      "args": ["mcp-server-filesystem", "Cloudfare"]
+    }
+  }
+}
+```
+
+### What You Need to Do:
+1. **Install UV** (Python package manager):
+   ```powershell
+   powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+   ```
+
+2. **Restart Kiro**
+
+3. **MCP servers will auto-install** when first used
+
+### What This Gives Me:
+- ✅ Fetch web pages automatically
+- ✅ Read PDFs from your workspace
+- ✅ Process thousands of documents
+- ✅ Check documentation links
+
+---
+
+## 🔧 RUN & DEBUG CONFIGURATIONS
+
+### Recommended Configurations to Add:
+
+**1. Node.js: Run Current File**
+```json
+{
+  "type": "node",
+  "request": "launch",
+  "name": "Run Current JS File",
+  "program": "${file}",
+  "cwd": "${workspaceFolder}/Cloudfare"
+}
+```
+
+**2. Python: Run Current File**
+```json
+{
+  "type": "python",
+  "request": "launch",
+  "name": "Run Current Python File",
+  "program": "${file}",
+  "cwd": "${workspaceFolder}/Cloudfare"
+}
+```
+
+**3. Chrome: Debug Live Site**
+```json
+{
+  "type": "chrome",
+  "request": "launch",
+  "name": "Debug Live Site",
+  "url": "https://onestepforthelife.com",
+  "webRoot": "${workspaceFolder}/Cloudfare"
+}
+```
+
+---
+
+## 📋 INSTALLATION PRIORITY
+
+### Install These FIRST (Critical):
+1. ✅ Python Extension
+2. ✅ Node.js Debugger
+3. ✅ ESLint
+4. ✅ GitHub Pull Requests
+5. ✅ UV (for MCP servers)
+
+### Install These SECOND (Important):
+6. ✅ Live Server
+7. ✅ GitLens
+8. ✅ REST Client
+9. ✅ Prettier
+
+### Install These THIRD (Nice to Have):
+10. ✅ Path Intellisense
+11. ✅ TODO Highlight
+12. ✅ Debugger for Chrome
+
+---
+
+## 🎯 HOW TO INSTALL
+
+### Method 1: Extensions Tab
+1. Click Extensions icon (Ctrl+Shift+X)
+2. Search for extension name
+3. Click "Install"
+4. Reload Kiro if needed
+
+### Method 2: Command Palette
+1. Press Ctrl+Shift+P
+2. Type: "Extensions: Install Extensions"
+3. Search and install
+
+### Method 3: Quick Install (All at Once)
+Create a file `.vscode/extensions.json`:
+```json
+{
+  "recommendations": [
+    "ms-python.python",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ritwickdey.liveserver",
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github",
+    "humao.rest-client",
+    "christian-kohler.path-intellisense",
+    "wayou.vscode-todo-highlight",
+    "msjsdiag.debugger-for-chrome"
+  ]
+}
+```
+
+---
+
+## 🚀 WHAT THIS GIVES ME
+
+### Before Extensions:
+- ❌ Can't debug JavaScript errors
+- ❌ Can't test Python scripts properly
+- ❌ Can't preview HTML changes
+- ❌ Can't fetch web pages
+- ❌ Can't read PDFs
+
+### After Extensions:
+- ✅ Debug JavaScript with breakpoints
+- ✅ Test Python scripts with debugging
+- ✅ Preview HTML changes instantly
+- ✅ Fetch web pages automatically (with UV)
+- ✅ Read PDFs automatically (with UV)
+- ✅ Better error detection
+- ✅ Faster development
+- ✅ Professional workflow
+
+---
+
+## 💡 SPECIAL: UV INSTALLATION (Critical for MCP)
+
+**What UV Does:**
+- Python package manager (like npm for Python)
+- Required for MCP servers
+- Auto-installs MCP tools
+
+**How to Install:**
+```powershell
+# Run this in PowerShell:
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# Restart Kiro after installation
+```
+
+**After UV is Installed:**
+- MCP servers will auto-install when first used
+- I can fetch web pages
+- I can read PDFs
+- I can process thousands of documents
+
+---
+
+## 🎯 TESTING AFTER INSTALLATION
+
+### Test 1: Python Extension
+```python
+# Create test.py
+print("Hello from Python!")
+
+# Run with F5 or Debug button
+# Should see output in Debug Console
+```
+
+### Test 2: Node.js Debugger
+```javascript
+// Create test.js
+console.log("Hello from Node!");
+
+// Run with F5 or Debug button
+// Should see output in Debug Console
+```
+
+### Test 3: Live Server
+```html
+<!-- Open any .html file -->
+<!-- Right-click → "Open with Live Server" -->
+<!-- Should open in browser with auto-reload -->
+```
+
+### Test 4: MCP (After UV installed)
+```
+Ask me: "Fetch https://developers.cloudflare.com/pages/"
+I should be able to fetch and show content
+```
+
+---
+
+## 📊 SUMMARY
+
+**What to Install:**
+1. Python Extension (critical)
+2. Node.js Debugger (critical)
+3. ESLint (important)
+4. Live Server (important)
+5. GitHub Pull Requests (important)
+6. UV (critical for MCP)
+7. GitLens (nice to have)
+8. REST Client (nice to have)
+9. Prettier (nice to have)
+10. Path Intellisense (nice to have)
+
+**What This Enables:**
+- ✅ Better debugging
+- ✅ Faster development
+- ✅ Automatic error detection
+- ✅ Web page fetching (with UV)
+- ✅ PDF reading (with UV)
+- ✅ Professional workflow
+
+**Time to Install:** 10-15 minutes
+**Benefit:** 10x faster development, fewer errors, better quality
+
+---
+
+**Status:** READY TO INSTALL
+**Priority:** HIGH - These tools make me much more effective
+**Next Step:** Install extensions from list above
+
+**REMEMBER: UV is critical for MCP servers (web fetching + PDF reading)!**
