@@ -1,8 +1,8 @@
 {
-  "timestamp": "2025-12-07T17:05:36.198Z",
+  "timestamp": "2025-12-07T18:15:21.531Z",
   "domain": "https://onestepforthelife.com",
-  "totalIssues": 11,
-  "fileIssues": 3,
+  "totalIssues": 8,
+  "fileIssues": 0,
   "serverIssues": 8,
   "issues": {
     "critical": [
@@ -55,35 +55,16 @@
         "fix": "Purge Cloudflare cache immediately"
       }
     ],
-    "high": [
-      {
-        "type": "FILE",
-        "page": "Homepage",
-        "issue": "Missing link to blog.html",
-        "fix": "Add link to blog.html in navigation or content"
-      },
-      {
-        "type": "FILE",
-        "page": "Homepage",
-        "issue": "Missing link to about.html",
-        "fix": "Add link to about.html in navigation or content"
-      },
-      {
-        "type": "FILE",
-        "page": "Homepage",
-        "issue": "Missing link to cv.html",
-        "fix": "Add link to cv.html in navigation or content"
-      }
-    ],
+    "high": [],
     "medium": [],
     "low": []
   },
   "summary": {
     "critical": 8,
-    "high": 3,
+    "high": 0,
     "medium": 0,
     "low": 0,
-    "file": 3,
+    "file": 0,
     "server": 8
   }
 }
