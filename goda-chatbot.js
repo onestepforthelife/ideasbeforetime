@@ -122,29 +122,7 @@ function initializeChatbot() {
         }
     });
 
-    // Toggle chat window
-    toggle.addEventListener('click', () => {
-        window.classList.toggle('open');
-        if (window.classList.contains('open')) {
-            input.focus();
-        }
-    });
-
-    // Close chat window
-    close.addEventListener('click', () => {
-        window.classList.remove('open');
-    });
-
-    // Send message on button click
-    send.addEventListener('click', sendMessage);
-
-    // Send message on Enter key
-    input.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            sendMessage();
-        }
-    });
-
+    // Define functions FIRST before using them
     async function sendMessage() {
         const message = input.value.trim();
         if (!message) return;
@@ -176,6 +154,29 @@ function initializeChatbot() {
         messages.appendChild(messageDiv);
         messages.scrollTop = messages.scrollHeight;
     }
+
+    // Toggle chat window
+    toggle.addEventListener('click', () => {
+        window.classList.toggle('open');
+        if (window.classList.contains('open')) {
+            input.focus();
+        }
+    });
+
+    // Close chat window
+    close.addEventListener('click', () => {
+        window.classList.remove('open');
+    });
+
+    // Send message on button click
+    send.addEventListener('click', sendMessage);
+
+    // Send message on Enter key
+    input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
 
     // Handle numbered responses
     function handleNumberedInput(message) {
