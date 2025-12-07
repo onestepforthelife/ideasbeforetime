@@ -1,0 +1,46 @@
+🔥 PURGE CACHE NOW - MANDATORY
+================================
+
+DEPLOYMENT DONE ✅
+NOW PURGE CACHE:
+=================
+
+### Go to Cloudflare Dashboard
+
+1. https://dash.cloudflare.com
+2. Click: **onestepforthelife.com** (in Websites section, NOT Workers & Pages)
+3. Click: **Caching** (left sidebar)
+4. Click: **Purge Everything** button
+5. Confirm: Yes, purge everything
+
+═══════════════════════════════════════════════════════════════════
+
+AFTER PURGING:
+==============
+
+⏰ **WAIT 10 MINUTES** (set timer!)
+
+Cache needs to propagate to all edge servers worldwide.
+
+═══════════════════════════════════════════════════════════════════
+
+THEN TEST (After 10 min):
+==========================
+
+Open **incognito/private window**:
+
+1. https://onestepforthelife.com/kiro
+   → Should show red "Cannot Do" section
+
+2. https://onestepforthelife.com/tools  
+   → Should show "GODA KIRO TT" card
+
+3. Navigation on any page
+   → Should show "GODA KIRO TT" link
+
+═══════════════════════════════════════════════════════════════════
+
+STATUS: Deployment done, cache purge needed
+ACTION: Purge cache in Cloudflare Dashboard
+WAIT: 10 minutes after purge
+THEN: Test live site
