@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-07T08:23:45.986Z",
+  "timestamp": "2025-12-07T08:33:28.524Z",
   "filesChecked": 203,
   "colors": [
     "#5a6c7d",
@@ -279,11 +279,6 @@
   ],
   "headerIssues": [
     {
-      "file": "astronomy.html",
-      "issue": "Header has center alignment in CSS",
-      "found": "text-align: center found in header styles"
-    },
-    {
       "file": "BASF_IT_SECURITY_PROPOSAL.html",
       "issue": "Header has center alignment in CSS",
       "found": "text-align: center found in header styles"
@@ -300,11 +295,6 @@
     },
     {
       "file": "email-template.html",
-      "issue": "Header has center alignment in CSS",
-      "found": "text-align: center found in header styles"
-    },
-    {
-      "file": "index-v2-conversion-optimized.html",
       "issue": "Header has center alignment in CSS",
       "found": "text-align: center found in header styles"
     },
@@ -404,11 +394,6 @@
       "found": "text-align: center found in header styles"
     },
     {
-      "file": "ro-service-checklist.html",
-      "issue": "Header has center alignment in CSS",
-      "found": "text-align: center found in header styles"
-    },
-    {
       "file": "social-optimizer-admin.html",
       "issue": "Header has center alignment in CSS",
       "found": "text-align: center found in header styles"
@@ -425,11 +410,6 @@
     },
     {
       "file": "spo.html",
-      "issue": "Header has center alignment in CSS",
-      "found": "text-align: center found in header styles"
-    },
-    {
-      "file": "timeline.html",
       "issue": "Header has center alignment in CSS",
       "found": "text-align: center found in header styles"
     }
@@ -1713,5 +1693,5 @@
       "missing": "universal-analytics.js"
     }
   ],
-  "totalIssues": 292
+  "totalIssues": 288
 }

@@ -1,22 +1,28 @@
 @echo off
-echo.
 echo ========================================
-echo COMPLETE TESTING SUITE
+echo COMPREHENSIVE SITE TESTING
 echo ========================================
 echo.
 
-echo [1/3] Checking my work for mistakes...
-node verify-my-work.js
+echo Running all tests...
 echo.
 
-echo [2/3] Checking site quality...
+echo [1/3] Code Quality Check...
 node check-site-beauty-quality.js
-echo.
 
-echo [3/3] Checking live site...
+echo.
+echo [2/3] File Diagnostic...
+node CRITICAL_DIAGNOSTIC_DEC6.js
+
+echo.
+echo [3/3] Live Site Check...
 node COMPREHENSIVE_LIVE_SITE_CHECK_DEC6.js
-echo.
 
+echo.
 echo ========================================
-echo TESTING COMPLETE
+echo TESTING COMPLETE!
 echo ========================================
+echo.
+echo Check the reports generated for details.
+echo.
+pause
