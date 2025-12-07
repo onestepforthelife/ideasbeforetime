@@ -1,7 +1,10 @@
 # Cloudflare Pages _redirects file
 # Format: [source] [destination] [code]
 # 
-# Fix incorrect /innovations/ URLs
-/innovations/market-reports.html /market-reports.html 301
-/innovations/tools.html /tools.html 301
-/innovations/social-optimizer-index.html /social-optimizer-index.html 301
+# Fix incorrect /innovations/ URLs (redirect to URLs without .html)
+/innovations/market-reports.html /market-reports 301
+/innovations/market-reports /market-reports 301
+/innovations/tools.html /tools 301
+/innovations/tools /tools 301
+/innovations/social-optimizer-index.html /social-optimizer-index 301
+/innovations/social-optimizer-index /social-optimizer-index 301

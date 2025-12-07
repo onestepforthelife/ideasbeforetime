@@ -77,6 +77,9 @@ function initializeChatbot() {
     const messages = document.getElementById('godaChatMessages');
     const chatbot = document.getElementById('godaChatbot');
 
+    // Conversation history for context (MUST BE DECLARED FIRST!)
+    let conversationHistory = [];
+
     // Make chatbot draggable
     makeDraggable(toggle, chatbot);
 
@@ -173,9 +176,6 @@ function initializeChatbot() {
         messages.appendChild(messageDiv);
         messages.scrollTop = messages.scrollHeight;
     }
-
-    // Conversation history for context
-    let conversationHistory = [];
 
     // Handle numbered responses
     function handleNumberedInput(message) {
