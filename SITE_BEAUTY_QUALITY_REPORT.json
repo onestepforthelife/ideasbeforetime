@@ -1,0 +1,4612 @@
+{
+  "timestamp": "2025-12-07T08:17:05.874Z",
+  "filesChecked": 203,
+  "colors": [
+    "#5a6c7d",
+    "#8b9aa7",
+    "#444",
+    "#f9f9f9",
+    "#333",
+    "#555",
+    "#f5f7ff",
+    "#8b7355",
+    "#65543f",
+    "#ff6b6b",
+    "#ff9f40",
+    "#1abc9c",
+    "#16a085",
+    "#666",
+    "#e8f5e9",
+    "#c8e6c9",
+    "#28a745",
+    "#155724",
+    "#fff3cd",
+    "#ffe69c",
+    "#ffc107",
+    "#856404",
+    "#1e88e5",
+    "#1565c0",
+    "#e0e0e0",
+    "#888",
+    "#999",
+    "#f5f5f5",
+    "#2c3e50",
+    "#f8f9fa",
+    "#4caf50",
+    "#2196f3",
+    "#eee",
+    "#2563eb",
+    "#1e40af",
+    "#1e3c72",
+    "#2a5298",
+    "#ff9800",
+    "#45a049",
+    "#ccc",
+    "#f44336",
+    "#1e1e1e",
+    "#00ff00",
+    "#64b5f6",
+    "#fff",
+    "#f1f5f9",
+    "#cbd5e1",
+    "#94a3b8",
+    "#0f172a",
+    "#64748b",
+    "#334155",
+    "#4f46e5",
+    "#667eea",
+    "#764ba2",
+    "#222",
+    "#f59e0b",
+    "#d97706",
+    "#264a96",
+    "#3b82f6",
+    "#ccd4e0",
+    "#eef2ff",
+    "#e8f0ff",
+    "#ef4444",
+    "#dc2626",
+    "#eaf0ff",
+    "#10b981",
+    "#059669",
+    "#1a1a1a",
+    "#000000",
+    "#0066cc",
+    "#004499",
+    "#cc0000",
+    "#990000",
+    "#00aa44",
+    "#008833",
+    "#ff6600",
+    "#cc5200",
+    "#6600cc",
+    "#4400aa",
+    "#2a2a2a",
+    "#00ff88",
+    "#ff6666",
+    "#66ff66",
+    "#ff6464",
+    "#ffaa00",
+    "#f0f7ff",
+    "#0077b5",
+    "#005885",
+    "#e9ecef",
+    "#e8e8e8",
+    "#1da1f2",
+    "#1877f2",
+    "#25d366",
+    "#4a5c6d",
+    "#ffffff",
+    "#0a66c2",
+    "#fff9e6",
+    "#dc3545",
+    "#dee2e6",
+    "#6c757d",
+    "#e74c3c",
+    "#218838",
+    "#c0392b",
+    "#000",
+    "#f8f9ff",
+    "#ddd",
+    "#fff5f5",
+    "#e7f3ff",
+    "#d4edda",
+    "#20c997",
+    "#17a2b8",
+    "#c82333",
+    "#007bff",
+    "#0056b3",
+    "#6b7280",
+    "#ffeaa7",
+    "#fdcb6e",
+    "#2d3436",
+    "#ee5a6f",
+    "#dfe6e9",
+    "#00b894",
+    "#e8f8f5",
+    "#d4f1e8",
+    "#636e72",
+    "#74b9ff",
+    "#b2bec3",
+    "#00cec9",
+    "#0984e3",
+    "#6c5ce7",
+    "#fd79a8",
+    "#e17055",
+    "#d63031",
+    "#c3e6cb",
+    "#f8d7da",
+    "#721c24",
+    "#f5c6cb",
+    "#fff3e0",
+    "#ffe0b2",
+    "#f0f0f0",
+    "#d1ecf1",
+    "#007acc",
+    "#005a9e",
+    "#f0fff4",
+    "#e6f9ed",
+    "#495057",
+    "#5568d3",
+    "#f4f4f4",
+    "#2d2d2d",
+    "#f8f8f2",
+    "#3498db",
+    "#7f8c8d",
+    "#2980b9",
+    "#34495e",
+    "#ecf0f1",
+    "#27ae60",
+    "#d5f4e6",
+    "#d6eaf8",
+    "#f2f2f2",
+    "#95a5a6",
+    "#bdc3c7",
+    "#cc8800",
+    "#ff9933",
+    "#ffaa44",
+    "#0099ff",
+    "#33aaff",
+    "#ff0000",
+    "#ff9966",
+    "#ffcc66",
+    "#ffd700",
+    "#e3f2fd",
+    "#00a0dc",
+    "#e8f4f8",
+    "#f093fb",
+    "#4facfe",
+    "#43e97b",
+    "#f5576c",
+    "#00f2fe",
+    "#38f9d7",
+    "#d0d0d0",
+    "#f5f7fa",
+    "#c3cfe2",
+    "#2d3748",
+    "#48bb78",
+    "#9f7aea",
+    "#38a169",
+    "#805ad5",
+    "#e2e8f0",
+    "#f7fafc",
+    "#e6fffa",
+    "#047857",
+    "#fef3c7",
+    "#92400e",
+    "#fffbeb",
+    "#ffe6e6",
+    "#6a1b9a",
+    "#f3e5f5",
+    "#9c27b0",
+    "#fff9c4",
+    "#fbc02d",
+    "#f57f17",
+    "#d63384",
+    "#4ade80",
+    "#22c55e",
+    "#60a5fa",
+    "#fbbf24",
+    "#a78bfa",
+    "#8b5cf6",
+    "#f87171",
+    "#e5e7eb",
+    "#9ca3af",
+    "#3c5fa8",
+    "#d4ffd4",
+    "#fff8c9",
+    "#ffd4d4",
+    "#5677c8",
+    "#f0f9ff",
+    "#ff6384",
+    "#ff8fab",
+    "#36a2eb",
+    "#5bb5f0",
+    "#4bc0c0",
+    "#6dd5d5",
+    "#ffcd56",
+    "#ffd97d",
+    "#fff0f5",
+    "#eff6ff",
+    "#d32f2f",
+    "#388e3c",
+    "#f57c00",
+    "#ffe082",
+    "#bbdefb",
+    "#2e7d32",
+    "#c92a2a",
+    "#1b5e20",
+    "#ffebee",
+    "#c62828",
+    "#fff59d",
+    "#ff9900",
+    "#e65100",
+    "#ff7700",
+    "#ff5500",
+    "#7b1fa2",
+    "#00bcd4",
+    "#0097a7",
+    "#0d47a1",
+    "#e4405f",
+    "#f3f3f3",
+    "#fee",
+    "#f00",
+    "#d00",
+    "#374151",
+    "#dbeafe",
+    "#4b5563",
+    "#1e3a8a",
+    "#0f0",
+    "#f0f0ff"
+  ],
+  "fonts": [
+    "'Segoe UI',Arial,sans-serif",
+    "'Segoe UI',Tahoma,Geneva,Verdana,sans-serif",
+    "'Courier New',monospace",
+    "inherit",
+    "'SF Pro Text', Helvetica, sans-serif",
+    "'Calibri',Arial,sans-serif",
+    "Arial, sans-serif",
+    "'Comic Sans MS', cursive, sans-serif",
+    "'Segoe UI', Arial, sans-serif",
+    "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    "'Open Sans',sans-serif",
+    "'Merriweather',serif",
+    "'Open Sans', sans-serif",
+    "'Merriweather', serif",
+    "Arial,sans-serif",
+    "monospace"
+  ],
+  "headerIssues": [
+    {
+      "file": "admin-control-panel.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "astronomy.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "BASF_IT_SECURITY_PROPOSAL.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "blog.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "email-sender-web.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "email-template.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "index-v2-conversion-optimized.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "index.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "innovations\\3d-imaging-2009.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "innovations\\dashboard-simplification-2017.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "innovations\\digital-money-2012.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "innovations\\dual-sim-2003.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "innovations\\moveable-dividers-2012.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "innovations\\music-ringtones-2003.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "innovations\\silent-dj-2001.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "innovations\\tv-storage-2002.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "innovations\\universal-health-id-2009.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "JOB_OUTREACH_AUTOMATION_TOOL.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "JOB_TRACKER_DAILY.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "linkedin-portfolio\\linkedin-network-map.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "linkedin-portfolio\\linkedin-portfolio-index.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "linkedin-portfolio\\linkedin-skills-dashboard.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "nickel-compounds-technical-data.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "nickel-esg-report-open.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "nickel-esg-report.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "personal-local-only\\family-lifetime-timeline.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "personal-local-only\\family-prediction-report.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "profile-optimizer.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "ro-service-checklist.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "social-optimizer-admin.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "social-optimizer-app.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "social-optimizer-index.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "spo.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    },
+    {
+      "file": "timeline.html",
+      "issue": "Header has center alignment in CSS",
+      "found": "text-align: center found in header styles"
+    }
+  ],
+  "linkIssues": [
+    {
+      "file": "access.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/request-access.html"
+    },
+    {
+      "file": "acrylic.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/Final_Acrylic_Market_Report.html"
+    },
+    {
+      "file": "BASF_IT_SECURITY_PROPOSAL.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/BASF_IT_SECURITY_PROPOSAL.html"
+    },
+    {
+      "file": "blog-post-1.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-1.html"
+    },
+    {
+      "file": "blog-post-1.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-1.html&text=Reflections%20on%20Global%20Success%20and%20Reciprocity%20Over%20the%20years%2C%20I%E2%80%99ve%20observed%20a%20quiet%20pattern%20in%20corporate%20life%3A%20Friends%20who%20became%20NRIs.%20Colleagues%20who"
+    },
+    {
+      "file": "blog-post-1.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-1.html"
+    },
+    {
+      "file": "blog-post-1.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-1.html"
+    },
+    {
+      "file": "blog-post-1.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Reflections%20on%20Global%20Success%20and%20Reciprocity%20Over%20the%20years%2C%20I%E2%80%99ve%20observed%20a%20quiet%20pattern%20in%20corporate%20life%3A%20Friends%20who%20became%20NRIs.%20Colleagues%20who%20https://ideasbeforetime.pages.dev/blog-post-1.html"
+    },
+    {
+      "file": "blog-post-10.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-10.html"
+    },
+    {
+      "file": "blog-post-10.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-10.html&text=As%20we%20navigate%20the%20complex%20world%20of%20business%2C%20it's%20no%20secret%20that%20sales%20forecasts%20and%20project%20pipelines%20are%20crucial%20to%20driving%20growth%20and%20decision-mak"
+    },
+    {
+      "file": "blog-post-10.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-10.html"
+    },
+    {
+      "file": "blog-post-10.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-10.html"
+    },
+    {
+      "file": "blog-post-10.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20we%20navigate%20the%20complex%20world%20of%20business%2C%20it's%20no%20secret%20that%20sales%20forecasts%20and%20project%20pipelines%20are%20crucial%20to%20driving%20growth%20and%20decision-mak%20https://ideasbeforetime.pages.dev/blog-post-10.html"
+    },
+    {
+      "file": "blog-post-100.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-100.html"
+    },
+    {
+      "file": "blog-post-100.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-100.html&text=https%3A%2F%2Fwww.linkedin.com%2Ffeed%2Fnews%2Famazon-faces-antitrust-case-report-4935612%2F%20%23Amazon%20%23Discount%20%23retailinnovation%20%23realitycheck%20%23Covertmarketingtacti"
+    },
+    {
+      "file": "blog-post-100.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-100.html"
+    },
+    {
+      "file": "blog-post-100.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-100.html"
+    },
+    {
+      "file": "blog-post-100.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=https%3A%2F%2Fwww.linkedin.com%2Ffeed%2Fnews%2Famazon-faces-antitrust-case-report-4935612%2F%20%23Amazon%20%23Discount%20%23retailinnovation%20%23realitycheck%20%23Covertmarketingtacti%20https://ideasbeforetime.pages.dev/blog-post-100.html"
+    },
+    {
+      "file": "blog-post-11.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-11.html"
+    },
+    {
+      "file": "blog-post-11.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-11.html&text=Job%20seekers%2C%20beware!%20Here%20are%20some%20red%20flags%20to%20watch%20out%20for%20in%20an%20interview%20process%3A%201.%20No%20introduction%20by%20the%20interview%20panel%20about%20themselves%2C%20sta"
+    },
+    {
+      "file": "blog-post-11.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-11.html"
+    },
+    {
+      "file": "blog-post-11.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-11.html"
+    },
+    {
+      "file": "blog-post-11.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Job%20seekers%2C%20beware!%20Here%20are%20some%20red%20flags%20to%20watch%20out%20for%20in%20an%20interview%20process%3A%201.%20No%20introduction%20by%20the%20interview%20panel%20about%20themselves%2C%20sta%20https://ideasbeforetime.pages.dev/blog-post-11.html"
+    },
+    {
+      "file": "blog-post-12.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-12.html"
+    },
+    {
+      "file": "blog-post-12.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-12.html&text=The%20next%20few%20years%20will%20be%20crucial%20in%20determining%20the%20success%20of%20Business%20Excellence%20teams.%20As%20organizations%20continue%20to%20evolve%20and%20adapt%20to%20changing"
+    },
+    {
+      "file": "blog-post-12.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-12.html"
+    },
+    {
+      "file": "blog-post-12.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-12.html"
+    },
+    {
+      "file": "blog-post-12.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=The%20next%20few%20years%20will%20be%20crucial%20in%20determining%20the%20success%20of%20Business%20Excellence%20teams.%20As%20organizations%20continue%20to%20evolve%20and%20adapt%20to%20changing%20https://ideasbeforetime.pages.dev/blog-post-12.html"
+    },
+    {
+      "file": "blog-post-13.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-13.html"
+    },
+    {
+      "file": "blog-post-13.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-13.html&text=As%20I%20watched%20this%20insightful%20video%20%5Blink%20below%5D%2C%20I%20was%20reminded%20of%20the%20importance%20of%20nurturing%20talent%2C%20perseverance%2C%20and%20a%20bit%20of%20luck%20in%20organization"
+    },
+    {
+      "file": "blog-post-13.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-13.html"
+    },
+    {
+      "file": "blog-post-13.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-13.html"
+    },
+    {
+      "file": "blog-post-13.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20I%20watched%20this%20insightful%20video%20%5Blink%20below%5D%2C%20I%20was%20reminded%20of%20the%20importance%20of%20nurturing%20talent%2C%20perseverance%2C%20and%20a%20bit%20of%20luck%20in%20organization%20https://ideasbeforetime.pages.dev/blog-post-13.html"
+    },
+    {
+      "file": "blog-post-14.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-14.html"
+    },
+    {
+      "file": "blog-post-14.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-14.html&text=The%20recent%20departure%20of%20John%20Donahoe%20as%20CEO%20of%20Nike%20has%20sparked%20intense%20discussion%20and%20debate%20within%20the%20business%20community.%20As%20a%20seasoned%20leader%2C%20Don"
+    },
+    {
+      "file": "blog-post-14.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-14.html"
+    },
+    {
+      "file": "blog-post-14.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-14.html"
+    },
+    {
+      "file": "blog-post-14.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=The%20recent%20departure%20of%20John%20Donahoe%20as%20CEO%20of%20Nike%20has%20sparked%20intense%20discussion%20and%20debate%20within%20the%20business%20community.%20As%20a%20seasoned%20leader%2C%20Don%20https://ideasbeforetime.pages.dev/blog-post-14.html"
+    },
+    {
+      "file": "blog-post-15.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-15.html"
+    },
+    {
+      "file": "blog-post-15.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-15.html&text=As%20we%20continue%20to%20navigate%20the%20ever-changing%20landscape%20of%20technology%20and%20innovation%2C%20I'd%20like%20to%20propose%20an%20exciting%20opportunity%20for%20the%20Chemical%20Gian"
+    },
+    {
+      "file": "blog-post-15.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-15.html"
+    },
+    {
+      "file": "blog-post-15.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-15.html"
+    },
+    {
+      "file": "blog-post-15.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20we%20continue%20to%20navigate%20the%20ever-changing%20landscape%20of%20technology%20and%20innovation%2C%20I'd%20like%20to%20propose%20an%20exciting%20opportunity%20for%20the%20Chemical%20Gian%20https://ideasbeforetime.pages.dev/blog-post-15.html"
+    },
+    {
+      "file": "blog-post-16.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-16.html"
+    },
+    {
+      "file": "blog-post-16.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-16.html&text=One%20hand%20holds%20the%20brake%2C%20slowing%20your%20pace%2C%20A%20guardian%20of%20safety%2C%20a%20watchful%20gaze.%20The%20other%20hand%20holds%20the%20fine%2C%20waiting%20to%20claim%2C%20A%20punisher%20of%20pro"
+    },
+    {
+      "file": "blog-post-16.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-16.html"
+    },
+    {
+      "file": "blog-post-16.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-16.html"
+    },
+    {
+      "file": "blog-post-16.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=One%20hand%20holds%20the%20brake%2C%20slowing%20your%20pace%2C%20A%20guardian%20of%20safety%2C%20a%20watchful%20gaze.%20The%20other%20hand%20holds%20the%20fine%2C%20waiting%20to%20claim%2C%20A%20punisher%20of%20pro%20https://ideasbeforetime.pages.dev/blog-post-16.html"
+    },
+    {
+      "file": "blog-post-17.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-17.html"
+    },
+    {
+      "file": "blog-post-17.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-17.html&text=As%20India's%20population%20grows%2C%20traffic%20congestion%20continues%20to%20plague%20cities%2C%20compromising%20economic%20productivity%2C%20road%20safety%2C%20and%20quality%20of%20life.%20Whil"
+    },
+    {
+      "file": "blog-post-17.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-17.html"
+    },
+    {
+      "file": "blog-post-17.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-17.html"
+    },
+    {
+      "file": "blog-post-17.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20India's%20population%20grows%2C%20traffic%20congestion%20continues%20to%20plague%20cities%2C%20compromising%20economic%20productivity%2C%20road%20safety%2C%20and%20quality%20of%20life.%20Whil%20https://ideasbeforetime.pages.dev/blog-post-17.html"
+    },
+    {
+      "file": "blog-post-18.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-18.html"
+    },
+    {
+      "file": "blog-post-18.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-18.html&text=As%20India's%20road%20infrastructure%20expands%20and%20its%20global%20presence%20grows%2C%20it's%20time%20to%20revisit%20Leave%20Travel%20Allowance%20(LTA)%20rules.%20Including%20car%20travel%20in"
+    },
+    {
+      "file": "blog-post-18.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-18.html"
+    },
+    {
+      "file": "blog-post-18.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-18.html"
+    },
+    {
+      "file": "blog-post-18.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20India's%20road%20infrastructure%20expands%20and%20its%20global%20presence%20grows%2C%20it's%20time%20to%20revisit%20Leave%20Travel%20Allowance%20(LTA)%20rules.%20Including%20car%20travel%20in%20https://ideasbeforetime.pages.dev/blog-post-18.html"
+    },
+    {
+      "file": "blog-post-19.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-19.html"
+    },
+    {
+      "file": "blog-post-19.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-19.html&text=As%20we%20navigate%20life's%20journey%2C%20we%20often%20rely%20on%20crutches%20that%20help%20us%20cope%20with%20challenges.%20But%20what%20happens%20when%20we%20outgrow%20them%3F%20Do%20we%20hold%20on%20or%20le"
+    },
+    {
+      "file": "blog-post-19.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-19.html"
+    },
+    {
+      "file": "blog-post-19.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-19.html"
+    },
+    {
+      "file": "blog-post-19.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20we%20navigate%20life's%20journey%2C%20we%20often%20rely%20on%20crutches%20that%20help%20us%20cope%20with%20challenges.%20But%20what%20happens%20when%20we%20outgrow%20them%3F%20Do%20we%20hold%20on%20or%20le%20https://ideasbeforetime.pages.dev/blog-post-19.html"
+    },
+    {
+      "file": "blog-post-2.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-2.html"
+    },
+    {
+      "file": "blog-post-2.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-2.html&text=I%20don%E2%80%99t%20use%20special%20tricks%20to%20build%20trust.%20I%20just%20show%20up%20consistently%2C%20think%20aloud%2C%20and%20stay%20transparent%20%E2%80%94%20even%20when%20I%20don%E2%80%99t%20have%20all%20the%20answers.%20I"
+    },
+    {
+      "file": "blog-post-2.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-2.html"
+    },
+    {
+      "file": "blog-post-2.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-2.html"
+    },
+    {
+      "file": "blog-post-2.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=I%20don%E2%80%99t%20use%20special%20tricks%20to%20build%20trust.%20I%20just%20show%20up%20consistently%2C%20think%20aloud%2C%20and%20stay%20transparent%20%E2%80%94%20even%20when%20I%20don%E2%80%99t%20have%20all%20the%20answers.%20I%20https://ideasbeforetime.pages.dev/blog-post-2.html"
+    },
+    {
+      "file": "blog-post-20.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-20.html"
+    },
+    {
+      "file": "blog-post-20.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-20.html&text=Purpose%20of%20Article%3A%20To%20inspire%20professionals%20to%20think%20creatively%2C%20challenge%20the%20status%20quo%2C%20and%20strive%20for%20innovative%20solutions%20that%20transform%20industr"
+    },
+    {
+      "file": "blog-post-20.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-20.html"
+    },
+    {
+      "file": "blog-post-20.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-20.html"
+    },
+    {
+      "file": "blog-post-20.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%20of%20Article%3A%20To%20inspire%20professionals%20to%20think%20creatively%2C%20challenge%20the%20status%20quo%2C%20and%20strive%20for%20innovative%20solutions%20that%20transform%20industr%20https://ideasbeforetime.pages.dev/blog-post-20.html"
+    },
+    {
+      "file": "blog-post-21.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-21.html"
+    },
+    {
+      "file": "blog-post-21.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-21.html&text=Purpose%20of%20the%20Article%3A%20This%20article%20aims%20to%20shed%20light%20on%20the%20ongoing%20developments%20in%20Noise%2C%20Vibration%2C%20and%20Harshness%20(NVH)%20technologies%2C%20their%20unint"
+    },
+    {
+      "file": "blog-post-21.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-21.html"
+    },
+    {
+      "file": "blog-post-21.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-21.html"
+    },
+    {
+      "file": "blog-post-21.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%20of%20the%20Article%3A%20This%20article%20aims%20to%20shed%20light%20on%20the%20ongoing%20developments%20in%20Noise%2C%20Vibration%2C%20and%20Harshness%20(NVH)%20technologies%2C%20their%20unint%20https://ideasbeforetime.pages.dev/blog-post-21.html"
+    },
+    {
+      "file": "blog-post-22.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-22.html"
+    },
+    {
+      "file": "blog-post-22.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-22.html&text=Purpose%20of%20Article%3A%20To%20delve%20into%20the%20fascinating%20story%20of%20how%20lava%20lamps%20inspired%20Cloudflare's%20cybersecurity%20solutions%2C%20exploring%20the%20intersection%20of"
+    },
+    {
+      "file": "blog-post-22.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-22.html"
+    },
+    {
+      "file": "blog-post-22.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-22.html"
+    },
+    {
+      "file": "blog-post-22.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%20of%20Article%3A%20To%20delve%20into%20the%20fascinating%20story%20of%20how%20lava%20lamps%20inspired%20Cloudflare's%20cybersecurity%20solutions%2C%20exploring%20the%20intersection%20of%20https://ideasbeforetime.pages.dev/blog-post-22.html"
+    },
+    {
+      "file": "blog-post-23.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-23.html"
+    },
+    {
+      "file": "blog-post-23.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-23.html&text=Purpose%20of%20Article%3A%20Showcase%20innovative%20seating%20solutions%20and%20highlight%20industry%20leaders.%20Imagine%20a%20venue%20that%20seamlessly%20adapts%20to%20any%20event%2C%20transfo"
+    },
+    {
+      "file": "blog-post-23.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-23.html"
+    },
+    {
+      "file": "blog-post-23.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-23.html"
+    },
+    {
+      "file": "blog-post-23.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%20of%20Article%3A%20Showcase%20innovative%20seating%20solutions%20and%20highlight%20industry%20leaders.%20Imagine%20a%20venue%20that%20seamlessly%20adapts%20to%20any%20event%2C%20transfo%20https://ideasbeforetime.pages.dev/blog-post-23.html"
+    },
+    {
+      "file": "blog-post-24.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-24.html"
+    },
+    {
+      "file": "blog-post-24.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-24.html&text=https%3A%2F%2Fyoutu.be%2FrxUm-2x-2dM%3Fsi%3D3I1Lu-Xyy9EXwD2W%20Introduction%20In%20today%E2%80%99s%20fast-paced%20business%20world%2C%20bureaucracy%20can%20often%20stifle%20innovation%20and%20effici"
+    },
+    {
+      "file": "blog-post-24.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-24.html"
+    },
+    {
+      "file": "blog-post-24.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-24.html"
+    },
+    {
+      "file": "blog-post-24.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=https%3A%2F%2Fyoutu.be%2FrxUm-2x-2dM%3Fsi%3D3I1Lu-Xyy9EXwD2W%20Introduction%20In%20today%E2%80%99s%20fast-paced%20business%20world%2C%20bureaucracy%20can%20often%20stifle%20innovation%20and%20effici%20https://ideasbeforetime.pages.dev/blog-post-24.html"
+    },
+    {
+      "file": "blog-post-25.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-25.html"
+    },
+    {
+      "file": "blog-post-25.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-25.html&text=Purpose%20This%20article%20explores%20the%20interconnected%20challenges%20of%20financial%20leakage%20and%20information%20degradation%2C%20highlighting%20their%20impact%20on%20governance%2C"
+    },
+    {
+      "file": "blog-post-25.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-25.html"
+    },
+    {
+      "file": "blog-post-25.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-25.html"
+    },
+    {
+      "file": "blog-post-25.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%20This%20article%20explores%20the%20interconnected%20challenges%20of%20financial%20leakage%20and%20information%20degradation%2C%20highlighting%20their%20impact%20on%20governance%2C%20https://ideasbeforetime.pages.dev/blog-post-25.html"
+    },
+    {
+      "file": "blog-post-26.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-26.html"
+    },
+    {
+      "file": "blog-post-26.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-26.html&text=Purpose%3A%20To%20equip%20job%20seekers%20with%20strategic%20insights%20on%20balancing%20%22I%22%20and%20%22We%22%20statements%20in%20interviews%2C%20enhancing%20their%20chances%20of%20success.%20Summary"
+    },
+    {
+      "file": "blog-post-26.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-26.html"
+    },
+    {
+      "file": "blog-post-26.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-26.html"
+    },
+    {
+      "file": "blog-post-26.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%3A%20To%20equip%20job%20seekers%20with%20strategic%20insights%20on%20balancing%20%22I%22%20and%20%22We%22%20statements%20in%20interviews%2C%20enhancing%20their%20chances%20of%20success.%20Summary%20https://ideasbeforetime.pages.dev/blog-post-26.html"
+    },
+    {
+      "file": "blog-post-27.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-27.html"
+    },
+    {
+      "file": "blog-post-27.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-27.html&text=Purpose%3A%20To%20inspire%20leaders%20and%20organizations%20to%20optimize%20their%20learning%20and%20development%20strategies%2C%20leveraging%20the%2070%3A20%3A10%20model%20to%20drive%20business%20g"
+    },
+    {
+      "file": "blog-post-27.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-27.html"
+    },
+    {
+      "file": "blog-post-27.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-27.html"
+    },
+    {
+      "file": "blog-post-27.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%3A%20To%20inspire%20leaders%20and%20organizations%20to%20optimize%20their%20learning%20and%20development%20strategies%2C%20leveraging%20the%2070%3A20%3A10%20model%20to%20drive%20business%20g%20https://ideasbeforetime.pages.dev/blog-post-27.html"
+    },
+    {
+      "file": "blog-post-28.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-28.html"
+    },
+    {
+      "file": "blog-post-28.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-28.html&text=Unlock%20Your%20Full%20Potential!%20Discover%20these%20evidence-backed%20productivity%20hacks%20to%20amplify%20your%20productivity%3A%20Top%2010%20Productivity%20Hacks%3A%201.%20Pomodoro%20Tec"
+    },
+    {
+      "file": "blog-post-28.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-28.html"
+    },
+    {
+      "file": "blog-post-28.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-28.html"
+    },
+    {
+      "file": "blog-post-28.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Unlock%20Your%20Full%20Potential!%20Discover%20these%20evidence-backed%20productivity%20hacks%20to%20amplify%20your%20productivity%3A%20Top%2010%20Productivity%20Hacks%3A%201.%20Pomodoro%20Tec%20https://ideasbeforetime.pages.dev/blog-post-28.html"
+    },
+    {
+      "file": "blog-post-29.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-29.html"
+    },
+    {
+      "file": "blog-post-29.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-29.html&text=Research%20by%20Amit%20Kumar%20(2011)%20Abstract%3A%20This%20study%20examines%20the%20impact%20of%20End-of-Day%20Syncs%2C%20informal%20brief%20meetings%20among%20blue-collar%20workers%2C%20on%20prod"
+    },
+    {
+      "file": "blog-post-29.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-29.html"
+    },
+    {
+      "file": "blog-post-29.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-29.html"
+    },
+    {
+      "file": "blog-post-29.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Research%20by%20Amit%20Kumar%20(2011)%20Abstract%3A%20This%20study%20examines%20the%20impact%20of%20End-of-Day%20Syncs%2C%20informal%20brief%20meetings%20among%20blue-collar%20workers%2C%20on%20prod%20https://ideasbeforetime.pages.dev/blog-post-29.html"
+    },
+    {
+      "file": "blog-post-3.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-3.html"
+    },
+    {
+      "file": "blog-post-3.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-3.html&text=A%20human%20neuron%20fires%20at%20~100%E2%80%AFm%2Fs.%20Light%20races%20at%20~300%2C000%E2%80%AFkm%2Fs.%20Yet%20galaxies%20at%20the%20edge%20of%20the%20observable%20universe%20recede%20faster%20than%20light%20itself%2C%20c"
+    },
+    {
+      "file": "blog-post-3.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-3.html"
+    },
+    {
+      "file": "blog-post-3.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-3.html"
+    },
+    {
+      "file": "blog-post-3.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=A%20human%20neuron%20fires%20at%20~100%E2%80%AFm%2Fs.%20Light%20races%20at%20~300%2C000%E2%80%AFkm%2Fs.%20Yet%20galaxies%20at%20the%20edge%20of%20the%20observable%20universe%20recede%20faster%20than%20light%20itself%2C%20c%20https://ideasbeforetime.pages.dev/blog-post-3.html"
+    },
+    {
+      "file": "blog-post-30.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-30.html"
+    },
+    {
+      "file": "blog-post-30.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-30.html&text=As%20we%20strive%20for%20innovation%20and%20growth%2C%20simplicity%20emerges%20as%20a%20powerful%20catalyst.%20Purpose%3A%20Cut%20complexity%2C%20accelerate%20innovation.%20Simplify%2C%20focus%2C%20do"
+    },
+    {
+      "file": "blog-post-30.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-30.html"
+    },
+    {
+      "file": "blog-post-30.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-30.html"
+    },
+    {
+      "file": "blog-post-30.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20we%20strive%20for%20innovation%20and%20growth%2C%20simplicity%20emerges%20as%20a%20powerful%20catalyst.%20Purpose%3A%20Cut%20complexity%2C%20accelerate%20innovation.%20Simplify%2C%20focus%2C%20do%20https://ideasbeforetime.pages.dev/blog-post-30.html"
+    },
+    {
+      "file": "blog-post-31.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-31.html"
+    },
+    {
+      "file": "blog-post-31.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-31.html&text=Purpose%3A%20To%20highlight%20the%20transformative%20power%20of%20transparency%20in%20Indian%20court%20proceedings%2C%20enhancing%20accountability%20and%20trust.%20Introduction%20India's%20j"
+    },
+    {
+      "file": "blog-post-31.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-31.html"
+    },
+    {
+      "file": "blog-post-31.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-31.html"
+    },
+    {
+      "file": "blog-post-31.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%3A%20To%20highlight%20the%20transformative%20power%20of%20transparency%20in%20Indian%20court%20proceedings%2C%20enhancing%20accountability%20and%20trust.%20Introduction%20India's%20j%20https://ideasbeforetime.pages.dev/blog-post-31.html"
+    },
+    {
+      "file": "blog-post-32.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-32.html"
+    },
+    {
+      "file": "blog-post-32.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-32.html&text=Purpose%3A%20To%20inspire%20and%20encourage%20individuals%20to%20harness%20their%20inner%20strength%20to%20overcome%20challenges%20and%20achieve%20business%20excellence.%20Summary%3A%20This%20po"
+    },
+    {
+      "file": "blog-post-32.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-32.html"
+    },
+    {
+      "file": "blog-post-32.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-32.html"
+    },
+    {
+      "file": "blog-post-32.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%3A%20To%20inspire%20and%20encourage%20individuals%20to%20harness%20their%20inner%20strength%20to%20overcome%20challenges%20and%20achieve%20business%20excellence.%20Summary%3A%20This%20po%20https://ideasbeforetime.pages.dev/blog-post-32.html"
+    },
+    {
+      "file": "blog-post-33.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-33.html"
+    },
+    {
+      "file": "blog-post-33.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-33.html&text=Purpose%3A%20Why%20let%20nepotism%20and%20favoritism%20hinder%20your%20business's%20growth%20and%20success%3F%20Summary%3A%20The%20Korean%20Air%20%22Nut%20Rage%22%20incident%20serves%20as%20a%20stark%20remi"
+    },
+    {
+      "file": "blog-post-33.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-33.html"
+    },
+    {
+      "file": "blog-post-33.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-33.html"
+    },
+    {
+      "file": "blog-post-33.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%3A%20Why%20let%20nepotism%20and%20favoritism%20hinder%20your%20business's%20growth%20and%20success%3F%20Summary%3A%20The%20Korean%20Air%20%22Nut%20Rage%22%20incident%20serves%20as%20a%20stark%20remi%20https://ideasbeforetime.pages.dev/blog-post-33.html"
+    },
+    {
+      "file": "blog-post-34.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-34.html"
+    },
+    {
+      "file": "blog-post-34.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-34.html&text=Purpose%3A%20Why%20waste%20time%20on%20inefficient%20data%20handover%20when%20you%20can%20streamline%20your%20operations%2C%20reduce%20costs%2C%20and%20stay%20ahead%20of%20the%20competition%3F%20Summary"
+    },
+    {
+      "file": "blog-post-34.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-34.html"
+    },
+    {
+      "file": "blog-post-34.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-34.html"
+    },
+    {
+      "file": "blog-post-34.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%3A%20Why%20waste%20time%20on%20inefficient%20data%20handover%20when%20you%20can%20streamline%20your%20operations%2C%20reduce%20costs%2C%20and%20stay%20ahead%20of%20the%20competition%3F%20Summary%20https://ideasbeforetime.pages.dev/blog-post-34.html"
+    },
+    {
+      "file": "blog-post-35.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-35.html"
+    },
+    {
+      "file": "blog-post-35.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-35.html&text=By%20Amit%20Kumar%2C%202024%20Unlocking%20New%20Opportunities%20Purpose%3A%20This%20article%20introduces%20the%20groundbreaking%20concept%20of%20No-Collar%20Jobs%2C%20highlighting%20its%20transf"
+    },
+    {
+      "file": "blog-post-35.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-35.html"
+    },
+    {
+      "file": "blog-post-35.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-35.html"
+    },
+    {
+      "file": "blog-post-35.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=By%20Amit%20Kumar%2C%202024%20Unlocking%20New%20Opportunities%20Purpose%3A%20This%20article%20introduces%20the%20groundbreaking%20concept%20of%20No-Collar%20Jobs%2C%20highlighting%20its%20transf%20https://ideasbeforetime.pages.dev/blog-post-35.html"
+    },
+    {
+      "file": "blog-post-36.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-36.html"
+    },
+    {
+      "file": "blog-post-36.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-36.html&text=Being%20Social%20%3A%20Reach%20Out%20%26%20Be%20Reachable%20%23SocialConnectionMatters%20%23ReachOutAndBeReachable%20%23NetworkingTips%20%23MentalHealthAwareness%20%23RelationshipGoals%20%23Co"
+    },
+    {
+      "file": "blog-post-36.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-36.html"
+    },
+    {
+      "file": "blog-post-36.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-36.html"
+    },
+    {
+      "file": "blog-post-36.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Being%20Social%20%3A%20Reach%20Out%20%26%20Be%20Reachable%20%23SocialConnectionMatters%20%23ReachOutAndBeReachable%20%23NetworkingTips%20%23MentalHealthAwareness%20%23RelationshipGoals%20%23Co%20https://ideasbeforetime.pages.dev/blog-post-36.html"
+    },
+    {
+      "file": "blog-post-37.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-37.html"
+    },
+    {
+      "file": "blog-post-37.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-37.html&text=Summary%3A%20This%20article%20offers%20a%20comprehensive%20guide%20for%20navigating%20workplace%20challenges%2C%20focusing%20on%20situations%20where%20employees%20face%20unfair%20treatment%2C"
+    },
+    {
+      "file": "blog-post-37.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-37.html"
+    },
+    {
+      "file": "blog-post-37.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-37.html"
+    },
+    {
+      "file": "blog-post-37.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Summary%3A%20This%20article%20offers%20a%20comprehensive%20guide%20for%20navigating%20workplace%20challenges%2C%20focusing%20on%20situations%20where%20employees%20face%20unfair%20treatment%2C%20https://ideasbeforetime.pages.dev/blog-post-37.html"
+    },
+    {
+      "file": "blog-post-38.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-38.html"
+    },
+    {
+      "file": "blog-post-38.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-38.html&text=Boeing%20Workers%E2%80%99%20Strike%3A%20A%20Reflection%20on%20Industry%20Standards%20and%20Compensation%3F%3F%20News%20Source%3A%20By%20Emma%20W.%20Thorne%2C%20Editor%20at%20LinkedIn%20News%20Read%20More%20https%3A"
+    },
+    {
+      "file": "blog-post-38.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-38.html"
+    },
+    {
+      "file": "blog-post-38.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-38.html"
+    },
+    {
+      "file": "blog-post-38.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Boeing%20Workers%E2%80%99%20Strike%3A%20A%20Reflection%20on%20Industry%20Standards%20and%20Compensation%3F%3F%20News%20Source%3A%20By%20Emma%20W.%20Thorne%2C%20Editor%20at%20LinkedIn%20News%20Read%20More%20https%3A%20https://ideasbeforetime.pages.dev/blog-post-38.html"
+    },
+    {
+      "file": "blog-post-39.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-39.html"
+    },
+    {
+      "file": "blog-post-39.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-39.html&text=The%20Future%20is%20NowThe%20Future%20is%20Now"
+    },
+    {
+      "file": "blog-post-39.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-39.html"
+    },
+    {
+      "file": "blog-post-39.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-39.html"
+    },
+    {
+      "file": "blog-post-39.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=The%20Future%20is%20NowThe%20Future%20is%20Now%20https://ideasbeforetime.pages.dev/blog-post-39.html"
+    },
+    {
+      "file": "blog-post-4.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-4.html"
+    },
+    {
+      "file": "blog-post-4.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-4.html&text=In%20today%E2%80%99s%20hyper-competitive%20world%2C%20professionals%20across%20sales%2C%20governance%2C%20and%20institutional%20leadership%20are%20often%20cornered%20into%20uncomfortable%20negotia"
+    },
+    {
+      "file": "blog-post-4.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-4.html"
+    },
+    {
+      "file": "blog-post-4.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-4.html"
+    },
+    {
+      "file": "blog-post-4.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=In%20today%E2%80%99s%20hyper-competitive%20world%2C%20professionals%20across%20sales%2C%20governance%2C%20and%20institutional%20leadership%20are%20often%20cornered%20into%20uncomfortable%20negotia%20https://ideasbeforetime.pages.dev/blog-post-4.html"
+    },
+    {
+      "file": "blog-post-40.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-40.html"
+    },
+    {
+      "file": "blog-post-40.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-40.html&text=The%20Delicate%20Art%20of%20Work-Life%20Balance%3A%20A%20Tightrope%20Walk%20We%20might%20need%20to%20take%20a%20short%20break%20during%20office%20hours%20to%20attend%20to%20personal%20matters.%20We%20may"
+    },
+    {
+      "file": "blog-post-40.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-40.html"
+    },
+    {
+      "file": "blog-post-40.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-40.html"
+    },
+    {
+      "file": "blog-post-40.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=The%20Delicate%20Art%20of%20Work-Life%20Balance%3A%20A%20Tightrope%20Walk%20We%20might%20need%20to%20take%20a%20short%20break%20during%20office%20hours%20to%20attend%20to%20personal%20matters.%20We%20may%20https://ideasbeforetime.pages.dev/blog-post-40.html"
+    },
+    {
+      "file": "blog-post-41.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-41.html"
+    },
+    {
+      "file": "blog-post-41.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-41.html&text=The%20Whistleblower's%20Dilemma%3A%20Exposing%20Wrongdoing%20In%20today's%20landscape%2C%20whistleblowers%20play%20a%20crucial%20role%20in%20exposing%20wrongdoing%2C%20promoting%20transparen"
+    },
+    {
+      "file": "blog-post-41.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-41.html"
+    },
+    {
+      "file": "blog-post-41.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-41.html"
+    },
+    {
+      "file": "blog-post-41.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=The%20Whistleblower's%20Dilemma%3A%20Exposing%20Wrongdoing%20In%20today's%20landscape%2C%20whistleblowers%20play%20a%20crucial%20role%20in%20exposing%20wrongdoing%2C%20promoting%20transparen%20https://ideasbeforetime.pages.dev/blog-post-41.html"
+    },
+    {
+      "file": "blog-post-42.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-42.html"
+    },
+    {
+      "file": "blog-post-42.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-42.html&text=During%20the%20first%20wave%20of%20%23COVID-19%20in%202020%2C%20I%20was%20mentoring%20someone%20who%20was%20struggling%20with%20ideation%20in%20their%20team.%20They%20shared%20how%20great%20ideas%20were%20b"
+    },
+    {
+      "file": "blog-post-42.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-42.html"
+    },
+    {
+      "file": "blog-post-42.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-42.html"
+    },
+    {
+      "file": "blog-post-42.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=During%20the%20first%20wave%20of%20%23COVID-19%20in%202020%2C%20I%20was%20mentoring%20someone%20who%20was%20struggling%20with%20ideation%20in%20their%20team.%20They%20shared%20how%20great%20ideas%20were%20b%20https://ideasbeforetime.pages.dev/blog-post-42.html"
+    },
+    {
+      "file": "blog-post-43.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-43.html"
+    },
+    {
+      "file": "blog-post-43.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-43.html&text=Employees'%20Exceptional%20Story%20-%20Enigma%2C%20Stigma%2C%20Confusion%20Summary%3A%20This%20article%20explores%20the%20challenges%20faced%20by%20employees%20who%20are%20subjected%20to%20unfair"
+    },
+    {
+      "file": "blog-post-43.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-43.html"
+    },
+    {
+      "file": "blog-post-43.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-43.html"
+    },
+    {
+      "file": "blog-post-43.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Employees'%20Exceptional%20Story%20-%20Enigma%2C%20Stigma%2C%20Confusion%20Summary%3A%20This%20article%20explores%20the%20challenges%20faced%20by%20employees%20who%20are%20subjected%20to%20unfair%20https://ideasbeforetime.pages.dev/blog-post-43.html"
+    },
+    {
+      "file": "blog-post-44.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-44.html"
+    },
+    {
+      "file": "blog-post-44.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-44.html&text=Summary%3A%20Summary%3A%20This%20article%20explores%20the%20challenges%20faced%20by%20employees%20who%20are%20subjected%20to%20unfair%20treatment%20and%20inadequate%20compensation.%20By%20unders"
+    },
+    {
+      "file": "blog-post-44.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-44.html"
+    },
+    {
+      "file": "blog-post-44.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-44.html"
+    },
+    {
+      "file": "blog-post-44.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Summary%3A%20Summary%3A%20This%20article%20explores%20the%20challenges%20faced%20by%20employees%20who%20are%20subjected%20to%20unfair%20treatment%20and%20inadequate%20compensation.%20By%20unders%20https://ideasbeforetime.pages.dev/blog-post-44.html"
+    },
+    {
+      "file": "blog-post-45.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-45.html"
+    },
+    {
+      "file": "blog-post-45.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-45.html&text=As%20we%20strive%20for%20success%20in%20our%20careers%2C%20let's%20not%20forget%20the%20importance%20of%20a%20healthy%20work%20culture.%20Unfortunately%2C%20many%20companies%20still%20grapple%20with%3A"
+    },
+    {
+      "file": "blog-post-45.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-45.html"
+    },
+    {
+      "file": "blog-post-45.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-45.html"
+    },
+    {
+      "file": "blog-post-45.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20we%20strive%20for%20success%20in%20our%20careers%2C%20let's%20not%20forget%20the%20importance%20of%20a%20healthy%20work%20culture.%20Unfortunately%2C%20many%20companies%20still%20grapple%20with%3A%20https://ideasbeforetime.pages.dev/blog-post-45.html"
+    },
+    {
+      "file": "blog-post-46.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-46.html"
+    },
+    {
+      "file": "blog-post-46.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-46.html&text=Discover%20India%E2%80%99s%20economic%20resurgence%20as%20we%20approach%20the%20'Decoding%20Opportunities%20For%20Next%20Decade'%20conference%20at%20the%20Marriott%20Hotel%2C%20Jaipur%20on%20Septem%20Di"
+    },
+    {
+      "file": "blog-post-46.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-46.html"
+    },
+    {
+      "file": "blog-post-46.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-46.html"
+    },
+    {
+      "file": "blog-post-46.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Discover%20India%E2%80%99s%20economic%20resurgence%20as%20we%20approach%20the%20'Decoding%20Opportunities%20For%20Next%20Decade'%20conference%20at%20the%20Marriott%20Hotel%2C%20Jaipur%20on%20Septem%20Di%20https://ideasbeforetime.pages.dev/blog-post-46.html"
+    },
+    {
+      "file": "blog-post-47.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-47.html"
+    },
+    {
+      "file": "blog-post-47.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-47.html&text=In%20today%E2%80%99s%20dynamic%20work%20environment%2C%20how%20organizations%20perceive%20and%20treat%20employees%20can%20vary%20dramatically%20based%20on%20their%20status.%20This%20disparity%20often"
+    },
+    {
+      "file": "blog-post-47.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-47.html"
+    },
+    {
+      "file": "blog-post-47.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-47.html"
+    },
+    {
+      "file": "blog-post-47.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=In%20today%E2%80%99s%20dynamic%20work%20environment%2C%20how%20organizations%20perceive%20and%20treat%20employees%20can%20vary%20dramatically%20based%20on%20their%20status.%20This%20disparity%20often%20https://ideasbeforetime.pages.dev/blog-post-47.html"
+    },
+    {
+      "file": "blog-post-48.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-48.html"
+    },
+    {
+      "file": "blog-post-48.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-48.html&text=The%20Evolving%20Landscape%20of%20Medicine%20Dosages%3A%20Understanding%20the%20Factors%20at%20Play%20As%20we%20navigate%20the%20complex%20world%20of%20medicine%2C%20it's%20essential%20to%20understa"
+    },
+    {
+      "file": "blog-post-48.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-48.html"
+    },
+    {
+      "file": "blog-post-48.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-48.html"
+    },
+    {
+      "file": "blog-post-48.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=The%20Evolving%20Landscape%20of%20Medicine%20Dosages%3A%20Understanding%20the%20Factors%20at%20Play%20As%20we%20navigate%20the%20complex%20world%20of%20medicine%2C%20it's%20essential%20to%20understa%20https://ideasbeforetime.pages.dev/blog-post-48.html"
+    },
+    {
+      "file": "blog-post-49.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-49.html"
+    },
+    {
+      "file": "blog-post-49.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-49.html&text=Disclaimer%3A%20This%20post%20is%20intended%20for%20positive%20brainstorming%20and%20exploration%20of%20ideas%2C%20not%20to%20criticize%20or%20hurt%20any%20individuals%20or%20professions%2C%20includ"
+    },
+    {
+      "file": "blog-post-49.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-49.html"
+    },
+    {
+      "file": "blog-post-49.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-49.html"
+    },
+    {
+      "file": "blog-post-49.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Disclaimer%3A%20This%20post%20is%20intended%20for%20positive%20brainstorming%20and%20exploration%20of%20ideas%2C%20not%20to%20criticize%20or%20hurt%20any%20individuals%20or%20professions%2C%20includ%20https://ideasbeforetime.pages.dev/blog-post-49.html"
+    },
+    {
+      "file": "blog-post-5.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-5.html"
+    },
+    {
+      "file": "blog-post-5.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-5.html&text=Who%20grows%20when%20your%20team%20grows%3F%20For%20me%2C%20the%20answer%20has%20always%20been%20clear%3A%20when%20your%20team%20grows%2C%20you%20grow.%20Not%20by%20holding%20on%20to%20every%20decision%2C%20but%20by"
+    },
+    {
+      "file": "blog-post-5.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-5.html"
+    },
+    {
+      "file": "blog-post-5.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-5.html"
+    },
+    {
+      "file": "blog-post-5.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Who%20grows%20when%20your%20team%20grows%3F%20For%20me%2C%20the%20answer%20has%20always%20been%20clear%3A%20when%20your%20team%20grows%2C%20you%20grow.%20Not%20by%20holding%20on%20to%20every%20decision%2C%20but%20by%20https://ideasbeforetime.pages.dev/blog-post-5.html"
+    },
+    {
+      "file": "blog-post-50.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-50.html"
+    },
+    {
+      "file": "blog-post-50.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-50.html&text=https%3A%2F%2Fwww.linkedin.com%2Ffeed%2Fnews%2Famazon-faces-antitrust-case-report-4935612%2F%20%23Amazon%20%23Discount%20%23retailinnovation%20%23realitycheck%20%23Covertmarketingtacti"
+    },
+    {
+      "file": "blog-post-50.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-50.html"
+    },
+    {
+      "file": "blog-post-50.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-50.html"
+    },
+    {
+      "file": "blog-post-50.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=https%3A%2F%2Fwww.linkedin.com%2Ffeed%2Fnews%2Famazon-faces-antitrust-case-report-4935612%2F%20%23Amazon%20%23Discount%20%23retailinnovation%20%23realitycheck%20%23Covertmarketingtacti%20https://ideasbeforetime.pages.dev/blog-post-50.html"
+    },
+    {
+      "file": "blog-post-51.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-51.html"
+    },
+    {
+      "file": "blog-post-51.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-51.html&text=Reflections%20on%20Global%20Success%20and%20Reciprocity%20Over%20the%20years%2C%20I%E2%80%99ve%20observed%20a%20quiet%20pattern%20in%20corporate%20life%3A%20Friends%20who%20became%20NRIs.%20Colleagues%20who"
+    },
+    {
+      "file": "blog-post-51.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-51.html"
+    },
+    {
+      "file": "blog-post-51.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-51.html"
+    },
+    {
+      "file": "blog-post-51.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Reflections%20on%20Global%20Success%20and%20Reciprocity%20Over%20the%20years%2C%20I%E2%80%99ve%20observed%20a%20quiet%20pattern%20in%20corporate%20life%3A%20Friends%20who%20became%20NRIs.%20Colleagues%20who%20https://ideasbeforetime.pages.dev/blog-post-51.html"
+    },
+    {
+      "file": "blog-post-52.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-52.html"
+    },
+    {
+      "file": "blog-post-52.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-52.html&text=I%20don%E2%80%99t%20use%20special%20tricks%20to%20build%20trust.%20I%20just%20show%20up%20consistently%2C%20think%20aloud%2C%20and%20stay%20transparent%20%E2%80%94%20even%20when%20I%20don%E2%80%99t%20have%20all%20the%20answers.%20I"
+    },
+    {
+      "file": "blog-post-52.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-52.html"
+    },
+    {
+      "file": "blog-post-52.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-52.html"
+    },
+    {
+      "file": "blog-post-52.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=I%20don%E2%80%99t%20use%20special%20tricks%20to%20build%20trust.%20I%20just%20show%20up%20consistently%2C%20think%20aloud%2C%20and%20stay%20transparent%20%E2%80%94%20even%20when%20I%20don%E2%80%99t%20have%20all%20the%20answers.%20I%20https://ideasbeforetime.pages.dev/blog-post-52.html"
+    },
+    {
+      "file": "blog-post-53.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-53.html"
+    },
+    {
+      "file": "blog-post-53.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-53.html&text=A%20human%20neuron%20fires%20at%20~100%E2%80%AFm%2Fs.%20Light%20races%20at%20~300%2C000%E2%80%AFkm%2Fs.%20Yet%20galaxies%20at%20the%20edge%20of%20the%20observable%20universe%20recede%20faster%20than%20light%20itself%2C%20c"
+    },
+    {
+      "file": "blog-post-53.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-53.html"
+    },
+    {
+      "file": "blog-post-53.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-53.html"
+    },
+    {
+      "file": "blog-post-53.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=A%20human%20neuron%20fires%20at%20~100%E2%80%AFm%2Fs.%20Light%20races%20at%20~300%2C000%E2%80%AFkm%2Fs.%20Yet%20galaxies%20at%20the%20edge%20of%20the%20observable%20universe%20recede%20faster%20than%20light%20itself%2C%20c%20https://ideasbeforetime.pages.dev/blog-post-53.html"
+    },
+    {
+      "file": "blog-post-54.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-54.html"
+    },
+    {
+      "file": "blog-post-54.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-54.html&text=In%20today%E2%80%99s%20hyper-competitive%20world%2C%20professionals%20across%20sales%2C%20governance%2C%20and%20institutional%20leadership%20are%20often%20cornered%20into%20uncomfortable%20negotia"
+    },
+    {
+      "file": "blog-post-54.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-54.html"
+    },
+    {
+      "file": "blog-post-54.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-54.html"
+    },
+    {
+      "file": "blog-post-54.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=In%20today%E2%80%99s%20hyper-competitive%20world%2C%20professionals%20across%20sales%2C%20governance%2C%20and%20institutional%20leadership%20are%20often%20cornered%20into%20uncomfortable%20negotia%20https://ideasbeforetime.pages.dev/blog-post-54.html"
+    },
+    {
+      "file": "blog-post-55.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-55.html"
+    },
+    {
+      "file": "blog-post-55.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-55.html&text=Who%20grows%20when%20your%20team%20grows%3F%20For%20me%2C%20the%20answer%20has%20always%20been%20clear%3A%20when%20your%20team%20grows%2C%20you%20grow.%20Not%20by%20holding%20on%20to%20every%20decision%2C%20but%20by"
+    },
+    {
+      "file": "blog-post-55.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-55.html"
+    },
+    {
+      "file": "blog-post-55.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-55.html"
+    },
+    {
+      "file": "blog-post-55.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Who%20grows%20when%20your%20team%20grows%3F%20For%20me%2C%20the%20answer%20has%20always%20been%20clear%3A%20when%20your%20team%20grows%2C%20you%20grow.%20Not%20by%20holding%20on%20to%20every%20decision%2C%20but%20by%20https://ideasbeforetime.pages.dev/blog-post-55.html"
+    },
+    {
+      "file": "blog-post-56.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-56.html"
+    },
+    {
+      "file": "blog-post-56.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-56.html&text=In%20my%20early%20sales%20career%2C%20I%20often%20told%20customers%3A%20%E2%80%9CBASF%20is%20the%20backup%20of%20BASF.%E2%80%9D%20It%20wasn%E2%80%99t%20an%20easy%20statement%20to%20deliver.%20To%20some%2C%20it%20could%20sound%20egocen"
+    },
+    {
+      "file": "blog-post-56.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-56.html"
+    },
+    {
+      "file": "blog-post-56.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-56.html"
+    },
+    {
+      "file": "blog-post-56.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=In%20my%20early%20sales%20career%2C%20I%20often%20told%20customers%3A%20%E2%80%9CBASF%20is%20the%20backup%20of%20BASF.%E2%80%9D%20It%20wasn%E2%80%99t%20an%20easy%20statement%20to%20deliver.%20To%20some%2C%20it%20could%20sound%20egocen%20https://ideasbeforetime.pages.dev/blog-post-56.html"
+    },
+    {
+      "file": "blog-post-57.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-57.html"
+    },
+    {
+      "file": "blog-post-57.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-57.html&text=True%20strength%20lies%20in%20knowing%20who%20you%20are%20and%20standing%20firm%E2%80%94even%20in%20the%20face%20of%20authority.%20Whether%20in%20the%20wild%20or%20the%20workplace%2C%20courage%20and%20convictio"
+    },
+    {
+      "file": "blog-post-57.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-57.html"
+    },
+    {
+      "file": "blog-post-57.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-57.html"
+    },
+    {
+      "file": "blog-post-57.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=True%20strength%20lies%20in%20knowing%20who%20you%20are%20and%20standing%20firm%E2%80%94even%20in%20the%20face%20of%20authority.%20Whether%20in%20the%20wild%20or%20the%20workplace%2C%20courage%20and%20convictio%20https://ideasbeforetime.pages.dev/blog-post-57.html"
+    },
+    {
+      "file": "blog-post-58.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-58.html"
+    },
+    {
+      "file": "blog-post-58.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-58.html&text=I%20tend%20to%20ask%20a%20lot%20of%20questions.%20Not%20to%20challenge%20for%20the%20sake%20of%20it%2C%20but%20to%20illuminate%20what%E2%80%99s%20unclear.%20I%20cannot%20operate%20in%20the%20dark%20or%20remain%20a%20sile"
+    },
+    {
+      "file": "blog-post-58.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-58.html"
+    },
+    {
+      "file": "blog-post-58.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-58.html"
+    },
+    {
+      "file": "blog-post-58.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=I%20tend%20to%20ask%20a%20lot%20of%20questions.%20Not%20to%20challenge%20for%20the%20sake%20of%20it%2C%20but%20to%20illuminate%20what%E2%80%99s%20unclear.%20I%20cannot%20operate%20in%20the%20dark%20or%20remain%20a%20sile%20https://ideasbeforetime.pages.dev/blog-post-58.html"
+    },
+    {
+      "file": "blog-post-59.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-59.html"
+    },
+    {
+      "file": "blog-post-59.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-59.html&text=From%20Ford%20to%20FinTech%3A%20Real-World%20Lessons%20in%20Ethics%2C%20Compliance%2C%20and%20Competitive%20Advantage%20In%20the%20relentless%20pursuit%20of%20success%2C%20some%20organizations%20tak"
+    },
+    {
+      "file": "blog-post-59.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-59.html"
+    },
+    {
+      "file": "blog-post-59.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-59.html"
+    },
+    {
+      "file": "blog-post-59.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=From%20Ford%20to%20FinTech%3A%20Real-World%20Lessons%20in%20Ethics%2C%20Compliance%2C%20and%20Competitive%20Advantage%20In%20the%20relentless%20pursuit%20of%20success%2C%20some%20organizations%20tak%20https://ideasbeforetime.pages.dev/blog-post-59.html"
+    },
+    {
+      "file": "blog-post-6.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-6.html"
+    },
+    {
+      "file": "blog-post-6.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-6.html&text=In%20my%20early%20sales%20career%2C%20I%20often%20told%20customers%3A%20%E2%80%9CBASF%20is%20the%20backup%20of%20BASF.%E2%80%9D%20It%20wasn%E2%80%99t%20an%20easy%20statement%20to%20deliver.%20To%20some%2C%20it%20could%20sound%20egocen"
+    },
+    {
+      "file": "blog-post-6.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-6.html"
+    },
+    {
+      "file": "blog-post-6.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-6.html"
+    },
+    {
+      "file": "blog-post-6.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=In%20my%20early%20sales%20career%2C%20I%20often%20told%20customers%3A%20%E2%80%9CBASF%20is%20the%20backup%20of%20BASF.%E2%80%9D%20It%20wasn%E2%80%99t%20an%20easy%20statement%20to%20deliver.%20To%20some%2C%20it%20could%20sound%20egocen%20https://ideasbeforetime.pages.dev/blog-post-6.html"
+    },
+    {
+      "file": "blog-post-60.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-60.html"
+    },
+    {
+      "file": "blog-post-60.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-60.html&text=As%20we%20navigate%20the%20complex%20world%20of%20business%2C%20it's%20no%20secret%20that%20sales%20forecasts%20and%20project%20pipelines%20are%20crucial%20to%20driving%20growth%20and%20decision-mak"
+    },
+    {
+      "file": "blog-post-60.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-60.html"
+    },
+    {
+      "file": "blog-post-60.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-60.html"
+    },
+    {
+      "file": "blog-post-60.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20we%20navigate%20the%20complex%20world%20of%20business%2C%20it's%20no%20secret%20that%20sales%20forecasts%20and%20project%20pipelines%20are%20crucial%20to%20driving%20growth%20and%20decision-mak%20https://ideasbeforetime.pages.dev/blog-post-60.html"
+    },
+    {
+      "file": "blog-post-61.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-61.html"
+    },
+    {
+      "file": "blog-post-61.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-61.html&text=Job%20seekers%2C%20beware!%20Here%20are%20some%20red%20flags%20to%20watch%20out%20for%20in%20an%20interview%20process%3A%201.%20No%20introduction%20by%20the%20interview%20panel%20about%20themselves%2C%20sta"
+    },
+    {
+      "file": "blog-post-61.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-61.html"
+    },
+    {
+      "file": "blog-post-61.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-61.html"
+    },
+    {
+      "file": "blog-post-61.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Job%20seekers%2C%20beware!%20Here%20are%20some%20red%20flags%20to%20watch%20out%20for%20in%20an%20interview%20process%3A%201.%20No%20introduction%20by%20the%20interview%20panel%20about%20themselves%2C%20sta%20https://ideasbeforetime.pages.dev/blog-post-61.html"
+    },
+    {
+      "file": "blog-post-62.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-62.html"
+    },
+    {
+      "file": "blog-post-62.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-62.html&text=The%20next%20few%20years%20will%20be%20crucial%20in%20determining%20the%20success%20of%20Business%20Excellence%20teams.%20As%20organizations%20continue%20to%20evolve%20and%20adapt%20to%20changing"
+    },
+    {
+      "file": "blog-post-62.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-62.html"
+    },
+    {
+      "file": "blog-post-62.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-62.html"
+    },
+    {
+      "file": "blog-post-62.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=The%20next%20few%20years%20will%20be%20crucial%20in%20determining%20the%20success%20of%20Business%20Excellence%20teams.%20As%20organizations%20continue%20to%20evolve%20and%20adapt%20to%20changing%20https://ideasbeforetime.pages.dev/blog-post-62.html"
+    },
+    {
+      "file": "blog-post-63.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-63.html"
+    },
+    {
+      "file": "blog-post-63.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-63.html&text=As%20I%20watched%20this%20insightful%20video%20%5Blink%20below%5D%2C%20I%20was%20reminded%20of%20the%20importance%20of%20nurturing%20talent%2C%20perseverance%2C%20and%20a%20bit%20of%20luck%20in%20organization"
+    },
+    {
+      "file": "blog-post-63.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-63.html"
+    },
+    {
+      "file": "blog-post-63.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-63.html"
+    },
+    {
+      "file": "blog-post-63.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20I%20watched%20this%20insightful%20video%20%5Blink%20below%5D%2C%20I%20was%20reminded%20of%20the%20importance%20of%20nurturing%20talent%2C%20perseverance%2C%20and%20a%20bit%20of%20luck%20in%20organization%20https://ideasbeforetime.pages.dev/blog-post-63.html"
+    },
+    {
+      "file": "blog-post-64.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-64.html"
+    },
+    {
+      "file": "blog-post-64.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-64.html&text=The%20recent%20departure%20of%20John%20Donahoe%20as%20CEO%20of%20Nike%20has%20sparked%20intense%20discussion%20and%20debate%20within%20the%20business%20community.%20As%20a%20seasoned%20leader%2C%20Don"
+    },
+    {
+      "file": "blog-post-64.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-64.html"
+    },
+    {
+      "file": "blog-post-64.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-64.html"
+    },
+    {
+      "file": "blog-post-64.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=The%20recent%20departure%20of%20John%20Donahoe%20as%20CEO%20of%20Nike%20has%20sparked%20intense%20discussion%20and%20debate%20within%20the%20business%20community.%20As%20a%20seasoned%20leader%2C%20Don%20https://ideasbeforetime.pages.dev/blog-post-64.html"
+    },
+    {
+      "file": "blog-post-65.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-65.html"
+    },
+    {
+      "file": "blog-post-65.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-65.html&text=As%20we%20continue%20to%20navigate%20the%20ever-changing%20landscape%20of%20technology%20and%20innovation%2C%20I'd%20like%20to%20propose%20an%20exciting%20opportunity%20for%20the%20Chemical%20Gian"
+    },
+    {
+      "file": "blog-post-65.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-65.html"
+    },
+    {
+      "file": "blog-post-65.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-65.html"
+    },
+    {
+      "file": "blog-post-65.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20we%20continue%20to%20navigate%20the%20ever-changing%20landscape%20of%20technology%20and%20innovation%2C%20I'd%20like%20to%20propose%20an%20exciting%20opportunity%20for%20the%20Chemical%20Gian%20https://ideasbeforetime.pages.dev/blog-post-65.html"
+    },
+    {
+      "file": "blog-post-66.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-66.html"
+    },
+    {
+      "file": "blog-post-66.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-66.html&text=One%20hand%20holds%20the%20brake%2C%20slowing%20your%20pace%2C%20A%20guardian%20of%20safety%2C%20a%20watchful%20gaze.%20The%20other%20hand%20holds%20the%20fine%2C%20waiting%20to%20claim%2C%20A%20punisher%20of%20pro"
+    },
+    {
+      "file": "blog-post-66.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-66.html"
+    },
+    {
+      "file": "blog-post-66.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-66.html"
+    },
+    {
+      "file": "blog-post-66.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=One%20hand%20holds%20the%20brake%2C%20slowing%20your%20pace%2C%20A%20guardian%20of%20safety%2C%20a%20watchful%20gaze.%20The%20other%20hand%20holds%20the%20fine%2C%20waiting%20to%20claim%2C%20A%20punisher%20of%20pro%20https://ideasbeforetime.pages.dev/blog-post-66.html"
+    },
+    {
+      "file": "blog-post-67.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-67.html"
+    },
+    {
+      "file": "blog-post-67.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-67.html&text=As%20India's%20population%20grows%2C%20traffic%20congestion%20continues%20to%20plague%20cities%2C%20compromising%20economic%20productivity%2C%20road%20safety%2C%20and%20quality%20of%20life.%20Whil"
+    },
+    {
+      "file": "blog-post-67.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-67.html"
+    },
+    {
+      "file": "blog-post-67.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-67.html"
+    },
+    {
+      "file": "blog-post-67.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20India's%20population%20grows%2C%20traffic%20congestion%20continues%20to%20plague%20cities%2C%20compromising%20economic%20productivity%2C%20road%20safety%2C%20and%20quality%20of%20life.%20Whil%20https://ideasbeforetime.pages.dev/blog-post-67.html"
+    },
+    {
+      "file": "blog-post-68.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-68.html"
+    },
+    {
+      "file": "blog-post-68.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-68.html&text=As%20India's%20road%20infrastructure%20expands%20and%20its%20global%20presence%20grows%2C%20it's%20time%20to%20revisit%20Leave%20Travel%20Allowance%20(LTA)%20rules.%20Including%20car%20travel%20in"
+    },
+    {
+      "file": "blog-post-68.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-68.html"
+    },
+    {
+      "file": "blog-post-68.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-68.html"
+    },
+    {
+      "file": "blog-post-68.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20India's%20road%20infrastructure%20expands%20and%20its%20global%20presence%20grows%2C%20it's%20time%20to%20revisit%20Leave%20Travel%20Allowance%20(LTA)%20rules.%20Including%20car%20travel%20in%20https://ideasbeforetime.pages.dev/blog-post-68.html"
+    },
+    {
+      "file": "blog-post-69.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-69.html"
+    },
+    {
+      "file": "blog-post-69.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-69.html&text=As%20we%20navigate%20life's%20journey%2C%20we%20often%20rely%20on%20crutches%20that%20help%20us%20cope%20with%20challenges.%20But%20what%20happens%20when%20we%20outgrow%20them%3F%20Do%20we%20hold%20on%20or%20le"
+    },
+    {
+      "file": "blog-post-69.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-69.html"
+    },
+    {
+      "file": "blog-post-69.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-69.html"
+    },
+    {
+      "file": "blog-post-69.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20we%20navigate%20life's%20journey%2C%20we%20often%20rely%20on%20crutches%20that%20help%20us%20cope%20with%20challenges.%20But%20what%20happens%20when%20we%20outgrow%20them%3F%20Do%20we%20hold%20on%20or%20le%20https://ideasbeforetime.pages.dev/blog-post-69.html"
+    },
+    {
+      "file": "blog-post-7.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-7.html"
+    },
+    {
+      "file": "blog-post-7.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-7.html&text=True%20strength%20lies%20in%20knowing%20who%20you%20are%20and%20standing%20firm%E2%80%94even%20in%20the%20face%20of%20authority.%20Whether%20in%20the%20wild%20or%20the%20workplace%2C%20courage%20and%20convictio"
+    },
+    {
+      "file": "blog-post-7.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-7.html"
+    },
+    {
+      "file": "blog-post-7.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-7.html"
+    },
+    {
+      "file": "blog-post-7.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=True%20strength%20lies%20in%20knowing%20who%20you%20are%20and%20standing%20firm%E2%80%94even%20in%20the%20face%20of%20authority.%20Whether%20in%20the%20wild%20or%20the%20workplace%2C%20courage%20and%20convictio%20https://ideasbeforetime.pages.dev/blog-post-7.html"
+    },
+    {
+      "file": "blog-post-70.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-70.html"
+    },
+    {
+      "file": "blog-post-70.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-70.html&text=Purpose%20of%20Article%3A%20To%20inspire%20professionals%20to%20think%20creatively%2C%20challenge%20the%20status%20quo%2C%20and%20strive%20for%20innovative%20solutions%20that%20transform%20industr"
+    },
+    {
+      "file": "blog-post-70.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-70.html"
+    },
+    {
+      "file": "blog-post-70.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-70.html"
+    },
+    {
+      "file": "blog-post-70.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%20of%20Article%3A%20To%20inspire%20professionals%20to%20think%20creatively%2C%20challenge%20the%20status%20quo%2C%20and%20strive%20for%20innovative%20solutions%20that%20transform%20industr%20https://ideasbeforetime.pages.dev/blog-post-70.html"
+    },
+    {
+      "file": "blog-post-71.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-71.html"
+    },
+    {
+      "file": "blog-post-71.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-71.html&text=Purpose%20of%20the%20Article%3A%20This%20article%20aims%20to%20shed%20light%20on%20the%20ongoing%20developments%20in%20Noise%2C%20Vibration%2C%20and%20Harshness%20(NVH)%20technologies%2C%20their%20unint"
+    },
+    {
+      "file": "blog-post-71.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-71.html"
+    },
+    {
+      "file": "blog-post-71.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-71.html"
+    },
+    {
+      "file": "blog-post-71.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%20of%20the%20Article%3A%20This%20article%20aims%20to%20shed%20light%20on%20the%20ongoing%20developments%20in%20Noise%2C%20Vibration%2C%20and%20Harshness%20(NVH)%20technologies%2C%20their%20unint%20https://ideasbeforetime.pages.dev/blog-post-71.html"
+    },
+    {
+      "file": "blog-post-72.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-72.html"
+    },
+    {
+      "file": "blog-post-72.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-72.html&text=Purpose%20of%20Article%3A%20To%20delve%20into%20the%20fascinating%20story%20of%20how%20lava%20lamps%20inspired%20Cloudflare's%20cybersecurity%20solutions%2C%20exploring%20the%20intersection%20of"
+    },
+    {
+      "file": "blog-post-72.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-72.html"
+    },
+    {
+      "file": "blog-post-72.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-72.html"
+    },
+    {
+      "file": "blog-post-72.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%20of%20Article%3A%20To%20delve%20into%20the%20fascinating%20story%20of%20how%20lava%20lamps%20inspired%20Cloudflare's%20cybersecurity%20solutions%2C%20exploring%20the%20intersection%20of%20https://ideasbeforetime.pages.dev/blog-post-72.html"
+    },
+    {
+      "file": "blog-post-73.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-73.html"
+    },
+    {
+      "file": "blog-post-73.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-73.html&text=Purpose%20of%20Article%3A%20Showcase%20innovative%20seating%20solutions%20and%20highlight%20industry%20leaders.%20Imagine%20a%20venue%20that%20seamlessly%20adapts%20to%20any%20event%2C%20transfo"
+    },
+    {
+      "file": "blog-post-73.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-73.html"
+    },
+    {
+      "file": "blog-post-73.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-73.html"
+    },
+    {
+      "file": "blog-post-73.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%20of%20Article%3A%20Showcase%20innovative%20seating%20solutions%20and%20highlight%20industry%20leaders.%20Imagine%20a%20venue%20that%20seamlessly%20adapts%20to%20any%20event%2C%20transfo%20https://ideasbeforetime.pages.dev/blog-post-73.html"
+    },
+    {
+      "file": "blog-post-74.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-74.html"
+    },
+    {
+      "file": "blog-post-74.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-74.html&text=https%3A%2F%2Fyoutu.be%2FrxUm-2x-2dM%3Fsi%3D3I1Lu-Xyy9EXwD2W%20Introduction%20In%20today%E2%80%99s%20fast-paced%20business%20world%2C%20bureaucracy%20can%20often%20stifle%20innovation%20and%20effici"
+    },
+    {
+      "file": "blog-post-74.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-74.html"
+    },
+    {
+      "file": "blog-post-74.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-74.html"
+    },
+    {
+      "file": "blog-post-74.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=https%3A%2F%2Fyoutu.be%2FrxUm-2x-2dM%3Fsi%3D3I1Lu-Xyy9EXwD2W%20Introduction%20In%20today%E2%80%99s%20fast-paced%20business%20world%2C%20bureaucracy%20can%20often%20stifle%20innovation%20and%20effici%20https://ideasbeforetime.pages.dev/blog-post-74.html"
+    },
+    {
+      "file": "blog-post-75.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-75.html"
+    },
+    {
+      "file": "blog-post-75.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-75.html&text=Purpose%20This%20article%20explores%20the%20interconnected%20challenges%20of%20financial%20leakage%20and%20information%20degradation%2C%20highlighting%20their%20impact%20on%20governance%2C"
+    },
+    {
+      "file": "blog-post-75.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-75.html"
+    },
+    {
+      "file": "blog-post-75.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-75.html"
+    },
+    {
+      "file": "blog-post-75.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%20This%20article%20explores%20the%20interconnected%20challenges%20of%20financial%20leakage%20and%20information%20degradation%2C%20highlighting%20their%20impact%20on%20governance%2C%20https://ideasbeforetime.pages.dev/blog-post-75.html"
+    },
+    {
+      "file": "blog-post-76.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-76.html"
+    },
+    {
+      "file": "blog-post-76.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-76.html&text=Purpose%3A%20To%20equip%20job%20seekers%20with%20strategic%20insights%20on%20balancing%20%22I%22%20and%20%22We%22%20statements%20in%20interviews%2C%20enhancing%20their%20chances%20of%20success.%20Summary"
+    },
+    {
+      "file": "blog-post-76.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-76.html"
+    },
+    {
+      "file": "blog-post-76.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-76.html"
+    },
+    {
+      "file": "blog-post-76.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%3A%20To%20equip%20job%20seekers%20with%20strategic%20insights%20on%20balancing%20%22I%22%20and%20%22We%22%20statements%20in%20interviews%2C%20enhancing%20their%20chances%20of%20success.%20Summary%20https://ideasbeforetime.pages.dev/blog-post-76.html"
+    },
+    {
+      "file": "blog-post-77.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-77.html"
+    },
+    {
+      "file": "blog-post-77.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-77.html&text=Purpose%3A%20To%20inspire%20leaders%20and%20organizations%20to%20optimize%20their%20learning%20and%20development%20strategies%2C%20leveraging%20the%2070%3A20%3A10%20model%20to%20drive%20business%20g"
+    },
+    {
+      "file": "blog-post-77.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-77.html"
+    },
+    {
+      "file": "blog-post-77.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-77.html"
+    },
+    {
+      "file": "blog-post-77.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%3A%20To%20inspire%20leaders%20and%20organizations%20to%20optimize%20their%20learning%20and%20development%20strategies%2C%20leveraging%20the%2070%3A20%3A10%20model%20to%20drive%20business%20g%20https://ideasbeforetime.pages.dev/blog-post-77.html"
+    },
+    {
+      "file": "blog-post-78.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-78.html"
+    },
+    {
+      "file": "blog-post-78.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-78.html&text=Unlock%20Your%20Full%20Potential!%20Discover%20these%20evidence-backed%20productivity%20hacks%20to%20amplify%20your%20productivity%3A%20Top%2010%20Productivity%20Hacks%3A%201.%20Pomodoro%20Tec"
+    },
+    {
+      "file": "blog-post-78.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-78.html"
+    },
+    {
+      "file": "blog-post-78.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-78.html"
+    },
+    {
+      "file": "blog-post-78.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Unlock%20Your%20Full%20Potential!%20Discover%20these%20evidence-backed%20productivity%20hacks%20to%20amplify%20your%20productivity%3A%20Top%2010%20Productivity%20Hacks%3A%201.%20Pomodoro%20Tec%20https://ideasbeforetime.pages.dev/blog-post-78.html"
+    },
+    {
+      "file": "blog-post-79.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-79.html"
+    },
+    {
+      "file": "blog-post-79.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-79.html&text=Research%20by%20Amit%20Kumar%20(2011)%20Abstract%3A%20This%20study%20examines%20the%20impact%20of%20End-of-Day%20Syncs%2C%20informal%20brief%20meetings%20among%20blue-collar%20workers%2C%20on%20prod"
+    },
+    {
+      "file": "blog-post-79.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-79.html"
+    },
+    {
+      "file": "blog-post-79.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-79.html"
+    },
+    {
+      "file": "blog-post-79.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Research%20by%20Amit%20Kumar%20(2011)%20Abstract%3A%20This%20study%20examines%20the%20impact%20of%20End-of-Day%20Syncs%2C%20informal%20brief%20meetings%20among%20blue-collar%20workers%2C%20on%20prod%20https://ideasbeforetime.pages.dev/blog-post-79.html"
+    },
+    {
+      "file": "blog-post-8.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-8.html"
+    },
+    {
+      "file": "blog-post-8.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-8.html&text=I%20tend%20to%20ask%20a%20lot%20of%20questions.%20Not%20to%20challenge%20for%20the%20sake%20of%20it%2C%20but%20to%20illuminate%20what%E2%80%99s%20unclear.%20I%20cannot%20operate%20in%20the%20dark%20or%20remain%20a%20sile"
+    },
+    {
+      "file": "blog-post-8.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-8.html"
+    },
+    {
+      "file": "blog-post-8.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-8.html"
+    },
+    {
+      "file": "blog-post-8.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=I%20tend%20to%20ask%20a%20lot%20of%20questions.%20Not%20to%20challenge%20for%20the%20sake%20of%20it%2C%20but%20to%20illuminate%20what%E2%80%99s%20unclear.%20I%20cannot%20operate%20in%20the%20dark%20or%20remain%20a%20sile%20https://ideasbeforetime.pages.dev/blog-post-8.html"
+    },
+    {
+      "file": "blog-post-80.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-80.html"
+    },
+    {
+      "file": "blog-post-80.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-80.html&text=As%20we%20strive%20for%20innovation%20and%20growth%2C%20simplicity%20emerges%20as%20a%20powerful%20catalyst.%20Purpose%3A%20Cut%20complexity%2C%20accelerate%20innovation.%20Simplify%2C%20focus%2C%20do"
+    },
+    {
+      "file": "blog-post-80.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-80.html"
+    },
+    {
+      "file": "blog-post-80.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-80.html"
+    },
+    {
+      "file": "blog-post-80.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20we%20strive%20for%20innovation%20and%20growth%2C%20simplicity%20emerges%20as%20a%20powerful%20catalyst.%20Purpose%3A%20Cut%20complexity%2C%20accelerate%20innovation.%20Simplify%2C%20focus%2C%20do%20https://ideasbeforetime.pages.dev/blog-post-80.html"
+    },
+    {
+      "file": "blog-post-81.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-81.html"
+    },
+    {
+      "file": "blog-post-81.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-81.html&text=Purpose%3A%20To%20highlight%20the%20transformative%20power%20of%20transparency%20in%20Indian%20court%20proceedings%2C%20enhancing%20accountability%20and%20trust.%20Introduction%20India's%20j"
+    },
+    {
+      "file": "blog-post-81.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-81.html"
+    },
+    {
+      "file": "blog-post-81.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-81.html"
+    },
+    {
+      "file": "blog-post-81.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%3A%20To%20highlight%20the%20transformative%20power%20of%20transparency%20in%20Indian%20court%20proceedings%2C%20enhancing%20accountability%20and%20trust.%20Introduction%20India's%20j%20https://ideasbeforetime.pages.dev/blog-post-81.html"
+    },
+    {
+      "file": "blog-post-82.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-82.html"
+    },
+    {
+      "file": "blog-post-82.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-82.html&text=Purpose%3A%20To%20inspire%20and%20encourage%20individuals%20to%20harness%20their%20inner%20strength%20to%20overcome%20challenges%20and%20achieve%20business%20excellence.%20Summary%3A%20This%20po"
+    },
+    {
+      "file": "blog-post-82.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-82.html"
+    },
+    {
+      "file": "blog-post-82.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-82.html"
+    },
+    {
+      "file": "blog-post-82.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%3A%20To%20inspire%20and%20encourage%20individuals%20to%20harness%20their%20inner%20strength%20to%20overcome%20challenges%20and%20achieve%20business%20excellence.%20Summary%3A%20This%20po%20https://ideasbeforetime.pages.dev/blog-post-82.html"
+    },
+    {
+      "file": "blog-post-83.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-83.html"
+    },
+    {
+      "file": "blog-post-83.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-83.html&text=Purpose%3A%20Why%20let%20nepotism%20and%20favoritism%20hinder%20your%20business's%20growth%20and%20success%3F%20Summary%3A%20The%20Korean%20Air%20%22Nut%20Rage%22%20incident%20serves%20as%20a%20stark%20remi"
+    },
+    {
+      "file": "blog-post-83.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-83.html"
+    },
+    {
+      "file": "blog-post-83.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-83.html"
+    },
+    {
+      "file": "blog-post-83.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%3A%20Why%20let%20nepotism%20and%20favoritism%20hinder%20your%20business's%20growth%20and%20success%3F%20Summary%3A%20The%20Korean%20Air%20%22Nut%20Rage%22%20incident%20serves%20as%20a%20stark%20remi%20https://ideasbeforetime.pages.dev/blog-post-83.html"
+    },
+    {
+      "file": "blog-post-84.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-84.html"
+    },
+    {
+      "file": "blog-post-84.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-84.html&text=Purpose%3A%20Why%20waste%20time%20on%20inefficient%20data%20handover%20when%20you%20can%20streamline%20your%20operations%2C%20reduce%20costs%2C%20and%20stay%20ahead%20of%20the%20competition%3F%20Summary"
+    },
+    {
+      "file": "blog-post-84.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-84.html"
+    },
+    {
+      "file": "blog-post-84.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-84.html"
+    },
+    {
+      "file": "blog-post-84.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Purpose%3A%20Why%20waste%20time%20on%20inefficient%20data%20handover%20when%20you%20can%20streamline%20your%20operations%2C%20reduce%20costs%2C%20and%20stay%20ahead%20of%20the%20competition%3F%20Summary%20https://ideasbeforetime.pages.dev/blog-post-84.html"
+    },
+    {
+      "file": "blog-post-85.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-85.html"
+    },
+    {
+      "file": "blog-post-85.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-85.html&text=By%20Amit%20Kumar%2C%202024%20Unlocking%20New%20Opportunities%20Purpose%3A%20This%20article%20introduces%20the%20groundbreaking%20concept%20of%20No-Collar%20Jobs%2C%20highlighting%20its%20transf"
+    },
+    {
+      "file": "blog-post-85.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-85.html"
+    },
+    {
+      "file": "blog-post-85.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-85.html"
+    },
+    {
+      "file": "blog-post-85.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=By%20Amit%20Kumar%2C%202024%20Unlocking%20New%20Opportunities%20Purpose%3A%20This%20article%20introduces%20the%20groundbreaking%20concept%20of%20No-Collar%20Jobs%2C%20highlighting%20its%20transf%20https://ideasbeforetime.pages.dev/blog-post-85.html"
+    },
+    {
+      "file": "blog-post-86.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-86.html"
+    },
+    {
+      "file": "blog-post-86.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-86.html&text=Being%20Social%20%3A%20Reach%20Out%20%26%20Be%20Reachable%20%23SocialConnectionMatters%20%23ReachOutAndBeReachable%20%23NetworkingTips%20%23MentalHealthAwareness%20%23RelationshipGoals%20%23Co"
+    },
+    {
+      "file": "blog-post-86.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-86.html"
+    },
+    {
+      "file": "blog-post-86.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-86.html"
+    },
+    {
+      "file": "blog-post-86.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Being%20Social%20%3A%20Reach%20Out%20%26%20Be%20Reachable%20%23SocialConnectionMatters%20%23ReachOutAndBeReachable%20%23NetworkingTips%20%23MentalHealthAwareness%20%23RelationshipGoals%20%23Co%20https://ideasbeforetime.pages.dev/blog-post-86.html"
+    },
+    {
+      "file": "blog-post-87.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-87.html"
+    },
+    {
+      "file": "blog-post-87.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-87.html&text=Summary%3A%20This%20article%20offers%20a%20comprehensive%20guide%20for%20navigating%20workplace%20challenges%2C%20focusing%20on%20situations%20where%20employees%20face%20unfair%20treatment%2C"
+    },
+    {
+      "file": "blog-post-87.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-87.html"
+    },
+    {
+      "file": "blog-post-87.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-87.html"
+    },
+    {
+      "file": "blog-post-87.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Summary%3A%20This%20article%20offers%20a%20comprehensive%20guide%20for%20navigating%20workplace%20challenges%2C%20focusing%20on%20situations%20where%20employees%20face%20unfair%20treatment%2C%20https://ideasbeforetime.pages.dev/blog-post-87.html"
+    },
+    {
+      "file": "blog-post-88.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-88.html"
+    },
+    {
+      "file": "blog-post-88.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-88.html&text=Boeing%20Workers%E2%80%99%20Strike%3A%20A%20Reflection%20on%20Industry%20Standards%20and%20Compensation%3F%3F%20News%20Source%3A%20By%20Emma%20W.%20Thorne%2C%20Editor%20at%20LinkedIn%20News%20Read%20More%20https%3A"
+    },
+    {
+      "file": "blog-post-88.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-88.html"
+    },
+    {
+      "file": "blog-post-88.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-88.html"
+    },
+    {
+      "file": "blog-post-88.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Boeing%20Workers%E2%80%99%20Strike%3A%20A%20Reflection%20on%20Industry%20Standards%20and%20Compensation%3F%3F%20News%20Source%3A%20By%20Emma%20W.%20Thorne%2C%20Editor%20at%20LinkedIn%20News%20Read%20More%20https%3A%20https://ideasbeforetime.pages.dev/blog-post-88.html"
+    },
+    {
+      "file": "blog-post-89.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-89.html"
+    },
+    {
+      "file": "blog-post-89.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-89.html&text=The%20Future%20is%20NowThe%20Future%20is%20Now"
+    },
+    {
+      "file": "blog-post-89.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-89.html"
+    },
+    {
+      "file": "blog-post-89.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-89.html"
+    },
+    {
+      "file": "blog-post-89.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=The%20Future%20is%20NowThe%20Future%20is%20Now%20https://ideasbeforetime.pages.dev/blog-post-89.html"
+    },
+    {
+      "file": "blog-post-9.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-9.html"
+    },
+    {
+      "file": "blog-post-9.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-9.html&text=From%20Ford%20to%20FinTech%3A%20Real-World%20Lessons%20in%20Ethics%2C%20Compliance%2C%20and%20Competitive%20Advantage%20In%20the%20relentless%20pursuit%20of%20success%2C%20some%20organizations%20tak"
+    },
+    {
+      "file": "blog-post-9.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-9.html"
+    },
+    {
+      "file": "blog-post-9.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-9.html"
+    },
+    {
+      "file": "blog-post-9.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=From%20Ford%20to%20FinTech%3A%20Real-World%20Lessons%20in%20Ethics%2C%20Compliance%2C%20and%20Competitive%20Advantage%20In%20the%20relentless%20pursuit%20of%20success%2C%20some%20organizations%20tak%20https://ideasbeforetime.pages.dev/blog-post-9.html"
+    },
+    {
+      "file": "blog-post-90.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-90.html"
+    },
+    {
+      "file": "blog-post-90.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-90.html&text=The%20Delicate%20Art%20of%20Work-Life%20Balance%3A%20A%20Tightrope%20Walk%20We%20might%20need%20to%20take%20a%20short%20break%20during%20office%20hours%20to%20attend%20to%20personal%20matters.%20We%20may"
+    },
+    {
+      "file": "blog-post-90.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-90.html"
+    },
+    {
+      "file": "blog-post-90.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-90.html"
+    },
+    {
+      "file": "blog-post-90.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=The%20Delicate%20Art%20of%20Work-Life%20Balance%3A%20A%20Tightrope%20Walk%20We%20might%20need%20to%20take%20a%20short%20break%20during%20office%20hours%20to%20attend%20to%20personal%20matters.%20We%20may%20https://ideasbeforetime.pages.dev/blog-post-90.html"
+    },
+    {
+      "file": "blog-post-91.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-91.html"
+    },
+    {
+      "file": "blog-post-91.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-91.html&text=The%20Whistleblower's%20Dilemma%3A%20Exposing%20Wrongdoing%20In%20today's%20landscape%2C%20whistleblowers%20play%20a%20crucial%20role%20in%20exposing%20wrongdoing%2C%20promoting%20transparen"
+    },
+    {
+      "file": "blog-post-91.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-91.html"
+    },
+    {
+      "file": "blog-post-91.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-91.html"
+    },
+    {
+      "file": "blog-post-91.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=The%20Whistleblower's%20Dilemma%3A%20Exposing%20Wrongdoing%20In%20today's%20landscape%2C%20whistleblowers%20play%20a%20crucial%20role%20in%20exposing%20wrongdoing%2C%20promoting%20transparen%20https://ideasbeforetime.pages.dev/blog-post-91.html"
+    },
+    {
+      "file": "blog-post-92.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-92.html"
+    },
+    {
+      "file": "blog-post-92.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-92.html&text=During%20the%20first%20wave%20of%20%23COVID-19%20in%202020%2C%20I%20was%20mentoring%20someone%20who%20was%20struggling%20with%20ideation%20in%20their%20team.%20They%20shared%20how%20great%20ideas%20were%20b"
+    },
+    {
+      "file": "blog-post-92.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-92.html"
+    },
+    {
+      "file": "blog-post-92.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-92.html"
+    },
+    {
+      "file": "blog-post-92.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=During%20the%20first%20wave%20of%20%23COVID-19%20in%202020%2C%20I%20was%20mentoring%20someone%20who%20was%20struggling%20with%20ideation%20in%20their%20team.%20They%20shared%20how%20great%20ideas%20were%20b%20https://ideasbeforetime.pages.dev/blog-post-92.html"
+    },
+    {
+      "file": "blog-post-93.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-93.html"
+    },
+    {
+      "file": "blog-post-93.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-93.html&text=Employees'%20Exceptional%20Story%20-%20Enigma%2C%20Stigma%2C%20Confusion%20Summary%3A%20This%20article%20explores%20the%20challenges%20faced%20by%20employees%20who%20are%20subjected%20to%20unfair"
+    },
+    {
+      "file": "blog-post-93.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-93.html"
+    },
+    {
+      "file": "blog-post-93.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-93.html"
+    },
+    {
+      "file": "blog-post-93.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Employees'%20Exceptional%20Story%20-%20Enigma%2C%20Stigma%2C%20Confusion%20Summary%3A%20This%20article%20explores%20the%20challenges%20faced%20by%20employees%20who%20are%20subjected%20to%20unfair%20https://ideasbeforetime.pages.dev/blog-post-93.html"
+    },
+    {
+      "file": "blog-post-94.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-94.html"
+    },
+    {
+      "file": "blog-post-94.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-94.html&text=Summary%3A%20Summary%3A%20This%20article%20explores%20the%20challenges%20faced%20by%20employees%20who%20are%20subjected%20to%20unfair%20treatment%20and%20inadequate%20compensation.%20By%20unders"
+    },
+    {
+      "file": "blog-post-94.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-94.html"
+    },
+    {
+      "file": "blog-post-94.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-94.html"
+    },
+    {
+      "file": "blog-post-94.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Summary%3A%20Summary%3A%20This%20article%20explores%20the%20challenges%20faced%20by%20employees%20who%20are%20subjected%20to%20unfair%20treatment%20and%20inadequate%20compensation.%20By%20unders%20https://ideasbeforetime.pages.dev/blog-post-94.html"
+    },
+    {
+      "file": "blog-post-95.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-95.html"
+    },
+    {
+      "file": "blog-post-95.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-95.html&text=As%20we%20strive%20for%20success%20in%20our%20careers%2C%20let's%20not%20forget%20the%20importance%20of%20a%20healthy%20work%20culture.%20Unfortunately%2C%20many%20companies%20still%20grapple%20with%3A"
+    },
+    {
+      "file": "blog-post-95.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-95.html"
+    },
+    {
+      "file": "blog-post-95.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-95.html"
+    },
+    {
+      "file": "blog-post-95.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=As%20we%20strive%20for%20success%20in%20our%20careers%2C%20let's%20not%20forget%20the%20importance%20of%20a%20healthy%20work%20culture.%20Unfortunately%2C%20many%20companies%20still%20grapple%20with%3A%20https://ideasbeforetime.pages.dev/blog-post-95.html"
+    },
+    {
+      "file": "blog-post-96.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-96.html"
+    },
+    {
+      "file": "blog-post-96.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-96.html&text=Discover%20India%E2%80%99s%20economic%20resurgence%20as%20we%20approach%20the%20'Decoding%20Opportunities%20For%20Next%20Decade'%20conference%20at%20the%20Marriott%20Hotel%2C%20Jaipur%20on%20Septem%20Di"
+    },
+    {
+      "file": "blog-post-96.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-96.html"
+    },
+    {
+      "file": "blog-post-96.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-96.html"
+    },
+    {
+      "file": "blog-post-96.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Discover%20India%E2%80%99s%20economic%20resurgence%20as%20we%20approach%20the%20'Decoding%20Opportunities%20For%20Next%20Decade'%20conference%20at%20the%20Marriott%20Hotel%2C%20Jaipur%20on%20Septem%20Di%20https://ideasbeforetime.pages.dev/blog-post-96.html"
+    },
+    {
+      "file": "blog-post-97.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-97.html"
+    },
+    {
+      "file": "blog-post-97.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-97.html&text=In%20today%E2%80%99s%20dynamic%20work%20environment%2C%20how%20organizations%20perceive%20and%20treat%20employees%20can%20vary%20dramatically%20based%20on%20their%20status.%20This%20disparity%20often"
+    },
+    {
+      "file": "blog-post-97.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-97.html"
+    },
+    {
+      "file": "blog-post-97.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-97.html"
+    },
+    {
+      "file": "blog-post-97.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=In%20today%E2%80%99s%20dynamic%20work%20environment%2C%20how%20organizations%20perceive%20and%20treat%20employees%20can%20vary%20dramatically%20based%20on%20their%20status.%20This%20disparity%20often%20https://ideasbeforetime.pages.dev/blog-post-97.html"
+    },
+    {
+      "file": "blog-post-98.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-98.html"
+    },
+    {
+      "file": "blog-post-98.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-98.html&text=The%20Evolving%20Landscape%20of%20Medicine%20Dosages%3A%20Understanding%20the%20Factors%20at%20Play%20As%20we%20navigate%20the%20complex%20world%20of%20medicine%2C%20it's%20essential%20to%20understa"
+    },
+    {
+      "file": "blog-post-98.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-98.html"
+    },
+    {
+      "file": "blog-post-98.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-98.html"
+    },
+    {
+      "file": "blog-post-98.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=The%20Evolving%20Landscape%20of%20Medicine%20Dosages%3A%20Understanding%20the%20Factors%20at%20Play%20As%20we%20navigate%20the%20complex%20world%20of%20medicine%2C%20it's%20essential%20to%20understa%20https://ideasbeforetime.pages.dev/blog-post-98.html"
+    },
+    {
+      "file": "blog-post-99.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog-post-99.html"
+    },
+    {
+      "file": "blog-post-99.html",
+      "issue": "Old domain in link",
+      "link": "https://twitter.com/intent/tweet?url=https://ideasbeforetime.pages.dev/blog-post-99.html&text=Disclaimer%3A%20This%20post%20is%20intended%20for%20positive%20brainstorming%20and%20exploration%20of%20ideas%2C%20not%20to%20criticize%20or%20hurt%20any%20individuals%20or%20professions%2C%20includ"
+    },
+    {
+      "file": "blog-post-99.html",
+      "issue": "Old domain in link",
+      "link": "https://www.linkedin.com/sharing/share-offsite/?url=https://ideasbeforetime.pages.dev/blog-post-99.html"
+    },
+    {
+      "file": "blog-post-99.html",
+      "issue": "Old domain in link",
+      "link": "https://www.facebook.com/sharer/sharer.php?u=https://ideasbeforetime.pages.dev/blog-post-99.html"
+    },
+    {
+      "file": "blog-post-99.html",
+      "issue": "Old domain in link",
+      "link": "https://wa.me/?text=Disclaimer%3A%20This%20post%20is%20intended%20for%20positive%20brainstorming%20and%20exploration%20of%20ideas%2C%20not%20to%20criticize%20or%20hurt%20any%20individuals%20or%20professions%2C%20includ%20https://ideasbeforetime.pages.dev/blog-post-99.html"
+    },
+    {
+      "file": "blog.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/blog.html"
+    },
+    {
+      "file": "business-insights.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/business-insights.html"
+    },
+    {
+      "file": "business-news.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/business-news.html"
+    },
+    {
+      "file": "compare-homepage-conversion.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/compare-homepage-conversion.html"
+    },
+    {
+      "file": "compare-homepage-conversion.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev"
+    },
+    {
+      "file": "compare-homepage-versions.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/compare-homepage-versions.html"
+    },
+    {
+      "file": "cv-preview.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/cv-preview.html"
+    },
+    {
+      "file": "cv-preview.html",
+      "issue": "Broken internal link",
+      "link": "tel:+919549300319"
+    },
+    {
+      "file": "disclaimer.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/disclaimer.html"
+    },
+    {
+      "file": "email-sender-web.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/email-sender-web.html"
+    },
+    {
+      "file": "email-template.html",
+      "issue": "Broken internal link",
+      "link": "{{LINK}}"
+    },
+    {
+      "file": "email-template.html",
+      "issue": "Broken internal link",
+      "link": "{{UNSUBSCRIBE}}"
+    },
+    {
+      "file": "email.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/email-sender-web.html"
+    },
+    {
+      "file": "error-dashboard.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/error-dashboard.html"
+    },
+    {
+      "file": "Final_Acrylic_Market_Report.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/Final_Acrylic_Market_Report.html"
+    },
+    {
+      "file": "Final_Acrylic_Market_Report.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/request-access.html"
+    },
+    {
+      "file": "Final_Acrylic_Market_Report.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/market-reports.html"
+    },
+    {
+      "file": "ghar-ghar\\ghar-ghar-game.html",
+      "issue": "Broken internal link",
+      "link": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>"
+    },
+    {
+      "file": "index-v2-conversion-optimized.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/index-v2-conversion-optimized.html"
+    },
+    {
+      "file": "index.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/index.html"
+    },
+    {
+      "file": "innovations\\3d-imaging-2009.html",
+      "issue": "Broken internal link",
+      "link": "../common-watermark.css"
+    },
+    {
+      "file": "innovations\\3d-imaging-2009.html",
+      "issue": "Broken internal link",
+      "link": "../common-navigation.css"
+    },
+    {
+      "file": "innovations\\3d-imaging-2009.html",
+      "issue": "Broken internal link",
+      "link": "../library.html"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Broken internal link",
+      "link": "../common-navigation.css"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Broken internal link",
+      "link": "../common-footer.css"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Broken internal link",
+      "link": "../common-watermark.css"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Broken internal link",
+      "link": "../index.html"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Broken internal link",
+      "link": "../index.html"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Broken internal link",
+      "link": "../about.html"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Broken internal link",
+      "link": "../library.html"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Broken internal link",
+      "link": "../social-optimizer-index.html"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Broken internal link",
+      "link": "../job-tools.html"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Broken internal link",
+      "link": "../social-optimizer-index.html"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Broken internal link",
+      "link": "../library.html"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Broken internal link",
+      "link": "../about.html"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Broken internal link",
+      "link": "../privacy-policy.html"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Broken internal link",
+      "link": "../disclaimer.html"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "issue": "Broken internal link",
+      "link": "../timeline.html"
+    },
+    {
+      "file": "innovations\\dashboard-simplification-2017.html",
+      "issue": "Broken internal link",
+      "link": "../common-watermark.css"
+    },
+    {
+      "file": "innovations\\dashboard-simplification-2017.html",
+      "issue": "Broken internal link",
+      "link": "../common-navigation.css"
+    },
+    {
+      "file": "innovations\\dashboard-simplification-2017.html",
+      "issue": "Broken internal link",
+      "link": "../library.html"
+    },
+    {
+      "file": "innovations\\digital-money-2012.html",
+      "issue": "Broken internal link",
+      "link": "../common-watermark.css"
+    },
+    {
+      "file": "innovations\\digital-money-2012.html",
+      "issue": "Broken internal link",
+      "link": "../common-navigation.css"
+    },
+    {
+      "file": "innovations\\digital-money-2012.html",
+      "issue": "Broken internal link",
+      "link": "../library.html"
+    },
+    {
+      "file": "innovations\\dual-sim-2003.html",
+      "issue": "Broken internal link",
+      "link": "../common-watermark.css"
+    },
+    {
+      "file": "innovations\\dual-sim-2003.html",
+      "issue": "Broken internal link",
+      "link": "../common-navigation.css"
+    },
+    {
+      "file": "innovations\\dual-sim-2003.html",
+      "issue": "Broken internal link",
+      "link": "../library.html"
+    },
+    {
+      "file": "innovations\\innovation-template.html",
+      "issue": "Broken internal link",
+      "link": "../common-watermark.css"
+    },
+    {
+      "file": "innovations\\innovation-template.html",
+      "issue": "Broken internal link",
+      "link": "../common-navigation.css"
+    },
+    {
+      "file": "innovations\\innovation-template.html",
+      "issue": "Broken internal link",
+      "link": "../about.html"
+    },
+    {
+      "file": "innovations\\innovation-template.html",
+      "issue": "Broken internal link",
+      "link": "../library.html"
+    },
+    {
+      "file": "innovations\\moveable-dividers-2012.html",
+      "issue": "Broken internal link",
+      "link": "../common-watermark.css"
+    },
+    {
+      "file": "innovations\\moveable-dividers-2012.html",
+      "issue": "Broken internal link",
+      "link": "../common-navigation.css"
+    },
+    {
+      "file": "innovations\\moveable-dividers-2012.html",
+      "issue": "Broken internal link",
+      "link": "../library.html"
+    },
+    {
+      "file": "innovations\\music-ringtones-2003.html",
+      "issue": "Broken internal link",
+      "link": "../common-watermark.css"
+    },
+    {
+      "file": "innovations\\music-ringtones-2003.html",
+      "issue": "Broken internal link",
+      "link": "../common-watermark.css"
+    },
+    {
+      "file": "innovations\\music-ringtones-2003.html",
+      "issue": "Broken internal link",
+      "link": "../common-navigation.css"
+    },
+    {
+      "file": "innovations\\music-ringtones-2003.html",
+      "issue": "Broken internal link",
+      "link": "../library.html"
+    },
+    {
+      "file": "innovations\\silent-dj-2001.html",
+      "issue": "Broken internal link",
+      "link": "../common-watermark.css"
+    },
+    {
+      "file": "innovations\\silent-dj-2001.html",
+      "issue": "Broken internal link",
+      "link": "../common-navigation.css"
+    },
+    {
+      "file": "innovations\\silent-dj-2001.html",
+      "issue": "Broken internal link",
+      "link": "../library.html"
+    },
+    {
+      "file": "innovations\\tv-storage-2002.html",
+      "issue": "Broken internal link",
+      "link": "../common-watermark.css"
+    },
+    {
+      "file": "innovations\\tv-storage-2002.html",
+      "issue": "Broken internal link",
+      "link": "../common-navigation.css"
+    },
+    {
+      "file": "innovations\\tv-storage-2002.html",
+      "issue": "Broken internal link",
+      "link": "../library.html"
+    },
+    {
+      "file": "innovations\\universal-health-id-2009.html",
+      "issue": "Broken internal link",
+      "link": "../common-watermark.css"
+    },
+    {
+      "file": "innovations\\universal-health-id-2009.html",
+      "issue": "Broken internal link",
+      "link": "../common-navigation.css"
+    },
+    {
+      "file": "innovations\\universal-health-id-2009.html",
+      "issue": "Broken internal link",
+      "link": "../library.html"
+    },
+    {
+      "file": "innovations.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/innovations/index.html"
+    },
+    {
+      "file": "job-credits-ui.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/job-credits-ui.html"
+    },
+    {
+      "file": "job-dashboard.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/job-dashboard.html"
+    },
+    {
+      "file": "job-tools.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/job-tools.html"
+    },
+    {
+      "file": "jobs.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/job-dashboard.html"
+    },
+    {
+      "file": "JOB_OUTREACH_AUTOMATION_TOOL.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/JOB_OUTREACH_AUTOMATION_TOOL.html"
+    },
+    {
+      "file": "JOB_POWER_FEATURES.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/JOB_POWER_FEATURES.html"
+    },
+    {
+      "file": "JOB_TRACKER_DAILY.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/JOB_TRACKER_DAILY.html"
+    },
+    {
+      "file": "kiro-training-guide.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/kiro-training-guide.html"
+    },
+    {
+      "file": "kiro.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/kiro-training-guide.html"
+    },
+    {
+      "file": "kiro.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/kiro-training-guide.html"
+    },
+    {
+      "file": "KIRO_AWS_REPORT_CLEAN.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/KIRO_AWS_REPORT_CLEAN.html"
+    },
+    {
+      "file": "KIRO_IMPROVEMENT_REPORT_FOR_AWS.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/KIRO_IMPROVEMENT_REPORT_FOR_AWS.html"
+    },
+    {
+      "file": "library.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/library.html"
+    },
+    {
+      "file": "linkedin-auto-scroller.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/linkedin-auto-scroller.html"
+    },
+    {
+      "file": "linkedin-complete-book.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/linkedin-complete-book.html"
+    },
+    {
+      "file": "linkedin-network-map.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/linkedin-network-map.html"
+    },
+    {
+      "file": "linkedin-portfolio\\linkedin-portfolio-index.html",
+      "issue": "Broken internal link",
+      "link": "linkedin-book-generator.html"
+    },
+    {
+      "file": "linkedin-portfolio\\linkedin-portfolio-index.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev"
+    },
+    {
+      "file": "linkedin-portfolio-index.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/linkedin-portfolio-index.html"
+    },
+    {
+      "file": "linkedin-post-copier.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/linkedin-post-copier.html"
+    },
+    {
+      "file": "linkedin-skills-dashboard.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/linkedin-skills-dashboard.html"
+    },
+    {
+      "file": "linkedin.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/linkedin-portfolio-index.html"
+    },
+    {
+      "file": "market-reports.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/market-reports.html"
+    },
+    {
+      "file": "market-reports.html",
+      "issue": "Broken internal link",
+      "link": "family-lifetime-timeline.html"
+    },
+    {
+      "file": "nickel-esg-report.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/nickel-esg-report.html"
+    },
+    {
+      "file": "nickel-esg-report.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/request-access.html"
+    },
+    {
+      "file": "nickel-esg-report.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/market-reports.html"
+    },
+    {
+      "file": "nickel.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/nickel-esg-report.html"
+    },
+    {
+      "file": "paper.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/Paper_Pulp_Specialty_Chemicals_Report.html"
+    },
+    {
+      "file": "Paper_Pulp_Specialty_Chemicals_Report.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/Paper_Pulp_Specialty_Chemicals_Report.html"
+    },
+    {
+      "file": "Paper_Pulp_Specialty_Chemicals_Report.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/request-access.html"
+    },
+    {
+      "file": "Paper_Pulp_Specialty_Chemicals_Report.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/market-reports.html"
+    },
+    {
+      "file": "PAYMENT_VISUAL_GUIDE.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/PAYMENT_VISUAL_GUIDE.html"
+    },
+    {
+      "file": "poloxamer.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/Poloxamer_Market_Report.html"
+    },
+    {
+      "file": "Poloxamer_Market_Report.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/Poloxamer_Market_Report.html"
+    },
+    {
+      "file": "Poloxamer_Market_Report.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/request-access.html"
+    },
+    {
+      "file": "Poloxamer_Market_Report.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/market-reports.html"
+    },
+    {
+      "file": "privacy-policy.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/privacy-policy.html"
+    },
+    {
+      "file": "profile-optimizer.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/profile-optimizer.html"
+    },
+    {
+      "file": "refund-policy.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/refund-policy.html"
+    },
+    {
+      "file": "request-access.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/request-access.html"
+    },
+    {
+      "file": "research-preview.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/research-preview.html"
+    },
+    {
+      "file": "ro-guide.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/ro-water-purifier-guide.html"
+    },
+    {
+      "file": "ro-service-checklist.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/ro-service-checklist.html"
+    },
+    {
+      "file": "social-optimizer-admin.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/social-optimizer-admin.html"
+    },
+    {
+      "file": "social-optimizer-dashboard.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/social-optimizer-dashboard.html"
+    },
+    {
+      "file": "social-optimizer-success.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/social-optimizer-success.html"
+    },
+    {
+      "file": "specialty.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html"
+    },
+    {
+      "file": "Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html"
+    },
+    {
+      "file": "Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/request-access.html"
+    },
+    {
+      "file": "Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/market-reports.html"
+    },
+    {
+      "file": "teaching-ai-to-think.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/teaching-ai-to-think.html"
+    },
+    {
+      "file": "terms-and-disclaimer.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/terms-and-disclaimer.html"
+    },
+    {
+      "file": "test-preview-system.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/test-preview-system.html"
+    },
+    {
+      "file": "test-preview-system.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/market-reports.html"
+    },
+    {
+      "file": "TEST_CREDITS.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/TEST_CREDITS.html"
+    },
+    {
+      "file": "vertical-nav-option.html",
+      "issue": "Old domain in link",
+      "link": "https://ideasbeforetime.pages.dev/vertical-nav-option.html"
+    }
+  ],
+  "formatIssues": [
+    {
+      "file": "about.html",
+      "issue": "Too many inline styles (38)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "access.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "acrylic.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "BASF_IT_SECURITY_PROPOSAL.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-1.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-10.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-100.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-11.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-12.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-13.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-14.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-15.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-16.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-17.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-18.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-19.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-2.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-20.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-21.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-22.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-23.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-24.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-25.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-26.html",
+      "issue": "Too many inline styles (19)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-27.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-28.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-29.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-3.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-30.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-31.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-32.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-33.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-34.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-35.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-36.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-37.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-38.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-39.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-4.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-40.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-41.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-42.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-43.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-44.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-45.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-46.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-47.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-48.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-49.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-5.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-50.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-51.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-52.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-53.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-54.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-55.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-56.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-57.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-58.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-59.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-6.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-60.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-61.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-62.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-63.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-64.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-65.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-66.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-67.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-68.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-69.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-7.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-70.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-71.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-72.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-73.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-74.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-75.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-76.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-77.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-78.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-79.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-8.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-80.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-81.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-82.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-83.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-84.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-85.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-86.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-87.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-88.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-89.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-9.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-90.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-91.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-92.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-93.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-94.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-95.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-96.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-97.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-98.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog-post-99.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "blog.html",
+      "issue": "Too many inline styles (17)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "business-insights.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "business-news.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "compare-homepage-conversion.html",
+      "issue": "Too many inline styles (11)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "compare-homepage-versions.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "cv-preview.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "cv.html",
+      "issue": "Too many inline styles (22)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "disclaimer.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "email-sender-web.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "email.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "error-dashboard.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "Final_Acrylic_Market_Report.html",
+      "issue": "Too many inline styles (13)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "ghar-ghar\\ghar-ghar-complete.html",
+      "issue": "Missing viewport meta tag",
+      "suggestion": "Add: <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
+    },
+    {
+      "file": "ghar-ghar\\ghar-ghar-game.html",
+      "issue": "Too many inline styles (15)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "index-v2-conversion-optimized.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "index.html",
+      "issue": "Too many inline styles (15)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "innovations.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "job-credits-ui.html",
+      "issue": "Too many inline styles (11)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "job-dashboard.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "job-tools.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "jobs.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "JOB_OUTREACH_AUTOMATION_TOOL.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "JOB_POWER_FEATURES.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "JOB_TRACKER_DAILY.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "kiro-training-guide.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "kiro.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "KIRO_AWS_REPORT_CLEAN.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "KIRO_IMPROVEMENT_REPORT_FOR_AWS.html",
+      "issue": "Too many inline styles (12)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "library.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "linkedin-auto-scroller.html",
+      "issue": "Too many inline styles (11)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "linkedin-complete-book.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "linkedin-network-map.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "linkedin-portfolio-index.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "linkedin-post-copier.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "linkedin-skills-dashboard.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "linkedin.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "market-reports.html",
+      "issue": "Too many inline styles (12)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "nickel-esg-report-open.html",
+      "issue": "Too many inline styles (16)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "nickel-esg-report.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "nickel.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "paper.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "Paper_Pulp_Specialty_Chemicals_Report.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "PAYMENT_VISUAL_GUIDE.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "personal-local-only\\family-lifetime-timeline.html",
+      "issue": "Too many inline styles (6)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "personal-local-only\\family-prediction-report.html",
+      "issue": "Too many inline styles (14)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "poloxamer.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "Poloxamer_Market_Report.html",
+      "issue": "Too many inline styles (13)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "privacy-policy.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "profile-optimizer.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "refund-policy.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "reports.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "request-access.html",
+      "issue": "Too many inline styles (13)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "research-preview.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "ro-guide.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "ro-service-checklist.html",
+      "issue": "Too many inline styles (11)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "ro-water-purifier-guide.html",
+      "issue": "Too many inline styles (57)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "ro.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "social-optimizer-admin.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "social-optimizer-app.html",
+      "issue": "Too many inline styles (18)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "social-optimizer-dashboard.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "social-optimizer-index.html",
+      "issue": "Too many inline styles (17)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "social-optimizer-quickstart.html",
+      "issue": "Too many inline styles (11)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "social-optimizer-success.html",
+      "issue": "Too many inline styles (11)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "specialty.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html",
+      "issue": "Too many inline styles (13)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "spo.html",
+      "issue": "Too many inline styles (17)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "teaching-ai-to-think.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "terms-and-disclaimer.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "test-preview-system.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "TEST_CREDITS.html",
+      "issue": "Too many inline styles (11)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "timeline.html",
+      "issue": "Too many inline styles (10)",
+      "suggestion": "Move to CSS classes"
+    },
+    {
+      "file": "vertical-nav-option.html",
+      "issue": "Too many inline styles (11)",
+      "suggestion": "Move to CSS classes"
+    }
+  ],
+  "missingElements": [
+    {
+      "file": "AgenticAI-ShoulderApproach\\saas-blueprint.html",
+      "missing": "common-navigation.js"
+    },
+    {
+      "file": "AgenticAI-ShoulderApproach\\saas-blueprint.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "AgenticAI-ShoulderApproach\\saas-blueprint.html",
+      "missing": "universal-analytics.js"
+    },
+    {
+      "file": "email-template.html",
+      "missing": "common-navigation.js"
+    },
+    {
+      "file": "email-template.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "email-template.html",
+      "missing": "universal-analytics.js"
+    },
+    {
+      "file": "ghar-ghar\\ghar-ghar-complete.html",
+      "missing": "common-navigation.js"
+    },
+    {
+      "file": "ghar-ghar\\ghar-ghar-complete.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "ghar-ghar\\ghar-ghar-complete.html",
+      "missing": "universal-analytics.js"
+    },
+    {
+      "file": "ghar-ghar\\ghar-ghar-game.html",
+      "missing": "common-navigation.js"
+    },
+    {
+      "file": "ghar-ghar\\ghar-ghar-game.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "ghar-ghar\\ghar-ghar-game.html",
+      "missing": "universal-analytics.js"
+    },
+    {
+      "file": "innovations\\3d-imaging-2009.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "missing": "common-navigation.js"
+    },
+    {
+      "file": "innovations\\ai-profile-optimizer-2025.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "innovations\\dashboard-simplification-2017.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "innovations\\digital-money-2012.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "innovations\\dual-sim-2003.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "innovations\\innovation-template.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "innovations\\innovation-template.html",
+      "missing": "universal-analytics.js"
+    },
+    {
+      "file": "innovations\\moveable-dividers-2012.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "innovations\\music-ringtones-2003.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "innovations\\silent-dj-2001.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "innovations\\tv-storage-2002.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "innovations\\universal-health-id-2009.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "linkedin-portfolio\\linkedin-posts-collector.html",
+      "missing": "common-navigation.js"
+    },
+    {
+      "file": "linkedin-portfolio\\linkedin-posts-collector.html",
+      "missing": "common-footer.js"
+    },
+    {
+      "file": "linkedin-portfolio\\linkedin-posts-collector.html",
+      "missing": "universal-analytics.js"
+    },
+    {
+      "file": "personal-local-only\\family-lifetime-timeline.html",
+      "missing": "universal-analytics.js"
+    },
+    {
+      "file": "personal-local-only\\family-prediction-report.html",
+      "missing": "common-navigation.js"
+    },
+    {
+      "file": "personal-local-only\\family-prediction-report.html",
+      "missing": "universal-analytics.js"
+    },
+    {
+      "file": "TEST_NEW_NAVIGATION.html",
+      "missing": "universal-analytics.js"
+    }
+  ],
+  "totalIssues": 871
+}
