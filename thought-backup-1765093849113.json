@@ -1,0 +1,90 @@
+{
+  "timestamp": "2025-12-07T07:50:49.113Z",
+  "step": "session_start",
+  "data": {
+    "knowledge": {
+      "learnings": [
+        "Learning #22",
+        "Learning #29",
+        "Learning #30",
+        "Learning #31",
+        "Learning #32",
+        "Learning #33",
+        "Learning #34",
+        "Learning #38",
+        "Learning #39",
+        "Learning #40",
+        "Learning #42",
+        "Learning #41",
+        "Learning #43",
+        "Learning #44"
+      ],
+      "rules": [
+        "3_WEEKS_COMPLETE_LEARNINGS",
+        "AI_SELF_ENFORCEMENT_SYSTEM",
+        "CONTINUOUS_LEARNING",
+        "CSS_COLUMNS_VS_GRID_LEARNING",
+        "DNA_RULE_PERFECTION_OVER_SPEED",
+        "ENTERPRISE_DECISION_FRAMEWORKS",
+        "HOW_TO_TEACH_KIRO",
+        "KIRO_RULES",
+        "LIFETIME_SYSTEMS",
+        "LIVE_SITE_TESTING_MANDATORY",
+        "MANDATORY_TOOL_USAGE",
+        "PRACTICAL_TESTING_RULEBOOK",
+        "PROACTIVE_CLEANUP_MANDATORY",
+        "REPORT_BLUR_RULES",
+        "REQUEST_OPTIMIZATION",
+        "SELF_IMPROVEMENT_AUTOMATION",
+        "SIMPLE_RULE_AVOID_FAILURES",
+        "SPEED_OPTIMIZATION",
+        "TRIGGER_KEYWORDS",
+        "UPLOAD_BAT_FILE_RULES",
+        "UX_DESIGN_PRINCIPLES",
+        "WORKSPACE_CLEANUP_RULES"
+      ],
+      "tools": [
+        "CRITICAL_DIAGNOSTIC_DEC6.js",
+        "COMPREHENSIVE_LIVE_SITE_CHECK_DEC6.js",
+        "check-config-files.js",
+        "check-redirects-file.js",
+        "KIRO_PROACTIVE_CHECKER.js",
+        "check-site-beauty-quality.js",
+        "verify-before-push.js",
+        "TEST.bat"
+      ],
+      "mistakes": [
+        {
+          "pattern": "cache issue",
+          "mustCheck": [
+            "deployment logs",
+            "_redirects file"
+          ]
+        },
+        {
+          "pattern": "fixed",
+          "mustCheck": [
+            "run tests",
+            "verify on live site"
+          ]
+        },
+        {
+          "pattern": "ready",
+          "mustCheck": [
+            "test user flow",
+            "run all tests"
+          ]
+        },
+        {
+          "pattern": "308 redirect",
+          "mustCheck": [
+            "_redirects file",
+            "deployment status"
+          ]
+        }
+      ]
+    }
+  },
+  "thoughtLog": [],
+  "checksPassed": {}
+}
