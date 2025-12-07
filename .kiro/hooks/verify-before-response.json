@@ -1,0 +1,10 @@
+{
+  "name": "Verify Before Response",
+  "description": "Auto-verify work before AI responds with 'done'",
+  "trigger": "onMessageSend",
+  "enabled": true,
+  "action": {
+    "type": "command",
+    "command": "node verify-my-work.js && node check-site-beauty-quality.js"
+  }
+}

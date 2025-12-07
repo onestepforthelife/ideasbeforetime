@@ -1,0 +1,10 @@
+{
+  "name": "Daily Cleanup",
+  "description": "Auto-cleanup workspace daily",
+  "trigger": "onSessionStart",
+  "enabled": true,
+  "action": {
+    "type": "command",
+    "command": "node cleanup-workspace.js"
+  }
+}

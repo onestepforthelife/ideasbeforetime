@@ -136,7 +136,7 @@ function getAllHtmlFiles(dir) {
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
         
-        if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+        if (stat.isDirectory() && !file.startsWith('.') && !file.startsWith('backup_') && file !== 'node_modules' && file !== '_archive') {
             results = results.concat(getAllHtmlFiles(filePath));
         } else if (file.endsWith('.html')) {
             results.push(filePath);
