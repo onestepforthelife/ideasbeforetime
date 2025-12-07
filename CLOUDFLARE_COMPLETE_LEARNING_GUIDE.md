@@ -26,27 +26,50 @@
 - Redirects `/about/index.html` → `/about/`
 - This is for better UX and SEO
 - **This is WHY we had 308 redirects!**
+- Pages serves extensionless URLs by default (documented behavior)
 
-**Custom Redirects:**
-- Use `_redirects` file in static asset directory
+**Custom Redirects (_redirects file):**
+- Plain text file in static asset directory (e.g., `public/` or `static/`)
 - Format: `[source] [destination] [code]`
 - Example: `/old-page /new-page 301`
+- Limits: 2,000 static + 100 dynamic = 2,100 total redirects
+- Each redirect: 1,000 character limit
+- Lines starting with `#` are comments
+
+**Important Rules:**
+- Order matters! Top-most redirect wins for same source
+- Static redirects before dynamic redirects
+- Redirects always followed, regardless of asset match
+- NOT applied to Pages Functions routes
+- Default status code: 302 (if not specified)
+
+**Advanced Features:**
+- ✅ Splats: `/blog/* /posts/:splat` (greedy matching)
+- ✅ Placeholders: `/movies/:title /media/:title`
+- ✅ Proxying: `/blog/* /news/:splat 200` (relative URLs only)
+- ❌ Query parameters: NOT supported
+- ❌ Domain-level redirects: NOT supported
+- ❌ Redirect by country/language/cookie: NOT supported
 
 **Redirect Rules (Dashboard/API):**
 - For complex/dynamic redirects
 - Use Single Redirects or Bulk Redirects
 - More powerful than `_redirects` file
+- Bulk Redirects: For >2,100 redirects
 
 ### Key Documentation:
-- Redirects · Cloudflare Pages docs
-- Serving Pages (Default Behaviors)
-- Create a redirect rule in the dashboard
+- https://developers.cloudflare.com/pages/configuration/redirects/
+- https://developers.cloudflare.com/pages/configuration/serving-pages/
+- https://developers.cloudflare.com/rules/url-forwarding/bulk-redirects/
 
 ### What I Learned:
-✅ Pages automatically serves extensionless URLs
+✅ Pages automatically serves extensionless URLs (308 redirect)
 ✅ Internal links should NOT use `.html` extension
-✅ `_redirects` is for custom redirects only (301/302)
+✅ `_redirects` is for custom redirects only (301/302/303/307/308)
 ✅ NOT for serving files (that's automatic)
+✅ Redirects execute BEFORE headers
+✅ Proxying only works for relative URLs (not external domains)
+✅ SEO consideration: Add `Link` header for canonical URLs when proxying
 
 ---
 

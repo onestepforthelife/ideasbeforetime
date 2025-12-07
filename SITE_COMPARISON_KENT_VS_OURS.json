@@ -1,0 +1,64 @@
+{
+  "date": "2025-12-07T17:23:36.887Z",
+  "totalPages": 178,
+  "homepage": {
+    "file": "index.html",
+    "gaps": [
+      "❌ No trust signals (certifications, customer count, awards)",
+      "❌ CTA too far below fold (Kent has CTA in hero)",
+      "❌ No images (Kent uses large professional photos)",
+      "⚠️  Value proposition not clear"
+    ]
+  },
+  "productPages": 70,
+  "toolPages": 6,
+  "blogPages": 101,
+  "topGaps": [
+    [
+      "❌ No images (Kent uses large professional photos)",
+      72
+    ],
+    [
+      "❌ No trust signals (certifications, customer count, awards)",
+      70
+    ],
+    [
+      "⚠️  No trust badges/certifications",
+      61
+    ],
+    [
+      "⚠️  Value proposition not clear",
+      59
+    ],
+    [
+      "❌ No customer testimonials (Kent has reviews on every page)",
+      53
+    ],
+    [
+      "❌ CTA too far below fold (Kent has CTA in hero)",
+      47
+    ],
+    [
+      "⚠️  Tables not mobile-responsive",
+      18
+    ],
+    [
+      "⚠️  No comparison table (Kent shows product comparisons)",
+      9
+    ],
+    [
+      "⚠️  Hero image not full-width",
+      1
+    ]
+  ],
+  "recommendations": [
+    "Enlarge hero images to 100% width",
+    "Add trust signals above fold",
+    "Position CTAs in hero section",
+    "Add customer testimonials",
+    "Create comparison tables",
+    "Add hover effects to cards",
+    "Ensure mobile responsiveness",
+    "Add trust badges"
+  ]
+}
