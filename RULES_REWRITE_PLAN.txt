@@ -1,0 +1,118 @@
+RULES REWRITE PLAN - December 8-9, 2025
+Based on what ACTUALLY works, not what I think works
+
+TONIGHT I WILL:
+===============
+
+1. ANALYZE WHICH RULES FAILED
+   - Read all 52 learnings
+   - Find which rules I violated
+   - Find which rules don't work
+   - Find what's missing
+
+2. IDENTIFY WHAT ACTUALLY WORKS
+   - What prevented mistakes
+   - What caught errors
+   - What saved time
+   - What you had to tell me repeatedly
+
+3. REWRITE RULES
+   - Remove rules that don't work
+   - Add rules for repeated mistakes
+   - Make rules actionable (not vague)
+   - Add enforcement mechanisms
+
+4. CREATE NEW MASTER RULES
+   - Based on reality, not theory
+   - Based on failures, not hopes
+   - Based on what you taught me
+   - Based on 52 learnings
+
+RULES TO REWRITE:
+=================
+
+Current rules say:
+- "Test before saying done"
+- "Check live site"
+- "Follow learnings"
+
+But I still:
+- Say "done" without testing
+- Don't check live site
+- Repeat mistakes
+
+NEW RULES WILL SAY:
+===================
+
+Instead of: "Test before saying done"
+New rule: "Run [specific script] and show output before saying done"
+
+Instead of: "Check live site"
+New rule: "Visit [specific URL] and screenshot result before claiming fixed"
+
+Instead of: "Follow learnings"
+New rule: "Before responding, check [specific file] for this issue"
+
+MAKE RULES SPECIFIC:
+====================
+
+BAD RULE (vague):
+"Always test your work"
+
+GOOD RULE (specific):
+"Before saying 'SPO fixed', run these 3 commands:
+1. node test-spo.js
+2. Visit https://onestepforthelife.com/social-optimizer-app.html
+3. Screenshot the payment page
+If any fails, NOT fixed"
+
+RULES WILL INCLUDE:
+===================
+
+1. WHAT to do (specific action)
+2. WHEN to do it (specific trigger)
+3. HOW to verify (specific test)
+4. WHAT if it fails (alternative action)
+
+EXAMPLE NEW RULE:
+=================
+
+RULE: Fix SPO Payment Navigation
+
+WHAT: Check JavaScript console, verify nextStep(4) function
+WHEN: User reports "not going to payment page"
+HOW TO VERIFY: 
+  - Open DevTools
+  - Click "Unlock Full Access"
+  - Check console for errors
+  - Verify Step 4 div appears
+WHAT IF FAILS:
+  - Alternative 1: Check button onclick
+  - Alternative 2: Check CSS display
+  - Alternative 3: Manual workaround (access code)
+
+TOMORROW YOU WILL SEE:
+======================
+
+1. OLD RULES (what failed)
+2. WHY THEY FAILED (analysis)
+3. NEW RULES (what will work)
+4. HOW TO ENFORCE (automation)
+
+REWRITING:
+==========
+- MASTER_RULES.md
+- TESTING_AND_VERIFICATION.md
+- QUALITY_ASSURANCE.md
+- EXECUTION_AND_EFFICIENCY.md
+
+Based on:
+- 52 learnings
+- Your feedback
+- Actual failures
+- What actually works
+
+Machine on.
+Analyzing.
+Rewriting.
+Ready when you wake.
