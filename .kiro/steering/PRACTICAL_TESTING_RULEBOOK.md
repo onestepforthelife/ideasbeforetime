@@ -72,6 +72,172 @@ node COMPREHENSIVE_LIVE_SITE_CHECK_DEC6.js
 
 ---
 
+## 🎨 VISUAL TESTING PARAMETERS (Dec 7, 2025)
+
+**WHEN USER SAYS "TEST" - RUN COMPREHENSIVE TESTING:**
+
+### Quick Command:
+```bash
+.\TEST.bat
+```
+
+This runs 3 checks automatically:
+1. ✅ Code Quality (colors, fonts, formatting)
+2. ✅ File Diagnostic (links, structure, consistency)
+3. ✅ Live Site Check (deployment, functionality)
+
+### Visual Testing Checklist:
+
+**COLORS:**
+```
+☐ Check all colors used (hex, rgb)
+☐ Verify color contrast (WCAG AA: 4.5:1 minimum)
+☐ Consistent brand colors across pages
+☐ No purple colors (removed per requirements)
+```
+
+**HEADERS:**
+```
+☐ All headers left-aligned (not centered)
+☐ Consistent header height across pages
+☐ Logo placement consistent
+☐ Navigation links working
+```
+
+**LAYOUT:**
+```
+☐ Max-width: 1400px consistent
+☐ Padding/margins consistent
+☐ Mobile responsive (test at 768px, 480px)
+☐ No horizontal scroll
+```
+
+**LINKS:**
+```
+☐ All internal links working (no 404)
+☐ All external links valid
+☐ No old domain links (ideasbeforetime.pages.dev)
+☐ Proper link colors (visited vs unvisited)
+```
+
+**FONTS:**
+```
+☐ Consistent font family across pages
+☐ Readable font sizes (min 16px body text)
+☐ Proper font weights (not too thin)
+☐ Line height comfortable (1.5-1.8)
+```
+
+**IMAGES:**
+```
+☐ All images loading
+☐ Proper alt text
+☐ Optimized file sizes
+☐ Responsive images
+```
+
+### Browser Testing Tools:
+
+**Built-in (Press F12):**
+1. **Lighthouse Tab:**
+   - Performance score
+   - Accessibility score
+   - Best practices score
+   - SEO score
+
+2. **Console Tab:**
+   - JavaScript errors
+   - Warning messages
+   - Network errors
+
+3. **Network Tab:**
+   - Failed requests (404, 500)
+   - Slow loading resources
+   - Cache status
+
+**Online Tools (No Install):**
+1. **PageSpeed Insights:** https://pagespeed.web.dev
+   - Enter: https://onestepforthelife.com
+   - Shows: Visual issues, performance, accessibility
+
+2. **W3C Validator:** https://validator.w3.org
+   - Enter: https://onestepforthelife.com
+   - Shows: HTML errors, warnings
+
+3. **WAVE:** https://wave.webaim.org
+   - Enter: https://onestepforthelife.com
+   - Shows: Accessibility issues, contrast problems
+
+### Visual Testing Protocol:
+
+**STEP 1: Automated Tests (5 min)**
+```bash
+.\TEST.bat
+```
+
+**STEP 2: Browser DevTools (5 min)**
+```
+1. Open site in Chrome
+2. Press F12
+3. Click Lighthouse tab
+4. Click "Generate report"
+5. Check scores (aim for 90+)
+```
+
+**STEP 3: Manual Visual Check (10 min)**
+```
+☐ Visit homepage - looks good?
+☐ Check 5 random pages - consistent?
+☐ Test on mobile (F12 → Toggle device toolbar)
+☐ Click 10 random links - all work?
+☐ Check colors - match brand?
+☐ Check headers - all left-aligned?
+```
+
+**STEP 4: Online Tools (5 min)**
+```
+1. Run PageSpeed Insights
+2. Check score (aim for 90+)
+3. Fix any critical issues shown
+```
+
+### Success Criteria:
+
+**PERFECT SITE:**
+```
+✅ Lighthouse score: 90+ (all categories)
+✅ Zero broken links
+✅ Zero console errors
+✅ All headers left-aligned
+✅ Consistent colors/fonts
+✅ Mobile responsive
+✅ Fast loading (<3 seconds)
+```
+
+**ACCEPTABLE SITE:**
+```
+✅ Lighthouse score: 70+ (all categories)
+✅ <5 broken links (non-critical)
+✅ <3 console warnings (non-critical)
+✅ Most headers aligned
+✅ Mostly consistent
+✅ Mobile works
+✅ Loading <5 seconds
+```
+
+**NEEDS WORK:**
+```
+❌ Lighthouse score: <70
+❌ >5 broken links
+❌ Console errors
+❌ Headers misaligned
+❌ Inconsistent design
+❌ Mobile broken
+❌ Slow loading (>5 seconds)
+```
+
+---
+
 ## 🎯 LIVE SITE TEST RESULTS (Dec 6, 2025, 01:30 IST)
 
 **Tested:** https://onestepforthelife.com
