@@ -4,7 +4,7 @@ echo UPLOAD TO GITHUB - Ideas Before Time
 echo ========================================
 echo.
 
-cd /d "C:\Users\araag\Documents\Cloudfare"
+cd /d "C:\Users\araag\OneDrive\Documents\Documents\Cloudfare"
 
 REM Use GitHub Desktop's git
 set GIT="C:\Users\araag\AppData\Local\GitHubDesktop\app-3.5.4\resources\app\git\cmd\git.exe"
@@ -18,7 +18,7 @@ echo Step 2: Add all files
 
 echo.
 echo Step 3: Commit changes with timestamp
-%GIT% commit -m "New domain migration + all pending updates Dec 5"
+%GIT% commit -m "Fix 687 backgrounds + extensionless URLs + Kent comparison Dec 8"
 
 echo.
 echo Step 4: Connect to GitHub (if not done)
