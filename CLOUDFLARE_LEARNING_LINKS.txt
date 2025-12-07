@@ -1,0 +1,17 @@
+# CLOUDFLARE DOCUMENTATION LINKS FOR LEARNING
+
+## Core Documentation
+1. https://developers.cloudflare.com
+2. https://developers.cloudflare.com/pages/
+3. https://developers.cloudflare.com/workers/
+4. https://developers.cloudflare.com/cache/
+
+## Specific Topics
+5. https://www.debugbear.com (Performance)
+6. https://community.cloudflare.com
+7. https://www.cloudflare.com
+
+## Additional Resources
+8-17. Additional developers.cloudflare.com pages
+
+Total: 17 documentation sources to learn from
