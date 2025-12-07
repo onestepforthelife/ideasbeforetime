@@ -1,0 +1,116 @@
+✅ FULL WEBSITE TEST CHECKLIST - After 14 Minutes
+===================================================
+
+TEST IN INCOGNITO/PRIVATE WINDOW
+=================================
+
+### 1. GODA KIRO TT Changes (Primary)
+
+**kiro.html:**
+https://onestepforthelife.com/kiro
+
+Check for:
+☐ Red box: "What GODA KIRO TT Cannot Do"
+☐ 4 limitation points visible
+☐ Section positioned after "What GODA KIRO TT Solves"
+
+**tools.html:**
+https://onestepforthelife.com/tools
+
+Check for:
+☐ Card title: "GODA KIRO TT" (not "GODA Kiro Troubleshooter")
+
+**Navigation (any page):**
+https://onestepforthelife.com/about
+
+Check for:
+☐ Navigation link: "GODA KIRO TT" (not "GODA Kiro Troubleshooter")
+
+═══════════════════════════════════════════════════════════════════
+
+### 2. Critical Pages (No 308 Redirects)
+
+Test these URLs return 200 OK (page loads):
+
+☐ https://onestepforthelife.com/blog
+☐ https://onestepforthelife.com/about
+☐ https://onestepforthelife.com/cv
+☐ https://onestepforthelife.com/spo
+☐ https://onestepforthelife.com/market-reports
+☐ https://onestepforthelife.com/linkedin
+☐ https://onestepforthelife.com/kiro
+☐ https://onestepforthelife.com/tools
+
+═══════════════════════════════════════════════════════════════════
+
+### 3. Navigation & Footer (All Pages)
+
+Pick 3-4 random pages and check:
+
+☐ Navigation bar present at top
+☐ Footer present at bottom
+☐ All navigation links work
+☐ Quick access widget present (if applicable)
+
+═══════════════════════════════════════════════════════════════════
+
+### 4. Visual Consistency
+
+Check 2-3 pages:
+
+☐ Gray gradient backgrounds (not purple)
+☐ Consistent header positioning
+☐ Consistent styling
+☐ No broken images
+☐ No console errors (F12 → Console tab)
+
+═══════════════════════════════════════════════════════════════════
+
+### 5. Mobile View (Optional)
+
+If time permits:
+
+☐ Responsive on mobile (use browser dev tools)
+☐ Navigation works on mobile
+☐ Content readable on small screens
+
+═══════════════════════════════════════════════════════════════════
+
+WHAT TO REPORT:
+===============
+
+**If all working:**
+"All tests passed ✅"
+
+**If issues found:**
+Tell me:
+1. Which page has issue
+2. What the issue is
+3. What you expected vs what you see
+
+═══════════════════════════════════════════════════════════════════
+
+PRIORITY CHECKS:
+================
+
+MUST CHECK (Critical):
+1. ✅ kiro.html - "Cannot Do" section visible
+2. ✅ tools.html - "GODA KIRO TT" title
+3. ✅ Navigation - "GODA KIRO TT" link
+4. ✅ No 308 redirects on main pages
+
+SHOULD CHECK (Important):
+5. Navigation/footer on all pages
+6. No console errors
+7. Gray backgrounds (not purple)
+
+NICE TO CHECK (Optional):
+8. Mobile responsiveness
+9. All blog posts load
+10. All tools work
+
+═══════════════════════════════════════════════════════════════════
+
+STATUS: Ready to test after 14 minutes
+ACTION: Test in incognito window
+REPORT: Results (pass/fail + details)
