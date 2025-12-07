@@ -1,0 +1,105 @@
+{
+  "timestamp": "2025-12-07T15:36:57.583Z",
+  "filesChecked": 180,
+  "issues": {
+    "vagueNaming": [],
+    "confusingLabels": [],
+    "wrongCategorization": [],
+    "missingClarification": [],
+    "oldDomain": [],
+    "missingDescription": [
+      {
+        "file": "access.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "acrylic.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "admin-control-panel.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "astronomy.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "email.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "Final_Acrylic_Market_Report.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "ghar-ghar-complete.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "innovations.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "kiro-error-solver.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "kiro-improvement-guide.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "kiro.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "nickel.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "paper.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "poloxamer.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "reports.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "ro-guide.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "ro.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "specialty.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "TEST_NEW_NAVIGATION.html",
+        "issue": "Missing meta description"
+      },
+      {
+        "file": "vertical-nav-option.html",
+        "issue": "Missing meta description"
+      }
+    ]
+  },
+  "summary": {
+    "vagueNaming": 0,
+    "confusingLabels": 0,
+    "wrongCategorization": 0,
+    "oldDomain": 0,
+    "missingDescription": 21,
+    "total": 0
+  }
+}
