@@ -1,0 +1,16 @@
+{
+  "name": "Weekly Automation Health Check",
+  "description": "Automatically check that all automation systems are working - runs weekly",
+  "trigger": "onSessionStart",
+  "condition": {
+    "dayOfWeek": "Sunday"
+  },
+  "action": {
+    "type": "command",
+    "command": "node MASTER_AUTOMATION_ENFORCER.js",
+    "showOutput": true
+  },
+  "enabled": true,
+  "priority": "medium",
+  "notes": "Ensures hooks, scripts, rules, and files are all healthy. Runs every Sunday at session start."
+}

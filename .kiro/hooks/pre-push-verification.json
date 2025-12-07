@@ -1,0 +1,15 @@
+{
+  "name": "Pre-Push Verification",
+  "description": "Automatically verify files before pushing to GitHub - prevents deployment issues",
+  "trigger": "onMessage",
+  "condition": {
+    "messageContains": ["push", "upload", "deploy", "commit"]
+  },
+  "action": {
+    "type": "command",
+    "command": "node VERIFY_BEFORE_PUSH.js",
+    "showOutput": true
+  },
+  "enabled": true,
+  "priority": "high"
+}

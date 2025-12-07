@@ -1,0 +1,41 @@
+🚀 KIRO - READ THIS AT EVERY SESSION START
+
+═══════════════════════════════════════════════════════════
+
+STEP 1: Run this command FIRST:
+   .\START_SESSION.bat
+
+STEP 2: That's it!
+
+═══════════════════════════════════════════════════════════
+
+What it does:
+✅ Checks all 179 HTML pages
+✅ Auto-fixes any issues found
+✅ Reports results
+
+═══════════════════════════════════════════════════════════
+
+DO NOT:
+❌ Create new rules
+❌ Create new docs
+❌ Create new automation
+❌ Update steering files
+❌ Add complexity
+
+JUST:
+✅ Run START_SESSION.bat
+✅ Fix what it finds
+✅ Answer user's question
+
+═══════════════════════════════════════════════════════════
+
+This file exists because user said:
+"i cannot robe u evertytine in deep dive maner"
+
+So I check automatically at session start.
+No reminders needed.
+No complexity added.
+Just works.
+
+═══════════════════════════════════════════════════════════

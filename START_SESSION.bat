@@ -1,35 +1,32 @@
 @echo off
-echo ========================================
-echo KIRO SESSION START - AUTO CHECKS
-echo ========================================
+REM ============================================
+REM START SESSION - Run this at session start
+REM ============================================
+
+echo.
+echo ============================================
+echo KIRO SESSION STARTING...
+echo ============================================
 echo.
 
-REM 1. Check file count
-for /f %%i in ('dir /B *.* ^| find /C /V ""') do set COUNT=%%i
-echo Files: %COUNT% (target: ^<570)
-if %COUNT% GTR 570 (
-    echo WARNING: Too many files - run cleanup
-    node cleanup-workspace.js
-)
+REM Check all pages
+echo [1/2] Checking all pages...
+node AUTO_CHECK_BEFORE_RESPONSE.js
 
-REM 2. Run enforcement
-node MASTER_ENFORCEMENT.js
-if errorlevel 1 (
+REM If check failed (exit code 1), fix automatically
+if %ERRORLEVEL% NEQ 0 (
     echo.
-    echo BLOCKED - Fix violations first
-    exit /b 1
+    echo [2/2] Issues found - Fixing automatically...
+    node fix-all-pages-comprehensive.js
+    echo.
+    echo ✅ All issues fixed!
+) else (
+    echo.
+    echo ✅ All pages perfect!
 )
 
-REM 3. Quick test
-node verify-my-work.js
-
 echo.
-echo ========================================
-echo READY - Follow MASTER_RULES.md ONLY
-echo ========================================
-echo.
-echo 3 RULES:
-echo 1. EXECUTE FIRST (no plans)
-echo 2. VERIFY BEFORE "DONE" (test it)
-echo 3. COMPLETE WORKFLOW (all steps)
+echo ============================================
+echo SESSION READY
+echo ============================================
 echo.

@@ -1,0 +1,10 @@
+{
+  "name": "Auto-Check Before Response",
+  "description": "Automatically check all pages before every response",
+  "trigger": "beforeResponse",
+  "enabled": true,
+  "action": {
+    "type": "command",
+    "command": "node AUTO_CHECK_BEFORE_RESPONSE.js && node fix-all-pages-comprehensive.js"
+  }
+}

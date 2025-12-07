@@ -1,2 +1,7 @@
-/*.html  200
-/*      200
+# Cloudflare Pages _redirects file
+# Format: [source] [destination] [code]
+# 
+# This file is for REDIRECTS only (301/302)
+# NOT for serving files (that's automatic)
+#
+# For now, no redirects needed - Cloudflare Pages serves .html files automatically

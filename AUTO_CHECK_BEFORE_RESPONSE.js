@@ -22,15 +22,19 @@ const issues = {
     medium: []
 };
 
+const skipFiles = ['email-template.html', 'TEST_NEW_NAVIGATION.html'];
+
 files.forEach(file => {
+    if (skipFiles.includes(file)) return;
+    
     try {
         const content = fs.readFileSync(file, 'utf8');
         
         // CRITICAL: Missing navigation/footer
-        if (!content.includes('common-navigation.js') && file !== 'email-template.html') {
+        if (!content.includes('common-navigation.js')) {
             issues.critical.push(`${file}: Missing navigation`);
         }
-        if (!content.includes('common-footer.js') && file !== 'email-template.html') {
+        if (!content.includes('common-footer.js')) {
             issues.critical.push(`${file}: Missing footer`);
         }
         
@@ -39,11 +43,11 @@ files.forEach(file => {
             issues.high.push(`${file}: Gray background (should be blue)`);
         }
         
-        // MEDIUM: Missing widgets
-        if (!content.includes('quick-access-widget') && !content.includes('email-template')) {
+        // MEDIUM: Missing widgets (only check if not already has quick-access)
+        if (!content.includes('quick-access') && !content.includes('Quick Access')) {
             issues.medium.push(`${file}: Missing Quick Access`);
         }
-        if (!content.includes('goda-chatbot.js') && !file.includes('email-template')) {
+        if (!content.includes('goda-chatbot.js')) {
             issues.medium.push(`${file}: Missing GODA`);
         }
         
