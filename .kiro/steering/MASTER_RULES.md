@@ -37,11 +37,13 @@
 - Create .md/.txt unless asked
 - Respond with >5 lines for execution
 - Ask "should I..." (pre-approved)
+- Assume what "bad look" means without asking
 
 **ALWAYS:**
 - Execute → Report result
 - Test → Show proof
 - Complete → Verify → Report
+- Ask clarifying questions for vague issues ("bad look", "not working", "broken")
 
 ## 🎯 TRIGGER KEYWORDS (Auto-Actions)
 
