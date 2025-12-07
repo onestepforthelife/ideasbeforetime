@@ -45,7 +45,7 @@ function addSiteNavigation() {
                 <li class="dropdown">
                     <a href="learn.html">📚 Learn ▼</a>
                     <ul class="dropdown-menu">
-                        <li><a href="blog.html">Blog (100 posts)</a></li>
+                        <li><a href="blog.html">Blog (179 articles)</a></li>
                         <li><a href="library.html">Library</a></li>
                         <li><a href="innovations.html">Innovations</a></li>
                     </ul>

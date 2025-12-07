@@ -8,14 +8,73 @@
     <link rel="preload" href="common-styles.css" as="style">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <title>LinkedIn Tools - Ideas Before Time</title>
 <link rel="icon" type="image/jpeg" href="images/logo Goda 40 bs 32 pixel.jpg">
 <link rel="apple-touch-icon" href="images/Logo One Step for the life 180 by 84 Pixel.jpg">
-    <meta http-equiv="refresh" content="0; url=https://onestepforthelife.com/linkedin-portfolio-index.html">
-    <link rel="canonical" href="https://onestepforthelife.com/linkedin-portfolio-index.html">
-    <style>body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;display:flex;justify-content:center;align-items:center;height:100vh;margin:0;background:linear-gradient(135deg,#2563eb 0%,#1e40af 100%);color:white;text-align:center;}.redirect-message{padding:40px;background:rgba(255,255,255,0.1);border-radius:15px;backdrop-filter:blur(10px);}.spinner{border:4px solid rgba(255,255,255,0.3);border-top:4px solid white;border-radius:50%;width:40px;height:40px;animation:spin 1s linear infinite;margin:20px auto;}@keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}</style>
-    <script src="common-navigation.js"></script>
-<script src="universal-analytics.js"></script>
+    <meta name="description" content="Free LinkedIn productivity tools: Auto-scroller, post copier, network map, and skills dashboard.">
+    <link rel="canonical" href="https://onestepforthelife.com/linkedin.html">
+    <link rel="stylesheet" href="common-styles.css">
+    <link rel="stylesheet" href="common-navigation.css">
+    <link rel="stylesheet" href="common-footer.css">
+    <style>
+        .hero {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .tool-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .tool-card h2 {
+            color: #2563eb;
+            margin-bottom: 0.5rem;
+        }
+        .tool-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        .tool-card a {
+            display: inline-block;
+            background: #007acc;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .tool-card a:hover {
+            background: #005a9e;
+        }
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
 
 <script type="application/ld+json">
 {
@@ -42,14 +101,54 @@
     <link rel="modulepreload" href="common-navigation.js">
 </head>
 <body>
-    <div class="redirect-message">
-        <h2>Redirecting...</h2>
-        <div class="spinner"></div>
-    </div>
-    <script>
-        window.location.href = 'https://onestepforthelife.com/linkedin-portfolio-index.html';
-    </script>
+    <script src="common-navigation.js"></script>
+    
+    <main>
+        <section class="hero">
+            <h1>🔗 LinkedIn Productivity Tools</h1>
+            <p>Free tools to enhance your LinkedIn experience</p>
+        </section>
+
+        <div class="tools-grid">
+            <div class="tool-card">
+                <div class="icon">📜</div>
+                <h2>Auto-Scroller</h2>
+                <p>Automatically scroll through LinkedIn posts and save time browsing your feed.</p>
+                <a href="linkedin-auto-scroller.html">Use Tool →</a>
+            </div>
+
+            <div class="tool-card">
+                <div class="icon">📋</div>
+                <h2>Post Copier</h2>
+                <p>Easily copy LinkedIn posts with formatting preserved for reuse or archiving.</p>
+                <a href="linkedin-post-copier.html">Use Tool →</a>
+            </div>
+
+            <div class="tool-card">
+                <div class="icon">🌐</div>
+                <h2>Network Map</h2>
+                <p>Visualize your LinkedIn network connections across companies and locations.</p>
+                <a href="linkedin-network-map.html">View Map →</a>
+            </div>
+
+            <div class="tool-card">
+                <div class="icon">🎯</div>
+                <h2>Skills Dashboard</h2>
+                <p>Comprehensive overview of skills, certifications, and professional recommendations.</p>
+                <a href="linkedin-skills-dashboard.html">View Dashboard →</a>
+            </div>
+
+            <div class="tool-card">
+                <div class="icon">📚</div>
+                <h2>Complete Book</h2>
+                <p>All LinkedIn articles compiled into a comprehensive book organized by themes.</p>
+                <a href="linkedin-complete-book.html">Read Book →</a>
+            </div>
+        </div>
+    </main>
+
     <script src="common-footer.js"></script>
+    <script src="universal-analytics.js"></script>
     <script src="error-tracker.js"></script>
 
 <!-- Quick Links Widget -->

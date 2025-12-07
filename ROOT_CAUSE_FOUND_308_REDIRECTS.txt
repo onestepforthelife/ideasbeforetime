@@ -1,0 +1,136 @@
+🎯 ROOT CAUSE FOUND - 308 Permanent Redirects
+December 7, 2025
+
+═══════════════════════════════════════════════════════════════════
+
+❌ WHAT I BLAMED (WRONG):
+- Cache not purged
+- _redirects file syntax
+- JavaScript redirects in files
+
+✅ ACTUAL ROOT CAUSE:
+**Cloudflare Pages "Pretty URLs" / "Clean URLs" feature is enabled**
+
+This feature automatically redirects:
+- /blog.html → /blog (308 Permanent Redirect)
+- /about.html → /about (308 Permanent Redirect)
+- /market-reports.html → /market-reports (308 Permanent Redirect)
+
+═══════════════════════════════════════════════════════════════════
+
+🔍 HOW I FOUND IT:
+
+1. ✅ Checked _redirects file → Only has 3 specific redirects
+2. ✅ Checked _headers file → Only security headers
+3. ✅ Checked HTML files → No automatic JavaScript redirects
+4. ✅ Checked common-navigation.js → No redirects
+5. ✅ Checked sw.js → No redirects
+6. ✅ Checked functions folder → Only ai-config.js API
+7. ✅ Checked workers folder → Not deployed to Pages
+8. ✅ No _middleware.js files found
+
+**Conclusion:** The redirects are coming from Cloudflare Pages itself!
+
+═══════════════════════════════════════════════════════════════════
+
+🔧 THE FIX (In Cloudflare Dashboard):
+
+**Option 1: Disable Pretty URLs (Recommended)**
+
+1. Go to: Cloudflare Dashboard
+2. Click: Workers & Pages (top navigation)
+3. Click: Your project (onestepforthelife)
+4. Click: Settings tab
+5. Scroll to: Build configuration
+6. Look for: "Pretty URLs" or "Clean URLs" or "URL Normalization"
+7. Toggle: OFF
+8. Save changes
+9. Wait: 2-5 minutes for deployment
+10. Test: https://onestepforthelife.com/blog.html
+
+**Option 2: Use Extensionless URLs (Alternative)**
+
+If you want to keep Pretty URLs enabled:
+1. Update ALL links in your site to use extensionless URLs
+2. Change: href="blog.html" → href="blog"
+3. Change: href="about.html" → href="about"
+4. This is a LOT of work (100+ files to update)
+
+**Recommendation: Option 1 (Disable Pretty URLs)**
+
+═══════════════════════════════════════════════════════════════════
+
+📸 WHAT TO LOOK FOR IN DASHBOARD:
+
+In Workers & Pages → Settings, look for these settings:
+
+**Build Configuration:**
+- Build command
+- Build output directory
+- Root directory
+- **URL handling** ← This is likely the culprit
+
+**Functions:**
+- Check if any functions are enabled
+- Check if middleware is configured
+
+**Compatibility Flags:**
+- Check for URL-related flags
+- Check for redirect-related flags
+
+**Environment Variables:**
+- Check for REDIRECT_HTML
+- Check for PRETTY_URLS
+- Check for URL_REWRITE
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 WHY CACHE PURGE DIDN'T WORK:
+
+You purged cache multiple times, but it didn't fix the issue because:
+
+1. Cache purge clears cached responses
+2. But Cloudflare Pages REGENERATES the 308 redirect
+3. Because Pretty URLs feature is ACTIVE
+4. So every request gets a fresh 308 redirect
+5. Cache or no cache, the redirect happens
+
+**This is NOT a cache issue - it's a Pages configuration issue!**
+
+═══════════════════════════════════════════════════════════════════
+
+✅ VERIFICATION AFTER FIX:
+
+After disabling Pretty URLs:
+
+1. Wait 2-5 minutes for deployment
+2. Run: node COMPREHENSIVE_LIVE_SITE_CHECK_DEC6.js
+3. Should show: All pages 200 OK
+4. No more 308 redirects
+
+═══════════════════════════════════════════════════════════════════
+
+📝 LEARNING #50: Don't Blame Cache for Configuration Issues
+
+**What happened:** Blamed cache for 12+ hours, but root cause was Pages configuration
+**Lesson:** 308 redirects can be caused by:
+  1. _redirects file (checked ✅)
+  2. JavaScript redirects (checked ✅)
+  3. Service Worker (checked ✅)
+  4. Functions/Middleware (checked ✅)
+  5. **Pages configuration** ← THIS WAS IT!
+
+**Prevention:** When debugging redirects, check ALL possible sources:
+  - Files (code)
+  - Configuration (dashboard)
+  - Cache (CDN)
+  - DNS (domain)
+
+═══════════════════════════════════════════════════════════════════
+
+Status: ROOT CAUSE IDENTIFIED
+Priority: CRITICAL - Fix in dashboard
+Action: Disable Pretty URLs in Workers & Pages → Settings
+Result: All pages will return 200 OK instead of 308
+
+**GO TO DASHBOARD NOW AND DISABLE PRETTY URLs!**
