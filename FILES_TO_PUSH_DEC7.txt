@@ -1,0 +1,97 @@
+# FILES TO PUSH - December 7, 2025
+
+## CRITICAL FILES (Must Push):
+
+### 1. GODA Chatbot (Fixed)
+- goda-chatbot.js (numbered options + new topic button)
+
+### 2. Domain Updates (Old → New)
+- about.html (onestepforthelife.com)
+- .well-known/security.txt (onestepforthelife.com)
+- add-social-share-buttons.js (onestepforthelife.com)
+- add-astronomy-to-site.js (onestepforthelife.com)
+- add-30-percent-preview.js (onestepforthelife.com)
+
+### 3. Test File (Can delete after testing)
+- test-goda.html (for testing GODA locally)
+
+### 4. Documentation (New learnings)
+- LEARNING_48_TEST_JAVASCRIPT_BEFORE_CLAIMING_FIXED.md
+- LEARNING_46_AUTO_CHECK_ALL_PAGES.md
+- TODAYS_MISTAKES_RECORDED_DEC7.txt
+- LIVE_SITE_FIXES_DEC7_COMPLETE.txt
+
+---
+
+## GITHUB DESKTOP STEPS:
+
+1. Open GitHub Desktop
+2. You should see 10-15 changed files
+3. Review changes (make sure they look correct)
+4. Commit message: "Fix GODA chatbot + update domain to onestepforthelife.com"
+5. Push to origin
+
+---
+
+## AFTER PUSH (MANDATORY - 10 minutes):
+
+### Step 1: Check Build Logs (30 seconds)
+1. Go to: https://dash.cloudflare.com
+2. Click: Workers & Pages → onestepforthelife
+3. Click: Deployments tab
+4. Click: Latest deployment → View details
+5. Read: Build log for any errors
+6. Look for: "Success" or errors
+
+### Step 2: Purge Cache (MANDATORY!)
+1. Still in Cloudflare Dashboard
+2. Click: Caching → Configuration
+3. Click: "Purge Everything" button
+4. Confirm: Yes
+5. Wait: 5-10 minutes (MUST WAIT!)
+
+### Step 3: Test Live Site (5 minutes)
+1. Wait full 5-10 minutes (cache propagation)
+2. Run: node COMPREHENSIVE_LIVE_SITE_CHECK_DEC6.js
+3. Should show: 0 critical issues
+4. All pages should return: 200 OK (not 308)
+
+---
+
+## WHAT SHOULD WORK AFTER PUSH:
+
+✅ GODA chatbot responds to messages
+✅ Numbered options (1-4) work
+✅ New Topic button clears conversation
+✅ All domain references point to onestepforthelife.com
+✅ No 308 redirects (after cache purge + wait)
+
+---
+
+## IF ISSUES AFTER PUSH:
+
+### GODA still doesn't respond:
+1. Open browser console (F12)
+2. Look for red errors
+3. Tell me exact error message
+4. I'll fix based on actual error
+
+### 308 redirects still showing:
+1. Did you purge cache? (Step 2)
+2. Did you wait 5-10 minutes? (MUST WAIT!)
+3. Cache takes time to propagate worldwide
+4. Test again after full wait time
+
+### Build failed:
+1. Check build logs (Step 1)
+2. Look for error message
+3. Tell me what it says
+4. Usually: file size or syntax error
+
+---
+
+## VERIFICATION PASSED ✅
+
+Safe to push. All checks passed.
+
+Remember: Purge cache + Wait 5-10 min = Critical!
