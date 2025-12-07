@@ -1,0 +1,99 @@
+# DEEP ROOT CAUSE ANALYSIS - December 7, 2025
+
+## THE PROBLEM
+- 8 pages showing 308 Permanent Redirect
+- Cache purged multiple times - still broken
+- This means: NOT a cache issue!
+
+## POSSIBLE ROOT CAUSES
+
+### 1. CLOUDFLARE PAGES REDIRECT RULES
+**Check:** Workers & Pages → ideasbeforetime → Settings → Redirects
+**Look for:** Rules redirecting .html to extensionless URLs
+**Example:** `/blog.html` → `/blog` (308)
+**Fix:** Remove or modify redirect rules
+
+### 2. DEPLOYMENT FAILURE
+**Check:** Workers & Pages → ideasbeforetime → Deployments
+**Look for:** Latest deployment status
+**Possible issues:**
+- Build failed
+- Files not uploaded
+- Deployment stuck
+**Fix:** Redeploy or check build logs
+
+### 3. BUILD ERRORS
+**Check:** Latest deployment → View build log
+**Look for:** Errors during build
+**Common errors:**
+- File size too large (>25MB limit)
+- Build command failed
+- Missing dependencies
+**Fix:** Fix build errors, redeploy
+
+### 4. _REDIRECTS FILE
+**Check:** Root directory for `_redirects` file
+**Look for:** Rules redirecting .html files
+**Example:** `/blog.html /blog 308`
+**Fix:** Remove or modify _redirects file
+
+### 5. CLOUDFLARE WORKERS
+**Check:** Workers & Pages → Workers
+**Look for:** Worker intercepting requests
+**Possible:** Worker redirecting .html to extensionless
+**Fix:** Modify or disable worker
+
+## AMIT NEEDS TO CHECK
+
+### Step 1: Check Cloudflare Dashboard
+1. Go to: https://dash.cloudflare.com
+2. Select: ideasbeforetime.pages.dev
+3. Click: Deployments
+4. Check: Latest deployment status
+   - ✅ Success?
+   - ❌ Failed?
+   - ⏳ In progress?
+
+### Step 2: Check Build Logs
+1. Click: Latest deployment
+2. Click: View build log
+3. Look for: Errors or warnings
+4. Screenshot: Send to me if errors found
+
+### Step 3: Check Redirect Rules
+1. Click: Settings
+2. Click: Redirects (or Functions)
+3. Look for: Any rules with .html
+4. Screenshot: Send to me
+
+### Step 4: Check _redirects File
+1. In GitHub Desktop
+2. Check if file exists: `_redirects`
+3. If exists, open and show me content
+
+## MY FAILURE
+
+**What I did wrong:**
+1. Assumed cache issue without deeper investigation
+2. Didn't ask Amit to check build logs
+3. Didn't consider other root causes
+4. Kept repeating "purge cache" without thinking deeper
+
+**What I should have done:**
+1. Ask for build log screenshot
+2. Ask for deployment status
+3. Check for redirect rules
+4. Think about ALL possible causes
+5. Not assume cache is always the problem
+
+## LIFETIME SOLUTION
+
+**Before saying "cache issue":**
+1. ☐ Check deployment status
+2. ☐ Check build logs
+3. ☐ Check redirect rules
+4. ☐ Check _redirects file
+5. ☐ Check Workers
+6. ☐ THEN check cache
+
+**This is systematic troubleshooting, not guessing!**
