@@ -8,3 +8,7 @@
 /innovations/tools /tools.html 301
 /innovations/social-optimizer-index.html /social-optimizer-index.html 301
 /innovations/social-optimizer-index /social-optimizer-index.html 301
+
+# Redirect deleted/renamed pages
+/kiro-training-guide /kiro-improvement-guide 301
+/kiro-training-guide.html /kiro-improvement-guide.html 301
