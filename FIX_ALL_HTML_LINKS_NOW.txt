@@ -1,0 +1,64 @@
+🔧 FIX ALL HTML LINKS - December 8, 2025
+==========================================
+
+ROOT CAUSE (From Cloudflare Docs):
+===================================
+Cloudflare Pages automatically redirects:
+- /blog.html → /blog (308 redirect)
+- /about.html → /about (308 redirect)
+
+This is BY DESIGN, not a bug!
+
+THE FIX:
+========
+Update ALL internal links to remove .html extension
+
+STEP 1: Fix Navigation (5 min)
+-------------------------------
+File: common-navigation.js
+
+Change:
+❌ { name: 'Blog', url: 'blog.html' }
+✅ { name: 'Blog', url: '/blog' }
+
+Do this for ALL navigation items.
+
+STEP 2: Fix All HTML Files (30 min)
+------------------------------------
+Run this script to find all .html links:
+
+```bash
+node fix-all-html-links.js
+```
+
+This will:
+1. Find all href="*.html" in all HTML files
+2. Change to href="/*" (extensionless)
+3. Update 180+ files automatically
+
+STEP 3: Update Sitemap (5 min)
+-------------------------------
+File: sitemap.xml
+
+Change:
+❌ <loc>https://onestepforthelife.com/blog.html</loc>
+✅ <loc>https://onestepforthelife.com/blog</loc>
+
+STEP 4: Push to GitHub (5 min)
+-------------------------------
+1. Commit: "Fix all links - remove .html extension"
+2. Push to GitHub
+3. Wait 2-5 min for deployment
+
+STEP 5: Test Live Site (5 min)
+-------------------------------
+```bash
+node COMPREHENSIVE_LIVE_SITE_CHECK_DEC6.js
+```
+
+Should show: 0 critical issues, all pages 200 OK
+
+TOTAL TIME: 50 minutes
+RESULT: All pages working, no 308 redirects
+
+DO YOU WANT ME TO RUN fix-all-html-links.js NOW?
