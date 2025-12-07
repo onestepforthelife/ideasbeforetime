@@ -1,0 +1,112 @@
+🎯 ROOT CAUSE FOUND - December 8, 2025
+==========================================
+
+WHAT YOU REPORTED:
+==================
+"stillthis oage exts https://onestepforthelife.com/kiro-training-guide"
+
+ROOT CAUSE:
+===========
+✅ File deleted locally (kiro-training-guide.html doesn't exist)
+✅ You pushed to GitHub (via bat file & GitHub Desktop)
+✅ Cloudflare deployed successfully
+❌ CLOUDFLARE CACHE NOT PURGED
+❌ CDN still serving OLD cached version of deleted page
+
+PROOF:
+======
+Local: File doesn't exist ✅
+Live: https://onestepforthelife.com/kiro-training-guide returns 200 OK ❌
+Title: "Kiro AI Training Guide - Amit's 3-Week Learning Journey"
+
+This is OLD content from cache!
+
+THE FIX (5 MINUTES):
+====================
+
+Step 1: Purge Cloudflare Cache (MANDATORY!)
+--------------------------------------------
+1. Go to: https://dash.cloudflare.com
+2. Click: Your domain (onestepforthelife.com)
+3. Click: Caching (left sidebar)
+4. Click: "Purge Everything" button
+5. Click: "Purge Everything" to confirm
+6. You'll see: "Successfully purged cache"
+
+Step 2: Wait for Cache Propagation (5-10 minutes)
+--------------------------------------------------
+Cloudflare has edge servers worldwide. Cache purge takes time to propagate.
+
+DON'T test immediately! Wait 5-10 minutes.
+
+Step 3: Test After 10 Minutes
+------------------------------
+Visit: https://onestepforthelife.com/kiro-training-guide
+
+Should show: 404 Not Found (because file deleted)
+
+VERIFICATION:
+=============
+After 10 minutes, these should work:
+✅ https://onestepforthelife.com/blog (200 OK, gray background)
+✅ https://onestepforthelife.com/about (200 OK, gray background)
+✅ https://onestepforthelife.com/kiro-improvement-guide (200 OK, exists)
+❌ https://onestepforthelife.com/kiro-training-guide (404, deleted)
+
+WHY THIS HAPPENED:
+==================
+1. You deleted kiro-training-guide.html ✅
+2. You pushed to GitHub ✅
+3. Cloudflare deployed ✅
+4. BUT: Cache not purged ❌
+5. Result: CDN serving old cached version
+
+CACHE = PROBLEM:
+================
+- Cloudflare caches pages for speed
+- When you delete a page, cache still has old version
+- MUST purge cache after EVERY deployment
+- Especially when deleting pages
+
+THE RULE:
+=========
+After EVERY push to GitHub:
+1. Wait 2-5 min for deployment
+2. PURGE CACHE (mandatory!)
+3. Wait 5-10 min for propagation
+4. THEN test live site
+
+NEVER skip cache purge!
+
+WHAT I DID WRONG:
+=================
+❌ Told you to check Cloudflare Pages Settings (wrong)
+❌ Assumed deployment issue (wrong)
+❌ Didn't check if cache was purged (should have asked)
+❌ Created complex diagnostics (unnecessary)
+
+WHAT I SHOULD HAVE DONE:
+=========================
+✅ Ask: "Did you purge Cloudflare cache after push?"
+✅ If no: "Purge cache now, wait 10 min, test again"
+✅ If yes: "Wait 10 more minutes for propagation"
+
+SIMPLE FIX:
+===========
+1. Purge cache (2 minutes)
+2. Wait 10 minutes
+3. Test again
+4. Done
+
+STATUS: Waiting for you to purge cache
+PRIORITY: CRITICAL - Old content still cached
+TIME: 5 minutes to purge + 10 minutes propagation = 15 minutes total
+
+DO THIS NOW:
+============
+1. Purge Cloudflare cache
+2. Set timer for 10 minutes
+3. After 10 minutes, test: https://onestepforthelife.com/kiro-training-guide
+4. Should show 404 (page deleted)
+
+THAT'S IT!

@@ -1,0 +1,26 @@
+{
+  "date": "2025-12-07T18:19:54.797Z",
+  "critical": [
+    {
+      "item": "SPO Tool",
+      "problem": "Missing critical elements",
+      "details": [
+        "No form element"
+      ]
+    }
+  ],
+  "high": [
+    {
+      "item": "Navigation",
+      "problem": "1 pages missing navigation",
+      "details": [
+        "kiro.html"
+      ]
+    }
+  ],
+  "medium": [],
+  "working": [
+    "GODA Chatbot structure looks complete"
+  ],
+  "totalIssues": 2
+}
