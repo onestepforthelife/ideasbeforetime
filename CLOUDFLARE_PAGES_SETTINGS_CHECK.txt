@@ -1,0 +1,143 @@
+✅ WORKER IS FINE - CHECK CLOUDFLARE PAGES SETTINGS NOW
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 CONFIRMED:
+
+✅ Worker (orange-lab-a038.onestepforthelife.workers.dev) is working correctly
+   - Returns 405 Method Not Allowed (correct behavior)
+   - Only accepts POST/OPTIONS (as designed)
+   - NOT causing the 308 redirects
+
+❌ 308 redirects are coming from Cloudflare Pages settings
+
+═══════════════════════════════════════════════════════════════════
+
+📋 WHAT TO CHECK NOW (5 MINUTES):
+
+### Step 1: Go to Cloudflare Pages Project
+
+1. Go to: https://dash.cloudflare.com
+2. Click: **Workers & Pages** (left sidebar)
+3. Find your project: **onestepforthelife** or **ideas-before-time**
+4. Click on it
+
+### Step 2: Check Settings → Redirects
+
+1. Click: **Settings** tab (top)
+2. Scroll to: **Redirects** section
+3. Look for: Any redirect rules like:
+   - `/*.html` → `/*` (removes .html extension)
+   - `/blog.html` → `/blog`
+   - Any wildcard redirects
+4. **Screenshot this section** (even if empty)
+
+### Step 3: Check Settings → Build Configuration
+
+1. Still in Settings tab
+2. Scroll to: **Build configuration** section
+3. Look for:
+   - Build command
+   - Build output directory
+   - Root directory
+   - Environment variables
+4. Check if any mention: redirects, pretty URLs, .html removal
+5. **Screenshot this section**
+
+### Step 4: Check Settings → Functions
+
+1. Still in Settings tab
+2. Scroll to: **Functions** section
+3. Look for: Any Functions enabled
+4. Check: Compatibility flags or settings
+5. **Screenshot this section**
+
+### Step 5: Check Custom Domain Settings
+
+1. Still in Settings tab
+2. Scroll to: **Custom domains** section
+3. Look for: onestepforthelife.com
+4. Check: Any redirect settings on the domain
+5. **Screenshot this section**
+
+═══════════════════════════════════════════════════════════════════
+
+🔍 WHAT TO LOOK FOR:
+
+**Most Likely Culprits:**
+
+1. **Redirect Rule removing .html:**
+   ```
+   Source: /*.html
+   Destination: /*
+   Status: 308
+   ```
+   This would cause /blog.html → 308 redirect
+
+2. **"Pretty URLs" or "Clean URLs" setting:**
+   - Some setting that automatically removes .html
+   - Common in static site generators
+
+3. **Build plugin or middleware:**
+   - Something in build configuration
+   - Automatically adding redirects
+
+4. **Functions intercepting requests:**
+   - A Function handling all requests
+   - Adding redirects programmatically
+
+═══════════════════════════════════════════════════════════════════
+
+📸 SEND ME SCREENSHOTS OF:
+
+1. Settings → Redirects section
+2. Settings → Build configuration section
+3. Settings → Functions section
+4. Settings → Custom domains section
+
+Even if sections are empty, screenshot them so I can confirm.
+
+═══════════════════════════════════════════════════════════════════
+
+⚡ QUICK TEST (While in Dashboard):
+
+Try these URLs in browser:
+- https://onestepforthelife.com/blog.html (308?)
+- https://onestepforthelife.com/blog (200?)
+
+If /blog works but /blog.html doesn't:
+→ Confirms redirect rule removing .html extension
+→ Need to delete that rule
+
+═══════════════════════════════════════════════════════════════════
+
+💡 WHAT I EXPECT TO FIND:
+
+Based on symptoms (308 on .html files), most likely:
+
+**Cloudflare Pages has a redirect rule:**
+- Automatically removing .html extensions
+- OR: Redirecting /*.html to /*
+- Status: 308 (Permanent Redirect)
+
+**The Fix:**
+- Delete that redirect rule
+- OR: Change status from 308 to 200
+- OR: Disable "Pretty URLs" feature
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 NEXT STEPS:
+
+1. Check all 4 sections in Cloudflare Pages Settings
+2. Screenshot each section
+3. Send screenshots
+4. I'll tell you exactly what to delete/change
+5. Problem will be fixed in 2 minutes
+
+═══════════════════════════════════════════════════════════════════
+
+Status: WAITING FOR CLOUDFLARE PAGES SETTINGS SCREENSHOTS
+Priority: CRITICAL - 8 pages unreachable for 12+ hours
+Location: Cloudflare Dashboard → Workers & Pages → Your Project → Settings
+
