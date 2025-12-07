@@ -36,51 +36,51 @@ function addSiteNavigation() {
     nav.className = 'site-nav';
     nav.innerHTML = `
         <div class="nav-container">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <img src="images/Logo One Step for the life 180 by 84 Pixel.jpg" alt="Ideas Before Time" class="logo-img">
             </a>
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="/">🏠 Home</a></li>
                 <li class="dropdown">
-                    <a href="learn.html">📚 Learn ▼</a>
+                    <a href="/learn">📚 Learn ▼</a>
                     <ul class="dropdown-menu">
-                        <li><a href="blog.html">Blog (179 articles)</a></li>
-                        <li><a href="library.html">Library</a></li>
-                        <li><a href="innovations.html">Innovations</a></li>
+                        <li><a href="/blog">Blog (179 articles)</a></li>
+                        <li><a href="/library">Library</a></li>
+                        <li><a href="/innovations">Innovations</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="tools.html">🛠️ Tools ▼</a>
+                    <a href="/tools">🛠️ Tools ▼</a>
                     <ul class="dropdown-menu">
-                        <li><a href="spo.html">Social Profile Optimizer</a></li>
-                        <li><a href="jobs.html">Job Search & Tracker</a></li>
-                        <li><a href="ro.html">RO Water Guide</a></li>
-                        <li><a href="linkedin.html">LinkedIn Tools</a></li>
-                        <li><a href="kiro.html">GODA Kiro Troubleshooter</a></li>
-                        <li><a href="astronomy.html">Astrology Calculator</a></li>
+                        <li><a href="/spo">Social Profile Optimizer</a></li>
+                        <li><a href="/jobs">Job Search & Tracker</a></li>
+                        <li><a href="/ro">RO Water Guide</a></li>
+                        <li><a href="/linkedin">LinkedIn Tools</a></li>
+                        <li><a href="/kiro">GODA Kiro Troubleshooter</a></li>
+                        <li><a href="/astronomy">Astrology Calculator</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="insights.html">📊 Insights ▼</a>
+                    <a href="/insights">📊 Insights ▼</a>
                     <ul class="dropdown-menu">
-                        <li><a href="market-reports.html">Chemical Reports</a></li>
-                        <li><a href="business-insights.html">Business Insights</a></li>
-                        <li><a href="request-access.html">Premium Access</a></li>
+                        <li><a href="/market-reports">Chemical Reports</a></li>
+                        <li><a href="/business-insights">Business Insights</a></li>
+                        <li><a href="/request-access">Premium Access</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="about.html">👤 About ▼</a>
+                    <a href="/about">👤 About ▼</a>
                     <ul class="dropdown-menu">
-                        <li><a href="about.html">About Creator</a></li>
-                        <li><a href="cv.html">Professional CV</a></li>
-                        <li><a href="timeline.html">Career Timeline</a></li>
+                        <li><a href="/about">About Creator</a></li>
+                        <li><a href="/cv">Professional CV</a></li>
+                        <li><a href="/timeline">Career Timeline</a></li>
                     </ul>
                 </li>
             </ul>
             <div class="header-ctas">
-                <a href="tools.html" class="btn btn-outline">Use Free Tools</a>
-                <a href="request-access.html" class="btn btn-primary">Request Premium</a>
+                <a href="/tools" class="btn btn-outline">Use Free Tools</a>
+                <a href="/request-access" class="btn btn-primary">Request Premium</a>
             </div>
         </div>
     `;
@@ -109,12 +109,12 @@ function toggleDropdown(event) {
 
 // Highlight current page in navigation
 function highlightActivePage() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPath = window.location.pathname.replace('.html', '').replace(/\/$/, '') || '/';
     const links = document.querySelectorAll('.nav-links a');
     
     links.forEach(link => {
-        const linkPage = link.getAttribute('href');
-        if (linkPage === currentPage) {
+        const linkPath = link.getAttribute('href');
+        if (linkPath === currentPath || linkPath === currentPath + '.html') {
             link.classList.add('active');
         }
     });
@@ -125,13 +125,13 @@ function addBreadcrumb(items) {
     const breadcrumb = document.createElement('div');
     breadcrumb.className = 'breadcrumb';
     
-    let html = '<a href="index.html">Home</a>';
+    let html = '<a href="/">Home</a>';
     items.forEach((item, index) => {
         html += ' <span>›</span> ';
         if (index === items.length - 1) {
             html += `<span>${item.text}</span>`;
         } else {
-            html += `<a href="index.html">${item.text}</a>`;
+            html += `<a href="/">${item.text}</a>`;
         }
     });
     
