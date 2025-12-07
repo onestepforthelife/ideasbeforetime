@@ -1,9 +1,9 @@
 {
-  "timestamp": "2025-12-06T06:29:08.696Z",
+  "timestamp": "2025-12-07T07:07:22.914Z",
   "domain": "https://onestepforthelife.com",
-  "totalIssues": 10,
+  "totalIssues": 8,
   "fileIssues": 0,
-  "serverIssues": 10,
+  "serverIssues": 8,
   "issues": {
     "critical": [
       {
@@ -15,12 +15,6 @@
       {
         "type": "SERVER",
         "page": "About",
-        "issue": "308 Permanent Redirect - Cache not purged",
-        "fix": "Purge Cloudflare cache immediately"
-      },
-      {
-        "type": "SERVER",
-        "page": "CV",
         "issue": "308 Permanent Redirect - Cache not purged",
         "fix": "Purge Cloudflare cache immediately"
       },
@@ -50,12 +44,6 @@
       },
       {
         "type": "SERVER",
-        "page": "Admin Panel",
-        "issue": "308 Permanent Redirect - Cache not purged",
-        "fix": "Purge Cloudflare cache immediately"
-      },
-      {
-        "type": "SERVER",
         "page": "Innovations",
         "issue": "308 Permanent Redirect - Cache not purged",
         "fix": "Purge Cloudflare cache immediately"
@@ -72,11 +60,11 @@
     "low": []
   },
   "summary": {
-    "critical": 10,
+    "critical": 8,
     "high": 0,
     "medium": 0,
     "low": 0,
     "file": 0,
-    "server": 10
+    "server": 8
   }
 }
