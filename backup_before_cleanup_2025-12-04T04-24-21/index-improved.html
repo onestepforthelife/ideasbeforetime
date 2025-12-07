@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ideas Before Time - Strategic Market Intelligence & Innovation</title>
+<meta name="description" content="Strategic market intelligence for chemical industry leaders. Free innovation library + premium research reports. Solo creator Amit Kumar + AI.">
+<link rel="stylesheet" href="common-watermark.css">
+<link rel="stylesheet" href="common-navigation.css">
+<link rel="stylesheet" href="common-footer.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Sticky Header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #5a6c7d;
+}
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: #5a6c7d;
+}
+.header-cta {
+    display: flex;
+    gap: 10px;
+}
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+.btn-primary {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+.btn-secondary {
+    background: white;
+    color: #5a6c7d;
+    border: 2px solid #5a6c7d;
+}
+.btn-secondary:hover {
+    background: #5a6c7d;
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px 40px 20px;
+    text-align: center;
+}
+.hero-headline {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+.hero-subhead {
+    font-size: 20px;
+    color: rgba(255,255,255,0.95);
+    margin-bottom: 30px;
+}
+.hero-cta {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.hero-cta .btn-large {
+    padding: 16px 32px;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+.hero-cta .btn-large.primary {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+}
+.hero-cta .btn-large.secondary {
+    background: white;
+    color: #5a6c7d;
+}
+
+/* Trust Bar */
+.trust-bar {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.trust-item {
+    color: white;
+    text-align: center;
+}
+.trust-number {
+    font-size: 32px;
+    font-weight: bold;
+}
+.trust-label {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Main Container */
+.main-container {
+    background: white;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+/* Three Core Offerings Cards */
+.offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+.offering-card {
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #e0e0e0;
+}
+.offering-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+.offering-card.free {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-color: #28a745;
+}
+.offering-card.premium {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border-color: #ffc107;
+}
+.offering-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+.offering-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+.offering-desc {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.offering-cta {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #5a6c7d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+.offering-cta:hover {
+    background: #4a5c6d;
+    transform: translateY(-2px);
+}
+
+/* Simplified Form */
+.access-form {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+.form-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.form-subtitle {
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: border 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #5a6c7d;
+}
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: #888;
+    font-size: 13px;
+}
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.submit-btn:hover {
+    transform: translateY(-2px);
+}
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+.message {
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: none;
+    font-size: 14px;
+}
+.message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Solo Creator Badge */
+.creator-badge {
+    background: rgba(90, 108, 125, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+    text-align: center;
+    border-left: 4px solid #5a6c7d;
+}
+.creator-badge strong {
+    color: #5a6c7d;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero-headline {
+        font-size: 32px;
+    }
+    .hero-subhead {
+        font-size: 16px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .header-cta {
+        width: 100%;
+        justify-content: center;
+    }
+    .main-container {
+        padding: 30px 20px;
+    }
+    .trust-bar {
+        gap: 20px;
+    }
+}
+</style>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3181510462001437"
+        crossorigin="anonymous"></script>
+<script src="google-adsense.js"></script>
+</head>
+<body>
+
+<!-- Sticky Header -->
+<header class="sticky-header">
+    <div class="header-content">
+        <div class="logo">🔬 Ideas Before Time</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="social-optimizer-index.html">Tools</a>
+            <a href="library.html">Library</a>
+            <a href="market-reports.html">Reports</a>
+            <a href="about.html">About</a>
+        </nav>
+        <div class="header-cta">
+            <a href="social-optimizer-index.html" class="btn-primary">Use Free Tool</a>
+            <a href="#request-access" class="btn-secondary">Request Premium</a>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <h1 class="hero-headline">Strategic Market Intelligence for Chemical Industry Leaders</h1>
+    <p class="hero-subhead">Free innovation resources + premium research reports</p>
+    <div class="hero-cta">
+        <a href="social-optimizer-index.html" class="btn-large primary">Try Free Tools →</a>
+        <a href="#request-access" class="btn-large secondary">View Premium Services</a>
+    </div>
+</section>
+
+<!-- Trust Bar -->
+<div class="trust-bar">
+    <div class="trust-item">
+        <div class="trust-number">9+</div>
+        <div class="trust-label">Innovations</div>
+    </div>
+    <div class="trust-item">
+        <div class="trust-number">15+</div>
+        <div class="trust-label">Market Reports</div>
+    </div>
+    <div class="trust-item">
+        <div class="trust-number">100%</div>
+        <div class="trust-label">Solo Created</div>
+    </div>
+    <div class="trust-item">
+        <div class="trust-number">20+</div>
+        <div class="trust-label">Years Experience</div>
+    </div>
+</div>
+
+<!-- Main Container -->
+<div class="main-container">
+    
+    <!-- Three Core Offerings -->
+    <h2 style="text-align: center; font-size: 32px; margin-bottom: 40px; color: #333;">Choose Your Path</h2>
+    
+    <div class="offerings-grid">
+        <!-- Free Tools -->
+        <div class="offering-card free">
+            <div class="offering-icon">🚀</div>
+            <h3 class="offering-title">Free Tools</h3>
+            <p class="offering-desc">Social Profile Optimizer (₹21), Job Search Tools, Innovation Library - Instant access, no approval needed</p>
+            <a href="social-optimizer-index.html" class="offering-cta">Use Now →</a>
+        </div>
+        
+        <!-- Innovation Library -->
+        <div class="offering-card free">
+            <div class="offering-icon">📚</div>
+            <h3 class="offering-title">Innovation Library</h3>
+            <p class="offering-desc">9 breakthrough innovations with full technical details - 100% free forever, open access</p>
+            <a href="library.html" class="offering-cta">Explore →</a>
+        </div>
+        
+        <!-- Premium Services -->
+        <div class="offering-card premium">
+            <div class="offering-icon">📊</div>
+            <h3 class="offering-title">Premium Services</h3>
+            <p class="offering-desc">Strategic market research for chemical industry - Approval required, typically within 24 hours</p>
+            <a href="#request-access" class="offering-cta">Request Access →</a>
+        </div>
+    </div>
+
+    <!-- Solo Creator Badge -->
+    <div class="creator-badge">
+        <p><strong>✨ Solo Creator:</strong> Everything on this site - innovations, research, tools, code, design - created by Amit Kumar alone. No team, no human support. Just one person + AI (Kiro IDE). 20+ years experience in chemical industry transformation.</p>
+    </div>
+    
+    <!-- Simplified Access Request Form -->
+    <div class="access-form" id="request-access">
+        <h2 class="form-title">Request Premium Access</h2>
+        <p class="form-subtitle">Get approval within 24 hours • Strategic market research & exclusive reports</p>
+        
+        <form id="accessForm">
+            <div class="form-group">
+                <label for="email">Your Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                <small>We'll send approval confirmation to this email</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="service">Service Requested *</label>
+                <select id="service" name="service" required>
+                    <option value="">-- Select Service --</option>
+                    <option value="market-research">📊 Market Research Reports</option>
+                    <option value="profile-optimizer">🎯 LinkedIn Profile Optimizer (Premium)</option>
+                    <option value="cv-access">📄 Complete Professional CV</option>
+                    <option value="all">✨ All Premium Services</option>
+                </select>
+                <small>Choose the service you're interested in</small>
+            </div>
+            
+            <button type="submit" class="submit-btn" id="submitBtn">Request Access</button>
+            
+            <div class="message success" id="successMsg">
+                ✓ Request submitted! You'll receive approval within 24 hours at the email provided.
+            </div>
+            <div class="message error" id="errorMsg">
+                ✗ Submission failed. Please email onestepforthelife@gmail.com directly.
+            </div>
+        </form>
+        
+        <div style="text-align: center; margin-top: 25px; padding-top: 20px; border-top: 1px solid #ddd;">
+            <a href="#" id="adminLink" style="color: #5a6c7d; text-decoration: none; font-size: 13px;">Admin Login</a>
+        </div>
+    </div>
+    
+</div>
+
+<script>
+// Approved emails list
+const APPROVED_EMAILS = [
+    'onestepforthelife@gmail.com'
+];
+
+// Admin password
+const ADMIN_PASSWORD = 'guruji';
+
+// Check if user is already approved
+const userEmail = sessionStorage.getItem('userEmail');
+if (userEmail && APPROVED_EMAILS.includes(userEmail.toLowerCase())) {
+    window.location.href = 'library.html';
+}
+
+// Handle form submission
+document.getElementById('accessForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const email = document.getElementById('email').value.trim().toLowerCase();
+    const service = document.getElementById('service').value;
+    const submitBtn = document.getElementById('submitBtn');
+    const successMsg = document.getElementById('successMsg');
+    const errorMsg = document.getElementById('errorMsg');
+    
+    // Check if already approved
+    if (APPROVED_EMAILS.includes(email)) {
+        sessionStorage.setItem('userEmail', email);
+        window.location.href = 'library.html';
+        return;
+    }
+    
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
+    
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                access_key: 'bcef8ad8-e6c5-4792-b48a-95abaf0eb91e',
+                from_name: 'Ideas Before Time Access Request',
+                subject: 'New Premium Access Request',
+                email: email,
+                message: `New access request:\n\nEmail: ${email}\nService: ${service}\nTimestamp: ${new Date().toLocaleString()}\n\nTo approve: Add "${email}" to APPROVED_EMAILS in index.html`
+            })
+        });
+        
+        if (response.ok) {
+            successMsg.style.display = 'block';
+            errorMsg.style.display = 'none';
+            document.getElementById('accessForm').reset();
+        } else {
+            throw new Error('Submission failed');
+        }
+    } catch (error) {
+        errorMsg.style.display = 'block';
+        successMsg.style.display = 'none';
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Request Access';
+    }
+});
+
+// Admin login
+document.getElementById('adminLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    const password = prompt('Enter admin password:');
+    if (password === ADMIN_PASSWORD) {
+        sessionStorage.setItem('userEmail', 'onestepforthelife@gmail.com');
+        window.location.href = 'library.html';
+    } else if (password !== null) {
+        alert('Incorrect password');
+    }
+});
+</script>
+
+<script src="universal-analytics.js"></script>
+<script src="error-tracker.js"></script>
+<script src="common-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Performance: Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preload" href="common-styles.css" as="style">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit System Test</title>
+<link rel="icon" type="image/jpeg" href="images/logo Goda 40 bs 32 pixel.jpg">
+<link rel="apple-touch-icon" href="images/Logo One Step for the life 180 by 84 Pixel.jpg">
+    <style>body{max-width:1400px;margin:0 auto;font-family:Arial,sans-serif;padding:20px;background:#f5f5f5;}.test-container{max-width:800px;margin:0 auto;background:white;padding:30px;border-radius:10px;}.test-section{margin:20px 0;padding:20px;background:#f8f9fa;border-radius:8px;}button{background:#5a6c7d;color:white;border:none;padding:10px 20px;border-radius:5px;cursor:pointer;margin:5px;}button:hover{background:#5568d3;}.status{padding:10px;margin:10px 0;border-radius:5px;background:#e7f3ff;}</style>
+    <link rel="stylesheet" href="common-watermark.css">
+    <link rel="stylesheet" href="common-footer.css">
+    <meta name="description" content="TEST_CREDITS - Ideas Before Time platform">
+
+    <style>@media (max-width:768px){body{padding:10px !important;}.container,.access-container,.reports-container,.dashboard-container,.tool-container{max-width:100% !important;padding:20px !important;margin:10px !important;}h1{font-size:24px !important;}h2{font-size:20px !important;}.nav-links{flex-direction:column;}.grid,.package-grid,.reports-grid{grid-template-columns:1fr !important;}}</style>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3181510462001437"
+            crossorigin="anonymous"></script>
+    <script src="google-adsense.js"></script>
+    <link rel="canonical" href="https://ideasbeforetime.pages.dev/TEST_CREDITS.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Ideas Before Time",
+  "alternateName": "One Step For The Life",
+  "url": "https://onestepforthelife.com",
+  "description": "AI tools, market research, business insights, and professional resources",
+  "author": {
+    "@type": "Person",
+    "name": "Amit Kumar",
+    "jobTitle": "Business Analyst & AI Specialist"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://onestepforthelife.com/blog.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <link rel="modulepreload" href="common-navigation.js">
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Credit System Test</h1>
+        
+        <div class="test-section">
+            <h3>Current Status</h3>
+            <div class="status">
+                <strong>Credits:</strong> <span id="testCredits">Loading...</span><br>
+                <strong>Timer:</strong> <span id="testTimer">Stopped</span><br>
+                <strong>Total Purchased:</strong> <span id="testTotal">0</span>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>Test Actions</h3>
+            <button onclick="testAddCredits(1000)">Add 1000s (Test)</button>
+            <button onclick="testAddCredits(4000)">Add 4000s (Test)</button>
+            <button onclick="testStartTimer()">Start Timer</button>
+            <button onclick="testStopTimer()">Stop Timer</button>
+            <button onclick="testClearCredits()">Clear All Credits</button>
+            <button onclick="testShowModal()">Show Buy Modal</button>
+        </div>
+        
+        <div class="test-section">
+            <h3>Package Prices</h3>
+            <ul>
+                <li>Starter: ₹299 for 1000s (16m 40s)</li>
+                <li>Pro: ₹999 for 4000s (1h 6m) ⭐</li>
+                <li>Unlimited: ₹2199 for 10000s (2h 46m)</li>
+            </ul>
+        </div>
+        
+        <div class="test-section">
+            <h3>Console Log</h3>
+            <div id="consoleLog" style="background: #000; color: #0f0; padding: 15px; border-radius: 5px; font-family: monospace; max-height: 200px; overflow-y: auto;">
+                Waiting for actions...
+            </div>
+        </div>
+    </div>
+    
+    <!-- Load Credit System -->
+    <script src="job-credits-system.js"></script>
+    
+    <script>
+        function log(msg) {
+            const logDiv = document.getElementById('consoleLog');
+            const time = new Date().toLocaleTimeString();
+            logDiv.innerHTML += `\n[${time}] ${msg}`;
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+        
+        function updateStatus() {
+            document.getElementById('testCredits').textContent = creditSystem.formatTime(creditSystem.remainingSeconds);
+            document.getElementById('testTimer').textContent = creditSystem.isActive ? 'Running ⏱️' : 'Stopped ⏸️';
+            document.getElementById('testTotal').textContent = creditSystem.formatTime(creditSystem.totalPurchased);
+        }
+        
+        function testAddCredits(seconds) {
+            creditSystem.addCredits(seconds);
+            log(`✅ Added ${seconds} seconds`);
+            updateStatus();
+        }
+        
+        function testStartTimer() {
+            const started = creditSystem.startTimer();
+            if (started) {
+                log('▶️ Timer started');
+            } else {
+                log('❌ No credits - cannot start');
+            }
+            updateStatus();
+        }
+        
+        function testStopTimer() {
+            creditSystem.stopTimer();
+            log('⏸️ Timer stopped');
+            updateStatus();
+        }
+        
+        function testClearCredits() {
+            localStorage.removeItem('jobToolCredits');
+            creditSystem.loadCredits();
+            log('🗑️ All credits cleared');
+            updateStatus();
+        }
+        
+        function testShowModal() {
+            creditSystem.showBuyCreditsModal();
+            log('💳 Buy modal opened');
+        }
+        
+        // Update status every second
+        setInterval(updateStatus, 1000);
+        
+        // Initial status
+        updateStatus();
+        log('🚀 Test page loaded');
+        log(`📊 Current credits: ${creditSystem.formatTime(creditSystem.remainingSeconds)}`);
+    </script>
+    
+    <!-- Load Credit UI (for modal) -->
+    <div id="creditUIContainer"></div>
+    <script>
+        fetch('job-credits-ui.html')
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById('creditUIContainer').innerHTML = html;
+                log('✅ Credit UI loaded');
+            })
+            .catch(e => {
+                log('❌ Failed to load Credit UI: ' + e.message);
+            });
+    </script>
+    <script src="common-navigation.js"></script>
+    <script src="universal-analytics.js"></script>
+<script src="common-footer.js"></script>
+    <script src="error-tracker.js"></script>
+
+<!-- Quick Links Widget -->
+<div class="quick-links-widget" style="position: fixed; right: 20px; bottom: 80px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); padding: 20px; width: 250px; z-index: 999; display: none;" id="quickLinksWidget">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h4 style="margin: 0; color: #5a6c7d; font-size: 16px;">🚀 Quick Access</h4>
+        <button onclick="document.getElementById('quickLinksWidget').style.display='none'" style="background: none; border: none; font-size: 20px; cursor: pointer; color: #999;">&times;</button>
+    </div>
+    <div style="display: grid; gap: 8px;">
+        <a href="index.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>🏠</span> Home
+        </a>
+        <a href="blog.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📝</span> Blog (100 posts)
+        </a>
+        <a href="about.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>👤</span> About
+        </a>
+        <a href="cv.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📄</span> CV
+        </a>
+        <a href="market-reports.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📊</span> Reports
+        </a>
+        <a href="social-optimizer-index.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>🚀</span> Tools
+        </a>
+        <a href="library.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📚</span> Library
+        </a>
+        <a href="innovations.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>💡</span> Innovations
+        </a>
+    </div>
+</div>
+
+<!-- Quick Links Toggle Button -->
+<button onclick="document.getElementById('quickLinksWidget').style.display='block'" style="position: fixed; right: 20px; bottom: 20px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%); color: white; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 998; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    🔗
+</button>
+
+<style>.quick-links-widget a:hover{background:#5a6c7d !important;color:white !important;}@media (max-width:768px){.quick-links-widget{right:10px;bottom:70px;width:200px;padding:15px;}}</style>
+
+</body>
+</html>
+

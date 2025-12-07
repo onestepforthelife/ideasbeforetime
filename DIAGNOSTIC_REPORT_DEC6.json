@@ -1,0 +1,62 @@
+{
+  "timestamp": "2025-12-04T23:11:18.360Z",
+  "totalFiles": 176,
+  "totalIssues": 4,
+  "issues": {
+    "file": [],
+    "server": [
+      {
+        "type": "SERVER",
+        "issue": "Cannot test server issues from local files",
+        "note": "Must test on live site with browser DevTools",
+        "checks": [
+          "HTTP status codes (200, 308, 404)",
+          "Cloudflare Access configuration",
+          "Cache purge status",
+          "Actual page loading"
+        ]
+      }
+    ],
+    "critical": [],
+    "high": [
+      {
+        "type": "FILE",
+        "files": [
+          "test-multi-ai.html"
+        ],
+        "issue": "1 pages missing navigation",
+        "fix": "Add <script src=\"common-navigation.js\"></script>"
+      },
+      {
+        "type": "FILE",
+        "file": "spo.html",
+        "issue": "Missing required file: social-optimizer-app.js",
+        "fix": "Add <script src=\"social-optimizer-app.js\"></script> to spo.html"
+      },
+      {
+        "type": "FILE",
+        "file": "spo.html",
+        "issue": "Missing required file: social-optimizer-ai-engine.js",
+        "fix": "Add <script src=\"social-optimizer-ai-engine.js\"></script> to spo.html"
+      }
+    ],
+    "medium": [
+      {
+        "type": "FILE",
+        "files": [
+          "test-multi-ai.html"
+        ],
+        "issue": "1 pages missing footer",
+        "fix": "Add <script src=\"common-footer.js\"></script>"
+      }
+    ],
+    "low": []
+  },
+  "summary": {
+    "critical": 0,
+    "high": 3,
+    "medium": 1,
+    "low": 0,
+    "server": 1
+  }
+}

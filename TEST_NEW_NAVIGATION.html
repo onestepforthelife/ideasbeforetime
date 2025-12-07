@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Test - Ideas Before Time</title>
+<link rel="icon" type="image/jpeg" href="images/logo Goda 40 bs 32 pixel.jpg">
+<link rel="apple-touch-icon" href="images/Logo One Step for the life 180 by 84 Pixel.jpg">
+    <link rel="stylesheet" href="common-styles.css">
+    <link rel="stylesheet" href="common-navigation.css">
+    <style>
+        .test-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .test-section {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .test-section h2 {
+            color: #5a6c7d;
+            margin-bottom: 20px;
+        }
+        .test-item {
+            padding: 15px;
+            margin: 10px 0;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border-left: 4px solid #007acc;
+        }
+        .test-item.pass {
+            border-left-color: #28a745;
+        }
+        .test-item.fail {
+            border-left-color: #dc3545;
+        }
+        .test-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .test-links a {
+            display: block;
+            padding: 15px;
+            background: #007acc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        .test-links a:hover {
+            background: #005a9e;
+        }
+    </style>
+</head>
+<body>
+    <script src="common-navigation.js"></script>
+    
+    <main class="test-container">
+        <div class="test-section">
+            <h2>🧪 Navigation Test Page</h2>
+            <p>This page tests the new 4-hub navigation structure.</p>
+        </div>
+
+        <div class="test-section">
+            <h2>✅ Test Checklist</h2>
+            
+            <div class="test-item">
+                <strong>1. Navigation Visible</strong><br>
+                Check if navigation bar appears at top with gradient background
+            </div>
+            
+            <div class="test-item">
+                <strong>2. Four Main Hubs</strong><br>
+                Verify: 🏠 Home | 📚 Learn ▼ | 🛠️ Tools ▼ | 📊 Insights ▼ | 👤 About ▼
+            </div>
+            
+            <div class="test-item">
+                <strong>3. Dropdown Menus</strong><br>
+                Hover over each hub - dropdown should appear with sub-pages
+            </div>
+            
+            <div class="test-item">
+                <strong>4. CTA Buttons</strong><br>
+                Check for "Use Free Tools" and "Request Premium" buttons on right
+            </div>
+            
+            <div class="test-item">
+                <strong>5. Mobile View</strong><br>
+                Resize browser to mobile width - hamburger menu should appear
+            </div>
+            
+            <div class="test-item">
+                <strong>6. Mobile Dropdowns</strong><br>
+                On mobile, tap hub items to expand sub-menus
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🔗 Test Hub Pages</h2>
+            <div class="test-links">
+                <a href="learn.html">📚 Learn Hub</a>
+                <a href="tools.html">🛠️ Tools Hub</a>
+                <a href="insights.html">📊 Insights Hub</a>
+                <a href="about.html">👤 About Hub</a>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🔗 Test Dropdown Links</h2>
+            
+            <h3>Learn Section:</h3>
+            <div class="test-links">
+                <a href="blog.html">Blog</a>
+                <a href="library.html">Library</a>
+                <a href="innovations.html">Innovations</a>
+            </div>
+
+            <h3>Tools Section:</h3>
+            <div class="test-links">
+                <a href="spo.html">SPO</a>
+                <a href="jobs.html">Job Search</a>
+                <a href="ro.html">RO Guide</a>
+                <a href="linkedin.html">LinkedIn</a>
+                <a href="kiro.html">GODA (Kiro)</a>
+                <a href="astronomy.html">Astrology</a>
+            </div>
+
+            <h3>Insights Section:</h3>
+            <div class="test-links">
+                <a href="market-reports.html">Chemical Reports</a>
+                <a href="business-insights.html">Business Insights</a>
+                <a href="request-access.html">Premium Access</a>
+            </div>
+
+            <h3>About Section:</h3>
+            <div class="test-links">
+                <a href="about.html">About Creator</a>
+                <a href="cv.html">Professional CV</a>
+                <a href="timeline.html">Career Timeline</a>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>📱 Mobile Testing Instructions</h2>
+            <ol>
+                <li>Open Chrome DevTools (F12)</li>
+                <li>Click "Toggle device toolbar" (Ctrl+Shift+M)</li>
+                <li>Select "iPhone 12 Pro" or "Pixel 5"</li>
+                <li>Verify hamburger menu appears</li>
+                <li>Click hamburger to open menu</li>
+                <li>Tap hub items to expand dropdowns</li>
+                <li>Test all links work</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h2>✅ Expected Results</h2>
+            <ul>
+                <li>✅ Navigation bar sticky at top</li>
+                <li>✅ Gradient background (blue-gray)</li>
+                <li>✅ 4 main hubs with dropdown arrows</li>
+                <li>✅ Dropdowns appear on hover (desktop)</li>
+                <li>✅ White dropdown background with shadow</li>
+                <li>✅ 2 CTA buttons visible on right</li>
+                <li>✅ Hamburger menu on mobile</li>
+                <li>✅ All links work (no 404 errors)</li>
+                <li>✅ Smooth transitions and hover effects</li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="common-footer.js"></script>
+</body>
+</html>

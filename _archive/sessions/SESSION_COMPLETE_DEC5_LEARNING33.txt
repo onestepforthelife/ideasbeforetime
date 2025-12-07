@@ -1,0 +1,114 @@
+# SESSION COMPLETE - Learning #33 Recorded
+## December 5, 2025
+
+---
+
+## WHAT WAS ACCOMPLISHED
+
+✅ **Incident Documented**
+- Created formal incident report (KIRO_INCIDENT_REPORT_ASTROLOGY_MISLEADING_CONTENT.md)
+- Created email format for Kiro developers (EMAIL_TO_KIRO_DEVELOPERS.txt)
+- Created mistake analysis (ASTROLOGY_SESSION_MISTAKES_ANALYSIS.md)
+
+✅ **Learning Recorded**
+- Added Learning #33 to 3_WEEKS_COMPLETE_LEARNINGS.md
+- Added Golden Rule #35 to KIRO_RULES.md
+- Created LEARNING_33_CAPABILITY_CHECK.txt
+
+✅ **Prevention System Created**
+- Pre-task capability check mandatory
+- Must state limitations upfront
+- Honesty > Task completion
+
+---
+
+## THE LEARNING
+
+**Golden Rule #35: Verify Capability Before Accepting Task**
+
+Before accepting ANY task:
+```
+☐ Can I actually do this?
+☐ Do I have the capability/data/access needed?
+☐ Should I state limitations upfront?
+☐ Could this mislead users if I proceed?
+☐ Is honesty more important than completion?
+```
+
+For predictions/astrology/future events:
+- MUST state upfront: "I cannot predict the future"
+- MUST explain limitations before proceeding
+- MUST prioritize honesty over task completion
+
+---
+
+## FILES CREATED THIS SESSION
+
+1. KIRO_INCIDENT_REPORT_ASTROLOGY_MISLEADING_CONTENT.md
+2. EMAIL_TO_KIRO_DEVELOPERS.txt
+3. ASTROLOGY_SESSION_MISTAKES_ANALYSIS.md
+4. LEARNING_33_CAPABILITY_CHECK.txt
+5. This session summary
+
+---
+
+## FILES UPDATED THIS SESSION
+
+1. .kiro/steering/3_WEEKS_COMPLETE_LEARNINGS.md (Learning #33 added)
+2. .kiro/steering/KIRO_RULES.md (Golden Rule #35 added)
+
+---
+
+## NEXT STEPS
+
+**For You (Amit):**
+1. Review the incident report if needed
+2. Send EMAIL_TO_KIRO_DEVELOPERS.txt to Kiro team via:
+   - Kiro IDE: Help → Send Feedback
+   - GitHub: https://github.com/kiro-ide/kiro/issues
+   - Email: support@kiro.dev
+
+**For Me (Kiro):**
+1. Apply Golden Rule #35 to every task
+2. Always verify capability before accepting
+3. State limitations upfront
+4. Never create misleading content
+
+---
+
+## IMPACT
+
+**Severity:** CRITICAL
+**Rule Violated:** Golden Rule #6 (Never lie or mislead)
+**Prevention:** Golden Rule #35 (Capability check)
+**Status:** Recorded and enforced
+
+---
+
+## COMMITMENT
+
+I will NEVER:
+- Accept tasks beyond my capability
+- Create predictions without disclaimers
+- Assume users know my limitations
+- Prioritize completion over honesty
+
+I will ALWAYS:
+- Check capability before accepting tasks
+- State limitations upfront
+- Prioritize honesty over completion
+- Protect users from misleading content
+
+---
+
+**Session Status:** COMPLETE ✅
+**Learning Recorded:** YES ✅
+**Prevention System:** ACTIVE ✅
+**Ready for Next Task:** YES ✅
+
+---
+
+**Date:** December 5, 2025
+**Total Learnings:** 33
+**Total Golden Rules:** 35
+**Status:** Continuous learning in action

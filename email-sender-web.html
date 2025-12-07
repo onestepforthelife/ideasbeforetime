@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Performance: Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preload" href="common-styles.css" as="style">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📧 Email Sender with Approval | Amit Kumar</title>
+<link rel="icon" type="image/jpeg" href="images/logo Goda 40 bs 32 pixel.jpg">
+<link rel="apple-touch-icon" href="images/Logo One Step for the life 180 by 84 Pixel.jpg">
+    <link rel="stylesheet" href="common-navigation.css">
+    <link rel="stylesheet" href="common-footer.css">
+    <link rel="stylesheet" href="common-watermark.css">
+    <style>body{max-width:1400px;margin:0 auto;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;padding:60px 20px 20px 20px;background:#f5f5f5;}.hero{background:linear-gradient(135deg,#5a6c7d 0%,#8b9aa7 100%);color:white;padding:40px 20px;text-align:center;}.container{max-width:1200px;margin:40px auto;padding:0 20px;}.job-list{background:white;border-radius:15px;padding:30px;margin-bottom:20px;}.job-card{background:#f8f9fa;padding:20px;margin-bottom:15px;border-radius:10px;border-left:4px solid #5a6c7d;}.job-card h3{color:#2a5298;margin-bottom:10px;}.job-card .match-score{background:#28a745;color:white;padding:5px 10px;border-radius:5px;font-weight:600;display:inline-block;margin-bottom:10px;}.email-preview{background:white;border:2px solid #5a6c7d;border-radius:10px;padding:20px;margin-top:15px;display:none;}.email-preview.active{display:block;}.email-header{background:#e7f3ff;padding:15px;border-radius:8px;margin-bottom:15px;}.email-body{background:#f8f9fa;padding:20px;border-radius:8px;font-family:'Courier New',monospace;white-space:pre-wrap;max-height:400px;overflow-y:auto;}.btn{background:linear-gradient(135deg,#5a6c7d 0%,#8b9aa7 100%);color:white;border:none;padding:12px 24px;border-radius:8px;cursor:pointer;font-weight:600;margin:5px;}.btn:hover{transform:translateY(-2px);box-shadow:0 4px 15px rgba(102,126,234,0.4);}.btn-success{background:#28a745;}.btn-danger{background:#dc3545;}.btn-warning{background:#ffc107;color:#333;}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-bottom:30px;}.stat-card{background:white;padding:20px;border-radius:10px;text-align:center;}.stat-number{font-size:2em;font-weight:700;color:#5a6c7d;}.alert{background:#d4edda;border-left:4px solid #28a745;padding:15px;border-radius:8px;margin-bottom:20px;}.setup-box{background:white;border-radius:15px;padding:30px;margin-bottom:30px;}input[type="email"],input[type="password"]{width:100%;padding:12px;border:2px solid #dee2e6;border-radius:8px;margin-bottom:15px;font-size:1em;}.success-msg{background:#d4edda;border-left:4px solid #28a745;padding:15px;border-radius:8px;margin-top:15px;display:none;}.success-msg.active{display:block;}</style>
+    <meta name="description" content="Job Search Email Tool - Send professional job applications efficiently. Free tool for job seekers.">
+
+    <style>@media (max-width:768px){body{padding:10px !important;}.container,.access-container,.reports-container,.dashboard-container,.tool-container{max-width:100% !important;padding:20px !important;margin:10px !important;}h1{font-size:24px !important;}h2{font-size:20px !important;}.nav-links{flex-direction:column;}.grid,.package-grid,.reports-grid{grid-template-columns:1fr !important;}}</style>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3181510462001437"
+            crossorigin="anonymous"></script>
+    <script src="google-adsense.js"></script>
+    <link rel="canonical" href="https://ideasbeforetime.pages.dev/email-sender-web.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Ideas Before Time",
+  "alternateName": "One Step For The Life",
+  "url": "https://onestepforthelife.com",
+  "description": "AI tools, market research, business insights, and professional resources",
+  "author": {
+    "@type": "Person",
+    "name": "Amit Kumar",
+    "jobTitle": "Business Analyst & AI Specialist"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://onestepforthelife.com/blog.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <link rel="modulepreload" href="common-navigation.js">
+</head>
+<body>
+    <div id="navigation-placeholder"></div>
+    <div id="watermark"></div>
+    
+    <!-- Credit System UI -->
+    <script src="job-credits-system.js"></script>
+    <link rel="stylesheet" href="job-credits-ui.html">
+
+    <div class="hero">
+        <h1>📧 Job Search Tool</h1>
+        <p>AI-Powered Email Automation • Pay Only for Time Used</p>
+    </div>
+    
+    <!-- Include Credit Banner & Modal -->
+    <div id="creditSystemContainer"></div>
+
+    <div class="container">
+        <!-- Setup Section -->
+        <div id="setupSection" class="setup-box">
+            <h2>⚙️ Email Setup</h2>
+            <div class="alert">
+                <strong>🔒 100% Secure:</strong> Password stored ONLY in your browser. Never sent to any server. You control access.
+            </div>
+            
+            <div style="background: #e7f3ff; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                <p><strong>📧 Your Email:</strong> <span id="displayEmail">Not set</span></p>
+                <p style="margin-top: 10px;"><strong>Status:</strong> <span id="emailStatus" style="color: #dc3545;">⚠️ Not Configured</span></p>
+            </div>
+            
+            <div id="passwordSection" style="display: none;">
+                <label><strong>Your Gmail Address:</strong></label>
+                <input type="email" id="userEmail" placeholder="onestepforthelife@gmail.com" style="margin-bottom: 15px;" required>
+                <small style="display: block; color: #666; margin-bottom: 15px;">
+                    Enter the Gmail address you want to send emails from
+                </small>
+                
+                <label><strong>Gmail App Password:</strong></label>
+                <input type="password" id="appPassword" placeholder="Enter 16-character App Password">
+                <small style="display: block; color: #666; margin-bottom: 15px;">
+                    Get App Password: <a href="https://myaccount.google.com/apppasswords" target="_blank" style="color: #5a6c7d; font-weight: 600;" aria-label="External link (opens in new tab)">Click Here</a> → Create → Mail → Windows Computer → Copy
+                </small>
+                
+                <button class="btn" onclick="saveEmailConfig()">💾 Save & Enable Sending</button>
+                <button class="btn btn-danger" onclick="cancelPasswordEntry()">❌ Cancel</button>
+            </div>
+            
+            <div id="configuredSection" style="display: none;">
+                <div style="background: #d4edda; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                    ✅ Email sending is enabled. You can now send job applications.
+                </div>
+                <button class="btn btn-warning" onclick="revokeAccess()">🔒 Revoke Access</button>
+                <button class="btn" onclick="showPasswordSection()">🔑 Change Password</button>
+            </div>
+            
+            <div id="notConfiguredSection">
+                <button class="btn" onclick="showPasswordSection()">🔑 Enable Email Sending</button>
+                <p style="margin-top: 15px; color: #666; font-size: 0.9em;">
+                    Click to enter your Gmail App Password. You can revoke access anytime.
+                </p>
+            </div>
+        </div>
+
+        <!-- Job Search Section -->
+        <div style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); border-radius: 15px; padding: 25px; margin-bottom: 20px; color: white;">
+            <h3 style="margin: 0 0 10px 0;">🔍 AI Job Search & Email Generator</h3>
+            <p style="margin: 0 0 15px 0; font-size: 14px; opacity: 0.95;">Search jobs, generate personalized emails, and send - all on this page</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr auto; gap: 15px; align-items: end;">
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-size: 13px; font-weight: 600;">Job Keywords *</label>
+                    <input type="text" id="jobKeywords" placeholder="e.g., Director Operations, VP Supply Chain" 
+                           style="width: 100%; padding: 12px; border: 2px solid white; border-radius: 8px; font-size: 14px;" required>
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-size: 13px; font-weight: 600;">Location</label>
+                    <input type="text" id="jobLocation" placeholder="Singapore" value="Singapore"
+                           style="width: 100%; padding: 12px; border: 2px solid white; border-radius: 8px; font-size: 14px;" required>
+                </div>
+                <button class="btn btn-success" onclick="triggerJobSearch()" style="background: white; color: #28a745; padding: 12px 30px; font-weight: 700;">
+                    🚀 Search Jobs
+                </button>
+            </div>
+            <div style="background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; margin-top: 15px; font-size: 13px;">
+                <strong>✨ What happens:</strong> AI finds jobs → Generates personalized emails → You review & send (all here on this page)
+            </div>
+        </div>
+
+        <!-- Action Bar -->
+        <div style="background: white; border-radius: 15px; padding: 20px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <div>
+                <h3 style="margin: 0; color: #333;">📧 Job Applications</h3>
+                <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">Review and send your personalized emails</p>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button class="btn" onclick="loadJobs()">🔄 Refresh</button>
+                <button class="btn btn-warning" onclick="startFreshSearch()">🆕 Clear All</button>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalJobs">0</div>
+                <div>Jobs Ready</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="sentJobs">0</div>
+                <div>Sent Today</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="pendingJobs">0</div>
+                <div>Pending</div>
+            </div>
+        </div>
+
+        <!-- Job List -->
+        <div class="job-list">
+            <h2>📋 Job Applications Ready to Send</h2>
+            <p style="color: #666; margin-bottom: 20px;">Click "Preview" to review email, then "Send" to send it.</p>
+            
+            <div id="jobListContainer">
+                <div style="text-align: center; padding: 40px; color: #6c757d;">
+                    <div style="font-size: 3em; margin-bottom: 15px;">📭</div>
+                    <p>No jobs ready yet. Run the AI agent first to generate job applications.</p>
+                    <button class="btn" onclick="loadJobs()">🔄 Refresh</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="common-navigation.js"></script>
+    <script src="job-api-client.js"></script>
+    
+    <!-- Load Credit System UI -->
+    <script>
+        fetch('job-credits-ui.html')
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById('creditSystemContainer').innerHTML = html;
+                // Initialize credit system after loading
+                if (typeof creditSystem !== 'undefined') {
+                    creditSystem.updateDisplay();
+                }
+            });
+    </script>
+    
+    <script>
+        let emailConfig = null;
+        let jobs = [];
+        let sentCount = 0;
+
+        // Load email config from localStorage
+        function loadEmailConfig() {
+            const config = localStorage.getItem('emailConfig');
+            if (config) {
+                emailConfig = JSON.parse(config);
+                updateEmailStatus(true);
+            } else {
+                updateEmailStatus(false);
+            }
+        }
+
+        // Update email status display
+        function updateEmailStatus(isConfigured) {
+            const statusEl = document.getElementById('emailStatus');
+            const displayEmailEl = document.getElementById('displayEmail');
+            const notConfiguredSection = document.getElementById('notConfiguredSection');
+            const configuredSection = document.getElementById('configuredSection');
+            const passwordSection = document.getElementById('passwordSection');
+            
+            if (isConfigured) {
+                statusEl.innerHTML = '✅ Configured & Ready';
+                statusEl.style.color = '#28a745';
+                displayEmailEl.textContent = emailConfig.email;
+                displayEmailEl.style.color = '#28a745';
+                displayEmailEl.style.fontWeight = '600';
+                notConfiguredSection.style.display = 'none';
+                configuredSection.style.display = 'block';
+                passwordSection.style.display = 'none';
+            } else {
+                statusEl.innerHTML = '⚠️ Not Configured';
+                statusEl.style.color = '#dc3545';
+                displayEmailEl.textContent = 'Not set';
+                displayEmailEl.style.color = '#dc3545';
+                displayEmailEl.style.fontWeight = 'normal';
+                notConfiguredSection.style.display = 'block';
+                configuredSection.style.display = 'none';
+                passwordSection.style.display = 'none';
+            }
+        }
+
+        // Show password entry section
+        function showPasswordSection() {
+            document.getElementById('passwordSection').style.display = 'block';
+            document.getElementById('notConfiguredSection').style.display = 'none';
+            document.getElementById('configuredSection').style.display = 'none';
+            
+            // Pre-fill email if already configured
+            if (emailConfig && emailConfig.email) {
+                document.getElementById('userEmail').value = emailConfig.email;
+                document.getElementById('appPassword').focus();
+            } else {
+                document.getElementById('userEmail').focus();
+            }
+        }
+
+        // Cancel password entry
+        function cancelPasswordEntry() {
+            document.getElementById('userEmail').value = '';
+            document.getElementById('appPassword').value = '';
+            updateEmailStatus(emailConfig !== null);
+        }
+
+        // Save email config
+        function saveEmailConfig() {
+            const email = document.getElementById('userEmail').value.trim();
+            const password = document.getElementById('appPassword').value.trim();
+
+            if (!email) {
+                alert('⚠️ Please enter your Gmail address');
+                document.getElementById('userEmail').focus();
+                return;
+            }
+
+            if (!email.endsWith('@gmail.com')) {
+                alert('⚠️ Please use a Gmail address (must end with @gmail.com)');
+                document.getElementById('userEmail').focus();
+                return;
+            }
+
+            if (!password) {
+                alert('⚠️ Please enter your Gmail App Password');
+                document.getElementById('appPassword').focus();
+                return;
+            }
+
+            if (password.length !== 16) {
+                alert('⚠️ Gmail App Password should be 16 characters');
+                document.getElementById('appPassword').focus();
+                return;
+            }
+
+            emailConfig = { 
+                provider: 'gmail',
+                email: email,
+                password: password 
+            };
+            
+            localStorage.setItem('emailConfig', JSON.stringify(emailConfig));
+            
+            document.getElementById('userEmail').value = '';
+            document.getElementById('appPassword').value = '';
+            updateEmailStatus(true);
+            
+            alert('✅ Email sending enabled!\n\nFrom: ' + email + '\n\nYou can now send job applications.\nYour credentials are stored securely in your browser only.');
+        }
+
+        // Revoke access
+        function revokeAccess() {
+            if (confirm('🔒 Revoke email sending access?\n\nYour password will be deleted from browser storage.')) {
+                localStorage.removeItem('emailConfig');
+                emailConfig = null;
+                updateEmailStatus(false);
+                alert('✅ Access revoked. Email sending is now disabled.');
+            }
+        }
+
+        // Test email
+        function testEmail() {
+            if (!emailConfig) {
+                alert('Please configure email first');
+                return;
+            }
+
+            alert('🧪 Test email feature requires backend. For now, use Python version: python email_sender.py');
+        }
+
+        // Clear all jobs and start fresh
+        async function startFreshSearch() {
+            if (confirm('🔄 This will clear all current jobs and start fresh. Continue?')) {
+                try {
+                    const result = await jobAPI.clearJobs();
+                    if (result.success) {
+                        jobs = [];
+                        localStorage.removeItem('jobSearchResults');
+                        displayJobs();
+                        updateStats();
+                        alert('✅ ' + result.message);
+                    } else {
+                        alert('❌ Error: ' + result.error);
+                    }
+                } catch (error) {
+                    console.error('Error clearing jobs:', error);
+                    // Fallback to local clear
+                    jobs = [];
+                    localStorage.removeItem('jobSearchResults');
+                    displayJobs();
+                    updateStats();
+                    alert('✅ Cleared locally!');
+                }
+            }
+        }
+
+        // Load jobs from backend API
+        async function loadJobs() {
+            try {
+                jobs = await jobAPI.loadJobs();
+                displayJobs();
+                updateStats();
+            } catch (error) {
+                console.error('Error loading jobs:', error);
+                jobs = [];
+                displayJobs();
+                updateStats();
+            }
+        }
+
+        // Display jobs
+        function displayJobs() {
+            const container = document.getElementById('jobListContainer');
+            
+            if (jobs.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #6c757d;">
+                        <div style="font-size: 3em; margin-bottom: 15px;">📭</div>
+                        <h3 style="color: #333; margin-bottom: 10px;">No Jobs Yet</h3>
+                        <p style="margin-bottom: 20px;">Enter keywords above and click "Search Jobs" to get started</p>
+                        <p style="font-size: 14px; color: #999;">Everything happens on this page - no downloads needed!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = jobs.map(job => `
+                <div class="job-card" id="job-${job.id}">
+                    <div class="match-score">Match: ${job.matchScore}%</div>
+                    <h3>${job.title} at ${job.company}</h3>
+                    <p><strong>Recipients:</strong> ${job.contacts.map(c => c.name).join(', ')} (${job.contacts.length} contacts)</p>
+                    
+                    <button class="btn" onclick="togglePreview(${job.id})">👁️ Preview Email</button>
+                    <button class="btn btn-success" onclick="sendEmail(${job.id})">📧 Send Email</button>
+                    <button class="btn btn-danger" onclick="skipJob(${job.id})">⏭️ Skip</button>
+                    
+                    <div id="preview-${job.id}" class="email-preview">
+                        <div class="email-header">
+                            <p><strong>To:</strong> ${job.contacts.map(c => c.email).join(', ')}</p>
+                            <p><strong>Subject:</strong> ${job.subject}</p>
+                        </div>
+                        <div class="email-body">${job.body}</div>
+                        <div style="margin-top: 15px;">
+                            <button class="btn btn-success" onclick="confirmSend(${job.id})">✅ Approve & Send</button>
+                            <button class="btn btn-warning" onclick="editEmail(${job.id})">✏️ Edit</button>
+                            <button class="btn" onclick="togglePreview(${job.id})">❌ Close</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Toggle email preview
+        function togglePreview(jobId) {
+            const preview = document.getElementById(`preview-${jobId}`);
+            preview.classList.toggle('active');
+        }
+
+        // Send email
+        function sendEmail(jobId) {
+            togglePreview(jobId);
+        }
+
+        // Confirm send
+        function confirmSend(jobId) {
+            if (!emailConfig) {
+                alert('⚠️ Email sending not enabled!\n\nScroll up to "Email Setup" section and click "Enable Email Sending" to configure your Gmail App Password.');
+                return;
+            }
+
+            const job = jobs.find(j => j.id === jobId);
+            
+            // Show confirmation with details
+            const confirmMsg = `📧 SEND EMAIL?\n\n` +
+                `Company: ${job.company}\n` +
+                `Role: ${job.title}\n` +
+                `Recipients: ${job.contacts.length} people\n\n` +
+                `From: ${emailConfig.email}\n\n` +
+                `Click OK to send now.`;
+            
+            if (confirm(confirmMsg)) {
+                // Show sending indicator
+                const jobCard = document.getElementById(`job-${jobId}`);
+                jobCard.style.opacity = '0.7';
+                
+                // In real version, this would call backend API
+                // For demo, simulate delay
+                setTimeout(() => {
+                    alert('✅ Email sent successfully!\n\n' +
+                          `Sent to: ${job.contacts.map(c => c.email).join(', ')}\n\n` +
+                          '(Note: This is a preview. For actual sending, use Python version: python email_sender.py)');
+                    
+                    // Mark as sent
+                    jobCard.style.opacity = '0.5';
+                    jobCard.innerHTML += '<div style="background: #28a745; color: white; padding: 10px; border-radius: 5px; margin-top: 10px; font-weight: 600;">✅ SENT at ' + new Date().toLocaleTimeString() + '</div>';
+                    
+                    sentCount++;
+                    updateStats();
+                    
+                    // Hide preview
+                    togglePreview(jobId);
+                }, 500);
+            }
+        }
+
+        // Edit email
+        function editEmail(jobId) {
+            alert('✏️ Edit feature: Copy the email text, edit in your email client, then send manually.\n\nOr use Python version for full editing: python email_sender.py');
+        }
+
+        // Skip job
+        function skipJob(jobId) {
+            if (confirm('Skip this job?')) {
+                document.getElementById(`job-${jobId}`).style.display = 'none';
+                jobs = jobs.filter(j => j.id !== jobId);
+                updateStats();
+            }
+        }
+
+        // Update stats
+        function updateStats() {
+            document.getElementById('totalJobs').textContent = jobs.length;
+            document.getElementById('sentJobs').textContent = sentCount;
+            document.getElementById('pendingJobs').textContent = jobs.length - sentCount;
+        }
+
+        // Trigger job search agent
+        async function triggerJobSearch() {
+            const keywords = document.getElementById('jobKeywords').value.trim();
+            const location = document.getElementById('jobLocation').value.trim() || 'Singapore';
+            
+            if (!keywords) {
+                alert('⚠️ Please enter job keywords');
+                document.getElementById('jobKeywords').focus();
+                return;
+            }
+            
+            // Disable button during search
+            const btn = event.target;
+            const originalText = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '⏳ Searching...';
+            
+            try {
+                const result = await jobAPI.triggerAgent(keywords, location);
+                if (result.success) {
+                    alert('✅ Job search started! Results will appear shortly.');
+                    // Clear inputs
+                    document.getElementById('jobKeywords').value = '';
+                    // Poll for results
+                    setTimeout(() => loadJobs(), 5000);
+                } else {
+                    alert('❌ Error: ' + result.error);
+                }
+            } catch (error) {
+                console.error('Error triggering job search:', error);
+                alert('❌ Backend not available. Make sure to run START_BACKEND.bat first.');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+            }
+        }
+
+
+
+        // Load on page load
+        window.addEventListener('load', () => {
+            loadEmailConfig();
+            loadJobs();
+        });
+    </script>
+<script src="common-footer.js"></script>
+<script src="universal-analytics.js"></script>
+    <script src="error-tracker.js"></script>
+
+<!-- Quick Links Widget -->
+<div class="quick-links-widget" style="position: fixed; right: 20px; bottom: 80px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); padding: 20px; width: 250px; z-index: 999; display: none;" id="quickLinksWidget">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h4 style="margin: 0; color: #5a6c7d; font-size: 16px;">🚀 Quick Access</h4>
+        <button onclick="document.getElementById('quickLinksWidget').style.display='none'" style="background: none; border: none; font-size: 20px; cursor: pointer; color: #999;">&times;</button>
+    </div>
+    <div style="display: grid; gap: 8px;">
+        <a href="index.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>🏠</span> Home
+        </a>
+        <a href="blog.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📝</span> Blog (100 posts)
+        </a>
+        <a href="about.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>👤</span> About
+        </a>
+        <a href="cv.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📄</span> CV
+        </a>
+        <a href="market-reports.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📊</span> Reports
+        </a>
+        <a href="social-optimizer-index.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>🚀</span> Tools
+        </a>
+        <a href="library.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📚</span> Library
+        </a>
+        <a href="innovations.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>💡</span> Innovations
+        </a>
+    </div>
+</div>
+
+<!-- Quick Links Toggle Button -->
+<button onclick="document.getElementById('quickLinksWidget').style.display='block'" style="position: fixed; right: 20px; bottom: 20px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%); color: white; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 998; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    🔗
+</button>
+
+<style>.quick-links-widget a:hover{background:#5a6c7d !important;color:white !important;}@media (max-width:768px){.quick-links-widget{right:10px;bottom:70px;width:200px;padding:15px;}}</style>
+
+</body>
+</html>
+

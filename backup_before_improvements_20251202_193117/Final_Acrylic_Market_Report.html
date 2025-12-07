@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acrylic Market Analysis - India & Global</title>
+<link rel="stylesheet" href="common-watermark.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    font-family: 'Segoe UI', Calibri, Arial, sans-serif; 
+    line-height: 1.6; 
+    color: #333;
+    background: #f5f5f5;
+}
+.container { max-width: 1400px; margin: 0 auto; background: white; }
+.header { 
+    background: linear-gradient(135deg, #0066cc 0%, #0099cc 100%); 
+    color: white; 
+    padding: 30px; 
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.header h1 { font-size: 28px; margin-bottom: 10px; }
+.header p { font-size: 14px; opacity: 0.9; }
+.nav-bar {
+    background: #003d7a;
+    padding: 0;
+    position: sticky;
+    top: 110px;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nav-bar li { margin: 0; }
+.nav-bar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 13px;
+    transition: background 0.3s;
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+.nav-bar a:hover { background: #0066cc; }
+.content { padding: 30px; }
+.section { 
+    margin-bottom: 40px; 
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+h2 { 
+    color: #0066cc; 
+    border-bottom: 3px solid #0066cc; 
+    padding-bottom: 10px; 
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+h3 { 
+    color: #0099cc; 
+    margin: 25px 0 15px 0;
+    font-size: 18px;
+    background: #f0f8ff;
+    padding: 10px;
+    border-left: 4px solid #0099cc;
+}
+h4 { color: #333; margin: 15px 0 10px 0; font-size: 16px; }
+table { 
+    border-collapse: collapse; 
+    width: 100%; 
+    margin: 20px 0;
+    font-size: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+th { 
+    background: #0066cc; 
+    color: white; 
+    padding: 12px 8px; 
+    text-align: left;
+    font-weight: 600;
+}
+td { border: 1px solid #ddd; padding: 10px 8px; }
+tr:nth-child(even) { background: #f9f9f9; }
+tr:hover { background: #f0f8ff; }
+.highlight { background: #ffff99; font-weight: bold; padding: 2px 5px; }
+.error { color: #d32f2f; font-weight: bold; }
+.correct { color: #388e3c; font-weight: bold; }
+.warning { color: #f57c00; font-weight: bold; }
+.insight { 
+    background: #e3f2fd; 
+    padding: 15px; 
+    margin: 15px 0; 
+    border-left: 5px solid #0066cc;
+    border-radius: 4px;
+}
+.insight strong { color: #0066cc; }
+.alert-box {
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+.alert-box.error {
+    background: #f8d7da;
+    border-color: #dc3545;
+}
+.alert-box.success {
+    background: #d4edda;
+    border-color: #28a745;
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+.stat-card {
+    background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.stat-card h4 { color: white; margin-bottom: 10px; }
+.stat-card .number { font-size: 32px; font-weight: bold; }
+.stat-card .label { font-size: 14px; opacity: 0.9; }
+ul { margin: 10px 0 10px 25px; }
+li { margin: 5px 0; }
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #0066cc;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: none;
+    font-size: 14px;
+}
+.back-to-top:hover { background: #0099cc; }
+.footer {
+    background: #003d7a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+@media print {
+    .nav-bar, .back-to-top { display: none; }
+    .header { position: relative; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="header">
+<h1>🔬 ACRYLIC MARKET ANALYSIS</h1>
+<p>India & Global Market | Emulsions, Monomers & Value Chain | 2024-2030 Forecast</p>
+</div>
+
+<nav class="nav-bar">
+<ul>
+<li><a href="#executive">📋 Executive Summary</a></li>
+<li><a href="#market-size">📊 Market Size</a></li>
+<li><a href="#applications">🎯 Applications</a></li>
+<li><a href="#supply-demand">⚖️ Supply-Demand</a></li>
+<li><a href="#value-chain">🔗 Value Chain</a></li>
+<li><a href="#margins">💰 Margins</a></li>
+<li><a href="#butyl-acrylate">🧪 Butyl Acrylate</a></li>
+<li><a href="#strategy">🎯 Strategy</a></li>
+</ul>
+</nav>
+
+<div class="content">
+
+<!-- EXECUTIVE SUMMARY -->
+<div id="executive" class="section">
+<h2>📋 EXECUTIVE SUMMARY</h2>
+
+<div class="stats-grid">
+<div class="stat-card">
+<h4>Global Market</h4>
+<div class="number">$12.3B</div>
+<div class="label">Acrylic Emulsions 2024</div>
+</div>
+<div class="stat-card">
+<h4>India Market</h4>
+<div class="number">₹348 Cr</div>
+<div class="label">By 2030 (USD 41.8M)</div>
+</div>
+<div class="stat-card">
+<h4>Growth Rate</h4>
+<div class="number">7.1-7.7%</div>
+<div class="label">CAGR 2024-2030</div>
+</div>
+<div class="stat-card">
+<h4>Asia Pacific</h4>
+<div class="number">46%</div>
+<div class="label">Global Market Share</div>
+</div>
+</div>
+
+<h3>Key Findings</h3>
+<ul>
+<li><strong>Market Structure:</strong> Global acrylic emulsion market valued at USD 12.3B (2024), growing at 7.1-7.7% CAGR through 2030</li>
+<li><strong>Polymer Hierarchy:</strong> Styrene Acrylics dominate (45.18% volume share), followed by VAM Acrylics (28%), Pure Acrylics (15-20%), and Acrylic Hybrids (5-10%)</li>
+<li><strong>India Growth:</strong> Acrylic Acid demand surging at 18.54% CAGR (53.55 KT in FY2021 → 247.48 KT by FY2030), driven by SAP applications</li>
+<li><strong>Supply Constraints:</strong> India faces critical monomer import dependencies - Acrylic Acid (70-80%), Styrene (60-70%), VAM (100%)</li>
+<li><strong>Butyl Acrylate Shift:</strong> IOCL's 150 KT plant (July 2025) transforms market from 60 KT deficit to 80 KT surplus, eliminating imports</li>
+<li><strong>Margin Opportunity:</strong> Acrylic Hybrids offer highest margins (40-50%) with 65-70% import dependency = domestic manufacturing opportunity</li>
+</ul>
+
+<div class="alert-box">
+<strong>Strategic Imperative:</strong> While new Butyl Acrylate capacity addresses supply quantity, persistent upstream monomer import dependencies (especially Acrylic Acid at 70-80%) maintain cost volatility. True competitiveness requires backward integration into monomer production.
+</div>
+
+</div>
+
+<!-- MARKET SIZE SECTION -->
+<div id="market-size" class="section">
+<h2>📊 MARKET SIZE: INDIA & GLOBAL</h2>
+
+<h3>Global Acrylic Emulsions Market (2024)</h3>
+<table>
+<tr>
+<th>Polymer Type</th>
+<th>Market Value</th>
+<th>Volume Share</th>
+<th>Volume (KT)</th>
+<th>Key Driver</th>
+<th>Price Range (INR/Kg)</th>
+</tr>
+<tr>
+<td><strong>Styrene Acrylics</strong></td>
+<td>USD 12.76-13.12B</td>
+<td class="highlight">45.18%</td>
+<td>1,800-2,000</td>
+<td>Cost-performance balance</td>
+<td>65-142</td>
+</tr>
+<tr>
+<td><strong>VAM Acrylics</strong></td>
+<td>Part of total</td>
+<td>28%</td>
+<td>1,100-1,200</td>
+<td>Cost leadership</td>
+<td>45-85</td>
+</tr>
+<tr>
+<td><strong>Pure Acrylics</strong></td>
+<td>Part of total</td>
+<td>15-20%</td>
+<td>600-800</td>
+<td>Low-VOC, durability</td>
+<td>90-250</td>
+</tr>
+<tr>
+<td><strong>Acrylic Hybrids</strong></td>
+<td>USD 0.91B (Epoxy)</td>
+<td>5-10%</td>
+<td>200-400</td>
+<td>Ultra-premium performance</td>
+<td>160-280</td>
+</tr>
+</table>
+
+<h3>India Market Size by Chemistry (2024-2030)</h3>
+<table>
+<tr>
+<th>Polymer Type</th>
+<th>2024 Volume (KT)</th>
+<th>2030 Volume (KT)</th>
+<th>2024 Value (INR Cr)</th>
+<th>2030 Value (INR Cr)</th>
+<th>CAGR</th>
+<th>Key Constraint</th>
+</tr>
+<tr>
+<td>Styrene Acrylics</td>
+<td>35-40</td>
+<td>65-75</td>
+<td>95-110</td>
+<td>180-220</td>
+<td>~7-8%</td>
+<td class="warning">60-70% Styrene import</td>
+</tr>
+<tr>
+<td>VAM Acrylics</td>
+<td>25-30</td>
+<td>50-60</td>
+<td>60-75</td>
+<td>120-150</td>
+<td>~8-9%</td>
+<td class="error">100% VAM import</td>
+</tr>
+<tr>
+<td>Pure Acrylics</td>
+<td>12-15</td>
+<td>25-30</td>
+<td>40-50</td>
+<td>85-110</td>
+<td>~8-9%</td>
+<td>Premium positioning</td>
+</tr>
+<tr>
+<td>Acrylic Hybrids</td>
+<td>4-6</td>
+<td>10-15</td>
+<td>15-25</td>
+<td>40-65</td>
+<td>~10-12%</td>
+<td class="warning">65-70% import dependency</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>80-90</strong></td>
+<td><strong>150-180</strong></td>
+<td><strong>210-260</strong></td>
+<td><strong>425-545</strong></td>
+<td><strong>~7-8%</strong></td>
+<td>-</td>
+</tr>
+</table>
+
+<div class="insight">
+<strong>KEY INSIGHT:</strong> India's Acrylic Acid demand growing at 18.54% CAGR (FY2021: 53.55 KT → FY2030: 247.48 KT), primarily driven by Super Absorbent Polymers (SAPs) for hygiene applications rather than coatings. This creates structural shift where raw material growth outpaces polymer market growth.
+</div>
+
+</div>
+
+<!-- Continue with remaining sections... -->
+
+</div>
+
+<a href="#" class="back-to-top" id="backToTop">↑ Top</a>
+
+<div class="footer">
+<p>&copy; 2024 Acrylic Market Analysis | Confidential Report</p>
+</div>
+
+</div>
+
+<script>
+// Back to top button
+window.onscroll = function() {
+    var btn = document.getElementById("backToTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};
+
+document.getElementById("backToTop").onclick = function(e) {
+    e.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+};
+
+// Password protection for Market Research
+(function() {
+    const RESEARCH_PASSWORD = 'guruji';
+    const isAuthenticated = sessionStorage.getItem('research_authenticated') === 'true';
+    
+    if (!isAuthenticated) {
+        const enteredPassword = prompt('This market research report is password protected.\n\nPlease enter the password to view:');
+        
+        if (enteredPassword === RESEARCH_PASSWORD) {
+            sessionStorage.setItem('research_authenticated', 'true');
+        } else {
+            alert('Incorrect password. Redirecting to home page.');
+            window.location.href = 'index.html';
+        }
+    }
+})();
+</script>
+<script src="common-navigation.js"></script>
+<script src="universal-analytics.js"></script>
+
+<script src="common-footer.js"></script>
+</body>
+</html>
+

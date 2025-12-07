@@ -1,0 +1,74 @@
+# 🛒 AMAZON AFFILIATE LINKS COLLECTION
+
+**Created:** December 5, 2025
+**Purpose:** Store all Amazon affiliate links for integration into site
+
+---
+
+## 📋 COLLECTED LINKS
+
+### Link 1:
+https://amzn.to/4iXDbKF
+
+### Link 2:
+https://amzn.to/49YlM1U
+
+### Link 3:
+https://amzn.to/3MEsyjs
+
+### Link 4:
+https://amzn.to/4iDtvET
+
+### Link 5:
+https://amzn.to/4oG6vqb
+
+---
+
+## 🎯 WHERE TO ADD THESE
+
+### Option 1: RO Water Purifier Guide
+- Add as product recommendations
+- "Top 5 RO Systems We Recommend"
+- Each link with product description
+
+### Option 2: Blog Posts
+- Create "Best Products" posts
+- Product review posts
+- Recommendation lists
+
+### Option 3: Dedicated Products Page
+- Create products.html
+- Categorized product recommendations
+- With affiliate disclosure
+
+### Option 4: Sidebar/Footer
+- "Recommended Products" widget
+- Appears on all pages
+- Quick access to top products
+
+---
+
+## 📝 NEXT STEPS
+
+1. ✅ Links collected (5 total)
+2. ⏳ Determine product categories/names
+3. ⏳ Choose placement strategy
+4. ⏳ Add affiliate disclosure
+5. ⏳ Integrate into site
+6. ⏳ Push to live site
+
+---
+
+## ⚖️ LEGAL REQUIREMENT
+
+Must add Amazon affiliate disclosure:
+"As an Amazon Associate I earn from qualifying purchases."
+
+Add to:
+- Footer of all pages with affiliate links
+- Near each affiliate link
+- In dedicated disclosure page
+
+---
+
+**Status:** Links collected, awaiting product details and placement decision

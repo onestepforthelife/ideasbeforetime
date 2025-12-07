@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Network Map - Amit Vashist</title>
+    <link rel="stylesheet" href="common-navigation.css">
+    <link rel="stylesheet" href="common-footer.css">
+    <link rel="stylesheet" href="common-watermark.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            background: #f8f9fa;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #5a6c7d;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 3px solid #5a6c7d;
+            padding-bottom: 10px;
+        }
+
+        #network-viz {
+            width: 100%;
+            height: 600px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .company-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .company-card {
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .company-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .company-name {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .company-count {
+            opacity: 0.9;
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 12px 25px;
+            border: 2px solid #5a6c7d;
+            background: white;
+            color: #5a6c7d;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: #5a6c7d;
+            color: white;
+        }
+
+        .geography-map {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .geo-card {
+            background: white;
+            border: 2px solid #5a6c7d;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .geo-name {
+            font-weight: bold;
+            color: #5a6c7d;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .geo-count {
+            font-size: 2em;
+            color: #8b9aa7;
+        }
+    </style>
+    <link rel="stylesheet" href="common-watermark.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌐 Professional Network Map</h1>
+            <p>Amit Vashist - 1000+ Global Connections</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="total-connections">1000+</div>
+                <div class="stat-label">Total Connections</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="total-companies">200+</div>
+                <div class="stat-label">Companies</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="total-countries">25+</div>
+                <div class="stat-label">Countries</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="recent-connections">150+</div>
+                <div class="stat-label">Recent (Nov-Dec 2025)</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>🗺️ Geographic Distribution</h2>
+                <div class="geography-map" id="geography-map"></div>
+            </div>
+
+            <div class="section">
+                <h2>🏢 Top Companies in Network</h2>
+                <div class="filter-bar">
+                    <button class="filter-btn active" onclick="filterIndustry('all')">All</button>
+                    <button class="filter-btn" onclick="filterIndustry('chemicals')">Chemicals</button>
+                    <button class="filter-btn" onclick="filterIndustry('semiconductor')">Semiconductor</button>
+                    <button class="filter-btn" onclick="filterIndustry('consulting')">Consulting</button>
+                    <button class="filter-btn" onclick="filterIndustry('tech')">Tech</button>
+                </div>
+                <div class="company-list" id="company-list"></div>
+            </div>
+
+            <div class="section">
+                <h2>🎯 Key Industry Clusters</h2>
+                <div id="network-viz"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Network data from LinkedIn export
+        const networkData = {
+            geography: [
+                { name: 'Singapore', count: 250, flag: '🇸🇬' },
+                { name: 'India', count: 450, flag: '🇮🇳' },
+                { name: 'USA', count: 120, flag: '🇺🇸' },
+                { name: 'Germany', count: 45, flag: '🇩🇪' },
+                { name: 'Thailand', count: 30, flag: '🇹🇭' },
+                { name: 'Malaysia', count: 25, flag: '🇲🇾' },
+                { name: 'Others', count: 80, flag: '🌏' }
+            ],
+            companies: [
+                { name: 'BASF', count: 45, industry: 'chemicals' },
+                { name: 'Applied Materials', count: 38, industry: 'semiconductor' },
+                { name: 'Corning', count: 12, industry: 'semiconductor' },
+                { name: 'Micron Technology', count: 8, industry: 'semiconductor' },
+                { name: 'DSM-Firmenich', count: 15, industry: 'chemicals' },
+                { name: 'Solvay', count: 10, industry: 'chemicals' },
+                { name: 'Henkel', count: 8, industry: 'chemicals' },
+                { name: 'Nouryon', count: 7, industry: 'chemicals' },
+                { name: 'TotalEnergies', count: 6, industry: 'chemicals' },
+                { name: 'Arkema', count: 5, industry: 'chemicals' },
+                { name: 'WACKER', count: 4, industry: 'chemicals' },
+                { name: 'Godrej', count: 12, industry: 'chemicals' },
+                { name: 'Deloitte', count: 8, industry: 'consulting' },
+                { name: 'KPMG', count: 6, industry: 'consulting' },
+                { name: 'Heidrick & Struggles', count: 5, industry: 'consulting' },
+                { name: 'Korn Ferry', count: 4, industry: 'consulting' },
+                { name: 'LinkedIn', count: 15, industry: 'tech' },
+                { name: 'Microsoft', count: 10, industry: 'tech' },
+                { name: 'Cloudflare', count: 3, industry: 'tech' },
+                { name: 'GovTech Singapore', count: 4, industry: 'tech' }
+            ]
+        };
+
+        // Render geography map
+        function renderGeography() {
+            const container = document.getElementById('geography-map');
+            networkData.geography.forEach(geo => {
+                const card = document.createElement('div');
+                card.className = 'geo-card';
+                card.innerHTML = `
+                    <div class="geo-name">${geo.flag} ${geo.name}</div>
+                    <div class="geo-count">${geo.count}</div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Render company list
+        function renderCompanies(filter = 'all') {
+            const container = document.getElementById('company-list');
+            container.innerHTML = '';
+            
+            const filtered = filter === 'all' 
+                ? networkData.companies 
+                : networkData.companies.filter(c => c.industry === filter);
+            
+            filtered.sort((a, b) => b.count - a.count).forEach(company => {
+                const card = document.createElement('div');
+                card.className = 'company-card';
+                card.innerHTML = `
+                    <div class="company-name">${company.name}</div>
+                    <div class="company-count">${company.count} connections</div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Filter industry
+        function filterIndustry(industry) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            renderCompanies(industry);
+        }
+
+        // Initialize
+        renderGeography();
+        renderCompanies();
+
+        // Create network visualization
+        const width = document.getElementById('network-viz').clientWidth;
+        const height = 600;
+
+        const svg = d3.select('#network-viz')
+            .append('svg')
+            .attr('width', width)
+            .attr('height', height);
+
+        // Create nodes for visualization
+        const nodes = [
+            { id: 'Amit', group: 0, size: 30 },
+            { id: 'Chemicals', group: 1, size: 25 },
+            { id: 'Semiconductor', group: 2, size: 25 },
+            { id: 'Consulting', group: 3, size: 20 },
+            { id: 'Tech', group: 4, size: 20 },
+            { id: 'BASF', group: 1, size: 15 },
+            { id: 'Applied Materials', group: 2, size: 15 },
+            { id: 'DSM', group: 1, size: 12 },
+            { id: 'Corning', group: 2, size: 10 },
+            { id: 'Deloitte', group: 3, size: 10 }
+        ];
+
+        const links = [
+            { source: 'Amit', target: 'Chemicals' },
+            { source: 'Amit', target: 'Semiconductor' },
+            { source: 'Amit', target: 'Consulting' },
+            { source: 'Amit', target: 'Tech' },
+            { source: 'Chemicals', target: 'BASF' },
+            { source: 'Chemicals', target: 'DSM' },
+            { source: 'Semiconductor', target: 'Applied Materials' },
+            { source: 'Semiconductor', target: 'Corning' },
+            { source: 'Consulting', target: 'Deloitte' }
+        ];
+
+        const color = d3.scaleOrdinal()
+            .domain([0, 1, 2, 3, 4])
+            .range(['#5a6c7d', '#8b9aa7', '#f093fb', '#4facfe', '#43e97b']);
+
+        const simulation = d3.forceSimulation(nodes)
+            .force('link', d3.forceLink(links).id(d => d.id).distance(100))
+            .force('charge', d3.forceManyBody().strength(-300))
+            .force('center', d3.forceCenter(width / 2, height / 2));
+
+        const link = svg.append('g')
+            .selectAll('line')
+            .data(links)
+            .enter().append('line')
+            .attr('stroke', '#999')
+            .attr('stroke-width', 2);
+
+        const node = svg.append('g')
+            .selectAll('circle')
+            .data(nodes)
+            .enter().append('circle')
+            .attr('r', d => d.size)
+            .attr('fill', d => color(d.group))
+            .call(d3.drag()
+                .on('start', dragstarted)
+                .on('drag', dragged)
+                .on('end', dragended));
+
+        const label = svg.append('g')
+            .selectAll('text')
+            .data(nodes)
+            .enter().append('text')
+            .text(d => d.id)
+            .attr('font-size', 12)
+            .attr('dx', 15)
+            .attr('dy', 4);
+
+        simulation.on('tick', () => {
+            link
+                .attr('x1', d => d.source.x)
+                .attr('y1', d => d.source.y)
+                .attr('x2', d => d.target.x)
+                .attr('y2', d => d.target.y);
+
+            node
+                .attr('cx', d => d.x)
+                .attr('cy', d => d.y);
+
+            label
+                .attr('x', d => d.x)
+                .attr('y', d => d.y);
+        });
+
+        function dragstarted(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+
+        function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }
+
+        function dragended(event, d) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+    </script>
+<script src="common-navigation.js"></script>
+<script src="common-navigation.js"></script>
+<script src="common-footer.js"></script>
+<script src="universal-analytics.js"></script>
+</body>
+</html>
+

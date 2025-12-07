@@ -1,0 +1,53 @@
+name: Sync LinkedIn Posts to Blog
+
+on:
+  push:
+    paths:
+      - 'linkedin-posts.txt'
+      - 'linkedin-posts-extracted.txt'
+  schedule:
+    # Run daily at 6 AM IST (12:30 AM UTC)
+    - cron: '30 0 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  sync-posts:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Generate blog posts from LinkedIn
+        run: |
+          echo "Generating blog posts from LinkedIn content..."
+          node add-linkedin-posts-to-blog.js
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --quiet || echo "changes=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit and push if changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config user.name "LinkedIn Auto-Sync Bot"
+          git config user.email "actions@github.com"
+          git add blog-post-*.html blog.html
+          git commit -m "🤖 Auto-sync: New LinkedIn posts added to blog"
+          git push
+      
+      - name: Summary
+        run: |
+          if [ "${{ steps.check_changes.outputs.changes }}" == "true" ]; then
+            echo "✅ New blog posts generated and pushed!"
+          else
+            echo "ℹ️ No new posts to sync"
+          fi

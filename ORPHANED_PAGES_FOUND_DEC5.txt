@@ -1,0 +1,51 @@
+# 🚨 ORPHANED PAGES FOUND - December 5, 2025
+
+## ❌ 13 PAGES WITHOUT NAVIGATION
+
+These pages are missing `common-navigation.js`:
+
+### Main Pages (Priority 1):
+1. **index.html** - Homepage (CRITICAL!)
+2. **about.html** - About page
+3. **blog.html** - Blog listing
+4. **cv.html** - CV page
+5. **innovations.html** - Innovations page
+
+### Secondary Pages (Priority 2):
+6. **acrylic.html** - Report page
+7. **access.html** - Access page
+8. **disclaimer.html** - Disclaimer
+9. **email.html** - Email page
+10. **email-sender-web.html** - Email sender
+
+### Test/Admin Pages (Priority 3):
+11. **admin-control-panel.html** - Admin panel
+12. **error-dashboard.html** - Error dashboard
+13. **test-preview-system.html** - Test page
+
+---
+
+## 📊 IMPACT
+
+**Critical:** Homepage and main pages don't have navigation!
+- Users can't navigate the site
+- Poor user experience
+- Looks unprofessional
+
+---
+
+## ✅ FIX NEEDED
+
+Add this line before `</body>` tag in each file:
+
+```html
+<script src="common-navigation.js"></script>
+<script src="common-footer.js"></script>
+```
+
+---
+
+## 🚀 AUTOMATED FIX
+
+Creating script to fix all 13 pages automatically...
+

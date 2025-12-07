@@ -1,0 +1,223 @@
+{
+  "timestamp": "2025-12-04T11:56:23.317Z",
+  "summary": {
+    "totalPages": 173,
+    "overallScore": "93.4%",
+    "navigation": "166/173",
+    "footer": "166/173",
+    "analytics": "165/173",
+    "errorTracker": "167/173",
+    "watermark": "154/173",
+    "adSense": "153/173",
+    "metaTags": "152/173",
+    "canonicalURL": "170/173"
+  },
+  "issues": [
+    {
+      "file": "access.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "acrylic.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "compare-homepage-conversion.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "compare-homepage-versions.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "email.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "ghar-ghar-complete.html",
+      "issues": [
+        "Missing navigation",
+        "Missing footer",
+        "Missing analytics",
+        "Missing error tracker",
+        "Missing AdSense",
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "innovations.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "jobs.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "kiro.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "linkedin-auto-scroller.html",
+      "issues": [
+        "Missing navigation",
+        "Missing footer",
+        "Missing analytics",
+        "Missing error tracker"
+      ]
+    },
+    {
+      "file": "linkedin-post-copier.html",
+      "issues": [
+        "Missing navigation",
+        "Missing footer",
+        "Missing analytics",
+        "Missing error tracker"
+      ]
+    },
+    {
+      "file": "linkedin.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "nickel.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "paper.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "poloxamer.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "reports.html",
+      "issues": [
+        "Missing navigation",
+        "Missing footer",
+        "Missing analytics",
+        "Missing error tracker",
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "ro-guide.html",
+      "issues": [
+        "Missing navigation",
+        "Missing footer",
+        "Missing analytics",
+        "Missing error tracker",
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "ro.html",
+      "issues": [
+        "Missing navigation",
+        "Missing footer",
+        "Missing analytics",
+        "Missing error tracker",
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description",
+        "Missing canonical URL"
+      ]
+    },
+    {
+      "file": "specialty.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "spo.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "test-preview-system.html",
+      "issues": [
+        "Missing navigation",
+        "Missing footer",
+        "Missing analytics",
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "tools.html",
+      "issues": [
+        "Missing watermark",
+        "Missing AdSense",
+        "Missing meta description"
+      ]
+    },
+    {
+      "file": "vertical-nav-option.html",
+      "issues": [
+        "Missing analytics",
+        "Missing meta description"
+      ]
+    }
+  ]
+}

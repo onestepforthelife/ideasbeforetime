@@ -1,0 +1,5 @@
+# Cloudflare Pages - Serve all files directly without redirects
+# Status 200 = serve the file as-is, no redirect
+
+# Serve everything directly
+/*  /:splat  200

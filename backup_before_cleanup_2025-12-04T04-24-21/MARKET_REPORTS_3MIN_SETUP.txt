@@ -1,0 +1,78 @@
+╔══════════════════════════════════════════════════════════════╗
+║   ⏱️ 3-MINUTE PREVIEW ACCESS - CLOUDFLARE SETUP             ║
+║        Secure Market Reports with Auto-Logout               ║
+╚══════════════════════════════════════════════════════════════╝
+
+🎯 WHAT YOU'RE CREATING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ 3-minute preview access to all reports
+✅ Auto-logout after 3 minutes (cannot bypass)
+✅ Meeting CTA on landing page
+✅ Real Cloudflare Access security (cannot be bypassed)
+✅ 2 applications needed (Cloudflare limit: 4 paths per app)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📍 APPLICATION 1: Market Reports - Part 1
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Go to: Access → Applications → "Add an Application"
+2. Choose: "Self-hosted"
+
+Application name: Market Reports - Part 1
+Session Duration: 3 minutes
+
+Add 4 paths:
+
+Path 1: /market-reports.html
+Path 2: /Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html
+Path 3: /Specialty_Chemicals_Report_UPDATED.html
+Path 4: /Specialty_Chemicals_Market_Report_Merged.html
+
+Policy: One-time PIN
+Action: Allow
+Include: One-time PIN (anyone with email can access)
+
+Click "Add application"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📍 APPLICATION 2: Market Reports - Part 2
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Go to: Access → Applications → "Add an Application"
+2. Choose: "Self-hosted"
+
+Application name: Market Reports - Part 2
+Session Duration: 3 minutes
+
+Add 2 paths:
+
+Path 1: /Final_Acrylic_Market_Report.html
+Path 2: /nickel-esg-report.html
+
+Policy: One-time PIN
+Action: Allow
+Include: One-time PIN (anyone with email can access)
+
+Click "Add application"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ DONE! HOW IT WORKS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+User visits: ideasbeforetime.pages.dev/market-reports.html
+
+1. Cloudflare asks for email
+2. User enters email → Gets OTP
+3. User enters OTP → Access granted for 15 minutes
+4. Sees landing page with meeting CTA
+5. Can browse all 5 reports
+6. After 3 minutes → Auto-logout
+7. Must request access again
+
+CANNOT BE BYPASSED - Server-level security!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

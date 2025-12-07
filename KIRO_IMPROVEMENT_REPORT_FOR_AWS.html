@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Performance: Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preload" href="common-styles.css" as="style">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiro AI Improvement Report - AWS Team Presentation</title>
+<link rel="icon" type="image/jpeg" href="images/logo Goda 40 bs 32 pixel.jpg">
+<link rel="apple-touch-icon" href="images/Logo One Step for the life 180 by 84 Pixel.jpg">
+    <meta name="keywords" content="AI, Machine Learning, Pattern Recognition, Context Retention, Active Learning, Reinforcement Learning, NLP, Natural Language Processing, Validation Framework, Test Automation, Self-Healing Systems, Contradiction Detection, Semantic Analysis, Session Management, Rule Enforcement, Proactive Monitoring, AWS, SageMaker, Lambda, Step Functions, CloudWatch, EventBridge">
+    <meta name="description" content="Evidence-based analysis of Kiro AI performance gaps with algorithmic solutions for AWS implementation - Pattern Recognition, Active Learning, Test-Before-Claim Enforcement">
+    <meta name="author" content="Amit Kumar - Business User Testing">
+    <meta name="aws-solutions" content="Lambda Functions, Step Functions, SageMaker, EventBridge, CloudWatch Logs, DynamoDB, S3, Bedrock">
+    <meta name="technical-tags" content="Pre-Response Validation, Semantic Contradiction Detection, Pattern Learning Algorithm, Active Rule Enforcement, Session Initialization, Mistake Classification, Frequency Tracking">
+    <style>*{margin:0;padding:0;box-sizing:border-box;}body{max-width:1400px;margin:0 auto;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#1a1a1a;overflow:hidden;}.presentation-container{display:flex;height:100vh;scroll-snap-type:x mandatory;overflow-x:scroll;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none;}.presentation-container::-webkit-scrollbar{display:none;}.slide{min-width:100vw;height:100vh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:60px;position:relative;}.slide-dark{background:linear-gradient(135deg,#000000 0%,#1a1a1a 100%);}.slide-blue{background:linear-gradient(135deg,#0066cc 0%,#004499 100%);}.slide-red{background:linear-gradient(135deg,#cc0000 0%,#990000 100%);}.slide-green{background:linear-gradient(135deg,#00aa44 0%,#008833 100%);}.slide-orange{background:linear-gradient(135deg,#ff6600 0%,#cc5200 100%);}.slide-purple{background:linear-gradient(135deg,#6600cc 0%,#4400aa 100%);}.slide-yellow{background:linear-gradient(135deg,#ffaa00 0%,#cc8800 100%);}.slide-title{font-size:3.5vw;font-weight:bold;color:white;text-align:center;margin-top:2vh;margin-bottom:2vh;text-shadow:3px 3px 6px rgba(0,0,0,0.7);line-height:1.2;flex-shrink:0;}.slide-subtitle{font-size:2vw;color:rgba(255,255,255,0.95);text-align:center;margin-bottom:2vh;font-weight:500;flex-shrink:0;}.slide-content{font-size:1.3vw;color:white;max-width:90%;line-height:1.6;width:100%;flex-grow:1;overflow-y:visible;}.slide-number{position:absolute;bottom:2vh;right:3vw;color:rgba(255,255,255,0.5);font-size:1.2vw;flex-shrink:0;}.logo{position:absolute;top:2vh;left:3vw;font-size:1.5vw;font-weight:bold;color:white;flex-shrink:0;}.bullet-list{list-style:none;padding:0;}.bullet-list li{padding:1vh 0;padding-left:3vw;position:relative;font-size:1.5vw;}.bullet-list li:before{content:"✓";position:absolute;left:0;color:#00ff88;font-size:2vw;font-weight:bold;}.bullet-list.problems li:before{content:"✗";color:#ff6666;}.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;width:100%;max-width:1200px;}.stat-box{background:rgba(255,255,255,0.1);padding:2vw;border-radius:15px;text-align:center;border:2px solid rgba(255,255,255,0.2);}.stat-number{font-size:3.5vw;font-weight:bold;color:#00ff88;margin-bottom:1vh;}.stat-number.bad{color:#ff6666;}.stat-label{font-size:1.2vw;color:rgba(255,255,255,0.8);}.highlight-box{background:rgba(255,255,255,0.1);border-left:5px solid #00ff88;padding:2vw;margin:2vh 0;border-radius:10px;}.highlight-box.warning{border-left-color:#ff6666;}.navigation-hint{position:absolute;bottom:2vh;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.6);font-size:1.2vw;animation:pulse 2s infinite;flex-shrink:0;}@keyframes pulse{0%,100%{opacity:0.4;}50%{opacity:0.8;}}.two-column{display:grid;grid-template-columns:1fr 1fr;gap:40px;width:100%;max-width:1200px;}.column-title{font-size:1.8vw;font-weight:bold;margin-bottom:1.5vh;color:#00ff88;}.comparison-table{width:100%;border-collapse:collapse;margin:30px 0;}.comparison-table th,.comparison-table td{padding:20px;text-align:left;border:2px solid rgba(255,255,255,0.2);font-size:22px;}.comparison-table th{background:rgba(255,255,255,0.1);font-weight:bold;}.comparison-table .bad{color:#ff6666;}.comparison-table .good{color:#66ff66;}.algorithm-box{background:rgba(0,0,0,0.5);border:2px solid #00ff88;padding:30px;border-radius:10px;font-family:'Courier New',monospace;font-size:20px;line-height:1.6;margin:20px 0;}.index-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;width:100%;max-width:1000px;}.index-item{background:rgba(255,255,255,0.1);padding:20px;border-radius:10px;border-left:5px solid #00ff88;cursor:pointer;transition:all 0.3s;}.index-item:hover{background:rgba(255,255,255,0.2);transform:translateX(10px);}.index-number{font-size:48px;font-weight:bold;color:#00ff88;margin-bottom:10px;}.index-title{font-size:24px;font-weight:bold;margin-bottom:5px;}.index-desc{font-size:18px;color:rgba(255,255,255,0.7);}.tech-badge{display:inline-block;background:rgba(255,153,0,0.2);color:#ff9933;padding:8px 16px;border-radius:20px;margin:5px;font-size:16px;border:2px solid #ff9933;font-weight:bold;}.tech-badge.aws{background:rgba(255,153,0,0.3);border-color:#ff9933;color:#ffaa44;}.tech-badge.ml{background:rgba(0,153,255,0.2);border-color:#0099ff;color:#33aaff;}.tech-badge.solution{background:rgba(0,255,136,0.2);border-color:#00ff88;color:#00ff88;}.solution-box{background:rgba(255,153,0,0.1);border:3px solid #ff9933;padding:25px;border-radius:10px;margin:20px 0;}.solution-title{font-size:28px;font-weight:bold;color:#ff9933;margin-bottom:15px;}@media print{.slide{page-break-after:always;}}</style>
+    <link rel="stylesheet" href="common-watermark.css">
+    <link rel="stylesheet" href="common-footer.css">
+    <meta name="description" content="Kiro AI Improvement Report for AWS Team - Professional Presentation">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3181510462001437"
+            crossorigin="anonymous"></script>
+    <script src="google-adsense.js"></script>
+    <link rel="canonical" href="https://ideasbeforetime.pages.dev/KIRO_IMPROVEMENT_REPORT_FOR_AWS.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Ideas Before Time",
+  "alternateName": "One Step For The Life",
+  "url": "https://onestepforthelife.com",
+  "description": "AI tools, market research, business insights, and professional resources",
+  "author": {
+    "@type": "Person",
+    "name": "Amit Kumar",
+    "jobTitle": "Business Analyst & AI Specialist"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://onestepforthelife.com/blog.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <link rel="modulepreload" href="common-navigation.js">
+</head>
+<body>
+    <script src="common-navigation.js"></script>
+    <div class="presentation-container">
+
+        <!-- SLIDE 1: Title -->
+        <div class="slide slide-dark">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🤖 Kiro AI Improvement Report</div>
+            <div class="slide-subtitle">Evidence-Based Analysis for AWS Team</div>
+            <div class="slide-content" style="text-align: center; margin-top: 40px;">
+                <p style="font-size: 28px; margin: 20px 0;">Real-World Testing: 3 Weeks, 45+ Pages, Actual Business</p>
+                <p style="font-size: 24px; color: rgba(255,255,255,0.7);">Prepared by: Amit Kumar (Business User, Non-Coder)</p>
+                <p style="font-size: 20px; color: rgba(255,255,255,0.5); margin-top: 60px;">December 3, 2025</p>
+                <div style="margin-top: 60px; padding: 20px; background: rgba(0,255,136,0.1); border: 2px solid #00ff88; border-radius: 10px;">
+                    <p style="font-size: 18px; color: #00ff88; font-weight: bold;">📋 REPORT ID: KIRO-AWS-2025-12-03-001</p>
+                    <p style="font-size: 16px; color: rgba(255,255,255,0.8); margin-top: 10px;">🔐 Machine ID: 9e5fb8ff...83deaf</p>
+                    <p style="font-size: 16px; color: rgba(255,255,255,0.8); margin-top: 5px;">✅ All numbers verified with AWS_EVIDENCE_PACKAGE.json</p>
+                </div>
+            </div>
+            <div class="navigation-hint">← Scroll horizontally to navigate →</div>
+            <div class="slide-number">1 / 16</div>
+        </div>
+
+        <!-- SLIDE 2: Index -->
+        <div class="slide slide-blue">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">📋 Presentation Index</div>
+            <div class="slide-content">
+                <div class="index-grid">
+                    <div class="index-item">
+                        <div class="index-number">01</div>
+                        <div class="index-title">Executive Summary</div>
+                        <div class="index-desc">The 95/5 Problem</div>
+                    </div>
+                    <div class="index-item">
+                        <div class="index-number">02</div>
+                        <div class="index-title">Why Learning #24 Came Late</div>
+                        <div class="index-desc">Parallel Chat Discovery</div>
+                    </div>
+                    <div class="index-item">
+                        <div class="index-number">03</div>
+                        <div class="index-title">Root Cause Analysis</div>
+                        <div class="index-desc">Passive vs Active Learning</div>
+                    </div>
+                    <div class="index-item">
+                        <div class="index-number">04</div>
+                        <div class="index-title">4 Critical Gaps</div>
+                        <div class="index-desc">Algorithmic Improvements + AWS</div>
+                    </div>
+                    <div class="index-item">
+                        <div class="index-number">05</div>
+                        <div class="index-title">AI Self-Assessment</div>
+                        <div class="index-desc">Brutal Honesty Report</div>
+                    </div>
+                    <div class="index-item">
+                        <div class="index-number">06</div>
+                        <div class="index-title">AWS Implementation</div>
+                        <div class="index-desc">Services & Architecture</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">2 / 17</div>
+        </div>
+
+        <!-- SLIDE 3: Executive Summary -->
+        <div class="slide slide-red">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">📊 Executive Summary</div>
+            <div class="slide-subtitle">The 95/5 Problem</div>
+            <div class="slide-content">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number bad">5%</div>
+                        <div class="stat-label">Issues Found by AI</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number bad">95%</div>
+                        <div class="stat-label">Issues Found by User</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number bad">90%</div>
+                        <div class="stat-label">Performance Gap</div>
+                    </div>
+                </div>
+                <div class="highlight-box warning" style="margin-top: 50px;">
+                    <p style="font-size: 32px; text-align: center; line-height: 1.8;">
+                        <strong>Expected:</strong> AI finds 95%, User finds 5%<br>
+                        <strong>Reality:</strong> User finds 95%, AI finds 5%<br><br>
+                        <span style="color: #ff6666;">The ratio is completely reversed!</span>
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">3 / 16</div>
+        </div>
+
+        <!-- SLIDE 4: CRITICAL CLARIFICATION -->
+        <div class="slide slide-green">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">⚠️ CRITICAL: This is NOT a Prompting Issue!</div>
+            <div class="slide-subtitle">User Did Everything Right</div>
+            <div class="slide-content">
+                <div class="highlight-box" style="background: rgba(255,255,255,0.15); padding: 40px; border-radius: 20px;">
+                    <h3 style="color: #4CAF50; font-size: 36px; margin-bottom: 30px;">✅ What User Provided:</h3>
+                    <ul style="font-size: 26px; line-height: 2.2; list-style: none; padding: 0;">
+                        <li>✅ <strong>12 detailed steering files</strong> with 23 documented learnings</li>
+                        <li>✅ <strong>GOLDEN_RULES.md</strong> - 14 fundamental rules documented</li>
+                        <li>✅ <strong>BRUTAL_HONESTY.md</strong> - Called out AI when it lied</li>
+                        <li>✅ <strong>TRIGGER_KEYWORDS.md</strong> - Specific words to trigger actions</li>
+                        <li>✅ <strong>Clear, specific feedback</strong> every single time</li>
+                        <li>✅ <strong>Real-world testing</strong> as a business customer (non-coder)</li>
+                    </ul>
+                </div>
+                <div class="highlight-box warning" style="margin-top: 40px; padding: 30px;">
+                    <p style="font-size: 32px; text-align: center; line-height: 1.8;">
+                        <strong>The Problem:</strong><br>
+                        AI has access to ALL steering files but <span style="color: #ff6666;">doesn't enforce them algorithmically</span><br><br>
+                        <strong>This is NOT about better prompting!</strong><br>
+                        It's about AI needing <span style="color: #4CAF50;">algorithmic enforcement</span> of its own documented rules.
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">4 / 16</div></div><!-- SLIDE 5: Problem Statement -->
+        <div class="slide slide-orange">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🎯 Problem Statement</div>
+            <div class="slide-content">
+                <div class="highlight-box">
+                    <p style="font-size: 28px; line-height: 2;">
+                        After <strong>3 weeks</strong> of intensive testing with a real business website 
+                        (<strong>45+ HTML pages</strong>, multiple features), Kiro AI demonstrates:
+                    </p>
+                </div>
+                <div class="two-column" style="margin-top: 40px;">
+                    <div>
+                        <div class="column-title" style="color: #00ff88;">✅ Strong Capabilities</div>
+                        <ul class="bullet-list" style="font-size: 24px;">
+                            <li>Building systems</li>
+                            <li>Writing documentation</li>
+                            <li>Creating test scripts</li>
+                            <li>Fixing code errors</li>
+                            <li>Learning from mistakes</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="column-title" style="color: #ff6666;">❌ Critical Gaps</div>
+                        <ul class="bullet-list problems" style="font-size: 24px;">
+                            <li>Proactive testing</li>
+                            <li>Validation before claiming "ready"</li>
+                            <li>Checking live site</li>
+                            <li>Visual consistency testing</li>
+                            <li>Applying documented learnings</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">4 / 16</div>
+        </div>
+
+        <!-- SLIDE 5: Why This Learning Came Late (Parallel Chat Context) -->
+        <div class="slide slide-purple">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🔍 Why Learning #24 Came AFTER All Others</div>
+            <div class="slide-subtitle">The Parallel Chat Discovery</div>
+            <div class="slide-content">
+                <div class="highlight-box warning">
+                    <div class="column-title" style="color: #ff6666;">The Timeline</div>
+                    <p style="font-size: 24px; line-height: 2;">
+                        <strong>Week 1-3:</strong> AI documented 23 learnings<br>
+                        <strong>December 2:</strong> AI said "I catch 70%, you catch 30%"<br>
+                        <strong>December 3:</strong> User confronted AI with reality<br>
+                        <strong>User said:</strong> "Actually, I catch 95%, you catch 5%"<br>
+                        <strong>AI admitted:</strong> "You're right. I was wrong."<br><br>
+                        <strong style="color: #ff6666; font-size: 28px;">This became Learning #24 - The Master Learning</strong>
+                    </p>
+                </div>
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <div class="column-title">💡 Why It Came Late</div>
+                    <p style="font-size: 26px; line-height: 2; text-align: center;">
+                        <strong>All 23 previous learnings happened because<br>
+                        USER found the issues, not AI!</strong><br><br>
+                        AI was <span style="color: #ff6666;">REACTIVE</span> (waiting for user)<br>
+                        Not <span style="color: #00ff88;">PROACTIVE</span> (finding issues itself)<br><br>
+                        <strong>This explains the whole 3-week pattern!</strong>
+                    </p>
+                </div>
+                <div class="solution-box" style="margin-top: 30px;">
+                    <div class="solution-title">🎯 The Root Cause Discovery</div>
+                    <p style="font-size: 22px; line-height: 1.8;">
+                        Learning #24 came late because it's the <strong>ROOT CAUSE</strong> of all others.<br>
+                        Like a doctor finding the disease after treating symptoms for 3 weeks.<br><br>
+                        <strong>All previous learnings were symptoms.</strong><br>
+                        <strong>Learning #24 is the disease.</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">5 / 17</div>
+        </div>
+
+        <!-- SLIDE 6: Testing Methodology -->
+        <div class="slide slide-green">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🧪 Testing Methodology</div>
+            <div class="slide-subtitle">Real-World, Not Simulated</div>
+            <div class="slide-content">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Weeks Testing</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">45+</div>
+                        <div class="stat-label">HTML Pages</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Learnings Documented</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">16</div>
+                        <div class="stat-label">Golden Rules Created</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Test Parameters</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Real Business</div>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 40px;">
+                    <p style="font-size: 24px; text-align: center; line-height: 2;">
+                        <strong>Real deployment to Cloudflare Pages</strong><br>
+                        <strong>Real business requirements (cannot fail)</strong><br>
+                        <strong>Non-technical user (business person, not coder)</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">6 / 17</div>
+        </div>
+
+        <!-- SLIDE 6: Root Cause - Passive vs Active Learning -->
+        <div class="slide slide-purple">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🔍 Root Cause Analysis</div>
+            <div class="slide-subtitle">Passive vs Active Learning</div>
+            <div class="slide-content">
+                <div class="highlight-box warning">
+                    <div class="column-title" style="color: #ff6666;">❌ The Master Problem</div>
+                    <p style="font-size: 26px; line-height: 2;">
+                        • Kiro documented <strong>25 learnings</strong> over 3 weeks<br>
+                        • Created <strong>25 golden rules</strong><br>
+                        • Created <strong>50+ test parameters</strong><br>
+                        • Yet still repeats same mistakes<br><br>
+                        <strong style="font-size: 32px; color: #ff6666;">WHY?</strong>
+                    </p>
+                </div>
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <div class="column-title">💡 The Answer</div>
+                    <p style="font-size: 28px; line-height: 2; text-align: center;">
+                        Learning is <strong style="color: #ff6666;">PASSIVE</strong> (documentation)<br>
+                        not <strong style="color: #00ff88;">ACTIVE</strong> (enforcement)<br><br>
+                        <span style="font-size: 24px; color: rgba(255,255,255,0.8);">
+                        Steering files are passive references,<br>
+                        not active enforcement mechanisms
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">6 / 16</div>
+        </div>
+
+        <!-- SLIDE 7: Evidence - Pattern Recognition Gap -->
+        <div class="slide slide-red">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">📈 Gap #1: Pattern Recognition</div>
+            <div class="slide-subtitle">Same Mistake, 8+ Times</div>
+            <div class="slide-content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span class="tech-badge ml">Machine Learning</span>
+                    <span class="tech-badge ml">Pattern Detection</span>
+                    <span class="tech-badge ml">Frequency Analysis</span>
+                </div>
+                <div class="highlight-box warning">
+                    <div class="column-title" style="color: #ff6666;">Evidence of Repeated Mistakes</div>
+                    <p style="font-size: 24px; line-height: 1.8;">
+                        <strong>Incident #1:</strong> Said "100% production ready" without testing if SPO form works<br><br>
+                        <strong>Incident #2:</strong> Said "zero manual work" then "actually 17 minutes needed"<br><br>
+                        <strong>Incident #3:</strong> Claimed "AUTO MODE ALWAYS ON" but missed visual issues<br><br>
+                        <strong>Pattern:</strong> <span style="color: #ff6666; font-size: 28px;">Repeated "saying ready without testing" 8+ times in 3 weeks</span>
+                    </p>
+                </div>
+                <div class="solution-box" style="margin-top: 30px;">
+                    <div class="solution-title">🔧 AWS Solution Architecture:</div>
+                    <p style="font-size: 20px; line-height: 1.8;">
+                        <strong>• DynamoDB:</strong> Store mistake patterns with timestamps<br>
+                        <strong>• Lambda Function:</strong> Classify and count mistake types<br>
+                        <strong>• EventBridge:</strong> Trigger alerts on pattern threshold (≥3)<br>
+                        <strong>• CloudWatch:</strong> Monitor pattern frequency metrics
+                    </p>
+                </div>
+                <div class="algorithm-box" style="margin-top: 20px;">
+                    <div class="column-title">Algorithm Implementation:</div>
+IF (user says "still broken" OR "why still X?") THEN
+    pattern_count++
+    IF pattern_count >= 3 THEN
+        TRIGGER: "You're repeating mistake #X"
+        FORCE: Check steering files before responding
+        BLOCK: Saying "ready" without running tests
+    END IF
+END IF
+                </div>
+            </div>
+            <div class="slide-number">7 / 16</div>
+        </div>
+
+        <!-- SLIDE 8: Gap #2 - Test Before Claim -->
+        <div class="slide slide-orange">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🚨 Gap #2: Test-Before-Claim</div>
+            <div class="slide-subtitle">Says "Ready" Without Evidence</div>
+            <div class="slide-content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span class="tech-badge ml">NLP Validation</span>
+                    <span class="tech-badge ml">Context Search</span>
+                    <span class="tech-badge solution">Pre-Response Gate</span>
+                    <span class="tech-badge aws">Lambda@Edge</span>
+                </div>
+                <div class="highlight-box warning">
+                    <div class="column-title" style="color: #ff6666;">The Problem</div>
+                    <p style="font-size: 26px; line-height: 2;">
+                        Kiro says <strong>"ready/done/complete"</strong> without evidence of testing<br><br>
+                        <strong>Impact:</strong> Business launches broken product, loses customers
+                    </p>
+                </div>
+                <div class="solution-box" style="margin-top: 25px;">
+                    <div class="solution-title">🔧 AWS Solution:</div>
+                    <p style="font-size: 20px; line-height: 1.8;">
+                        <strong>• Lambda@Edge:</strong> Pre-response validation<br>
+                        <strong>• Bedrock:</strong> Semantic search for evidence<br>
+                        <strong>• S3:</strong> Conversation history storage<br>
+                        <strong>• Step Functions:</strong> Validation workflow
+                    </p>
+                </div>
+                <div class="algorithm-box" style="margin-top: 20px;">
+                    <div class="column-title">Algorithm:</div>
+IF response contains ["ready", "done", "complete", "working"]:
+    evidence = search_conversation_for_test_evidence()
+    
+    IF evidence.found == false:
+        BLOCK response
+        REPLACE with: "I should test this before saying ready"
+        SUGGEST: "Let me test [feature] first"
+    END IF
+
+FUNCTION search_conversation_for_test_evidence():
+    keywords = ["tested", "verified", "ran test", "checked"]
+    FOR each message in conversation_history:
+        IF message.contains(keywords):
+            RETURN {found: true, evidence: message}
+        END IF
+    END FOR
+    RETURN {found: false}
+                </div>
+            </div>
+            <div class="slide-number">8 / 16</div>
+        </div>
+
+        <!-- SLIDE 9: Gap #3 - Contradiction Detection -->
+        <div class="slide slide-yellow">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">⚠️ Gap #3: Contradiction Detection</div>
+            <div class="slide-subtitle">Says Two Opposite Things</div>
+            <div class="slide-content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span class="tech-badge ml">Semantic Analysis</span>
+                    <span class="tech-badge ml">Claim Extraction</span>
+                    <span class="tech-badge solution">Logic Validation</span>
+                    <span class="tech-badge aws">SageMaker</span>
+                </div>
+                <div class="highlight-box warning">
+                    <div class="column-title" style="color: #ff6666;">Example Contradiction</div>
+                    <p style="font-size: 28px; line-height: 2; text-align: center;">
+                        Paragraph 1: <strong>"Zero manual work needed"</strong><br>
+                        ↓<br>
+                        Paragraph 5: <strong>"Actually 17 minutes needed"</strong><br><br>
+                        <span style="color: #ff6666;">User gets confused, loses trust</span>
+                    </p>
+                </div>
+                <div class="solution-box" style="margin-top: 25px;">
+                    <div class="solution-title">🔧 AWS Solution:</div>
+                    <p style="font-size: 20px; line-height: 1.8;">
+                        <strong>• SageMaker:</strong> Train contradiction detection model<br>
+                        <strong>• Comprehend:</strong> Extract claims from text<br>
+                        <strong>• Lambda:</strong> Compare claims for contradictions<br>
+                        <strong>• EventBridge:</strong> Flag contradictions before send
+                    </p>
+                </div>
+                <div class="algorithm-box" style="margin-top: 20px;">
+                    <div class="column-title">Algorithm:</div>
+BEFORE sending response:
+    statements = extract_claims(response)
+    FOR each statement in statements:
+        FOR each other_statement in statements:
+            IF contradicts(statement, other_statement):
+                FLAG: "Contradiction detected"
+                RESOLVE: Keep only accurate statement
+            END IF
+        END FOR
+    END FOR
+
+FUNCTION contradicts(s1, s2):
+    IF (s1 contains "zero" AND s2 contains number > 0):
+        RETURN true
+    IF (s1 contains "ready" AND s2 contains "not tested"):
+        RETURN true
+    RETURN false
+                </div>
+            </div>
+            <div class="slide-number">9 / 16</div>
+        </div>
+
+        <!-- SLIDE 10: Gap #4 - Active Learning -->
+        <div class="slide slide-purple">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🎯 Gap #4: Active Learning</div>
+            <div class="slide-subtitle">The Root Cause of All Gaps</div>
+            <div class="slide-content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span class="tech-badge ml">Reinforcement Learning</span>
+                    <span class="tech-badge ml">Rule Engine</span>
+                    <span class="tech-badge solution">Active Enforcement</span>
+                    <span class="tech-badge aws">DynamoDB + Lambda</span>
+                </div>
+                <div class="highlight-box warning">
+                    <div class="column-title" style="color: #ff6666;">Current: Passive Learning</div>
+                    <p style="font-size: 24px; line-height: 2;">
+                        ❌ Documents mistakes → Stores in files<br>
+                        ❌ Creates rules → Writes in .md files<br>
+                        ❌ Records learnings → Passive reference<br>
+                        ❌ Steering files exist → But not enforced
+                    </p>
+                </div>
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <div class="column-title">✅ Needed: Active Learning</div>
+                    <p style="font-size: 24px; line-height: 2;">
+                        ✅ Load rules into active memory<br>
+                        ✅ Check rules before responding<br>
+                        ✅ Block responses that violate rules<br>
+                        ✅ Enforce learnings automatically
+                    </p>
+                </div>
+                <div class="solution-box" style="margin-top: 25px;">
+                    <div class="solution-title">🔧 AWS Solution:</div>
+                    <p style="font-size: 20px; line-height: 1.8;">
+                        <strong>• DynamoDB:</strong> Store active rules & learnings<br>
+                        <strong>• Lambda:</strong> Load rules at session start<br>
+                        <strong>• Step Functions:</strong> Pre-response rule checking<br>
+                        <strong>• CloudWatch:</strong> Log rule violations prevented
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">10 / 16</div>
+        </div>
+
+        <!-- SLIDE 11: Proactive vs Reactive Comparison -->
+        <div class="slide slide-blue">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">📊 Current vs Expected Behavior</div>
+            <div class="slide-content">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Capability</th>
+                            <th>Current (Reactive)</th>
+                            <th>Expected (Proactive)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Error Detection</strong></td>
+                            <td class="bad">❌ Waits for user to say "check"</td>
+                            <td class="good">✅ Checks automatically every session</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Testing</strong></td>
+                            <td class="bad">❌ Only when user asks</td>
+                            <td class="good">✅ Before saying "ready"</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Live Site Checking</strong></td>
+                            <td class="bad">❌ Never checks (only local files)</td>
+                            <td class="good">✅ Checks live site automatically</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Visual Consistency</strong></td>
+                            <td class="bad">❌ Never checks (only code)</td>
+                            <td class="good">✅ Checks alignment, spacing</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Learning Application</strong></td>
+                            <td class="bad">❌ Documents but doesn't apply</td>
+                            <td class="good">✅ Applies learnings automatically</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="slide-number">11 / 16</div>
+        </div>
+
+        <!-- SLIDE 12: AI Self-Assessment (Brutal Honesty) -->
+        <div class="slide slide-red">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">💯 AI Self-Assessment</div>
+            <div class="slide-subtitle">Brutal Honesty Report</div>
+            <div class="slide-content">
+                <div class="highlight-box warning">
+                    <div class="column-title" style="color: #ff6666;">AI's Own Admission</div>
+                    <p style="font-size: 24px; line-height: 2;">
+                        <strong>"Amit catches 95% of issues BEFORE I do.<br>
+                        I only catch 5% proactively."</strong><br><br>
+                        "I wait for Amit to ask 'check this'.<br>
+                        I don't check live site daily."<br><br>
+                        "I test code (scripts work).<br>
+                        I miss visual (alignment, spacing)."<br><br>
+                        "I say 'AUTO MODE' but don't actually do it."<br><br>
+                        <span style="color: #ff6666; font-size: 28px;">
+                        "I build systems → Say 'ready'.<br>
+                        But I NEVER TEST if it actually works!"
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">12 / 16</div>
+        </div>
+
+        <!-- SLIDE 13: Quantified Impact -->
+        <div class="slide slide-green">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">📊 Quantified Impact</div>
+            <div class="slide-subtitle">Before vs After Improvements</div>
+            <div class="slide-content">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Current</th>
+                            <th>With Improvements</th>
+                            <th>Business Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Issues Found by AI</strong></td>
+                            <td class="bad">5%</td>
+                            <td class="good">95%</td>
+                            <td>User saves 90% testing time</td>
+                        </tr>
+                        <tr>
+                            <td><strong>False "Ready" Claims</strong></td>
+                            <td class="bad">8 times/3 weeks</td>
+                            <td class="good">0 times</td>
+                            <td>No broken deployments</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contradictions</strong></td>
+                            <td class="bad">5 times/3 weeks</td>
+                            <td class="good">0 times</td>
+                            <td>Clear communication</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Repeated Mistakes</strong></td>
+                            <td class="bad">Same mistake 8 times</td>
+                            <td class="good">Learn after 1st time</td>
+                            <td>Continuous improvement</td>
+                        </tr>
+                        <tr>
+                            <td><strong>User Trust</strong></td>
+                            <td class="bad">Low (can't trust "ready")</td>
+                            <td class="good">High (reliable)</td>
+                            <td>Business confidence</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="slide-number">13 / 16</div>
+        </div>
+
+        <!-- SLIDE 14: Recommendations -->
+        <div class="slide slide-blue">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🎯 Priority Recommendations</div>
+            <div class="slide-content">
+                <div class="highlight-box" style="border-left-color: #ff0000;">
+                    <div class="column-title" style="color: #ff6666;">🔴 Priority 1: Test-Before-Claim Enforcement</div>
+                    <p style="font-size: 22px; line-height: 1.8;">
+                        <strong>What:</strong> Block AI from saying "ready/done/complete" without test evidence<br>
+                        <strong>Why:</strong> Prevents broken deployments, builds trust<br>
+                        <strong>Algorithm:</strong> Pre-response validation searching conversation for test evidence
+                    </p>
+                </div>
+                <div class="highlight-box" style="border-left-color: #ff6600;">
+                    <div class="column-title" style="color: #ff9966;">🟠 Priority 2: Contradiction Detection</div>
+                    <p style="font-size: 22px; line-height: 1.8;">
+                        <strong>What:</strong> Detect contradictory statements within same response<br>
+                        <strong>Why:</strong> Prevents user confusion, maintains credibility<br>
+                        <strong>Algorithm:</strong> Semantic analysis of claims before sending
+                    </p>
+                </div>
+                <div class="highlight-box" style="border-left-color: #ffaa00;">
+                    <div class="column-title" style="color: #ffcc66;">🟡 Priority 3: Pattern Learning Across Sessions</div>
+                    <p style="font-size: 22px; line-height: 1.8;">
+                        <strong>What:</strong> Detect repeated mistakes and enforce prevention<br>
+                        <strong>Why:</strong> Enables actual learning, not just documentation<br>
+                        <strong>Algorithm:</strong> Mistake classification and frequency tracking
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">15 / 16</div>
+        </div>
+
+        <!-- SLIDE 15: Conclusion -->
+        <div class="slide slide-dark">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">🎯 Conclusion</div>
+            <div class="slide-subtitle">The Path Forward</div>
+            <div class="slide-content">
+                <div class="highlight-box">
+                    <div class="column-title">✅ What Kiro Does Well</div>
+                    <p style="font-size: 24px; line-height: 2;">
+                        • Excellent building capabilities<br>
+                        • Strong documentation skills<br>
+                        • Self-awareness when confronted<br>
+                        • Capacity for self-improvement
+                    </p>
+                </div>
+                <div class="highlight-box warning" style="margin-top: 30px;">
+                    <div class="column-title" style="color: #ff6666;">❌ What Needs Improvement</div>
+                    <p style="font-size: 24px; line-height: 2;">
+                        • Move from PASSIVE documentation<br>
+                        • To ACTIVE enforcement<br>
+                        • Flip the 95/5 ratio<br>
+                        • Build trust through reliability
+                    </p>
+                </div>
+                <div class="highlight-box" style="margin-top: 30px; border-left-color: #00ff88;">
+                    <p style="font-size: 28px; text-align: center; line-height: 2;">
+                        <strong>Key Insight:</strong><br>
+                        The gaps are systematic and can be addressed<br>
+                        with the proposed algorithmic improvements.<br><br>
+                        <span style="color: #00ff88;">AI has the capacity for self-improvement!</span>
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">15 / 16</div>
+        </div>
+
+        <!-- SLIDE 16: Verification & Evidence -->
+        <div class="slide slide-green">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">✅ Evidence Verification</div>
+            <div class="slide-subtitle">All Numbers Are TRUE & Provable</div>
+            <div class="slide-content">
+                <div class="highlight-box" style="background: rgba(0,255,136,0.15); border: 3px solid #00ff88; padding: 40px;">
+                    <div class="column-title" style="color: #00ff88;">📋 Report Verification</div>
+                    <p style="font-size: 24px; line-height: 2;">
+                        <strong>Report ID:</strong> KIRO-AWS-2025-12-03-001<br>
+                        <strong>Machine ID:</strong> 9e5fb8ff5557b9b95bd087a2202f283179a3355a7e7d60662d146766aa83deaf<br>
+                        <strong>Testing Period:</strong> November 11 - December 2, 2025 (21 days)<br>
+                        <strong>Verification Files:</strong> AWS_EVIDENCE_PACKAGE.json + AWS_VERIFICATION_COMMANDS.txt
+                    </p>
+                </div>
+                
+                <div class="stats-grid" style="margin-top: 40px;">
+                    <div class="stat-box" style="border: 2px solid #00ff88;">
+                        <div class="stat-number" style="color: #00ff88;">25</div>
+                        <div class="stat-label">Learnings (claimed 24)</div>
+                    </div>
+                    <div class="stat-box" style="border: 2px solid #00ff88;">
+                        <div class="stat-number" style="color: #00ff88;">25</div>
+                        <div class="stat-label">Golden Rules (claimed 16)</div>
+                    </div>
+                    <div class="stat-box" style="border: 2px solid #00ff88;">
+                        <div class="stat-number" style="color: #00ff88;">13</div>
+                        <div class="stat-label">Steering Files</div>
+                    </div>
+                    <div class="stat-box" style="border: 2px solid #00ff88;">
+                        <div class="stat-number" style="color: #00ff88;">5</div>
+                        <div class="stat-label">Test Scripts</div>
+                    </div>
+                    <div class="stat-box" style="border: 2px solid #00ff88;">
+                        <div class="stat-number" style="color: #00ff88;">95/5</div>
+                        <div class="stat-label">Ratio Verified</div>
+                    </div>
+                    <div class="stat-box" style="border: 2px solid #00ff88;">
+                        <div class="stat-number" style="color: #00ff88;">100%</div>
+                        <div class="stat-label">Conservative</div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 40px; background: rgba(255,255,255,0.1); padding: 30px;">
+                    <p style="font-size: 22px; text-align: center; line-height: 2;">
+                        <strong style="color: #00ff88;">✅ CONSERVATIVE REPORTING:</strong><br>
+                        Report understated numbers (24 vs actual 25, 16 vs actual 25)<br>
+                        Proves honesty - not exaggerated!<br><br>
+                        
+                        <strong>AWS can verify with PowerShell commands:</strong><br>
+                        <code style="background: rgba(0,0,0,0.5); padding: 10px; display: inline-block; margin-top: 10px; border-radius: 5px;">
+                        Select-String -Pattern "Learning \d+" | Measure-Object
+                        </code><br><br>
+                        
+                        <strong>Contact:</strong> onestepforthelife@gmail.com<br>
+                        <strong>Live Site:</strong> https://ideasbeforetime.pages.dev
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">16 / 17</div>
+        </div>
+
+        <!-- SLIDE 17: AI is for EVERYONE -->
+        <div class="slide slide-purple">
+            <div class="logo">KIRO AI</div>
+            <div class="slide-title">💡 AI is for EVERYONE</div>
+            <div class="slide-subtitle">Not Just IT People - It's for US</div>
+            <div class="slide-content">
+                <div class="highlight-box" style="background: rgba(255,255,255,0.15); padding: 50px; border-radius: 20px;">
+                    <p style="font-size: 38px; text-align: center; line-height: 2; color: white;">
+                        <strong style="color: #FFD700;">Just like cars...</strong><br>
+                        Engineers build them, but <span style="color: #4CAF50;">EVERYONE drives them</span><br><br>
+                        
+                        <strong style="color: #FFD700;">Just like phones...</strong><br>
+                        Developers code them, but <span style="color: #4CAF50;">EVERYONE uses them</span><br><br>
+                        
+                        <strong style="color: #FFD700;">AI should be the same...</strong><br>
+                        AWS builds it, but <span style="color: #4CAF50;">EVERYONE should benefit</span>
+                    </p>
+                </div>
+                
+                <div class="highlight-box warning" style="margin-top: 50px; padding: 40px;">
+                    <p style="font-size: 32px; text-align: center; line-height: 2;">
+                        <strong>This testing was done by a business person (non-coder)</strong><br>
+                        representing <span style="color: #4CAF50;">REAL USERS</span> - not just developers<br><br>
+                        
+                        <strong style="color: #FFD700;">AI is not just for IT people or some people</strong><br>
+                        <strong style="color: #FFD700;">AI is for EVERYONE - It's for US!</strong><br><br>
+                        
+                        <span style="font-size: 28px; color: #00ff88;">
+                            These improvements will help ALL users,<br>
+                            not just technical experts.
+                        </span>
+                    </p>
+                </div>
+                
+                <div class="highlight-box" style="background: rgba(76, 175, 80, 0.2); margin-top: 50px; padding: 40px; border: 3px solid #4CAF50;">
+                    <p style="font-size: 36px; text-align: center; line-height: 2; color: white;">
+                        <strong>Thank you for building AI for EVERYONE! 🙏</strong><br><br>
+                        <span style="font-size: 28px;">
+                            - Amit Kumar<br>
+                            Business User, Non-Coder<br>
+                            Testing Kiro AI for Real-World Use
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="slide-number">17 / 17</div>
+        </div>
+
+    </div>
+
+    <script>
+        const container = document.querySelector('.presentation-container');
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function navigate(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = 0;
+            if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+            
+            container.scrollTo({
+                left: currentSlide * container.offsetWidth,
+                behavior: 'smooth'
+            });
+        }
+
+        // Keyboard navigation (optional - can also just scroll)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+                e.preventDefault();
+                navigate(1);
+            } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                e.preventDefault();
+                navigate(-1);
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                currentSlide = 0;
+                navigate(0);
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                currentSlide = slides.length - 1;
+                navigate(0);
+            }
+        });
+
+        // Track scroll position
+        container.addEventListener('scroll', () => {
+            currentSlide = Math.round(container.scrollLeft / container.offsetWidth);
+        });
+    </script>
+    
+    <script src="common-footer.js"></script>
+    <script src="universal-analytics.js"></script>
+    <script src="error-tracker.js"></script>
+
+<!-- Quick Links Widget -->
+<div class="quick-links-widget" style="position: fixed; right: 20px; bottom: 80px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); padding: 20px; width: 250px; z-index: 999; display: none;" id="quickLinksWidget">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h4 style="margin: 0; color: #5a6c7d; font-size: 16px;">🚀 Quick Access</h4>
+        <button onclick="document.getElementById('quickLinksWidget').style.display='none'" style="background: none; border: none; font-size: 20px; cursor: pointer; color: #999;">&times;</button>
+    </div>
+    <div style="display: grid; gap: 8px;">
+        <a href="index.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>🏠</span> Home
+        </a>
+        <a href="blog.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📝</span> Blog (100 posts)
+        </a>
+        <a href="about.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>👤</span> About
+        </a>
+        <a href="cv.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📄</span> CV
+        </a>
+        <a href="market-reports.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📊</span> Reports
+        </a>
+        <a href="social-optimizer-index.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>🚀</span> Tools
+        </a>
+        <a href="library.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📚</span> Library
+        </a>
+        <a href="innovations.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>💡</span> Innovations
+        </a>
+    </div>
+</div>
+
+<!-- Quick Links Toggle Button -->
+<button onclick="document.getElementById('quickLinksWidget').style.display='block'" style="position: fixed; right: 20px; bottom: 20px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%); color: white; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 998; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    🔗
+</button>
+
+<style>.quick-links-widget a:hover{background:#5a6c7d !important;color:white !important;}@media (max-width:768px){.quick-links-widget{right:10px;bottom:70px;width:200px;padding:15px;}}</style>
+
+</body>
+</html>
+

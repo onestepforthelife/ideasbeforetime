@@ -1,0 +1,32 @@
+# API Keys and Secrets
+ai-config.js
+config.js
+*.env
+.env
+.env.local
+
+# API Key Backups
+API_KEYS_BACKUP.txt
+
+# Node modules
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backup folders
+backup_*/
+
+# Cloudflare
+.wrangler/
+wrangler.toml
+
+# Personal/Private Pages (DO NOT UPLOAD)
+personal-local-only/

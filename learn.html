@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn - Ideas Before Time</title>
+<link rel="icon" type="image/jpeg" href="images/logo Goda 40 bs 32 pixel.jpg">
+<link rel="apple-touch-icon" href="images/Logo One Step for the life 180 by 84 Pixel.jpg">
+    <meta name="description" content="Expand your knowledge with 100+ blog posts, curated library, and innovation showcase on AI, business, and technology.">
+    <link rel="stylesheet" href="common-styles.css">
+    <link rel="stylesheet" href="common-navigation.css">
+    <link rel="stylesheet" href="common-footer.css">
+    <style>
+        .hero {
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+        .hub-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hub-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .hub-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .hub-card h2 {
+            color: #5a6c7d;
+            margin-bottom: 1rem;
+        }
+        .hub-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        .hub-card a {
+            display: inline-block;
+            background: #007acc;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .hub-card a:hover {
+            background: #005a9e;
+        }
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <script src="common-navigation.js"></script>
+    
+    <main>
+        <section class="hero">
+            <h1>📚 Expand Your Knowledge</h1>
+            <p>Explore insights on AI, business, technology, and innovation</p>
+        </section>
+
+        <div class="hub-cards">
+            <div class="hub-card">
+                <div class="icon">📝</div>
+                <h2>Blog</h2>
+                <p>100+ articles on AI, business strategy, technology trends, and professional development.</p>
+                <a href="blog.html">Read Blog Posts →</a>
+            </div>
+
+            <div class="hub-card">
+                <div class="icon">📚</div>
+                <h2>Library</h2>
+                <p>Curated knowledge base with resources, guides, and reference materials.</p>
+                <a href="library.html">Browse Library →</a>
+            </div>
+
+            <div class="hub-card">
+                <div class="icon">💡</div>
+                <h2>Innovations</h2>
+                <p>Latest projects, experiments, and innovative solutions we're building.</p>
+                <a href="innovations.html">Explore Innovations →</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="common-footer.js"></script>
+    <script src="universal-analytics.js"></script>
+</body>
+</html>

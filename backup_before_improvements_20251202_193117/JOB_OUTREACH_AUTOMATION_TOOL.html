@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Executive Job Tracker & Outreach Generator | Amit Kumar</title>
+    <link rel="stylesheet" href="common-watermark.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            background: rgba(255,255,255,0.1);
+            padding: 10px;
+            border-radius: 15px;
+        }
+        
+        .tab {
+            padding: 12px 24px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .tab:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .tab.active {
+            background: white;
+            color: #5a6c7d;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            padding: 20px 30px 0;
+            background: white;
+        }
+        
+        .tab {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            border: none;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            color: #6c757d;
+            transition: all 0.3s;
+        }
+        
+        .tab.active {
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            color: white;
+        }
+        
+        .tab:hover {
+            background: #e9ecef;
+        }
+        
+        .tab.active:hover {
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .job-list {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .job-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #6c757d;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s;
+        }
+        
+        .job-item.done {
+            border-left-color: #28a745;
+            opacity: 0.7;
+        }
+        
+        .job-item.pending {
+            border-left-color: #ffc107;
+        }
+        
+        .job-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .job-checkbox {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+        
+        .job-details {
+            flex: 1;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            color: #2a5298;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .job-company {
+            color: #6c757d;
+            font-size: 0.95em;
+        }
+        
+        .job-date {
+            color: #6c757d;
+            font-size: 0.85em;
+            font-style: italic;
+        }
+        
+        .job-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 0.9em;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .btn-view {
+            background: #5a6c7d;
+            color: white;
+        }
+        
+        .btn-delete {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .btn-small:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #5a6c7d;
+        }
+        
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .search-links {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .search-links h3 {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+        
+        .search-link {
+            display: block;
+            background: white;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #2a5298;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .search-link:hover {
+            background: #5a6c7d;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .profile-settings {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 30px;
+        }
+        
+        .input-section, .output-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #e9ecef;
+        }
+        
+        .section-title {
+            font-size: 1.4em;
+            color: #2a5298;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #5a6c7d;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+            font-family: inherit;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .output-box {
+            background: white;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .output-box h3 {
+            color: #2a5298;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .contact-list {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item {
+            padding: 10px;
+            background: white;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            border-left: 4px solid #5a6c7d;
+            font-size: 0.95em;
+        }
+        
+        .contact-item strong {
+            color: #2a5298;
+        }
+        
+        .draft-text {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        
+        .copy-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.2s;
+        }
+        
+        .copy-btn:hover {
+            background: #218838;
+        }
+        
+        .tips {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .tips h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .tips ul {
+            margin-left: 20px;
+            color: #856404;
+        }
+        
+        .history-item {
+            background: white;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .history-item.done {
+            border-color: #28a745;
+            background: #f0fff4;
+        }
+        
+        .history-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .history-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2a5298;
+        }
+        
+        .history-date {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        
+        .history-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 0.9em;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .btn-done {
+            background: #28a745;
+            color: white;
+        }
+        
+        .btn-done:hover {
+            background: #218838;
+        }
+        
+        .btn-view {
+            background: #5a6c7d;
+            color: white;
+        }
+        
+        .btn-view:hover {
+            background: #5568d3;
+        }
+        
+        .btn-delete {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .btn-delete:hover {
+            background: #c82333;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        
+        .status-pending {
+            background: #ffc107;
+            color: #856404;
+        }
+        
+        .status-done {
+            background: #28a745;
+            color: white;
+        }
+        
+        .settings-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .settings-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #dee2e6;
+        }
+        
+        .settings-box h3 {
+            color: #2a5298;
+            margin-bottom: 15px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #dee2e6;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #5a6c7d;
+        }
+        
+        .stat-label {
+            color: #6c757d;
+            margin-top: 5px;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c757d;
+        }
+        
+        .empty-state-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .settings-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Executive Job Outreach Generator</h1>
+            <p>Automated Contact Finder + Email Draft Creator for Amit Kumar</p>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('new')">➕ New Application</button>
+            <button class="tab" onclick="switchTab('history')">📋 History & Tracking</button>
+            <button class="tab" onclick="switchTab('settings')">⚙️ Settings</button>
+        </div>
+        
+        <!-- NEW APPLICATION TAB -->
+        <div id="tab-new" class="tab-content active">
+        <div class="main-content">
+            <!-- INPUT SECTION -->
+            <div class="input-section">
+                <div class="section-title">📝 Job Details Input</div>
+                
+                <div class="form-group">
+                    <label>Company Name *</label>
+                    <input type="text" id="companyName" placeholder="e.g., Coherent Corp, ST Engineering">
+                </div>
+                
+                <div class="form-group">
+                    <label>Job Title *</label>
+                    <input type="text" id="jobTitle" placeholder="e.g., Director Operations, VP Business Development">
+                </div>
+                
+                <div class="form-group">
+                    <label>Company Domain *</label>
+                    <input type="text" id="companyDomain" placeholder="e.g., coherent.com, stengg.com">
+                </div>
+                
+                <div class="form-group">
+                    <label>Industry Sector</label>
+                    <select id="industrySector">
+                        <option value="semiconductor">Semiconductor</option>
+                        <option value="medtech">MedTech</option>
+                        <option value="maritime">Maritime</option>
+                        <option value="chemicals">Chemicals</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="technology">Technology</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Key Job Requirements (paste from JD)</label>
+                    <textarea id="jobRequirements" placeholder="e.g., Oversee manufacturing, engineering, operational excellence..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Known Contacts (optional - one per line)</label>
+                    <textarea id="knownContacts" placeholder="Albert Ooi - SVP Global Operations&#10;Brad Dudschus - VP Integrated Ops"></textarea>
+                </div>
+                
+                <button class="btn" onclick="generateOutreach()">🚀 Generate & Save to Tracker</button>
+                
+                <div class="tips">
+                    <h4>💡 How It Works:</h4>
+                    <ul>
+                        <li>Finds 7 relevant contacts automatically</li>
+                        <li>Deduces email IDs using company domain</li>
+                        <li>Creates email + LinkedIn drafts</li>
+                        <li>Includes ONE Pass + P&L metrics</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- OUTPUT SECTION -->
+            <div class="output-section">
+                <div class="section-title">📧 Generated Outreach</div>
+                
+                <div id="outputArea">
+                    <div style="text-align: center; padding: 60px 20px; color: #6c757d;">
+                        <div style="font-size: 4em; margin-bottom: 20px;">📬</div>
+                        <p style="font-size: 1.2em;">Fill in the job details and click Generate</p>
+                        <p style="margin-top: 10px;">Your outreach package will appear here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <script>
+        // Tab switching
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+            
+            if (tabName === 'tracker') {
+                loadJobList();
+            } else if (tabName === 'settings') {
+                loadSettings();
+            }
+        }
+        
+        // Local Storage Management
+        function saveJob(jobData) {
+            let jobs = JSON.parse(localStorage.getItem('jobApplications') || '[]');
+            jobData.id = Date.now();
+            jobData.date = new Date().toISOString();
+            jobData.done = false;
+            jobs.unshift(jobData);
+            localStorage.setItem('jobApplications', JSON.stringify(jobs));
+        }
+        
+        function getJobs() {
+            return JSON.parse(localStorage.getItem('jobApplications') || '[]');
+        }
+        
+        function toggleJobDone(jobId) {
+            let jobs = getJobs();
+            const job = jobs.find(j => j.id === jobId);
+            if (job) {
+                job.done = !job.done;
+                localStorage.setItem('jobApplications', JSON.stringify(jobs));
+                loadJobList();
+            }
+        }
+        
+        function deleteJob(jobId) {
+            if (confirm('Delete this job application?')) {
+                let jobs = getJobs();
+                jobs = jobs.filter(j => j.id !== jobId);
+                localStorage.setItem('jobApplications', JSON.stringify(jobs));
+                loadJobList();
+            }
+        }
+        
+        function viewJob(jobId) {
+            const jobs = getJobs();
+            const job = jobs.find(j => j.id === jobId);
+            if (job) {
+                // Switch to generator tab and populate fields
+                document.getElementById('companyName').value = job.company;
+                document.getElementById('jobTitle').value = job.jobTitle;
+                document.getElementById('companyDomain').value = job.domain;
+                document.getElementById('industrySector').value = job.industry || 'semiconductor';
+                document.getElementById('jobRequirements').value = job.requirements || '';
+                document.getElementById('knownContacts').value = job.knownContacts || '';
+                
+                switchTab('generator');
+                document.querySelectorAll('.tab')[1].classList.add('active');
+                
+                // Regenerate
+                generateOutreach(true);
+            }
+        }
+        
+        function loadJobList() {
+            const jobs = getJobs();
+            const container = document.getElementById('jobListContainer');
+            
+            // Update stats
+            document.getElementById('totalJobs').textContent = jobs.length;
+            document.getElementById('pendingJobs').textContent = jobs.filter(j => !j.done).length;
+            document.getElementById('doneJobs').textContent = jobs.filter(j => j.done).length;
+            
+            if (jobs.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #6c757d;">
+                        <div style="font-size: 3em; margin-bottom: 15px;">📭</div>
+                        <p>No jobs tracked yet. Use "Generate Outreach" tab to add jobs.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = jobs.map(job => `
+                <div class="job-item ${job.done ? 'done' : 'pending'}">
+                    <input type="checkbox" class="job-checkbox" ${job.done ? 'checked' : ''} 
+                           onchange="toggleJobDone(${job.id})">
+                    <div class="job-details">
+                        <div class="job-title">${job.jobTitle}</div>
+                        <div class="job-company">${job.company} • ${job.domain}</div>
+                        <div class="job-date">Added: ${new Date(job.date).toLocaleDateString()}</div>
+                    </div>
+                    <div class="job-actions">
+                        <button class="btn-small btn-view" onclick="viewJob(${job.id})">👁️ View</button>
+                        <button class="btn-small btn-delete" onclick="deleteJob(${job.id})">🗑️</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function saveSettings() {
+            const settings = {
+                targetIndustries: document.getElementById('targetIndustries').value,
+                targetLocation: document.getElementById('targetLocation').value,
+                minSalary: document.getElementById('minSalary').value,
+                keyMetrics: document.getElementById('keyMetrics').value,
+                yourEmail: document.getElementById('yourEmail').value,
+                yourPhone: document.getElementById('yourPhone').value,
+                yourLinkedIn: document.getElementById('yourLinkedIn').value
+            };
+            localStorage.setItem('userSettings', JSON.stringify(settings));
+            alert('✅ Settings saved!');
+        }
+        
+        function loadSettings() {
+            const settings = JSON.parse(localStorage.getItem('userSettings') || '{}');
+            if (settings.targetIndustries) document.getElementById('targetIndustries').value = settings.targetIndustries;
+            if (settings.targetLocation) document.getElementById('targetLocation').value = settings.targetLocation;
+            if (settings.minSalary) document.getElementById('minSalary').value = settings.minSalary;
+            if (settings.keyMetrics) document.getElementById('keyMetrics').value = settings.keyMetrics;
+            if (settings.yourEmail) document.getElementById('yourEmail').value = settings.yourEmail;
+            if (settings.yourPhone) document.getElementById('yourPhone').value = settings.yourPhone;
+            if (settings.yourLinkedIn) document.getElementById('yourLinkedIn').value = settings.yourLinkedIn;
+        }
+        
+        function clearAllData() {
+            if (confirm('⚠️ This will delete ALL job history. Are you sure?')) {
+                if (confirm('Really sure? This cannot be undone!')) {
+                    localStorage.removeItem('jobApplications');
+                    loadJobList();
+                    alert('✅ All job history cleared');
+                }
+            }
+        }
+        
+        // Load settings on page load
+        window.addEventListener('load', () => {
+            loadSettings();
+            loadJobList();
+            
+            // Check for URL parameters from tracker
+            const params = new URLSearchParams(window.location.search);
+            if (params.has('company')) {
+                document.getElementById('companyName').value = params.get('company');
+                document.getElementById('jobTitle').value = params.get('title') || '';
+                document.getElementById('companyDomain').value = params.get('domain') || '';
+            }
+        });
+    
+    </script>
+    <script>
+        // Email format patterns
+        const emailPatterns = {
+            primary: (first, last) => `${first.toLowerCase()}.${last.toLowerCase()}`,
+            secondary: (first, last) => `${first[0].toLowerCase()}${last.toLowerCase()}`,
+            tertiary: (first, last) => `${first.toLowerCase()}${last[0].toLowerCase()}`
+        };
+        
+        // Generate logical contacts based on role
+        function generateContacts(companyName, jobTitle, domain, knownContactsText) {
+            const contacts = [];
+            const knownContacts = parseKnownContacts(knownContactsText);
+            
+            // Add known contacts first
+            contacts.push(...knownContacts);
+            
+            // Logical assumptions based on role type
+            const roleType = detectRoleType(jobTitle);
+            const assumptions = getLogicalAssumptions(roleType, companyName, domain);
+            
+            // Add assumed contacts
+            assumptions.forEach(assumption => {
+                if (contacts.length < 7) {
+                    contacts.push(assumption);
+                }
+            });
+            
+            return contacts.slice(0, 7);
+        }
+        
+        function parseKnownContacts(text) {
+            if (!text.trim()) return [];
+            
+            const lines = text.split('\n').filter(l => l.trim());
+            return lines.map(line => {
+                const parts = line.split('-').map(p => p.trim());
+                if (parts.length >= 2) {
+                    const name = parts[0].trim();
+                    const title = parts.slice(1).join(' - ').trim();
+                    const [first, ...lastParts] = name.split(' ');
+                    const last = lastParts.join(' ');
+                    return {
+                        name: name,
+                        title: title,
+                        email: '', // Will be filled later
+                        type: 'known'
+                    };
+                }
+                return null;
+            }).filter(c => c !== null);
+        }
+        
+        function detectRoleType(jobTitle) {
+            const title = jobTitle.toLowerCase();
+            if (title.includes('operation') || title.includes('manufacturing')) return 'operations';
+            if (title.includes('business development') || title.includes('sales')) return 'business';
+            if (title.includes('strategy') || title.includes('transformation')) return 'strategy';
+            if (title.includes('finance') || title.includes('cfo')) return 'finance';
+            return 'general';
+        }
+        
+        function getLogicalAssumptions(roleType, company, domain) {
+            const assumptions = [];
+            
+            // Always include these
+            assumptions.push(
+                { name: 'HR Lead', title: 'Chief People Officer / HR Director', email: `hr.apac@${domain}`, type: 'assumed' },
+                { name: 'TA Lead', title: 'Talent Acquisition Lead', email: `talent@${domain}`, type: 'assumed' }
+            );
+            
+            // Role-specific additions
+            if (roleType === 'operations') {
+                assumptions.push(
+                    { name: 'Operations Head', title: 'SVP Global Operations', email: `operations@${domain}`, type: 'assumed' },
+                    { name: 'Plant Director', title: 'Plant Director Singapore', email: `ops.sg@${domain}`, type: 'assumed' },
+                    { name: 'Compliance Lead', title: 'Compliance Director APAC', email: `compliance.apac@${domain}`, type: 'assumed' }
+                );
+            } else if (roleType === 'business') {
+                assumptions.push(
+                    { name: 'Sales Head', title: 'VP Sales APAC', email: `sales.apac@${domain}`, type: 'assumed' },
+                    { name: 'BD Director', title: 'Director Business Development', email: `bd@${domain}`, type: 'assumed' },
+                    { name: 'Marketing Head', title: 'Head of Marketing', email: `marketing@${domain}`, type: 'assumed' }
+                );
+            } else if (roleType === 'strategy') {
+                assumptions.push(
+                    { name: 'Strategy Head', title: 'Chief Strategy Officer', email: `strategy@${domain}`, type: 'assumed' },
+                    { name: 'Transformation Lead', title: 'Head of Transformation', email: `transformation@${domain}`, type: 'assumed' },
+                    { name: 'CEO Office', title: 'CEO / Managing Director', email: `ceo@${domain}`, type: 'assumed' }
+                );
+            }
+            
+            return assumptions;
+        }
+        
+        function deduceEmail(contact, domain) {
+            if (contact.email && contact.email.includes('@')) return contact.email;
+            
+            if (contact.type === 'assumed') {
+                return contact.email; // Already has functional email
+            }
+            
+            // For known contacts, deduce from name
+            const nameParts = contact.name.split(' ');
+            if (nameParts.length >= 2) {
+                const first = nameParts[0];
+                const last = nameParts[nameParts.length - 1];
+                return `${emailPatterns.primary(first, last)}@${domain}`;
+            }
+            
+            return `contact@${domain}`;
+        }
+        
+        function generateEmailDraft(company, jobTitle, contacts, requirements, industry) {
+            const contactNames = contacts.slice(0, 3).map(c => c.name.split(' ')[0]).join(', ');
+            const bridging = needsBridging(industry) ? getBridgingStatement(industry) : '';
+            
+            const reqPoints = extractKeyRequirements(requirements);
+            
+            // Get settings
+            const settings = JSON.parse(localStorage.getItem('userSettings') || '{}');
+            const metrics = settings.keyMetrics || `• Delivered 25%+ CAGR and stewarded $150M+ P&Ls across BASF, DSM, and 3M
+• Supported semiconductor supply chains with advanced manufacturing solutions
+• Embedded audit-ready governance frameworks across APAC operations
+• Built resilient leadership benches and succession pipelines
+• Curated foresight insights at Ideas Before Time (https://ideasbeforetime.pages.dev/)`;
+            const email = settings.yourEmail || 'annikavashist@gmail.com';
+            const phone = settings.yourPhone || '+91-9811409022';
+            const linkedin = settings.yourLinkedIn || 'https://www.linkedin.com/in/leadershipexpertamit';
+            
+            return `Subject: Work Capability Available | ${jobTitle} – ${company} | Operational Excellence & Global Leadership
+
+Dear ${contactNames}, and colleagues,
+
+Greetings.
+
+I am reaching out collectively regarding the ${jobTitle} role at ${company}. Out of respect for your time and inbox, I am sending this single consolidated message rather than separate emails.
+
+What you seek in this role:
+${reqPoints}
+
+What I offer to ${company}:
+${metrics}
+${bridging}
+
+I am a Singapore ONE Pass eligible executive, ensuring immediate availability. I kindly seek your support in reviewing my CV and would be grateful if you could advise the appropriate next step.
+
+With respect and best regards,
+
+Amit Kumar
+Regional Director-Level Outcomes | APAC Market Expansion | $150M+ P&L Stewardship
+E: ${email} | M: ${phone}
+LinkedIn: ${linkedin}`;
+        }
+        
+        function generateLinkedInDraft(company, jobTitle) {
+            return `Hello,
+
+I've applied for the ${jobTitle} role at ${company}.
+
+I bring 20 years of APAC leadership experience (25%+ CAGR, $150M+ P&L) and am Singapore ONE Pass eligible.
+
+Profile: https://www.linkedin.com/in/leadershipexpertamit
+
+Best regards,
+Amit Kumar`;
+        }
+        
+        function needsBridging(industry) {
+            return !['semiconductor', 'chemicals', 'manufacturing'].includes(industry);
+        }
+        
+        function getBridgingStatement(industry) {
+            return `\n• While my background is rooted in Semiconductors/Chemicals, the principles of rigorous compliance, P&L management, and strategic architecture are directly transferable to the ${industry} sector`;
+        }
+        
+        function extractKeyRequirements(requirements) {
+            if (!requirements.trim()) {
+                return '• Strategic leadership and operational excellence\n• P&L management and business growth\n• Team building and organizational development';
+            }
+            
+            const lines = requirements.split('\n').filter(l => l.trim());
+            return lines.slice(0, 4).map(l => `• ${l.trim()}`).join('\n');
+        }
+        
+        function generateOutreach(skipSave = false) {
+            const company = document.getElementById('companyName').value.trim();
+            const jobTitle = document.getElementById('jobTitle').value.trim();
+            const domain = document.getElementById('companyDomain').value.trim();
+            const requirements = document.getElementById('jobRequirements').value.trim();
+            const knownContactsText = document.getElementById('knownContacts').value.trim();
+            const industry = document.getElementById('industrySector').value;
+            
+            if (!company || !jobTitle || !domain) {
+                alert('Please fill in Company Name, Job Title, and Company Domain');
+                return;
+            }
+            
+            // Generate contacts
+            const contacts = generateContacts(company, jobTitle, domain, knownContactsText);
+            
+            // Deduce emails
+            contacts.forEach(contact => {
+                contact.email = deduceEmail(contact, domain);
+            });
+            
+            // Generate drafts
+            const emailDraft = generateEmailDraft(company, jobTitle, contacts, requirements, industry);
+            const linkedInDraft = generateLinkedInDraft(company, jobTitle);
+            
+            // Save to tracker (unless viewing existing)
+            if (!skipSave) {
+                saveJob({
+                    company,
+                    jobTitle,
+                    domain,
+                    industry,
+                    requirements,
+                    knownContacts: knownContactsText,
+                    contacts,
+                    emailDraft,
+                    linkedInDraft
+                });
+            }
+            
+            // Display output
+            displayOutput(contacts, emailDraft, linkedInDraft);
+            
+            if (!skipSave) {
+                alert('✅ Job saved to tracker! Check "Job Tracker" tab.');
+            }
+        }
+        
+        function displayOutput(contacts, emailDraft, linkedInDraft) {
+            const outputArea = document.getElementById('outputArea');
+            
+            const contactsHTML = contacts.map((c, i) => `
+                <div class="contact-item">
+                    <strong>${i + 1}. ${c.name}</strong> – ${c.title}<br>
+                    📧 ${c.email}
+                    ${c.type === 'assumed' ? ' <span style="color: #6c757d; font-size: 0.85em;">(Logical Assumption)</span>' : ''}
+                </div>
+            `).join('');
+            
+            outputArea.innerHTML = `
+                <div class="output-box">
+                    <button class="copy-btn" onclick="copyContacts()">📋 Copy All</button>
+                    <h3>👥 7 Target Contacts</h3>
+                    <div class="contact-list" id="contactsList">
+                        ${contactsHTML}
+                    </div>
+                </div>
+                
+                <div class="output-box">
+                    <button class="copy-btn" onclick="copyEmail()">📋 Copy</button>
+                    <h3>📧 Email Draft (Full Version)</h3>
+                    <div class="draft-text" id="emailDraft">${emailDraft}</div>
+                </div>
+                
+                <div class="output-box">
+                    <button class="copy-btn" onclick="copyLinkedIn()">📋 Copy</button>
+                    <h3>💼 LinkedIn Message (Short Version)</h3>
+                    <div class="draft-text" id="linkedInDraft">${linkedInDraft}</div>
+                </div>
+            `;
+        }
+        
+        function copyContacts() {
+            const text = document.getElementById('contactsList').innerText;
+            navigator.clipboard.writeText(text);
+            alert('✅ Contacts copied to clipboard!');
+        }
+        
+        function copyEmail() {
+            const text = document.getElementById('emailDraft').innerText;
+            navigator.clipboard.writeText(text);
+            alert('✅ Email draft copied to clipboard!');
+        }
+        
+        function copyLinkedIn() {
+            const text = document.getElementById('linkedInDraft').innerText;
+            navigator.clipboard.writeText(text);
+            alert('✅ LinkedIn message copied to clipboard!');
+        }
+    </script>
+    <script src="common-navigation.js"></script>
+    <script src="universal-analytics.js"></script>
+<script src="common-footer.js"></script>
+</body>
+</html>

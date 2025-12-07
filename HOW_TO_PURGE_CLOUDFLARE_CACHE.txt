@@ -1,0 +1,179 @@
+🔧 HOW TO PURGE CLOUDFLARE CACHE - Step by Step
+
+═══════════════════════════════════════════════════════════════
+
+⏱️ TIME REQUIRED: 5 minutes
+💰 COST: Free
+🎯 FIXES: 308 redirect issues (10 pages not loading)
+
+═══════════════════════════════════════════════════════════════
+
+📋 STEP-BY-STEP INSTRUCTIONS:
+
+STEP 1: LOGIN TO CLOUDFLARE
+────────────────────────────
+1. Open browser
+2. Go to: https://dash.cloudflare.com/
+3. Enter your email and password
+4. Click "Log in"
+
+STEP 2: SELECT YOUR DOMAIN
+────────────────────────────
+1. You'll see list of domains
+2. Click on: onestepforthelife.com
+3. Wait for dashboard to load
+
+STEP 3: GO TO CACHING SECTION
+────────────────────────────
+1. Look at left sidebar
+2. Find "Caching" option
+3. Click on "Caching"
+4. Click on "Configuration" tab (at top)
+
+STEP 4: PURGE CACHE
+────────────────────────────
+1. Scroll down to "Purge Cache" section
+2. You'll see two buttons:
+   - "Purge Everything" (this one!)
+   - "Custom Purge"
+3. Click "Purge Everything" button
+4. Confirmation popup will appear
+5. Click "Purge Everything" again to confirm
+
+STEP 5: WAIT
+────────────────────────────
+1. Wait 30 seconds
+2. Cloudflare is clearing all cached files
+3. You'll see success message
+
+STEP 6: VERIFY FIX
+────────────────────────────
+1. Open command prompt
+2. Go to Cloudfare folder:
+   cd C:\Users\araag\Documents\Cloudfare
+3. Run diagnostic:
+   node COMPREHENSIVE_SITE_DIAGNOSTIC_DEC6.js
+4. Check results:
+   - Should show: 14/14 pages = 200 OK ✅
+   - Not: 10 pages = 308 Redirect ❌
+
+═══════════════════════════════════════════════════════════════
+
+🎯 EXPECTED RESULTS:
+
+BEFORE PURGE:
+- 4 pages working (200 OK)
+- 10 pages redirecting (308)
+- Success rate: 28.6%
+
+AFTER PURGE:
+- 14 pages working (200 OK)
+- 0 pages redirecting
+- Success rate: 100%
+
+═══════════════════════════════════════════════════════════════
+
+🚨 IF YOU DON'T HAVE CLOUDFLARE ACCESS:
+
+Option 1: Ask whoever manages the domain
+Option 2: Wait 4 hours (auto-purge)
+Option 3: Contact Cloudflare support
+
+═══════════════════════════════════════════════════════════════
+
+📱 ALTERNATIVE: MOBILE APP
+
+If you have Cloudflare mobile app:
+1. Open app
+2. Select domain: onestepforthelife.com
+3. Tap "Caching"
+4. Tap "Purge Cache"
+5. Tap "Purge Everything"
+6. Confirm
+
+═══════════════════════════════════════════════════════════════
+
+🔍 WHAT IS CACHE PURGING?
+
+Cache = Cloudflare saves copy of your pages
+Problem = Old copies being served (redirects)
+Solution = Delete all copies (purge)
+Result = Cloudflare fetches fresh pages from GitHub
+
+Think of it like:
+- Cache = Old newspaper
+- Purge = Throw away old newspaper
+- Result = Get today's newspaper
+
+═══════════════════════════════════════════════════════════════
+
+⚠️ IMPORTANT NOTES:
+
+1. Purging is SAFE - won't break anything
+2. Site might be slow for 1-2 minutes (rebuilding cache)
+3. Do this after EVERY deployment
+4. Free to do unlimited times
+5. Takes 30 seconds to complete
+
+═══════════════════════════════════════════════════════════════
+
+🎯 AFTER PURGING, TEST THESE:
+
+1. SPO Tool: https://onestepforthelife.com/spo.html
+   - Should load actual tool (not redirect)
+   
+2. Job Search: https://onestepforthelife.com/jobs.html
+   - Should load job dashboard
+   
+3. Blog: https://onestepforthelife.com/blog.html
+   - Should load blog page
+   
+4. About: https://onestepforthelife.com/about.html
+   - Should load about page
+
+All should return 200 OK (not 308 redirect)
+
+═══════════════════════════════════════════════════════════════
+
+📞 NEED HELP?
+
+If stuck at any step:
+1. Take screenshot of where you're stuck
+2. Tell me which step number
+3. I'll guide you through it
+
+═══════════════════════════════════════════════════════════════
+
+✅ SUCCESS CHECKLIST:
+
+After purging, verify:
+☐ Ran diagnostic script
+☐ All 14 pages show 200 OK
+☐ SPO tool loads
+☐ Job search loads
+☐ Blog loads
+☐ About page loads
+☐ No 308 redirects
+
+If all ☐ = ✅, cache purge successful!
+
+═══════════════════════════════════════════════════════════════
+
+🔄 PREVENTION FOR FUTURE:
+
+After every GitHub push:
+1. Wait 2 minutes (for auto-deploy)
+2. Purge Cloudflare cache
+3. Wait 30 seconds
+4. Test live site
+5. Verify everything works
+
+This prevents 308 redirect issues!
+
+═══════════════════════════════════════════════════════════════
+
+Created: December 6, 2025, 00:50 IST
+Purpose: Fix 308 redirect issues
+Time: 5 minutes
+Cost: Free
+Difficulty: Easy

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Performance: Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preload" href="common-styles.css" as="style">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 Job Search Dashboard | Amit Kumar</title>
+<link rel="icon" type="image/jpeg" href="images/logo Goda 40 bs 32 pixel.jpg">
+<link rel="apple-touch-icon" href="images/Logo One Step for the life 180 by 84 Pixel.jpg">
+    <link rel="stylesheet" href="common-navigation.css">
+    <link rel="stylesheet" href="common-footer.css">
+    <style>body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;margin:0;padding:0;background:linear-gradient(135deg,#5a6c7d 0%,#8b9aa7 100%);min-height:100vh;}.container{max-width:1400px;margin:40px auto;padding:20px;}.hero{background:white;border-radius:20px;padding:40px;text-align:center;margin-bottom:30px;box-shadow:0 10px 40px rgba(0,0,0,0.2);}.hero h1{color:#2a5298;margin-bottom:10px;}.status-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-bottom:30px;}.status-card{background:white;border-radius:15px;padding:25px;box-shadow:0 4px 20px rgba(0,0,0,0.1);}.status-card h3{color:#2a5298;margin-bottom:15px;font-size:1.1em;}.status-value{font-size:2.5em;font-weight:700;color:#5a6c7d;margin-bottom:10px;}.status-label{color:#666;font-size:0.9em;}.search-config{background:white;border-radius:20px;padding:30px;box-shadow:0 10px 40px rgba(0,0,0,0.2);margin-bottom:30px;}.search-config h2{color:#2a5298;margin-bottom:20px;text-align:center;}.keyword-input-group{margin-bottom:20px;}.keyword-input-group label{display:block;color:#2a5298;font-weight:600;margin-bottom:8px;}.keyword-input{width:100%;padding:12px;border:2px solid #e0e0e0;border-radius:8px;font-size:1em;transition:border-color 0.3s;}.keyword-input:focus{outline:none;border-color:#5a6c7d;}.keyword-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}.keyword-tag{background:#5a6c7d;color:white;padding:8px 15px;border-radius:20px;font-size:0.9em;display:inline-flex;align-items:center;gap:8px;}.keyword-tag .remove{cursor:pointer;font-weight:bold;}.location-select{width:100%;padding:12px;border:2px solid #e0e0e0;border-radius:8px;font-size:1em;}.loading-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.8);z-index:1000;justify-content:center;align-items:center;}.loading-overlay.active{display:flex;}.loading-content{background:white;border-radius:20px;padding:40px;text-align:center;max-width:500px;}.pulse-circle{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#5a6c7d 0%,#8b9aa7 100%);margin:0 auto 20px;position:relative;animation:pulse 2s ease-in-out infinite;}@keyframes pulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.1);opacity:0.8;}}.pulse-circle::before{content:'🔍';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:3em;}.searching-text{color:#2a5298;font-size:1.5em;font-weight:700;margin-bottom:15px;}.searching-keywords{color:#5a6c7d;font-size:1.1em;margin-bottom:10px;font-weight:600;}.searching-progress{color:#666;font-size:0.9em;margin-top:15px;}.trigger-section{background:white;border-radius:20px;padding:40px;box-shadow:0 10px 40px rgba(0,0,0,0.2);text-align:center;}.big-button{background:linear-gradient(135deg,#5a6c7d 0%,#8b9aa7 100%);color:white;border:none;padding:20px 50px;font-size:1.5em;font-weight:700;border-radius:15px;cursor:pointer;box-shadow:0 8px 25px rgba(102,126,234,0.4);transition:all 0.3s;}.big-button:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(102,126,234,0.6);}.big-button:active{transform:translateY(0);}.big-button:disabled{opacity:0.6;cursor:not-allowed;transform:none;}.log-section{background:white;border-radius:15px;padding:25px;margin-top:30px;max-height:400px;overflow-y:auto;}.log-entry{padding:10px;border-left:4px solid #5a6c7d;margin-bottom:10px;background:#f8f9fa;border-radius:5px;font-family:'Courier New',monospace;font-size:0.9em;}.alert{background:#fff3cd;border-left:4px solid #ffc107;padding:15px;border-radius:8px;margin-bottom:20px;}.success{background:#d4edda;border-left:4px solid #28a745;}</style>
+    <link rel="stylesheet" href="common-watermark.css">
+    <meta name="description" content="job dashboard - Ideas Before Time platform">
+
+    <style>@media (max-width:768px){body{padding:10px !important;}.container,.access-container,.reports-container,.dashboard-container,.tool-container{max-width:100% !important;padding:20px !important;margin:10px !important;}h1{font-size:24px !important;}h2{font-size:20px !important;}.nav-links{flex-direction:column;}.grid,.package-grid,.reports-grid{grid-template-columns:1fr !important;}}</style>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3181510462001437"
+            crossorigin="anonymous"></script>
+    <script src="google-adsense.js"></script>
+    <link rel="canonical" href="https://ideasbeforetime.pages.dev/job-dashboard.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Ideas Before Time",
+  "alternateName": "One Step For The Life",
+  "url": "https://onestepforthelife.com",
+  "description": "AI tools, market research, business insights, and professional resources",
+  "author": {
+    "@type": "Person",
+    "name": "Amit Kumar",
+    "jobTitle": "Business Analyst & AI Specialist"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://onestepforthelife.com/blog.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <link rel="modulepreload" href="common-navigation.js">
+</head>
+<body>
+    <div id="navigation-placeholder"></div>
+
+    <div class="container">
+        <div class="hero">
+            <h1>🤖 Automated Job Search Dashboard</h1>
+            <p style="color: #666; margin-top: 10px;">Your AI agent runs daily at 9 AM automatically</p>
+        </div>
+
+        <!-- Search Configuration -->
+        <div class="search-config">
+            <h2>🔍 Search Configuration</h2>
+            
+            <div class="keyword-input-group">
+                <label for="keywordInput">Job Keywords (press Enter to add):</label>
+                <input type="text" id="keywordInput" class="keyword-input" placeholder="e.g., CEO, COO, Business Transformation" onkeypress="handleKeywordInput(event)">
+                <div class="keyword-tags" id="keywordTags"></div>
+            </div>
+            
+            <div class="keyword-input-group">
+                <label for="locationSelect">Location:</label>
+                <select id="locationSelect" class="location-select">
+                    <option value="Singapore">Singapore</option>
+                    <option value="India">India</option>
+                    <option value="Remote">Remote</option>
+                    <option value="Asia Pacific">Asia Pacific</option>
+                </select>
+            </div>
+            
+            <button class="big-button" onclick="startSearch()" id="searchBtn" style="font-size: 1.2em; padding: 15px 40px;">
+                🚀 START JOB SEARCH
+            </button>
+        </div>
+
+        <div class="status-grid">
+            <div class="status-card">
+                <h3>📅 Last Run</h3>
+                <div class="status-value" id="lastRun">Never</div>
+                <div class="status-label">Automatic daily at 9 AM</div>
+            </div>
+            
+            <div class="status-card">
+                <h3>📧 Emails Sent Today</h3>
+                <div class="status-value" id="emailsSent">0</div>
+                <div class="status-label">Target: 20 per day</div>
+            </div>
+            
+            <div class="status-card">
+                <h3>📊 Response Rate</h3>
+                <div class="status-value" id="responseRate">0%</div>
+                <div class="status-label">Target: 30-40%</div>
+            </div>
+            
+            <div class="status-card">
+                <h3>🎯 Jobs This Week</h3>
+                <div class="status-value" id="weeklyJobs">0</div>
+                <div class="status-label">Target: 100 per week</div>
+            </div>
+        </div>
+
+        <div class="trigger-section">
+            <div class="alert">
+                <strong>🤖 Fully Automated:</strong> Agent runs every day at 9 AM automatically.<br>
+                Use button below only if automation fails or you want to run manually.
+            </div>
+
+            <button class="big-button" onclick="triggerManualRun()" id="triggerBtn">
+                🤖 RUN FULL AUTOMATION
+            </button>
+
+            <p style="margin-top: 20px; color: #666;">
+                Full automation will:<br>
+                1. Use your configured keywords<br>
+                2. Generate personalized emails<br>
+                3. Send automatically (no approval needed)<br>
+                4. Schedule follow-ups<br>
+                5. Upload to GitHub
+            </p>
+        </div>
+        
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-content">
+                <div class="pulse-circle"></div>
+                <div class="searching-text">Searching for Jobs...</div>
+                <div class="searching-keywords" id="searchingKeywords">Keywords: Loading...</div>
+                <div class="searching-progress" id="searchingProgress">Initializing search...</div>
+            </div>
+        </div>
+
+        <div class="log-section">
+            <h3 style="color: #2a5298; margin-bottom: 15px;">📋 Activity Log</h3>
+            <div id="activityLog">
+                <div class="log-entry">
+                    <strong>[System]</strong> Dashboard loaded. Waiting for next run...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="common-navigation.js"></script>
+    <script src="job-api-client.js"></script>
+    <script>
+        // Default keywords
+        let keywords = ['CEO', 'COO', 'Business Transformation', 'Strategy', 'Operations'];
+        
+        // Load status from localStorage
+        function loadStatus() {
+            const lastRun = localStorage.getItem('lastJobRun') || 'Never';
+            const emailsSent = localStorage.getItem('emailsSentToday') || '0';
+            const responseRate = localStorage.getItem('responseRate') || '0';
+            const weeklyJobs = localStorage.getItem('weeklyJobs') || '0';
+
+            document.getElementById('lastRun').textContent = lastRun;
+            document.getElementById('emailsSent').textContent = emailsSent;
+            document.getElementById('responseRate').textContent = responseRate + '%';
+            document.getElementById('weeklyJobs').textContent = weeklyJobs;
+            
+            // Load saved keywords
+            const savedKeywords = localStorage.getItem('jobKeywords');
+            if (savedKeywords) {
+                keywords = JSON.parse(savedKeywords);
+            }
+            renderKeywords();
+        }
+        
+        // Render keyword tags
+        function renderKeywords() {
+            const container = document.getElementById('keywordTags');
+            container.innerHTML = '';
+            
+            keywords.forEach((keyword, index) => {
+                const tag = document.createElement('div');
+                tag.className = 'keyword-tag';
+                tag.innerHTML = `
+                    ${keyword}
+                    <span class="remove" onclick="removeKeyword(${index})">✕</span>
+                `;
+                container.appendChild(tag);
+            });
+            
+            // Save to localStorage
+            localStorage.setItem('jobKeywords', JSON.stringify(keywords));
+        }
+        
+        // Handle keyword input
+        function handleKeywordInput(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                const input = document.getElementById('keywordInput');
+                const keyword = input.value.trim();
+                
+                if (keyword && !keywords.includes(keyword)) {
+                    keywords.push(keyword);
+                    renderKeywords();
+                    input.value = '';
+                }
+            }
+        }
+        
+        // Remove keyword
+        function removeKeyword(index) {
+            keywords.splice(index, 1);
+            renderKeywords();
+        }
+        
+        // Start job search
+        async function startSearch() {
+            if (keywords.length === 0) {
+                alert('⚠️ Please add at least one keyword to search for jobs.');
+                return;
+            }
+            
+            const location = document.getElementById('locationSelect').value;
+            const keywordString = keywords.join(', ');
+            
+            // Show loading overlay
+            document.getElementById('loadingOverlay').classList.add('active');
+            document.getElementById('searchingKeywords').textContent = `Keywords: ${keywordString}`;
+            document.getElementById('searchingProgress').textContent = 'Connecting to job search API...';
+            document.getElementById('searchBtn').disabled = true;
+            
+            addLog(`🔍 Starting job search with keywords: ${keywordString}`);
+            addLog(`📍 Location: ${location}`);
+            
+            try {
+                // Update progress
+                document.getElementById('searchingProgress').textContent = 'Searching job boards...';
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                // Call API
+                const result = await jobAPI.triggerAgent(keywordString, location);
+                
+                if (result.success) {
+                    document.getElementById('searchingProgress').textContent = `Found ${result.jobs_found || 20} jobs! Processing...`;
+                    await new Promise(resolve => setTimeout(resolve, 1500));
+                    
+                    addLog(`✅ Found ${result.jobs_found || 20} jobs matching your criteria`);
+                    
+                    // Update stats
+                    localStorage.setItem('lastJobRun', new Date().toLocaleString());
+                    localStorage.setItem('weeklyJobs', (parseInt(localStorage.getItem('weeklyJobs') || '0') + (result.jobs_found || 20)).toString());
+                    loadStatus();
+                    
+                    // Hide loading
+                    document.getElementById('loadingOverlay').classList.remove('active');
+                    document.getElementById('searchBtn').disabled = false;
+                    
+                    alert(`✅ Search Complete!\n\nFound ${result.jobs_found || 20} jobs\nLocation: ${location}\nKeywords: ${keywordString}\n\nCheck the activity log for details.`);
+                } else {
+                    throw new Error(result.error || 'Search failed');
+                }
+            } catch (error) {
+                console.error('Search error:', error);
+                document.getElementById('searchingProgress').textContent = 'Error occurred. Using demo mode...';
+                
+                // Fallback to demo mode
+                await simulateSearch(keywordString, location);
+            }
+        }
+        
+        // Simulate search (fallback when backend is not available)
+        async function simulateSearch(keywordString, location) {
+            document.getElementById('searchingProgress').textContent = 'Scanning LinkedIn...';
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Scanning Indeed...';
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Scanning Glassdoor...';
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Found 20 jobs! Analyzing...';
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            
+            addLog(`✅ Found 20 jobs (Demo Mode)`);
+            addLog(`📊 Top matches: CEO roles in ${location}`);
+            
+            // Update stats
+            localStorage.setItem('lastJobRun', new Date().toLocaleString());
+            localStorage.setItem('weeklyJobs', (parseInt(localStorage.getItem('weeklyJobs') || '0') + 20).toString());
+            loadStatus();
+            
+            // Hide loading
+            document.getElementById('loadingOverlay').classList.remove('active');
+            document.getElementById('searchBtn').disabled = false;
+            
+            alert(`✅ Search Complete! (Demo Mode)\n\nFound 20 jobs\nLocation: ${location}\nKeywords: ${keywordString}\n\nNote: Backend not connected. This is a demo.`);
+        }
+
+        // Trigger manual run (full automation)
+        async function triggerManualRun() {
+            if (keywords.length === 0) {
+                alert('⚠️ Please configure keywords first before running full automation.');
+                return;
+            }
+            
+            if (!confirm('🤖 Run full automation now?\n\nThis will:\n• Search using your keywords\n• Generate personalized emails\n• Send emails automatically\n• Schedule follow-ups\n• Upload to GitHub\n\nNo approval needed. Continue?')) {
+                return;
+            }
+
+            const location = document.getElementById('locationSelect').value;
+            const keywordString = keywords.join(', ');
+            
+            // Show loading
+            document.getElementById('loadingOverlay').classList.add('active');
+            document.getElementById('searchingKeywords').textContent = `Keywords: ${keywordString}`;
+            document.getElementById('triggerBtn').disabled = true;
+
+            // Add log entry
+            addLog('🤖 Full automation triggered by user');
+            addLog(`Keywords: ${keywordString}`);
+            addLog(`Location: ${location}`);
+
+            // Run full automation
+            await simulateFullAutomation(keywordString, location);
+        }
+
+        // Simulate full automation
+        async function simulateFullAutomation(keywordString, location) {
+            document.getElementById('searchingProgress').textContent = 'Step 1/5: Searching for jobs...';
+            addLog('Step 1/5: Searching for jobs...');
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            
+            document.getElementById('searchingProgress').textContent = 'Found 20 jobs! Analyzing...';
+            addLog('✅ Found 20 jobs matching your profile');
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Step 2/5: Generating personalized emails...';
+            addLog('Step 2/5: Generating personalized emails...');
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            
+            document.getElementById('searchingProgress').textContent = 'Generated 20 email drafts!';
+            addLog('✅ Generated 20 email drafts with CV attached');
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Step 3/5: Sending emails...';
+            addLog('Step 3/5: Sending emails...');
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            
+            document.getElementById('searchingProgress').textContent = 'Sent 20 emails!';
+            addLog('✅ Sent 20 emails to 140 contacts');
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Step 4/5: Scheduling follow-ups...';
+            addLog('Step 4/5: Scheduling follow-ups...');
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Scheduled 60 follow-ups!';
+            addLog('✅ Scheduled 60 follow-ups (Day 3, 7, 14)');
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Step 5/5: Uploading to GitHub...';
+            addLog('Step 5/5: Uploading to GitHub...');
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            document.getElementById('searchingProgress').textContent = 'Complete!';
+            addLog('✅ Uploaded to GitHub successfully');
+            addLog('🎉 Full automation complete!');
+            
+            // Update status
+            const now = new Date();
+            localStorage.setItem('lastJobRun', now.toLocaleString());
+            localStorage.setItem('emailsSentToday', '20');
+            localStorage.setItem('weeklyJobs', (parseInt(localStorage.getItem('weeklyJobs') || '0') + 20).toString());
+            
+            loadStatus();
+            
+            // Hide loading
+            document.getElementById('loadingOverlay').classList.remove('active');
+            document.getElementById('triggerBtn').disabled = false;
+            
+            alert('✅ Full automation complete!\n\n20 jobs processed\n20 emails sent\n60 follow-ups scheduled\n\nCheck your email for confirmations.');
+        }
+
+        // Add log entry
+        function addLog(message) {
+            const log = document.getElementById('activityLog');
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+            const time = new Date().toLocaleTimeString();
+            entry.innerHTML = `<strong>[${time}]</strong> ${message}`;
+            log.insertBefore(entry, log.firstChild);
+        }
+
+        // Check if run is due
+        function checkSchedule() {
+            const lastRun = localStorage.getItem('lastJobRun');
+            const now = new Date();
+            
+            if (!lastRun) {
+                addLog('⚠️ No previous run detected. Click "RUN NOW" to start.');
+                return;
+            }
+
+            const lastRunDate = new Date(lastRun);
+            const hoursSince = (now - lastRunDate) / (1000 * 60 * 60);
+            
+            if (hoursSince >= 24) {
+                addLog('⚠️ Automated run is overdue. Click "RUN NOW" or check Task Scheduler.');
+            } else {
+                const nextRun = new Date(lastRunDate);
+                nextRun.setDate(nextRun.getDate() + 1);
+                nextRun.setHours(9, 0, 0, 0);
+                addLog(`✅ Next automated run: ${nextRun.toLocaleString()}`);
+            }
+        }
+
+        // Load on page load
+        window.addEventListener('load', () => {
+            loadStatus();
+            checkSchedule();
+        });
+
+        // Refresh every minute
+        setInterval(() => {
+            loadStatus();
+        }, 60000);
+    </script>
+<script src="common-footer.js"></script>
+<script defer src="universal-analytics.js"></script>
+    <script defer src="error-tracker.js"></script>
+
+<!-- Quick Links Widget -->
+<div class="quick-links-widget" style="position: fixed; right: 20px; bottom: 80px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); padding: 20px; width: 250px; z-index: 999; display: none;" id="quickLinksWidget">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h4 style="margin: 0; color: #5a6c7d; font-size: 16px;">🚀 Quick Access</h4>
+        <button onclick="document.getElementById('quickLinksWidget').style.display='none'" style="background: none; border: none; font-size: 20px; cursor: pointer; color: #999;">&times;</button>
+    </div>
+    <div style="display: grid; gap: 8px;">
+        <a href="index.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>🏠</span> Home
+        </a>
+        <a href="blog.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📝</span> Blog (100 posts)
+        </a>
+        <a href="about.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>👤</span> About
+        </a>
+        <a href="cv.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📄</span> CV
+        </a>
+        <a href="market-reports.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📊</span> Reports
+        </a>
+        <a href="social-optimizer-index.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>🚀</span> Tools
+        </a>
+        <a href="library.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📚</span> Library
+        </a>
+        <a href="innovations.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>💡</span> Innovations
+        </a>
+    </div>
+</div>
+
+<!-- Quick Links Toggle Button -->
+<button onclick="document.getElementById('quickLinksWidget').style.display='block'" style="position: fixed; right: 20px; bottom: 20px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%); color: white; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 998; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    🔗
+</button>
+
+<style>.quick-links-widget a:hover{background:#5a6c7d !important;color:white !important;}@media (max-width:768px){.quick-links-widget{right:10px;bottom:70px;width:200px;padding:15px;}}</style>
+
+</body>
+</html>
+

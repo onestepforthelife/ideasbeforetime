@@ -1,0 +1,58 @@
+name: Sync LinkedIn Public Profile
+
+on:
+  schedule:
+    # Run daily at 7 AM IST (1:30 AM UTC)
+    - cron: '30 1 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  sync-profile:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 lxml
+      
+      - name: Sync LinkedIn public profile
+        run: |
+          echo "Syncing from LinkedIn public profile..."
+          node sync-linkedin-profile.js
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --quiet || echo "changes=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit and push if changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config user.name "LinkedIn Profile Sync Bot"
+          git config user.email "actions@github.com"
+          git add linkedin-posts.txt blog-post-*.html blog.html
+          git commit -m "🔄 Auto-sync: LinkedIn profile updated"
+          git push
+      
+      - name: Summary
+        run: |
+          if [ "${{ steps.check_changes.outputs.changes }}" == "true" ]; then
+            echo "✅ LinkedIn profile synced and blog updated!"
+          else
+            echo "ℹ️ No new content found"
+          fi

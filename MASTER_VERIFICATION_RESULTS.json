@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-12-04T12:19:36.043Z",
+  "score": 99,
+  "totalVerified": 281,
+  "totalChecks": 284,
+  "details": {
+    "blogPosts": {
+      "total": 100,
+      "verified": 100,
+      "issues": []
+    },
+    "quickAccess": {
+      "total": 7,
+      "verified": 7,
+      "issues": []
+    },
+    "navigation": {
+      "total": 169,
+      "verified": 168,
+      "issues": [
+        "ghar-ghar-complete.html: Missing navigation",
+        "ghar-ghar-complete.html: Missing footer"
+      ]
+    },
+    "uxPrinciples": {
+      "total": 2,
+      "verified": 0,
+      "issues": [
+        "blog.html: Category filters missing",
+        "market-reports.html: CTA not prominent"
+      ]
+    },
+    "consistency": {
+      "total": 5,
+      "verified": 5,
+      "issues": []
+    },
+    "sitemap": {
+      "verified": true,
+      "issues": []
+    }
+  }
+}

@@ -1,0 +1,54 @@
+WIDTH CONSISTENCY AUDIT - December 2, 2025
+==========================================
+
+STANDARD WIDTH: 1400px (for all main content pages)
+EXCEPTION: CV = 210mm (A4 paper size for printing)
+
+PAGES THAT NEED FIXING:
+-----------------------
+
+600px → 1400px:
+- request-access.html (container)
+
+800px → 1400px:
+- TEST_CREDITS.html (test-container)
+
+900px → 1400px:
+- social-optimizer-success.html (success-container)
+- social-optimizer-quickstart.html (container)
+
+1000px → 1400px:
+- PAYMENT_VISUAL_GUIDE.html (container)
+
+1200px → 1400px:
+- Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html (container)
+- social-optimizer-dashboard.html (dashboard-container)
+- profile-optimizer.html (container)
+- nickel-esg-report.html (report-container)
+- JOB_TRACKER_DAILY.html (container)
+- job-tools.html (container)
+- job-dashboard.html (container)
+
+ALREADY CORRECT (1400px):
+--------------------------
+✅ index.html
+✅ about.html
+✅ timeline.html
+✅ terms-and-disclaimer.html
+✅ Specialty_Chemicals_Report_UPDATED.html
+✅ social-optimizer-app.html
+✅ social-optimizer-admin.html
+✅ research-preview.html
+✅ refund-policy.html
+✅ privacy-policy.html
+✅ market-reports.html
+✅ library.html
+✅ JOB_POWER_FEATURES.html
+✅ JOB_OUTREACH_AUTOMATION_TOOL.html
+✅ disclaimer.html
+✅ business-news.html
+✅ business-insights.html
+
+ACTION REQUIRED:
+----------------
+Update 13 pages from various widths to 1400px for consistency.

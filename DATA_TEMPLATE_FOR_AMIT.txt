@@ -1,0 +1,241 @@
+═══════════════════════════════════════════════════════════════
+📊 DATA TEMPLATE - FILL THIS WHEN READY
+═══════════════════════════════════════════════════════════════
+
+Hi Amit! When you're ready to provide data for targeted optimizations,
+just copy this template and fill in what you know. You don't need to
+fill everything - even partial data helps!
+
+═══════════════════════════════════════════════════════════════
+
+## 1. ANALYTICS DATA (From Google Analytics or Cloudflare)
+
+### Top 5 Pages by Traffic:
+1. [page name] - [visits/month or just "high/medium/low"]
+2. [page name] - [visits/month]
+3. [page name] - [visits/month]
+4. [page name] - [visits/month]
+5. [page name] - [visits/month]
+
+### Where Users Drop Off:
+- [page or section] - [% or just "many users leave here"]
+- [page or section] - [%]
+
+### Average Session Duration:
+- [X minutes] or "users stay for [short/medium/long] time"
+
+### Top Traffic Sources:
+1. [Google/LinkedIn/Direct/etc.] - [% or "most traffic"]
+2. [source] - [%]
+3. [source] - [%]
+
+### Mobile vs Desktop:
+- Mobile: [%] or "mostly mobile" or "mostly desktop"
+- Desktop: [%]
+
+### Most Clicked Links:
+- [link/button name] - [clicks or "very popular"]
+- [link/button name] - [clicks]
+
+═══════════════════════════════════════════════════════════════
+
+## 2. CHEMICAL INDUSTRY STANDARDS (Your Expertise)
+
+### Report Format Requirements:
+In chemical industry, reports must have:
+- [Format requirement, e.g., "Executive summary first"]
+- [Format requirement, e.g., "Data tables with sources"]
+- [Format requirement]
+
+### Terminology Standards:
+We should use:
+- [Term] instead of [term] (e.g., "feedstock" not "raw material")
+- [Term] instead of [term]
+
+### User Expectations:
+Chemical industry users expect:
+- [Feature, e.g., "Downloadable PDF reports"]
+- [Feature, e.g., "Price trends with charts"]
+- [Feature]
+
+### Industry-Specific Requirements:
+- [Requirement, e.g., "CAS numbers for chemicals"]
+- [Requirement, e.g., "Regional market breakdown"]
+- [Requirement]
+
+═══════════════════════════════════════════════════════════════
+
+## 3. COMPETITOR ANALYSIS (Your Research)
+
+### Competitor 1: [Name or URL]
+✅ What they do well:
+   - [Feature, e.g., "Great search functionality"]
+   - [Feature]
+   
+❌ What they do poorly:
+   - [Issue, e.g., "Slow loading"]
+   - [Issue]
+
+### Competitor 2: [Name or URL]
+✅ What they do well:
+   - [Feature]
+   
+❌ What they do poorly:
+   - [Issue]
+
+### What We Should Copy:
+- [Feature from competitor that we should implement]
+- [Feature]
+
+### What We Should Avoid:
+- [Mistake from competitor]
+- [Mistake]
+
+═══════════════════════════════════════════════════════════════
+
+## 4. USER FEEDBACK (From Emails/Support/Conversations)
+
+### Users Complain About:
+1. [Issue] - [how often: often/sometimes/rare]
+2. [Issue] - [frequency]
+3. [Issue] - [frequency]
+
+### Users Love:
+1. [Feature] - [what they say, e.g., "very helpful"]
+2. [Feature] - [feedback]
+
+### Users Request:
+1. [Feature request, e.g., "Want Excel download"]
+2. [Feature request]
+3. [Feature request]
+
+### Common Questions:
+1. [Question users ask, e.g., "How to download report?"]
+2. [Question]
+3. [Question]
+
+### Specific User Comments:
+- "[Actual quote from user]"
+- "[Another quote]"
+
+═══════════════════════════════════════════════════════════════
+
+## 5. SEO KEYWORDS & STRATEGY (Your Goals)
+
+### Target Keywords:
+1. [keyword, e.g., "chemical market report"]
+2. [keyword, e.g., "acrylic emulsion price"]
+3. [keyword]
+4. [keyword]
+5. [keyword]
+
+### Target Audience:
+- Industry: [chemical/manufacturing/pharma/etc.]
+- Role: [procurement manager/R&D/CEO/etc.]
+- Location: [India/Global/Asia/Europe/etc.]
+- Company Size: [SME/Enterprise/Startup/etc.]
+
+### Business Goals:
+- Primary: [lead generation/sales/brand awareness/etc.]
+- Secondary: [goal]
+- Metric: [what you measure, e.g., "email signups"]
+
+### Competitors to Outrank:
+1. [competitor domain or name]
+2. [competitor domain]
+3. [competitor domain]
+
+### Current Rankings (if you know):
+- [keyword]: Position [X] or "not ranking"
+- [keyword]: Position [X]
+
+═══════════════════════════════════════════════════════════════
+
+## 6. BUSINESS PRIORITIES (What Matters Most)
+
+### Most Important Pages (Priority Order):
+1. [page name] - Why: [reason, e.g., "generates leads"]
+2. [page name] - Why: [reason]
+3. [page name] - Why: [reason]
+
+### Revenue Sources:
+- [source, e.g., "SPO tool - ₹21 per user"]
+- [source, e.g., "Report sales"]
+- [source]
+
+### Conversion Goals:
+- [goal, e.g., "Get email signups for reports"]
+- [goal, e.g., "SPO tool purchases"]
+- [goal]
+
+### Pain Points to Fix First:
+1. [issue that hurts business most]
+2. [issue]
+3. [issue]
+
+═══════════════════════════════════════════════════════════════
+
+## 7. QUICK WINS (If You Know Any)
+
+### Things You Know Need Fixing:
+- [specific issue, e.g., "Blog posts hard to find"]
+- [issue]
+
+### Features You Want:
+- [feature, e.g., "Newsletter signup"]
+- [feature]
+
+### Pages That Need Work:
+- [page name] - [what's wrong]
+- [page name] - [what's wrong]
+
+═══════════════════════════════════════════════════════════════
+
+## 📝 HOW TO SEND THIS TO ME:
+
+### Option 1: Fill and Paste in Chat
+Just copy this template, fill what you know, paste in chat
+
+### Option 2: Partial Data
+Don't have everything? No problem! Send what you have:
+"Analytics: Homepage gets most traffic, users leave at SPO payment"
+
+### Option 3: Voice Notes
+Just tell me in your own words:
+"Most users come from LinkedIn, they want PDF downloads, competitors have better search"
+
+### Option 4: Over Time
+Send data as you gather it:
+- Today: Analytics data
+- Tomorrow: User feedback
+- Next week: Competitor analysis
+
+═══════════════════════════════════════════════════════════════
+
+## 💡 REMEMBER:
+
+✅ You don't need to fill everything
+✅ Partial data is better than no data
+✅ Your own words are fine (no need to be formal)
+✅ Send data whenever convenient
+✅ I'll work with whatever you provide
+
+Even just 3-5 key points help me optimize better!
+
+═══════════════════════════════════════════════════════════════
+
+## 🎯 WHAT I'LL DO WITH YOUR DATA:
+
+When you provide data, I'll:
+1. Optimize high-traffic pages first
+2. Fix user pain points
+3. Implement requested features
+4. Target right keywords
+5. Beat competitors
+6. Improve conversions
+
+Expected time: 30-60 minutes for targeted optimizations
+
+═══════════════════════════════════════════════════════════════
+
+Ready when you are! No rush - send data whenever convenient! 🚀

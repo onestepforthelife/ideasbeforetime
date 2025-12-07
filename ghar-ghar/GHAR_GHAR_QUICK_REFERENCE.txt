@@ -1,0 +1,173 @@
+╔══════════════════════════════════════════════════════════════╗
+║         🏠 GHAR GHAR GAME - QUICK REFERENCE CARD 🏠         ║
+╚══════════════════════════════════════════════════════════════╝
+
+📁 FILES TO UPLOAD (8 files):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. ghar-ghar-game.html
+2. ghar-ghar-roles-extended.js
+3. ghar-ghar-i18n.js
+4. ghar-ghar-stories.js
+5. ghar-ghar-pwa.js
+6. ghar-ghar-sw.js
+7. manifest.json
+8. sitemap.xml (already updated)
+
+🎮 GAME FEATURES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ 10 Roles (Shopkeeper, Teacher, Principal, Student, Doctor, 
+   Police, Chef, Farmer, Artist, Firefighter)
+✅ 60+ Shops/Classes
+✅ 150+ Interactive Items
+✅ 5 Languages (EN, HI, TA, TE, BN)
+✅ 6 Skin Tones
+✅ Custom Names
+✅ Save/Load Game
+✅ PWA (Install as App)
+✅ Offline Mode
+✅ 9 Story Prompts
+✅ 4 Achievements
+✅ Sound Effects
+✅ Animations
+
+⌨️ KEYBOARD SHORTCUTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1-4     → Select player
+Space   → Toggle talking
+R       → Reset game
+
+🎯 PLAYER CONTROLS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Click Character     → Make them talk
+Double-Click Item   → Send flying
+Drag Item           → Add to inventory
+Click Inventory     → Use item (with sound!)
+
+🔘 TOP BAR BUTTONS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Language Dropdown   → Change language
+💾 Save            → Save game state
+📂 Load            → Load saved game
+📱 Install App     → Install as PWA
+📖 Story Ideas     → View story prompts
+
+🌍 LANGUAGES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+English    → en
+हिंदी      → hi
+தமிழ்      → ta
+తెలుగు     → te
+বাংলা      → bn
+
+🏆 ACHIEVEMENTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎮 First Game       → Play your first game
+🎯 10 Items Used    → Use 10 items
+🌟 All Roles Played → Try all 10 roles
+📖 Story Master     → Complete 5 stories
+
+📖 STORY PROMPTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Beginner (2 players):
+  • The Hungry Customer
+  • The First Day of School
+  • The Sick Patient
+
+Intermediate (3 players):
+  • The School Assembly
+  • The Fire Drill
+  • The Art Exhibition
+
+Advanced (4 players):
+  • The Community Fair
+  • The Emergency Rescue
+  • The Farm to Table
+
+🎨 SKIN TONES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🧍    Default
+🧍🏻   Light
+🧍🏼   Medium-Light
+🧍🏽   Medium
+🧍🏾   Medium-Dark
+🧍🏿   Dark
+
+🔊 SOUND EFFECTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Eating    → Munching sounds
+Drinking  → Gulping sounds
+Writing   → Scratching sounds
+Reading   → Page flip sounds
+Playing   → Happy bounces
+Using     → Click sounds
+
+🐛 TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Problem: Scripts not loading
+Fix: Check all .js files are in same folder
+
+Problem: Install button missing
+Fix: Needs HTTPS (Cloudflare has it)
+
+Problem: Save/Load not working
+Fix: Enable localStorage in browser
+
+Problem: Sounds not playing
+Fix: Click anywhere first (browser policy)
+
+📊 ANALYTICS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Google Analytics ID: G-YGVH0QGSGP
+Events Tracked:
+  • game_start
+  • item_used
+  • role_selected
+  • language_changed
+
+🔗 IMPORTANT URLS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Game:     /ghar-ghar-game.html
+Manifest: /manifest.json
+SW:       /ghar-ghar-sw.js
+Sitemap:  /sitemap.xml
+
+✅ PRE-LAUNCH CHECKLIST:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ Upload all 8 files
+□ Test game loads
+□ Test all 10 roles
+□ Test all 5 languages
+□ Test save/load
+□ Test PWA install
+□ Test offline mode
+□ Test on mobile
+□ Test story prompts
+□ Check analytics
+
+📱 BROWSER SUPPORT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Chrome (Desktop & Mobile)
+✅ Firefox (Desktop & Mobile)
+✅ Edge (Desktop)
+✅ Safari (Desktop & iOS)
+⚠️ IE11 (Not supported)
+
+💡 MARKETING TAGLINES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+"Away from phones, come here!"
+"10 roles, 5 languages, infinite stories"
+"Screen-free fun for Indian kids"
+"Play, learn, grow - offline!"
+
+📧 SUPPORT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Creator: Amit Kumar
+Brand: Ghar Ghar™
+Copyright: © 2025
+Website: amitagrawal.info
+
+╔══════════════════════════════════════════════════════════════╗
+║                    🎉 READY TO LAUNCH! 🎉                   ║
+║                                                              ║
+║  Upload files → Test → Share → Celebrate! 🎊                ║
+╚══════════════════════════════════════════════════════════════╝

@@ -1,0 +1,18 @@
+# Cloudflare Workers Configuration
+
+name = "ai-proxy"
+main = "ai-proxy.js"
+compatibility_date = "2024-12-05"
+
+# Environment variables (set in Cloudflare dashboard)
+# Don't put actual keys here - set them in dashboard under Settings > Variables
+[vars]
+# GROQ_API_KEY = "set in dashboard"
+# GEMINI_API_KEY = "set in dashboard"
+# HUGGINGFACE_TOKEN = "set in dashboard"
+# COHERE_API_KEY = "set in dashboard"
+
+# Routes
+routes = [
+  { pattern = "ideasbeforetime.pages.dev/api/ai", zone_name = "ideasbeforetime.pages.dev" }
+]

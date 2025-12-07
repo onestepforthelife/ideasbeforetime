@@ -1,0 +1,11 @@
+{
+  "name": "Daily Site Health Check",
+  "description": "Automatically check site health every day",
+  "trigger": "onSessionStart",
+  "action": {
+    "type": "sendMessage",
+    "message": "Daily health check: Run CRITICAL_DIAGNOSTIC_DEC6.js, check live site status, verify all critical pages work, report any issues found."
+  },
+  "enabled": true,
+  "throttle": "once-per-day"
+}

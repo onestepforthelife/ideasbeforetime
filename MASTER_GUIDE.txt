@@ -1,0 +1,58 @@
+MASTER GUIDE - Ideas Before Time Website
+=========================================
+
+🔐 PASSWORDS & ACCESS CODES
+============================
+CV Password: AmitCV2025!
+Research Password: AmitResearch2025!
+
+SPO Access Codes:
+- RECRUITER2025
+- PARTNER2025
+- VIP2025
+- MEDIA2025
+
+📊 ANALYTICS
+============
+Google Analytics ID: G-YGVH0QGSGP
+
+💳 PAYMENT
+==========
+UPI ID: 9549300319@upi
+
+🌐 WEBSITE STRUCTURE
+====================
+Main: https://ideas-before-time.pages.dev/
+Short Link: https://bit.ly/onestepwin (USE THIS FOR SHARING!)
+
+SPO Tool: /social-optimizer-app.html
+Portfolio: /index-portfolio.html
+Library: /library.html
+
+Game: /ghar-ghar/ghar-ghar-game.html
+Game Short Link: https://bit.ly/ghargharrmeebr (USE THIS FOR SHARING!)
+
+📁 KEY FILES
+============
+- index.html (SPO homepage)
+- index-portfolio.html (Innovation portfolio backup)
+- social-optimizer-app.html (SPO tool with access codes)
+- about.html (About page)
+- cv.html (Password protected)
+- library.html (Innovation library - public)
+
+✅ RECENT UPDATES (Nov 23, 2025)
+================================
+- ✅ Removed ALL BASF branding from marketing (replaced with "Fortune 500")
+- ✅ Updated to "Social Profile" (all platforms)
+- ✅ Removed ALL money-back guarantee references
+- ✅ Added disclaimer to SPO results about automated solution
+- ✅ Fixed back button visibility (white color, 18px font)
+- ✅ Updated access codes (CORP2025 instead of BASF2025)
+- ✅ Added 8 new professional categories
+- ✅ Fixed before/after labels
+- ✅ Updated trust badges
+
+🚀 DEPLOYMENT
+=============
+Upload Cloudfare/ folder to Cloudflare Pages

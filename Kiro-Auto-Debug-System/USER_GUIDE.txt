@@ -1,0 +1,240 @@
+========================================
+KIRO AUTO-DEBUG SYSTEM v2.0
+USER GUIDE
+========================================
+
+📋 TABLE OF CONTENTS
+1. What is this?
+2. Which version should I use?
+3. When to use each tool
+4. Step-by-step instructions
+5. Troubleshooting
+6. FAQ
+
+========================================
+1. WHAT IS THIS?
+========================================
+
+The Kiro Auto-Debug System is a collection of automated tools that fix common Kiro IDE errors without manual intervention.
+
+Instead of:
+- Manually clearing caches
+- Searching for error solutions
+- Reinstalling Kiro
+- Losing your settings
+
+You can:
+- Run one script
+- Get automatic diagnosis
+- Apply proven fixes
+- Keep working
+
+========================================
+2. WHICH VERSION SHOULD I USE?
+========================================
+
+BAT VERSION (Recommended for most users):
+✅ Works on all Windows versions
+✅ No special permissions needed
+✅ Double-click to run
+✅ Easier for beginners
+
+Location: bat-version folder
+
+PS1 VERSION (Advanced users):
+✅ More detailed output
+✅ Better error handling
+✅ Colored console output
+✅ PowerShell features
+
+Location: ps1-version folder
+
+Both versions do the same thing!
+
+========================================
+3. WHEN TO USE EACH TOOL
+========================================
+
+KIRO_AUTO_DEBUG:
+Use when:
+- Kiro won't start
+- Kiro crashes on startup
+- Extensions not loading
+- MCP server errors
+- Memory leaks
+- Slow performance
+
+This is your FIRST choice!
+
+KIRO_INTELLIGENT_REPAIR:
+Use when:
+- Auto-Debug didn't fix it
+- Unknown error messages
+- Kiro behaves strangely
+- Multiple issues at once
+- Need detailed diagnosis
+
+This is your SECOND choice!
+
+KIRO_COMPLETE_REINSTALL:
+Use when:
+- Nothing else worked
+- Kiro completely broken
+- Want fresh start
+- Last resort only
+
+This is your LAST choice!
+
+========================================
+4. STEP-BY-STEP INSTRUCTIONS
+========================================
+
+FOR BAT VERSION:
+-----------------
+Step 1: Navigate to bat-version folder
+Step 2: Double-click KIRO_AUTO_DEBUG.bat
+Step 3: Wait for completion (30-60 seconds)
+Step 4: Read the report
+Step 5: Start Kiro and test
+
+If still broken:
+Step 6: Double-click KIRO_INTELLIGENT_REPAIR.bat
+Step 7: Wait for completion (1-2 minutes)
+Step 8: Read the detailed report
+Step 9: Start Kiro and test
+
+If STILL broken:
+Step 10: Double-click KIRO_COMPLETE_REINSTALL.bat
+Step 11: Type YES to confirm
+Step 12: Download fresh Kiro installer
+Step 13: Reinstall Kiro
+
+FOR PS1 VERSION:
+-----------------
+Step 1: Navigate to ps1-version folder
+Step 2: Right-click KIRO_AUTO_DEBUG.ps1
+Step 3: Select "Run with PowerShell"
+Step 4: Wait for completion (30-60 seconds)
+Step 5: Read the report
+Step 6: Start Kiro and test
+
+(Same escalation as BAT version)
+
+========================================
+5. TROUBLESHOOTING
+========================================
+
+PROBLEM: "Access Denied" error
+SOLUTION: Run as Administrator
+- Right-click script
+- Select "Run as Administrator"
+
+PROBLEM: PowerShell script won't run
+SOLUTION: Enable script execution
+- Open PowerShell as Admin
+- Run: Set-ExecutionPolicy RemoteSigned
+- Try again
+
+PROBLEM: Script runs but Kiro still broken
+SOLUTION: Escalate to next tool
+- Auto-Debug → Intelligent Repair → Complete Reinstall
+
+PROBLEM: Lost my settings
+SOLUTION: Check backup files
+- Look for *.backup files
+- In %APPDATA%\Kiro\User folder
+- Rename to remove .backup extension
+
+PROBLEM: Script doesn't find Kiro
+SOLUTION: Check installation path
+- Default: %LOCALAPPDATA%\Programs\Kiro
+- If different, edit script paths
+
+========================================
+6. FAQ
+========================================
+
+Q: Will this delete my code?
+A: NO! Your workspace files are never touched.
+
+Q: Will I lose my extensions?
+A: Extensions stay installed, but cache is cleared.
+
+Q: Will I lose my settings?
+A: Settings are backed up before changes.
+
+Q: How long does it take?
+A: Auto-Debug: 30-60 seconds
+   Intelligent Repair: 1-2 minutes
+   Complete Reinstall: 2-3 minutes
+
+Q: Can I run this on multiple computers?
+A: Yes! Copy the entire folder.
+
+Q: Is it safe?
+A: Yes! Only touches Kiro folders, never system files.
+
+Q: What if it doesn't work?
+A: Share the diagnostic report with Kiro community.
+
+Q: Can I modify the scripts?
+A: Yes! They're open source. Edit as needed.
+
+Q: Do I need internet?
+A: No! Works completely offline.
+
+Q: Will this fix hardware issues?
+A: No. Only software/configuration issues.
+
+========================================
+DIAGNOSTIC REPORTS
+========================================
+
+After running any tool, you'll find reports:
+- diagnostic-report.txt (Auto-Debug)
+- intelligent-repair-report.txt (Intelligent Repair)
+- reinstall-report.txt (Complete Reinstall)
+
+These reports contain:
+- What was done
+- What was found
+- System status
+- Recommendations
+- Timestamps
+
+Share these reports when asking for help!
+
+========================================
+SUPPORT
+========================================
+
+If you need help:
+1. Read this guide completely
+2. Check the diagnostic report
+3. Try the next escalation level
+4. Share report with Kiro community
+5. Check Kiro GitHub issues
+
+========================================
+VERSION HISTORY
+========================================
+
+v2.0 (December 2025)
+- Organized folder structure
+- Both BAT and PS1 versions
+- Improved diagnostics
+- Better error handling
+- Comprehensive documentation
+
+v1.0 (Initial release)
+- Basic auto-debug functionality
+
+========================================
+CREDITS
+========================================
+
+Created for the Kiro community
+Open source - free to use and modify
+Contributions welcome!
+
+========================================

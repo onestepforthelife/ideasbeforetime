@@ -1,0 +1,52 @@
+NICKEL SPECIFICATIONS TABLES - MANUAL INSERTION GUIDE
+=====================================================
+Created: December 6, 2025
+Status: READY FOR MANUAL INSERTION
+
+TASK: Add comprehensive nickel specifications tables to nickel-esg-report-open.html
+
+FILES PREPARED:
+✅ NICKEL_SPECIFICATIONS_TABLES.txt (Table 1: Nickel Oxides)
+✅ NICKEL_SPECIFICATIONS_TABLE2.txt (Table 2: Other Nickel Compounds)
+
+INSERTION LOCATION:
+File: Cloudfare/nickel-esg-report-open.html
+Line: ~191 (after ESG Impact section closing </div></div>)
+Before: <!-- Part 2: Detailed ESG Recycling Analysis -->
+
+MANUAL STEPS:
+1. Open nickel-esg-report-open.html in your editor
+2. Find line 191: "        </div>" (closing ESG Impact section)
+3. After this line, find: "        <!-- Part 2: Detailed ESG Recycling Analysis -->"
+4. Between these two sections, insert:
+   a) Complete content from NICKEL_SPECIFICATIONS_TABLES.txt
+   b) Complete content from NICKEL_SPECIFICATIONS_TABLE2.txt
+5. Save the file
+6. Test locally to verify tables display correctly
+
+WHAT THE TABLES CONTAIN:
+- Table 1: NiO & Ni₂O₃ specifications (primary & recycled grades)
+- Table 2: Other compounds (Hydroxide, Chloride, Acetate, Nitrate, Oxalate, Powder)
+- Full impurity profiles (Co, Pb, Cd, Cu, Fe, Mn, Cr, Li, Zn, Al, Ca, Mg, Na)
+- Standards references (ISO, ASTM, BIS)
+- India supply context & recycling percentages
+- Interview-ready format with professional styling
+
+AFTER INSERTION:
+✅ Test locally: Open nickel-esg-report-open.html in browser
+✅ Verify tables display correctly
+✅ Check collapsible sections work
+✅ Verify responsive design on mobile
+✅ Push to GitHub
+✅ Wait 2-5 minutes for Cloudflare deployment
+✅ Purge Cloudflare cache (MANDATORY!)
+✅ Test on live site: https://onestepforthelife.com/nickel-esg-report-open.html
+
+EXPECTED RESULT:
+- Two comprehensive specification tables added
+- Professional styling with color-coded rows
+- Collapsible sections for better UX
+- Complete technical data for interviews
+- India supply context included
+
+STATUS: READY - Manual insertion required (tables too large for automated insertion)

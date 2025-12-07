@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Performance: Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preload" href="common-styles.css" as="style">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astronomy & You - Educational Celestial Calculator</title>
+<link rel="icon" type="image/jpeg" href="images/logo Goda 40 bs 32 pixel.jpg">
+<link rel="apple-touch-icon" href="images/Logo One Step for the life 180 by 84 Pixel.jpg">
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.min.js"></script>
+<style>*{box-sizing:border-box;margin:0;padding:0;}body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#222;line-height:1.6;padding-bottom:40px;}header{background:linear-gradient(135deg,#1e3c72 0%,#2a5298 100%);color:white;padding:30px 20px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.2);}header h1{font-size:32px;margin-bottom:10px;}header p{font-size:16px;opacity:0.9;}.disclaimer-top{background:linear-gradient(135deg,#f59e0b 0%,#d97706 100%);color:white;padding:20px;text-align:center;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.2);}.container{max-width:1600px;margin:0 auto;padding:20px;}.section{background:#fff;padding:30px;margin:20px 0;border-radius:15px;box-shadow:0 6px 20px rgba(0,0,0,0.15);}h2{color:#264a96;margin-bottom:20px;font-size:28px;border-bottom:3px solid #667eea;padding-bottom:10px;}#solar-system-container{width:100%;height:500px;border-radius:15px;background:rgba(0,0,0,0.9);border:2px solid rgba(255,255,255,0.1);box-shadow:0 10px 40px rgba(0,0,0,0.5);position:relative;cursor:grab;}#solar-system-container:active{cursor:grabbing;}.solar-controls{display:flex;gap:10px;justify-content:center;margin:20px 0;flex-wrap:wrap;}.btn{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:12px 24px;border-radius:8px;border:none;cursor:pointer;font-size:14px;font-weight:600;margin:5px;transition:opacity 0.3s;}.btn:hover{opacity:0.9;}.btn-secondary{background:linear-gradient(135deg,#3b82f6 0%,#2563eb 100%);}.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:20px 0;}.form-group{display:flex;flex-direction:column;gap:8px;}.form-group label{font-weight:600;color:#264a96;font-size:14px;}.form-group input,.form-group select{padding:12px;border:2px solid #ccd4e0;border-radius:6px;font-size:14px;background:white;font-family:inherit;}.form-group input:focus,.form-group select:focus{outline:none;border-color:#667eea;}.tool-selector{background:#f5f7ff;padding:20px;border-radius:10px;margin:20px 0;}.tool-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin-top:15px;}.tool-option{display:flex;align-items:center;gap:10px;padding:12px;background:white;border-radius:8px;border:2px solid #e0e0e0;cursor:pointer;transition:all 0.3s;}.tool-option:hover{border-color:#667eea;transform:translateY(-2px);}.tool-option input[type="checkbox"]{width:20px;height:20px;cursor:pointer;}.tool-option.selected{border-color:#667eea;background:#eef2ff;}.results-container{margin:30px 0;}.results-columns{display:grid;grid-template-columns:1fr;gap:30px;margin:20px 0;}.results-columns.two-column{grid-template-columns:1fr 1fr;}.result-card{background:linear-gradient(135deg,#f5f7ff 0%,#e8f0ff 100%);padding:25px;border-radius:12px;border:2px solid #667eea;}.result-card h3{color:#264a96;margin-bottom:15px;font-size:22px;border-bottom:2px solid #667eea;padding-bottom:8px;}.result-item{padding:10px;margin:8px 0;background:white;border-radius:6px;border-left:4px solid #667eea;}.result-item strong{color:#264a96;display:inline-block;min-width:120px;}.loading{text-align:center;padding:40px;font-size:18px;color:#667eea;}.disclaimer-bottom{background:linear-gradient(135deg,#ef4444 0%,#dc2626 100%);color:white;padding:25px;border-radius:12px;margin:30px 0;text-align:center;}.disclaimer-bottom h3{margin-bottom:15px;font-size:24px;}.info-box{background:#eaf0ff;padding:20px;border-radius:10px;border-left:4px solid #667eea;margin:20px 0;}.legend{display:flex;gap:20px;flex-wrap:wrap;margin:20px 0;padding:20px;background:#f5f7ff;border-radius:10px;}.legend-item{display:flex;align-items:center;gap:10px;}@media (max-width:768px){.results-columns.two-column{grid-template-columns:1fr;}.form-grid{grid-template-columns:1fr;}#solar-system-container{height:350px;}}</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Ideas Before Time",
+  "alternateName": "One Step For The Life",
+  "url": "https://onestepforthelife.com",
+  "description": "AI tools, market research, business insights, and professional resources",
+  "author": {
+    "@type": "Person",
+    "name": "Amit Kumar",
+    "jobTitle": "Business Analyst & AI Specialist"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://onestepforthelife.com/blog.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <link rel="modulepreload" href="common-navigation.js">
+</head>
+<body>
+
+<header>
+  <h1>🔭 Astronomy & You</h1>
+  <p>Interactive Educational Astronomy Tool with Vedic Calendar</p>
+</header>
+
+<div class="disclaimer-top">
+  ⚠️ EDUCATIONAL TOOL ONLY - This demonstrates astronomical calculations and traditional calendar systems. 
+  NOT for making life decisions or predictions. Science & Mathematics education purpose.
+</div>
+
+<div class="container">
+  
+  <!-- 3D SOLAR SYSTEM -->
+  <div class="section">
+    <h2>🌌 Interactive 3D Solar System</h2>
+    <div class="info-box">
+      <strong>🎮 Controls:</strong> Drag to rotate • Scroll to zoom • Click planets for info • Updates based on selected date below
+    </div>
+    <div id="solar-system-container"></div>
+    <div class="solar-controls">
+      <button class="btn" onclick="resetCamera()">🔄 Reset View</button>
+      <button class="btn" onclick="focusPlanet('earth')">🌍 Focus Earth</button>
+      <button class="btn" onclick="focusPlanet('mars')">🔴 Focus Mars</button>
+      <button class="btn" onclick="focusPlanet('jupiter')">🟠 Focus Jupiter</button>
+      <button class="btn btn-secondary" onclick="toggleAnimation()">⏯️ Pause/Play</button>
+    </div>
+  </div>
+
+  <!-- INPUT FORM -->
+  <div class="section">
+    <h2>📅 Calculate Planetary Positions</h2>
+    
+    <div class="info-box">
+      <strong>Two Options:</strong><br>
+      • <strong>Today's Status:</strong> See current planetary positions (just enter place)<br>
+      • <strong>Specific Date:</strong> See positions for any date (birth date, historical event, future date)
+    </div>
+
+    <form id="astronomyForm">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>📅 Date *</label>
+          <input type="date" id="dateInput" required value="">
+          <small style="color: #666;">Leave as today or select any date (past/future)</small>
+        </div>
+        
+        <div class="form-group">
+          <label>🕐 Time (Optional)</label>
+          <input type="time" id="timeInput" value="12:00">
+          <small style="color: #666;">Default: 12:00 noon</small>
+        </div>
+        
+        <div class="form-group">
+          <label>📍 Place *</label>
+          <input type="text" id="placeInput" placeholder="e.g., Mumbai, Delhi, New York" required>
+          <small style="color: #666;">City name or coordinates</small>
+        </div>
+        
+        <div class="form-group">
+          <label>🗺️ Region (India)</label>
+          <select id="regionInput">
+            <option value="north">North India (Purnimanta)</option>
+            <option value="south">South India (Amanta)</option>
+            <option value="west">West India</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>🌐 Language</label>
+          <select id="languageInput">
+            <option value="en">English</option>
+            <option value="hi">हिंदी (Hindi)</option>
+            <option value="ta">தமிழ் (Tamil)</option>
+            <option value="te">తెలుగు (Telugu)</option>
+            <option value="kn">ಕನ್ನಡ (Kannada)</option>
+            <option value="ml">മലയാളം (Malayalam)</option>
+            <option value="bn">বাংলা (Bengali)</option>
+            <option value="mr">मराठी (Marathi)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- TOOL SELECTOR -->
+      <div class="tool-selector">
+        <h3 style="color: #264a96; margin-bottom: 15px;">🔧 Select Calculation Methods (Max 2 for comparison)</h3>
+        <div class="tool-options">
+          <label class="tool-option" onclick="toggleTool(this, 'swiss')">
+            <input type="checkbox" name="tool" value="swiss" id="tool-swiss">
+            <div>
+              <strong>Swiss Ephemeris</strong><br>
+              <small>Most accurate, free</small>
+            </div>
+          </label>
+          
+          <label class="tool-option" onclick="toggleTool(this, 'drik')">
+            <input type="checkbox" name="tool" value="drik" id="tool-drik">
+            <div>
+              <strong>Drik Panchang</strong><br>
+              <small>Vedic calendar</small>
+            </div>
+          </label>
+          
+          <label class="tool-option" onclick="toggleTool(this, 'astroapi')">
+            <input type="checkbox" name="tool" value="astroapi" id="tool-astroapi">
+            <div>
+              <strong>AstroAPI</strong><br>
+              <small>Vedic calculations</small>
+            </div>
+          </label>
+          
+          <label class="tool-option" onclick="toggleTool(this, 'nasa')">
+            <input type="checkbox" name="tool" value="nasa" id="tool-nasa">
+            <div>
+              <strong>NASA Horizons</strong><br>
+              <small>Scientific precision</small>
+            </div>
+          </label>
+          
+          <label class="tool-option" onclick="toggleTool(this, 'astrocharts')">
+            <input type="checkbox" name="tool" value="astrocharts" id="tool-astrocharts">
+            <div>
+              <strong>Astro-Charts</strong><br>
+              <small>Western astrology</small>
+            </div>
+          </label>
+        </div>
+        <p style="margin-top: 15px; color: #666; font-size: 14px;">
+          💡 <strong>Tip:</strong> Select 2 tools to compare results side-by-side
+        </p>
+      </div>
+
+      <div style="text-align: center; margin-top: 30px;">
+        <button type="submit" class="btn" style="font-size: 18px; padding: 15px 40px;">
+          🔍 Calculate Positions
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- RESULTS SECTION -->
+  <div class="section" id="resultsSection" style="display: none;">
+    <h2>📊 Calculation Results</h2>
+    <div id="resultsContainer" class="results-container"></div>
+  </div>
+
+  <!-- EDUCATIONAL CONTENT -->
+  <div class="section">
+    <h2>📚 How This Works</h2>
+    <div class="legend">
+      <div class="legend-item">
+        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%;"></div>
+        <div>
+          <strong>Astronomical Calculations</strong><br>
+          <small>Planetary positions based on orbital mechanics</small>
+        </div>
+      </div>
+      <div class="legend-item">
+        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); border-radius: 50%;"></div>
+        <div>
+          <strong>Vedic Calendar</strong><br>
+          <small>Tithi, Nakshatra, Yoga, Karana calculations</small>
+        </div>
+      </div>
+      <div class="legend-item">
+        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 50%;"></div>
+        <div>
+          <strong>Regional Variations</strong><br>
+          <small>North/South/West India calendar differences</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h3 style="color: #264a96; margin-bottom: 10px;">🔬 Mathematical Formulas Used:</h3>
+      <ul style="line-height: 2; margin-left: 20px;">
+        <li><strong>Swiss Ephemeris:</strong> JPL DE431 ephemeris data (NASA standard)</li>
+        <li><strong>Planetary Positions:</strong> Heliocentric → Geocentric conversion</li>
+        <li><strong>Tithi Calculation:</strong> (Moon longitude - Sun longitude) / 12°</li>
+        <li><strong>Nakshatra:</strong> Moon longitude / 13°20'</li>
+        <li><strong>Ayanamsa:</strong> Lahiri (23°15' for 2000 CE)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer-bottom">
+    <h3>⚠️ IMPORTANT DISCLAIMER</h3>
+    <p style="font-size: 16px; line-height: 1.8;">
+      This is an <strong>EDUCATIONAL TOOL</strong> demonstrating astronomical calculations and traditional calendar systems.
+      Results are based on mathematical formulas and should <strong>NOT</strong> be used for making important life decisions.
+      <br><br>
+      <strong>This tool shows:</strong> Planetary positions, Vedic calendar data, astronomical events<br>
+      <strong>This tool does NOT:</strong> Predict future, provide life advice, guarantee accuracy for personal decisions
+      <br><br>
+      For professional astrological consultations, please consult qualified practitioners.
+    </p>
+  </div>
+
+</div>
+
+<script src="solar-system-3d.js"></script>
+<script>
+// Set today's date as default
+document.getElementById('dateInput').valueAsDate = new Date();
+
+// Tool selection (max 2)
+let selectedTools = [];
+
+function toggleTool(element, toolId) {
+  const checkbox = element.querySelector('input[type="checkbox"]');
+  
+  if (checkbox.checked) {
+    if (selectedTools.length >= 2) {
+      checkbox.checked = false;
+      alert('Maximum 2 tools can be selected for comparison');
+      return;
+    }
+    selectedTools.push(toolId);
+    element.classList.add('selected');
+  } else {
+    selectedTools = selectedTools.filter(t => t !== toolId);
+    element.classList.remove('selected');
+  }
+}
+
+// Form submission
+document.getElementById('astronomyForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  if (selectedTools.length === 0) {
+    alert('Please select at least one calculation method');
+    return;
+  }
+  
+  const formData = {
+    date: document.getElementById('dateInput').value,
+    time: document.getElementById('timeInput').value,
+    place: document.getElementById('placeInput').value,
+    region: document.getElementById('regionInput').value,
+    language: document.getElementById('languageInput').value,
+    tools: selectedTools
+  };
+  
+  // Show results section
+  document.getElementById('resultsSection').style.display = 'block';
+  document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+  
+  // Show loading
+  document.getElementById('resultsContainer').innerHTML = '<div class="loading">🔄 Calculating planetary positions...</div>';
+  
+  // Simulate calculation (replace with actual API calls)
+  setTimeout(() => {
+    displayResults(formData);
+  }, 1500);
+  
+  // Update 3D solar system for selected date
+  updateSolarSystemDate(formData.date);
+});
+
+function displayResults(formData) {
+  const container = document.getElementById('resultsContainer');
+  const isTwoColumn = selectedTools.length === 2;
+  
+  let html = `<div class="results-columns ${isTwoColumn ? 'two-column' : ''}">`;
+  
+  selectedTools.forEach(tool => {
+    html += generateResultCard(tool, formData);
+  });
+  
+  html += '</div>';
+  container.innerHTML = html;
+}
+
+function generateResultCard(tool, formData) {
+  const toolNames = {
+    swiss: 'Swiss Ephemeris',
+    drik: 'Drik Panchang',
+    astroapi: 'AstroAPI',
+    nasa: 'NASA Horizons',
+    astrocharts: 'Astro-Charts'
+  };
+  
+  // Demo data (replace with actual API results)
+  return `
+    <div class="result-card">
+      <h3>🔧 ${toolNames[tool]}</h3>
+      
+      <div class="result-item">
+        <strong>📅 Date:</strong> ${formData.date} ${formData.time}
+      </div>
+      
+      <div class="result-item">
+        <strong>📍 Location:</strong> ${formData.place}
+      </div>
+      
+      <h4 style="margin: 20px 0 10px 0; color: #264a96;">☀️ Sun & Moon</h4>
+      <div class="result-item">
+        <strong>Sun Position:</strong> 15° Sagittarius
+      </div>
+      <div class="result-item">
+        <strong>Moon Position:</strong> 8° Taurus
+      </div>
+      <div class="result-item">
+        <strong>Sunrise:</strong> 06:45 AM
+      </div>
+      <div class="result-item">
+        <strong>Sunset:</strong> 06:15 PM
+      </div>
+      
+      <h4 style="margin: 20px 0 10px 0; color: #264a96;">🪐 Planetary Positions</h4>
+      <div class="result-item">
+        <strong>Mercury:</strong> 22° Scorpio
+      </div>
+      <div class="result-item">
+        <strong>Venus:</strong> 10° Capricorn
+      </div>
+      <div class="result-item">
+        <strong>Mars:</strong> 5° Leo
+      </div>
+      <div class="result-item">
+        <strong>Jupiter:</strong> 18° Aries
+      </div>
+      <div class="result-item">
+        <strong>Saturn:</strong> 12° Aquarius
+      </div>
+      
+      <h4 style="margin: 20px 0 10px 0; color: #264a96;">🌙 Vedic Calendar (${formData.region})</h4>
+      <div class="result-item">
+        <strong>Tithi:</strong> Shukla Saptami (7th day)
+      </div>
+      <div class="result-item">
+        <strong>Nakshatra:</strong> Rohini
+      </div>
+      <div class="result-item">
+        <strong>Yoga:</strong> Siddha
+      </div>
+      <div class="result-item">
+        <strong>Karana:</strong> Bava
+      </div>
+      <div class="result-item">
+        <strong>Paksha:</strong> Shukla (Bright fortnight)
+      </div>
+      
+      <h4 style="margin: 20px 0 10px 0; color: #264a96;">🔮 Lunar Nodes</h4>
+      <div class="result-item">
+        <strong>Rahu:</strong> 28° Pisces
+      </div>
+      <div class="result-item">
+        <strong>Ketu:</strong> 28° Virgo
+      </div>
+      
+      <p style="margin-top: 20px; padding: 15px; background: #fff3cd; border-radius: 8px; font-size: 13px;">
+        ℹ️ <strong>Note:</strong> These are sample calculations. Actual API integration will provide real-time accurate data.
+      </p>
+    </div>
+  `;
+}
+
+function updateSolarSystemDate(date) {
+  console.log('Updating solar system for date:', date);
+  // This will be implemented in solar-system-3d.js
+}
+
+// Solar system controls
+function resetCamera() {
+  console.log('Reset camera');
+}
+
+function focusPlanet(planet) {
+  console.log('Focus on', planet);
+}
+
+let animationPaused = false;
+function toggleAnimation() {
+  animationPaused = !animationPaused;
+  console.log('Animation', animationPaused ? 'paused' : 'playing');
+}
+</script>
+
+<script src="common-navigation.js"></script>
+<script src="common-footer.js"></script>
+<script src="universal-analytics.js"></script>
+<script src="error-tracker.js"></script>
+
+</body>
+</html>

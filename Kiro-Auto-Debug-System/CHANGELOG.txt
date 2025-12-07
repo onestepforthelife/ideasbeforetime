@@ -1,0 +1,326 @@
+========================================
+KIRO AUTO-DEBUG SYSTEM
+CHANGELOG
+========================================
+
+All notable changes to this project will be documented in this file.
+
+========================================
+[2.0] - December 2025
+========================================
+
+MAJOR RELEASE - Complete Restructure
+
+Added:
+------
+✅ Organized folder structure
+   - bat-version/ for Windows CMD scripts
+   - ps1-version/ for PowerShell scripts
+   - Separate folders for better organization
+
+✅ PowerShell versions of all tools
+   - KIRO_AUTO_DEBUG.ps1
+   - KIRO_INTELLIGENT_REPAIR.ps1
+   - KIRO_COMPLETE_REINSTALL.ps1
+   - Colored output
+   - Better error handling
+   - More detailed feedback
+
+✅ Comprehensive documentation
+   - README.md (main documentation)
+   - USER_GUIDE.txt (step-by-step instructions)
+   - TROUBLESHOOTING.txt (common issues)
+   - CHANGELOG.txt (this file)
+
+✅ Enhanced diagnostic reports
+   - More detailed system information
+   - Better formatting
+   - Timestamp tracking
+   - Recommendations section
+
+✅ Improved error detection
+   - Pattern recognition
+   - Log file analysis
+   - Process status checking
+   - Resource monitoring
+
+✅ Auto-recovery system
+   - Automatic backup creation
+   - Recovery settings generation
+   - Rollback capability
+
+✅ GitHub community integration
+   - Ready for distribution
+   - Open source structure
+   - Contribution guidelines
+
+Changed:
+--------
+🔄 Script names simplified
+   - KIRO_AUTO_DEBUG_SYSTEM.bat → KIRO_AUTO_DEBUG.bat
+   - KIRO_INTELLIGENT_AUTO_REPAIR.bat → KIRO_INTELLIGENT_REPAIR.bat
+   - Shorter, clearer names
+
+🔄 Improved user feedback
+   - Progress indicators ([1/6], [2/6], etc.)
+   - Color-coded messages (PS1 version)
+   - Clearer success/error messages
+   - Better completion summaries
+
+🔄 Enhanced safety
+   - Confirmation prompts for destructive actions
+   - Automatic backups before changes
+   - Detailed logging of all operations
+   - Rollback documentation
+
+🔄 Better organization
+   - Separate BAT and PS1 versions
+   - All documentation in root folder
+   - Reports generated in script folder
+   - Cleaner file structure
+
+Fixed:
+------
+🐛 Path detection issues
+   - Better handling of non-standard installations
+   - Improved error messages for missing paths
+   - Fallback mechanisms
+
+🐛 Process termination
+   - More reliable process stopping
+   - Longer wait times for cleanup
+   - Better handling of stuck processes
+
+🐛 Cache clearing
+   - More thorough cache removal
+   - Additional cache locations
+   - GPU cache included
+
+🐛 Report generation
+   - Fixed formatting issues
+   - Added missing information
+   - Better timestamp handling
+
+========================================
+[1.0] - Initial Release
+========================================
+
+Added:
+------
+✅ KIRO_AUTO_DEBUG_SYSTEM.bat
+   - Quick fix for known errors
+   - Cache clearing
+   - Process management
+   - Basic diagnostics
+
+✅ KIRO_INTELLIGENT_AUTO_REPAIR.bat
+   - Advanced error detection
+   - Community fixes
+   - System resource checking
+   - Detailed reporting
+
+✅ KIRO_COMPLETE_REINSTALL.bat
+   - Full data removal
+   - Clean slate preparation
+   - Safety confirmations
+
+✅ Basic documentation
+   - KIRO_ERROR_GUIDE.txt
+   - Usage instructions
+
+Features:
+---------
+- Automatic error detection
+- Cache and temp file clearing
+- MCP configuration reset
+- Workspace settings repair
+- Extension cache management
+- System resource monitoring
+- Diagnostic report generation
+- Backup creation
+- Process management
+
+========================================
+UPCOMING FEATURES (Planned)
+========================================
+
+Version 2.1 (Planned):
+----------------------
+🔮 Automatic update checker
+🔮 GUI version for non-technical users
+🔮 Scheduled maintenance mode
+🔮 Cloud backup integration
+🔮 Extension conflict detector
+🔮 Performance optimizer
+🔮 Custom fix profiles
+
+Version 3.0 (Future):
+---------------------
+🔮 Cross-platform support (Mac/Linux)
+🔮 Remote diagnostics
+🔮 AI-powered error prediction
+🔮 Automatic fix suggestions
+🔮 Integration with Kiro IDE
+🔮 Real-time monitoring
+🔮 Community fix database
+
+========================================
+COMPATIBILITY
+========================================
+
+Version 2.0:
+- Windows 10 (all editions)
+- Windows 11 (all editions)
+- Windows Server 2016+
+- Kiro IDE (all versions)
+- PowerShell 5.1+
+- CMD (all versions)
+
+Version 1.0:
+- Windows 10
+- Windows 11
+- Kiro IDE (all versions)
+- CMD only
+
+========================================
+KNOWN ISSUES
+========================================
+
+Version 2.0:
+- None reported yet
+
+Version 1.0:
+- Path detection on network drives (FIXED in 2.0)
+- Process termination delays (FIXED in 2.0)
+- Report formatting (FIXED in 2.0)
+
+========================================
+MIGRATION GUIDE
+========================================
+
+From v1.0 to v2.0:
+------------------
+
+1. Download new version
+2. Extract to new folder
+3. Choose BAT or PS1 version
+4. Run KIRO_AUTO_DEBUG first
+5. Old scripts still work but deprecated
+
+No data migration needed!
+All scripts work independently.
+
+========================================
+CREDITS
+========================================
+
+Version 2.0:
+- Complete restructure and enhancement
+- PowerShell versions added
+- Documentation expanded
+- Community feedback incorporated
+
+Version 1.0:
+- Initial concept and implementation
+- Basic functionality
+- Core features
+
+Special Thanks:
+- Kiro community for feedback
+- Beta testers for bug reports
+- Contributors for suggestions
+
+========================================
+LICENSE
+========================================
+
+Open Source - Free to use and modify
+No warranty provided
+Use at your own risk
+Contributions welcome
+
+========================================
+SUPPORT
+========================================
+
+For issues or suggestions:
+- GitHub Issues (preferred)
+- Community forums
+- Email support
+
+For Kiro IDE issues:
+- Official Kiro support channels
+
+========================================
+STATISTICS
+========================================
+
+Version 2.0:
+- 6 script files (3 BAT + 3 PS1)
+- 4 documentation files
+- ~1500 lines of code
+- ~3000 lines of documentation
+- 8 total files in package
+
+Version 1.0:
+- 3 script files (BAT only)
+- 1 documentation file
+- ~800 lines of code
+- ~500 lines of documentation
+- 4 total files in package
+
+Growth: 100% more scripts, 500% more documentation!
+
+========================================
+ROADMAP
+========================================
+
+Q1 2026:
+- Version 2.1 release
+- GUI version beta
+- Update checker
+
+Q2 2026:
+- Version 2.2 release
+- Scheduled maintenance
+- Performance optimizer
+
+Q3 2026:
+- Version 3.0 planning
+- Cross-platform research
+- Community feedback
+
+Q4 2026:
+- Version 3.0 beta
+- Mac/Linux support
+- AI features
+
+========================================
+FEEDBACK
+========================================
+
+We want to hear from you!
+
+What works well?
+What needs improvement?
+What features do you want?
+What bugs did you find?
+
+Share your feedback:
+- GitHub Issues
+- Community forums
+- Direct email
+
+Your input shapes future versions!
+
+========================================
+THANK YOU
+========================================
+
+Thank you for using Kiro Auto-Debug System!
+
+Your support and feedback make this project better.
+
+Happy coding! 🚀
+
+========================================

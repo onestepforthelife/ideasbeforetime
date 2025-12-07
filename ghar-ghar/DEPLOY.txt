@@ -1,0 +1,162 @@
+╔══════════════════════════════════════════════════════════════╗
+║          🏠 GHAR GHAR GAME - DEPLOYMENT GUIDE 🏠            ║
+║                  MINIMUM FILES VERSION                       ║
+╚══════════════════════════════════════════════════════════════╝
+
+📁 FOLDER STRUCTURE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+your-domain.com/
+└── ghar-ghar/
+    ├── ghar-ghar-game.html (or rename to index.html)
+    ├── ghar-ghar-roles-extended.js
+    ├── ghar-ghar-i18n.js
+    ├── ghar-ghar-stories.js
+    ├── ghar-ghar-pwa.js
+    ├── ghar-ghar-multiplayer.js
+    ├── ghar-ghar-sw.js
+    └── manifest.json
+
+📦 MINIMUM FILES (8 files):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ ghar-ghar-game.html (main game)
+✅ ghar-ghar-roles-extended.js (10 roles)
+✅ ghar-ghar-i18n.js (5 languages)
+✅ ghar-ghar-stories.js (9 story prompts)
+✅ ghar-ghar-pwa.js (PWA features)
+✅ ghar-ghar-multiplayer.js (FREE multiplayer)
+✅ ghar-ghar-sw.js (service worker)
+✅ manifest.json (PWA manifest)
+
+🚀 DEPLOYMENT OPTIONS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPTION 1: Subfolder (Recommended)
+----------------------------------
+URL: https://your-domain.com/ghar-ghar/
+Steps:
+1. Upload all 8 files to /ghar-ghar/ folder
+2. Access at: your-domain.com/ghar-ghar/ghar-ghar-game.html
+3. Or rename main file to index.html for cleaner URL
+
+OPTION 2: Root Directory
+------------------------
+URL: https://your-domain.com/ghar-ghar-game.html
+Steps:
+1. Upload all 8 files to root directory
+2. Access at: your-domain.com/ghar-ghar-game.html
+
+OPTION 3: Separate Domain
+--------------------------
+URL: https://gharghar.com
+Steps:
+1. Point domain to Cloudflare Pages
+2. Upload all 8 files
+3. Rename main file to index.html
+
+✅ VERIFICATION:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+After upload, check:
+□ Game loads without errors
+□ All 10 roles appear
+□ Language selector works
+□ Multiplayer button visible
+□ Can create/join rooms
+□ Sound effects work
+□ PWA install prompt appears
+
+🌐 MULTIPLAYER TEST:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Open game on Device 1
+2. Click "🌐 Play Online" → "Create Room"
+3. Copy room code
+4. Open game on Device 2
+5. Click "🌐 Play Online" → "Join Room"
+6. Paste code
+7. Both devices should connect!
+
+📊 FILE SIZES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ghar-ghar-game.html: ~50KB
+ghar-ghar-roles-extended.js: ~5KB
+ghar-ghar-i18n.js: ~8KB
+ghar-ghar-stories.js: ~4KB
+ghar-ghar-pwa.js: ~3KB
+ghar-ghar-multiplayer.js: ~8KB
+ghar-ghar-sw.js: ~1KB
+manifest.json: ~1KB
+TOTAL: ~80KB (very light!)
+
+💰 COSTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Hosting: $0 (Cloudflare Pages)
+Multiplayer: $0 (PeerJS + WebRTC)
+Bandwidth: $0 (Cloudflare free tier)
+TOTAL: $0 Forever ✅
+
+🔗 UPDATE SITEMAP:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Add to your main sitemap.xml:
+
+<url>
+  <loc>https://your-domain.com/ghar-ghar/</loc>
+  <lastmod>2025-11-23</lastmod>
+  <priority>0.85</priority>
+  <changefreq>monthly</changefreq>
+</url>
+
+📱 SHARE LINKS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Direct: https://your-domain.com/ghar-ghar/
+Short: Use bit.ly or your own short link
+QR Code: Generate for easy mobile access
+
+🎉 LAUNCH ANNOUNCEMENT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+"🏠 Ghar Ghar Game is LIVE!
+
+Play with friends online - FREE forever!
+✅ 10 roles (doctor, teacher, police, chef & more)
+✅ 5 Indian languages
+✅ Online multiplayer
+✅ Works offline
+✅ No ads, no data collection
+
+Try it: [your-link]
+
+#GharGharGame #FreeMultiplayer #IndianKids"
+
+📧 SUPPORT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Creator: Amit Kumar
+Email: [your-email]
+Website: amitagrawal.info
+
+🐛 TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Issue: Scripts not loading
+Fix: Check all .js files in same folder
+
+Issue: Multiplayer not working
+Fix: Ensure HTTPS enabled (Cloudflare default)
+
+Issue: PWA not installing
+Fix: Normal on some browsers, works on Chrome/Edge
+
+✅ CHECKLIST:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ All 8 files uploaded
+□ Files in correct folder
+□ HTTPS enabled
+□ Game loads
+□ Multiplayer tested
+□ Sitemap updated
+□ Analytics working
+□ Ready to announce!
+
+╔══════════════════════════════════════════════════════════════╗
+║                    🎊 READY TO LAUNCH! 🎊                   ║
+║                                                              ║
+║         Ghar Ghar™ by Amit Kumar © 2025                     ║
+║         "Away from phones, come here!"                       ║
+║         Now with FREE Online Multiplayer! 🌐                ║
+╚══════════════════════════════════════════════════════════════╝

@@ -1,0 +1,44 @@
+# MCP QUICK START - DO THIS NOW
+
+## 🚀 FASTEST WAY (1 Minute):
+
+1. **Run the installer:**
+   - Double-click: INSTALL_MCP_NOW.bat
+   - Wait for it to complete (installs UV + MCP servers)
+
+2. **Restart Kiro:**
+   - Close Kiro completely (File → Exit)
+   - Reopen Kiro
+
+3. **Test it works:**
+   - Come back to this chat
+   - Say: "test MCP"
+   - I'll fetch web pages and read PDFs!
+
+## ✅ What the installer does:
+- Installs UV (Python package manager)
+- Installs mcp-server-fetch (for web pages)
+- Installs mcp-server-filesystem (for PDFs)
+- Sets up everything automatically
+
+## 🎯 After restart, I can:
+✅ Fetch any web page from internet
+✅ Read PDFs from your workspace
+✅ Check all 20+ documentation links
+✅ Process thousands of documents
+✅ Verify links work
+✅ Extract PDF content
+
+## ⚡ THAT'S IT!
+
+Just run INSTALL_MCP_NOW.bat and restart Kiro.
+
+No manual configuration needed!
+No complex setup!
+Everything automated!
+
+---
+
+**Created:** December 6, 2025
+**Status:** READY TO RUN
+**Time:** 1 minute total

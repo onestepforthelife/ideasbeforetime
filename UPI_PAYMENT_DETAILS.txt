@@ -1,0 +1,49 @@
+UPI PAYMENT DETAILS - AMIT KUMAR
+=================================
+
+UPI ID: 9549300319@upi
+QR Code: Provided (BHIM QR Code image)
+
+PAYMENT METHODS SUPPORTED:
+- BHIM
+- Google Pay
+- PhonePe
+- Paytm
+- Any UPI App
+
+INTEGRATION POINTS:
+===================
+
+1. Social Profile Optimizer (₹21)
+   - Payment page: social-optimizer-app.html
+   - Current: Razorpay/Stripe integration
+   - Add: Direct UPI option
+
+2. Upsell Services:
+   - CV Optimization (₹499)
+   - Interview Prep (₹999)
+   - Career Accelerator Pack (₹1,999)
+
+RECOMMENDED IMPLEMENTATION:
+===========================
+
+Add UPI as primary payment option:
+- Show QR code on payment page
+- Display UPI ID: 9549300319@upi
+- Instructions: "Scan QR or use UPI ID"
+- After payment: User uploads screenshot for verification
+
+BENEFITS:
+- Zero payment gateway fees
+- Instant payment
+- Popular in India
+- Simple for users
+
+NEXT STEPS:
+===========
+1. Add UPI payment option to SPO app
+2. Create payment verification system
+3. Update payment-selector.js
+4. Test payment flow
+
+Would you like me to integrate this UPI payment option into your SPO tool?

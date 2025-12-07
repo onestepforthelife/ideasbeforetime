@@ -1,0 +1,40 @@
+REMAINING PAGES WITH PURPLE COLOR - December 2, 2025
+====================================================
+
+CRITICAL PAGES STILL PURPLE (Need immediate fix):
+--------------------------------------------------
+1. timeline.html - Body background
+2. terms-and-disclaimer.html - Body background  
+3. Specialty_Chemicals_Report_UPDATED.html - Header
+4. social-optimizer-success.html - Body background
+5. social-optimizer-dashboard.html - Body background
+6. social-optimizer-admin.html - Body background
+7. research-preview.html - Banner and cards
+8. request-access.html - Body background
+9. refund-policy.html - Body background
+10. profile-optimizer.html - Body background
+11. privacy-policy.html - Body background
+12. PAYMENT_VISUAL_GUIDE.html - Body background
+
+PAGES WITH PURPLE ACCENTS (Lower priority):
+--------------------------------------------
+- social-optimizer-quickstart.html - Nav cards, badges
+- social-optimizer-app.html - Buttons, progress steps
+- social-optimizer-index.html - Testimonial borders
+
+HEADER ALIGNMENT ISSUES:
+------------------------
+Some pages have navigation, some don't
+Some have extra padding at top
+Need to standardize:
+- All pages should load common-navigation.js
+- All pages should have same top padding
+- Navigation should be sticky at top
+
+RECOMMENDATION:
+---------------
+Run a global find-replace:
+#667eea → #5a6c7d (slate grey)
+#764ba2 → #8b9aa7 (light grey)
+
+This will fix ALL remaining purple colors at once.

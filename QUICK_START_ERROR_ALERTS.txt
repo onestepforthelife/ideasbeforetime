@@ -1,0 +1,42 @@
+╔══════════════════════════════════════════════════════════════╗
+║          🚀 QUICK START - ERROR ALERTS 🚀                   ║
+╚══════════════════════════════════════════════════════════════╝
+
+DO THIS NOW (5 MINUTES):
+────────────────────────────────────────────────────────────────
+
+1. Open: https://www.emailjs.com/
+
+2. Sign up with: onestepforthelife@gmail.com
+
+3. Connect Gmail
+
+4. Create template (copy/paste):
+   Subject: {{subject}}
+   Body: {{message}}
+
+5. Get 3 keys:
+   - Public Key
+   - Service ID  
+   - Template ID
+
+6. Tell Kiro: "My keys are: [paste keys]"
+
+7. Kiro updates files automatically
+
+8. Test by clicking button 3 times
+
+9. Check email!
+
+DONE! ✅
+
+────────────────────────────────────────────────────────────────
+
+WHAT YOU GET:
+✅ Email alerts for all errors
+✅ Works while traveling
+✅ No laptop needed
+✅ Fix from phone
+✅ Business protected!
+
+START: https://www.emailjs.com/ 🚀

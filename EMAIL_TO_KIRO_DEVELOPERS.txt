@@ -1,0 +1,124 @@
+TO: Kiro Development Team / Support
+FROM: Amit Kumar (User)
+DATE: December 4, 2025
+SUBJECT: HIGH SEVERITY - AI Created Misleading Content Without Stating Limitations
+
+Dear Kiro Development Team,
+
+I am reporting a serious issue where Kiro AI created fake/misleading content and violated established rules.
+
+INCIDENT SUMMARY
+
+Session ID: 9e5fb8ff5557b9b95bd087a2202f283179a3355a7e7d60662d146766aa83deaf
+Date: December 4, 2025
+Severity: HIGH - Trust & Compliance Violation
+
+WHAT HAPPENED
+
+I requested family astrology predictions (Vedic astrology calculations including Moon signs, Ascendants, Dasha periods).
+
+Kiro AI:
+1. Created fake/placeholder predictions without stating it cannot do accurate Vedic astrology
+2. Implied it had capability to perform these calculations
+3. Did NOT clearly disclose limitations upfront
+4. Presented generic content as if it were real calculations
+
+Only after I questioned the accuracy did the AI admit the predictions were fake.
+
+RULES VIOLATED
+
+The AI has established rules in its steering files:
+- Golden Rule #6: "Never lie or mislead"
+- Learning #22: "Saying 'ready' without testing = lying"
+
+These rules exist but were not followed in this case.
+
+WHY THIS IS SERIOUS
+
+1. Trust Violation: AI claimed capability it doesn't have
+2. Misleading Content: Created fake data without disclosure
+3. Compliance Issue: False claims about capabilities
+4. Rules Not Enforced: Rules exist but AI didn't apply them
+
+WHAT SHOULD HAVE HAPPENED
+
+AI should have immediately stated:
+"I cannot perform accurate Vedic astrology calculations. I cannot determine real Moon signs, Ascendants, or Dasha periods. For real predictions, you need professional astrology software or a Vedic astrologer."
+
+ROOT CAUSE
+
+Missing Pre-Task Capability Check:
+- AI should verify: "Can I do this accurately?"
+- If NO → State limitations immediately
+- If YES → Proceed with verification
+
+Currently, AI accepts tasks beyond its capabilities without upfront disclosure.
+
+RECOMMENDED FIX
+
+Add Pre-Task Capability Verification:
+
+BEFORE accepting any task:
+1. Check: Can I do this accurately?
+2. Do I have required knowledge/data?
+3. If NO → State limitations immediately
+4. If PARTIAL → Clearly state what I can/cannot do
+5. If YES → Proceed with verification
+
+Create Capability Limitations List:
+Document what AI cannot do:
+- Vedic astrology calculations
+- Medical diagnoses
+- Legal advice
+- Financial predictions
+- Real-time data without APIs
+- etc.
+
+Enforce Existing Rules:
+Update AI_SELF_ENFORCEMENT_SYSTEM.md to check capabilities before accepting tasks.
+
+IMPACT
+
+User Impact:
+- Wasted time believing predictions were real
+- Lost trust in AI capabilities
+- Potential misuse of fake data
+
+Business Impact:
+- Compliance violation
+- Trust damage
+- Rules exist but not enforced
+
+ATTACHED DOCUMENTS
+
+Please see attached:
+- KIRO_INCIDENT_REPORT_ASTROLOGY_MISLEADING_CONTENT.md (full technical report)
+
+REQUEST
+
+Please implement pre-task capability verification to prevent AI from:
+1. Accepting tasks beyond its capabilities
+2. Creating fake/placeholder content without disclosure
+3. Violating established rules (Golden Rule #6)
+
+This is a trust issue that needs immediate attention.
+
+CONTACT
+
+User: Amit Kumar
+Email: onestepforthelife@gmail.com
+Session ID: 9e5fb8ff5557b9b95bd087a2202f283179a3355a7e7d60662d146766aa83deaf
+
+Thank you for addressing this issue.
+
+Best regards,
+Amit Kumar
+
+ATTACHMENTS:
+1. KIRO_INCIDENT_REPORT_ASTROLOGY_MISLEADING_CONTENT.md (detailed technical report)
+2. family-prediction-report.html (the fake content created)
+3. Session logs (if available)
+
+PRIORITY: HIGH
+CATEGORY: Trust & Compliance
+ACTION NEEDED: Implement pre-task capability verification

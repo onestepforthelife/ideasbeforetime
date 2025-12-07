@@ -1,0 +1,218 @@
+╔══════════════════════════════════════════════════════════════╗
+║     📧 AUTO EMAIL SENDER WITH APPROVAL 📧                   ║
+║          Click to Send - You Approve First                   ║
+╚══════════════════════════════════════════════════════════════╝
+
+✅ WHAT IT DOES:
+
+1. Shows you email preview
+2. You click: YES / NO / EDIT
+3. If YES → Sends automatically
+4. If EDIT → You modify, then sends
+5. If NO → Skips to next
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 SETUP (One Time - 5 Minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: Run Email Sender
+   python email_sender.py
+
+STEP 2: Choose Your Email
+   1. Gmail (recommended)
+   2. Outlook
+
+STEP 3: For Gmail - Get App Password
+   → Go to: https://myaccount.google.com/apppasswords
+   → Sign in
+   → Create App Password
+   → Select: Mail + Windows Computer
+   → Copy 16-character password
+   → Paste when asked
+
+STEP 4: Test Email
+   → Choose option 5 (Test Email)
+   → Sends test to yourself
+   → If works → Setup complete!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📧 SEND SINGLE EMAIL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+python email_sender.py
+→ Choose option 3
+→ Enter: job_results/job_1_20251201.json
+
+YOU SEE:
+┌────────────────────────────────────────┐
+│ 📧 EMAIL PREVIEW                       │
+├────────────────────────────────────────┤
+│ To: albert.ooi@coherent.com...        │
+│     (7 recipients)                     │
+│                                        │
+│ Subject: Work Capability Available |   │
+│          Director Operations...        │
+│                                        │
+│ Dear Albert, Brad, Grace...            │
+│ [Full email preview]                   │
+└────────────────────────────────────────┘
+
+✅ Send this email? (yes/no/edit):
+
+→ Type: yes
+→ Email sent to 7 people!
+→ BCC to yourself (you get copy)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 BATCH SEND ALL JOBS (FASTEST)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+python email_sender.py
+→ Choose option 4
+
+AGENT SHOWS:
+┌────────────────────────────────────────┐
+│ 📊 Found 20 jobs to send               │
+├────────────────────────────────────────┤
+│ 📧 Job 1/20: job_1_20251201.json      │
+│                                        │
+│ [Email preview]                        │
+│                                        │
+│ ✅ Send? (yes/no/edit): yes           │
+│ ✅ Email sent!                         │
+│                                        │
+│ Continue to next? (yes/no): yes       │
+├────────────────────────────────────────┤
+│ 📧 Job 2/20: job_2_20251201.json      │
+│ [Email preview]                        │
+│ ✅ Send? (yes/no/edit): yes           │
+│ ...                                    │
+└────────────────────────────────────────┘
+
+RESULT:
+   ✅ Sent: 20 emails
+   ⏭️ Skipped: 0
+   ⏱️ Time: 10 minutes (vs 2 hours manual)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✏️ EDIT BEFORE SENDING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[Email preview shown]
+
+✅ Send? (yes/no/edit): edit
+
+📝 Edit mode:
+Subject [Work Capability...]: [Press Enter to keep]
+Body (press Enter twice when done):
+[Type new body or paste modified version]
+[Press Enter]
+[Press Enter again]
+
+✅ Send edited version? (yes/no): yes
+✅ Email sent!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 TRACKING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+All sent emails logged in: sent_emails_log.json
+
+{
+  "timestamp": "2025-12-01T10:30:00",
+  "to": ["albert.ooi@coherent.com", ...],
+  "subject": "Work Capability Available...",
+  "from": "annikavashist@gmail.com"
+}
+
+Use this to:
+   • Track who you emailed
+   • Avoid duplicate emails
+   • Follow up after 7 days
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 COMPLETE WORKFLOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MORNING (9:00 AM):
+   → Agent runs automatically
+   → Finds 20 jobs
+   → Generates 20 email drafts
+   → Saves to job_results folder
+
+AFTERNOON (2:00 PM):
+   → Run: python email_sender.py
+   → Choose: Batch Send All Jobs
+   → Review each email (10 sec each)
+   → Click YES for each
+   → 20 emails sent in 10 minutes!
+
+EVENING (8:00 PM):
+   → Check sent_emails_log.json
+   → See what you sent today
+   → Relax!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚡ TIME SAVINGS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BEFORE (Manual):
+   • Find job: 10 min
+   • Find contacts: 15 min
+   • Write email: 10 min
+   • Send: 2 min
+   • Total per job: 37 min
+   • 20 jobs: 12 hours!
+
+AFTER (With Tools):
+   • Agent finds jobs: 0 min (automatic)
+   • Agent finds contacts: 0 min (automatic)
+   • Agent writes email: 0 min (automatic)
+   • You review & send: 30 sec
+   • Total per job: 30 sec
+   • 20 jobs: 10 minutes!
+
+SAVINGS: 11 hours 50 minutes per day!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔒 SECURITY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Gmail App Password (not your real password)
+✅ Stored locally (never sent anywhere)
+✅ You approve every email
+✅ BCC yourself (you get copy)
+✅ Logs all sent emails
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚨 TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ERROR: "Authentication failed"
+FIX: Use Gmail App Password, not regular password
+
+ERROR: "Connection refused"
+FIX: Check internet connection
+
+ERROR: "Invalid email"
+FIX: Check email_config.json has correct email
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ YOU'RE READY!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Run: python email_sender.py
+
+Setup Gmail → Test → Batch send 20 jobs in 10 minutes!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

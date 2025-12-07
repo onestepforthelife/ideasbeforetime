@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Performance: Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preload" href="common-styles.css" as="style">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiro AI Training Guide - Amit's 3-Week Learning Journey | Ideas Before Time</title>
+<link rel="icon" type="image/jpeg" href="images/logo Goda 40 bs 32 pixel.jpg">
+<link rel="apple-touch-icon" href="images/Logo One Step for the life 180 by 84 Pixel.jpg">
+    <meta name="description" content="Complete Kiro AI training guide with 29 golden rules, learnings from 3 weeks of real work. Train your Kiro AI assistant to avoid common mistakes.">
+    <link rel="stylesheet" href="common-watermark.css">
+    <link rel="stylesheet" href="common-footer.css">
+    <style>*{margin:0;padding:0;box-sizing:border-box;}body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:#333;background:#f5f5f5;max-width:1400px;margin:0 auto;padding:20px;}.header{background:linear-gradient(135deg,#2563eb 0%,#1e40af 100%);color:white;padding:40px;border-radius:15px;margin-bottom:30px;text-align:center;}.header h1{font-size:2.5em;margin-bottom:15px;}.header .subtitle{font-size:1.2em;opacity:0.9;}.version-info{background:white;padding:20px;border-radius:10px;margin-bottom:30px;border-left:5px solid #2563eb;}.version-selector{background:white;padding:20px;border-radius:10px;margin-bottom:30px;}.version-selector select{width:100%;padding:12px;font-size:16px;border:2px solid #2563eb;border-radius:8px;background:white;}.content-section{background:white;padding:30px;border-radius:10px;margin-bottom:20px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}.content-section h2{color:#2563eb;margin-bottom:20px;padding-bottom:10px;border-bottom:3px solid #2563eb;}.content-section h3{color:#1e40af;margin-top:25px;margin-bottom:15px;}.rule-box{background:#f8f9fa;padding:20px;border-radius:8px;margin:15px 0;border-left:4px solid #2563eb;}.rule-number{font-size:1.5em;font-weight:bold;color:#2563eb;margin-bottom:10px;}.changelog{background:#fff3cd;padding:15px;border-radius:8px;margin:10px 0;border-left:4px solid #ffc107;}.download-btn{display:inline-block;background:#2563eb;color:white;padding:15px 30px;border-radius:8px;text-decoration:none;font-weight:bold;margin:10px 5px;transition:all 0.3s;}.download-btn:hover{background:#1e40af;transform:translateY(-2px);}code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-family:'Courier New',monospace;}pre{background:#2d2d2d;color:#f8f8f2;padding:15px;border-radius:8px;overflow-x:auto;margin:15px 0;}.warning-box{background:#fff3cd;border-left:4px solid #ffc107;padding:15px;margin:15px 0;border-radius:5px;}.success-box{background:#d4edda;border-left:4px solid #28a745;padding:15px;margin:15px 0;border-radius:5px;}ul,ol{margin:15px 0;padding-left:30px;}li{margin:8px 0;}</style>
+    <link rel="canonical" href="https://ideasbeforetime.pages.dev/kiro-training-guide.html">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3181510462001437"
+            crossorigin="anonymous"></script>
+    <script src="google-adsense.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Ideas Before Time",
+  "alternateName": "One Step For The Life",
+  "url": "https://onestepforthelife.com",
+  "description": "AI tools, market research, business insights, and professional resources",
+  "author": {
+    "@type": "Person",
+    "name": "Amit Kumar",
+    "jobTitle": "Business Analyst & AI Specialist"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://onestepforthelife.com/blog.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <link rel="modulepreload" href="common-navigation.js">
+</head>
+<body>
+
+<div class="header">
+    <h1>🤖 Kiro AI Training Guide</h1>
+    <p class="subtitle">3 Weeks of Real-World Learning • 29 Golden Rules • Continuously Updated</p>
+    <p style="margin-top: 15px; font-size: 0.9em;">
+        By Amit Kumar | Ideas Before Time<br>
+        Share this with friends & family to train their Kiro AI
+    </p>
+</div>
+
+<div class="version-info">
+    <h3>📌 Current Version</h3>
+    <p><strong>Version:</strong> 2.0 (December 4, 2025, 18:45 IST)</p>
+    <p><strong>Total Rules:</strong> 29 Golden Rules</p>
+    <p><strong>Total Learnings:</strong> 27+ documented mistakes & solutions</p>
+    <p><strong>Status:</strong> ✅ Production-Ready • Continuously Updated</p>
+</div>
+
+<div class="version-selector">
+    <h3>📚 Select Version to View</h3>
+    <select id="versionSelect" onchange="loadVersion()">
+        <option value="v2.0">Version 2.0 - Current (Dec 4, 2025) - Added Rule #29</option>
+        <option value="v1.9">Version 1.9 (Dec 4, 2025) - Report fixes & email collection</option>
+        <option value="v1.0">Version 1.0 (Dec 2, 2025) - Initial 3-week compilation</option>
+    </select>
+</div>
+
+<div id="content">
+    <!-- Content will be loaded here based on version -->
+</div>
+
+<div class="content-section">
+    <h2>📥 Download Options</h2>
+    <p>Download the complete training files to use with your own Kiro AI:</p>
+    
+    <a href="#" onclick="downloadCurrentVersion()" class="download-btn">
+        📄 Download Current Version (v2.0)
+    </a>
+    
+    <a href="#" onclick="downloadAllVersions()" class="download-btn">
+        📦 Download All Versions (Archive)
+    </a>
+    
+    <div class="warning-box" style="margin-top: 20px;">
+        <strong>⚠️ How to Use:</strong><br>
+        1. Download the version you want<br>
+        2. Place files in your Kiro workspace: <code>.kiro/steering/</code><br>
+        3. Kiro will automatically read and apply these rules<br>
+        4. Your Kiro will learn from Amit's 3 weeks of experience!
+    </div>
+</div>
+
+<script>
+// Version data
+const versions = {
+    'v2.0': {
+        date: 'December 4, 2025, 18:45 IST',
+        rules: 29,
+        changes: [
+            'Added Golden Rule #29: Remove pause from bat files',
+            'Fixed market report headers (centered)',
+            'Added email collection for report access',
+            'Fixed 70% blur on investment sections'
+        ],
+        content: `
+<div class="content-section">
+    <h2>🎯 Golden Rules (29 Total)</h2>
+    
+    <div class="changelog">
+        <strong>🆕 What's New in v2.0:</strong><br>
+        • Golden Rule #29: Remove pause from bat files for automation<br>
+        • Market reports now collect user emails via request-access.html<br>
+        • All report headers centered for professional appearance<br>
+        • Investment sections properly blurred (70%) on all reports
+    </div>
+    
+    <div class="rule-box">
+        <div class="rule-number">Rule #0: Site is LIVE - No Testers!</div>
+        <p><strong>THE REALITY:</strong></p>
+        <ul>
+            <li>✗ No QA team</li>
+            <li>✗ No staging environment</li>
+            <li>✗ No testers</li>
+            <li>✓ Just Amit and LIVE site</li>
+            <li>✓ Real users visiting NOW</li>
+        </ul>
+        <p><strong>What this means:</strong> Every push goes LIVE immediately. Every mistake = real users see it = business impact!</p>
+        <p><strong>Before every push:</strong></p>
+        <ol>
+            <li>Check LIVE site (ideasbeforetime.pages.dev)</li>
+            <li>Test every page visually</li>
+            <li>Click every link</li>
+            <li>Verify all corrections applied</li>
+            <li>THEN push</li>
+        </ol>
+    </div>
+    
+    <div class="rule-box">
+        <div class="rule-number">Rule #1: Verify Before Using</div>
+        <p>Never use name, email, or personal data without asking first.</p>
+        <p><strong>Example:</strong> Don't assume email is "onestepforthelife@gmail.com" - ask which email to use.</p>
+    </div>
+    
+    <div class="rule-box">
+        <div class="rule-number">Rule #2: Never Repeat Mistakes</div>
+        <p>Document every mistake immediately in steering files.</p>
+        <p><strong>Files to update:</strong></p>
+        <ul>
+            <li>3_WEEKS_COMPLETE_LEARNINGS.md</li>
+            <li>TRIGGER_KEYWORDS.md (if new pattern)</li>
+            <li>KIRO_RULES.md (if fundamental)</li>
+        </ul>
+    </div>
+    
+    <div class="rule-box">
+        <div class="rule-number">Rule #3: Test What Matters First</div>
+        <p><strong>Priority order:</strong></p>
+        <ul>
+            <li><strong>Level 0:</strong> Primary user flow (can user complete task?)</li>
+            <li><strong>Level 1:</strong> Functional (core features work)</li>
+            <li><strong>Level 2:</strong> Cosmetic (colors, headers, SEO)</li>
+        </ul>
+        <p><strong>Never say "ready" without testing Level 0!</strong></p>
+    </div>
+    
+    <div class="rule-box">
+        <div class="rule-number">Rule #4: Assume Nothing</div>
+        <p>Verify everything, show proof.</p>
+        <p><strong>Bad:</strong> "Looks good!"<br>
+        <strong>Good:</strong> "Ran 5 tests, 82% quality score, 3 issues found"</p>
+    </div>
+    
+    <div class="rule-box">
+        <div class="rule-number">Rule #5: Complete Over Partial</div>
+        <p>Check ALL files, not just one.</p>
+        <p><strong>Example:</strong> If fixing navigation, check all 47 HTML files, not just index.html</p>
+    </div>
+    
+    <div class="rule-box">
+        <div class="rule-number">Rule #6: Honesty Over Appearance</div>
+        <p>"Not tested" is better than "Probably works"</p>
+        <p><strong>Never say "fixed" without running tests!</strong></p>
+    </div>
+    
+    <div class="rule-box">
+        <div class="rule-number">Rule #13: Ask About Experience</div>
+        <p>Ask "What experience do you want?" not just "What do you want?"</p>
+        <p><strong>Example:</strong> Magazine flipbook vs simple scroll - same content, different experience</p>
+    </div>
+    
+    <div class="rule-box">
+        <div class="rule-number">Rule #14: Test Primary User Flow First</div>
+        <p>Before testing anything else, test:</p>
+        <ol>
+            <li>Can user complete the main task?</li>
+            <li>Does the form submit?</li>
+            <li>Does navigation work?</li>
+            <li>Does the core feature work?</li>
+        </ol>
+        <p><strong>Then test colors, headers, SEO, etc.</strong></p>
+    </div>
+    
+    <div class="rule-box">
+        <div class="rule-number">Rule #16: Self-Healing System</div>
+        <p>Don't just detect errors - automatically fix them!</p>
+        <p><strong>The complete cycle:</strong></p>
+        <ol>
+            <li>Detect issue (user clicks button 3+ times)</li>
+            <li>Analyze problem (button not responding)</li>
+            <li>Apply automatic fix (reset form state)</li>
+            <li>Verify fix worked (button now works)</li>
+            <li>Report to admin (notification sent)</li>
+        </ol>
+    </div>
+    
+    <div class="rule-box">
+        <div class="rule-number">Rule #17: Never Trust User Input</div>
+        <p>Always validate and sanitize user inputs!</p>
+        <p><strong>Validation levels:</strong></p>
+        <ol>
+            <li>Format validation (email pattern, URL format)</li>
+            <li>Range validation (min/max length, values)</li>
+            <li>Required fields (check all mandatory)</li>
+            <li>Sanitization (remove HTML, escape special chars)</li>
+            <li>Server-side validation (never trust client only)</li>
+        </ol>
+    </div>
+    
+    <div class="rule-box">
+        <div class="rule-number">Rule #27: CSS Columns for Flowing Content</div>
+        <p>When user wants multi-column layout with no blank spaces, use CSS columns, NOT grid!</p>
+        <pre><code>column-count: 2;
+column-gap: 40px;
+break-inside: avoid;</code></pre>
+        <p><strong>Use CSS columns when:</strong></p>
+        <ul>
+            <li>Content should flow naturally (like magazine)</li>
+            <li>You want automatic balancing</li>
+            <li>You want NO blank spaces</li>
+            <li>Content length varies</li>
+        </ul>
+    </div>
+    
+    <div class="rule-box">
+        <div class="rule-number">Rule #28: Test Backend, Not Just Frontend</div>
+        <p>Don't just test if buttons click - test if API calls work!</p>
+        <p><strong>Testing workflow:</strong></p>
+        <ol>
+            <li>Code inspection (read actual code)</li>
+            <li>Network inspection (check API calls in DevTools)</li>
+            <li>Console logging (verify code path)</li>
+            <li>Data verification (unique AI output vs templates)</li>
+            <li>Error testing (invalid data, no internet)</li>
+        </ol>
+    </div>
+    
+    <div class="rule-box">
+        <div class="rule-number">🆕 Rule #29: Remove Pause from Bat Files</div>
+        <p>Never add <code>pause</code> to bat files that will be run from IDE or automation!</p>
+        <p><strong>Why:</strong></p>
+        <ul>
+            <li>✅ Bat file completes automatically</li>
+            <li>✅ No manual intervention needed</li>
+            <li>✅ Better for automation</li>
+            <li>✅ Cleaner workflow</li>
+        </ul>
+        <p><strong>Bad:</strong></p>
+        <pre><code>echo DONE!
+pause</code></pre>
+        <p><strong>Good:</strong></p>
+        <pre><code>echo DONE!
+REM No pause needed</code></pre>
+    </div>
+</div>
+
+<div class="content-section">
+    <h2>🔑 Trigger Keywords</h2>
+    <p>When Amit says these words, automatically take action:</p>
+    
+    <div class="rule-box">
+        <h3>"check" or "verify" or "test"</h3>
+        <p><strong>Action:</strong> Run ALL automated tests + check what Amit specifically mentioned</p>
+    </div>
+    
+    <div class="rule-box">
+        <h3>"all"</h3>
+        <p><strong>Action:</strong> List ALL files, check ALL pages, show count (X/Y files)</p>
+    </div>
+    
+    <div class="rule-box">
+        <h3>"fix"</h3>
+        <p><strong>Action:</strong> Create backup first, fix all related, test after</p>
+    </div>
+    
+    <div class="rule-box">
+        <h3>"still" (e.g., "still broken")</h3>
+        <p><strong>Action:</strong> I missed something, check thoroughly, admit mistake</p>
+    </div>
+    
+    <div class="rule-box">
+        <h3>"upload" or "push"</h3>
+        <p><strong>Action:</strong> Check if already ran in this session, don't repeat</p>
+    </div>
+    
+    <div class="rule-box">
+        <h3>"record it" or "update rules"</h3>
+        <p><strong>Action:</strong> Automatically update ALL relevant files:</p>
+        <ul>
+            <li>3_WEEKS_COMPLETE_LEARNINGS.md</li>
+            <li>GOLDEN_RULES.md</li>
+            <li>COMPLETE_TESTING_RULESET.md</li>
+            <li>TRIGGER_KEYWORDS.md</li>
+        </ul>
+    </div>
+</div>
+
+<div class="content-section">
+    <h2>📋 Before Every Response Checklist</h2>
+    <ol>
+        <li>✅ Remember: Site is LIVE, no testers, real users NOW</li>
+        <li>✅ Check: Did we decide this already?</li>
+        <li>✅ Check: Did I make this mistake before?</li>
+        <li>✅ Check: What am I NOT checking?</li>
+        <li>✅ Verify FIRST, respond SECOND</li>
+        <li>✅ Check LIVE site before pushing</li>
+    </ol>
+</div>
+
+<div class="content-section">
+    <h2>🚨 Critical Changes = Restore Point</h2>
+    <p><strong>Before ANY critical change, ALWAYS create restore point:</strong></p>
+    <pre><code>xcopy Cloudfare backup_YYYYMMDD_HHMMSS /E /I /H /Y</code></pre>
+    
+    <p><strong>What is critical?</strong></p>
+    <ul>
+        <li>Changing live HTML/CSS/JS files</li>
+        <li>Modifying payment systems</li>
+        <li>Changing navigation/footer</li>
+        <li>Updating forms</li>
+        <li>Changing business logic</li>
+        <li>ANY change that affects users</li>
+    </ul>
+</div>
+`
+    },
+    
+    'v1.9': {
+        date: 'December 4, 2025, 16:00 IST',
+        rules: 28,
+        changes: [
+            'Fixed market report headers (centered)',
+            'Added email collection via request-access.html',
+            'Fixed 70% blur on investment sections',
+            'Updated 5 report files'
+        ],
+        content: `
+<div class="content-section">
+    <h2>📝 Version 1.9 Changes</h2>
+    <div class="changelog">
+        <strong>Changes in this version:</strong><br>
+        • Fixed all market report headers to be centered<br>
+        • Changed "Request Access" to collect emails via form<br>
+        • Verified 70% blur working on investment sections<br>
+        • Updated: Final_Acrylic_Market_Report.html, nickel-esg-report.html, Paper_Pulp_Specialty_Chemicals_Report.html, Poloxamer_Market_Report.html, Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html
+    </div>
+    <p><em>See Version 2.0 for complete rule list</em></p>
+</div>
+`
+    },
+    
+    'v1.0': {
+        date: 'December 2, 2025, 21:45 IST',
+        rules: 27,
+        changes: [
+            'Initial compilation of 3 weeks of learning',
+            '27 major learnings documented',
+            '50+ test parameters',
+            '10 steering files created',
+            '5 automated test scripts'
+        ],
+        content: `
+<div class="content-section">
+    <h2>📝 Version 1.0 - Initial Release</h2>
+    <div class="success-box">
+        <strong>✅ First Complete Compilation</strong><br>
+        This is the initial release after 3 weeks of intensive learning with Amit (Nov 11 - Dec 2, 2025).
+    </div>
+    
+    <h3>📊 What's Included:</h3>
+    <ul>
+        <li><strong>27 Major Learnings</strong> - Every mistake documented</li>
+        <li><strong>50+ Test Parameters</strong> - Comprehensive testing checklist</li>
+        <li><strong>10 Steering Files</strong> - Complete rule system</li>
+        <li><strong>5 Test Scripts</strong> - Automated quality checks</li>
+        <li><strong>Quality Improvement:</strong> 40% → 82% (+42%)</li>
+    </ul>
+    
+    <p><em>See Version 2.0 for complete rule list and latest updates</em></p>
+</div>
+`
+    }
+};
+
+function loadVersion() {
+    const select = document.getElementById('versionSelect');
+    const version = select.value;
+    const data = versions[version];
+    
+    document.getElementById('content').innerHTML = data.content;
+}
+
+function downloadCurrentVersion() {
+    const content = generateDownloadContent('v2.0');
+    downloadFile('kiro-training-v2.0.md', content);
+}
+
+function downloadAllVersions() {
+    alert('Archive download will include all versions (v1.0, v1.9, v2.0) in a ZIP file. Feature coming soon!');
+}
+
+function generateDownloadContent(version) {
+    const data = versions[version];
+    return `# Kiro AI Training Guide - ${version}
+
+**Date:** ${data.date}
+**Total Rules:** ${data.rules}
+
+## Changes in This Version
+${data.changes.map(c => '- ' + c).join('\\n')}
+
+## How to Use
+1. Place this file in your Kiro workspace: .kiro/steering/
+2. Kiro will automatically read and apply these rules
+3. Your Kiro will learn from Amit's experience!
+
+## Complete Rules
+See the web version for complete rule details:
+https://ideasbeforetime.pages.dev/kiro-training-guide.html
+
+---
+Created by Amit Kumar | Ideas Before Time
+`;
+}
+
+function downloadFile(filename, content) {
+    const blob = new Blob([content], { type: 'text/markdown' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+// Load current version on page load
+window.onload = function() {
+    loadVersion();
+};
+</script>
+
+<script src="common-navigation.js"></script>
+<script src="universal-analytics.js"></script>
+<script src="common-footer.js"></script>
+
+    <script src="error-tracker.js"></script>
+
+<!-- Quick Links Widget -->
+<div class="quick-links-widget" style="position: fixed; right: 20px; bottom: 80px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); padding: 20px; width: 250px; z-index: 999; display: none;" id="quickLinksWidget">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h4 style="margin: 0; color: #5a6c7d; font-size: 16px;">🚀 Quick Access</h4>
+        <button onclick="document.getElementById('quickLinksWidget').style.display='none'" style="background: none; border: none; font-size: 20px; cursor: pointer; color: #999;">&times;</button>
+    </div>
+    <div style="display: grid; gap: 8px;">
+        <a href="index.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>🏠</span> Home
+        </a>
+        <a href="blog.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📝</span> Blog (100 posts)
+        </a>
+        <a href="about.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>👤</span> About
+        </a>
+        <a href="cv.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📄</span> CV
+        </a>
+        <a href="market-reports.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📊</span> Reports
+        </a>
+        <a href="social-optimizer-index.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>🚀</span> Tools
+        </a>
+        <a href="library.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📚</span> Library
+        </a>
+        <a href="innovations.html" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>💡</span> Innovations
+        </a>
+    </div>
+</div>
+
+<!-- Quick Links Toggle Button -->
+<button onclick="document.getElementById('quickLinksWidget').style.display='block'" style="position: fixed; right: 20px; bottom: 20px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%); color: white; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 998; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    🔗
+</button>
+
+<style>.quick-links-widget a:hover{background:#5a6c7d !important;color:white !important;}@media (max-width:768px){.quick-links-widget{right:10px;bottom:70px;width:200px;padding:15px;}}</style>
+
+</body>
+</html>

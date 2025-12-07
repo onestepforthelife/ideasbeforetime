@@ -1,0 +1,160 @@
+========================================
+KIRO AUTO-DEBUG SYSTEM v2.0
+QUICK START GUIDE
+========================================
+
+⚡ GET STARTED IN 30 SECONDS!
+
+========================================
+STEP 1: CHOOSE YOUR VERSION
+========================================
+
+BAT Version (Recommended):
+📁 Go to: bat-version folder
+✅ Easier for most users
+✅ Just double-click to run
+
+PS1 Version (Advanced):
+📁 Go to: ps1-version folder
+✅ Better output colors
+✅ Right-click → Run with PowerShell
+
+========================================
+STEP 2: RUN THE RIGHT TOOL
+========================================
+
+🔧 KIRO_AUTO_DEBUG
+Use for: Common errors, won't start, crashes
+Time: 30-60 seconds
+Action: Double-click (BAT) or Right-click → Run with PowerShell (PS1)
+
+🔧 KIRO_INTELLIGENT_REPAIR
+Use for: Unknown errors, Auto-Debug didn't work
+Time: 1-2 minutes
+Action: Same as above
+
+🔧 KIRO_COMPLETE_REINSTALL
+Use for: Nothing else worked, last resort
+Time: 2-3 minutes
+Action: Same as above, type YES to confirm
+
+========================================
+STEP 3: WAIT FOR COMPLETION
+========================================
+
+You'll see:
+[1/6] Stopping processes...
+[2/6] Clearing cache...
+[3/6] Resetting config...
+...
+Done!
+
+========================================
+STEP 4: START KIRO
+========================================
+
+After script completes:
+1. Start Kiro IDE
+2. Check if issue is fixed
+3. If not, try next tool
+
+========================================
+THAT'S IT!
+========================================
+
+Most issues fixed in under 1 minute!
+
+========================================
+NEED HELP?
+========================================
+
+📖 Read: USER_GUIDE.txt (detailed instructions)
+🔧 Issues: TROUBLESHOOTING.txt (common problems)
+📋 Changes: CHANGELOG.txt (version history)
+
+========================================
+QUICK TROUBLESHOOTING
+========================================
+
+Problem: "Access Denied"
+Fix: Right-click → Run as Administrator
+
+Problem: PowerShell won't run
+Fix: Open PowerShell as Admin
+     Run: Set-ExecutionPolicy RemoteSigned
+
+Problem: Still broken after Auto-Debug
+Fix: Run KIRO_INTELLIGENT_REPAIR next
+
+Problem: Still broken after Intelligent Repair
+Fix: Run KIRO_COMPLETE_REINSTALL (last resort)
+
+========================================
+SAFETY NOTES
+========================================
+
+✅ Your code files are NEVER touched
+✅ Settings are backed up automatically
+✅ Only Kiro folders are modified
+✅ Safe to run multiple times
+✅ Open source - inspect the code
+
+========================================
+WHAT GETS FIXED
+========================================
+
+✅ Kiro won't start
+✅ Crashes on startup
+✅ Memory leaks
+✅ MCP server errors
+✅ Extension conflicts
+✅ Cache corruption
+✅ Slow performance
+✅ Configuration errors
+
+========================================
+ESCALATION PATH
+========================================
+
+1st: KIRO_AUTO_DEBUG (try this first)
+     ↓ (if still broken)
+2nd: KIRO_INTELLIGENT_REPAIR (try this next)
+     ↓ (if STILL broken)
+3rd: KIRO_COMPLETE_REINSTALL (last resort)
+
+========================================
+REPORTS
+========================================
+
+After running, check these files:
+- diagnostic-report.txt
+- intelligent-repair-report.txt
+- reinstall-report.txt
+
+Share these when asking for help!
+
+========================================
+TIPS
+========================================
+
+💡 Run Auto-Debug monthly for maintenance
+💡 Keep diagnostic reports for reference
+💡 Try restarting computer if issues persist
+💡 Check system resources (RAM/Disk)
+💡 Update Kiro regularly
+
+========================================
+SUPPORT
+========================================
+
+Still need help?
+1. Check diagnostic report
+2. Read TROUBLESHOOTING.txt
+3. Ask Kiro community
+4. Share your reports
+
+========================================
+
+🚀 READY TO FIX KIRO? LET'S GO!
+
+========================================

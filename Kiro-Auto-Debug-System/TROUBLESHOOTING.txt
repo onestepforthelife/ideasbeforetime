@@ -1,0 +1,340 @@
+========================================
+KIRO AUTO-DEBUG SYSTEM v2.0
+TROUBLESHOOTING GUIDE
+========================================
+
+This guide covers common issues and solutions.
+
+========================================
+SCRIPT EXECUTION ISSUES
+========================================
+
+ISSUE 1: "Access Denied" when running script
+CAUSE: Insufficient permissions
+SOLUTION:
+1. Right-click the script
+2. Select "Run as Administrator"
+3. Click "Yes" on UAC prompt
+
+ISSUE 2: PowerShell script won't run
+CAUSE: Execution policy restriction
+SOLUTION:
+1. Open PowerShell as Administrator
+2. Run: Set-ExecutionPolicy RemoteSigned
+3. Type Y and press Enter
+4. Try running script again
+
+ISSUE 3: Script opens and closes immediately
+CAUSE: Error in script or missing files
+SOLUTION:
+1. Right-click script
+2. Select "Edit" (BAT) or "Edit with PowerShell ISE" (PS1)
+3. Check for syntax errors
+4. Run line by line to find issue
+
+ISSUE 4: "File not found" errors
+CAUSE: Kiro installed in non-standard location
+SOLUTION:
+1. Find your Kiro installation path
+2. Edit script to update paths
+3. Look for lines with %LOCALAPPDATA%\Programs\Kiro
+4. Replace with your actual path
+
+========================================
+KIRO STILL NOT WORKING
+========================================
+
+ISSUE 5: Ran Auto-Debug but Kiro still broken
+SOLUTION:
+1. Check diagnostic-report.txt
+2. Run KIRO_INTELLIGENT_REPAIR next
+3. Wait for completion
+4. Check intelligent-repair-report.txt
+5. Follow recommendations
+
+ISSUE 6: Ran Intelligent Repair but still broken
+SOLUTION:
+1. Check if specific error message appears
+2. Search error in Kiro GitHub issues
+3. Try KIRO_COMPLETE_REINSTALL as last resort
+4. Share diagnostic reports with community
+
+ISSUE 7: Kiro starts but extensions missing
+CAUSE: Extension cache cleared
+SOLUTION:
+1. Extensions are still installed
+2. Restart Kiro 2-3 times
+3. Extensions will reload automatically
+4. If not, reinstall extensions manually
+
+ISSUE 8: Kiro starts but settings lost
+CAUSE: Settings file corrupted
+SOLUTION:
+1. Look for settings.json.backup
+2. Location: %APPDATA%\Kiro\User\
+3. Rename to settings.json
+4. Restart Kiro
+
+========================================
+PERFORMANCE ISSUES
+========================================
+
+ISSUE 9: Kiro still slow after running scripts
+CAUSE: System resources low
+SOLUTION:
+1. Check diagnostic report for memory/disk
+2. Close other applications
+3. Restart computer
+4. Run scripts again
+
+ISSUE 10: High memory usage persists
+CAUSE: Large workspace or many extensions
+SOLUTION:
+1. Disable unused extensions
+2. Close unused workspace folders
+3. Increase system RAM if possible
+4. Use lighter theme/settings
+
+========================================
+MCP SERVER ISSUES
+========================================
+
+ISSUE 11: MCP servers not connecting
+CAUSE: Configuration corruption
+SOLUTION:
+1. Check if mcp.json.backup exists
+2. Location: %USERPROFILE%\.kiro\settings\
+3. Restore from backup
+4. Or recreate MCP configuration
+
+ISSUE 12: MCP servers crash repeatedly
+CAUSE: Incompatible server or missing dependencies
+SOLUTION:
+1. Check MCP server logs
+2. Update MCP servers
+3. Reinstall problematic servers
+4. Check server documentation
+
+========================================
+BACKUP AND RECOVERY
+========================================
+
+ISSUE 13: Need to restore settings
+SOLUTION:
+1. Navigate to %APPDATA%\Kiro\User\
+2. Find *.backup files
+3. Remove .backup extension
+4. Restart Kiro
+
+ISSUE 14: Need to restore MCP config
+SOLUTION:
+1. Navigate to %USERPROFILE%\.kiro\settings\
+2. Find mcp.json.backup
+3. Rename to mcp.json
+4. Restart Kiro
+
+ISSUE 15: Accidentally ran Complete Reinstall
+SOLUTION:
+1. Check reinstall-report.txt
+2. Backups may exist in script folder
+3. Reinstall Kiro
+4. Reconfigure settings manually
+5. Reinstall extensions
+
+========================================
+SYSTEM-SPECIFIC ISSUES
+========================================
+
+ISSUE 16: Scripts don't work on Windows 11
+CAUSE: Enhanced security features
+SOLUTION:
+1. Run as Administrator
+2. Add script folder to exclusions
+3. Temporarily disable real-time protection
+4. Run script
+5. Re-enable protection
+
+ISSUE 17: Antivirus blocks scripts
+CAUSE: False positive detection
+SOLUTION:
+1. Add script folder to antivirus exclusions
+2. Or temporarily disable antivirus
+3. Run script
+4. Re-enable antivirus
+5. Scripts are safe (open source)
+
+ISSUE 18: Network drive installation
+CAUSE: Scripts assume local installation
+SOLUTION:
+1. Edit script paths
+2. Replace C: with network drive letter
+3. Update all path references
+4. Save and run
+
+========================================
+ADVANCED TROUBLESHOOTING
+========================================
+
+ISSUE 19: Need to see what script is doing
+SOLUTION (BAT):
+1. Edit script
+2. Remove @echo off from top
+3. Save and run
+4. See all commands executed
+
+SOLUTION (PS1):
+1. Edit script
+2. Add -Verbose to commands
+3. Save and run
+4. See detailed output
+
+ISSUE 20: Need to run specific fix only
+SOLUTION:
+1. Open script in editor
+2. Comment out unwanted sections
+3. Add REM (BAT) or # (PS1) before lines
+4. Save and run modified version
+
+ISSUE 21: Script hangs or freezes
+CAUSE: Waiting for process to stop
+SOLUTION:
+1. Wait 2-3 minutes
+2. If still frozen, press Ctrl+C
+3. Open Task Manager
+4. End Kiro processes manually
+5. Run script again
+
+========================================
+ERROR MESSAGES EXPLAINED
+========================================
+
+"Access Denied"
+- Need Administrator rights
+- Run as Administrator
+
+"File not found"
+- Kiro not in default location
+- Update script paths
+
+"Process not found"
+- Kiro not running (this is OK)
+- Script will continue
+
+"Cannot remove directory"
+- Files in use
+- Close all Kiro instances
+- Try again
+
+"Execution policy"
+- PowerShell security
+- Run: Set-ExecutionPolicy RemoteSigned
+
+========================================
+PREVENTION TIPS
+========================================
+
+To avoid future issues:
+
+1. Regular Maintenance:
+   - Run Auto-Debug monthly
+   - Clear cache regularly
+   - Update extensions
+
+2. Good Practices:
+   - Don't install too many extensions
+   - Close unused workspaces
+   - Restart Kiro weekly
+   - Keep Kiro updated
+
+3. Backup Strategy:
+   - Export settings regularly
+   - Document extension list
+   - Keep MCP config backed up
+
+4. Monitor Resources:
+   - Check memory usage
+   - Monitor disk space
+   - Close unused applications
+
+========================================
+WHEN TO ASK FOR HELP
+========================================
+
+Ask for help when:
+1. Scripts complete but issue persists
+2. Error messages you don't understand
+3. Kiro completely unresponsive
+4. Lost important settings/data
+5. Tried all escalation levels
+
+Where to ask:
+1. Kiro GitHub Issues
+2. Kiro Community Forums
+3. Stack Overflow (tag: kiro-ide)
+
+What to include:
+1. Diagnostic report files
+2. Error messages (screenshots)
+3. What you tried
+4. Kiro version
+5. Windows version
+6. System specs
+
+========================================
+DIAGNOSTIC CHECKLIST
+========================================
+
+Before asking for help, verify:
+
+☐ Ran KIRO_AUTO_DEBUG
+☐ Checked diagnostic-report.txt
+☐ Ran KIRO_INTELLIGENT_REPAIR
+☐ Checked intelligent-repair-report.txt
+☐ Tried running as Administrator
+☐ Restarted computer
+☐ Checked system resources (RAM/Disk)
+☐ Verified Kiro installation path
+☐ Checked for Windows updates
+☐ Disabled antivirus temporarily
+☐ Tried safe mode (if applicable)
+
+If all checked and still broken:
+☐ Run KIRO_COMPLETE_REINSTALL
+☐ Share all diagnostic reports
+☐ Ask community for help
+
+========================================
+QUICK REFERENCE
+========================================
+
+Common Paths:
+- Kiro Install: %LOCALAPPDATA%\Programs\Kiro
+- Kiro Data: %APPDATA%\Kiro
+- Kiro Settings: %APPDATA%\Kiro\User
+- MCP Config: %USERPROFILE%\.kiro\settings
+- Logs: %APPDATA%\Kiro\logs
+
+Common Commands:
+- Run as Admin: Right-click → Run as Administrator
+- Enable PS1: Set-ExecutionPolicy RemoteSigned
+- Kill Kiro: taskkill /F /IM Kiro.exe
+- Check processes: tasklist | findstr Kiro
+
+Escalation Order:
+1. KIRO_AUTO_DEBUG (first try)
+2. KIRO_INTELLIGENT_REPAIR (second try)
+3. KIRO_COMPLETE_REINSTALL (last resort)
+
+========================================
+CONTACT & SUPPORT
+========================================
+
+For issues with these scripts:
+- GitHub: [Your repo URL]
+- Email: [Your email]
+
+For Kiro IDE issues:
+- Official Kiro support channels
+- Kiro GitHub repository
+
+========================================

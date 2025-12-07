@@ -1,0 +1,142 @@
+# GHL AGENTIC AI PROJECT - CLARIFICATION
+
+**Created:** December 6, 2025
+**Updated:** December 6, 2025 (Mobile App Requirement Added)
+**Status:** LOCAL DOCUMENTATION ONLY
+
+---
+
+## 🚨 CRITICAL: THIS IS A MOBILE APP PROJECT
+
+**User Clarification:** "we only make mobile app for android & apple for it"
+
+**Platform:** Mobile Apps (Android + iOS)
+**NOT:** Web application or website
+
+**Three Mobile Apps Required:**
+1. **Technician App** - Manage calls, jobs, schedule, navigation
+2. **Customer App** - Book service, track technician, make payments
+3. **Business Owner App** - Dashboard, analytics, AI controls
+
+**Tech Stack Options:**
+- React Native (recommended for cross-platform)
+- Flutter (alternative cross-platform)
+- Native (Swift for iOS, Kotlin for Android)
+
+---
+
+## PROJECT IDENTITY CLARIFICATION
+
+**This is ONE project, not two:**
+- "Project 2" = "GHL topic" = "AgenticAI-ShoulderApproach"
+- Same thing, different names used in conversation
+
+**Completely separate from:**
+- Cloudfare website (onestepforthelife.com)
+- ghar-ghar project
+- Ideas Before Time content
+- Any past work
+
+---
+
+## IMPORTANT: THIS IS NOT WEBSITE CONTENT
+
+This folder (`AgenticAI-ShoulderApproach/`) contains:
+- Strategic planning documentation
+- Business case for future SaaS project
+- Technical architecture designs
+- Mobile app specifications
+- Implementation roadmaps
+
+**THIS IS NOT:**
+- Website content for onestepforthelife.com
+- To be pushed to website's GitHub repository
+- Live product or service
+
+---
+
+## STORAGE DECISION: OPTION A (LOCAL ONLY)
+
+**Amit's Decision:** Keep GHL documentation local only
+
+**What this means:**
+- Files stay in `Cloudfare/AgenticAI-ShoulderApproach/` folder
+- NOT pushed to GitHub with website files
+- For reference and planning only
+- When ready to build, create separate GitHub repo
+
+---
+
+## MOBILE APP DEVELOPMENT APPROACH
+
+**Phase 1: Documentation (Current)**
+- Define mobile app requirements
+- Design UI/UX for 3 apps
+- Choose tech stack
+- Plan features and screens
+
+**Phase 2: Development**
+- Set up development environment
+- Build mobile apps (Android + iOS)
+- Integrate with GHL backend
+- Test on real devices
+
+**Phase 3: Deployment**
+- Submit to Google Play Store (Android)
+- Submit to Apple App Store (iOS)
+- Set up backend infrastructure
+- Launch to users
+
+---
+
+## FUTURE OPTIONS
+
+**When ready to actually build GHL system:**
+
+**Option 1:** Create separate GitHub repository
+- Repo name: `agentic-ai-shoulder-approach-mobile`
+- Move this folder there
+- Keep completely separate from website
+
+**Option 2:** Keep local until MVP ready
+- Build locally first
+- Test thoroughly
+- Then decide on GitHub hosting
+
+---
+
+## WHAT GETS PUSHED TO GITHUB
+
+**Website content only:**
+- HTML pages (nickel-compounds-technical-data.html, etc.)
+- CSS/JS files
+- Market reports updates
+- Blog posts
+- Tools and features
+
+**NOT pushed:**
+- This GHL documentation folder
+- Strategic planning documents
+- Business case documents
+- Architecture designs (until separate repo created)
+- Mobile app code (until separate repo created)
+
+---
+
+## RULES & POLICIES
+
+**All steering file rules apply:**
+- KIRO_RULES.md (core behavior)
+- DNA_RULE_PERFECTION_OVER_SPEED.md (quality first)
+- REQUEST_OPTIMIZATION.md (credit efficiency)
+- ENTERPRISE_DECISION_FRAMEWORKS.md (strategic decisions)
+- All other steering files
+
+**Same quality standards as Cloudfare project**
+
+---
+
+**Status:** CLARIFIED - Mobile app project, not web app
+**Platform:** Android + iOS mobile apps
+**Next:** Update SYSTEM_ARCHITECTURE.md with mobile app layer
+

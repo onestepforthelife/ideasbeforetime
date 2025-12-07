@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Posts Collector - Amit Vashist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .instructions h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+        }
+
+        .posts-list {
+            margin-top: 40px;
+        }
+
+        .post-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .post-title {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .post-date {
+            color: #999;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .post-content {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .post-actions {
+            margin-top: 10px;
+        }
+
+        .btn-small {
+            padding: 8px 15px;
+            font-size: 0.9em;
+        }
+
+        .stats {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .stats h2 {
+            font-size: 3em;
+            margin-bottom: 5px;
+        }
+
+        .export-section {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 2px solid #ddd;
+        }
+    </style>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3181510462001437"
+            crossorigin="anonymous"></script>
+    <script src="google-adsense.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 LinkedIn Posts Collector</h1>
+        <p class="subtitle">Collect and organize your LinkedIn posts into a beautiful book</p>
+
+        <div class="instructions">
+            <h3>📋 How to Use:</h3>
+            <ol>
+                <li>Copy a post from your LinkedIn profile</li>
+                <li>Paste it in the form below</li>
+                <li>Add a title and date (optional)</li>
+                <li>Click "Add Post"</li>
+                <li>Repeat for all posts you want to include</li>
+                <li>Click "Generate Book" when done</li>
+            </ol>
+        </div>
+
+        <div class="stats">
+            <h2 id="post-count">0</h2>
+            <p>Posts Collected</p>
+        </div>
+
+        <form id="post-form">
+            <div class="form-group">
+                <label>Post Title (optional)</label>
+                <input type="text" id="post-title" placeholder="e.g., Thoughts on Leadership">
+            </div>
+
+            <div class="form-group">
+                <label>Post Date (optional)</label>
+                <input type="date" id="post-date">
+            </div>
+
+            <div class="form-group">
+                <label>Post Content *</label>
+                <textarea id="post-content" placeholder="Paste your LinkedIn post here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn">➕ Add Post</button>
+            <button type="button" class="btn btn-secondary" onclick="clearForm()">🗑️ Clear Form</button>
+        </form>
+
+        <div class="posts-list">
+            <h2>📚 Your Posts</h2>
+            <div id="posts-container">
+                <p style="color: #999; text-align: center; padding: 40px;">No posts added yet. Add your first post above!</p>
+            </div>
+        </div>
+
+        <div class="export-section">
+            <h2>📖 Generate Your Book</h2>
+            <p style="margin-bottom: 20px; color: #666;">Once you've added all your posts, generate a beautiful book!</p>
+            <button class="btn" onclick="generateBook()">📚 Generate Book</button>
+            <button class="btn btn-secondary" onclick="downloadJSON()">💾 Save Progress (JSON)</button>
+            <button class="btn btn-secondary" onclick="loadJSON()">📂 Load Progress</button>
+        </div>
+    </div>
+
+    <script>
+        let posts = [];
+
+        // Load saved posts from localStorage
+        window.onload = function() {
+            const saved = localStorage.getItem('linkedin-posts');
+            if (saved) {
+                posts = JSON.parse(saved);
+                renderPosts();
+            }
+        };
+
+        // Add post
+        document.getElementById('post-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const title = document.getElementById('post-title').value || 'Untitled Post';
+            const date = document.getElementById('post-date').value || new Date().toISOString().split('T')[0];
+            const content = document.getElementById('post-content').value;
+
+            posts.push({
+                id: Date.now(),
+                title: title,
+                date: date,
+                content: content
+            });
+
+            savePosts();
+            renderPosts();
+            clearForm();
+            
+            alert('✅ Post added successfully!');
+        });
+
+        function renderPosts() {
+            const container = document.getElementById('posts-container');
+            document.getElementById('post-count').textContent = posts.length;
+
+            if (posts.length === 0) {
+                container.innerHTML = '<p style="color: #999; text-align: center; padding: 40px;">No posts added yet. Add your first post above!</p>';
+                return;
+            }
+
+            container.innerHTML = posts.map(post => `
+                <div class="post-item">
+                    <div class="post-title">${post.title}</div>
+                    <div class="post-date">${post.date}</div>
+                    <div class="post-content">${post.content.substring(0, 200)}${post.content.length > 200 ? '...' : ''}</div>
+                    <div class="post-actions">
+                        <button class="btn btn-small" onclick="editPost(${post.id})">✏️ Edit</button>
+                        <button class="btn btn-small btn-secondary" onclick="deletePost(${post.id})">🗑️ Delete</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function clearForm() {
+            document.getElementById('post-title').value = '';
+            document.getElementById('post-date').value = '';
+            document.getElementById('post-content').value = '';
+        }
+
+        function deletePost(id) {
+            if (confirm('Delete this post?')) {
+                posts = posts.filter(p => p.id !== id);
+                savePosts();
+                renderPosts();
+            }
+        }
+
+        function savePosts() {
+            localStorage.setItem('linkedin-posts', JSON.stringify(posts));
+        }
+
+        function generateBook() {
+            if (posts.length === 0) {
+                alert('❌ Please add at least one post first!');
+                return;
+            }
+
+            const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Posts - Amit Vashist</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: #333; background: white; }
+        .book-container { max-width: 900px; margin: 0 auto; background: white; }
+        .book-cover { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 100px 60px; text-align: center; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+        .book-title { font-family: 'Merriweather', serif; font-size: 4em; font-weight: 700; margin-bottom: 30px; }
+        .book-subtitle { font-size: 1.8em; margin-bottom: 50px; opacity: 0.9; }
+        .book-author { font-size: 2em; margin-top: 50px; font-weight: 600; }
+        .book-page { padding: 80px 60px; min-height: 100vh; }
+        .post { margin-bottom: 60px; page-break-inside: avoid; }
+        .post-title { font-family: 'Merriweather', serif; font-size: 1.8em; color: #764ba2; margin-bottom: 10px; }
+        .post-date { color: #999; margin-bottom: 20px; }
+        .post-content { font-size: 1.1em; line-height: 1.8; white-space: pre-wrap; }
+        @media print { .book-page, .post { page-break-after: always; } }
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <div class="book-cover">
+            <div class="book-title">MY LINKEDIN POSTS</div>
+            <div class="book-subtitle">Thoughts, Insights & Reflections</div>
+            <div class="book-author">Amit Vashist, F.I.E., C.Eng.(I)</div>
+        </div>
+        <div class="book-page">
+            ${posts.map(post => `
+                <div class="post">
+                    <h2 class="post-title">${post.title}</h2>
+                    <div class="post-date">${post.date}</div>
+                    <div class="post-content">${post.content}</div>
+                </div>
+            `).join('')}
+        </div>
+    </div>
+</body>
+</html>`;
+
+            const blob = new Blob([html], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'linkedin-posts-book.html';
+            a.click();
+            
+            alert('✅ Book generated! Open the downloaded file in your browser, then Print > Save as PDF');
+        }
+
+        function downloadJSON() {
+            const json = JSON.stringify(posts, null, 2);
+            const blob = new Blob([json], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'linkedin-posts-backup.json';
+            a.click();
+            alert('✅ Progress saved! Keep this file safe.');
+        }
+
+        function loadJSON() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            input.onchange = function(e) {
+                const file = e.target.files[0];
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    try {
+                        posts = JSON.parse(event.target.result);
+                        savePosts();
+                        renderPosts();
+                        alert('✅ Progress loaded successfully!');
+                    } catch (err) {
+                        alert('❌ Invalid file format');
+                    }
+                };
+                reader.readAsText(file);
+            };
+            input.click();
+        }
+    </script>
+</body>
+</html>

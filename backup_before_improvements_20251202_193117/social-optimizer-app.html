@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    🔒 SECURITY: This page MUST be protected by Cloudflare Access
+    - This is a PAID product (₹21)
+    - DO NOT use JavaScript passwords (bypassable)
+    - MUST use Cloudflare Access (server-side, cannot be bypassed)
+    - Setup guide: SPO_CLOUDFLARE_ACCESS_SETUP.txt
+    - Path to protect: /social-optimizer-*
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimize Your Profile - Social Profile Optimizer AI | Start Free</title>
+    <link rel="stylesheet" href="common-navigation.css">
+    <link rel="stylesheet" href="common-footer.css">
+    <link rel="stylesheet" href="common-watermark.css">
+    <meta name="description" content="Start optimizing your LinkedIn profile now. AI-powered suggestions for headline, summary, and bio. Free preview, unlock full results for ₹21.">
+    <meta name="keywords" content="LinkedIn optimizer app, profile optimization tool, AI profile writer, LinkedIn headline tool, professional summary generator">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://ideas-before-time.pages.dev/social-optimizer-app.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
+        body::before {
+            content: "AV © Onestepforthelife";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 100px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.08);
+            pointer-events: none;
+            z-index: 1;
+            white-space: nowrap;
+            user-select: none;
+        }
+        .wizard-container {
+            max-width: 1400px;
+            position: relative;
+            z-index: 2;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px 60px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        @media (max-width: 768px) {
+            .wizard-container {
+                padding: 30px 20px;
+            }
+            .step-content h2 { font-size: 1.5em; }
+            .button-group button {
+                padding: 12px 30px;
+                font-size: 0.95em;
+            }
+            .progress-step {
+                font-size: 0.85em;
+                padding: 8px 5px;
+            }
+            body::before { font-size: 60px; }
+        }
+        
+        @media (max-width: 480px) {
+            .wizard-container {
+                padding: 20px 15px;
+            }
+            .step-content h2 { font-size: 1.3em; }
+            .button-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .button-group button {
+                width: 100%;
+            }
+            .progress-step {
+                font-size: 0.75em;
+                padding: 6px 3px;
+                margin: 0 2px;
+            }
+            body::before { font-size: 40px; }
+        }
+        .progress-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .progress-step {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background: #f0f0f0;
+            margin: 0 5px;
+            border-radius: 10px;
+            font-weight: bold;
+            color: #999;
+            transition: all 0.3s;
+        }
+        .progress-step.active {
+            background: #5a6c7d;
+            color: white;
+        }
+        .step-content { display: none; }
+        .step-content.active { display: block; }
+        h2 { color: #5a6c7d; margin-bottom: 20px; }
+        label {
+            display: block;
+            margin: 20px 0 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+        }
+        textarea { min-height: 120px; resize: vertical; }
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        button {
+            flex: 1;
+            padding: 15px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: #5a6c7d;
+            color: white;
+        }
+        .btn-primary:hover { background: #5568d3; }
+        .btn-secondary {
+            background: #e0e0e0;
+            color: #333;
+        }
+        .btn-secondary:hover { background: #d0d0d0; }
+        .option-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .option-card {
+            padding: 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .option-card:hover {
+            border-color: #5a6c7d;
+            background: #f8f9ff;
+        }
+        .option-card.selected {
+            border-color: #5a6c7d;
+            background: #5a6c7d;
+            color: white;
+        }
+        .output-section {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #5a6c7d;
+        }
+        .output-section h3 {
+            color: #5a6c7d;
+            margin-bottom: 10px;
+        }
+        .output-text {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .blur-overlay {
+            filter: blur(5px);
+            pointer-events: none;
+            user-select: none;
+        }
+        .payment-prompt {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            color: white;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        .copy-btn {
+            background: #28a745;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        .copy-btn:hover { background: #218838; }
+        .validation-error {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            color: #856404;
+        }
+        .validation-success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            color: #155724;
+        }
+        .file-preview {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border: 2px dashed #5a6c7d;
+        }
+        .dev-mode-prompt {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #5a6c7d;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+    <div class="wizard-container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div>
+                <a href="social-optimizer-index.html" style="color: #5a6c7d; text-decoration: none; font-weight: bold; margin-right: 15px;">← SPO Home</a>
+                <a href="library.html" style="color: #999; text-decoration: none; font-size: 0.9em;">Ideas Before Time</a>
+            </div>
+            <button onclick="showSupport()" style="background: #28a745; color: white; padding: 8px 15px; border: none; border-radius: 20px; cursor: pointer; font-size: 0.9em;">💬 Need Help?</button>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-step active" data-step="1">1. Input</div>
+            <div class="progress-step" data-step="2">2. Customize</div>
+            <div class="progress-step" data-step="3">3. Preview</div>
+            <div class="progress-step" data-step="4">4. Unlock</div>
+        </div>
+
+        <!-- Step 1: Input -->
+        <div class="step-content active" id="step1">
+            <h2>Step 1: Enter Your Profile Information</h2>
+            
+            <label>Select Platform *</label>
+            <select id="platform">
+                <option value="">Choose platform...</option>
+                <option value="linkedin">💼 LinkedIn</option>
+                <option value="facebook">📘 Facebook/Meta</option>
+                <option value="instagram">📸 Instagram</option>
+                <option value="twitter">🐦 Twitter/X</option>
+                <option value="youtube">🎥 YouTube</option>
+                <option value="tiktok">🎵 TikTok</option>
+                <option value="pinterest">📌 Pinterest</option>
+                <option value="threads">🧵 Threads</option>
+                <option value="whatsapp">💬 WhatsApp Business</option>
+                <option value="snapchat">👻 Snapchat</option>
+            </select>
+
+            <label>How would you like to provide your profile?</label>
+            <div class="option-grid" style="margin-bottom: 20px;">
+                <div class="option-card" onclick="selectInputMethod('text')" data-method="text">
+                    <div style="font-size: 2em;">📝</div>
+                    <div>Paste Text</div>
+                </div>
+                <div class="option-card" onclick="selectInputMethod('link')" data-method="link">
+                    <div style="font-size: 2em;">🔗</div>
+                    <div>Profile Link</div>
+                </div>
+                <div class="option-card" onclick="selectInputMethod('image')" data-method="image">
+                    <div style="font-size: 2em;">📷</div>
+                    <div>Upload Image</div>
+                </div>
+                <div class="option-card" onclick="selectInputMethod('pdf')" data-method="pdf">
+                    <div style="font-size: 2em;">📄</div>
+                    <div>Upload PDF</div>
+                </div>
+            </div>
+
+            <!-- Text Input -->
+            <div id="textInput" style="display: none;">
+                <label>Current Bio/About Text *</label>
+                <textarea id="currentBio" placeholder="Paste your current profile bio, headline, or about section here..."></textarea>
+                
+                <label>Current Headline/Tagline (optional)</label>
+                <input type="text" id="currentHeadline" placeholder="Your current profile headline">
+            </div>
+
+            <!-- Link Input -->
+            <div id="linkInput" style="display: none;">
+                <label>Profile Link *</label>
+                <input type="text" id="profileLink" placeholder="https://linkedin.com/in/yourname or @username">
+                <p style="color: #666; font-size: 0.9em; margin-top: 5px;">We'll analyze your public profile information</p>
+            </div>
+
+            <!-- Image Upload -->
+            <div id="imageInput" style="display: none;">
+                <label>Upload Profile Screenshot *</label>
+                <input type="file" id="imageFile" accept="image/*" onchange="handleFileUpload(event, 'image')" style="padding: 10px;">
+                <p style="color: #666; font-size: 0.9em; margin-top: 5px;">Upload a screenshot of your profile (JPG, PNG)</p>
+                <div id="imagePreview" style="margin-top: 15px;"></div>
+            </div>
+
+            <!-- PDF Upload -->
+            <div id="pdfInput" style="display: none;">
+                <label>Upload Profile PDF *</label>
+                <input type="file" id="pdfFile" accept=".pdf" onchange="handleFileUpload(event, 'pdf')" style="padding: 10px;">
+                <p style="color: #666; font-size: 0.9em; margin-top: 5px;">Upload your profile as PDF (LinkedIn export, resume, etc.)</p>
+                <div id="pdfPreview" style="margin-top: 15px;"></div>
+            </div>
+
+            <div id="validationMessages" style="margin: 20px 0;"></div>
+
+            <div class="button-group">
+                <button class="btn-primary" onclick="nextStep(2)">Next: Customize →</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Customize -->
+        <div class="step-content" id="step2">
+            <h2>Step 2: Customize Your Optimization</h2>
+            
+            <label>Select Your Persona *</label>
+            <div class="option-grid" id="personaOptions">
+                <div class="option-card" data-value="professional">
+                    <div style="font-size: 2em;">💼</div>
+                    <div>Career Professional</div>
+                </div>
+                <div class="option-card" data-value="influencer">
+                    <div style="font-size: 2em;">⭐</div>
+                    <div>Influencer</div>
+                </div>
+                <div class="option-card" data-value="creator">
+                    <div style="font-size: 2em;">🎬</div>
+                    <div>Content Creator</div>
+                </div>
+                <div class="option-card" data-value="entrepreneur">
+                    <div style="font-size: 2em;">🚀</div>
+                    <div>Entrepreneur</div>
+                </div>
+                <div class="option-card" data-value="artist">
+                    <div style="font-size: 2em;">🎨</div>
+                    <div>Artist/Designer</div>
+                </div>
+                <div class="option-card" data-value="coach">
+                    <div style="font-size: 2em;">🎯</div>
+                    <div>Coach/Consultant</div>
+                </div>
+                <div class="option-card" data-value="ngo">
+                    <div style="font-size: 2em;">🤝</div>
+                    <div>NGO Leader</div>
+                </div>
+                <div class="option-card" data-value="speaker">
+                    <div style="font-size: 2em;">🎤</div>
+                    <div>Public Speaker</div>
+                </div>
+            </div>
+
+            <label>Select Tone/Style *</label>
+            <div class="option-grid" id="toneOptions">
+                <div class="option-card" data-value="formal">📋 Formal</div>
+                <div class="option-card" data-value="friendly">😊 Friendly</div>
+                <div class="option-card" data-value="inspirational">✨ Inspirational</div>
+                <div class="option-card" data-value="analytical">📊 Analytical</div>
+                <div class="option-card" data-value="viral">🔥 Viral</div>
+                <div class="option-card" data-value="casual">🎉 Casual/Fun</div>
+                <div class="option-card" data-value="educational">📚 Educational</div>
+            </div>
+
+            <label>Primary Goal *</label>
+            <div class="option-grid" id="goalOptions">
+                <div class="option-card" data-value="hired">💼 Get Hired</div>
+                <div class="option-card" data-value="followers">👥 Build Followers</div>
+                <div class="option-card" data-value="viral">🚀 Go Viral</div>
+                <div class="option-card" data-value="sales">💰 Sell Products</div>
+                <div class="option-card" data-value="community">🤝 Build Community</div>
+                <div class="option-card" data-value="monetize">💵 Monetize Content</div>
+                <div class="option-card" data-value="cause">❤️ Promote Cause</div>
+                <div class="option-card" data-value="thought">🧠 Thought Leadership</div>
+            </div>
+
+            <label>Keywords/Industry Focus (comma-separated)</label>
+            <input type="text" id="keywords" placeholder="e.g., technology, marketing, sustainability, AI">
+
+            <div class="button-group">
+                <button class="btn-secondary" onclick="prevStep(1)">← Back</button>
+                <button class="btn-primary" onclick="generatePreview()">Generate Preview →</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Preview -->
+        <div class="step-content" id="step3">
+            <h2>Step 3: Preview Your Optimized Profile</h2>
+            <p style="color: #666; margin-bottom: 20px;">Here's a preview of your AI-optimized profile. Unlock full access to copy and download.</p>
+
+            <div id="previewContent"></div>
+
+            <div class="button-group">
+                <button class="btn-secondary" onclick="prevStep(2)">← Back</button>
+                <button class="btn-primary" onclick="nextStep(4)">Unlock Full Access →</button>
+            </div>
+        </div>
+
+        <!-- Step 4: Payment -->
+        <div class="step-content" id="step4">
+            <h2>Step 4: Unlock Your Optimized Profile</h2>
+            
+            <!-- Access Code Option -->
+            <div style="background: #d4edda; padding: 25px; border-radius: 15px; margin-bottom: 25px; border-left: 4px solid #28a745;">
+                <h3 style="color: #155724; margin-bottom: 15px;">🎟️ Have an Access Code?</h3>
+                <p style="color: #155724; margin-bottom: 15px; font-size: 0.95em;">If you received an access code from Amit, enter it below for instant free access.</p>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="text" id="accessCode" placeholder="Enter your access code" style="flex: 1; padding: 12px; border: 2px solid #28a745; border-radius: 8px; font-size: 1em; text-transform: uppercase;">
+                    <button onclick="checkAccessCode()" style="background: #28a745; color: white; padding: 12px 30px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; white-space: nowrap;">
+                        Unlock Now
+                    </button>
+                </div>
+                <div id="accessCodeError" style="color: #dc3545; margin-top: 10px; display: none; font-weight: bold;">
+                    ❌ Invalid access code. Please check and try again.
+                </div>
+            </div>
+
+
+            <!-- Regular Payment Option -->
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h3 style="font-size: 2em; color: #5a6c7d; margin-bottom: 10px;">💳 Or Pay Instantly</h3>
+                <p style="font-size: 1.1em; color: #666; margin-bottom: 20px;">Get your complete optimized profile with copy-paste ready content</p>
+                <div style="font-size: 3em; font-weight: bold; color: #5a6c7d; margin: 10px 0;" data-price>₹21 only!</div>
+                <p style="color: #999;">One-time payment • Instant unlock • Lifetime access</p>
+            </div>
+            
+            <div id="paymentOptions"></div>
+
+            <div class="button-group" style="margin-top: 30px;">
+                <button class="btn-secondary" onclick="prevStep(3)">← Back to Preview</button>
+            </div>
+        </div>
+
+        <!-- Success View -->
+        <div class="step-content" id="stepSuccess">
+            <h2>✅ Payment Successful!</h2>
+            <p style="color: #28a745; font-size: 1.2em; margin: 20px 0;">Your optimized profile is now unlocked and ready to use.</p>
+
+            <div id="fullContent"></div>
+
+            <div class="button-group">
+                <button class="btn-primary" onclick="downloadProfile()">📥 Download as Text File</button>
+                <button class="btn-secondary" onclick="location.href='social-optimizer-dashboard.html'">View Dashboard</button>
+            </div>
+
+            <!-- Feedback Section -->
+            <div style="margin-top: 40px; padding: 30px; background: #f8f9ff; border-radius: 15px; border-left: 4px solid #5a6c7d;">
+                <h3 style="color: #5a6c7d; margin-bottom: 15px;">💬 Share Your Feedback (Optional)</h3>
+                <p style="color: #666; margin-bottom: 20px; font-size: 0.95em;">
+                    Help us improve! Share your thoughts about the optimization quality, suggestions, or how you plan to use it.
+                </p>
+                <textarea id="userFeedback" placeholder="Your feedback here... (Optional)" 
+                    style="width: 100%; min-height: 100px; padding: 15px; border: 2px solid #e0e0e0; 
+                           border-radius: 8px; font-family: inherit; font-size: 1em; resize: vertical;"></textarea>
+                <div id="feedbackWarning" style="color: #dc3545; font-size: 0.9em; margin-top: 10px; display: none;">
+                    ⚠️ Please keep your feedback professional and appropriate.
+                </div>
+                <button onclick="submitFeedback()" 
+                    style="margin-top: 15px; background: #28a745; color: white; padding: 12px 30px; 
+                           border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 1em;">
+                    📤 Submit Feedback
+                </button>
+                <div id="feedbackSuccess" style="color: #28a745; font-weight: bold; margin-top: 15px; display: none;">
+                    ✅ Thank you for your feedback!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Developer Mode Prompt -->
+    <div id="devModePrompt" class="dev-mode-prompt" style="display: none;" onclick="showDevMode()">
+        🔧 Need Developer Mode?
+    </div>
+
+    <!-- Google Analytics 4 - Universal + SPO Tracking -->
+    <script src="universal-analytics.js"></script>
+    <script src="social-optimizer-analytics.js"></script>
+    
+    <!-- Payment Gateways -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    
+    <!-- Currency Detection & Payment Selector -->
+    <script src="currency-detector.js"></script>
+    <script src="payment-selector.js"></script>
+    
+    <script src="social-optimizer-ai-engine.js"></script>
+    <script src="social-optimizer-app.js"></script>
+    
+    <script>
+        // Initialize payment options when step 4 loads
+        function initPaymentOptions() {
+            const container = document.getElementById('paymentOptions');
+            if (container) {
+                container.innerHTML = PaymentGateway.showPaymentOptions();
+            }
+        }
+        
+        // Initialize payment options when step 4 loads
+        // Hook into existing nextStep function
+        document.addEventListener('DOMContentLoaded', function() {
+            const originalNextStep = window.nextStep;
+            if (originalNextStep) {
+                window.nextStep = function(step) {
+                    originalNextStep(step);
+                    if (step === 4) {
+                        setTimeout(initPaymentOptions, 100);
+                    }
+                };
+            }
+        });
+
+        // ACCESS CODE SYSTEM
+        function checkAccessCode() {
+            const code = document.getElementById('accessCode').value.toUpperCase().trim();
+            const validCodes = [
+                'RECRUITER2025',
+                'PARTNER2025',
+                'VIP2025',
+                'CORP2025',
+                'MEDIA2025'
+            ];
+            
+            if (validCodes.includes(code)) {
+                // Valid code - bypass payment
+                document.getElementById('accessCodeError').style.display = 'none';
+                alert('✅ Access code verified! Unlocking your profile...');
+                showStep('stepSuccess');
+                generateFullContent();
+                
+                // Track access code usage
+                if (typeof UniversalAnalytics !== 'undefined') {
+                    UniversalAnalytics.trackEvent('access_code_used', {
+                        event_category: 'conversion',
+                        event_label: code
+                    });
+                }
+            } else {
+                // Invalid code
+                document.getElementById('accessCodeError').style.display = 'block';
+            }
+        }
+
+        // Allow Enter key to submit access code
+        document.addEventListener('DOMContentLoaded', function() {
+            const accessCodeInput = document.getElementById('accessCode');
+            if (accessCodeInput) {
+                accessCodeInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        checkAccessCode();
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- Footer Branding -->
+    <div style="text-align: center; padding: 20px; color: #999; font-size: 0.85em; margin-top: 40px; border-top: 1px solid #e0e0e0;">
+        Powered by <strong style="color: #5a6c7d;">Social Profile Optimizer AI</strong> • <span data-price-text>Only ₹21</span> • 
+        <a href="mailto:onestepforthelife@gmail.com" style="color: #5a6c7d; text-decoration: none;">Contact Us</a>
+    </div>
+    <script src="common-navigation.js"></script>
+<script src="common-footer.js"></script>
+</body>
+</html>
+

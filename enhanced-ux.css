@@ -1,0 +1,150 @@
+/* Enhanced UX Improvements for Ideas Before Time */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Better transitions */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Hover effects for cards */
+.book-card, .timeline-item, .comic-panel {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover, .timeline-item:hover, .comic-panel:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3);
+}
+
+/* Animated gradient backgrounds */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero, .header, body {
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* Loading animation for images */
+img {
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Parallax effect for hero sections */
+.hero-banner, .hero {
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Better button interactions */
+.btn, .back-btn, .profile-link, .logout-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before, .back-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before, .back-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Skeleton loading for content */
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+
+.loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* Scroll reveal animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section, .timeline-item, .book-card {
+    animation: slideUp 0.6s ease forwards;
+}
+
+/* Stagger animation delays */
+.book-card:nth-child(1) { animation-delay: 0.1s; }
+.book-card:nth-child(2) { animation-delay: 0.2s; }
+.book-card:nth-child(3) { animation-delay: 0.3s; }
+.book-card:nth-child(4) { animation-delay: 0.4s; }
+.book-card:nth-child(5) { animation-delay: 0.5s; }
+.book-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Better focus states for accessibility */
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 3px solid #5a6c7d;
+    outline-offset: 2px;
+}
+
+/* Improved mobile touch targets */
+@media (max-width: 768px) {
+    a, button, .book-card, .timeline-item {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Sticky navigation enhancement */
+.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Better readability */
+p, li {
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+}
+
+/* Enhanced watermark */
+body::before {
+    animation: watermarkPulse 10s ease-in-out infinite;
+}
+
+@keyframes watermarkPulse {
+    0%, 100% { opacity: 0.08; }
+    50% { opacity: 0.12; }
+}
+

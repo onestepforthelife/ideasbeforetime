@@ -1,0 +1,43 @@
+🚨 CRITICAL: DEPLOY NOW - Dec 5, 2025
+
+LIVE SITE STATUS:
+✅ Blog posts work (blog-post-1.html through blog-post-100.html)
+❌ Main pages return 308 redirects (not deployed):
+   - blog.html
+   - spo.html
+   - about.html
+   - cv.html
+   - job-tools.html
+   - email-sender-web.html
+   - linkedin.html
+   - admin-control-panel.html
+
+WHAT NEEDS TO BE PUSHED:
+1. All main HTML pages (blog.html, spo.html, about.html, cv.html, etc.)
+2. Updated index.html (with blog section)
+3. All supporting files (CSS, JS)
+
+HOW TO PUSH VIA GITHUB DESKTOP:
+1. Open GitHub Desktop
+2. You'll see ~50+ changed files
+3. Write commit message: "Deploy all pages - blog visibility fix"
+4. Click "Commit to main"
+5. Click "Push origin"
+6. Wait 2-3 minutes for Cloudflare Pages to deploy
+7. Check https://onestepforthelife.com
+
+WHAT WILL BE FIXED:
+✅ Blog.html will be accessible
+✅ All main pages will work
+✅ Homepage will show blog section
+✅ Admin passwords removed
+✅ All tools accessible
+✅ SPO working
+✅ Navigation consistent
+
+VERIFICATION AFTER PUSH:
+Run: node check-live-site-comprehensive.js
+Should show: 13/13 passed
+
+⏰ TIME NEEDED: 5 minutes
+🎯 PRIORITY: CRITICAL - Site partially broken without this push

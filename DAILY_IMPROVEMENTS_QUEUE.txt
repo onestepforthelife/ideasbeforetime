@@ -1,0 +1,20 @@
+# DAILY IMPROVEMENTS QUEUE
+# Add non-urgent improvements here during the day
+# Executed automatically at 11 PM IST every night
+# Format: [CATEGORY] Description of improvement
+
+## INSTRUCTIONS:
+# - Add items as you think of them during the day
+# - Use categories: PAGE, BLOG, SEO, UX, PERFORMANCE, CONTENT
+# - Be specific about what needs improvement
+# - System will batch execute all at 11 PM IST
+
+## QUEUE (Add below this line):
+# Example: [PAGE] Add quick access widget to astronomy.html
+# Example: [BLOG] Improve meta descriptions for blog posts 50-60
+# Example: [UX] Add "Back to Top" button on long pages
+
+---
+## COMPLETED (Moved here after execution):
+# Date: YYYY-MM-DD
+# Items executed:

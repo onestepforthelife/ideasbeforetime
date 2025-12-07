@@ -1,0 +1,82 @@
+{
+  "timestamp": "2025-12-06T06:29:08.696Z",
+  "domain": "https://onestepforthelife.com",
+  "totalIssues": 10,
+  "fileIssues": 0,
+  "serverIssues": 10,
+  "issues": {
+    "critical": [
+      {
+        "type": "SERVER",
+        "page": "Blog",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "About",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "CV",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "Market Reports",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "SPO Tool",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "SPO Landing",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "Job Search",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "Admin Panel",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "Innovations",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      },
+      {
+        "type": "SERVER",
+        "page": "Library",
+        "issue": "308 Permanent Redirect - Cache not purged",
+        "fix": "Purge Cloudflare cache immediately"
+      }
+    ],
+    "high": [],
+    "medium": [],
+    "low": []
+  },
+  "summary": {
+    "critical": 10,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "file": 0,
+    "server": 10
+  }
+}

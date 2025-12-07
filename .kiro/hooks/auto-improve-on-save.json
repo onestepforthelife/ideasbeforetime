@@ -1,0 +1,11 @@
+{
+  "name": "Auto-Improve on Save",
+  "description": "Automatically detect and fix errors when files are saved",
+  "trigger": "onFileSave",
+  "filePattern": "**/*.{html,css,js}",
+  "action": {
+    "type": "sendMessage",
+    "message": "File saved: {{filePath}}. Run auto-improvement: Check for errors, validate HTML/CSS/JS, fix common issues, optimize code. Report what was fixed."
+  },
+  "enabled": true
+}
