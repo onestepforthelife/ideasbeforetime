@@ -30,21 +30,24 @@ if (oldDomainCount === 0) {
     console.log(`   ❌ Found ${oldDomainCount} files with old domain\n`);
 }
 
-// Check 2: Header alignment
+// Check 2: Header alignment (only actual header elements, not hero sections)
 console.log('2️⃣  Checking header alignment...');
 let centerHeaderCount = 0;
 htmlFiles.forEach(file => {
     const content = fs.readFileSync(file, 'utf8');
-    if (content.match(/header[^}]*text-align:\s*center/i)) {
-        console.log(`   ❌ ${file} - Header centered`);
+    // Match only actual header element styles: header { or .header {
+    // Not .hero-section or other classes that contain "header" in the name
+    if (content.match(/(?:^|\s)header\s*\{[^}]*text-align:\s*center/im) || 
+        content.match(/\.header\s*\{[^}]*text-align:\s*center/im)) {
+        console.log(`   ❌ ${file} - Header element centered`);
         centerHeaderCount++;
         errors++;
     }
 });
 if (centerHeaderCount === 0) {
-    console.log('   ✅ All headers left-aligned\n');
+    console.log('   ✅ All header elements left-aligned\n');
 } else {
-    console.log(`   ❌ Found ${centerHeaderCount} files with centered headers\n`);
+    console.log(`   ❌ Found ${centerHeaderCount} files with centered header elements\n`);
 }
 
 // Check 3: Missing navigation/footer
