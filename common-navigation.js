@@ -57,7 +57,7 @@ function addSiteNavigation() {
                         <li><a href="jobs.html">Job Search & Tracker</a></li>
                         <li><a href="ro.html">RO Water Guide</a></li>
                         <li><a href="linkedin.html">LinkedIn Tools</a></li>
-                        <li><a href="kiro.html">GODA (Kiro AI)</a></li>
+                        <li><a href="kiro.html">GODA Kiro Troubleshooter</a></li>
                         <li><a href="astronomy.html">Astrology Calculator</a></li>
                     </ul>
                 </li>
