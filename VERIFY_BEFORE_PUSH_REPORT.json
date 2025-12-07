@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-12-07T14:32:17.506Z",
+  "issues": [],
+  "warnings": [
+    {
+      "check": "Post-Push Actions",
+      "issue": "Manual steps required after push",
+      "fix": "Check build logs → Purge cache → Wait 5-10 min → Test live site"
+    }
+  ],
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "warnings": 1
+  }
+}

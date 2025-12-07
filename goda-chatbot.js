@@ -31,23 +31,26 @@ function createGODAChatbot() {
                         <div class="message-content">
                             <p>Hi! I'm GODA, your AI assistant.</p>
                             <p>I can help you with:</p>
-                            <ul>
-                                <li>Kiro IDE troubleshooting</li>
-                                <li>AI training & learning</li>
-                                <li>Site navigation</li>
-                                <li>General questions</li>
-                            </ul>
-                            <p>How can I help you today?</p>
+                            <div class="quick-options">
+                                <button class="quick-option" data-option="1">1️⃣ Kiro IDE troubleshooting</button>
+                                <button class="quick-option" data-option="2">2️⃣ AI training & learning</button>
+                                <button class="quick-option" data-option="3">3️⃣ Site navigation</button>
+                                <button class="quick-option" data-option="4">4️⃣ General questions</button>
+                            </div>
+                            <p style="margin-top: 12px; font-size: 13px; opacity: 0.8;">Type 1-4 or ask anything!</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Chat Input -->
                 <div class="goda-chat-input">
+                    <button id="godaNewTopic" class="new-topic-btn" title="Start new conversation">
+                        <span>🔄</span>
+                    </button>
                     <input 
                         type="text" 
                         id="godaChatInputField" 
-                        placeholder="Type your message..."
+                        placeholder="Type 1-4 or your message..."
                         autocomplete="off"
                     />
                     <button id="godaChatSend" class="send-btn">
@@ -70,11 +73,51 @@ function initializeChatbot() {
     const window = document.getElementById('godaChatWindow');
     const input = document.getElementById('godaChatInputField');
     const send = document.getElementById('godaChatSend');
+    const newTopicBtn = document.getElementById('godaNewTopic');
     const messages = document.getElementById('godaChatMessages');
     const chatbot = document.getElementById('godaChatbot');
 
     // Make chatbot draggable
     makeDraggable(toggle, chatbot);
+
+    // Quick option buttons
+    messages.addEventListener('click', (e) => {
+        if (e.target.classList.contains('quick-option')) {
+            const option = e.target.dataset.option;
+            const optionTexts = {
+                '1': 'Help me with Kiro IDE troubleshooting',
+                '2': 'Tell me about AI training and learning',
+                '3': 'Help me navigate the site',
+                '4': 'I have a general question'
+            };
+            input.value = optionTexts[option] || '';
+            sendMessage();
+        }
+    });
+
+    // New topic button
+    newTopicBtn.addEventListener('click', () => {
+        if (confirm('Start a new conversation? Current chat will be cleared.')) {
+            conversationHistory = [];
+            messages.innerHTML = `
+                <div class="message bot-message">
+                    <img src="images/logo Goda 40 bs 32 pixel.jpg" alt="GODA" class="message-avatar-img">
+                    <div class="message-content">
+                        <p>Hi! I'm GODA, your AI assistant.</p>
+                        <p>I can help you with:</p>
+                        <div class="quick-options">
+                            <button class="quick-option" data-option="1">1️⃣ Kiro IDE troubleshooting</button>
+                            <button class="quick-option" data-option="2">2️⃣ AI training & learning</button>
+                            <button class="quick-option" data-option="3">3️⃣ Site navigation</button>
+                            <button class="quick-option" data-option="4">4️⃣ General questions</button>
+                        </div>
+                        <p style="margin-top: 12px; font-size: 13px; opacity: 0.8;">Type 1-4 or ask anything!</p>
+                    </div>
+                </div>
+            `;
+            input.focus();
+        }
+    });
 
     // Toggle chat window
     toggle.addEventListener('click', () => {
@@ -134,7 +177,28 @@ function initializeChatbot() {
     // Conversation history for context
     let conversationHistory = [];
 
+    // Handle numbered responses
+    function handleNumberedInput(message) {
+        const num = message.trim();
+        const responses = {
+            '1': 'I can help with Kiro IDE! Common issues include: extension errors, configuration problems, or performance issues. What specific problem are you facing?',
+            '2': 'AI training & learning topics I can help with: machine learning basics, neural networks, training datasets, model optimization, or AI ethics. What interests you?',
+            '3': 'I can guide you through the site! We have: Tools (SPO, Job Search, RO Guide), Market Reports, Blog posts, and more. Where would you like to go?',
+            '4': 'I\'m here for any questions! Ask me about technology, leadership, innovation, or anything else. What\'s on your mind?'
+        };
+        return responses[num] || null;
+    }
+
     async function getBotResponse(message) {
+        // Check for numbered input first
+        const numberedResponse = handleNumberedInput(message);
+        if (numberedResponse) {
+            conversationHistory.push(
+                { role: 'user', text: message },
+                { role: 'assistant', text: numberedResponse }
+            );
+            return numberedResponse;
+        }
         try {
             // Show typing indicator
             const typingDiv = document.createElement('div');
@@ -522,6 +586,36 @@ const chatbotStyles = `
     color: white;
 }
 
+/* Quick Options */
+.quick-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.quick-option {
+    padding: 10px 16px;
+    background: #f0f2f5;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+    color: #333;
+}
+
+.quick-option:hover {
+    background: #e8eaed;
+    border-color: #5a6c7d;
+    transform: translateX(4px);
+}
+
+.quick-option:active {
+    transform: scale(0.98);
+}
+
 /* Chat Input */
 .goda-chat-input {
     display: flex;
@@ -529,6 +623,32 @@ const chatbotStyles = `
     padding: 16px;
     background: white;
     border-top: 1px solid #e0e0e0;
+}
+
+.new-topic-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #f0f2f5;
+    color: #5a6c7d;
+    border: 2px solid #e0e0e0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.new-topic-btn:hover {
+    background: #e8eaed;
+    border-color: #5a6c7d;
+    transform: rotate(180deg);
+}
+
+.new-topic-btn:active {
+    transform: scale(0.95) rotate(180deg);
 }
 
 .goda-chat-input input {
@@ -558,6 +678,7 @@ const chatbotStyles = `
     justify-content: center;
     font-size: 18px;
     transition: all 0.2s;
+    flex-shrink: 0;
 }
 
 .send-btn:hover {

@@ -1,7 +1,7 @@
 # Cloudflare Pages _redirects file
 # Format: [source] [destination] [code]
 # 
-# This file is for REDIRECTS only (301/302)
-# NOT for serving files (that's automatic)
-#
-# For now, no redirects needed - Cloudflare Pages serves .html files automatically
+# Fix incorrect /innovations/ URLs
+/innovations/market-reports.html /market-reports.html 301
+/innovations/tools.html /tools.html 301
+/innovations/social-optimizer-index.html /social-optimizer-index.html 301
