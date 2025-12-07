@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIX KIRO - ALL ERRORS by GODA | Ideas Before Time</title>
+    <link rel="icon" type="image/jpeg" href="images/logo Goda 40 bs 32 pixel.jpg">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .error-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            min-height: 120px;
+            font-family: 'Courier New', monospace;
+        }
+        .solve-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s;
+        }
+        .solve-btn:hover {
+            transform: translateY(-2px);
+        }
+        .solution {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            display: none;
+        }
+        .solution h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .solution-text {
+            line-height: 1.8;
+            color: #333;
+        }
+        .common-errors {
+            margin-top: 30px;
+        }
+        .error-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-left: 4px solid #667eea;
+        }
+        .error-card:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+        .error-title {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        .error-desc {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 FIX KIRO - ALL ERRORS</h1>
+        <p class="subtitle">by GODA • Paste your Kiro error and get instant solution</p>
+
+        <textarea class="error-input" id="errorInput" placeholder="Paste your Kiro error message here...
+
+Example:
+- 'Command failed with exit code 1'
+- 'Module not found'
+- 'Permission denied'
+- Any error from Kiro IDE"></textarea>
+
+        <button class="solve-btn" onclick="solveError()">🚀 Solve Error</button>
+
+        <div class="solution" id="solution">
+            <h3>💡 Solution:</h3>
+            <div class="solution-text" id="solutionText"></div>
+        </div>
+
+        <div class="common-errors">
+            <h3 style="color: #667eea; margin-bottom: 20px;">📋 Common Errors (Click to solve)</h3>
+            
+            <div class="error-card" onclick="quickSolve('exit1')">
+                <div class="error-title">Command failed with exit code 1</div>
+                <div class="error-desc">Build or script execution failed</div>
+            </div>
+
+            <div class="error-card" onclick="quickSolve('module')">
+                <div class="error-title">Module not found / Cannot find module</div>
+                <div class="error-desc">Missing dependencies or wrong path</div>
+            </div>
+
+            <div class="error-card" onclick="quickSolve('permission')">
+                <div class="error-title">Permission denied / EACCES</div>
+                <div class="error-desc">File or folder access denied</div>
+            </div>
+
+            <div class="error-card" onclick="quickSolve('port')">
+                <div class="error-title">Port already in use / EADDRINUSE</div>
+                <div class="error-desc">Another process using the port</div>
+            </div>
+
+            <div class="error-card" onclick="quickSolve('syntax')">
+                <div class="error-title">SyntaxError / Unexpected token</div>
+                <div class="error-desc">Code syntax error</div>
+            </div>
+
+            <div class="error-card" onclick="quickSolve('network')">
+                <div class="error-title">Network error / ENOTFOUND</div>
+                <div class="error-desc">Cannot connect to server</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const solutions = {
+            'exit1': {
+                title: 'Command failed with exit code 1',
+                solution: `<strong>Quick Fix:</strong><br>
+1. Check the error message above the exit code<br>
+2. Common causes:<br>
+   • Missing dependencies → Run: <code>npm install</code><br>
+   • Syntax error in code → Check the file mentioned<br>
+   • Build error → Check build logs<br><br>
+<strong>Steps:</strong><br>
+1. Read full error message<br>
+2. Fix the specific issue mentioned<br>
+3. Run command again`
+            },
+            'module': {
+                title: 'Module not found',
+                solution: `<strong>Quick Fix:</strong><br>
+1. Install missing module: <code>npm install [module-name]</code><br>
+2. Check if path is correct<br>
+3. Check if file exists<br><br>
+<strong>Common causes:</strong><br>
+• Forgot to run npm install<br>
+• Wrong import path<br>
+• Typo in module name<br>
+• Module not in package.json`
+            },
+            'permission': {
+                title: 'Permission denied',
+                solution: `<strong>Quick Fix:</strong><br>
+1. Run as administrator (Windows)<br>
+2. Or use: <code>sudo</code> (Mac/Linux)<br>
+3. Check file permissions<br><br>
+<strong>Windows:</strong> Right-click → Run as administrator<br>
+<strong>Mac/Linux:</strong> <code>sudo [command]</code>`
+            },
+            'port': {
+                title: 'Port already in use',
+                solution: `<strong>Quick Fix:</strong><br>
+1. Kill process using port:<br>
+   Windows: <code>netstat -ano | findstr :[PORT]</code><br>
+   Then: <code>taskkill /PID [PID] /F</code><br><br>
+2. Or use different port<br>
+3. Or restart computer`
+            },
+            'syntax': {
+                title: 'Syntax Error',
+                solution: `<strong>Quick Fix:</strong><br>
+1. Check line number in error<br>
+2. Look for:<br>
+   • Missing brackets: ( ) { } [ ]<br>
+   • Missing semicolons: ;<br>
+   • Missing quotes: " " ' '<br>
+   • Wrong indentation<br><br>
+3. Use code editor to highlight errors`
+            },
+            'network': {
+                title: 'Network Error',
+                solution: `<strong>Quick Fix:</strong><br>
+1. Check internet connection<br>
+2. Check if URL is correct<br>
+3. Check firewall settings<br>
+4. Try again after few seconds<br><br>
+<strong>If persists:</strong><br>
+• Restart router<br>
+• Disable VPN temporarily<br>
+• Check DNS settings`
+            }
+        };
+
+        function solveError() {
+            const input = document.getElementById('errorInput').value.toLowerCase();
+            const solutionDiv = document.getElementById('solution');
+            const solutionText = document.getElementById('solutionText');
+
+            if (!input.trim()) {
+                alert('Please paste your error message first!');
+                return;
+            }
+
+            let solution = '';
+
+            // Match error patterns
+            if (input.includes('exit code 1') || input.includes('failed')) {
+                solution = solutions.exit1.solution;
+            } else if (input.includes('module') || input.includes('cannot find')) {
+                solution = solutions.module.solution;
+            } else if (input.includes('permission') || input.includes('eacces')) {
+                solution = solutions.permission.solution;
+            } else if (input.includes('port') || input.includes('eaddrinuse')) {
+                solution = solutions.port.solution;
+            } else if (input.includes('syntax') || input.includes('unexpected')) {
+                solution = solutions.syntax.solution;
+            } else if (input.includes('network') || input.includes('enotfound')) {
+                solution = solutions.network.solution;
+            } else {
+                solution = `<strong>General Troubleshooting:</strong><br>
+1. Read the full error message carefully<br>
+2. Copy exact error and search on Google<br>
+3. Check if all dependencies installed<br>
+4. Restart Kiro IDE<br>
+5. Check file paths are correct<br><br>
+<strong>Still stuck?</strong><br>
+• Check Kiro documentation<br>
+• Ask in Kiro community<br>
+• Share error with team`;
+            }
+
+            solutionText.innerHTML = solution;
+            solutionDiv.style.display = 'block';
+            solutionDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function quickSolve(type) {
+            const solutionDiv = document.getElementById('solution');
+            const solutionText = document.getElementById('solutionText');
+            
+            solutionText.innerHTML = solutions[type].solution;
+            solutionDiv.style.display = 'block';
+            solutionDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+    <script src="common-navigation.js"></script>
+    <script src="common-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "Auto-Check on First Message",
+  "description": "Runs START_SESSION.bat when user sends first message",
+  "trigger": "onSessionStart",
+  "enabled": true,
+  "action": {
+    "type": "command",
+    "command": "START_SESSION.bat"
+  }
+}

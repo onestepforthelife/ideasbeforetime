@@ -16,6 +16,8 @@
 /ro.html /ro.html 200
 /email-sender-web.html /email-sender-web.html 200
 /admin-control-panel.html /admin-control-panel.html 200
+/kiro-training-guide.html /kiro-error-solver.html 200
+/kiro-error-solver.html /kiro-error-solver.html 200
 
 # SOLUTION 2: Also serve extensionless URLs (for convenience)
 # When user visits /blog, serve blog.html with 200 status
@@ -32,6 +34,8 @@
 /ro /ro.html 200
 /email-sender-web /email-sender-web.html 200
 /admin-control-panel /admin-control-panel.html 200
+/kiro-training-guide /kiro-error-solver.html 200
+/kiro-error-solver /kiro-error-solver.html 200
 
 # Catch-all: Serve all other files as-is
 /* /:splat 200
