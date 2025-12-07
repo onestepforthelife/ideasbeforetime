@@ -40,7 +40,7 @@ console.log('\n✅ COMPLETE! Astronomy page added to site.');
 console.log('\n📋 Manual Steps Needed:');
 console.log('1. Add to common-navigation.js: <a href="astronomy.html">🔭 Astronomy</a>');
 console.log('2. Add to quick links widget in all pages');
-console.log('3. Test on live site: https://ideasbeforetime.pages.dev/astronomy.html');
+console.log('3. Test on live site: https://onestepforthelife.com/astronomy.html');
 console.log('4. Push to GitHub');
 
 console.log('\n🎯 What Users Get:');

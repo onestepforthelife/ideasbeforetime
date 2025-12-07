@@ -157,7 +157,7 @@ const previewHTML = `
         📧 Request Access
     </a>
     
-    <a href="https://ideasbeforetime.pages.dev/market-reports.html" 
+    <a href="https://onestepforthelife.com/market-reports.html" 
        class="btn btn-secondary">
         ← Back to Reports
     </a>
