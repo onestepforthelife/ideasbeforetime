@@ -2428,9 +2428,50 @@ User reports site issues:
 
 ---
 
-**Last Updated:** December 6, 2025, 1:35 PM IST
-**Total Learnings:** 44 major lessons
-**Latest:** Learning #44 (MCP Documentation Fetching)
+---
+
+### Learning #45: Ask Clarifying Questions for Vague Issues (Dec 7, 2025)
+**What happened:** User said "bad look" on about.html, I assumed image width issue without asking
+**What I did wrong:** 
+- Didn't ask "What exactly looks bad?"
+- Didn't check live site first
+- Assumed instead of clarified
+- Fixed wrong thing without verification
+
+**The correct workflow:**
+```
+User: "bad look here"
+Me: "What exactly looks bad? 
+     - Layout/alignment?
+     - Images not showing?
+     - Colors wrong?
+     - Spacing issues?
+     - Mobile view?
+     Can you describe or screenshot?"
+```
+
+**Why this matters:**
+- "Bad look" could mean 20 different things
+- Vague terms need clarification
+- Assumptions waste time
+- User knows what they see, I don't
+
+**Vague terms that need clarification:**
+- "bad look" → Ask what specifically
+- "not working" → Ask what's expected vs actual
+- "broken" → Ask what's broken exactly
+- "wrong" → Ask what should it be
+- "issue" → Ask what the issue is
+
+**GOLDEN RULE #46:** Never assume vague terms - always ask clarifying questions first!
+
+**Prevention:** Added to MASTER_RULES.md mandatory checks
+
+---
+
+**Last Updated:** December 7, 2025
+**Total Learnings:** 45 major lessons
+**Latest:** Learning #45 (Ask clarifying questions for vague issues)
 **Status:** ACTIVE - Complete knowledge partnership + Documentation access
 **Priority:** CRITICAL - Foundation for all technical work
 
