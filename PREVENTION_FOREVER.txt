@@ -1,0 +1,18 @@
+HOW TO AVOID PAST MISTAKES FOREVER
+
+1. RUN AUTO_ENFORCE.bat BEFORE every session
+   - Checks file count <570
+   - Checks no plan files created
+   - Blocks if violations
+
+2. MASTER_RULES.md is ONLY file to read
+   - All 27 files consolidated
+   - 3 rules: Execute, Verify, Complete
+   - No confusion
+
+3. MASTER_ENFORCEMENT.js runs automatically
+   - Blocks response if violations
+   - Forces fix first
+   - No exceptions
+
+RESULT: System enforces rules, not me remembering them.
