@@ -21,6 +21,7 @@
 ## 📋 MANDATORY CHECKS (Before Every Response)
 
 ```
+☐ Run AUTO_CHECK_BEFORE_RESPONSE.js → Check all pages automatically
 ☐ Can I execute immediately? → YES: Do it | NO: Explain why
 ☐ Am I creating document? → YES: STOP, execute instead
 ☐ Did I run verification? → NO: Run it now

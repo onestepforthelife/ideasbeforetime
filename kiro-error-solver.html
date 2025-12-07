@@ -151,6 +151,11 @@ Example:
                 <div class="error-title">Network error / ENOTFOUND</div>
                 <div class="error-desc">Cannot connect to server</div>
             </div>
+
+            <div class="error-card" onclick="quickSolve('mcp')">
+                <div class="error-title">MCP Server Issues / Powers Not Working</div>
+                <div class="error-desc">MCP tools disabled or failing</div>
+            </div>
         </div>
     </div>
 
@@ -221,6 +226,29 @@ Example:
 • Restart router<br>
 • Disable VPN temporarily<br>
 • Check DNS settings`
+            },
+            'mcp': {
+                title: 'MCP Server Issues',
+                solution: `<strong>Quick Fix:</strong><br>
+1. Check MCP server status in Kiro<br>
+2. Restart MCP server:<br>
+   • Open Command Palette (Ctrl+Shift+P)<br>
+   • Search: "MCP: Restart Server"<br>
+   • Select the failing server<br><br>
+<strong>Enable/Disable MCP:</strong><br>
+1. Open: <code>.kiro/settings/mcp.json</code><br>
+2. Find your server config<br>
+3. Set: <code>"disabled": false</code> (to enable)<br>
+4. Or: <code>"disabled": true</code> (to disable)<br>
+5. Save file → Server auto-restarts<br><br>
+<strong>Common MCP Issues:</strong><br>
+• Server not responding → Restart server<br>
+• Tools not showing → Check "disabled" setting<br>
+• Connection failed → Check command/args in config<br>
+• Python errors → Check uvx/uv installed<br><br>
+<strong>Check MCP Config:</strong><br>
+File: <code>.kiro/settings/mcp.json</code><br>
+Look for: "disabled": true/false`
             }
         };
 
@@ -279,5 +307,39 @@ Example:
 
     <script src="common-navigation.js"></script>
     <script src="common-footer.js"></script>
+
+<!-- Quick Access Widget -->
+<div class="quick-access-widget" id="quickAccessWidget">
+    <button class="quick-access-btn" onclick="toggleQuickAccess()">
+        <span class="icon">⚡</span>
+    </button>
+    <div class="quick-access-menu" id="quickAccessMenu">
+        <a href="index.html">🏠 Home</a>
+        <a href="about.html">👤 About</a>
+        <a href="blog.html">📝 Blog</a>
+        <a href="market-reports.html">📊 Reports</a>
+        <a href="cv.html">📄 CV</a>
+        <a href="tools.html">🛠️ Tools</a>
+        <a href="innovations.html">💡 Innovations</a>
+    </div>
+</div>
+
+<style>.quick-access-widget{position:fixed;bottom:20px;right:20px;z-index:1000;}.quick-access-btn{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#2563eb 0%,#1e40af 100%);border:none;color:white;font-size:24px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);transition:transform 0.3s ease;}.quick-access-btn:hover{transform:scale(1.1);}.quick-access-menu{display:none;position:absolute;bottom:70px;right:0;background:white;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.15);padding:12px;min-width:200px;}.quick-access-menu.active{display:block;animation:slideUp 0.3s ease;}@keyframes slideUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}.quick-access-menu a{display:block;padding:12px 16px;color:#2c3e50;text-decoration:none;border-radius:8px;transition:background 0.2s ease;font-size:14px;}.quick-access-menu a:hover{background:#f8f9fa;}@media (max-width:768px){.quick-access-widget{bottom:15px;right:15px;}.quick-access-btn{width:50px;height:50px;font-size:20px;}}</style>
+
+<script>
+function toggleQuickAccess() {
+    const menu = document.getElementById('quickAccessMenu');
+    menu.classList.toggle('active');
+}
+
+document.addEventListener('click', function(event) {
+    const widget = document.getElementById('quickAccessWidget');
+    const menu = document.getElementById('quickAccessMenu');
+    if (widget && !widget.contains(event.target)) {
+        menu.classList.remove('active');
+    }
+});
+</script>
+<script src="goda-chatbot.js"></script>
 </body>
 </html>
