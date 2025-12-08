@@ -1,0 +1,899 @@
+{
+  "timestamp": "2025-12-08T15:36:53.389Z",
+  "filesScanned": 180,
+  "issues": {
+    "alignment": [],
+    "contrast": [
+      {
+        "file": "about.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "access.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "acrylic.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "admin-control-panel.html",
+        "issue": "Light gray text on light gray background",
+        "severity": "high"
+      },
+      {
+        "file": "astronomy.html",
+        "issue": "Light gray text on light gray background",
+        "severity": "high"
+      },
+      {
+        "file": "BASF_IT_SECURITY_PROPOSAL.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-1.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-10.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-100.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-11.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-12.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-13.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-14.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-15.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-16.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-17.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-18.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-19.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-2.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-20.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-21.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-22.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-23.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-24.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-25.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-26.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-27.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-28.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-29.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-3.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-30.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-31.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-32.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-33.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-34.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-35.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-36.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-37.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-38.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-39.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-4.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-40.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-41.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-42.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-43.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-44.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-45.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-46.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-47.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-48.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-49.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-5.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-50.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-51.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-52.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-53.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-54.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-55.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-56.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-57.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-58.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-59.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-6.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-60.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-61.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-62.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-63.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-64.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-65.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-66.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-67.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-68.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-69.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-7.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-70.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-71.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-72.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-73.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-74.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-75.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-76.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-77.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-78.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-79.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-8.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-80.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-81.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-82.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-83.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-84.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-85.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-86.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-87.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-88.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-89.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-9.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-90.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-91.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-92.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-93.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-94.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-95.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-96.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-97.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-98.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog-post-99.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "blog.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "business-insights.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "business-news.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "cv-preview.html",
+        "issue": "White on white, Light gray text on light gray background",
+        "severity": "high"
+      },
+      {
+        "file": "cv.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "disclaimer.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "email-sender-web.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "email.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "error-dashboard.html",
+        "issue": "White on white, Light gray text on light gray background",
+        "severity": "high"
+      },
+      {
+        "file": "Final_Acrylic_Market_Report.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "index-v2-conversion-optimized.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "index.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "innovations.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "insights.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "job-credits-ui.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "job-dashboard.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "job-tools.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "jobs.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "JOB_OUTREACH_AUTOMATION_TOOL.html",
+        "issue": "White on white, Light gray text on light gray background",
+        "severity": "high"
+      },
+      {
+        "file": "JOB_POWER_FEATURES.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "JOB_TRACKER_DAILY.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "kiro-error-solver.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "kiro-improvement-guide.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "kiro.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "KIRO_AWS_REPORT_CLEAN.html",
+        "issue": "White on white, Light gray text on light gray background",
+        "severity": "high"
+      },
+      {
+        "file": "KIRO_IMPROVEMENT_REPORT_FOR_AWS.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "learn.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "library.html",
+        "issue": "White on white, Light gray text on light gray background",
+        "severity": "high"
+      },
+      {
+        "file": "linkedin-auto-scroller.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "linkedin-complete-book.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "linkedin-network-map.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "linkedin-portfolio-index.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "linkedin-post-copier.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "linkedin-skills-dashboard.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "linkedin.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "market-reports.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "nickel-compounds-technical-data.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "nickel-esg-report-open.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "nickel-esg-report.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "nickel.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "paper.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "Paper_Pulp_Specialty_Chemicals_Report.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "PAYMENT_VISUAL_GUIDE.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "poloxamer.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "Poloxamer_Market_Report.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "privacy-policy.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "profile-optimizer.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "refund-policy.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "reports.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "request-access.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "research-preview.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "ro-guide.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "ro-service-checklist.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "ro-water-purifier-guide.html",
+        "issue": "White on white, Light gray text on light gray background",
+        "severity": "high"
+      },
+      {
+        "file": "ro.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "social-optimizer-admin.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "social-optimizer-app.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "social-optimizer-dashboard.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "social-optimizer-index.html",
+        "issue": "White on white, Light gray text on light gray background",
+        "severity": "high"
+      },
+      {
+        "file": "social-optimizer-quickstart.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "social-optimizer-success.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "specialty.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "spo.html",
+        "issue": "White on white, Light gray text on light gray background",
+        "severity": "high"
+      },
+      {
+        "file": "teaching-ai-to-think.html",
+        "issue": "White on white, Light gray text on light gray background",
+        "severity": "high"
+      },
+      {
+        "file": "terms-and-disclaimer.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "TEST_CREDITS.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "TEST_NEW_NAVIGATION.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "timeline.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "tools.html",
+        "issue": "White on white",
+        "severity": "high"
+      },
+      {
+        "file": "vertical-nav-option.html",
+        "issue": "White on white",
+        "severity": "high"
+      }
+    ],
+    "headerSize": [],
+    "total": 177
+  },
+  "recommendations": [
+    "Fix color contrast issues for WCAG AA compliance (4.5:1 ratio minimum)"
+  ]
+}

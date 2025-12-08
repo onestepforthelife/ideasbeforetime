@@ -1,0 +1,101 @@
+{
+  "smallText": [],
+  "leftAligned": [
+    {
+      "file": "blog.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "business-insights.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "cv-preview.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "email-template.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "index-v2-conversion-optimized.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "JOB_OUTREACH_AUTOMATION_TOOL.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "JOB_POWER_FEATURES.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "JOB_TRACKER_DAILY.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "library.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "linkedin-network-map.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "linkedin-portfolio-index.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "linkedin-skills-dashboard.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "nickel-compounds-technical-data.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "profile-optimizer.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "research-preview.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "ro-service-checklist.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "social-optimizer-index.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "spo.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    },
+    {
+      "file": "timeline.html",
+      "element": "header",
+      "issue": "Header left-aligned (should be center)"
+    }
+  ],
+  "total": 19
+}

@@ -223,6 +223,9 @@ function validateStep1() {
                 errors.push('Please enter your profile link or username');
             } else if (!link.includes('http') && !link.includes('@')) {
                 warnings.push('Make sure your link is complete (e.g., https://linkedin.com/in/yourname)');
+            } else {
+                // Add helpful message about profile link feature
+                warnings.push('Profile link feature is in development. For now, please use "Try Free Demo" button or paste your bio text directly.');
             }
         } else if (inputMethod === 'image' || inputMethod === 'pdf') {
             if (!uploadedFile) {
@@ -274,11 +277,17 @@ function validateStep1() {
     } else if (inputMethod === 'link') {
         userData.profileLink = document.getElementById('profileLink').value;
         // In production, you'd fetch profile data from the link
-        userData.currentBio = `Profile from: ${userData.profileLink}`;
+        // For now, use demo data so user can continue
+        userData.currentBio = 'Experienced professional with 10+ years in technology and innovation. Passionate about AI, digital transformation, and building products that make a difference. Led multiple successful projects and teams.';
+        userData.currentHeadline = 'Technology Leader | AI Enthusiast | Product Innovation';
+        console.log('Using demo data for profile link:', userData.profileLink);
     } else if (inputMethod === 'image' || inputMethod === 'pdf') {
         userData.uploadedFile = uploadedFile.name;
         // In production, you'd use OCR/PDF parsing to extract text
-        userData.currentBio = `Extracted from ${inputMethod}: ${uploadedFile.name}`;
+        // For now, use demo data so user can continue
+        userData.currentBio = 'Experienced professional with 10+ years in technology and innovation. Passionate about AI, digital transformation, and building products that make a difference. Led multiple successful projects and teams.';
+        userData.currentHeadline = 'Technology Leader | AI Enthusiast | Product Innovation';
+        console.log('Using demo data for uploaded file:', uploadedFile.name);
     }
     
     // Save to localStorage so data persists across page navigation
