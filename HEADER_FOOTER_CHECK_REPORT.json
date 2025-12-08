@@ -1,0 +1,44 @@
+{
+  "totalFiles": 180,
+  "summary": {
+    "navigationJS": {
+      "has": 178,
+      "missing": 2
+    },
+    "navigationCSS": {
+      "has": 173,
+      "missing": 7
+    },
+    "footerJS": {
+      "has": 178,
+      "missing": 2
+    },
+    "footerCSS": {
+      "has": 178,
+      "missing": 2
+    }
+  },
+  "missingFiles": {
+    "navigationJS": [
+      "email-template.html",
+      "test-goda.html"
+    ],
+    "navigationCSS": [
+      "BASF_IT_SECURITY_PROPOSAL.html",
+      "email-template.html",
+      "error-dashboard.html",
+      "KIRO_AWS_REPORT_CLEAN.html",
+      "KIRO_IMPROVEMENT_REPORT_FOR_AWS.html",
+      "PAYMENT_VISUAL_GUIDE.html",
+      "test-goda.html"
+    ],
+    "footerJS": [
+      "email-template.html",
+      "test-goda.html"
+    ],
+    "footerCSS": [
+      "email-template.html",
+      "test-goda.html"
+    ]
+  }
+}
