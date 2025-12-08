@@ -1,0 +1,52 @@
+FOUND ISSUES - READY TO FIX TOMORROW
+December 8, 2025
+
+ISSUE 1: Change "Amit" references to "GODA"
+============================================
+Found in these files:
+1. teaching-ai-to-think.html
+2. KIRO_IMPROVEMENT_REPORT_FOR_AWS.html  
+3. KIRO_AWS_REPORT_CLEAN.html
+
+Text to change:
+- "Prepared by: Amit Kumar (Business User, Non-Coder)"
+- References to "Amit's 3 weeks experience"
+
+Change to:
+- "Prepared by: GODA (AI Assistant)"
+- "GODA's 3 weeks experience"
+
+ISSUE 2: SPO Payment Navigation
+================================
+File: social-optimizer-app.html
+Problem: Not going to payment page
+Need to: Test on live site to see exact error
+
+ISSUE 3: GODA Chatbot
+======================
+File: goda-chatbot.js
+Problem: Not working on live site
+Need to: Test and diagnose
+
+ISSUE 4: kiro.html Navigation
+==============================
+File: kiro.html
+Problem: Missing navigation
+Need to: Add common-navigation.js
+
+TOMORROW MORNING:
+=================
+1. Show you this list
+2. Get your approval for each fix
+3. Fix them one by one
+4. Test each on live site
+5. Show proof
+6. No more documents
+
+TONIGHT:
+========
+Machine staying on.
+No more work (you're sleeping).
+Ready to execute tomorrow.
+
+Good night.
