@@ -1,0 +1,225 @@
+# BUSINESS INSIGHTS AUTO-UPDATE REQUIREMENTS
+**Created:** December 8, 2025
+**Purpose:** Define requirements for auto-updating business-insights.html every 4 hours
+
+---
+
+## WHAT MUST WORK:
+
+1. **Auto-Update Every 4 Hours**
+   - Page content updates automatically
+   - No manual intervention needed
+   - Runs 24/7 continuously
+
+2. **Latest Data with Sources**
+   - AI & Technology trends (with source links)
+   - M&A news (with source links)
+   - Startup funding (with source links)
+   - Business closures (with source links)
+   - Forex rates (live data with source)
+   - Commodity prices (live data with source)
+   - Global trends (with source links)
+
+3. **Source References**
+   - Each insight must have source link
+   - Format: "Source: [Publication Name](URL)"
+   - Credible sources only (Reuters, Bloomberg, ET, Mint, TechCrunch, etc.)
+
+4. **Data Freshness**
+   - "Last Updated" timestamp shows actual update time
+   - Content is from last 24-48 hours (not November 2024!)
+   - Old/outdated insights removed automatically
+
+5. **Reliability**
+   - Works even if one data source fails
+   - Graceful degradation (show what's available)
+   - Error logging for debugging
+
+---
+
+## WHAT MUST NOT HAPPEN:
+
+1. **No Stale Data**
+   - Must not show "November 2024" when it's December 2025
+   - Must not show outdated prices/rates
+
+2. **No Broken Sources**
+   - Must not show "Source: undefined"
+   - Must not have dead links
+
+3. **No Manual Updates**
+   - User should NOT have to update content manually
+   - Should be fully automated
+
+---
+
+## IMPLEMENTATION OPTIONS:
+
+### Option A: Cloudflare Workers + Cron Trigger (RECOMMENDED)
+**Pros:**
+- Native Cloudflare integration
+- Cron triggers built-in (every 4 hours)
+- Can fetch from multiple APIs
+- Can update HTML dynamically
+- Free tier: 100,000 requests/day
+
+**Cons:**
+- Requires Cloudflare Workers setup
+- Need API keys for data sources
+- More complex initial setup
+
+**How it works:**
+1. Create Cloudflare Worker script
+2. Set cron trigger: `0 */4 * * *` (every 4 hours)
+3. Worker fetches data from APIs (news, forex, commodities)
+4. Worker generates updated HTML
+5. Worker updates business-insights.html via GitHub API or KV storage
+6. Page shows fresh data
+
+### Option B: GitHub Actions + Scheduled Workflow
+**Pros:**
+- Already using GitHub
+- Scheduled workflows built-in
+- Can commit updated HTML to repo
+- Free for public repos
+
+**Cons:**
+- Requires GitHub Actions setup
+- Need API keys for data sources
+- Cloudflare cache must be purged after update
+
+**How it works:**
+1. Create `.github/workflows/update-business-insights.yml`
+2. Schedule: `0 */4 * * *` (every 4 hours)
+3. Action fetches data from APIs
+4. Action generates updated HTML
+5. Action commits to GitHub
+6. Cloudflare auto-deploys
+7. Action purges Cloudflare cache
+
+### Option C: Client-Side JavaScript (SIMPLEST)
+**Pros:**
+- No server setup needed
+- Works immediately
+- Easy to implement
+
+**Cons:**
+- API keys exposed in browser (security risk)
+- Rate limits per user
+- Slower (fetches on every page load)
+- No caching
+
+**How it works:**
+1. Add JavaScript to business-insights.html
+2. On page load, fetch data from APIs
+3. Update DOM with fresh data
+4. Cache in localStorage (4 hour expiry)
+
+---
+
+## DATA SOURCES NEEDED:
+
+### 1. News APIs (for insights)
+- **NewsAPI.org** - Free tier: 100 requests/day
+- **Google News API** - Free
+- **Bing News API** - Free tier available
+- **RSS Feeds** - Free (ET, Mint, TechCrunch)
+
+### 2. Financial Data APIs
+- **Forex:**
+  - exchangerate-api.com (free tier: 1500 requests/month)
+  - fixer.io (free tier: 100 requests/month)
+  
+- **Commodities:**
+  - commodities-api.com (free tier: 100 requests/month)
+  - goldapi.io (free tier: 100 requests/month)
+
+- **Stock Market:**
+  - Alpha Vantage (free tier: 5 requests/min)
+  - Yahoo Finance API (free)
+
+### 3. Startup/VC Data
+- **Crunchbase API** - Paid (but has free tier)
+- **RSS Feeds** - Free (YourStory, Inc42, TechCrunch)
+
+---
+
+## RECOMMENDED APPROACH:
+
+**Phase 1: Client-Side (Quick Win - 1 hour)**
+- Add JavaScript to fetch live forex/commodity prices
+- Update "Last Updated" timestamp
+- Add source links to existing content
+- Cache data for 4 hours
+
+**Phase 2: GitHub Actions (Full Solution - 4 hours)**
+- Set up scheduled workflow
+- Fetch news from RSS feeds (free)
+- Fetch financial data from APIs
+- Generate updated HTML
+- Commit and deploy
+- Purge cache
+
+**Phase 3: Cloudflare Workers (Advanced - 8 hours)**
+- Migrate to Workers for better performance
+- Add more data sources
+- Implement smart caching
+- Add error handling
+
+---
+
+## QUESTIONS FOR USER:
+
+1. **Which option do you prefer?**
+   - Option A: Cloudflare Workers (best performance, more setup)
+   - Option B: GitHub Actions (good balance, easier setup)
+   - Option C: Client-side JS (simplest, works now)
+
+2. **Do you have API keys for:**
+   - NewsAPI.org?
+   - Financial data APIs?
+   - Or should I use free RSS feeds?
+
+3. **What's priority?**
+   - Get something working NOW (Option C)
+   - Get best solution (Option A/B)
+
+4. **Content preferences:**
+   - Keep all 7 categories?
+   - Focus on specific industries (chemicals, AI, etc.)?
+   - Add new categories?
+
+---
+
+## SUCCESS CRITERIA:
+
+✅ Page updates every 4 hours automatically
+✅ Shows data from last 24-48 hours (not November 2024)
+✅ Every insight has source link
+✅ Forex/commodity prices are live
+✅ "Last Updated" shows actual time
+✅ Works without manual intervention
+✅ Graceful error handling
+
+---
+
+## NEXT STEPS:
+
+**If user says "do it now":**
+1. Implement Option C (client-side) first (1 hour)
+2. Test on live site
+3. Then upgrade to Option B (GitHub Actions) for full automation
+
+**If user provides API keys:**
+1. Implement Option B (GitHub Actions) directly (4 hours)
+2. Full automation from day 1
+
+**If user wants best solution:**
+1. Implement Option A (Cloudflare Workers) (8 hours)
+2. Production-grade, scalable solution
+
+---
+
+**Status:** REQUIREMENTS DOCUMENTED - Awaiting user decision
+**Priority:** HIGH - Page showing outdated content (November 2024)
+**Estimated Time:** 1-8 hours depending on option chosen
