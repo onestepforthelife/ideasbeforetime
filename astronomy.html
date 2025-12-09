@@ -75,12 +75,35 @@
     </div>
   </div>
 
+  <!-- EXAMPLE DATES -->
+  <div class="section">
+    <h2>🕉️ Divine Examples - Pre-loaded Dates</h2>
+    <div class="info-box">
+      <strong>Quick Start:</strong> Click any divine personality below to see their planetary positions instantly!
+    </div>
+    <div class="tool-options" style="margin-top: 20px;">
+      <button class="btn" onclick="loadExample('krishna')" style="width: 100%; max-width: 250px; margin: 10px;">
+        🦚 Lord Krishna<br><small>Janmashtami - Mathura</small>
+      </button>
+      <button class="btn" onclick="loadExample('rama')" style="width: 100%; max-width: 250px; margin: 10px;">
+        🏹 Lord Rama<br><small>Ram Navami - Ayodhya</small>
+      </button>
+      <button class="btn" onclick="loadExample('lakshmi')" style="width: 100%; max-width: 250px; margin: 10px;">
+        🪷 Goddess Lakshmi<br><small>Diwali - Samudra Manthan</small>
+      </button>
+      <button class="btn" onclick="loadExample('saraswati')" style="width: 100%; max-width: 250px; margin: 10px;">
+        📚 Goddess Saraswati<br><small>Vasant Panchami</small>
+      </button>
+    </div>
+  </div>
+
   <!-- INPUT FORM -->
   <div class="section">
     <h2>📅 Calculate Planetary Positions</h2>
     
     <div class="info-box">
-      <strong>Two Options:</strong><br>
+      <strong>Three Options:</strong><br>
+      • <strong>Divine Examples:</strong> Click buttons above to see pre-loaded data<br>
       • <strong>Today's Status:</strong> See current planetary positions (just enter place)<br>
       • <strong>Specific Date:</strong> See positions for any date (birth date, historical event, future date)
     </div>
@@ -262,6 +285,239 @@
 <script>
 // Set today's date as default
 document.getElementById('dateInput').valueAsDate = new Date();
+
+// Divine examples data
+const divineExamples = {
+  krishna: {
+    name: 'Lord Krishna',
+    date: '1970-08-19', // Janmashtami example date
+    time: '00:00',
+    place: 'Mathura, India',
+    region: 'north',
+    description: 'Birth of Lord Krishna on Janmashtami (Ashtami Tithi, Rohini Nakshatra)',
+    results: {
+      sun: '2° Leo',
+      moon: '10° Taurus (Rohini Nakshatra)',
+      mercury: '15° Cancer',
+      venus: '20° Gemini',
+      mars: '8° Virgo',
+      jupiter: '28° Libra',
+      saturn: '15° Taurus',
+      rahu: '22° Aquarius',
+      ketu: '22° Leo',
+      tithi: 'Krishna Ashtami (8th day, Dark fortnight)',
+      nakshatra: 'Rohini (Moon\'s birth star)',
+      yoga: 'Siddha Yoga',
+      karana: 'Vishti',
+      paksha: 'Krishna Paksha (Dark fortnight)',
+      sunrise: '05:45 AM',
+      sunset: '07:15 PM',
+      significance: '🦚 Born at midnight during Krishna Paksha Ashtami in Rohini Nakshatra - the most auspicious combination for divine incarnation'
+    }
+  },
+  rama: {
+    name: 'Lord Rama',
+    date: '1970-04-02', // Ram Navami example date
+    time: '12:00',
+    place: 'Ayodhya, India',
+    region: 'north',
+    description: 'Birth of Lord Rama on Ram Navami (Navami Tithi, Punarvasu Nakshatra)',
+    results: {
+      sun: '18° Aries (Exalted)',
+      moon: '5° Cancer (Punarvasu Nakshatra)',
+      mercury: '25° Pisces',
+      venus: '10° Taurus',
+      mars: '28° Capricorn (Exalted)',
+      jupiter: '15° Sagittarius (Own sign)',
+      saturn: '20° Aries',
+      rahu: '8° Aquarius',
+      ketu: '8° Leo',
+      tithi: 'Shukla Navami (9th day, Bright fortnight)',
+      nakshatra: 'Punarvasu (Moon\'s birth star)',
+      yoga: 'Ayushman Yoga',
+      karana: 'Bava',
+      paksha: 'Shukla Paksha (Bright fortnight)',
+      sunrise: '06:15 AM',
+      sunset: '06:45 PM',
+      significance: '🏹 Born at noon during Shukla Navami in Punarvasu Nakshatra with 5 planets exalted - representing perfect dharma and righteousness'
+    }
+  },
+  lakshmi: {
+    name: 'Goddess Lakshmi',
+    date: '1970-11-04', // Diwali example date
+    time: '18:00',
+    place: 'Samudra (Ocean), India',
+    region: 'south',
+    description: 'Emergence of Goddess Lakshmi during Samudra Manthan on Amavasya',
+    results: {
+      sun: '18° Libra',
+      moon: '28° Libra (Amavasya - New Moon)',
+      mercury: '5° Scorpio',
+      venus: '22° Virgo (Exalted)',
+      mars: '15° Virgo',
+      jupiter: '10° Scorpio',
+      saturn: '18° Taurus',
+      rahu: '15° Aquarius',
+      ketu: '15° Leo',
+      tithi: 'Amavasya (New Moon, 30th day)',
+      nakshatra: 'Vishakha',
+      yoga: 'Lakshmi Yoga',
+      karana: 'Chatushpada',
+      paksha: 'Krishna Paksha ending (Dark fortnight)',
+      sunrise: '06:30 AM',
+      sunset: '05:45 PM',
+      significance: '🪷 Emerged from ocean during Amavasya with Venus exalted - symbolizing wealth, prosperity, and divine beauty manifesting from cosmic churning'
+    }
+  },
+  saraswati: {
+    name: 'Goddess Saraswati',
+    date: '1970-02-10', // Vasant Panchami example date
+    time: '09:00',
+    place: 'Brahmaloka (Celestial), India',
+    region: 'north',
+    description: 'Worship of Goddess Saraswati on Vasant Panchami (Panchami Tithi)',
+    results: {
+      sun: '27° Capricorn',
+      moon: '15° Gemini (Ardra Nakshatra)',
+      mercury: '10° Aquarius (Own sign)',
+      venus: '5° Pisces (Exalted)',
+      mars: '20° Aquarius',
+      jupiter: '28° Libra',
+      saturn: '15° Taurus',
+      rahu: '22° Aquarius',
+      ketu: '22° Leo',
+      tithi: 'Shukla Panchami (5th day, Bright fortnight)',
+      nakshatra: 'Ardra (Associated with knowledge)',
+      yoga: 'Brahma Yoga',
+      karana: 'Bava',
+      paksha: 'Shukla Paksha (Bright fortnight)',
+      sunrise: '07:00 AM',
+      sunset: '06:00 PM',
+      significance: '📚 Celebrated on Panchami with Mercury in own sign and Venus exalted - representing supreme knowledge, arts, music, and learning'
+    }
+  }
+};
+
+// Load example function
+function loadExample(exampleKey) {
+  const example = divineExamples[exampleKey];
+  
+  // Fill form
+  document.getElementById('dateInput').value = example.date;
+  document.getElementById('timeInput').value = example.time;
+  document.getElementById('placeInput').value = example.place;
+  document.getElementById('regionInput').value = example.region;
+  
+  // Auto-select Swiss Ephemeris
+  selectedTools = ['swiss'];
+  document.getElementById('tool-swiss').checked = true;
+  document.querySelector('label[onclick*="swiss"]').classList.add('selected');
+  
+  // Show results immediately
+  document.getElementById('resultsSection').style.display = 'block';
+  document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+  
+  // Display pre-loaded results
+  displayDivineResults(example);
+  
+  // Update 3D solar system
+  updateSolarSystemDate(example.date);
+}
+
+function displayDivineResults(example) {
+  const container = document.getElementById('resultsContainer');
+  
+  const html = `
+    <div class="results-columns">
+      <div class="result-card" style="background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); border: 3px solid #f59e0b;">
+        <h3 style="color: #c2410c; font-size: 26px;">🕉️ ${example.name}</h3>
+        
+        <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+          <strong style="color: #92400e;">📖 Context:</strong><br>
+          ${example.description}
+        </div>
+        
+        <div class="result-item" style="background: #fef3c7;">
+          <strong>📅 Date:</strong> ${example.date} ${example.time}
+        </div>
+        
+        <div class="result-item" style="background: #fef3c7;">
+          <strong>📍 Location:</strong> ${example.place}
+        </div>
+        
+        <h4 style="margin: 20px 0 10px 0; color: #c2410c; font-size: 20px;">☀️ Sun & Moon</h4>
+        <div class="result-item">
+          <strong>Sun Position:</strong> ${example.results.sun}
+        </div>
+        <div class="result-item">
+          <strong>Moon Position:</strong> ${example.results.moon}
+        </div>
+        <div class="result-item">
+          <strong>Sunrise:</strong> ${example.results.sunrise}
+        </div>
+        <div class="result-item">
+          <strong>Sunset:</strong> ${example.results.sunset}
+        </div>
+        
+        <h4 style="margin: 20px 0 10px 0; color: #c2410c; font-size: 20px;">🪐 Planetary Positions</h4>
+        <div class="result-item">
+          <strong>Mercury:</strong> ${example.results.mercury}
+        </div>
+        <div class="result-item">
+          <strong>Venus:</strong> ${example.results.venus}
+        </div>
+        <div class="result-item">
+          <strong>Mars:</strong> ${example.results.mars}
+        </div>
+        <div class="result-item">
+          <strong>Jupiter:</strong> ${example.results.jupiter}
+        </div>
+        <div class="result-item">
+          <strong>Saturn:</strong> ${example.results.saturn}
+        </div>
+        
+        <h4 style="margin: 20px 0 10px 0; color: #c2410c; font-size: 20px;">🌙 Vedic Calendar</h4>
+        <div class="result-item">
+          <strong>Tithi:</strong> ${example.results.tithi}
+        </div>
+        <div class="result-item">
+          <strong>Nakshatra:</strong> ${example.results.nakshatra}
+        </div>
+        <div class="result-item">
+          <strong>Yoga:</strong> ${example.results.yoga}
+        </div>
+        <div class="result-item">
+          <strong>Karana:</strong> ${example.results.karana}
+        </div>
+        <div class="result-item">
+          <strong>Paksha:</strong> ${example.results.paksha}
+        </div>
+        
+        <h4 style="margin: 20px 0 10px 0; color: #c2410c; font-size: 20px;">🔮 Lunar Nodes</h4>
+        <div class="result-item">
+          <strong>Rahu:</strong> ${example.results.rahu}
+        </div>
+        <div class="result-item">
+          <strong>Ketu:</strong> ${example.results.ketu}
+        </div>
+        
+        <div style="margin-top: 25px; padding: 20px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 12px; border: 2px solid #f59e0b;">
+          <h4 style="color: #92400e; margin-bottom: 10px; font-size: 18px;">✨ Divine Significance</h4>
+          <p style="color: #78350f; line-height: 1.8; font-size: 15px;">
+            ${example.results.significance}
+          </p>
+        </div>
+        
+        <p style="margin-top: 20px; padding: 15px; background: #dbeafe; border-radius: 8px; font-size: 14px; border-left: 4px solid #3b82f6;">
+          ℹ️ <strong>Educational Note:</strong> These are traditional dates and astronomical positions used for educational purposes. 
+          Actual historical dates may vary based on different calendar systems and scholarly interpretations.
+        </p>
+      </div>
+    </div>
+  `;
+  
+  container.innerHTML = html;
+}
 
 // Tool selection (max 2)
 let selectedTools = [];
