@@ -206,6 +206,6 @@ class SolarSystem3D {
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('solar-system-container');
     if (container) {
-        new SolarSystem3D('solar-system-container');
+        window.solarSystemInstance = new SolarSystem3D('solar-system-container');
     }
 });

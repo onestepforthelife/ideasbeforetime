@@ -210,9 +210,11 @@
   </div>
 
   <!-- RESULTS SECTION -->
-  <div class="section" id="resultsSection" style="display: none;">
+  <div class="section" id="resultsSection">
     <h2>📊 Calculation Results</h2>
-    <div id="resultsContainer" class="results-container"></div>
+    <div id="resultsContainer" class="results-container">
+      <div class="loading">🔄 Click any divine example above to see planetary positions...</div>
+    </div>
   </div>
 
   <!-- EDUCATIONAL CONTENT -->
@@ -672,25 +674,79 @@ function generateResultCard(tool, formData) {
   `;
 }
 
+// Global solar system instance
+let solarSystemInstance = null;
+
 function updateSolarSystemDate(date) {
   console.log('Updating solar system for date:', date);
-  // This will be implemented in solar-system-3d.js
+  // Calculate planetary positions for the date
+  const dateObj = new Date(date);
+  const daysSinceEpoch = (dateObj - new Date('2000-01-01')) / (1000 * 60 * 60 * 24);
+  
+  // Update planet positions based on date (simplified orbital mechanics)
+  if (solarSystemInstance && solarSystemInstance.planets) {
+    solarSystemInstance.planets.forEach((planet, index) => {
+      // Calculate position based on orbital period
+      const orbitalPeriods = [88, 225, 365, 687, 4333, 10759, 30687, 60190, 90560]; // days
+      const period = orbitalPeriods[index];
+      planet.angle = (daysSinceEpoch / period) * Math.PI * 2;
+    });
+  }
 }
 
 // Solar system controls
 function resetCamera() {
-  console.log('Reset camera');
+  if (solarSystemInstance) {
+    solarSystemInstance.camera.position.set(0, 20, 50);
+    solarSystemInstance.camera.lookAt(0, 0, 0);
+  }
 }
 
-function focusPlanet(planet) {
-  console.log('Focus on', planet);
+function focusPlanet(planetName) {
+  if (!solarSystemInstance) return;
+  
+  const planetMap = {
+    'earth': 2,
+    'mars': 3,
+    'jupiter': 4
+  };
+  
+  const planetIndex = planetMap[planetName];
+  if (planetIndex !== undefined && solarSystemInstance.planets[planetIndex]) {
+    const planet = solarSystemInstance.planets[planetIndex];
+    const distance = planet.data.distance * 2;
+    solarSystemInstance.camera.position.set(
+      planet.group.position.x + distance,
+      10,
+      planet.group.position.z + distance
+    );
+    solarSystemInstance.camera.lookAt(
+      planet.group.position.x,
+      planet.group.position.y,
+      planet.group.position.z
+    );
+  }
 }
 
 let animationPaused = false;
 function toggleAnimation() {
   animationPaused = !animationPaused;
-  console.log('Animation', animationPaused ? 'paused' : 'playing');
+  if (solarSystemInstance) {
+    if (animationPaused) {
+      cancelAnimationFrame(solarSystemInstance.animationId);
+    } else {
+      solarSystemInstance.animate();
+    }
+  }
 }
+
+// Auto-load Krishna example on page load
+window.addEventListener('DOMContentLoaded', function() {
+  // Wait for solar system to initialize
+  setTimeout(() => {
+    loadExample('krishna');
+  }, 1000);
+});
 </script>
 
 <script src="common-navigation.js"></script>
