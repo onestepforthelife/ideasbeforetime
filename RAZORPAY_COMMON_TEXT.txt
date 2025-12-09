@@ -1,0 +1,306 @@
+# 💳 RAZORPAY PAYMENT PAGE - COMMON TEXT
+**Date:** December 9, 2025
+**Price:** ₹21 (same for both SPO & Astrology)
+**Gateway:** Razorpay (same for both services)
+
+---
+
+## 📝 RAZORPAY PAYMENT DESCRIPTION (Use This Exact Text)
+
+**Service Name:**
+Ideas Before Time - Professional Services
+
+**Description:**
+AI-powered professional services: Social Profile Optimizer (instant LinkedIn optimization) OR Vedic Astrology Consultation (personalized insights within 48 hours). Choose your service after payment.
+
+**Amount:** ₹21
+
+**Terms:**
+• Instant delivery for SPO, 48 hours for Astrology
+• NO REFUNDS - Amount covers backend work management only
+• Full terms available in website footer
+• Support: onestepforthelife@gmail.com
+
+---
+
+## 🎯 SHORT VERSION (For Razorpay Notes Field)
+
+Service: SPO or Astrology (₹21)
+Delivery: Instant or 48hrs
+NO REFUNDS - Backend cost only
+Terms: See website footer
+
+---
+
+## 💬 PAYMENT BUTTON TEXT
+
+**Option 1 (Simple):**
+```
+Pay ₹21 - Get Service
+```
+
+**Option 2 (Action):**
+```
+Proceed to Payment - ₹21
+```
+
+**Option 3 (Professional):**
+```
+Complete Payment - ₹21
+```
+
+---
+
+## 📧 PAYMENT CONFIRMATION EMAIL (Common Template)
+
+**Subject:** Payment Successful - Your Service is Ready!
+
+**Body:**
+
+Hi [Name],
+
+Thank you for your payment of ₹21!
+
+**Transaction Details:**
+- Order ID: [Razorpay Order ID]
+- Payment ID: [Razorpay Payment ID]
+- Amount: ₹21
+- Date: [Date & Time]
+- Service: [SPO / Astrology - Selected by user]
+
+**Next Steps:**
+
+**If you selected SPO (Social Profile Optimizer):**
+Your optimized profile is ready! Return to the page to download.
+Link: https://onestepforthelife.com/social-optimizer-app.html
+
+**If you selected Astrology Consultation:**
+Your personalized report will be delivered within 48 hours to this email.
+We'll send you a notification when it's ready.
+
+**Need Help?**
+Email: onestepforthelife@gmail.com
+Response time: Within 24 hours
+
+Thank you for choosing Ideas Before Time!
+
+Best regards,
+Amit Kumar
+Ideas Before Time
+https://onestepforthelife.com
+
+---
+
+## 🔒 SECURITY BADGES (Add to Payment Page)
+
+✅ Secure Payment - Powered by Razorpay
+✅ Encrypted - 256-bit SSL protection
+✅ Trusted - Used by 1000+ professionals
+✅ Fast Delivery - Instant or 48 hours
+✅ Support Available - Email anytime
+
+---
+
+## 📱 MOBILE VERSION (Payment Page Text)
+
+**Professional Services - ₹21**
+
+Choose your service:
+• SPO: AI-optimized LinkedIn profile (instant)
+• Astrology: Vedic insights report (48 hours)
+
+**NO REFUNDS** - Backend cost only
+
+[Pay ₹21]
+
+Terms in footer | Support: onestepforthelife@gmail.com
+
+---
+
+## 🎨 PAYMENT PAGE LAYOUT (Common for Both)
+
+```
+┌─────────────────────────────────────┐
+│  💼 Professional Services           │
+│                                     │
+│  Choose Your Service:               │
+│                                     │
+│  🎯 Social Profile Optimizer        │
+│  AI-optimized LinkedIn profile      │
+│  Delivery: Instant                  │
+│                                     │
+│  ⭐ Vedic Astrology Consultation    │
+│  Personalized insights report       │
+│  Delivery: Within 48 hours          │
+│                                     │
+│  Price: ₹21 (one-time payment)     │
+│  NO REFUNDS - Backend cost only     │
+│                                     │
+│  [Pay ₹21 - Proceed to Payment]    │
+│                                     │
+│  🔒 Secure via Razorpay             │
+│  📧 onestepforthelife@gmail.com     │
+│                                     │
+│  Terms in footer                    │
+└─────────────────────────────────────┘
+```
+
+---
+
+## 🔧 RAZORPAY INTEGRATION CODE SNIPPET
+
+```javascript
+// Common payment configuration for both services
+const options = {
+    key: 'rzp_live_RmJ2p4des8sDGF',
+    amount: 2100, // ₹21 in paise
+    currency: 'INR',
+    name: 'Ideas Before Time',
+    description: 'Professional Services (SPO or Astrology)',
+    image: 'https://onestepforthelife.com/images/logo.png',
+    handler: function(response) {
+        // Payment successful
+        alert('Payment successful! Order ID: ' + response.razorpay_order_id);
+        // Redirect based on service selected
+        if (selectedService === 'SPO') {
+            window.location.href = '/social-optimizer-app.html?payment=success';
+        } else {
+            window.location.href = '/astronomy.html?payment=success';
+        }
+    },
+    prefill: {
+        name: userName,
+        email: userEmail,
+        contact: userPhone
+    },
+    notes: {
+        service: selectedService, // 'SPO' or 'Astrology'
+        delivery: selectedService === 'SPO' ? 'instant' : '48hours'
+    },
+    theme: {
+        color: '#5a6c7d'
+    }
+};
+
+const rzp = new Razorpay(options);
+rzp.open();
+```
+
+---
+
+## 📋 RAZORPAY DASHBOARD SETTINGS
+
+**Product Name:** Ideas Before Time - Professional Services
+**Price:** ₹21
+**Currency:** INR
+**Payment Methods:** All (UPI, Cards, Net Banking, Wallets)
+
+**Webhook URL:** (To be configured)
+```
+https://onestepforthelife.com/api/payment-webhook
+```
+
+**Success URL:**
+```
+https://onestepforthelife.com/payment-success.html
+```
+
+**Failure URL:**
+```
+https://onestepforthelife.com/payment-failed.html
+```
+
+---
+
+## ✅ WHAT TO COPY-PASTE TO RAZORPAY
+
+**1. Product/Service Name:**
+```
+Ideas Before Time - Professional Services
+```
+
+**2. Description:**
+```
+AI-powered professional services: Social Profile Optimizer (instant) or Vedic Astrology Consultation (48 hours). NO REFUNDS - Backend cost only. Terms: onestepforthelife.com/footer
+```
+
+**3. Amount:**
+```
+₹21
+```
+
+**4. Customer Support Email:**
+```
+onestepforthelife@gmail.com
+```
+
+**5. Terms & Conditions URL:**
+```
+https://onestepforthelife.com/terms-and-disclaimer.html
+```
+
+**6. Privacy Policy URL:**
+```
+https://onestepforthelife.com/privacy-policy.html
+```
+
+---
+
+## 🎯 KEY POINTS
+
+✅ **Same Gateway:** Razorpay for both services
+✅ **Same Price:** ₹21 for both
+✅ **Same Refund Policy:** NO REFUNDS (backend cost)
+✅ **Different Delivery:** Instant (SPO) vs 48hrs (Astrology)
+✅ **User Selects:** Service chosen before/after payment
+✅ **Common Email:** onestepforthelife@gmail.com
+✅ **Terms:** Reference to footer (not repeated)
+
+---
+
+## 💡 IMPLEMENTATION OPTIONS
+
+**Option A: Single Payment Button**
+- User selects service (radio button)
+- Clicks "Pay ₹21"
+- Razorpay opens with selected service in notes
+- After payment, redirect based on selection
+
+**Option B: Two Separate Buttons**
+- "Pay ₹21 - SPO" button
+- "Pay ₹21 - Astrology" button
+- Both use same Razorpay config
+- Different notes/redirect URLs
+
+**Option C: Payment First, Choose Later**
+- User pays ₹21
+- After payment, choose service
+- Access code generated
+- Use code on either page
+
+**Recommended:** Option A (clearest for user)
+
+---
+
+## 📞 SUPPORT RESPONSE TEMPLATE
+
+**If user asks about refund:**
+```
+Thank you for contacting us. Our services are priced at ₹21 to cover backend work management costs only. Once payment is processed, backend costs are incurred immediately. Therefore, we do not offer refunds. This policy is clearly stated on our payment page and website footer. If you have concerns about service quality, please let us know and we'll do our best to assist.
+```
+
+**If user asks about delivery:**
+```
+SPO: Instant delivery (30 seconds after payment)
+Astrology: Within 48 hours via email
+
+If you haven't received your service within the stated timeframe, please reply with your Order ID and we'll investigate immediately.
+```
+
+---
+
+**Status:** Ready to use in Razorpay dashboard
+**Price:** ₹21 (same for both services)
+**Gateway:** Razorpay (same configuration)
+**Next:** Copy text to Razorpay product settings
+

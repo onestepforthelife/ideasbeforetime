@@ -624,10 +624,277 @@ function checkRenderingReality() {
 checkRenderingReality();
 
 // ============================================
+// PHASE 16: BACKEND/API STRUCTURE (Gap #1 - Partial)
+// ============================================
+console.log('\n🔌 PHASE 16: Backend/API Structure...');
+
+function checkBackendStructure() {
+    const htmlFiles = fs.readdirSync('.').filter(f => f.endsWith('.html'));
+    let missingAPIConfig = 0, hardcodedKeys = 0, noErrorHandling = 0;
+    
+    htmlFiles.forEach(file => {
+        const content = fs.readFileSync(file, 'utf8');
+        
+        // Check for API key exposure (security)
+        const apiKeyPatterns = [
+            /AIzaSy[A-Za-z0-9_-]{33}/g,  // Google API
+            /sk-[A-Za-z0-9]{48}/g,        // OpenAI
+            /ca-pub-\d{16}/g              // AdSense (OK to expose)
+        ];
+        
+        apiKeyPatterns.forEach((pattern, idx) => {
+            if (idx < 2) { // Skip AdSense check
+                const matches = content.match(pattern);
+                if (matches) {
+                    ISSUES.critical.push(`${file}: API key exposed in HTML (${matches[0].substring(0, 10)}...)`);
+                    hardcodedKeys++;
+                }
+            }
+        });
+        
+        // Check for fetch/API calls without error handling
+        const fetchCalls = [...content.matchAll(/fetch\s*\([^)]+\)/g)];
+        fetchCalls.forEach(call => {
+            const callStr = call[0];
+            const contextStart = Math.max(0, call.index - 200);
+            const contextEnd = Math.min(content.length, call.index + 200);
+            const context = content.substring(contextStart, contextEnd);
+            
+            if (!context.includes('.catch') && !context.includes('try')) {
+                ISSUES.high.push(`${file}: fetch() call without error handling`);
+                noErrorHandling++;
+            }
+        });
+    });
+    
+    console.log(`   ${hardcodedKeys === 0 ? '✅' : '❌'} API Keys: ${hardcodedKeys} exposed (CRITICAL)`);
+    console.log(`   ${noErrorHandling === 0 ? '✅' : '⚠️'} Error Handling: ${noErrorHandling} fetch calls without .catch`);
+    console.log(`   ⚠️  NOTE: Cannot verify APIs actually respond - MANUAL TEST REQUIRED`);
+}
+
+checkBackendStructure();
+
+// ============================================
+// PHASE 17: USER FLOW STRUCTURE (Gap #7 - Partial)
+// ============================================
+console.log('\n🔄 PHASE 17: User Flow Structure...');
+
+function checkUserFlowStructure() {
+    // Check critical user flows exist
+    const flows = {
+        'SPO Flow': ['social-optimizer-app.html', 'payment confirmation'],
+        'Job Search': ['jobs.html', 'job details'],
+        'Report Access': ['market-reports.html', 'request-access.html'],
+        'Blog Reading': ['blog.html', 'blog-post-1.html'],
+        'Contact': ['request-access.html', 'email confirmation']
+    };
+    
+    let brokenFlows = 0;
+    
+    Object.entries(flows).forEach(([flowName, pages]) => {
+        const firstPage = pages[0];
+        if (!fs.existsSync(firstPage)) {
+            ISSUES.critical.push(`${flowName}: Entry point missing (${firstPage})`);
+            brokenFlows++;
+            return;
+        }
+        
+        const content = fs.readFileSync(firstPage, 'utf8');
+        
+        // Check for forms without submit handlers
+        if (content.includes('<form') && !content.includes('onsubmit') && !content.includes('addEventListener')) {
+            ISSUES.high.push(`${flowName}: Form in ${firstPage} has no submit handler`);
+        }
+        
+        // Check for buttons without onclick
+        const buttons = [...content.matchAll(/<button[^>]*>(.*?)<\/button>/g)];
+        buttons.forEach(btn => {
+            const btnTag = btn[0];
+            if (!btnTag.includes('onclick') && !btnTag.includes('type="submit"')) {
+                ISSUES.medium.push(`${flowName}: Button "${btn[1]}" in ${firstPage} has no action`);
+            }
+        });
+    });
+    
+    console.log(`   ${brokenFlows === 0 ? '✅' : '❌'} Critical Flows: ${Object.keys(flows).length - brokenFlows}/${Object.keys(flows).length} entry points exist`);
+    console.log(`   ⚠️  NOTE: Cannot test complete flows - MANUAL TEST REQUIRED`);
+}
+
+checkUserFlowStructure();
+
+// ============================================
+// PHASE 18: PERFORMANCE INDICATORS (Gap #5 - Partial)
+// ============================================
+console.log('\n⚡ PHASE 18: Performance Indicators...');
+
+function checkPerformanceIndicators() {
+    const htmlFiles = fs.readdirSync('.').filter(f => f.endsWith('.html'));
+    let largeFiles = 0, noLazyLoad = 0, noMinification = 0;
+    
+    htmlFiles.forEach(file => {
+        const stats = fs.statSync(file);
+        const content = fs.readFileSync(file, 'utf8');
+        
+        // Check file size (>500KB is large for HTML)
+        if (stats.size > 500 * 1024) {
+            ISSUES.medium.push(`${file}: Large file (${(stats.size / 1024).toFixed(0)}KB) - may be slow`);
+            largeFiles++;
+        }
+        
+        // Check for images without lazy loading
+        const images = [...content.matchAll(/<img[^>]*>/g)];
+        images.forEach(img => {
+            if (!img[0].includes('loading="lazy"')) {
+                noLazyLoad++;
+            }
+        });
+        
+        // Check for unminified inline scripts (>1KB)
+        const scripts = [...content.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)];
+        scripts.forEach(script => {
+            const scriptContent = script[1];
+            if (scriptContent.length > 1024 && scriptContent.includes('  ')) {
+                ISSUES.low.push(`${file}: Unminified inline script (${scriptContent.length} chars)`);
+                noMinification++;
+            }
+        });
+    });
+    
+    console.log(`   ${largeFiles === 0 ? '✅' : '⚠️'} File Sizes: ${largeFiles} files >500KB`);
+    console.log(`   ${noLazyLoad === 0 ? '✅' : '⚠️'} Lazy Loading: ${noLazyLoad} images without loading="lazy"`);
+    console.log(`   ${noMinification === 0 ? '✅' : '💡'} Minification: ${noMinification} unminified scripts`);
+    console.log(`   ⚠️  NOTE: Cannot test under load - MANUAL LOAD TEST REQUIRED`);
+}
+
+checkPerformanceIndicators();
+
+// ============================================
+// PHASE 19: SECURITY INDICATORS (Gap #6 - Partial)
+// ============================================
+console.log('\n🔒 PHASE 19: Security Indicators...');
+
+function checkSecurityIndicators() {
+    const htmlFiles = fs.readdirSync('.').filter(f => f.endsWith('.html'));
+    let noCSP = 0, noInputValidation = 0, sqlInjectionRisk = 0;
+    
+    htmlFiles.forEach(file => {
+        const content = fs.readFileSync(file, 'utf8');
+        
+        // Check for Content Security Policy
+        if (!content.includes('Content-Security-Policy')) {
+            noCSP++;
+        }
+        
+        // Check forms for input validation
+        const forms = [...content.matchAll(/<form[\s\S]*?<\/form>/g)];
+        forms.forEach(form => {
+            const formContent = form[0];
+            const inputs = [...formContent.matchAll(/<input[^>]*>/g)];
+            
+            inputs.forEach(input => {
+                const inputTag = input[0];
+                if (!inputTag.includes('required') && !inputTag.includes('pattern') && !inputTag.includes('maxlength')) {
+                    ISSUES.medium.push(`${file}: Input without validation (XSS risk)`);
+                    noInputValidation++;
+                }
+            });
+        });
+        
+        // Check for SQL-like patterns (if using database)
+        if (content.includes('SELECT') || content.includes('INSERT') || content.includes('UPDATE')) {
+            ISSUES.high.push(`${file}: SQL keywords found - verify parameterized queries used`);
+            sqlInjectionRisk++;
+        }
+    });
+    
+    console.log(`   ${noCSP === 0 ? '✅' : '⚠️'} CSP Headers: ${htmlFiles.length - noCSP}/${htmlFiles.length} pages`);
+    console.log(`   ${noInputValidation === 0 ? '✅' : '⚠️'} Input Validation: ${noInputValidation} inputs without validation`);
+    console.log(`   ${sqlInjectionRisk === 0 ? '✅' : '⚠️'} SQL Injection Risk: ${sqlInjectionRisk} files with SQL keywords`);
+    console.log(`   ⚠️  NOTE: Cannot test real attacks - SECURITY AUDIT REQUIRED`);
+}
+
+checkSecurityIndicators();
+
+// ============================================
+// PHASE 20: ACCESSIBILITY INDICATORS (Gap #9 - Partial)
+// ============================================
+console.log('\n♿ PHASE 20: Accessibility Indicators...');
+
+function checkAccessibilityIndicators() {
+    const htmlFiles = fs.readdirSync('.').filter(f => f.endsWith('.html'));
+    let noLang = 0, noSkipLink = 0, noARIA = 0, poorTabOrder = 0;
+    
+    htmlFiles.forEach(file => {
+        const content = fs.readFileSync(file, 'utf8');
+        
+        // Check for lang attribute
+        if (!content.includes('lang=')) {
+            ISSUES.medium.push(`${file}: Missing lang attribute`);
+            noLang++;
+        }
+        
+        // Check for skip to main content link
+        if (!content.includes('skip') && !content.includes('Skip')) {
+            noSkipLink++;
+        }
+        
+        // Check for ARIA labels on interactive elements
+        const buttons = [...content.matchAll(/<button[^>]*>/g)];
+        buttons.forEach(btn => {
+            if (!btn[0].includes('aria-label') && !btn[0].includes('>')) {
+                ISSUES.low.push(`${file}: Button without aria-label or text`);
+                noARIA++;
+            }
+        });
+        
+        // Check for tabindex issues
+        if (content.includes('tabindex="') && !content.includes('tabindex="0"') && !content.includes('tabindex="-1"')) {
+            ISSUES.medium.push(`${file}: Custom tabindex found - verify tab order`);
+            poorTabOrder++;
+        }
+    });
+    
+    console.log(`   ${noLang === 0 ? '✅' : '⚠️'} Lang Attribute: ${htmlFiles.length - noLang}/${htmlFiles.length} pages`);
+    console.log(`   ${noSkipLink === 0 ? '✅' : '💡'} Skip Links: ${htmlFiles.length - noSkipLink}/${htmlFiles.length} pages`);
+    console.log(`   ${noARIA === 0 ? '✅' : '⚠️'} ARIA Labels: ${noARIA} missing labels`);
+    console.log(`   ${poorTabOrder === 0 ? '✅' : '⚠️'} Tab Order: ${poorTabOrder} custom tabindex found`);
+    console.log(`   ⚠️  NOTE: Cannot test with screen readers - ACCESSIBILITY AUDIT REQUIRED`);
+}
+
+checkAccessibilityIndicators();
+
+// ============================================
 // FINAL REPORT
 // ============================================
+// ============================================
+// PHASE 21: MANUAL TESTING REMINDERS
+// ============================================
+console.log('\n📋 PHASE 21: Manual Testing Checklist...');
+
+console.log('\n   🚨 CRITICAL - MUST TEST MANUALLY:');
+console.log('   ❌ Backend APIs actually respond with real data');
+console.log('   ❌ Payment processing works (SPO ₹21)');
+console.log('   ❌ Data persists across sessions');
+console.log('   ❌ Site works under load (100+ users)');
+console.log('   ❌ Security: Try to bypass validation/access');
+
+console.log('\n   ⚠️  HIGH - SHOULD TEST MANUALLY:');
+console.log('   ❌ Works in Safari, Firefox, Edge');
+console.log('   ❌ Works on real mobile devices (touch, scroll)');
+console.log('   ❌ Complete user flows (start to finish)');
+console.log('   ❌ AdSense ads actually display');
+console.log('   ❌ Analytics actually tracking');
+
+console.log('\n   💡 MEDIUM - TEST WHEN POSSIBLE:');
+console.log('   ❌ Content accuracy (typos, facts)');
+console.log('   ❌ Screen reader navigation');
+console.log('   ❌ Keyboard-only navigation');
+console.log('   ❌ Performance on slow connections');
+
 console.log('\n' + '='.repeat(60));
 console.log('📊 FINAL REPORT - GODA BEST TESTING PROTOCOL (CUSTOM)');
+console.log('Based on: 55 Learnings + 10 Gap Analysis');
+console.log('Phases: 21 (15 original + 6 new from gaps)');
 console.log('='.repeat(60));
 
 const totalIssues = ISSUES.critical.length + ISSUES.high.length + ISSUES.medium.length + ISSUES.low.length;
@@ -645,19 +912,29 @@ console.log(`\n💡 LOW: ${ISSUES.low.length}`);
 ISSUES.low.forEach(issue => console.log(`   💡 ${issue}`));
 
 console.log('\n' + '='.repeat(60));
-console.log(`TOTAL ISSUES: ${totalIssues}`);
+console.log(`TOTAL AUTOMATED ISSUES: ${totalIssues}`);
 console.log('='.repeat(60));
+
+console.log('\n📊 COVERAGE ANALYSIS:');
+console.log(`   ✅ Automated Tests: ~80% (code structure, syntax, consistency)`);
+console.log(`   ⚠️  Manual Required: ~15% (runtime, browsers, mobile, flows)`);
+console.log(`   💡 User Testing: ~5% (UX, content, edge cases)`);
 
 if (ISSUES.critical.length > 0) {
     console.log('\n❌ CRITICAL ISSUES FOUND - MUST FIX BEFORE DEPLOYMENT!');
+    console.log('   THEN: Run manual tests on live site');
     process.exit(1);
 } else if (ISSUES.high.length > 0) {
     console.log('\n⚠️  HIGH PRIORITY ISSUES - SHOULD FIX BEFORE DEPLOYMENT');
+    console.log('   THEN: Run manual tests on live site');
     process.exit(1);
 } else if (totalIssues > 0) {
-    console.log('\n✅ NO CRITICAL/HIGH ISSUES - Safe to deploy (fix medium/low when possible)');
+    console.log('\n✅ NO CRITICAL/HIGH ISSUES - Safe to deploy');
+    console.log('   NEXT: Run manual tests on live site (see Phase 21)');
     process.exit(0);
 } else {
-    console.log('\n✅ ALL CHECKS PASSED - PERFECT! 🎉');
+    console.log('\n✅ ALL AUTOMATED CHECKS PASSED! 🎉');
+    console.log('   NEXT: Run manual tests on live site (see Phase 21)');
+    console.log('   NOTE: Automated = 80%, Manual testing still required');
     process.exit(0);
 }

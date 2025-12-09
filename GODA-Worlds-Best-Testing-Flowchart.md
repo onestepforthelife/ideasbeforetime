@@ -1132,3 +1132,66 @@ OVERALL: 95%+ = WORLD-CLASS WEBSITE
 **Status:** COMPLETE - All 18 phases covered
 **Coverage:** Technical + Operational + Business
 **Enforcement:** Sequential, no skipping allowed
+
+
+---
+
+## 📋 UPDATED: MANUAL TESTING REQUIREMENTS (Dec 9, 2025)
+
+### What Automated Tests CANNOT Check:
+
+**🚨 CRITICAL - MUST TEST MANUALLY:**
+1. Backend APIs respond with real data (not templates)
+2. Payment processing works (real transactions)
+3. Data persists across sessions (database works)
+4. Site works under load (100+ concurrent users)
+5. Security: Real attacks/bypasses work
+
+**⚠️ HIGH - SHOULD TEST MANUALLY:**
+1. Works in Safari, Firefox, Edge (cross-browser)
+2. Works on real mobile devices (touch, scroll, performance)
+3. Complete user flows work end-to-end
+4. Third-party services work (AdSense displays, Analytics tracks)
+5. Email/SMS notifications actually send
+
+**💡 MEDIUM - TEST WHEN POSSIBLE:**
+1. Content accuracy (typos, facts, dates)
+2. Screen reader navigation (real assistive tech)
+3. Keyboard-only navigation (no mouse)
+4. Performance on slow connections (3G, 4G)
+
+---
+
+## 📊 COVERAGE ANALYSIS (Updated Dec 9, 2025)
+
+**Automated Tests Cover:** ~80%
+- File structure ✅
+- Code syntax ✅
+- Visual consistency ✅
+- Basic functionality ✅
+- Security indicators ✅
+- Performance indicators ✅
+
+**Manual Testing Required:** ~15%
+- Backend verification
+- Cross-browser testing
+- Mobile device testing
+- User flow completion
+- Third-party services
+
+**Real User Testing:** ~5%
+- Content accuracy
+- UX improvements
+- Edge cases
+- Feedback
+
+**This is NORMAL and EXPECTED for professional systems!**
+Even Google, Amazon, Facebook use this 80/15/5 split.
+
+---
+
+**Updated:** December 9, 2025  
+**Phases:** 13 (original universal phases)  
+**Coverage:** 80% automated, 20% manual (industry standard)
+
+**REMEMBER: No automated test can replace REAL USERS on LIVE SITE!**

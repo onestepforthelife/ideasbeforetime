@@ -1,0 +1,233 @@
+# 💳 PAYMENT PAGE CONTENT - SPO & ASTROLOGY SERVICES
+**Date:** December 9, 2025
+**Purpose:** Text for Razorpay payment page explaining services + T&C
+
+---
+
+## 📝 SERVICE DESCRIPTIONS
+
+### 🎯 Social Profile Optimizer (SPO) - ₹21
+
+**What You Get:**
+Transform your LinkedIn/professional profile into a recruiter magnet using AI-powered optimization.
+
+**Includes:**
+- ✅ AI-optimized headline (attention-grabbing, keyword-rich)
+- ✅ Compelling about section (tells your story professionally)
+- ✅ Achievement highlights (quantified results that impress)
+- ✅ Skills optimization (ranked by relevance and demand)
+- ✅ Instant preview before download
+- ✅ Copy-paste ready format
+- ✅ One-time payment, lifetime access to your optimized profile
+
+**Perfect For:**
+- Job seekers wanting to stand out
+- Professionals building their brand
+- Career changers repositioning themselves
+- Anyone wanting a professional online presence
+
+**Delivery:** Instant (generated in 30 seconds)
+**Format:** Text format, ready to copy-paste
+**Price:** ₹21 (one-time payment)
+
+---
+
+### ⭐ Vedic Astrology Consultation - ₹501
+
+**What You Get:**
+Personalized Vedic astrology insights based on your birth details, combining ancient wisdom with modern computational accuracy.
+
+**Includes:**
+- ✅ Birth chart analysis (planetary positions at your birth time)
+- ✅ Dasha predictions (current life phase and upcoming transitions)
+- ✅ Career guidance (best fields based on planetary strengths)
+- ✅ Relationship compatibility (if birth details of partner provided)
+- ✅ Remedial measures (practical suggestions for challenges)
+- ✅ Detailed PDF report (15-20 pages)
+- ✅ Valid for 1 year (can refer back anytime)
+
+**Required Information:**
+- Date of birth (DD/MM/YYYY)
+- Time of birth (HH:MM AM/PM) - as accurate as possible
+- Place of birth (City, State, Country)
+- Current location (for transit analysis)
+
+**Perfect For:**
+- Life decisions (career change, marriage, relocation)
+- Understanding your strengths and challenges
+- Timing important events
+- Personal growth and self-awareness
+
+**Delivery:** Within 48 hours via email
+**Format:** PDF report + optional 15-min consultation call
+**Price:** ₹501 (one-time payment)
+
+---
+
+## 📋 TERMS & CONDITIONS
+
+### General Terms
+
+**1. Service Delivery**
+- SPO: Instant delivery (30 seconds after payment)
+- Astrology: Within 48 hours via email to provided address
+- All services delivered digitally (no physical products)
+
+**2. Payment**
+- All prices in Indian Rupees (₹)
+- Payment via Razorpay (secure, encrypted)
+- Accepted methods: UPI, Cards, Net Banking, Wallets
+- Payment confirmation sent via email
+
+**3. Refund Policy**
+- **NO REFUNDS** - Amount is too low (₹21-₹501) and covers only backend work management, not service delivery costs. Once payment is processed, backend costs are incurred immediately.
+
+**4. Data Privacy, Liability & Support**
+- See website footer for complete details:
+  - Privacy Policy
+  - Terms & Conditions
+  - Disclaimer
+  - Contact Information
+
+---
+
+## 💬 SHORT VERSION (For Payment Page)
+
+**By proceeding with payment, you agree to:**
+
+✅ **Service Delivery:** SPO instant, Astrology within 48 hours
+✅ **Refund Policy:** NO REFUNDS - Amount covers backend work management only
+✅ **Full Terms:** See website footer for Privacy Policy, Terms & Conditions, Disclaimer
+
+Questions? Email: onestepforthelife@gmail.com
+
+---
+
+## 🎯 RAZORPAY PAYMENT BUTTON TEXT
+
+**Button Text Options:**
+
+**Option 1 (Simple):**
+```
+Pay ₹21 - Get Optimized Profile
+```
+
+**Option 2 (Benefit-focused):**
+```
+Pay ₹21 - Stand Out to Recruiters
+```
+
+**Option 3 (Action-oriented):**
+```
+Optimize My Profile - ₹21
+```
+
+**For Astrology:**
+```
+Get Personalized Insights - ₹501
+```
+
+---
+
+## 📧 PAYMENT CONFIRMATION EMAIL TEXT
+
+**Subject:** Payment Successful - Your [Service Name] is Ready!
+
+**Body:**
+
+Hi [Name],
+
+Thank you for your payment of ₹[Amount]!
+
+**Transaction Details:**
+- Order ID: [Razorpay Order ID]
+- Payment ID: [Razorpay Payment ID]
+- Amount: ₹[Amount]
+- Date: [Date & Time]
+- Service: [SPO / Astrology Consultation]
+
+**For SPO Users:**
+Your optimized profile is ready! Return to the page to download.
+Link: https://onestepforthelife.com/social-optimizer-app.html
+
+**For Astrology Users:**
+Your personalized report will be delivered within 48 hours to this email address.
+We'll send you a notification when it's ready.
+
+**Need Help?**
+Email: onestepforthelife@gmail.com
+Response time: Within 24 hours
+
+**Invoice:**
+[Attached PDF or link to download invoice]
+
+Thank you for choosing Ideas Before Time!
+
+Best regards,
+Amit Kumar
+Ideas Before Time
+https://onestepforthelife.com
+
+---
+
+## 🔒 SECURITY & TRUST BADGES TEXT
+
+**Add to Payment Page:**
+
+✅ **Secure Payment** - Powered by Razorpay (PCI DSS compliant)
+✅ **Encrypted** - Your data is protected with 256-bit SSL
+✅ **Trusted** - Used by 1000+ professionals
+✅ **Instant Delivery** - No waiting, get results immediately
+✅ **Support Available** - Email us anytime for help
+
+---
+
+## 📱 MOBILE-FRIENDLY SHORT VERSION
+
+**For Mobile Payment Page:**
+
+**SPO - ₹21**
+AI-optimized LinkedIn profile in 30 seconds. Stand out to recruiters.
+
+**Astrology - ₹501**
+Personalized Vedic insights. Career, relationships, life guidance. Report in 48 hours.
+
+**NO REFUNDS** - Amount covers backend work management only.
+
+[Pay Now Button]
+
+By paying, you agree to Terms (see footer).
+
+---
+
+## 🎨 SUGGESTED LAYOUT FOR PAYMENT PAGE
+
+```
+┌─────────────────────────────────────┐
+│  🎯 Social Profile Optimizer        │
+│                                     │
+│  Transform your profile in 30 sec   │
+│  ✅ AI-optimized headline           │
+│  ✅ Compelling about section        │
+│  ✅ Achievement highlights          │
+│  ✅ Skills optimization             │
+│                                     │
+│  Price: ₹21 (one-time)             │
+│  Delivery: Instant                  │
+│  NO REFUNDS (backend cost)          │
+│                                     │
+│  [Pay ₹21 - Get Optimized Profile] │
+│                                     │
+│  🔒 Secure payment via Razorpay     │
+│  📧 onestepforthelife@gmail.com     │
+│                                     │
+│  Terms in footer                    │
+└─────────────────────────────────────┘
+```
+
+---
+
+**Status:** Ready to use on payment page
+**Files:** Copy text to Razorpay payment description
+**Next:** Add to social-optimizer-app.html payment section
+

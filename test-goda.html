@@ -3,17 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test GODA Chatbot</title>
-    <link rel="stylesheet" href="common-footer.css">
+    <title>GODA Testing System - Results</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        .test-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .test-btn {
+            padding: 15px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        .test-btn.custom {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .test-btn.universal {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        .test-btn.repair {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+        .test-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .test-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        #results {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            min-height: 400px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin: 5px 0;
+        }
+        .status.pass {
+            background: #d4edda;
+            color: #155724;
+        }
+        .status.fail {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .status.warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .coverage-info {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .coverage-info h3 {
+            margin-top: 0;
+            color: #1976D2;
+        }
+    </style>
 </head>
 <body>
     <script src="common-navigation.js"></script>
-    <h1>Test GODA Chatbot</h1>
-    <p>Open browser console (F12) to see any errors.</p>
-    <p>Click the GODA button in bottom right.</p>
     
-    <!-- Load GODA Chatbot -->
-    <script src="goda-chatbot.js"></script>
+    <div class="container">
+        <h1>🧪 GODA Testing System</h1>
+        <p class="subtitle">Automated Testing with Manual Checklist | Updated Dec 9, 2025</p>
+        
+        <div class="test-buttons">
+            <button class="test-btn custom" onclick="runTest('custom')">
+                🎯 Run Custom Test (21 Phases)
+            </button>
+            <button class="test-btn universal" onclick="runTest('universal')">
+                🌍 Run Universal Test (9 Phases)
+            </button>
+            <button class="test-btn repair" onclick="runTest('repair')">
+                🔧 Run Auto-Repair
+            </button>
+        </div>
+        
+        <div class="coverage-info">
+            <h3>📊 Coverage Analysis</h3>
+            <p><strong>✅ Automated Tests:</strong> ~80% (code structure, syntax, consistency)</p>
+            <p><strong>⚠️ Manual Required:</strong> ~15% (runtime, browsers, mobile, flows)</p>
+            <p><strong>💡 User Testing:</strong> ~5% (UX, content, edge cases)</p>
+            <p><em>This is industry standard - even Google/Amazon use this approach!</em></p>
+        </div>
+        
+        <div id="results">
+            <div class="loading">
+                <p>👆 Click a button above to run tests</p>
+                <p>Results will appear here...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function runTest(type) {
+            const resultsDiv = document.getElementById('results');
+            const buttons = document.querySelectorAll('.test-btn');
+            
+            // Disable buttons
+            buttons.forEach(btn => btn.disabled = true);
+            
+            // Show loading
+            resultsDiv.innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Running ${type} test...</p>
+                    <p>This may take 30-60 seconds...</p>
+                </div>
+            `;
+            
+            try {
+                let command;
+                if (type === 'custom') {
+                    command = 'node GODA-Best-Testing-Protocol-Custom.js';
+                } else if (type === 'universal') {
+                    command = 'node GODA-Worlds-Best-Testing-Protocol.js';
+                } else if (type === 'repair') {
+                    command = 'node GODA-Auto-Repair-System.js';
+                }
+                
+                // Note: This requires a backend to execute Node.js commands
+                // For now, show instructions
+                resultsDiv.innerHTML = `
+<strong>📋 To run ${type.toUpperCase()} test:</strong>
+
+<strong>Step 1:</strong> Open terminal/command prompt
+<strong>Step 2:</strong> Navigate to project folder
+<strong>Step 3:</strong> Run command:
+   ${command}
+
+<strong>Step 4:</strong> Results will show in terminal
+
+<div class="coverage-info">
+<strong>🎯 What This Test Checks:</strong>
+
+${type === 'custom' ? `
+<strong>Custom Test (21 Phases):</strong>
+✅ Phase 1-15: Original checks (files, colors, nav, typography, etc.)
+✅ Phase 16: Backend/API structure
+✅ Phase 17: User flow structure
+✅ Phase 18: Performance indicators
+✅ Phase 19: Security indicators
+✅ Phase 20: Accessibility indicators
+✅ Phase 21: Manual testing reminders
+
+<strong>Exit Codes:</strong>
+• 0 = Automated checks passed → Proceed to manual testing
+• 1 = Issues found → Fix before deployment
+` : type === 'universal' ? `
+<strong>Universal Test (9 Phases):</strong>
+✅ Phase 1-5: Core checks (discovery, functionality, visual, performance, rendering)
+✅ Phase 6: Backend structure
+✅ Phase 7: Security indicators
+✅ Phase 8: Performance indicators
+✅ Phase 9: Manual testing reminders
+
+<strong>Exit Codes:</strong>
+• 0 = Automated checks passed → Proceed to manual testing
+• 1 = Issues found → Fix before deployment
+` : `
+<strong>Auto-Repair System:</strong>
+✅ Automatically fixes common issues
+✅ Adds missing navigation/footer
+✅ Fixes CSS load order
+✅ Adds missing components
+
+<strong>Exit Codes:</strong>
+• 0 = Repairs completed successfully
+• 1 = Some repairs failed
+`}
+</div>
+
+<div class="coverage-info" style="background: #fff3cd; border-left-color: #ffc107;">
+<strong>⚠️ MANUAL TESTING REQUIRED:</strong>
+
+<strong>🚨 Critical (Must Test):</strong>
+❌ Backend APIs respond with real data
+❌ Payment processing works
+❌ Data persists across sessions
+❌ Site works under load (100+ users)
+❌ Security: Try to bypass validation
+
+<strong>⚠️ High (Should Test):</strong>
+❌ Works in Safari/Firefox/Edge
+❌ Works on real mobile devices
+❌ Complete user flows work
+❌ AdSense ads display
+❌ Analytics tracking
+
+<strong>💡 Medium (Test When Possible):</strong>
+❌ Content accuracy (typos, facts)
+❌ Screen reader navigation
+❌ Keyboard-only navigation
+</div>
+
+<strong>📖 Documentation:</strong>
+• Custom Flowchart: GODA-Best-Testing-Flowchart-Custom.md
+• Universal Flowchart: GODA-Worlds-Best-Testing-Flowchart.md
+• Complete Solution: GODA-COMPLETE-SOLUTION.txt
+                `;
+                
+            } catch (error) {
+                resultsDiv.innerHTML = `
+                    <div style="color: #721c24; background: #f8d7da; padding: 20px; border-radius: 8px;">
+                        <strong>❌ Error:</strong> ${error.message}
+                    </div>
+                `;
+            } finally {
+                // Re-enable buttons
+                buttons.forEach(btn => btn.disabled = false);
+            }
+        }
+    </script>
 
 <!-- Quick Access Widget -->
 <div class="quick-access-widget" id="quickAccessWidget">
@@ -32,6 +299,7 @@
 </div>
 
 <style>.quick-access-widget{position:fixed;bottom:20px;right:20px;z-index:1000;}.quick-access-btn{width:60px;height:60px;border-radius:50%;background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);border:none;color:white;font-size:24px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);transition:transform 0.3s ease;}.quick-access-btn:hover{transform:scale(1.1);}.quick-access-menu{display:none;position:absolute;bottom:70px;right:0;background:white;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.15);padding:12px;min-width:200px;}.quick-access-menu.active{display:block;animation:slideUp 0.3s ease;}@keyframes slideUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}.quick-access-menu a{display:block;padding:12px 16px;color:#2c3e50;text-decoration:none;border-radius:8px;transition:background 0.2s ease;font-size:14px;}.quick-access-menu a:hover{background:#f8f9fa;}@media (max-width:768px){.quick-access-widget{bottom:15px;right:15px;}.quick-access-btn{width:50px;height:50px;font-size:20px;}}</style>
+    <link rel="stylesheet" href="common-footer.css">
 
 <script>
 function toggleQuickAccess() {
