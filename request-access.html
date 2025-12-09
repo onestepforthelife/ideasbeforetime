@@ -87,14 +87,7 @@
     </form>
     
     <div id="successMessage" class="success-message">
-        <h3>✅ Request Submitted Successfully!</h3>
-        <p><strong>Check your email inbox now!</strong></p>
-        <p>We've sent you an OTP (One-Time Password) to verify your email address.</p>
-        <p>Once verified, you'll receive instant access credentials.</p>
-        <p style="margin-top: 15px; font-size: 14px; color: #666;">
-            Didn't receive the email? Check your spam folder or contact us at 
-            <a href="mailto:onestepforthelife@gmail.com" style="color: #2563eb;">onestepforthelife@gmail.com</a>
-        </p>
+        <!-- Content will be dynamically inserted by JavaScript -->
     </div>
     
     <div id="errorMessage" class="error-message">
@@ -102,7 +95,7 @@
     </div>
     
     <a href="/index" class="back-link">← Back to Home</a>
-    <a href="#admin" class="admin-link" onclick="checkAdminAccess(event)">Admin Login</a>
+    <a href="/admin-control-panel" class="admin-link">Admin Login</a>
 </div>
 </div>
 
@@ -171,13 +164,20 @@ document.getElementById('accessForm').addEventListener('submit', async function(
                 </p>
             `;
         } else {
-            // Regular approval process
+            // Regular approval process with OTP input option
             document.getElementById('successMessage').innerHTML = `
                 <h3>✅ Request Submitted Successfully!</h3>
                 <p><strong>Your request has been received!</strong></p>
                 <p>Request ID: <strong>${otp}</strong></p>
                 <p>We'll review your request and send approval within 24 hours to:</p>
                 <p style="font-weight: bold; color: #2563eb;">${email}</p>
+                
+                <div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                    <p style="margin-bottom: 10px; color: #333;"><strong>Already received your OTP?</strong></p>
+                    <input type="text" id="otpInput" placeholder="Enter 6-digit OTP" maxlength="6" style="width: 100%; padding: 10px; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 16px; margin-bottom: 10px;">
+                    <button onclick="verifyOTP('${otp}', '${email}')" style="width: 100%; padding: 10px; background: #28a745; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Verify OTP & Get Access</button>
+                </div>
+                
                 <p style="margin-top: 15px; font-size: 14px; color: #666;">
                     Questions? Contact us at 
                     <a href="mailto:onestepforthelife@gmail.com" style="color: #2563eb;">onestepforthelife@gmail.com</a>
@@ -186,6 +186,7 @@ document.getElementById('accessForm').addEventListener('submit', async function(
         }
         
         document.getElementById('successMessage').style.display = 'block';
+        document.getElementById('errorMessage').style.display = 'none';
         
         // Track with analytics
         if (typeof gtag !== 'undefined') {
@@ -198,20 +199,45 @@ document.getElementById('accessForm').addEventListener('submit', async function(
         
     } catch (error) {
         console.error('Submission error:', error);
+        document.getElementById('successMessage').style.display = 'none';
         document.getElementById('errorMessage').style.display = 'block';
         submitBtn.disabled = false;
         submitBtn.textContent = 'Request Access';
     }
 });
 
-// Admin access checker
-function checkAdminAccess(e) {
-    e.preventDefault();
-    const password = prompt('Enter admin password:');
-    if (password === 'AmitAdmin2025!') {
-        showAdminPanel();
-    } else if (password) {
-        alert('Incorrect password');
+// OTP Verification function
+function verifyOTP(correctOTP, email) {
+    const enteredOTP = document.getElementById('otpInput').value.trim();
+    
+    if (!enteredOTP) {
+        alert('Please enter the OTP');
+        return;
+    }
+    
+    if (enteredOTP === correctOTP) {
+        // OTP verified successfully
+        document.getElementById('successMessage').innerHTML = `
+            <h3>✅ Email Verified Successfully!</h3>
+            <p><strong>Your access has been activated!</strong></p>
+            <p>You can now access all premium features.</p>
+            <p style="margin-top: 15px;">
+                <a href="/market-reports" style="display: inline-block; padding: 12px 24px; background: #5a6c7d; color: white; text-decoration: none; border-radius: 8px; margin: 5px;">📊 View Reports</a>
+                <a href="/cv" style="display: inline-block; padding: 12px 24px; background: #5a6c7d; color: white; text-decoration: none; border-radius: 8px; margin: 5px;">📄 View CV</a>
+                <a href="/social-optimizer-index" style="display: inline-block; padding: 12px 24px; background: #5a6c7d; color: white; text-decoration: none; border-radius: 8px; margin: 5px;">🚀 SPO Tool</a>
+            </p>
+        `;
+        
+        // Track verification
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'otp_verified', {
+                'event_category': 'engagement',
+                'event_label': email
+            });
+        }
+    } else {
+        alert('❌ Incorrect OTP. Please check your email and try again.');
+        document.getElementById('otpInput').value = '';
     }
 }
 

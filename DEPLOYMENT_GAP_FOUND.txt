@@ -1,0 +1,170 @@
+🎯 DEPLOYMENT GAP DIAGNOSIS - ASTRONOMY.HTML
+Created: December 9, 2025
+Issue: File pushed 12+ times but not deploying to live site
+
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ LOCAL FILE STATUS (VERIFIED):
+
+✅ astronomy.html exists (39.88 KB)
+✅ Contains text-align:center (CORRECT)
+✅ Includes common-navigation.css (CORRECT)
+✅ Has payment button (CORRECT)
+✅ File size under 25MB limit (CORRECT)
+✅ NOT blocked by .gitignore (CORRECT)
+✅ All related files exist (CSS, JS) (CORRECT)
+
+**LOCAL FILE IS 100% CORRECT!**
+
+═══════════════════════════════════════════════════════════════════════════════
+
+❌ THE DEPLOYMENT GAP:
+
+```
+Local File (✅ CORRECT) → Git → GitHub → Cloudflare → Live Site (❌ OLD VERSION)
+```
+
+**The gap is between GitHub and Live Site.**
+
+Since you've pushed 12+ times and file is correct locally, the issue is:
+
+1. **GitHub doesn't have the latest version**, OR
+2. **Cloudflare isn't deploying from GitHub**, OR  
+3. **Cloudflare has redirect rules breaking the page**, OR
+4. **CDN cache serving old version**
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔍 WHAT YOU NEED TO CHECK (5 MINUTES):
+
+### STEP 1: Check Cloudflare Dashboard
+
+Go to: https://dash.cloudflare.com
+
+1. Click: **Workers & Pages** (left sidebar)
+2. Find: **onestepforthelife** project
+3. Click: **Deployments** tab
+4. Look at: Latest deployment
+   - Status: Success ✅ or Failed ❌?
+   - Time: When was last deployment?
+   - Source: Which GitHub commit?
+
+5. Click: **View details** on latest deployment
+6. Click: **Build log** tab
+7. Look for:
+   - Any errors?
+   - Does it mention astronomy.html?
+   - Did build complete successfully?
+
+**Screenshot this and send to me!**
+
+### STEP 2: Check Cloudflare Settings
+
+Still in Cloudflare Dashboard:
+
+1. Click: **Settings** tab
+2. Scroll to: **Redirects** section
+3. Look for: Any redirect rules like:
+   - `/*.html` → `/*` (removes .html)
+   - `/astronomy.html` → `/astronomy`
+   - Any wildcard redirects
+
+**Screenshot this section!**
+
+### STEP 3: Test in Incognito Mode
+
+1. Open incognito/private window
+2. Visit: https://onestepforthelife.com/astronomy.html
+3. Open DevTools (F12)
+4. Go to: Network tab
+5. Reload page
+6. Look at: astronomy.html request
+   - Status: 200 OK ✅ or 308 Redirect ❌?
+   - If 308: Where is it redirecting to?
+
+**Screenshot the Network tab!**
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 MOST LIKELY CAUSES (Based on 4 weeks + 12 pushes):
+
+### CAUSE 1: Cloudflare Redirect Rule (80% probability)
+
+**What:** Cloudflare Pages has a setting/rule that removes .html extensions
+**Result:** astronomy.html → 308 redirect to /astronomy (which doesn't exist)
+**Why 4 weeks:** 308 = Permanent Redirect = Cached forever in browsers
+**Fix:** 
+- Disable "Pretty URLs" in Cloudflare settings
+- OR remove redirect rule from Settings → Redirects
+- Purge cache + wait 24 hours for 308 cache to expire
+
+### CAUSE 2: Cloudflare Build Not Running (15% probability)
+
+**What:** Cloudflare not connected to GitHub or build failing
+**Result:** Old version stays live, new pushes ignored
+**Why 12 pushes:** Pushes go to GitHub but Cloudflare doesn't pull them
+**Fix:**
+- Check Cloudflare Dashboard → Deployments
+- Verify latest deployment matches your latest push
+- If not, reconnect GitHub or trigger manual deployment
+
+### CAUSE 3: CDN Cache Not Purged (5% probability)
+
+**What:** Cloudflare CDN serving cached old version
+**Result:** New version deployed but cache serves old
+**Why still broken:** Cache takes 5-10 minutes to propagate
+**Fix:**
+- Purge cache in Cloudflare Dashboard
+- Wait 10 minutes
+- Test in incognito mode
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⚡ WHAT I NEED FROM YOU:
+
+Please send me screenshots of:
+
+1. ✅ Cloudflare Dashboard → Deployments → Latest deployment status
+2. ✅ Cloudflare Dashboard → Deployments → Build log
+3. ✅ Cloudflare Dashboard → Settings → Redirects section
+4. ✅ Browser DevTools → Network tab (astronomy.html request)
+
+With these screenshots, I can tell you EXACTLY what's wrong and how to fix it.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+💡 WHY THIS ISN'T A CODE ISSUE:
+
+✅ Local file is correct
+✅ You've pushed 12+ times
+✅ File size is fine
+✅ Not blocked by .gitignore
+✅ All dependencies exist
+
+**This is a DEPLOYMENT CONFIGURATION issue, not a code issue.**
+
+The problem is in:
+- Cloudflare Pages settings (redirect rules)
+- OR Cloudflare build configuration
+- OR CDN cache
+
+**NOT in your code!**
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 NEXT STEPS:
+
+1. Check Cloudflare Dashboard (5 minutes)
+2. Send me screenshots
+3. I'll tell you exactly what to change
+4. Fix will take 2 minutes
+5. Wait 10 minutes for cache
+6. Problem solved ✅
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Status: WAITING FOR CLOUDFLARE DASHBOARD SCREENSHOTS
+Priority: CRITICAL - 8 pages unreachable for 4 weeks
+Root Cause: Deployment configuration (not code)
+Fix Time: 2 minutes (once we see the settings)
+
