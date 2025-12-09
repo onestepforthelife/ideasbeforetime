@@ -1,0 +1,79 @@
+# 🎯 KIRO AUTONOMY MODE - DETAILED STEP-BY-STEP GUIDE
+
+**Created:** December 7, 2025
+**Purpose:** Change from Supervised to Autopilot mode
+
+---
+
+## ✅ STEP-BY-STEP INSTRUCTIONS
+
+### Step 1: Open Kiro Settings
+**Method 1 (Keyboard Shortcut):**
+- Press: `Ctrl + ,` (Control key + Comma key)
+- Settings panel will open on the right side
+
+**Method 2 (Menu):**
+- Click: File menu (top left)
+- Click: Preferences
+- Click: Settings
+
+### Step 2: Search for Autonomy Setting
+- In the search box at top of Settings panel
+- Type: `autonomy`
+- You'll see: "Kiro: Autonomy Mode" setting appear
+
+### Step 3: Change the Setting
+- Find the dropdown menu next to "Kiro: Autonomy Mode"
+- Current value: "Supervised"
+- Click the dropdown
+- Select: "Autopilot"
+
+### Step 4: Verify Change
+- Setting saves automatically (no save button needed)
+- You should see: "Autopilot" now selected
+- Close settings panel (X button or press Escape)
+
+---
+
+## 🎯 WHAT THIS DOES
+
+**Before (Supervised Mode):**
+- ❌ Kiro asks permission before making changes
+- ❌ You have to approve each file modification
+- ❌ Slower workflow
+
+**After (Autopilot Mode):**
+- ✅ Kiro makes changes automatically
+- ✅ No approval needed for fixes
+- ✅ Faster workflow
+- ✅ You can still revert changes if needed
+
+---
+
+## 🔍 TROUBLESHOOTING
+
+**If you can't find the setting:**
+1. Make sure you're searching for: `autonomy` (not "autonomous" or "auto")
+2. Try scrolling down in settings panel
+3. Try restarting Kiro IDE
+
+**If dropdown doesn't show "Autopilot":**
+1. Make sure you have latest Kiro version
+2. Try: Help → Check for Updates
+
+---
+
+## ✅ VERIFICATION
+
+**To verify it worked:**
+1. Open Settings again (Ctrl + ,)
+2. Search: `autonomy`
+3. Should show: "Autopilot" selected
+
+---
+
+**Status:** Ready to change
+**Time needed:** 30 seconds
+**Difficulty:** Very easy (just 3 clicks)
+
+**THAT'S IT! Just Ctrl+, → Search "autonomy" → Select "Autopilot" → Done!**

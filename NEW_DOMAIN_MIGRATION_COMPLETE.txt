@@ -1,0 +1,68 @@
+🌐 NEW DOMAIN MIGRATION COMPLETE - Dec 5, 2025
+
+OLD DOMAIN: ideasbeforetime.pages.dev
+NEW DOMAIN: onestepforthelife.com
+
+✅ COMPLETED TASKS:
+
+1. ✅ Domain redirect configured (_redirects file)
+   - Old domain → New domain (301 permanent)
+   - All pages automatically redirect
+
+2. ✅ Updated 15 files with new domain:
+   - All test/check scripts
+   - All documentation files
+   - All deployment guides
+
+3. ✅ Checker updated to test new domain
+   - check-live-site-comprehensive.js
+   - All verification scripts
+
+FILES UPDATED:
+- check-blog-posts-live.js
+- check-blog-visibility-live.js
+- check-live-blog-status.js
+- check-live-deployment.js
+- check-live-site-now.js
+- verify-live-deployment-dec5.js
+- verify-orphan-fixes-live.js
+- monitor-live-site.js
+- DEPLOY_NOW_INSTRUCTIONS_DEC5.txt
+- LIVE_SITE_TESTING_GUIDE.txt
+- AMIT_READ_THIS_FIRST.txt
+- ACTUAL_TRUTH_DEC5.txt
+- BLOG_VISIBILITY_SOLUTION_DEC5.txt
+- PUSH_THIS_NOW_DEC5.txt
+- VERIFY_DEPLOYMENT_NOW.txt
+
+WHAT HAPPENS NOW:
+
+1. Users visit old domain (ideasbeforetime.pages.dev)
+2. Automatically redirected to new domain (onestepforthelife.com)
+3. Same page, new URL
+4. Seamless experience
+
+PUSH TO GITHUB:
+
+Files to push:
+- _redirects (domain redirect)
+- update-to-new-domain.js (migration script)
+- 15 updated files
+- NEW_DOMAIN_MIGRATION_COMPLETE.txt (this file)
+
+Command:
+1. Open GitHub Desktop
+2. Commit: "Migrate to new domain onestepforthelife.com"
+3. Push to origin
+4. Wait 2-3 minutes
+5. Test: https://onestepforthelife.com/
+
+VERIFICATION:
+
+After push, test:
+1. Visit https://ideasbeforetime.pages.dev/ → Should redirect to onestepforthelife.com
+2. Visit https://onestepforthelife.com/ → Should load directly
+3. Run: node check-live-site-comprehensive.js
+4. Should show 13/13 passed (after Cloudflare build completes)
+
+✅ Migration complete! Ready to push!

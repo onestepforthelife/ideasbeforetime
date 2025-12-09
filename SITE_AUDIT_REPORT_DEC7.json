@@ -1,0 +1,29 @@
+{
+  "timestamp": "2025-12-06T15:19:07.951Z",
+  "summary": {
+    "critical": 1,
+    "high": 2,
+    "medium": 4,
+    "low": 3
+  },
+  "issues": {
+    "critical": [
+      "Sitemap has 166 pages NOT in navigation: https://ideasbeforetime.pages.dev/, https://ideasbeforetime.pages.dev/about.html, https://ideasbeforetime.pages.dev/blog.html, https://ideasbeforetime.pages.dev/cv.html, https://ideasbeforetime.pages.dev/market-reports.html"
+    ],
+    "high": [
+      "Navigation has 15 links NOT in sitemap: index.html, index.html, blog.html, astronomy.html, ro.html",
+      "Inconsistent widths found: 1400, 768, 500px"
+    ],
+    "medium": [
+      "ghar-ghar-complete.html: No max-width container (may look unformatted)",
+      "nickel-esg-report-protected.html: No max-width container (may look unformatted)",
+      "UNIVERSAL_MARKET_REPORT_TEMPLATE.html: No max-width container (may look unformatted)",
+      "Inconsistent header positions: 15, 20, 30, 1, 10, 25, 40px"
+    ],
+    "low": [
+      "ghar-ghar-complete.html: No padding/margin defined",
+      "nickel-esg-report-protected.html: No padding/margin defined",
+      "UNIVERSAL_MARKET_REPORT_TEMPLATE.html: No padding/margin defined"
+    ]
+  }
+}

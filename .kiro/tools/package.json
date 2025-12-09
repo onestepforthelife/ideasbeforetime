@@ -1,0 +1,21 @@
+{
+  "name": "kiro-tools",
+  "version": "1.0.0",
+  "description": "Advanced tools for Kiro AI - Browser automation, error tracking, semantic search, session cache",
+  "scripts": {
+    "test:live": "node playwright-live-site-test.js",
+    "search": "python chromadb-learning-search.py",
+    "cache:start": "node redis-session-cache.js",
+    "monitor": "node sentry-error-tracking.js"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.40.0",
+    "@sentry/node": "^7.91.0",
+    "chromadb": "^1.7.0",
+    "redis": "^4.6.11",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.40.0"
+  }
+}

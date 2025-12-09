@@ -1,0 +1,34 @@
+{
+  "timestamp": "2025-12-06T09:46:28.127Z",
+  "standards": "2025 Cloudflare + web.dev",
+  "filesProcessed": 180,
+  "changes": {
+    "coreWebVitals": [],
+    "modernImages": [
+      "about.html: Added AVIF/WebP support for images/panel-1-foundation-grit.jpg",
+      "cv-preview.html: Added AVIF/WebP support for images/CV Image.png",
+      "cv.html: Added AVIF/WebP support for images/CV Image.png",
+      "ro-water-purifier-guide.html: Added AVIF/WebP support for images/RO printable checklis.png"
+    ],
+    "security": [
+      "nickel-compounds-technical-data.html: Added Permissions-Policy header",
+      "nickel-compounds-technical-data.html: Added COEP header",
+      "Updated _headers with 2025 security standards"
+    ],
+    "accessibility": [
+      "nickel-esg-report-protected.html: Added lang=\"en\" attribute"
+    ],
+    "performance": [
+      "nickel-compounds-technical-data.html: Added preconnect hints",
+      "nickel-compounds-technical-data.html: Added modulepreload for critical JS"
+    ]
+  },
+  "summary": {
+    "coreWebVitals": 0,
+    "modernImages": 4,
+    "security": 3,
+    "accessibility": 1,
+    "performance": 2,
+    "total": 10
+  }
+}

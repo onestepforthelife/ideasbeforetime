@@ -1,0 +1,46 @@
+╔══════════════════════════════════════════════════════════════╗
+║     📧 SETUP EMAIL ALERTS - 5 MINUTES ║
+╚══════════════════════════════════════════════════════════════╝
+
+STEP 1: Create EmailJS Account (2 minutes)
+────────────────────────────────────────────────────────────────
+1. Go to: https://www.emailjs.com/
+2. Click "Sign Up" (FREE)
+3. Use: onestepforthelife@gmail.com
+4. Verify email
+
+STEP 2: Connect Gmail (1 minute)
+────────────────────────────────────────────────────────────────
+1. Click "Add New Service"
+2. Select "Gmail"
+3. Click "Connect Account"
+4. Login with onestepforthelife@gmail.com
+5. Allow access
+6. Copy "Service ID" (save it!)
+
+STEP 3: Create Email Template (2 minutes)
+────────────────────────────────────────────────────────────────
+1. Click "Email Templates"
+2. Click "Create New Template"
+3. Template Name: "Error Alert"
+4. Subject: {{subject}}
+5. Body:
+   {{message}}
+6. Save template
+7. Copy "Template ID" (save it!)
+
+STEP 4: Get Public Key
+────────────────────────────────────────────────────────────────
+1. Click "Account" → "General"
+2. Copy "Public Key" (save it!)
+
+STEP 5: Add to Website
+────────────────────────────────────────────────────────────────
+1. Open: error-reporter-email.js
+2. Replace:
+   publicKey: 'YOUR_KEY' → Your Public Key
+   serviceID: 'YOUR_ID' → Your Service ID
+   templateID: 'YOUR_ID' → Your Template ID
+3. Save file
+
+DONE! Test by clicking any button 3 times!

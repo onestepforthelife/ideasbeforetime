@@ -1,0 +1,40 @@
+{
+  "timestamp": "2025-12-06T13:01:47.920Z",
+  "analysis": {
+    "totalFiles": 0,
+    "toArchive": 0,
+    "toKeep": 47,
+    "efficiency": null
+  },
+  "categories": {
+    "statusFiles": [],
+    "testScripts": [],
+    "fixScripts": [],
+    "checkScripts": [],
+    "verifyScripts": [],
+    "setupGuides": [],
+    "learningDocs": [],
+    "awsDocs": [],
+    "spoDocs": [],
+    "linkedinDocs": [],
+    "cloudfareDocs": [],
+    "duplicates": [],
+    "personalFiles": [],
+    "oldBackups": []
+  },
+  "redundantFolders": [
+    "Cloudfare/Cloudfare",
+    "amit profile for Kiro",
+    "amit proifleforKiro",
+    "backup_before_cleanup_2025-12-04T04-24-21",
+    "backup_before_improvements_20251202_193117"
+  ],
+  "recommendations": [
+    "Archive status files to _archive/status/",
+    "Archive old scripts to _archive/scripts/",
+    "Consolidate docs to docs/ subfolder",
+    "Remove redundant backup folders",
+    "Move personal files to personal-local-only/",
+    "Keep only essential files in root"
+  ]
+}

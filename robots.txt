@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ideas-before-time.pages.dev/sitemap.xml
+
+# Security
+User-agent: *
+Disallow: /MY_PASSWORDS.txt
+Disallow: /*.txt$

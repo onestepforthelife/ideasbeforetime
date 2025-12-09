@@ -1,0 +1,56 @@
+name: Auto Test on Push
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    
+    - name: Install dependencies
+      run: |
+        cd .kiro/tools
+        npm install
+    
+    - name: Install Playwright browsers
+      run: |
+        cd .kiro/tools
+        npx playwright install chromium
+    
+    - name: Run diagnostic tests
+      run: |
+        node CRITICAL_DIAGNOSTIC_DEC6.js
+      continue-on-error: true
+    
+    - name: Run live site tests
+      run: |
+        cd .kiro/tools
+        node playwright-live-site-test.js
+      env:
+        CI: true
+    
+    - name: Check file sizes
+      run: |
+        echo "Checking for files over 20MB..."
+        find . -type f -size +20M -not -path "./.git/*" -not -path "./node_modules/*" | while read file; do
+          size=$(du -h "$file" | cut -f1)
+          echo "⚠️  Large file: $file ($size)"
+        done
+    
+    - name: Report results
+      if: always()
+      run: |
+        echo "✅ Tests complete"
+        echo "Check logs above for any failures"

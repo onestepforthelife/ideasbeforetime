@@ -1,0 +1,61 @@
+╔══════════════════════════════════════════════════════════════╗
+║     📤 UPLOAD TO GITHUB - USE GITHUB DESKTOP NOW 📤        ║
+╚══════════════════════════════════════════════════════════════╝
+
+⚠️ THE UPLOAD SCRIPT DIDN'T WORK BECAUSE:
+Git command line is not in your PATH. You need to use GitHub Desktop.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📍 STEP-BY-STEP UPLOAD (2 MINUTES):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Open GitHub Desktop (on your desktop or taskbar)
+
+2. You should see these files in "Changes" tab:
+   ☐ Poloxamer_Market_Report.html
+   ☐ Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html
+   ☐ nickel-esg-report.html
+   ☐ KIRO_AWS_REPORT_CLEAN.html
+   ☐ KIRO_IMPROVEMENT_REPORT_FOR_AWS.html
+   ☐ MARKET_REPORTS_FIXED_DEC3.txt
+   ☐ UPLOAD_COMPLETE_DEC3.txt
+   ☐ fix-all-report-issues.js
+
+3. In the "Summary" box (bottom left), type:
+   "Fix market reports - remove password, fix links, fix footer"
+
+4. Click the blue "Commit to main" button
+
+5. Click "Push origin" button (top right)
+
+6. DONE! ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⏰ AFTER UPLOAD:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Wait 2-3 minutes for Cloudflare Pages to deploy.
+
+Then test:
+https://ideasbeforetime.pages.dev/Poloxamer_Market_Report.html
+
+Should work:
+✅ No password prompt
+✅ Navigation works
+✅ Footer correct (no white space)
+✅ All links work
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 IF YOU DON'T SEE GITHUB DESKTOP:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Search for "GitHub Desktop" in Windows Start menu
+OR
+Download from: https://desktop.github.com/
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ ALL FIXES ARE READY - JUST NEED TO PUSH TO GITHUB!

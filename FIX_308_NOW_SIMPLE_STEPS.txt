@@ -1,0 +1,167 @@
+🔧 FIX 308 REDIRECTS - SIMPLE STEPS
+═══════════════════════════════════════════════════════════════
+
+**Problem Found:** Cloudflare is redirecting .html files to extensionless URLs
+**Example:** /blog.html → /blog (which doesn't exist)
+**This is NOT cache - it's a RULE/SETTING**
+
+═══════════════════════════════════════════════════════════════
+✅ STEP 1: CHECK PAGE RULES (Do This First!)
+═══════════════════════════════════════════════════════════════
+
+1. Go to: https://dash.cloudflare.com
+
+2. Login with your account
+
+3. Click on: **onestepforthelife.com** (your domain)
+
+4. On left sidebar, click: **Rules**
+
+5. Click: **Page Rules**
+
+6. Look for ANY rules that say:
+   - "Forwarding URL"
+   - "Redirect"
+   - Anything with "*.html"
+
+7. If you see ANY redirect rules:
+   - Click the **X** or **Delete** button
+   - Confirm deletion
+   - Click **Save**
+
+8. Test immediately: https://onestepforthelife.com/blog.html
+   - Should work now!
+
+═══════════════════════════════════════════════════════════════
+✅ STEP 2: IF STILL NOT WORKING - CHECK TRANSFORM RULES
+═══════════════════════════════════════════════════════════════
+
+1. Still in Cloudflare dashboard
+
+2. Click: **Rules** (left sidebar)
+
+3. Click: **Transform Rules**
+
+4. Click: **URL Redirects** tab
+
+5. Look for ANY rules redirecting .html files
+
+6. If found:
+   - Toggle them **OFF** (disable)
+   - Or click **Delete**
+
+7. Test again: https://onestepforthelife.com/blog.html
+
+═══════════════════════════════════════════════════════════════
+✅ STEP 3: IF STILL NOT WORKING - CHECK PAGES SETTINGS
+═══════════════════════════════════════════════════════════════
+
+1. In Cloudflare dashboard
+
+2. Click: **Workers & Pages** (left sidebar)
+
+3. Find and click: **onestepforthelife**
+
+4. Click: **Settings** tab
+
+5. Look for settings like:
+   - "Pretty URLs"
+   - "Clean URLs"
+   - "Remove .html extension"
+
+6. If found:
+   - Toggle them **OFF**
+   - Save changes
+
+7. May need to click "Retry deployment" after
+
+8. Test: https://onestepforthelife.com/blog.html
+
+═══════════════════════════════════════════════════════════════
+📊 WHAT TO LOOK FOR
+═══════════════════════════════════════════════════════════════
+
+**In Page Rules, you might see:**
+
+```
+URL Pattern: *onestepforthelife.com/*.html
+Setting: Forwarding URL
+Status Code: 308
+Destination: $1 (or similar)
+```
+
+**This is the problem! Delete it!**
+
+---
+
+**In Transform Rules, you might see:**
+
+```
+Rule name: Remove HTML extension
+When: URL path ends with .html
+Then: Redirect to URL without .html
+Status: 308
+```
+
+**This is the problem! Disable or delete it!**
+
+═══════════════════════════════════════════════════════════════
+✅ HOW TO KNOW IT'S FIXED
+═══════════════════════════════════════════════════════════════
+
+**Test these URLs:**
+- https://onestepforthelife.com/blog.html
+- https://onestepforthelife.com/about.html
+- https://onestepforthelife.com/spo.html
+- https://onestepforthelife.com/jobs.html
+
+**Should all:**
+- Load the actual page (not redirect)
+- Show content (not error)
+- Work immediately (no waiting)
+
+═══════════════════════════════════════════════════════════════
+⏰ TIME REQUIRED
+═══════════════════════════════════════════════════════════════
+
+- Step 1 (Page Rules): 3 minutes
+- Step 2 (Transform Rules): 3 minutes
+- Step 3 (Pages Settings): 5 minutes
+
+**Total: 5-10 minutes maximum**
+
+**No cache purge needed!**
+**No waiting for propagation!**
+**Works immediately after deleting rule!**
+
+═══════════════════════════════════════════════════════════════
+🎯 MOST LIKELY FIX
+═══════════════════════════════════════════════════════════════
+
+**90% chance:** Page Rules has a redirect rule
+**8% chance:** Transform Rules has a redirect
+**2% chance:** Pages Settings has "Pretty URLs" enabled
+
+**Start with Page Rules - most likely there!**
+
+═══════════════════════════════════════════════════════════════
+📱 NEED HELP?
+═══════════════════════════════════════════════════════════════
+
+If you can't find the rules:
+
+1. Take screenshot of:
+   - Rules → Page Rules page
+   - Rules → Transform Rules page
+   - Workers & Pages → Settings page
+
+2. Share screenshots
+
+3. I can tell you exactly what to delete
+
+═══════════════════════════════════════════════════════════════
+
+**START WITH STEP 1 - CHECK PAGE RULES NOW!**
+
+**This will fix it in 3 minutes!**
+

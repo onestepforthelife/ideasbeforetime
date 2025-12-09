@@ -1,0 +1,2 @@
+# Python dependencies for Kiro tools
+chromadb>=0.4.0

@@ -1,0 +1,37 @@
+{
+  "timestamp": "2025-12-04T16:19:24.600Z",
+  "summary": {
+    "totalIssues": 2,
+    "blogPostsChecked": 100,
+    "filesChecked": 174
+  },
+  "details": {
+    "blogPosts": {
+      "checked": 100,
+      "issues": []
+    },
+    "navigation": {
+      "checked": 1,
+      "issues": []
+    },
+    "crossLinking": {
+      "checked": 7,
+      "issues": []
+    },
+    "uxPrinciples": {
+      "checked": 3,
+      "issues": [
+        "market-reports.html: Primary CTA not above fold",
+        "blog.html: Category filters not above fold"
+      ]
+    },
+    "consistency": {
+      "checked": 174,
+      "issues": []
+    },
+    "sitemap": {
+      "checked": 1,
+      "issues": []
+    }
+  }
+}

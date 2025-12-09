@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-12-04T17:57:23.672Z",
+  "summary": {
+    "total": 176,
+    "withNav": 174,
+    "withFooter": 173,
+    "complete": 173,
+    "orphaned": 3
+  },
+  "orphans": [
+    {
+      "file": "family-lifetime-timeline.html",
+      "hasNav": false,
+      "hasFooter": false,
+      "missing": [
+        "navigation",
+        "footer"
+      ]
+    },
+    {
+      "file": "family-prediction-report.html",
+      "hasNav": true,
+      "hasFooter": false,
+      "missing": [
+        "footer"
+      ]
+    },
+    {
+      "file": "test-preview-system.html",
+      "hasNav": false,
+      "hasFooter": false,
+      "missing": [
+        "navigation",
+        "footer"
+      ]
+    }
+  ]
+}
