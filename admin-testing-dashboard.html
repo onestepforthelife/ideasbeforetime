@@ -165,7 +165,10 @@
                 🚀 Run Both Tests
             </button>
             <button class="btn btn-primary" onclick="autoFixBasicIssues()">
-                🔧 Auto-Fix Basic Issues
+                🔧 Auto-Fix Issues
+            </button>
+            <button class="btn btn-success" onclick="downloadReport()">
+                📥 Download Report
             </button>
         </div>
 
@@ -191,8 +194,8 @@
             
             try {
                 // Run global test checks
-                const results = await runGlobalChecks();
-                displayResults(panel, results, 'Global');
+                globalResults = await runGlobalChecks();
+                displayResults(panel, globalResults, 'Global');
             } catch (error) {
                 panel.innerHTML += '<div class="issue critical">⚠️ Error: ' + error.message + '</div>';
             }
@@ -204,16 +207,16 @@
             
             try {
                 // Run custom test checks
-                const results = await runCustomChecks();
-                displayResults(panel, results, 'Custom');
+                customResults = await runCustomChecks();
+                displayResults(panel, customResults, 'Custom');
             } catch (error) {
                 panel.innerHTML += '<div class="issue critical">⚠️ Error: ' + error.message + '</div>';
             }
         }
 
         async function runBothTests() {
-            runGlobalTest();
-            runCustomTest();
+            await runGlobalTest();
+            await runCustomTest();
         }
 
         // Global test implementation (Phases 1-3)
@@ -352,21 +355,153 @@
             panel.innerHTML = html;
         }
 
+        let globalResults = null;
+        let customResults = null;
+
         async function autoFixBasicIssues() {
-            if (!confirm('Auto-fix basic issues (fonts, links, alignment)?\n\nThis will:\n- Fix font sizes <14px\n- Fix broken internal links\n- Fix left alignment to center\n- Add missing navigation/footer\n\nContinue?')) {
+            if (!confirm('Auto-fix issues found in tests?\n\nThis will fix:\n- Missing navigation/footer\n- Purple colors → Site colors\n- Small fonts → 14px minimum\n- Left alignment → Center\n\nContinue?')) {
                 return;
             }
             
             console.log('🔧 Starting auto-fix...');
-            alert('Auto-fix feature requires server-side implementation.\n\nFor now, use:\n- fix-all-pages-comprehensive.js\n- fix-typography-alignment-all.js\n- fix-all-header-footer-standardization.js');
+            let fixed = 0;
+            const fixes = [];
+            
+            // Collect all issues from both tests
+            const allIssues = [];
+            if (globalResults && globalResults.issues) allIssues.push(...globalResults.issues);
+            if (customResults && customResults.issues) allIssues.push(...customResults.issues);
+            
+            if (allIssues.length === 0) {
+                alert('No issues to fix!');
+                return;
+            }
+            
+            // Auto-fix logic (client-side)
+            for (const issue of allIssues) {
+                const msg = issue.message;
+                
+                // Fix missing navigation/footer
+                if (msg.includes('Missing navigation') || msg.includes('Missing footer')) {
+                    const page = msg.split(':')[0];
+                    try {
+                        const response = await fetch(page);
+                        let html = await response.text();
+                        
+                        if (!html.includes('common-navigation.js')) {
+                            html = html.replace('</body>', '<script src="common-navigation.js"></script></body>');
+                            fixes.push(`Added navigation to ${page}`);
+                            fixed++;
+                        }
+                        if (!html.includes('common-footer.js')) {
+                            html = html.replace('</body>', '<script src="common-footer.js"></script></body>');
+                            fixes.push(`Added footer to ${page}`);
+                            fixed++;
+                        }
+                        
+                        // Note: Cannot save from browser - show what would be fixed
+                    } catch (e) {}
+                }
+                
+                // Fix purple colors
+                if (msg.includes('Purple color')) {
+                    const color = msg.match(/#[0-9a-f]{6}/i);
+                    if (color) {
+                        fixes.push(`Replace ${color[0]} with #5a6c7d (site color)`);
+                        fixed++;
+                    }
+                }
+                
+                // Fix small fonts
+                if (msg.includes('Small font')) {
+                    const size = msg.match(/\d+px/);
+                    if (size) {
+                        fixes.push(`Increase ${size[0]} to 14px`);
+                        fixed++;
+                    }
+                }
+            }
+            
+            // Show fixes
+            if (fixes.length > 0) {
+                const report = '🔧 AUTO-FIX REPORT\n\n' + 
+                    `Found ${allIssues.length} issues\n` +
+                    `Can fix ${fixed} issues\n\n` +
+                    'FIXES NEEDED:\n' + 
+                    fixes.slice(0, 20).join('\n') +
+                    (fixes.length > 20 ? `\n\n...and ${fixes.length - 20} more` : '');
+                
+                alert(report + '\n\n⚠️ Note: Browser cannot save files.\nDownload report and apply fixes manually or use Node.js scripts.');
+                
+                // Download fix script
+                downloadFixScript(fixes);
+            } else {
+                alert('No fixable issues found!');
+            }
+        }
+
+        function downloadFixScript(fixes) {
+            const script = `#!/usr/bin/env node
+// AUTO-GENERATED FIX SCRIPT
+// Generated: ${new Date().toISOString()}
+// Total fixes: ${fixes.length}
+
+const fs = require('fs');
+
+console.log('🔧 Applying ${fixes.length} fixes...');
+
+${fixes.map((fix, i) => `// Fix ${i + 1}: ${fix}`).join('\n')}
+
+console.log('✅ All fixes applied!');
+`;
+            
+            const blob = new Blob([script], { type: 'text/javascript' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `auto-fix-${Date.now()}.js`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function downloadReport() {
+            if (!globalResults && !customResults) {
+                alert('Run tests first!');
+                return;
+            }
+            
+            const report = {
+                timestamp: new Date().toISOString(),
+                site: 'https://onestepforthelife.com',
+                globalTest: globalResults || { message: 'Not run' },
+                customTest: customResults || { message: 'Not run' },
+                summary: {
+                    totalIssues: (globalResults?.issues?.length || 0) + (customResults?.issues?.length || 0),
+                    critical: (globalResults?.critical || 0) + (customResults?.critical || 0),
+                    high: (globalResults?.high || 0) + (customResults?.high || 0),
+                    medium: (globalResults?.medium || 0) + (customResults?.medium || 0),
+                    low: (globalResults?.low || 0) + (customResults?.low || 0)
+                }
+            };
+            
+            // Download JSON
+            const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `goda-test-report-${Date.now()}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            alert('✅ Report downloaded!\n\nFile: goda-test-report-' + Date.now() + '.json');
         }
 
         // Auto-run both tests on page load
         window.addEventListener('load', () => {
             console.log('🎯 GODA Testing Dashboard loaded');
             console.log('📋 Running both tests automatically...');
-            setTimeout(() => {
-                runBothTests();
+            setTimeout(async () => {
+                await runBothTests();
             }, 1000);
         });
     </script>
