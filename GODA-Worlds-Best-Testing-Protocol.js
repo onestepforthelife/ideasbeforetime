@@ -173,15 +173,74 @@ console.log(`${colors.green}  ✓ Phase 4 Complete: ${adsenseScore}%${colors.res
 console.log(`  Issues: ${adsenseIssues}\n`);
 
 // ============================================================================
-// PHASE 5-10: PLACEHOLDER (Manual testing required)
+// PHASE 5: RENDERING VERIFICATION (Learning #55 - NEW!)
 // ============================================================================
-console.log(`${colors.yellow}[PHASE 5-10] Requires manual testing or external tools${colors.reset}`);
-console.log(`  Phase 5: Performance - Use PageSpeed Insights`);
-console.log(`  Phase 6: Accessibility - Use Lighthouse`);
-console.log(`  Phase 7: SEO - Use Lighthouse`);
-console.log(`  Phase 8: Security - Use OWASP ZAP`);
-console.log(`  Phase 9: Consistency - Manual review`);
-console.log(`  Phase 10: Content - Manual review\n`);
+console.log(`${colors.blue}[PHASE 5] RENDERING VERIFICATION - Does it actually work?${colors.reset}`);
+
+let renderingScore = 100;
+let renderingIssues = 0;
+
+htmlFiles.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
+    
+    // Check CSS load order
+    const cssLinks = [...content.matchAll(/<link[^>]*rel="stylesheet"[^>]*href="([^"]*)"[^>]*>/g)];
+    const inlineStyles = [...content.matchAll(/<style[^>]*>[\s\S]*?<\/style>/g)];
+    
+    if (inlineStyles.length > 0) {
+        const firstInlineStylePos = content.indexOf(inlineStyles[0][0]);
+        cssLinks.forEach(link => {
+            const href = link[1];
+            if ((href.includes('common-navigation') || href.includes('common-footer')) && 
+                content.indexOf(link[0]) < firstInlineStylePos) {
+                results.phase5 = results.phase5 || { name: 'Rendering', score: 0, issues: [] };
+                results.phase5.issues.push(`${file}: ${href} before inline styles - overridden`);
+                renderingIssues++;
+            }
+        });
+    }
+    
+    // Check JS load order
+    const scripts = [...content.matchAll(/<script[^>]*src="([^"]*)"[^>]*>/g)];
+    const headEndPos = content.indexOf('</head>');
+    scripts.forEach(script => {
+        const src = script[1];
+        if (content.indexOf(script[0]) < headEndPos && !script[0].includes('defer')) {
+            if (src.includes('common-navigation') || src.includes('goda-chatbot')) {
+                results.phase5 = results.phase5 || { name: 'Rendering', score: 0, issues: [] };
+                results.phase5.issues.push(`${file}: ${src} in head without defer`);
+                renderingIssues++;
+            }
+        }
+    });
+    
+    // Check form handlers
+    const forms = [...content.matchAll(/<form[^>]*>/g)];
+    forms.forEach(form => {
+        if (!form[0].includes('action=') && !form[0].includes('onsubmit=')) {
+            results.phase5 = results.phase5 || { name: 'Rendering', score: 0, issues: [] };
+            results.phase5.issues.push(`${file}: Form without handler`);
+            renderingIssues++;
+        }
+    });
+});
+
+renderingScore = Math.max(0, 100 - (renderingIssues * 10));
+results.phase5 = results.phase5 || { name: 'Rendering', score: renderingScore, issues: [] };
+results.phase5.score = renderingScore;
+
+console.log(`${colors.green}  ✓ Phase 5 Complete: ${renderingScore}%${colors.reset}`);
+console.log(`  Issues: ${renderingIssues}\n`);
+
+// ============================================================================
+// PHASE 6-10: PLACEHOLDER (Manual testing required)
+// ============================================================================
+console.log(`${colors.yellow}[PHASE 6-10] Requires manual testing or external tools${colors.reset}`);
+console.log(`  Phase 6: Performance - Use PageSpeed Insights`);
+console.log(`  Phase 7: Accessibility - Use Lighthouse`);
+console.log(`  Phase 8: SEO - Use Lighthouse`);
+console.log(`  Phase 9: Security - Use OWASP ZAP`);
+console.log(`  Phase 10: Consistency - Manual review\n`);
 
 // ============================================================================
 // FINAL REPORT
@@ -190,8 +249,8 @@ console.log(`${colors.cyan}╔════════════════�
 console.log(`${colors.cyan}║                      FINAL REPORT                          ║${colors.reset}`);
 console.log(`${colors.cyan}╚════════════════════════════════════════════════════════════╝${colors.reset}\n`);
 
-const avgScore = Math.round((results.phase1.score + results.phase2.score + results.phase3.score + results.phase4.score) / 4);
-const totalIssues = results.phase2.issues.length + results.phase3.issues.length + results.phase4.issues.length;
+const avgScore = Math.round((results.phase1.score + results.phase2.score + results.phase3.score + results.phase4.score + results.phase5.score) / 5);
+const totalIssues = results.phase2.issues.length + results.phase3.issues.length + results.phase4.issues.length + results.phase5.issues.length;
 
 console.log(`${colors.magenta}Overall Score: ${avgScore}/100${colors.reset}`);
 console.log(`${colors.magenta}Total Issues Found: ${totalIssues}${colors.reset}\n`);
@@ -199,11 +258,12 @@ console.log(`${colors.magenta}Total Issues Found: ${totalIssues}${colors.reset}\
 console.log(`Phase 1 (Discovery): ${results.phase1.score}%`);
 console.log(`Phase 2 (Functionality): ${results.phase2.score}%`);
 console.log(`Phase 3 (Visual/UI): ${results.phase3.score}%`);
-console.log(`Phase 4 (AdSense-MECER): ${results.phase4.score}%\n`);
+console.log(`Phase 4 (AdSense-MECER): ${results.phase4.score}%`);
+console.log(`Phase 5 (Rendering-NEW!): ${results.phase5.score}%\n`);
 
 if (totalIssues > 0) {
     console.log(`${colors.red}CRITICAL ISSUES:${colors.reset}`);
-    [...results.phase2.issues, ...results.phase3.issues, ...results.phase4.issues].forEach((issue, i) => {
+    [...results.phase2.issues, ...results.phase3.issues, ...results.phase4.issues, ...results.phase5.issues].forEach((issue, i) => {
         console.log(`  ${i + 1}. ${issue}`);
     });
     console.log();
@@ -217,12 +277,14 @@ const report = {
         phase2: results.phase2.score,
         phase3: results.phase3.score,
         phase4: results.phase4.score,
+        phase5: results.phase5.score,
         overall: avgScore
     },
     issues: {
         phase2: results.phase2.issues,
         phase3: results.phase3.issues,
         phase4: results.phase4.issues,
+        phase5: results.phase5.issues,
         total: totalIssues
     },
     files: {
