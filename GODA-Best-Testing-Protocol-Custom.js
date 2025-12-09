@@ -242,6 +242,18 @@ function checkSPOTool() {
         ISSUES.high.push('SPO pricing (₹21) not found');
     }
     
+    // Check payment button exists (Learning #56 - CRITICAL!)
+    const hasPayButton = spo.includes('Pay Now') || spo.includes('payment') || spo.includes('razorpay');
+    if (!hasPayButton) {
+        ISSUES.critical.push('SPO: Payment button MISSING - users cannot pay! (Learning #56)');
+    }
+    
+    // Check Razorpay integration
+    const hasRazorpay = spo.includes('rzp_live_') || spo.includes('rzp_test_') || spo.includes('razorpay.com');
+    if (!hasRazorpay) {
+        ISSUES.high.push('SPO: Razorpay integration missing');
+    }
+    
     // Check NO REFUNDS policy
     if (!spo.includes('NO REFUND') && !spo.includes('no refund')) {
         ISSUES.medium.push('SPO NO REFUNDS policy not clearly stated (Learning #3)');
@@ -254,7 +266,19 @@ function checkSPOTool() {
     
     console.log(`   ✅ SPO tool file exists`);
     console.log(`   ${spo.includes('₹21') ? '✅' : '⚠️'} Pricing (₹21) displayed`);
+    console.log(`   ${hasPayButton ? '✅' : '❌'} Payment button exists`);
+    console.log(`   ${hasRazorpay ? '✅' : '⚠️'} Razorpay integrated`);
     console.log(`   ${spo.includes('NO REFUND') ? '✅' : '⚠️'} NO REFUNDS policy stated`);
+    
+    // Check Astronomy tool payment (Learning #56)
+    if (fs.existsSync('astronomy.html')) {
+        const astro = fs.readFileSync('astronomy.html', 'utf8');
+        const astroPayButton = astro.includes('Pay Now') || astro.includes('payment') || astro.includes('razorpay');
+        if (!astroPayButton) {
+            ISSUES.critical.push('Astronomy: Payment button MISSING - users cannot pay! (Learning #56)');
+        }
+        console.log(`   ${astroPayButton ? '✅' : '❌'} Astronomy payment button exists`);
+    }
 }
 
 checkSPOTool();

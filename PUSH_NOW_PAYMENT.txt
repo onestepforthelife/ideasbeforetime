@@ -1,0 +1,25 @@
+# PUSH NOW - PAYMENT DOCUMENTATION
+**Date:** December 9, 2025
+
+## FILES TO PUSH (3 documentation files):
+
+1. PAYMENT_PAGE_CONTENT.txt
+2. RAZORPAY_COMMON_TEXT.txt
+3. RAZORPAY_PAGE_FORM_FIELDS.txt
+
+## COMMANDS:
+
+```
+git add PAYMENT_PAGE_CONTENT.txt RAZORPAY_COMMON_TEXT.txt RAZORPAY_PAGE_FORM_FIELDS.txt
+git commit -m "Add Razorpay payment documentation"
+git push
+```
+
+## ⚠️ IMPORTANT:
+
+Payment page is LIVE but button is NOT on website yet.
+Users CANNOT pay until you add button HTML to:
+- social-optimizer-app.html
+- astronomy.html
+
+Payment URL: https://rzp.io/rzp/onestep

@@ -1,9 +1,0 @@
-                        <img decoding="async" loading="lazy" src="images/silent-dj-2001.jpg" alt="Silent DJ 2001" style="width: 100%; height: 150px; object-fit: cover;">
-                        <img decoding="async" loading="lazy" src="images/tv-storage-2002.jpg" alt="TV Storage 2002" style="width: 100%; height: 150px; object-fit: cover;">
-                        <img decoding="async" loading="lazy" src="images/music-ringtones-2003.jpg" alt="Music Ringtones 2003" style="width: 100%; height: 150px; object-fit: cover;">
-                        <img decoding="async" loading="lazy" src="images/dual-sim-2003.jpg" alt="Dual SIM 2003" style="width: 100%; height: 150px; object-fit: cover;">
-                        <img decoding="async" loading="lazy" src="images/universal-health-id-2009.jpg" alt="Universal Health ID 2009" style="width: 100%; height: 150px; object-fit: cover;">
-                        <img decoding="async" loading="lazy" src="images/3d-imaging-2009.jpg" alt="3D Imaging 2009" style="width: 100%; height: 150px; object-fit: cover;">
-                        <img decoding="async" loading="lazy" src="images/digital-money-2012.jpg" alt="Digital Money 2012" style="width: 100%; height: 150px; object-fit: cover;">
-                        <img decoding="async" loading="lazy" src="images/moveable-dividers-2012.jpg" alt="Moveable Dividers 2012" style="width: 100%; height: 150px; object-fit: cover;">
-                        <img decoding="async" loading="lazy" src="images/dashboard-simplification-2017.jpg" alt="Dashboard Simplification 2017" style="width: 100%; height: 150px; object-fit: cover;">
