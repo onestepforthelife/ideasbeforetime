@@ -1,0 +1,95 @@
+# ✅ COMPLETE PUSH LIST - December 9, 2025
+
+## 🎯 3 ITEMS USER ASKED ABOUT
+
+### 1. ✅ PAYMENT GATEWAY
+**Status:** Button code ready, need to add to pages
+**Files:**
+- social-optimizer-app.html (add button to Step 4)
+- astronomy.html (add button before </body>)
+
+**Button HTML:**
+```html
+<!-- Razorpay Payment Button -->
+<div style="text-align: center; margin: 30px 0; padding: 30px; background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%); border-radius: 15px;">
+    <h3 style="color: white; font-size: 1.8em; margin-bottom: 15px;">💳 Pay Securely with Razorpay</h3>
+    <p style="color: rgba(255,255,255,0.9); font-size: 1.1em; margin-bottom: 20px;">
+        ₹21 only • Instant access • Secure payment
+    </p>
+    <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_RpRnYp1Qwb72ld/view" data-text="Pay ₹21 Now" data-color="#528FF0" data-size="large">
+        <script>
+        (function(){
+            var d=document; 
+            var x=!d.getElementById('razorpay-embed-btn-js')
+            if(x){ 
+                var s=d.createElement('script'); 
+                s.defer=!0;
+                s.id='razorpay-embed-btn-js';
+                s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';
+                d.body.appendChild(s);
+            } else{
+                var rzp=window['__rzp__'];
+                rzp && rzp.init && rzp.init()
+            }
+        })();
+        </script>
+    </div>
+    <p style="color: rgba(255,255,255,0.8); font-size: 0.9em; margin-top: 15px;">
+        🔒 Secure payment • NO REFUNDS (backend cost) • Terms in footer
+    </p>
+</div>
+```
+
+### 2. ⚠️ BUSINESS NEWS AUTO-UPDATE
+**Status:** Script exists but NOT included in business-news.html
+**Issue:** business-news.html has static content only
+**Fix needed:** Add `<script src="business-insights-auto-updater.js"></script>` before </body>
+
+**Current:** business-insights.html has it ✅
+**Missing:** business-news.html needs it ❌
+
+### 3. ❓ JOB SEARCH EMAIL/CV
+**Status:** Need to verify on live site
+**File:** jobs.html
+**Has:** Email field, form simulation
+**Question:** Does it actually send emails with CV attachments?
+**Need:** Test on live site to confirm
+
+---
+
+## 📝 FILES TO PUSH
+
+### Priority 1: Payment Buttons (CRITICAL)
+1. social-optimizer-app.html - Add Razorpay button to Step 4
+2. astronomy.html - Add Razorpay button before </body>
+
+### Priority 2: Business News Auto-Update
+3. business-news.html - Add auto-updater script
+
+### Priority 3: Verify Job Search
+4. Test jobs.html on live site
+
+---
+
+## 🚀 PUSH COMMAND
+
+```bash
+git add social-optimizer-app.html astronomy.html business-news.html
+git commit -m "Add Razorpay payment buttons + fix business news auto-update"
+git push
+```
+
+---
+
+## ✅ AFTER PUSH
+
+1. Wait 2-3 minutes for deployment
+2. Test payment button: https://onestepforthelife.com/social-optimizer-app.html
+3. Test business news: https://onestepforthelife.com/business-news.html
+4. Test job search: https://onestepforthelife.com/jobs.html
+
+---
+
+**Status:** Ready to add buttons and push
+**Time:** 10 minutes
+**Result:** All 3 items working

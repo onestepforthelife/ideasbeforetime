@@ -1,0 +1,35 @@
+🔐 ACCESS CONTROL SUMMARY - December 9, 2025
+
+✅ CORRECT SETUP:
+
+1. 💰 PAID TOOLS (₹21 Razorpay - NO LOGIN):
+   - social-optimizer-app.html ✅
+   - astronomy.html ✅
+   - Payment required BEFORE use
+   - No Cloudflare Access needed
+   - Same data same day = FREE
+
+2. 🔒 CLOUDFLARE ACCESS (Login Required):
+   - admin-control-panel.html
+   - admin-testing-control-panel.html
+   - admin-testing-dashboard.html
+   - business-insights.html
+   - All market report pages (Acrylic, Poloxamer, etc.)
+
+3. 🌐 PUBLIC (No Payment, No Login):
+   - All other pages (blog, about, CV, tools index, etc.)
+
+📋 CLOUDFLARE ACCESS PATHS TO PROTECT:
+/admin-*
+/business-insights*
+/*-report*
+/market-reports*
+
+✅ FIXED TODAY:
+- Removed wrong Cloudflare Access comment from SPO
+- SPO now correctly marked as PAID (not login-protected)
+- Astronomy already correct (no wrong comments)
+
+🎯 READY TO PUSH:
+1. social-optimizer-app.html (payment button + correct comments)
+2. astronomy.html (payment button, already correct)

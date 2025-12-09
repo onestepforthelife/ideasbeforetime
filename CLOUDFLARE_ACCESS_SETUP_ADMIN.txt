@@ -1,0 +1,62 @@
+🔒 CLOUDFLARE ACCESS SETUP - Admin Pages
+Created: December 9, 2025
+
+⚠️ CRITICAL: Admin pages are NOT protected yet!
+Anyone can access admin panel without login.
+
+📋 PAGES THAT NEED PROTECTION:
+1. admin-control-panel.html (Main admin panel)
+2. admin-testing-dashboard.html (GODA testing dashboard)
+3. social-optimizer-admin.html (SPO admin - already has comment)
+
+🔧 SETUP STEPS (5 minutes):
+
+1. Go to Cloudflare Dashboard
+   https://dash.cloudflare.com
+
+2. Select your site: onestepforthelife.com
+
+3. Go to: Zero Trust → Access → Applications
+
+4. Click: "Add an application"
+
+5. Choose: "Self-hosted"
+
+6. Configure Application:
+   - Name: "Admin Panel"
+   - Session Duration: 24 hours
+   - Application domain: onestepforthelife.com
+   - Path: /admin-*
+   
+7. Add Policy:
+   - Policy name: "Admin Only"
+   - Action: Allow
+   - Include: Emails
+   - Value: onestepforthelife@gmail.com (your email)
+
+8. Save Application
+
+9. Test:
+   - Visit: https://onestepforthelife.com/admin-control-panel.html
+   - Should redirect to Cloudflare login
+   - Enter your email
+   - Get OTP code
+   - Login successful → Access granted
+
+✅ RESULT:
+- Admin pages protected by Cloudflare Access
+- Only your email can access
+- Server-side protection (cannot be bypassed)
+- No JavaScript passwords needed
+
+🎯 PATHS TO PROTECT:
+/admin-* (covers all admin pages)
+/social-optimizer-admin.html (SPO admin)
+
+💡 WHY THIS MATTERS:
+- Admin panel has sensitive operations
+- Testing dashboard shows all site data
+- SPO admin shows user payments
+- MUST be protected before going live
+
+⏱️ DO THIS NOW - Takes 5 minutes!

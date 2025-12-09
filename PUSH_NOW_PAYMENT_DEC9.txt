@@ -1,0 +1,80 @@
+# 🚀 PUSH NOW - Payment Buttons Added
+
+## ✅ WHAT'S DONE
+
+### 1. Payment Buttons Added
+- ✅ social-optimizer-app.html - Razorpay button in Step 4
+- ✅ astronomy.html - Razorpay button at bottom
+- Button text: "Pay ₹21 Now"
+- Opens: https://rzp.io/rzp/onestep
+
+### 2. Business News Fixed
+- ✅ business-news.html - Auto-updater script added
+- Updates every 4 hours automatically
+- Shows green pulse indicator
+
+### 3. Job Search
+- ❓ Need to test on live site after push
+
+---
+
+## 🚀 PUSH USING GITHUB DESKTOP
+
+### Step 1: Open GitHub Desktop
+1. Open GitHub Desktop app
+2. Should see 3 changed files:
+   - social-optimizer-app.html
+   - astronomy.html
+   - business-news.html
+
+### Step 2: Commit
+1. Summary: "Add Razorpay payment buttons + fix business news"
+2. Click "Commit to main"
+
+### Step 3: Push
+1. Click "Push origin"
+2. Wait 2-3 minutes for deployment
+
+---
+
+## ✅ AFTER PUSH - TEST
+
+### 1. Payment Button (5 min)
+Visit: https://onestepforthelife.com/social-optimizer-app.html
+- Scroll to Step 4
+- Should see blue "Pay ₹21 Now" button
+- Click → Opens Razorpay page
+
+Visit: https://onestepforthelife.com/astronomy.html
+- Scroll to bottom
+- Should see blue "Pay ₹21 Now" button
+- Click → Opens Razorpay page
+
+### 2. Business News (2 min)
+Visit: https://onestepforthelife.com/business-news.html
+- Should see green pulse indicator
+- Timestamp shows current time
+- Prices update every 4 hours
+
+### 3. Job Search (3 min)
+Visit: https://onestepforthelife.com/jobs.html
+- Check if email field works
+- Check if CV upload works
+- Test if sends email
+
+---
+
+## 📊 WHAT USER CAN DO NOW
+
+After push:
+1. ✅ Pay ₹21 for SPO tool
+2. ✅ Pay ₹21 for Astronomy tool
+3. ✅ See live business news updates
+4. ❓ Send job applications (test needed)
+
+---
+
+**Status:** Ready to push
+**Files:** 3 changed
+**Time:** 5 minutes
+**Result:** Users can pay ₹21 for both tools
