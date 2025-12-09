@@ -1,11 +1,12 @@
 /**
- * Google AdSense Integration - ALL 3 Ad Units
+ * Google AdSense Integration - ALL 4 Ad Units
  * Publisher ID: ca-pub-3181510462001437
  * 
  * Ad Units (Google's Exact Code):
- * 1. Display Ad: 9723865202 (auto, responsive)
- * 2. Multiplex Ad: 4786506942 (autorelaxed)
- * 3. In-Article Ad: 5799371569 (fluid, in-article)
+ * 1. In-feed Ad: 5034645309
+ * 2. Multiplex Ad: 4786506942
+ * 3. In-Article Ad: 5799371569
+ * 4. Display Ad: 9723865202
  */
 
 (function() {
@@ -13,9 +14,10 @@
 
     const ADSENSE_CLIENT = 'ca-pub-3181510462001437';
     const AD_UNITS = {
-        DISPLAY: '9723865202',        // Display ad (auto format)
+        INFEED: '5034645309',         // In-feed ad
         MULTIPLEX: '4786506942',      // Multiplex (autorelaxed)
-        IN_ARTICLE: '5799371569'      // In-article (fluid)
+        IN_ARTICLE: '5799371569',     // In-article (fluid)
+        DISPLAY: '9723865202'         // Display ad (auto)
     };
     
     /**
@@ -31,6 +33,32 @@
         script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`;
         script.crossOrigin = 'anonymous';
         document.head.appendChild(script);
+    }
+
+    /**
+     * Create In-feed Ad (Google's exact code)
+     * Slot: 5034645309
+     */
+    function createInfeedAd() {
+        const container = document.createElement('div');
+        container.className = 'adsense-infeed';
+        container.style.cssText = 'margin: 30px auto; padding: 20px; text-align: center; max-width: 1200px;';
+
+        container.innerHTML = `
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}"
+                 crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="fluid"
+                 data-ad-layout-key="-6t+ed+2i-1n-4w"
+                 data-ad-client="${ADSENSE_CLIENT}"
+                 data-ad-slot="${AD_UNITS.INFEED}"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        `;
+
+        return container;
     }
 
     /**
@@ -112,7 +140,7 @@
     }
 
     /**
-     * Insert all 3 ad types into page content
+     * Insert all 4 ad types into page content
      */
     function insertAds() {
         const main = document.querySelector('main') || 
@@ -122,25 +150,31 @@
 
         const paragraphs = main.querySelectorAll('p');
         
-        if (paragraphs.length < 4) {
-            console.log('AdSense: Not enough content for ads');
+        if (paragraphs.length < 6) {
+            console.log('AdSense: Not enough content for 4 ads');
             return;
         }
 
-        // Ad 1: Display ad after 2nd paragraph
-        if (paragraphs[1]) {
-            const displayAd = createDisplayAd();
-            paragraphs[1].after(displayAd);
+        // Ad 1: In-feed ad after 1st paragraph
+        if (paragraphs[0]) {
+            const infeedAd = createInfeedAd();
+            paragraphs[0].after(infeedAd);
         }
 
-        // Ad 2: In-Article ad in middle
+        // Ad 2: Display ad after 3rd paragraph
+        if (paragraphs[2]) {
+            const displayAd = createDisplayAd();
+            paragraphs[2].after(displayAd);
+        }
+
+        // Ad 3: In-Article ad in middle
         const middleIndex = Math.floor(paragraphs.length / 2);
         if (paragraphs[middleIndex]) {
             const inArticleAd = createInArticleAd();
             paragraphs[middleIndex].after(inArticleAd);
         }
 
-        // Ad 3: Multiplex ad near end
+        // Ad 4: Multiplex ad near end
         const endIndex = paragraphs.length - 2;
         if (paragraphs[endIndex] && endIndex > middleIndex + 2) {
             const multiplexAd = createMultiplexAd();
@@ -167,6 +201,7 @@
 
     // Export for manual use
     window.GoogleAdsense = {
+        createInfeedAd,
         createDisplayAd,
         createMultiplexAd,
         createInArticleAd,
