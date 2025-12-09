@@ -543,6 +543,87 @@ function validateMECER() {
 validateMECER();
 
 // ============================================
+// PHASE 15: RENDERING VERIFICATION (Learning #55)
+// ============================================
+console.log('\n🎨 PHASE 15: Rendering Verification (MECER-R)...');
+
+function checkRenderingReality() {
+    const htmlFiles = fs.readdirSync('.').filter(f => f.endsWith('.html'));
+    let cssIssues = 0, jsIssues = 0, imgIssues = 0, formIssues = 0, eventIssues = 0;
+    
+    htmlFiles.forEach(file => {
+        const content = fs.readFileSync(file, 'utf8');
+        
+        // Check 1: CSS Load Order (Learning #55)
+        const cssLinks = [...content.matchAll(/<link[^>]*rel="stylesheet"[^>]*href="([^"]*)"[^>]*>/g)];
+        const inlineStyles = [...content.matchAll(/<style[^>]*>[\s\S]*?<\/style>/g)];
+        
+        if (inlineStyles.length > 0) {
+            const firstInlineStylePos = content.indexOf(inlineStyles[0][0]);
+            cssLinks.forEach(link => {
+                const href = link[1];
+                if (href.includes('common-navigation') || href.includes('common-footer')) {
+                    const linkPos = content.indexOf(link[0]);
+                    if (linkPos < firstInlineStylePos) {
+                        ISSUES.high.push(`${file}: ${href} loaded BEFORE inline styles - will be overridden`);
+                        cssIssues++;
+                    }
+                }
+            });
+        }
+        
+        // Check 2: JS Load Order
+        const scripts = [...content.matchAll(/<script[^>]*src="([^"]*)"[^>]*>/g)];
+        const headEndPos = content.indexOf('</head>');
+        scripts.forEach(script => {
+            const src = script[1];
+            const scriptPos = content.indexOf(script[0]);
+            if (scriptPos < headEndPos && !script[0].includes('defer') && !script[0].includes('async')) {
+                if (src.includes('common-navigation') || src.includes('goda-chatbot')) {
+                    ISSUES.high.push(`${file}: ${src} in <head> without defer - may run before DOM ready`);
+                    jsIssues++;
+                }
+            }
+        });
+        
+        // Check 3: Image Paths
+        const images = [...content.matchAll(/<img[^>]*src="([^"]*)"[^>]*>/g)];
+        images.forEach(img => {
+            const src = img[1];
+            if (src.startsWith('/') && !src.startsWith('//') && !src.startsWith('http')) {
+                ISSUES.medium.push(`${file}: Image ${src} uses absolute path - may break`);
+                imgIssues++;
+            }
+        });
+        
+        // Check 4: Form Handlers
+        const forms = [...content.matchAll(/<form[^>]*>/g)];
+        forms.forEach(form => {
+            const formTag = form[0];
+            if (!formTag.includes('action=') && !formTag.includes('onsubmit=')) {
+                ISSUES.high.push(`${file}: Form has no action or onsubmit - won't submit`);
+                formIssues++;
+            }
+        });
+        
+        // Check 5: Event Listeners
+        const listeners = [...content.matchAll(/addEventListener\s*\(/g)];
+        if (listeners.length > 0 && !content.includes('DOMContentLoaded') && !content.includes('defer')) {
+            ISSUES.medium.push(`${file}: ${listeners.length} event listeners may attach before DOM ready`);
+            eventIssues++;
+        }
+    });
+    
+    console.log(`   ${cssIssues === 0 ? '✅' : '❌'} CSS Load Order: ${cssIssues} issues`);
+    console.log(`   ${jsIssues === 0 ? '✅' : '❌'} JS Execution: ${jsIssues} issues`);
+    console.log(`   ${imgIssues === 0 ? '✅' : '⚠️'} Image Paths: ${imgIssues} issues`);
+    console.log(`   ${formIssues === 0 ? '✅' : '❌'} Form Handlers: ${formIssues} issues`);
+    console.log(`   ${eventIssues === 0 ? '✅' : '⚠️'} Event Listeners: ${eventIssues} issues`);
+}
+
+checkRenderingReality();
+
+// ============================================
 // FINAL REPORT
 // ============================================
 console.log('\n' + '='.repeat(60));
