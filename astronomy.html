@@ -790,5 +790,107 @@ document.addEventListener('click', function(event) {
     }
 });
 </script>
+
+<!-- Payment Verification for Astronomy -->
+<script>
+    // Check if user has paid today for this date of birth
+    function hasValidAstronomyPayment() {
+        const paymentData = JSON.parse(localStorage.getItem('astronomyPayment') || '{}');
+        const today = new Date().toDateString();
+        const currentDate = document.getElementById('dateInput')?.value || '';
+        
+        return paymentData.date === today && 
+               paymentData.birthDate === currentDate &&
+               paymentData.verified === true;
+    }
+    
+    // Save payment data
+    function saveAstronomyPaymentData(birthDate) {
+        const paymentData = {
+            date: new Date().toDateString(),
+            birthDate: birthDate,
+            verified: true,
+            timestamp: Date.now()
+        };
+        localStorage.setItem('astronomyPayment', JSON.stringify(paymentData));
+    }
+    
+    // Override form submission to check payment
+    const originalFormSubmit = document.getElementById('astronomyForm').onsubmit;
+    document.getElementById('astronomyForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (hasValidAstronomyPayment()) {
+            // Allow calculation
+            if (selectedTools.length === 0) {
+                alert('Please select at least one calculation method');
+                return;
+            }
+            
+            const formData = {
+                date: document.getElementById('dateInput').value,
+                time: document.getElementById('timeInput').value,
+                place: document.getElementById('placeInput').value,
+                region: document.getElementById('regionInput').value,
+                language: document.getElementById('languageInput').value,
+                tools: selectedTools
+            };
+            
+            // Show results section
+            document.getElementById('resultsSection').style.display = 'block';
+            document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+            
+            // Show loading
+            document.getElementById('resultsContainer').innerHTML = '<div class="loading">🔄 Calculating planetary positions...</div>';
+            
+            // Simulate calculation
+            setTimeout(() => {
+                displayResults(formData);
+            }, 1500);
+            
+            // Update 3D solar system
+            updateSolarSystemDate(formData.date);
+        } else {
+            alert('⚠️ Payment Required\n\nPlease click "Pay Now ₹21" to unlock calculations for this date.\n\n💡 Pay once per date of birth. Change place/time freely. Same date = free today!');
+        }
+    });
+    
+    // Payment flow
+    function payNowAstronomy() {
+        const currentDate = document.getElementById('dateInput')?.value || '';
+        
+        if (!currentDate) {
+            alert('Please select a date first');
+            return;
+        }
+        
+        // Razorpay payment
+        const options = {
+            key: 'rzp_live_RmJ2p4des8sDGF',
+            amount: 2100, // ₹21 in paise
+            currency: 'INR',
+            name: 'Astronomy Calculator',
+            description: 'Unlock Planetary Position Calculations',
+            handler: function(response) {
+                // Payment successful
+                saveAstronomyPaymentData(currentDate);
+                alert('✅ Payment Successful!\n\nYou can now calculate positions for this date unlimited times today.\n\nChange place/time freely - no extra charge!\n\nTransaction ID: ' + response.razorpay_payment_id);
+                
+                // Auto-submit form after payment
+                document.getElementById('astronomyForm').dispatchEvent(new Event('submit'));
+            },
+            prefill: {
+                name: '',
+                email: ''
+            },
+            theme: {
+                color: '#5a6c7d'
+            }
+        };
+        
+        const rzp = new Razorpay(options);
+        rzp.open();
+    }
+</script>
 </body>
 </html>

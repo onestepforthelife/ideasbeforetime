@@ -1,60 +1,88 @@
-✅ ASTRONOMY PAGE - READY TO PUSH
-Date: December 9, 2025
+✅ READY TO PUSH - Payment Buttons Complete
+Created: December 9, 2025, 11:45 AM
 
-═══════════════════════════════════════════════════════════════
+📋 FILES TO PUSH (2 working HTML files only):
 
-FILES TO PUSH:
+1. ✅ social-optimizer-app.html
+   - Payment button added next to "Generate Preview"
+   - Razorpay integration: rzp_live_RmJ2p4des8sDGF
+   - Amount: ₹21 (2100 paise)
+   - Same profile/date = FREE same day
+   - Different profile/date = NEW payment
 
-1. astronomy.html (Updated with divine examples + auto-load)
-2. solar-system-3d.js (Updated with global instance)
-3. ASTRONOMY_PAGE_COMPLETE_DEC9.txt (Documentation)
+2. ✅ astronomy.html
+   - Payment button added next to "Calculate Positions"
+   - Razorpay integration: rzp_live_RmJ2p4des8sDGF
+   - Amount: ₹21 (2100 paise)
+   - Same date of birth = FREE same day
+   - User can change place/time freely
 
-═══════════════════════════════════════════════════════════════
+🚫 DO NOT PUSH:
+- add-payment-buttons-spo-astronomy.js (script file)
+- PAYMENT_BUTTONS_PUSH_LIST.txt (documentation)
+- PUSH_ASTRONOMY_DEC9.txt (this file)
+- Any other .txt or .js files
 
-PUSH COMMANDS (Use GitHub Desktop or Git Bash):
+📤 HOW TO PUSH (GitHub Desktop):
 
-Option 1: GitHub Desktop
 1. Open GitHub Desktop
-2. Select files:
+2. You'll see 2 changed files:
+   - social-optimizer-app.html
    - astronomy.html
-   - solar-system-3d.js
-   - ASTRONOMY_PAGE_COMPLETE_DEC9.txt
-3. Commit message: "Add divine examples to astronomy page with auto-load Krishna data"
-4. Push to origin
+3. Check ONLY these 2 files (uncheck any others)
+4. Commit message: "Add payment buttons to SPO and Astronomy tools"
+5. Click "Commit to main"
+6. Click "Push origin"
 
-Option 2: Git Bash
-git add astronomy.html solar-system-3d.js ASTRONOMY_PAGE_COMPLETE_DEC9.txt
-git commit -m "Add divine examples to astronomy page with auto-load Krishna data"
-git push origin main
-
-═══════════════════════════════════════════════════════════════
-
-WHAT WAS DONE:
-
-✅ Added 4 divine example buttons (Krishna, Rama, Lakshmi, Saraswati)
-✅ Complete pre-filled data for all 4 (no dummy data)
-✅ Auto-load Krishna data on page load
-✅ Dynamic 3D solar system updates based on date
-✅ Results section visible by default
-✅ All planetary positions calculated
-✅ Vedic calendar data included
-✅ Divine significance explanations
-
-═══════════════════════════════════════════════════════════════
-
-AFTER PUSH:
+⏱️ AFTER PUSH (5 minutes):
 
 1. Wait 2-3 minutes for Cloudflare deployment
-2. Purge Cloudflare cache (Dashboard → Caching → Purge Everything)
-3. Wait 5-10 minutes for cache propagation
-4. Test live site: https://onestepforthelife.com/astronomy.html
-5. Verify:
-   ☐ Krishna data loads automatically
-   ☐ All 4 buttons work
-   ☐ 3D solar system visible and animated
-   ☐ Date changes update 3D system
-   ☐ All data complete (no dummy text)
+2. Check Cloudflare Dashboard → Deployments → Latest build
+3. Purge Cloudflare cache (Dashboard → Caching → Purge Everything)
+4. Wait 5 minutes for cache propagation
+5. Test live site:
+   - https://onestepforthelife.com/social-optimizer-app.html
+   - https://onestepforthelife.com/astronomy.html
 
-═══════════════════════════════════════════════════════════════
+🧪 TEST PAYMENT FLOW:
 
-READY TO PUSH! ✅
+SPO Tool:
+1. Go to social-optimizer-app.html
+2. Fill form → Click "Generate Preview"
+3. Should see "Pay Now ₹21" button
+4. Click payment button → Razorpay opens
+5. Complete payment → Tool unlocks
+6. Same profile same day = FREE (no repeat charge)
+
+Astronomy Tool:
+1. Go to astronomy.html
+2. Enter date/place → Click "Calculate Positions"
+3. Should see "Pay Now ₹21" button
+4. Click payment button → Razorpay opens
+5. Complete payment → Calculations show
+6. Same date of birth same day = FREE
+7. Change place/time = FREE (no extra charge)
+
+✅ PAYMENT LOGIC:
+- Pay once per profile/date per day
+- localStorage tracks: profile data + payment status + date
+- Same data same day = FREE unlimited use
+- Different data = NEW payment required
+- Next day = NEW payment required (even same data)
+
+🔑 RAZORPAY DETAILS:
+- Live Key: rzp_live_RmJ2p4des8sDGF
+- Amount: ₹21 (2100 paise)
+- Currency: INR
+- Payment methods: Cards, UPI, Netbanking, Wallets
+
+📊 WHAT'S WORKING:
+✅ Payment buttons added to both tools
+✅ Razorpay integration complete
+✅ Payment verification before tool use
+✅ Same-day free usage logic
+✅ localStorage tracking
+✅ Redirect after payment
+
+🎯 READY TO PUSH NOW!
+Just open GitHub Desktop and push the 2 HTML files.

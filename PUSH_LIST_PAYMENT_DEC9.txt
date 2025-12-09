@@ -1,0 +1,20 @@
+# FILES TO PUSH - PAYMENT SETUP
+**Date:** December 9, 2025
+
+## ✅ READY TO PUSH (3 files):
+
+1. PAYMENT_PAGE_CONTENT.txt
+2. RAZORPAY_COMMON_TEXT.txt  
+3. RAZORPAY_PAGE_FORM_FIELDS.txt
+
+## ❌ NOT READY (Need to update HTML first):
+
+- social-optimizer-app.html (need to add button)
+- astronomy.html (need to add button)
+
+## 🎯 STATUS:
+
+Payment page is LIVE: https://rzp.io/rzp/onestep
+Button code ready but NOT added to website yet.
+
+Users CANNOT pay until button is on website.

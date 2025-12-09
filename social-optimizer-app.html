@@ -647,6 +647,79 @@
 <style>.quick-links-widget a:hover{background: #5a6c7d !important;color:white !important;}@media (max-width:768px){.quick-links-widget{right:10px;bottom:70px;width:200px;padding:15px;}}</style>
 
 <script src="goda-chatbot.js"></script>
+
+    <!-- Payment Verification for SPO -->
+    <script>
+        // Check if user has paid today for this profile
+        function hasValidPayment() {
+            const paymentData = JSON.parse(localStorage.getItem('spoPayment') || '{}');
+            const today = new Date().toDateString();
+            const currentProfile = document.getElementById('currentBio')?.value || 
+                                 document.getElementById('profileLink')?.value || '';
+            
+            return paymentData.date === today && 
+                   paymentData.profile === currentProfile &&
+                   paymentData.verified === true;
+        }
+        
+        // Save payment data
+        function savePaymentData(profile) {
+            const paymentData = {
+                date: new Date().toDateString(),
+                profile: profile,
+                verified: true,
+                timestamp: Date.now()
+            };
+            localStorage.setItem('spoPayment', JSON.stringify(paymentData));
+        }
+        
+        // Check payment before generating
+        function checkPaymentAndGenerate() {
+            if (hasValidPayment()) {
+                generatePreview();
+            } else {
+                alert('⚠️ Payment Required\n\nPlease click "Pay Now ₹21" to unlock the tool.\n\n💡 Pay once, use unlimited times with same profile today!');
+            }
+        }
+        
+        // Payment flow
+        function payNowSPO() {
+            const currentProfile = document.getElementById('currentBio')?.value || 
+                                 document.getElementById('profileLink')?.value || '';
+            
+            if (!currentProfile) {
+                alert('Please enter your profile information first (Step 1)');
+                return;
+            }
+            
+            // Razorpay payment
+            const options = {
+                key: 'rzp_live_RmJ2p4des8sDGF',
+                amount: 2100, // ₹21 in paise
+                currency: 'INR',
+                name: 'Social Profile Optimizer',
+                description: 'Unlock AI Profile Optimization',
+                handler: function(response) {
+                    // Payment successful
+                    savePaymentData(currentProfile);
+                    alert('✅ Payment Successful!\n\nYou can now use the tool unlimited times with this profile today.\n\nTransaction ID: ' + response.razorpay_payment_id);
+                    
+                    // Auto-generate after payment
+                    generatePreview();
+                },
+                prefill: {
+                    name: document.getElementById('name')?.value || '',
+                    email: ''
+                },
+                theme: {
+                    color: '#5a6c7d'
+                }
+            };
+            
+            const rzp = new Razorpay(options);
+            rzp.open();
+        }
+    </script>
 </body>
 </html>
 

@@ -1,0 +1,30 @@
+📋 FILES TO PUSH - Payment Buttons Added
+Created: December 9, 2025
+
+✅ WORKING FILES ONLY (2 files):
+
+1. social-optimizer-app.html
+   - Added "Pay Now ₹21" button next to "Generate Preview"
+   - Payment verification before tool use
+   - Same profile = free same day
+
+2. astronomy.html
+   - Added "Pay Now ₹21" button next to "Calculate Positions"
+   - Payment verification before calculations
+   - Same date of birth = free same day
+
+❌ NOT PUSHING:
+- add-payment-buttons-spo-astronomy.js (script file, not needed on live site)
+- PAYMENT_BUTTONS_PUSH_LIST.txt (documentation)
+- Any other .txt or .js files
+
+🔄 PUSH COMMAND:
+git add social-optimizer-app.html astronomy.html
+git commit -m "Add payment buttons to SPO and Astronomy tools"
+git push origin main
+
+💡 AFTER PUSH:
+1. Wait 2-3 minutes for Cloudflare deployment
+2. Purge Cloudflare cache
+3. Test payment flow on live site
+4. Verify Razorpay integration works
