@@ -1,0 +1,236 @@
+[36mΓòöΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòù[0m
+[36mΓòæ     WORLD-CLASS WEBSITE CHECKER - 10 PHASE TESTING        Γòæ[0m
+[36mΓòÜΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓò¥[0m
+
+[34m[PHASE 1] DISCOVERY - What exists?[0m
+  Found: 183 HTML files
+  Found: 9 CSS files
+  Found: 132 JS files
+[32m  Γ£ô Phase 1 Complete: 100%[0m
+
+[34m[PHASE 2] FUNCTIONALITY - Does it work?[0m
+[32m  Γ£ô Phase 2 Complete: 99%[0m
+  Issues: 2
+
+[34m[PHASE 3] VISUAL/UI - Does it look good?[0m
+[32m  Γ£ô Phase 3 Complete: 0%[0m
+  Issues: 187
+
+[34m[PHASE 4] GOOGLE ADSENSE - MECER Framework[0m
+[32m  Γ£ô Phase 4 Complete: 100%[0m
+  Issues: 0
+
+[33m[PHASE 5-10] Requires manual testing or external tools[0m
+  Phase 5: Performance - Use PageSpeed Insights
+  Phase 6: Accessibility - Use Lighthouse
+  Phase 7: SEO - Use Lighthouse
+  Phase 8: Security - Use OWASP ZAP
+  Phase 9: Consistency - Manual review
+  Phase 10: Content - Manual review
+
+[36mΓòöΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòù[0m
+[36mΓòæ                      FINAL REPORT                          Γòæ[0m
+[36mΓòÜΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓò¥[0m
+
+[35mOverall Score: 75/100[0m
+[35mTotal Issues Found: 190[0m
+
+Phase 1 (Discovery): 100%
+Phase 2 (Functionality): 99%
+Phase 3 (Visual/UI): 0%
+Phase 4 (AdSense-MECER): 100%
+
+[31mCRITICAL ISSUES:[0m
+  1. admin-testing-control-panel.html: Missing navigation
+  2. admin-testing-control-panel.html: Missing footer
+  3. about.html: White on white (no contrast)
+  4. access.html: White on white (no contrast)
+  5. acrylic.html: White on white (no contrast)
+  6. admin-control-panel.html: White on white (no contrast)
+  7. admin-testing-dashboard.html: White on white (no contrast)
+  8. astronomy.html: White on white (no contrast)
+  9. BASF_IT_SECURITY_PROPOSAL.html: White on white (no contrast)
+  10. blog-post-1.html: White on white (no contrast)
+  11. blog-post-10.html: White on white (no contrast)
+  12. blog-post-100.html: White on white (no contrast)
+  13. blog-post-11.html: White on white (no contrast)
+  14. blog-post-12.html: White on white (no contrast)
+  15. blog-post-13.html: White on white (no contrast)
+  16. blog-post-14.html: White on white (no contrast)
+  17. blog-post-15.html: White on white (no contrast)
+  18. blog-post-16.html: White on white (no contrast)
+  19. blog-post-17.html: White on white (no contrast)
+  20. blog-post-18.html: White on white (no contrast)
+  21. blog-post-19.html: White on white (no contrast)
+  22. blog-post-2.html: White on white (no contrast)
+  23. blog-post-20.html: White on white (no contrast)
+  24. blog-post-21.html: White on white (no contrast)
+  25. blog-post-22.html: White on white (no contrast)
+  26. blog-post-23.html: White on white (no contrast)
+  27. blog-post-24.html: White on white (no contrast)
+  28. blog-post-25.html: White on white (no contrast)
+  29. blog-post-26.html: White on white (no contrast)
+  30. blog-post-27.html: White on white (no contrast)
+  31. blog-post-28.html: White on white (no contrast)
+  32. blog-post-29.html: White on white (no contrast)
+  33. blog-post-3.html: White on white (no contrast)
+  34. blog-post-30.html: White on white (no contrast)
+  35. blog-post-31.html: White on white (no contrast)
+  36. blog-post-32.html: White on white (no contrast)
+  37. blog-post-33.html: White on white (no contrast)
+  38. blog-post-34.html: White on white (no contrast)
+  39. blog-post-35.html: White on white (no contrast)
+  40. blog-post-36.html: White on white (no contrast)
+  41. blog-post-37.html: White on white (no contrast)
+  42. blog-post-38.html: White on white (no contrast)
+  43. blog-post-39.html: White on white (no contrast)
+  44. blog-post-4.html: White on white (no contrast)
+  45. blog-post-40.html: White on white (no contrast)
+  46. blog-post-41.html: White on white (no contrast)
+  47. blog-post-42.html: White on white (no contrast)
+  48. blog-post-43.html: White on white (no contrast)
+  49. blog-post-44.html: White on white (no contrast)
+  50. blog-post-45.html: White on white (no contrast)
+  51. blog-post-46.html: White on white (no contrast)
+  52. blog-post-47.html: White on white (no contrast)
+  53. blog-post-48.html: White on white (no contrast)
+  54. blog-post-49.html: White on white (no contrast)
+  55. blog-post-5.html: White on white (no contrast)
+  56. blog-post-50.html: White on white (no contrast)
+  57. blog-post-51.html: White on white (no contrast)
+  58. blog-post-52.html: White on white (no contrast)
+  59. blog-post-53.html: White on white (no contrast)
+  60. blog-post-54.html: White on white (no contrast)
+  61. blog-post-55.html: White on white (no contrast)
+  62. blog-post-56.html: White on white (no contrast)
+  63. blog-post-57.html: White on white (no contrast)
+  64. blog-post-58.html: White on white (no contrast)
+  65. blog-post-59.html: White on white (no contrast)
+  66. blog-post-6.html: White on white (no contrast)
+  67. blog-post-60.html: White on white (no contrast)
+  68. blog-post-61.html: White on white (no contrast)
+  69. blog-post-62.html: White on white (no contrast)
+  70. blog-post-63.html: White on white (no contrast)
+  71. blog-post-64.html: White on white (no contrast)
+  72. blog-post-65.html: White on white (no contrast)
+  73. blog-post-66.html: White on white (no contrast)
+  74. blog-post-67.html: White on white (no contrast)
+  75. blog-post-68.html: White on white (no contrast)
+  76. blog-post-69.html: White on white (no contrast)
+  77. blog-post-7.html: White on white (no contrast)
+  78. blog-post-70.html: White on white (no contrast)
+  79. blog-post-71.html: White on white (no contrast)
+  80. blog-post-72.html: White on white (no contrast)
+  81. blog-post-73.html: White on white (no contrast)
+  82. blog-post-74.html: White on white (no contrast)
+  83. blog-post-75.html: White on white (no contrast)
+  84. blog-post-76.html: White on white (no contrast)
+  85. blog-post-77.html: White on white (no contrast)
+  86. blog-post-78.html: White on white (no contrast)
+  87. blog-post-79.html: White on white (no contrast)
+  88. blog-post-8.html: White on white (no contrast)
+  89. blog-post-80.html: White on white (no contrast)
+  90. blog-post-81.html: White on white (no contrast)
+  91. blog-post-82.html: White on white (no contrast)
+  92. blog-post-83.html: White on white (no contrast)
+  93. blog-post-84.html: White on white (no contrast)
+  94. blog-post-85.html: White on white (no contrast)
+  95. blog-post-86.html: White on white (no contrast)
+  96. blog-post-87.html: White on white (no contrast)
+  97. blog-post-88.html: White on white (no contrast)
+  98. blog-post-89.html: White on white (no contrast)
+  99. blog-post-9.html: White on white (no contrast)
+  100. blog-post-90.html: White on white (no contrast)
+  101. blog-post-91.html: White on white (no contrast)
+  102. blog-post-92.html: White on white (no contrast)
+  103. blog-post-93.html: White on white (no contrast)
+  104. blog-post-94.html: White on white (no contrast)
+  105. blog-post-95.html: White on white (no contrast)
+  106. blog-post-96.html: White on white (no contrast)
+  107. blog-post-97.html: White on white (no contrast)
+  108. blog-post-98.html: White on white (no contrast)
+  109. blog-post-99.html: White on white (no contrast)
+  110. blog.html: White on white (no contrast)
+  111. business-insights.html: White on white (no contrast)
+  112. business-news.html: White on white (no contrast)
+  113. cv-preview.html: White on white (no contrast)
+  114. cv.html: White on white (no contrast)
+  115. disclaimer.html: White on white (no contrast)
+  116. email-sender-web.html: White on white (no contrast)
+  117. email.html: White on white (no contrast)
+  118. error-dashboard.html: White on white (no contrast)
+  119. Final_Acrylic_Market_Report.html: White on white (no contrast)
+  120. ghar-ghar-complete.html: White on white (no contrast)
+  121. index-v2-conversion-optimized.html: White on white (no contrast)
+  122. index.html: White on white (no contrast)
+  123. innovations.html: White on white (no contrast)
+  124. insights.html: White on white (no contrast)
+  125. job-credits-ui.html: White on white (no contrast)
+  126. job-dashboard.html: White on white (no contrast)
+  127. job-tools.html: White on white (no contrast)
+  128. jobs.html: White on white (no contrast)
+  129. JOB_OUTREACH_AUTOMATION_TOOL.html: White on white (no contrast)
+  130. JOB_POWER_FEATURES.html: White on white (no contrast)
+  131. JOB_TRACKER_DAILY.html: White on white (no contrast)
+  132. kiro-error-solver.html: White on white (no contrast)
+  133. kiro-improvement-guide.html: White on white (no contrast)
+  134. kiro.html: White on white (no contrast)
+  135. KIRO_AWS_REPORT_CLEAN.html: Left alignment (should be center)
+  136. KIRO_AWS_REPORT_CLEAN.html: White on white (no contrast)
+  137. KIRO_IMPROVEMENT_REPORT_FOR_AWS.html: Left alignment (should be center)
+  138. KIRO_IMPROVEMENT_REPORT_FOR_AWS.html: White on white (no contrast)
+  139. learn.html: White on white (no contrast)
+  140. library.html: White on white (no contrast)
+  141. linkedin-auto-scroller.html: White on white (no contrast)
+  142. linkedin-complete-book.html: White on white (no contrast)
+  143. linkedin-network-map.html: White on white (no contrast)
+  144. linkedin-portfolio-index.html: White on white (no contrast)
+  145. linkedin-post-copier.html: White on white (no contrast)
+  146. linkedin-skills-dashboard.html: White on white (no contrast)
+  147. linkedin.html: White on white (no contrast)
+  148. market-reports.html: White on white (no contrast)
+  149. nickel-compounds-technical-data.html: White on white (no contrast)
+  150. nickel-esg-report-open.html: White on white (no contrast)
+  151. nickel-esg-report.html: White on white (no contrast)
+  152. nickel.html: White on white (no contrast)
+  153. paper.html: White on white (no contrast)
+  154. Paper_Pulp_Specialty_Chemicals_Report.html: White on white (no contrast)
+  155. PAYMENT_VISUAL_GUIDE.html: Left alignment (should be center)
+  156. PAYMENT_VISUAL_GUIDE.html: White on white (no contrast)
+  157. poloxamer.html: White on white (no contrast)
+  158. Poloxamer_Market_Report.html: White on white (no contrast)
+  159. privacy-policy.html: White on white (no contrast)
+  160. profile-optimizer.html: White on white (no contrast)
+  161. refund-policy.html: White on white (no contrast)
+  162. reports.html: White on white (no contrast)
+  163. request-access.html: White on white (no contrast)
+  164. research-preview.html: Left alignment (should be center)
+  165. research-preview.html: White on white (no contrast)
+  166. ro-guide.html: White on white (no contrast)
+  167. ro-service-checklist.html: White on white (no contrast)
+  168. ro-water-purifier-guide.html: White on white (no contrast)
+  169. ro.html: White on white (no contrast)
+  170. social-optimizer-admin.html: Left alignment (should be center)
+  171. social-optimizer-admin.html: White on white (no contrast)
+  172. social-optimizer-app.html: White on white (no contrast)
+  173. social-optimizer-dashboard.html: White on white (no contrast)
+  174. social-optimizer-index.html: White on white (no contrast)
+  175. social-optimizer-quickstart.html: White on white (no contrast)
+  176. social-optimizer-success.html: Left alignment (should be center)
+  177. social-optimizer-success.html: White on white (no contrast)
+  178. specialty.html: White on white (no contrast)
+  179. Specialty_Chemicals_Market_Intelligence_Report_Consolidated.html: White on white (no contrast)
+  180. spo.html: White on white (no contrast)
+  181. teaching-ai-to-think.html: Left alignment (should be center)
+  182. teaching-ai-to-think.html: White on white (no contrast)
+  183. terms-and-disclaimer.html: White on white (no contrast)
+  184. test-goda.html: White on white (no contrast)
+  185. TEST_CREDITS.html: White on white (no contrast)
+  186. TEST_NEW_NAVIGATION.html: White on white (no contrast)
+  187. timeline.html: White on white (no contrast)
+  188. tools.html: White on white (no contrast)
+  189. vertical-nav-option.html: White on white (no contrast)
+  190. MECER-R: MUST verify ads on live site
+
+[32mΓ£ô Report saved: WORLD_CLASS_CHECKER_REPORT.json[0m
+

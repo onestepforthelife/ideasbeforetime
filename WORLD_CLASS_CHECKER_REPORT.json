@@ -1,20 +1,16 @@
 {
-  "timestamp": "2025-12-09T04:25:52.304Z",
+  "timestamp": "2025-12-09T04:55:23.754Z",
   "scores": {
     "phase1": 100,
-    "phase2": 98,
+    "phase2": 99,
     "phase3": 0,
-    "phase4": 75,
-    "overall": 68
+    "phase4": 100,
+    "overall": 75
   },
   "issues": {
     "phase2": [
       "admin-testing-control-panel.html: Missing navigation",
-      "admin-testing-control-panel.html: Missing footer",
-      "test-goda.html: Missing navigation",
-      "test-goda.html: Missing footer",
-      "test-spo-flow.html: Missing navigation",
-      "test-spo-flow.html: Missing footer"
+      "admin-testing-control-panel.html: Missing footer"
     ],
     "phase3": [
       "about.html: White on white (no contrast)",
@@ -206,14 +202,13 @@
       "vertical-nav-option.html: White on white (no contrast)"
     ],
     "phase4": [
-      "MECER-C: Only 85% pages have AdSense",
       "MECER-R: MUST verify ads on live site"
     ],
-    "total": 195
+    "total": 190
   },
   "files": {
     "html": 183,
     "css": 9,
-    "js": 129
+    "js": 132
   }
 }
