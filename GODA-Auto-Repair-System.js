@@ -66,7 +66,14 @@ function addNavigationToPages() {
         // Skip if already has navigation
         if (content.includes('common-navigation.js')) return;
         
-        // Add after <body>
+        // Add navigation CSS in <head> and JS after <body>
+        if (content.includes('</head>')) {
+            content = content.replace(
+                '</head>',
+                '    <link rel="stylesheet" href="common-navigation.css">\n</head>'
+            );
+        }
+        
         if (content.includes('<body>')) {
             content = content.replace(
                 '<body>',
@@ -98,7 +105,14 @@ function addFooterJSToPages() {
         // Skip if already has footer JS
         if (content.includes('common-footer.js')) return;
         
-        // Add before </body>
+        // Add footer CSS in <head> and JS before </body>
+        if (content.includes('</head>') && !content.includes('common-footer.css')) {
+            content = content.replace(
+                '</head>',
+                '    <link rel="stylesheet" href="common-footer.css">\n</head>'
+            );
+        }
+        
         if (content.includes('</body>')) {
             content = content.replace(
                 '</body>',

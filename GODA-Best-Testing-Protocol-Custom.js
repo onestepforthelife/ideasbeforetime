@@ -121,7 +121,7 @@ console.log('\n🧭 PHASE 3: Navigation & Footer Consistency...');
 
 function checkNavigationFooter() {
     const htmlFiles = fs.readdirSync('.').filter(f => f.endsWith('.html'));
-    let missingNav = 0, missingFooter = 0, missingFooterCSS = 0;
+    let missingNav = 0, missingFooter = 0, missingFooterCSS = 0, missingNavCSS = 0;
     
     htmlFiles.forEach(file => {
         const content = fs.readFileSync(file, 'utf8');
@@ -129,6 +129,11 @@ function checkNavigationFooter() {
         if (!content.includes('common-navigation.js')) {
             ISSUES.high.push(`Missing navigation in ${file}`);
             missingNav++;
+        }
+        
+        if (!content.includes('common-navigation.css')) {
+            ISSUES.high.push(`Missing navigation CSS in ${file} - header will show as unstyled left-aligned text!`);
+            missingNavCSS++;
         }
         
         if (!content.includes('common-footer.js')) {
@@ -142,7 +147,8 @@ function checkNavigationFooter() {
         }
     });
     
-    console.log(`   ${missingNav === 0 ? '✅' : '❌'} Navigation: ${htmlFiles.length - missingNav}/${htmlFiles.length} pages`);
+    console.log(`   ${missingNav === 0 ? '✅' : '❌'} Navigation JS: ${htmlFiles.length - missingNav}/${htmlFiles.length} pages`);
+    console.log(`   ${missingNavCSS === 0 ? '✅' : '❌'} Navigation CSS: ${htmlFiles.length - missingNavCSS}/${htmlFiles.length} pages`);
     console.log(`   ${missingFooter === 0 ? '✅' : '❌'} Footer JS: ${htmlFiles.length - missingFooter}/${htmlFiles.length} pages`);
     console.log(`   ${missingFooterCSS === 0 ? '✅' : '⚠️'} Footer CSS: ${htmlFiles.length - missingFooterCSS}/${htmlFiles.length} pages`);
 }

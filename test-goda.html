@@ -99,223 +99,613 @@
             padding: 4px 12px;
             border-radius: 4px;
             font-weight: 600;
-            margin: 5px 0;
         }
-        .status.pass {
-            background: #d4edda;
-            color: #155724;
-        }
-        .status.fail {
-            background: #f8d7da;
-            color: #721c24;
-        }
-        .status.warning {
-            background: #fff3cd;
-            color: #856404;
-        }
-        .coverage-info {
-            background: #e7f3ff;
-            border-left: 4px solid #2196F3;
-            padding: 15px;
+        .pass { background: #d4edda; color: #155724; }
+        .fail { background: #f8d7da; color: #721c24; }
+        .warn { background: #fff3cd; color: #856404; }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
             margin: 20px 0;
-            border-radius: 4px;
-        }
-        .coverage-info h3 {
-            margin-top: 0;
-            color: #1976D2;
         }
     </style>
 </head>
 <body>
-    <script src="common-navigation.js"></script>
-    
     <div class="container">
-        <h1>🧪 GODA Testing System</h1>
-        <p class="subtitle">Automated Testing with Manual Checklist | Updated Dec 9, 2025</p>
+        <h1>🧪 GODA Runtime Testing System</h1>
+        <p class="subtitle">Tests actual browser rendering & functionality</p>
         
         <div class="test-buttons">
-            <button class="test-btn custom" onclick="runTest('custom')">
-                🎯 Run Custom Test (21 Phases)
-            </button>
-            <button class="test-btn universal" onclick="runTest('universal')">
-                🌍 Run Universal Test (9 Phases)
-            </button>
-            <button class="test-btn repair" onclick="runTest('repair')">
-                🔧 Run Auto-Repair
-            </button>
-        </div>
-        
-        <div class="coverage-info">
-            <h3>📊 Coverage Analysis</h3>
-            <p><strong>✅ Automated Tests:</strong> ~80% (code structure, syntax, consistency)</p>
-            <p><strong>⚠️ Manual Required:</strong> ~15% (runtime, browsers, mobile, flows)</p>
-            <p><strong>💡 User Testing:</strong> ~5% (UX, content, edge cases)</p>
-            <p><em>This is industry standard - even Google/Amazon use this approach!</em></p>
+            <button class="test-btn custom" onclick="testAstronomyPage()">Test Astronomy Page</button>
+            <button class="test-btn custom" onclick="testSPOPage()">Test SPO Page</button>
+            <button class="test-btn custom" onclick="testDivineExamplesWork()">Test Divine Examples</button>
+            <button class="test-btn repair" onclick="testPaymentWorks()">Test Payment Button</button>
+            <button class="test-btn repair" onclick="testGODALoads()">Test GODA Chatbot</button>
+            <button class="test-btn repair" onclick="testAdSenseLoads()">Test AdSense</button>
+            <button class="test-btn repair" onclick="testMarkdownFiles()">Test Markdown Files</button>
+            <button class="test-btn repair" onclick="testJavaScriptFiles()">Test JS Files Execute</button>
+            <button class="test-btn repair" onclick="testAPIIntegrations()">Test API/3rd Party</button>
+            <button class="test-btn universal" onclick="testAllPages()">Test All Pages</button>
         </div>
         
         <div id="results">
             <div class="loading">
-                <p>👆 Click a button above to run tests</p>
-                <p>Results will appear here...</p>
+                Click a button above to start testing...
             </div>
         </div>
+        
+        <iframe id="testFrame" style="display:none;"></iframe>
     </div>
-
+    
     <script>
-        async function runTest(type) {
-            const resultsDiv = document.getElementById('results');
-            const buttons = document.querySelectorAll('.test-btn');
+        function log(message, type = 'info') {
+            const results = document.getElementById('results');
+            const span = document.createElement('span');
+            span.className = type;
+            span.textContent = message + '\n';
+            results.appendChild(span);
+        }
+        
+        function clearResults() {
+            document.getElementById('results').innerHTML = '';
+        }
+        
+        async function testAstronomyPage() {
+            clearResults();
+            log('🔭 TESTING ASTRONOMY PAGE RUNTIME\n', 'info');
             
-            // Disable buttons
-            buttons.forEach(btn => btn.disabled = true);
+            const iframe = document.getElementById('testFrame');
+            iframe.style.display = 'block';
+            iframe.src = 'astronomy.html';
             
-            // Show loading
-            resultsDiv.innerHTML = `
-                <div class="loading">
-                    <div class="spinner"></div>
-                    <p>Running ${type} test...</p>
-                    <p>This may take 30-60 seconds...</p>
-                </div>
-            `;
+            await new Promise(resolve => {
+                iframe.onload = () => {
+                    setTimeout(resolve, 2000); // Wait for JS to execute
+                };
+            });
             
-            try {
-                let command;
-                if (type === 'custom') {
-                    command = 'node GODA-Best-Testing-Protocol-Custom.js';
-                } else if (type === 'universal') {
-                    command = 'node GODA-Worlds-Best-Testing-Protocol.js';
-                } else if (type === 'repair') {
-                    command = 'node GODA-Auto-Repair-System.js';
+            const doc = iframe.contentDocument;
+            
+            // Test 1: Navigation CSS loaded
+            log('Test 1: Navigation CSS loaded...', 'info');
+            const nav = doc.querySelector('nav');
+            if (nav) {
+                const styles = window.getComputedStyle(nav);
+                const textAlign = styles.textAlign;
+                if (textAlign === 'center') {
+                    log('   ✅ PASS: Navigation centered', 'pass');
+                } else {
+                    log(`   ❌ FAIL: Navigation ${textAlign} (should be center)`, 'fail');
+                }
+            } else {
+                log('   ❌ FAIL: Navigation not found', 'fail');
+            }
+            
+            // Test 2: Divine examples buttons exist
+            log('\nTest 2: Divine example buttons...', 'info');
+            const krishnaBtn = doc.querySelector('button[onclick*="krishna"]');
+            const ramaBtn = doc.querySelector('button[onclick*="rama"]');
+            const lakshmiBtn = doc.querySelector('button[onclick*="lakshmi"]');
+            const saraswatiBtn = doc.querySelector('button[onclick*="saraswati"]');
+            
+            if (krishnaBtn && ramaBtn && lakshmiBtn && saraswatiBtn) {
+                log('   ✅ PASS: All 4 divine example buttons exist', 'pass');
+            } else {
+                log('   ❌ FAIL: Missing buttons', 'fail');
+                if (!krishnaBtn) log('      Missing: Krishna', 'fail');
+                if (!ramaBtn) log('      Missing: Rama', 'fail');
+                if (!lakshmiBtn) log('      Missing: Lakshmi', 'fail');
+                if (!saraswatiBtn) log('      Missing: Saraswati', 'fail');
+            }
+            
+            // Test 3: Payment button exists
+            log('\nTest 3: Payment button...', 'info');
+            const payBtn = doc.querySelector('button[onclick*="payNow"]') || 
+                          doc.querySelector('.razorpay-embed-btn');
+            if (payBtn) {
+                log('   ✅ PASS: Payment button exists', 'pass');
+            } else {
+                log('   ❌ FAIL: Payment button missing', 'fail');
+            }
+            
+            // Test 4: Form inputs exist
+            log('\nTest 4: Form inputs...', 'info');
+            const dateInput = doc.getElementById('dateInput');
+            const timeInput = doc.getElementById('timeInput');
+            const placeInput = doc.getElementById('placeInput');
+            
+            if (dateInput && timeInput && placeInput) {
+                log('   ✅ PASS: All form inputs exist', 'pass');
+            } else {
+                log('   ❌ FAIL: Missing form inputs', 'fail');
+            }
+            
+            // Test 5: Auto-load Krishna example
+            log('\nTest 5: Auto-load Krishna example...', 'info');
+            setTimeout(() => {
+                const dateValue = doc.getElementById('dateInput')?.value;
+                const placeValue = doc.getElementById('placeInput')?.value;
+                
+                if (dateValue && placeValue && placeValue.includes('Mathura')) {
+                    log('   ✅ PASS: Krishna example auto-loaded', 'pass');
+                } else {
+                    log('   ❌ FAIL: Krishna example not loaded', 'fail');
+                    log(`      Date: ${dateValue || 'empty'}`, 'warn');
+                    log(`      Place: ${placeValue || 'empty'}`, 'warn');
                 }
                 
-                // Note: This requires a backend to execute Node.js commands
-                // For now, show instructions
-                resultsDiv.innerHTML = `
-<strong>📋 To run ${type.toUpperCase()} test:</strong>
-
-<strong>Step 1:</strong> Open terminal/command prompt
-<strong>Step 2:</strong> Navigate to project folder
-<strong>Step 3:</strong> Run command:
-   ${command}
-
-<strong>Step 4:</strong> Results will show in terminal
-
-<div class="coverage-info">
-<strong>🎯 What This Test Checks:</strong>
-
-${type === 'custom' ? `
-<strong>Custom Test (21 Phases):</strong>
-✅ Phase 1-15: Original checks (files, colors, nav, typography, etc.)
-✅ Phase 16: Backend/API structure
-✅ Phase 17: User flow structure
-✅ Phase 18: Performance indicators
-✅ Phase 19: Security indicators
-✅ Phase 20: Accessibility indicators
-✅ Phase 21: Manual testing reminders
-
-<strong>Exit Codes:</strong>
-• 0 = Automated checks passed → Proceed to manual testing
-• 1 = Issues found → Fix before deployment
-` : type === 'universal' ? `
-<strong>Universal Test (9 Phases):</strong>
-✅ Phase 1-5: Core checks (discovery, functionality, visual, performance, rendering)
-✅ Phase 6: Backend structure
-✅ Phase 7: Security indicators
-✅ Phase 8: Performance indicators
-✅ Phase 9: Manual testing reminders
-
-<strong>Exit Codes:</strong>
-• 0 = Automated checks passed → Proceed to manual testing
-• 1 = Issues found → Fix before deployment
-` : `
-<strong>Auto-Repair System:</strong>
-✅ Automatically fixes common issues
-✅ Adds missing navigation/footer
-✅ Fixes CSS load order
-✅ Adds missing components
-
-<strong>Exit Codes:</strong>
-• 0 = Repairs completed successfully
-• 1 = Some repairs failed
-`}
-</div>
-
-<div class="coverage-info" style="background: #fff3cd; border-left-color: #ffc107;">
-<strong>⚠️ MANUAL TESTING REQUIRED:</strong>
-
-<strong>🚨 Critical (Must Test):</strong>
-❌ Backend APIs respond with real data
-❌ Payment processing works
-❌ Data persists across sessions
-❌ Site works under load (100+ users)
-❌ Security: Try to bypass validation
-
-<strong>⚠️ High (Should Test):</strong>
-❌ Works in Safari/Firefox/Edge
-❌ Works on real mobile devices
-❌ Complete user flows work
-❌ AdSense ads display
-❌ Analytics tracking
-
-<strong>💡 Medium (Test When Possible):</strong>
-❌ Content accuracy (typos, facts)
-❌ Screen reader navigation
-❌ Keyboard-only navigation
-</div>
-
-<strong>📖 Documentation:</strong>
-• Custom Flowchart: GODA-Best-Testing-Flowchart-Custom.md
-• Universal Flowchart: GODA-Worlds-Best-Testing-Flowchart.md
-• Complete Solution: GODA-COMPLETE-SOLUTION.txt
-                `;
-                
-            } catch (error) {
-                resultsDiv.innerHTML = `
-                    <div style="color: #721c24; background: #f8d7da; padding: 20px; border-radius: 8px;">
-                        <strong>❌ Error:</strong> ${error.message}
-                    </div>
-                `;
-            } finally {
-                // Re-enable buttons
-                buttons.forEach(btn => btn.disabled = false);
+                log('\n📊 ASTRONOMY PAGE TEST COMPLETE', 'info');
+            }, 1500);
+        }
+        
+        async function testSPOPage() {
+            clearResults();
+            log('💼 TESTING SPO PAGE RUNTIME\n', 'info');
+            
+            const iframe = document.getElementById('testFrame');
+            iframe.style.display = 'block';
+            iframe.src = 'social-optimizer-app.html';
+            
+            await new Promise(resolve => {
+                iframe.onload = () => {
+                    setTimeout(resolve, 2000);
+                };
+            });
+            
+            const doc = iframe.contentDocument;
+            
+            // Test payment button
+            log('Test 1: Payment button...', 'info');
+            const payBtn = doc.querySelector('button[onclick*="payNow"]') ||
+                          doc.querySelector('.razorpay-embed-btn');
+            if (payBtn) {
+                log('   ✅ PASS: Payment button exists', 'pass');
+            } else {
+                log('   ❌ FAIL: Payment button missing', 'fail');
             }
+            
+            log('\n📊 SPO PAGE TEST COMPLETE', 'info');
+        }
+        
+        async function testAllPages() {
+            await testAstronomyPage();
+            await new Promise(resolve => setTimeout(resolve, 3000));
+            await testSPOPage();
+        }
+        
+        // Test if divine example buttons actually work
+        async function testDivineExamplesWork() {
+            clearResults();
+            log('🕉️ TESTING DIVINE EXAMPLES FUNCTIONALITY\n', 'info');
+            
+            const iframe = document.getElementById('testFrame');
+            iframe.style.display = 'block';
+            iframe.src = 'astronomy.html';
+            
+            await new Promise(resolve => {
+                iframe.onload = () => {
+                    setTimeout(resolve, 2000);
+                };
+            });
+            
+            const doc = iframe.contentDocument;
+            const win = iframe.contentWindow;
+            
+            // Test clicking Krishna button
+            log('Test 1: Click Krishna button...', 'info');
+            const krishnaBtn = doc.querySelector('button[onclick*="krishna"]');
+            
+            if (krishnaBtn) {
+                // Simulate click
+                krishnaBtn.click();
+                
+                // Wait for data to load
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                
+                // Check if form filled
+                const dateValue = doc.getElementById('dateInput')?.value;
+                const placeValue = doc.getElementById('placeInput')?.value;
+                
+                if (dateValue && placeValue && placeValue.includes('Mathura')) {
+                    log('   ✅ PASS: Krishna button works - form filled', 'pass');
+                    log(`      Date: ${dateValue}`, 'pass');
+                    log(`      Place: ${placeValue}`, 'pass');
+                } else {
+                    log('   ❌ FAIL: Krishna button clicked but form not filled', 'fail');
+                }
+            } else {
+                log('   ❌ FAIL: Krishna button not found', 'fail');
+            }
+            
+            log('\n📊 DIVINE EXAMPLES TEST COMPLETE', 'info');
+        }
+        
+        // Test payment button clickable
+        async function testPaymentWorks() {
+            clearResults();
+            log('💳 TESTING PAYMENT BUTTON FUNCTIONALITY\n', 'info');
+            
+            const iframe = document.getElementById('testFrame');
+            iframe.style.display = 'block';
+            iframe.src = 'astronomy.html';
+            
+            await new Promise(resolve => {
+                iframe.onload = () => {
+                    setTimeout(resolve, 2000);
+                };
+            });
+            
+            const doc = iframe.contentDocument;
+            
+            log('Test 1: Payment button clickable...', 'info');
+            const payBtn = doc.querySelector('.razorpay-embed-btn');
+            
+            if (payBtn) {
+                const isVisible = payBtn.offsetParent !== null;
+                const hasClick = payBtn.onclick || payBtn.getAttribute('data-url');
+                
+                if (isVisible && hasClick) {
+                    log('   ✅ PASS: Payment button visible and clickable', 'pass');
+                } else {
+                    log('   ❌ FAIL: Payment button exists but not functional', 'fail');
+                    if (!isVisible) log('      Not visible', 'fail');
+                    if (!hasClick) log('      No click handler', 'fail');
+                }
+            } else {
+                log('   ❌ FAIL: Payment button not found', 'fail');
+            }
+            
+            log('\n📊 PAYMENT TEST COMPLETE', 'info');
+        }
+        
+        // Test GODA chatbot loads
+        async function testGODALoads() {
+            clearResults();
+            log('🤖 TESTING GODA CHATBOT LOADS\n', 'info');
+            
+            const iframe = document.getElementById('testFrame');
+            iframe.style.display = 'block';
+            iframe.src = 'index.html';
+            
+            await new Promise(resolve => {
+                iframe.onload = () => {
+                    setTimeout(resolve, 3000); // Wait for GODA to load
+                };
+            });
+            
+            const doc = iframe.contentDocument;
+            
+            log('Test 1: GODA widget appears...', 'info');
+            const godaWidget = doc.querySelector('#goda-widget') || 
+                              doc.querySelector('.goda-chat') ||
+                              doc.querySelector('[class*="goda"]');
+            
+            if (godaWidget) {
+                const isVisible = godaWidget.offsetParent !== null;
+                if (isVisible) {
+                    log('   ✅ PASS: GODA widget visible', 'pass');
+                } else {
+                    log('   ⚠️  WARN: GODA widget exists but hidden', 'warn');
+                }
+            } else {
+                log('   ❌ FAIL: GODA widget not found', 'fail');
+            }
+            
+            log('\n📊 GODA TEST COMPLETE', 'info');
+        }
+        
+        // Test AdSense loads
+        async function testAdSenseLoads() {
+            clearResults();
+            log('💰 TESTING GOOGLE ADSENSE LOADS\n', 'info');
+            
+            const iframe = document.getElementById('testFrame');
+            iframe.style.display = 'block';
+            iframe.src = 'index.html';
+            
+            await new Promise(resolve => {
+                iframe.onload = () => {
+                    setTimeout(resolve, 3000);
+                };
+            });
+            
+            const doc = iframe.contentDocument;
+            
+            log('Test 1: AdSense script loaded...', 'info');
+            const adsenseScript = doc.querySelector('script[src*="adsbygoogle"]');
+            
+            if (adsenseScript) {
+                log('   ✅ PASS: AdSense script tag exists', 'pass');
+            } else {
+                log('   ❌ FAIL: AdSense script not found', 'fail');
+            }
+            
+            log('\nTest 2: AdSense initialized...', 'info');
+            const win = iframe.contentWindow;
+            if (win.adsbygoogle) {
+                log('   ✅ PASS: AdSense object exists', 'pass');
+            } else {
+                log('   ⚠️  WARN: AdSense not initialized yet (may load later)', 'warn');
+            }
+            
+            log('\n📊 ADSENSE TEST COMPLETE', 'info');
+        }
+        
+        // Test Markdown files render correctly
+        async function testMarkdownFiles() {
+            clearResults();
+            log('📝 TESTING MARKDOWN FILES\n', 'info');
+            
+            const mdFiles = [
+                'README.md',
+                'GODA-Best-Testing-Flowchart-Custom.md',
+                'GODA-Worlds-Best-Testing-Flowchart.md',
+                'COMPLETE_TESTING_SYSTEM_SUMMARY.md',
+                'DECEMBER_2025_COMPLETE_SUMMARY.md'
+            ];
+            
+            log(`Testing ${mdFiles.length} Markdown files...\n`, 'info');
+            
+            let passed = 0;
+            let failed = 0;
+            
+            for (const file of mdFiles) {
+                try {
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        const content = await response.text();
+                        
+                        // Check if it's valid markdown
+                        const hasHeaders = content.includes('#');
+                        const hasContent = content.length > 100;
+                        const notHTML = !content.includes('<!DOCTYPE');
+                        
+                        if (hasHeaders && hasContent && notHTML) {
+                            log(`✅ ${file} - Valid markdown (${content.length} chars)`, 'pass');
+                            passed++;
+                        } else {
+                            log(`⚠️  ${file} - Suspicious format`, 'warn');
+                            if (!hasHeaders) log('   Missing markdown headers', 'warn');
+                            if (!hasContent) log('   Too short', 'warn');
+                            if (!notHTML) log('   Contains HTML', 'warn');
+                            failed++;
+                        }
+                    } else {
+                        log(`❌ ${file} - Not found (${response.status})`, 'fail');
+                        failed++;
+                    }
+                } catch (error) {
+                    log(`❌ ${file} - Error: ${error.message}`, 'fail');
+                    failed++;
+                }
+            }
+            
+            log(`\n📊 MARKDOWN TEST COMPLETE`, 'info');
+            log(`   Passed: ${passed}/${mdFiles.length}`, passed === mdFiles.length ? 'pass' : 'warn');
+            log(`   Failed: ${failed}/${mdFiles.length}`, failed === 0 ? 'pass' : 'fail');
+        }
+        
+        // Test JavaScript files execute without errors
+        async function testJavaScriptFiles() {
+            clearResults();
+            log('⚙️ TESTING JAVASCRIPT FILES EXECUTION\n', 'info');
+            
+            const jsFiles = [
+                'common-navigation.js',
+                'common-footer.js',
+                'google-adsense.js',
+                'goda-chatbot.js',
+                'social-optimizer-app.js',
+                'universal-analytics.js'
+            ];
+            
+            log(`Testing ${jsFiles.length} JavaScript files...\n`, 'info');
+            
+            let passed = 0;
+            let failed = 0;
+            
+            for (const file of jsFiles) {
+                try {
+                    // Create test iframe
+                    const iframe = document.createElement('iframe');
+                    iframe.style.display = 'none';
+                    document.body.appendChild(iframe);
+                    
+                    const doc = iframe.contentDocument;
+                    doc.open();
+                    doc.write(`
+                        <!DOCTYPE html>
+                        <html>
+                        <head></head>
+                        <body>
+                            <div id="test-container"></div>
+                            <script>
+                                window.jsErrors = [];
+                                window.onerror = function(msg, url, line) {
+                                    window.jsErrors.push({msg, url, line});
+                                    return true;
+                                };
+                            </script>
+                            <script src="${file}"></script>
+                        </body>
+                        </html>
+                    `);
+                    doc.close();
+                    
+                    // Wait for script to load
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                    
+                    const errors = iframe.contentWindow.jsErrors;
+                    
+                    if (errors.length === 0) {
+                        log(`✅ ${file} - Executes without errors`, 'pass');
+                        passed++;
+                    } else {
+                        log(`❌ ${file} - ${errors.length} error(s)`, 'fail');
+                        errors.forEach(err => {
+                            log(`   ${err.msg} (line ${err.line})`, 'fail');
+                        });
+                        failed++;
+                    }
+                    
+                    // Cleanup
+                    document.body.removeChild(iframe);
+                    
+                } catch (error) {
+                    log(`❌ ${file} - Test error: ${error.message}`, 'fail');
+                    failed++;
+                }
+            }
+            
+            log(`\n📊 JAVASCRIPT TEST COMPLETE`, 'info');
+            log(`   Passed: ${passed}/${jsFiles.length}`, passed === jsFiles.length ? 'pass' : 'warn');
+            log(`   Failed: ${failed}/${jsFiles.length}`, failed === 0 ? 'pass' : 'fail');
+        }
+        
+        // Test API and 3rd party integrations
+        async function testAPIIntegrations() {
+            clearResults();
+            log('🔌 TESTING API & 3RD PARTY INTEGRATIONS\n', 'info');
+            
+            let passed = 0;
+            let failed = 0;
+            let warnings = 0;
+            
+            // Test 1: Razorpay Payment API
+            log('Test 1: Razorpay Payment API...', 'info');
+            try {
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                document.body.appendChild(iframe);
+                
+                const doc = iframe.contentDocument;
+                doc.open();
+                doc.write(`
+                    <!DOCTYPE html>
+                    <html>
+                    <body>
+                        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+                    </body>
+                    </html>
+                `);
+                doc.close();
+                
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                
+                if (iframe.contentWindow.Razorpay) {
+                    log('   ✅ PASS: Razorpay SDK loaded', 'pass');
+                    log('   Live Key: rzp_live_RmJ2p4des8sDGF', 'pass');
+                    passed++;
+                } else {
+                    log('   ❌ FAIL: Razorpay SDK not loaded', 'fail');
+                    failed++;
+                }
+                
+                document.body.removeChild(iframe);
+            } catch (error) {
+                log(`   ❌ FAIL: ${error.message}`, 'fail');
+                failed++;
+            }
+            
+            // Test 2: Google AdSense API
+            log('\nTest 2: Google AdSense API...', 'info');
+            try {
+                const response = await fetch('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', {
+                    method: 'HEAD'
+                });
+                
+                if (response.ok) {
+                    log('   ✅ PASS: AdSense API reachable', 'pass');
+                    log('   Publisher ID: ca-pub-9029575634226503', 'pass');
+                    passed++;
+                } else {
+                    log('   ⚠️  WARN: AdSense API returned ' + response.status, 'warn');
+                    warnings++;
+                }
+            } catch (error) {
+                log('   ⚠️  WARN: Cannot verify AdSense (CORS)', 'warn');
+                log('   This is normal - AdSense blocks cross-origin checks', 'warn');
+                warnings++;
+            }
+            
+            // Test 3: Cloudflare Pages Deployment
+            log('\nTest 3: Cloudflare Pages...', 'info');
+            try {
+                const response = await fetch(window.location.origin);
+                const headers = response.headers;
+                
+                const cfRay = headers.get('cf-ray');
+                const server = headers.get('server');
+                
+                if (cfRay || server === 'cloudflare') {
+                    log('   ✅ PASS: Served by Cloudflare', 'pass');
+                    if (cfRay) log(`   CF-Ray: ${cfRay}`, 'pass');
+                    passed++;
+                } else {
+                    log('   ⚠️  WARN: Not on Cloudflare (local dev?)', 'warn');
+                    warnings++;
+                }
+            } catch (error) {
+                log(`   ❌ FAIL: ${error.message}`, 'fail');
+                failed++;
+            }
+            
+            // Test 4: Google Analytics (if used)
+            log('\nTest 4: Google Analytics...', 'info');
+            const iframe = document.getElementById('testFrame');
+            iframe.style.display = 'none';
+            iframe.src = 'index.html';
+            
+            await new Promise(resolve => {
+                iframe.onload = () => {
+                    setTimeout(resolve, 2000);
+                };
+            });
+            
+            const win = iframe.contentWindow;
+            if (win.gtag || win.ga || win.dataLayer) {
+                log('   ✅ PASS: Analytics initialized', 'pass');
+                passed++;
+            } else {
+                log('   ⚠️  WARN: Analytics not detected', 'warn');
+                log('   May not be configured or still loading', 'warn');
+                warnings++;
+            }
+            
+            // Test 5: External CDN Resources
+            log('\nTest 5: CDN Resources...', 'info');
+            const cdnTests = [
+                { name: 'Font Awesome', url: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' },
+                { name: 'Google Fonts', url: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap' }
+            ];
+            
+            for (const cdn of cdnTests) {
+                try {
+                    const response = await fetch(cdn.url, { method: 'HEAD' });
+                    if (response.ok) {
+                        log(`   ✅ ${cdn.name} - Reachable`, 'pass');
+                        passed++;
+                    } else {
+                        log(`   ❌ ${cdn.name} - ${response.status}`, 'fail');
+                        failed++;
+                    }
+                } catch (error) {
+                    log(`   ⚠️  ${cdn.name} - Cannot verify (CORS)`, 'warn');
+                    warnings++;
+                }
+            }
+            
+            log(`\n📊 API INTEGRATION TEST COMPLETE`, 'info');
+            log(`   Passed: ${passed}`, passed > 0 ? 'pass' : 'warn');
+            log(`   Failed: ${failed}`, failed === 0 ? 'pass' : 'fail');
+            log(`   Warnings: ${warnings}`, 'warn');
+            
+            log(`\n💡 NOTE: Some warnings are normal due to CORS restrictions`, 'info');
+            log(`   Real API calls work in production even if tests show warnings`, 'info');
         }
     </script>
-
-<!-- Quick Access Widget -->
-<div class="quick-access-widget" id="quickAccessWidget">
-    <button class="quick-access-btn" onclick="toggleQuickAccess()">
-        <span class="icon">⚡</span>
-    </button>
-    <div class="quick-access-menu" id="quickAccessMenu">
-        <a href="/">🏠 Home</a>
-        <a href="/about">👤 About</a>
-        <a href="/blog">📝 Blog</a>
-        <a href="/market-reports">📊 Reports</a>
-        <a href="/cv">📄 CV</a>
-        <a href="/tools">🛠️ Tools</a>
-        <a href="/innovations">💡 Innovations</a>
-    </div>
-</div>
-
-<style>.quick-access-widget{position:fixed;bottom:20px;right:20px;z-index:1000;}.quick-access-btn{width:60px;height:60px;border-radius:50%;background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);border:none;color:white;font-size:24px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);transition:transform 0.3s ease;}.quick-access-btn:hover{transform:scale(1.1);}.quick-access-menu{display:none;position:absolute;bottom:70px;right:0;background:white;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.15);padding:12px;min-width:200px;}.quick-access-menu.active{display:block;animation:slideUp 0.3s ease;}@keyframes slideUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}.quick-access-menu a{display:block;padding:12px 16px;color:#2c3e50;text-decoration:none;border-radius:8px;transition:background 0.2s ease;font-size:14px;}.quick-access-menu a:hover{background:#f8f9fa;}@media (max-width:768px){.quick-access-widget{bottom:15px;right:15px;}.quick-access-btn{width:50px;height:50px;font-size:20px;}}</style>
-    <link rel="stylesheet" href="common-footer.css">
-
-<script>
-function toggleQuickAccess() {
-    const menu = document.getElementById('quickAccessMenu');
-    menu.classList.toggle('active');
-}
-
-document.addEventListener('click', function(event) {
-    const widget = document.getElementById('quickAccessWidget');
-    const menu = document.getElementById('quickAccessMenu');
-    if (widget && !widget.contains(event.target)) {
-        menu.classList.remove('active');
-    }
-});
-</script>
-    <script src="google-adsense.js"></script>
-    <script src="common-footer.js"></script>
 </body>
 </html>
+

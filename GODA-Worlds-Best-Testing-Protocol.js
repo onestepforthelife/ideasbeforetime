@@ -67,18 +67,32 @@ htmlFiles.forEach(file => {
     functionalityChecks++;
     const content = fs.readFileSync(file, 'utf8');
     
-    // Check for navigation
+    // Check for navigation JS
     if (content.includes('common-navigation.js')) {
         functionalityPassed++;
     } else {
-        results.phase2.issues.push(`${file}: Missing navigation`);
+        results.phase2.issues.push(`${file}: Missing navigation JS`);
     }
     
-    // Check for footer
+    // Check for navigation CSS
+    if (content.includes('common-navigation.css')) {
+        functionalityPassed++;
+    } else {
+        results.phase2.issues.push(`${file}: Missing navigation CSS - header unstyled!`);
+    }
+    
+    // Check for footer JS
     if (content.includes('common-footer.js')) {
         functionalityPassed++;
     } else {
-        results.phase2.issues.push(`${file}: Missing footer`);
+        results.phase2.issues.push(`${file}: Missing footer JS`);
+    }
+    
+    // Check for footer CSS
+    if (content.includes('common-footer.css')) {
+        functionalityPassed++;
+    } else {
+        results.phase2.issues.push(`${file}: Missing footer CSS`);
     }
 });
 
