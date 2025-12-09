@@ -1,190 +1,176 @@
 /**
- * Google AdSense Integration for Ideas Before Time
+ * Google AdSense Integration - ALL 3 Ad Units
+ * Publisher ID: ca-pub-3181510462001437
  * 
- * SETUP INSTRUCTIONS:
- * 1. Sign up at: https://www.google.com/adsense/
- * 2. Add your site: ideasbeforetime.pages.dev
- * 3. Get your Publisher ID (ca-pub-XXXXXXXXXXXXXXXX)
- * 4. Replace 'YOUR_PUBLISHER_ID' below with your actual ID
- * 5. Wait for approval (usually 1-2 weeks)
- * 
- * REVENUE POTENTIAL:
- * - RPM (Revenue per 1000 views): $1-$10 depending on niche
- * - Specialty chemicals/B2B content: Higher CPM ($5-$15)
- * - Expected: $50-$500/month with 10K-50K monthly visitors
+ * Ad Units (Google's Exact Code):
+ * 1. Display Ad: 9723865202 (auto, responsive)
+ * 2. Multiplex Ad: 4786506942 (autorelaxed)
+ * 3. In-Article Ad: 5799371569 (fluid, in-article)
  */
 
-// Your Google AdSense Publisher ID
-const ADSENSE_PUBLISHER_ID = 'ca-pub-3181510462001437'; // Amit's Publisher ID
+(function() {
+    'use strict';
 
-// Ad placement configuration
-const AD_CONFIG = {
-    // Homepage - Above fold
-    homepage_top: {
-        slot: '1234567890',
-        format: 'horizontal',
-        responsive: true
-    },
+    const ADSENSE_CLIENT = 'ca-pub-3181510462001437';
+    const AD_UNITS = {
+        DISPLAY: '9723865202',        // Display ad (auto format)
+        MULTIPLEX: '4786506942',      // Multiplex (autorelaxed)
+        IN_ARTICLE: '5799371569'      // In-article (fluid)
+    };
     
-    // Library page - Between content
-    library_sidebar: {
-        slot: '2345678901',
-        format: 'vertical',
-        responsive: true
-    },
-    
-    // Article pages - In-content
-    article_inline: {
-        slot: '3456789012',
-        format: 'rectangle',
-        responsive: true
-    },
-    
-    // Footer - All pages
-    footer_banner: {
-        slot: '4567890123',
-        format: 'horizontal',
-        responsive: true
-    }
-};
+    /**
+     * Initialize AdSense script
+     */
+    function initializeAdSense() {
+        if (document.querySelector('script[src*="adsbygoogle.js"]')) {
+            return;
+        }
 
-/**
- * Initialize Google AdSense
- */
-function initializeAdSense() {
-    // Load AdSense script
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUBLISHER_ID}`;
-    script.crossOrigin = 'anonymous';
-    document.head.appendChild(script);
-    
-    console.log('✅ Google AdSense initialized');
-}
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`;
+        script.crossOrigin = 'anonymous';
+        document.head.appendChild(script);
+    }
 
-/**
- * Create ad unit dynamically
- */
-function createAdUnit(containerId, adConfig) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    
-    const ins = document.createElement('ins');
-    ins.className = 'adsbygoogle';
-    ins.style.display = 'block';
-    ins.setAttribute('data-ad-client', ADSENSE_PUBLISHER_ID);
-    ins.setAttribute('data-ad-slot', adConfig.slot);
-    
-    if (adConfig.format) {
-        ins.setAttribute('data-ad-format', adConfig.format);
-    }
-    
-    if (adConfig.responsive) {
-        ins.setAttribute('data-full-width-responsive', 'true');
-    }
-    
-    container.appendChild(ins);
-    
-    // Push ad
-    try {
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {
-        console.error('AdSense error:', e);
-    }
-}
+    /**
+     * Create Display Ad (Google's exact code)
+     * Slot: 9723865202
+     */
+    function createDisplayAd() {
+        const container = document.createElement('div');
+        container.className = 'adsense-display';
+        container.style.cssText = 'margin: 30px auto; padding: 20px; text-align: center; max-width: 1200px;';
 
-/**
- * Add ad placeholders to page
- * DISABLED: Only show ads after AdSense approval
- */
-function addAdPlaceholders() {
-    // Placeholders disabled until AdSense is approved
-    // Once approved, uncomment the code below
-    
-    /*
-    // Homepage top banner
-    const homepageHero = document.querySelector('.access-container, .container');
-    if (homepageHero && window.location.pathname === '/index.html') {
-        const adDiv = document.createElement('div');
-        adDiv.id = 'ad-homepage-top';
-        adDiv.style.cssText = 'margin: 30px 0; padding: 20px; background: #f9f9f9; border-radius: 10px; text-align: center;';
-        homepageHero.insertBefore(adDiv, homepageHero.firstChild);
-        createAdUnit('ad-homepage-top', AD_CONFIG.homepage_top);
-    }
-    
-    // Library sidebar
-    const libraryContainer = document.querySelector('.container');
-    if (libraryContainer && window.location.pathname.includes('library')) {
-        const adDiv = document.createElement('div');
-        adDiv.id = 'ad-library-sidebar';
-        adDiv.style.cssText = 'margin: 30px 0; padding: 20px; background: #f9f9f9; border-radius: 10px;';
-        libraryContainer.appendChild(adDiv);
-        createAdUnit('ad-library-sidebar', AD_CONFIG.library_sidebar);
-    }
-    
-    // Footer banner (all pages)
-    const footer = document.querySelector('body');
-    if (footer) {
-        const adDiv = document.createElement('div');
-        adDiv.id = 'ad-footer-banner';
-        adDiv.style.cssText = 'margin: 40px auto; max-width: 1400px; padding: 20px; background: #f9f9f9; border-radius: 10px; text-align: center;';
-        footer.appendChild(adDiv);
-        createAdUnit('ad-footer-banner', AD_CONFIG.footer_banner);
-    }
-    */
-}
+        container.innerHTML = `
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}"
+                 crossorigin="anonymous"></script>
+            <!-- Display ad preview -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="${ADSENSE_CLIENT}"
+                 data-ad-slot="${AD_UNITS.DISPLAY}"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        `;
 
-/**
- * Revenue tracking
- */
-function trackAdRevenue() {
-    // This will be populated by AdSense automatically
-    // Check your AdSense dashboard for earnings
-    console.log('📊 Ad revenue tracking active');
-}
+        return container;
+    }
 
-// Initialize when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
+    /**
+     * Create Multiplex Ad (Google's exact code)
+     * Slot: 4786506942
+     */
+    function createMultiplexAd() {
+        const container = document.createElement('div');
+        container.className = 'adsense-multiplex';
+        container.style.cssText = 'margin: 30px auto; padding: 20px; text-align: center; max-width: 1200px;';
+
+        container.innerHTML = `
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}"
+                 crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="autorelaxed"
+                 data-ad-client="${ADSENSE_CLIENT}"
+                 data-ad-slot="${AD_UNITS.MULTIPLEX}"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        `;
+
+        return container;
+    }
+
+    /**
+     * Create In-Article Ad (Google's exact code)
+     * Slot: 5799371569
+     */
+    function createInArticleAd() {
+        const container = document.createElement('div');
+        container.className = 'adsense-in-article';
+        container.style.cssText = 'margin: 30px auto; padding: 20px; text-align: center;';
+
+        container.innerHTML = `
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}"
+                 crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="${ADSENSE_CLIENT}"
+                 data-ad-slot="${AD_UNITS.IN_ARTICLE}"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        `;
+
+        return container;
+    }
+
+    /**
+     * Insert all 3 ad types into page content
+     */
+    function insertAds() {
+        const main = document.querySelector('main') || 
+                     document.querySelector('article') || 
+                     document.querySelector('.content') ||
+                     document.body;
+
+        const paragraphs = main.querySelectorAll('p');
+        
+        if (paragraphs.length < 4) {
+            console.log('AdSense: Not enough content for ads');
+            return;
+        }
+
+        // Ad 1: Display ad after 2nd paragraph
+        if (paragraphs[1]) {
+            const displayAd = createDisplayAd();
+            paragraphs[1].after(displayAd);
+        }
+
+        // Ad 2: In-Article ad in middle
+        const middleIndex = Math.floor(paragraphs.length / 2);
+        if (paragraphs[middleIndex]) {
+            const inArticleAd = createInArticleAd();
+            paragraphs[middleIndex].after(inArticleAd);
+        }
+
+        // Ad 3: Multiplex ad near end
+        const endIndex = paragraphs.length - 2;
+        if (paragraphs[endIndex] && endIndex > middleIndex + 2) {
+            const multiplexAd = createMultiplexAd();
+            paragraphs[endIndex].after(multiplexAd);
+        }
+    }
+
+    /**
+     * Initialize everything
+     */
+    function init() {
         initializeAdSense();
-        setTimeout(addAdPlaceholders, 1000); // Wait for page to load
-        trackAdRevenue();
-    });
-} else {
-    initializeAdSense();
-    setTimeout(addAdPlaceholders, 1000);
-    trackAdRevenue();
-}
+        
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(insertAds, 500);
+            });
+        } else {
+            setTimeout(insertAds, 500);
+        }
+    }
 
-/**
- * ALTERNATIVE: Ezoic (Higher Revenue)
- * 
- * Ezoic typically pays 2-3x more than AdSense
- * Sign up at: https://www.ezoic.com/
- * 
- * Benefits:
- * - AI-optimized ad placements
- * - Higher RPM ($5-$30)
- * - Better for niche B2B content
- * - Automatic A/B testing
- * 
- * Setup:
- * 1. Sign up with Ezoic
- * 2. Add your site
- * 3. Install Ezoic script (they provide it)
- * 4. Let AI optimize placements
- */
+    init();
 
-/**
- * REVENUE ESTIMATES (Monthly):
- * 
- * Traffic Level | AdSense | Ezoic | Affiliate
- * 5K visits     | $10-50  | $25-100 | $50-200
- * 10K visits    | $20-100 | $50-200 | $100-500
- * 50K visits    | $100-500| $250-1K | $500-2K
- * 100K visits   | $200-1K | $500-3K | $1K-5K
- * 
- * B2B/Chemical industry content typically has higher CPM
- * Social Profile Optimizer tool can generate direct revenue (₹21 per use)
- */
-
+    // Export for manual use
+    window.GoogleAdsense = {
+        createDisplayAd,
+        createMultiplexAd,
+        createInArticleAd,
+        client: ADSENSE_CLIENT,
+        units: AD_UNITS
+    };
+})();

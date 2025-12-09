@@ -122,16 +122,66 @@ console.log(`${colors.green}  ✓ Phase 3 Complete: ${results.phase3.score}%${co
 console.log(`  Issues: ${results.phase3.issues.length}\n`);
 
 // ============================================================================
-// PHASE 4-10: PLACEHOLDER (Manual testing required)
+// PHASE 4: GOOGLE ADSENSE (MECER)
 // ============================================================================
-console.log(`${colors.yellow}[PHASE 4-10] Requires manual testing or external tools${colors.reset}`);
-console.log(`  Phase 4: Performance - Use PageSpeed Insights`);
-console.log(`  Phase 5: Accessibility - Use Lighthouse`);
-console.log(`  Phase 6: SEO - Use Lighthouse`);
-console.log(`  Phase 7: Security - Use OWASP ZAP`);
-console.log(`  Phase 8: Consistency - Manual review`);
-console.log(`  Phase 9: Content - Manual review`);
-console.log(`  Phase 10: Cross-Browser - Manual testing\n`);
+console.log(`${colors.blue}[PHASE 4] GOOGLE ADSENSE - MECER Framework${colors.reset}`);
+
+let adsenseScore = 100;
+let adsenseIssues = 0;
+
+// M - Made EVERYTHING
+if (!fs.existsSync('google-adsense.js')) {
+    results.phase4 = { name: 'AdSense', score: 0, issues: ['MECER-M: google-adsense.js missing'] };
+    adsenseScore = 0;
+    adsenseIssues++;
+} else {
+    const adsenseContent = fs.readFileSync('google-adsense.js', 'utf8');
+    
+    // E - EVERYTHING (Publisher ID)
+    if (!adsenseContent.includes('ca-pub-')) {
+        results.phase4.issues.push('MECER-E: Publisher ID not configured');
+        adsenseIssues++;
+    }
+    
+    // C - COMPLETE (on all pages)
+    let withAdsense = 0;
+    htmlFiles.forEach(file => {
+        const content = fs.readFileSync(file, 'utf8');
+        if (content.includes('google-adsense.js')) withAdsense++;
+    });
+    
+    const completeness = (withAdsense / htmlFiles.length) * 100;
+    if (completeness < 90) {
+        results.phase4.issues.push(`MECER-C: Only ${completeness.toFixed(0)}% pages have AdSense`);
+        adsenseIssues++;
+    }
+    
+    // E - EXECUTED (valid script)
+    if (!adsenseContent.includes('initializeAdSense')) {
+        results.phase4.issues.push('MECER-E: AdSense script incomplete');
+        adsenseIssues++;
+    }
+    
+    // R - REALITY
+    results.phase4.issues.push('MECER-R: MUST verify ads on live site');
+    
+    adsenseScore = Math.max(0, 100 - (adsenseIssues * 25));
+}
+
+results.phase4 = { name: 'AdSense (MECER)', score: adsenseScore, issues: results.phase4?.issues || [] };
+console.log(`${colors.green}  ✓ Phase 4 Complete: ${adsenseScore}%${colors.reset}`);
+console.log(`  Issues: ${adsenseIssues}\n`);
+
+// ============================================================================
+// PHASE 5-10: PLACEHOLDER (Manual testing required)
+// ============================================================================
+console.log(`${colors.yellow}[PHASE 5-10] Requires manual testing or external tools${colors.reset}`);
+console.log(`  Phase 5: Performance - Use PageSpeed Insights`);
+console.log(`  Phase 6: Accessibility - Use Lighthouse`);
+console.log(`  Phase 7: SEO - Use Lighthouse`);
+console.log(`  Phase 8: Security - Use OWASP ZAP`);
+console.log(`  Phase 9: Consistency - Manual review`);
+console.log(`  Phase 10: Content - Manual review\n`);
 
 // ============================================================================
 // FINAL REPORT
@@ -140,19 +190,20 @@ console.log(`${colors.cyan}╔════════════════�
 console.log(`${colors.cyan}║                      FINAL REPORT                          ║${colors.reset}`);
 console.log(`${colors.cyan}╚════════════════════════════════════════════════════════════╝${colors.reset}\n`);
 
-const avgScore = Math.round((results.phase1.score + results.phase2.score + results.phase3.score) / 3);
-const totalIssues = results.phase2.issues.length + results.phase3.issues.length;
+const avgScore = Math.round((results.phase1.score + results.phase2.score + results.phase3.score + results.phase4.score) / 4);
+const totalIssues = results.phase2.issues.length + results.phase3.issues.length + results.phase4.issues.length;
 
 console.log(`${colors.magenta}Overall Score: ${avgScore}/100${colors.reset}`);
 console.log(`${colors.magenta}Total Issues Found: ${totalIssues}${colors.reset}\n`);
 
 console.log(`Phase 1 (Discovery): ${results.phase1.score}%`);
 console.log(`Phase 2 (Functionality): ${results.phase2.score}%`);
-console.log(`Phase 3 (Visual/UI): ${results.phase3.score}%\n`);
+console.log(`Phase 3 (Visual/UI): ${results.phase3.score}%`);
+console.log(`Phase 4 (AdSense-MECER): ${results.phase4.score}%\n`);
 
 if (totalIssues > 0) {
     console.log(`${colors.red}CRITICAL ISSUES:${colors.reset}`);
-    [...results.phase2.issues, ...results.phase3.issues].forEach((issue, i) => {
+    [...results.phase2.issues, ...results.phase3.issues, ...results.phase4.issues].forEach((issue, i) => {
         console.log(`  ${i + 1}. ${issue}`);
     });
     console.log();
@@ -165,11 +216,13 @@ const report = {
         phase1: results.phase1.score,
         phase2: results.phase2.score,
         phase3: results.phase3.score,
+        phase4: results.phase4.score,
         overall: avgScore
     },
     issues: {
         phase2: results.phase2.issues,
         phase3: results.phase3.issues,
+        phase4: results.phase4.issues,
         total: totalIssues
     },
     files: {

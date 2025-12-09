@@ -1,17 +1,16 @@
 {
-  "timestamp": "2025-12-09T02:25:23.411Z",
+  "timestamp": "2025-12-09T04:25:52.304Z",
   "scores": {
     "phase1": 100,
     "phase2": 98,
     "phase3": 0,
-    "overall": 66
+    "phase4": 75,
+    "overall": 68
   },
   "issues": {
     "phase2": [
       "admin-testing-control-panel.html: Missing navigation",
       "admin-testing-control-panel.html: Missing footer",
-      "email-template.html: Missing navigation",
-      "email-template.html: Missing footer",
       "test-goda.html: Missing navigation",
       "test-goda.html: Missing footer",
       "test-spo-flow.html: Missing navigation",
@@ -21,12 +20,9 @@
       "about.html: White on white (no contrast)",
       "access.html: White on white (no contrast)",
       "acrylic.html: White on white (no contrast)",
-      "admin-control-panel.html: Left alignment (should be center)",
       "admin-control-panel.html: White on white (no contrast)",
       "admin-testing-dashboard.html: White on white (no contrast)",
-      "astronomy.html: Left alignment (should be center)",
       "astronomy.html: White on white (no contrast)",
-      "BASF_IT_SECURITY_PROPOSAL.html: Left alignment (should be center)",
       "BASF_IT_SECURITY_PROPOSAL.html: White on white (no contrast)",
       "blog-post-1.html: White on white (no contrast)",
       "blog-post-10.html: White on white (no contrast)",
@@ -139,9 +135,7 @@
       "error-dashboard.html: White on white (no contrast)",
       "Final_Acrylic_Market_Report.html: White on white (no contrast)",
       "ghar-ghar-complete.html: White on white (no contrast)",
-      "index-v2-conversion-optimized.html: Left alignment (should be center)",
       "index-v2-conversion-optimized.html: White on white (no contrast)",
-      "index.html: Left alignment (should be center)",
       "index.html: White on white (no contrast)",
       "innovations.html: White on white (no contrast)",
       "insights.html: White on white (no contrast)",
@@ -149,12 +143,10 @@
       "job-dashboard.html: White on white (no contrast)",
       "job-tools.html: White on white (no contrast)",
       "jobs.html: White on white (no contrast)",
-      "JOB_OUTREACH_AUTOMATION_TOOL.html: Left alignment (should be center)",
       "JOB_OUTREACH_AUTOMATION_TOOL.html: White on white (no contrast)",
       "JOB_POWER_FEATURES.html: White on white (no contrast)",
       "JOB_TRACKER_DAILY.html: White on white (no contrast)",
       "kiro-error-solver.html: White on white (no contrast)",
-      "kiro-improvement-guide.html: Left alignment (should be center)",
       "kiro-improvement-guide.html: White on white (no contrast)",
       "kiro.html: White on white (no contrast)",
       "KIRO_AWS_REPORT_CLEAN.html: Left alignment (should be center)",
@@ -171,11 +163,8 @@
       "linkedin-skills-dashboard.html: White on white (no contrast)",
       "linkedin.html: White on white (no contrast)",
       "market-reports.html: White on white (no contrast)",
-      "nickel-compounds-technical-data.html: Left alignment (should be center)",
       "nickel-compounds-technical-data.html: White on white (no contrast)",
-      "nickel-esg-report-open.html: Left alignment (should be center)",
       "nickel-esg-report-open.html: White on white (no contrast)",
-      "nickel-esg-report.html: Left alignment (should be center)",
       "nickel-esg-report.html: White on white (no contrast)",
       "nickel.html: White on white (no contrast)",
       "paper.html: White on white (no contrast)",
@@ -192,9 +181,7 @@
       "research-preview.html: Left alignment (should be center)",
       "research-preview.html: White on white (no contrast)",
       "ro-guide.html: White on white (no contrast)",
-      "ro-service-checklist.html: Left alignment (should be center)",
       "ro-service-checklist.html: White on white (no contrast)",
-      "ro-water-purifier-guide.html: Left alignment (should be center)",
       "ro-water-purifier-guide.html: White on white (no contrast)",
       "ro.html: White on white (no contrast)",
       "social-optimizer-admin.html: Left alignment (should be center)",
@@ -214,16 +201,19 @@
       "test-goda.html: White on white (no contrast)",
       "TEST_CREDITS.html: White on white (no contrast)",
       "TEST_NEW_NAVIGATION.html: White on white (no contrast)",
-      "timeline.html: Left alignment (should be center)",
       "timeline.html: White on white (no contrast)",
       "tools.html: White on white (no contrast)",
       "vertical-nav-option.html: White on white (no contrast)"
     ],
-    "total": 208
+    "phase4": [
+      "MECER-C: Only 85% pages have AdSense",
+      "MECER-R: MUST verify ads on live site"
+    ],
+    "total": 195
   },
   "files": {
     "html": 183,
     "css": 9,
-    "js": 125
+    "js": 129
   }
 }

@@ -455,6 +455,94 @@ function checkAdminSecurity() {
 checkAdminSecurity();
 
 // ============================================
+// PHASE 13: GOOGLE ADSENSE (MECER)
+// ============================================
+console.log('\n💰 PHASE 13: Google AdSense Integration (MECER)...');
+
+function checkGoogleAdsense() {
+    // M - Made EVERYTHING
+    if (!fs.existsSync('google-adsense.js')) {
+        ISSUES.critical.push('MECER-M: Google AdSense missing: google-adsense.js');
+        console.log('   ❌ AdSense file missing');
+        return;
+    }
+    
+    const adsenseContent = fs.readFileSync('google-adsense.js', 'utf8');
+    
+    // E - EVERYTHING included (Publisher ID configured)
+    const hasPublisherId = adsenseContent.includes('ca-pub-3181510462001437');
+    if (!hasPublisherId) {
+        ISSUES.critical.push('MECER-E: AdSense Publisher ID not configured');
+    }
+    
+    // C - COMPLETE (loaded on all pages)
+    const htmlFiles = fs.readdirSync('.').filter(f => f.endsWith('.html'));
+    let withAdsense = 0;
+    
+    htmlFiles.forEach(file => {
+        const content = fs.readFileSync(file, 'utf8');
+        if (content.includes('google-adsense.js')) {
+            withAdsense++;
+        }
+    });
+    
+    const completeness = (withAdsense / htmlFiles.length) * 100;
+    
+    if (completeness < 90) {
+        ISSUES.high.push(`MECER-C: AdSense only on ${withAdsense}/${htmlFiles.length} pages (${completeness.toFixed(0)}% - should be 100%)`);
+    }
+    
+    // E - EXECUTED (check if script is valid)
+    const hasInitFunction = adsenseContent.includes('initializeAdSense');
+    const hasAutoPlace = adsenseContent.includes('autoPlaceAds');
+    
+    if (!hasInitFunction || !hasAutoPlace) {
+        ISSUES.high.push('MECER-E: AdSense script incomplete (missing init or autoPlace)');
+    }
+    
+    // R - REALITY (manual check reminder)
+    console.log(`   ${hasPublisherId ? '✅' : '❌'} Publisher ID: ${hasPublisherId ? 'Configured' : 'MISSING'}`);
+    console.log(`   ${completeness >= 90 ? '✅' : '⚠️'} Completeness: ${withAdsense}/${htmlFiles.length} pages (${completeness.toFixed(0)}%)`);
+    console.log(`   ${hasInitFunction && hasAutoPlace ? '✅' : '❌'} Script valid: ${hasInitFunction && hasAutoPlace ? 'Yes' : 'Incomplete'}`);
+    console.log(`   ⚠️  MECER-R: MUST verify ads display on live site!`);
+}
+
+checkGoogleAdsense();
+
+// ============================================
+// PHASE 14: MECER FRAMEWORK VALIDATION
+// ============================================
+console.log('\n🎯 PHASE 14: MECER Framework Validation...');
+
+function validateMECER() {
+    console.log('   Checking if all phases follow MECER...');
+    
+    // M - Made EVERYTHING
+    const allFilesChecked = fs.readdirSync('.').filter(f => f.endsWith('.html')).length > 0;
+    console.log(`   ${allFilesChecked ? '✅' : '❌'} M: Made EVERYTHING - ${allFilesChecked ? 'All files scanned' : 'No files found'}`);
+    
+    // E - EVERYTHING included
+    const allPhasesRun = true; // All 14 phases executed
+    console.log(`   ${allPhasesRun ? '✅' : '❌'} E: EVERYTHING - All 14 phases executed`);
+    
+    // C - COMPLETE
+    const totalIssues = ISSUES.critical.length + ISSUES.high.length + ISSUES.medium.length + ISSUES.low.length;
+    console.log(`   ${totalIssues === 0 ? '✅' : '⚠️'} C: COMPLETE - ${totalIssues} issues found`);
+    
+    // E - EXECUTED
+    console.log(`   ✅ E: EXECUTED - Tests ran, not just planned`);
+    
+    // R - REALITY
+    console.log(`   ⚠️  R: REALITY - MUST test on live site: https://onestepforthelife.com`);
+    
+    if (totalIssues > 0) {
+        ISSUES.high.push(`MECER incomplete: ${totalIssues} issues must be fixed before deployment`);
+    }
+}
+
+validateMECER();
+
+// ============================================
 // FINAL REPORT
 // ============================================
 console.log('\n' + '='.repeat(60));

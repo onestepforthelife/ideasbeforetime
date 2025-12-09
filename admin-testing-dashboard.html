@@ -8,7 +8,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -58,7 +58,7 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
         .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
             color: white;
         }
         .btn-success {
@@ -86,7 +86,7 @@
             color: #5a6c7d;
             margin-bottom: 20px;
             padding-bottom: 15px;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #5a6c7d;
         }
         .loading {
             text-align: center;
@@ -96,7 +96,7 @@
         }
         .spinner {
             border: 4px solid #f3f3f3;
-            border-top: 4px solid #667eea;
+            border-top: 4px solid #5a6c7d;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -277,7 +277,7 @@
             
             // Phase 2: Purple colors check
             console.log('Checking purple colors...');
-            const purpleColors = ['#8b5cf6', '#667eea', '#764ba2'];
+            const purpleColors = ['#5a6c7d', '#5a6c7d', '#8b9aa7'];
             for (const page of requiredPages) {
                 try {
                     const response = await fetch(page);
@@ -389,7 +389,8 @@
                         let html = await response.text();
                         
                         if (!html.includes('common-navigation.js')) {
-                            html = html.replace('</body>', '<script src="common-navigation.js"></script></body>');
+                            html = html.replace('    <script src="google-adsense.js"></script>
+</body>', '<script src="common-navigation.js"></script></body>');
                             fixes.push(`Added navigation to ${page}`);
                             fixed++;
                         }
