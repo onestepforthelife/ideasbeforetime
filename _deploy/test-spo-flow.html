@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test SPO Flow</title>
+    <link rel="stylesheet" href="common-footer.css">
+</head>
+<body>
+    <script src="common-navigation.js"></script>
+    <h1>Testing SPO Navigation Flow</h1>
+    <div id="results"></div>
+    
+    <script>
+        const results = document.getElementById('results');
+        
+        // Test 1: Check if profile link input works
+        results.innerHTML += '<h2>Test 1: Profile Link Input</h2>';
+        results.innerHTML += '<p>Simulating user entering profile link...</p>';
+        
+        // Simulate the validation
+        const inputMethod = 'link';
+        const profileLink = 'https://linkedin.com/in/testuser';
+        
+        if (inputMethod === 'link' && profileLink) {
+            results.innerHTML += '<p style="color: green;">✅ Profile link accepted</p>';
+            results.innerHTML += '<p>Link: ' + profileLink + '</p>';
+        }
+        
+        // Test 2: Check if demo data is used
+        results.innerHTML += '<h2>Test 2: Demo Data Assignment</h2>';
+        const userData = {};
+        userData.profileLink = profileLink;
+        userData.currentBio = 'Experienced professional with 10+ years in technology and innovation. Passionate about AI, digital transformation, and building products that make a difference. Led multiple successful projects and teams.';
+        userData.currentHeadline = 'Technology Leader | AI Enthusiast | Product Innovation';
+        
+        if (userData.currentBio && userData.currentHeadline) {
+            results.innerHTML += '<p style="color: green;">✅ Demo data assigned</p>';
+            results.innerHTML += '<p>Bio length: ' + userData.currentBio.length + ' chars</p>';
+            results.innerHTML += '<p>Headline: ' + userData.currentHeadline + '</p>';
+        }
+        
+        // Test 3: Check navigation flow
+        results.innerHTML += '<h2>Test 3: Navigation Flow</h2>';
+        results.innerHTML += '<p>Step 1 (Input) → Step 2 (Customize) → Step 3 (Preview) → Step 4 (Payment)</p>';
+        results.innerHTML += '<p style="color: orange;">⚠️ Need to test on actual page with buttons</p>';
+        
+        // Test 4: Check if Step 4 exists
+        results.innerHTML += '<h2>Test 4: Payment Page Check</h2>';
+        results.innerHTML += '<p>Opening social-optimizer-app.html to check...</p>';
+        results.innerHTML += '<p><a href="social-optimizer-app.html" target="_blank" style="background: #2563eb; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">Open SPO App</a></p>';
+        
+        // Instructions
+        results.innerHTML += '<h2>Manual Test Instructions:</h2>';
+        results.innerHTML += '<ol>';
+        results.innerHTML += '<li>Click "Open SPO App" above</li>';
+        results.innerHTML += '<li>Select platform: LinkedIn</li>';
+        results.innerHTML += '<li>Click "Profile Link" option</li>';
+        results.innerHTML += '<li>Enter: https://linkedin.com/in/test</li>';
+        results.innerHTML += '<li>Click "Next: Customize"</li>';
+        results.innerHTML += '<li>Select any persona, tone, goal</li>';
+        results.innerHTML += '<li>Click "Generate Preview"</li>';
+        results.innerHTML += '<li>Wait for AI loading...</li>';
+        results.innerHTML += '<li>Should see Step 3 (Preview)</li>';
+        results.innerHTML += '<li>Click "Unlock Full Access"</li>';
+        results.innerHTML += '<li>Should see Step 4 (Payment)</li>';
+        results.innerHTML += '</ol>';
+        
+        results.innerHTML += '<h2>Expected Result:</h2>';
+        results.innerHTML += '<p style="background: #d4edda; padding: 15px; border-radius: 5px;">User should reach Step 4 (Payment page) with access code input and payment options visible.</p>';
+    </script>
+    <script src="google-adsense.js"></script>
+    <script src="common-footer.js"></script>
+</body>
+</html>

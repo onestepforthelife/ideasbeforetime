@@ -1,0 +1,115 @@
+═══════════════════════════════════════════════════════════════
+MANUAL UPLOAD - ASTRONOMY CALCULATOR
+═══════════════════════════════════════════════════════════════
+
+Since GitHub is failing, use this manual upload method:
+
+STEP 1: OPEN CLOUDFLARE DASHBOARD
+═══════════════════════════════════════════════════════════════
+1. Go to: https://dash.cloudflare.com
+2. Login with your account
+3. Click "Workers & Pages" in left sidebar
+4. Find and click "onestepforthelife"
+
+STEP 2: CREATE NEW DEPLOYMENT
+═══════════════════════════════════════════════════════════════
+5. Click "Create deployment" button (top right)
+6. You'll see "Connect to Git" - SKIP THIS
+7. Look for "Direct Upload" or "Upload assets" option
+8. Click it
+
+STEP 3: UPLOAD THESE FILES
+═══════════════════════════════════════════════════════════════
+
+REQUIRED FILES (Must upload):
+✅ astronomy-calculator.html
+✅ astronomy-api-integration.js
+
+OPTIONAL FILES (Documentation):
+📄 DIVINE_BIRTH_CHARTS_COMPLETE.md
+📄 ASTRONOMY_API_SETUP_GUIDE.md
+📄 ALL_4_DIVINE_EXAMPLES_COMPLETE.txt
+
+STEP 4: DEPLOY
+═══════════════════════════════════════════════════════════════
+9. Drag and drop the files OR click "Select files"
+10. Click "Deploy site" or "Save and Deploy"
+11. Wait 30-60 seconds
+
+STEP 5: TEST
+═══════════════════════════════════════════════════════════════
+12. Visit: https://onestepforthelife.com/astronomy-calculator.html
+13. Click "Lord Krishna" button
+14. Verify all data loads correctly
+15. Select 2 calculation methods
+16. Click "Calculate Positions"
+17. See side-by-side comparison with complete data
+
+═══════════════════════════════════════════════════════════════
+
+ALTERNATIVE: USE GITHUB DESKTOP
+═══════════════════════════════════════════════════════════════
+
+If GitHub Desktop is working:
+1. Open GitHub Desktop
+2. You should see these new files:
+   - astronomy-calculator.html
+   - astronomy-api-integration.js
+   - DIVINE_BIRTH_CHARTS_COMPLETE.md
+   - ASTRONOMY_API_SETUP_GUIDE.md
+   - ALL_4_DIVINE_EXAMPLES_COMPLETE.txt
+   - DEPLOY_ASTRONOMY_NOW.bat
+3. Write commit message: "Add complete astronomy calculator with all 4 divine examples"
+4. Click "Commit to main"
+5. Click "Push origin"
+6. Wait 2-3 minutes for Cloudflare auto-deploy
+
+═══════════════════════════════════════════════════════════════
+
+WHAT YOU'LL GET:
+═══════════════════════════════════════════════════════════════
+
+✅ Beautiful astronomy calculator
+✅ 4 Divine examples with complete data:
+   🏹 Lord Rama - All 9 planets, Vedic calendar
+   🦚 Lord Krishna - All 9 planets, Vedic calendar, sunrise/sunset
+   ☸️ Lord Buddha - All 9 planets, Vedic calendar, sunrise/sunset
+   🕉️ Lord Mahavira - All 9 planets, Vedic calendar, sunrise/sunset
+✅ Side-by-side comparison
+✅ 8 Indian languages
+✅ 4 Calculation methods (GODA)
+✅ Responsive design
+
+═══════════════════════════════════════════════════════════════
+
+TROUBLESHOOTING:
+═══════════════════════════════════════════════════════════════
+
+Q: Don't see "Direct Upload" option?
+A: Your Cloudflare plan might not support it. Use GitHub Desktop instead.
+
+Q: Files uploaded but page not showing?
+A: 1. Clear browser cache (Ctrl+F5)
+   2. Wait 2-3 minutes for deployment
+   3. Check Cloudflare deployment logs
+
+Q: Getting 404 error?
+A: Make sure file is named exactly: astronomy-calculator.html
+
+═══════════════════════════════════════════════════════════════
+
+NEED HELP?
+═══════════════════════════════════════════════════════════════
+
+1. Check Cloudflare deployment status
+2. View deployment logs in dashboard
+3. Test with: https://onestepforthelife.com/astronomy-calculator.html
+4. Verify all 4 divine examples work
+
+═══════════════════════════════════════════════════════════════
+
+Created: December 9, 2025
+Status: Ready to upload ✅
+Files: 6 files ready ✅
+
+═══════════════════════════════════════════════════════════════

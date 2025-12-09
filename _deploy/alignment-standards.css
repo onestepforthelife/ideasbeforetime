@@ -1,0 +1,241 @@
+/* ALIGNMENT STANDARDS - Ideas Before Time */
+/* Apply to all pages for consistent layout and alignment */
+
+/* Container Standards */
+.container, .page-container, main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container-narrow {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container-wide {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Text Alignment */
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* Default Alignments */
+body {
+    text-align: left; /* Default left-aligned for readability */
+}
+
+.hero, .hero-section {
+    text-align: center; /* Hero sections centered */
+}
+
+footer, .site-footer {
+    text-align: center; /* Footer centered */
+}
+
+/* Flexbox Alignment Utilities */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Grid Alignment */
+.grid-center {
+    display: grid;
+    place-items: center;
+}
+
+/* Spacing Standards */
+.section {
+    padding: 60px 0;
+}
+
+.section-small {
+    padding: 40px 0;
+}
+
+.section-large {
+    padding: 80px 0;
+}
+
+/* Margin Utilities */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+.mt-5 { margin-top: 3rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* Padding Utilities */
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }
+.p-5 { padding: 3rem; }
+
+.px-1 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-2 { padding-left: 1rem; padding-right: 1rem; }
+.px-3 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-4 { padding-left: 2rem; padding-right: 2rem; }
+
+.py-1 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-2 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-3 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-4 { padding-top: 2rem; padding-bottom: 2rem; }
+
+/* Content Width for Readability */
+.content-readable {
+    max-width: 65ch; /* Optimal line length for reading */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Card Alignment */
+.card {
+    text-align: left; /* Cards default left-aligned */
+}
+
+.card-center {
+    text-align: center;
+}
+
+/* Button Alignment */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button-group-left {
+    justify-content: flex-start;
+}
+
+.button-group-right {
+    justify-content: flex-end;
+}
+
+/* Form Alignment */
+form {
+    text-align: left; /* Forms left-aligned for usability */
+}
+
+form .button-group {
+    justify-content: center; /* Submit buttons centered */
+    margin-top: 1.5rem;
+}
+
+/* Image Alignment */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-left {
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.img-right {
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Alignment */
+@media (max-width: 768px) {
+    .container, .page-container, main {
+        padding: 0 15px;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+    
+    .section-large {
+        padding: 60px 0;
+    }
+    
+    /* Stack flex items on mobile */
+    .flex-between, .flex-start, .flex-end {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    
+    /* Center buttons on mobile */
+    .button-group-left, .button-group-right {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container, .page-container, main {
+        padding: 0 10px;
+    }
+    
+    .section {
+        padding: 30px 0;
+    }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="typography-standards.css">
+    <link rel="stylesheet" href="alignment-standards.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Insights - Ideas Before Time</title>
+<link rel="icon" type="image/jpeg" href="images/logo Goda 40 bs 32 pixel.jpg">
+<link rel="apple-touch-icon" href="images/Logo One Step for the life 180 by 84 Pixel.jpg">
+    <meta name="description" content="Premium market intelligence: Chemical industry reports, business insights, and exclusive analysis.">
+    <link rel="stylesheet" href="common-styles.css">
+    
+    
+    <style>
+        .hero {
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+        .hub-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hub-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .hub-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .hub-card h2 {
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+        .hub-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        .hub-card a {
+            display: inline-block;
+            background: #007acc;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .hub-card a:hover {
+            background: #005a9e;
+        }
+        .hub-card.premium {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px solid #007acc;
+        }
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <link rel="stylesheet" href="common-navigation.css">
+    <link rel="stylesheet" href="common-footer.css">
+</head>
+<body>
+    <script src="common-navigation.js"></script>
+    
+    <main>
+        <section class="hero">
+            <h1>📊 Premium Market Intelligence</h1>
+            <p>In-depth analysis and exclusive insights for decision makers</p>
+        </section>
+
+        <div class="hub-cards">
+            <div class="hub-card">
+                <div class="icon">🧪</div>
+                <h2>Chemical Market Reports</h2>
+                <p>Comprehensive market intelligence on Acrylic, Poloxamer, Paper Pulp, Nickel, and Specialty Chemicals.</p>
+                <a href="/market-reports">View Reports →</a>
+            </div>
+
+            <div class="hub-card">
+                <div class="icon">📈</div>
+                <h2>Business Insights</h2>
+                <p>Strategic analysis, market trends, and business intelligence for informed decision-making.</p>
+                <a href="/business-insights">Read Insights →</a>
+            </div>
+
+            <div class="hub-card premium">
+                <div class="icon">🔐</div>
+                <h2>Request Premium Access</h2>
+                <p>Get full access to all reports, exclusive analysis, and personalized insights.</p>
+                <a href="/request-access">Request Access →</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="common-footer.js"></script>
+    <script src="universal-analytics.js"></script>
+<script src="goda-chatbot.js"></script>
+
+<!-- Quick Access Widget -->
+<div class="quick-access-widget" id="quickAccessWidget">
+    <button class="quick-access-btn" onclick="toggleQuickAccess()">
+        <span class="icon">⚡</span>
+    </button>
+    <div class="quick-access-menu" id="quickAccessMenu">
+        <a href="/index">🏠 Home</a>
+        <a href="/about">👤 About</a>
+        <a href="/blog">📝 Blog</a>
+        <a href="/market-reports">📊 Reports</a>
+        <a href="/cv">📄 CV</a>
+        <a href="/tools">🛠️ Tools</a>
+        <a href="/innovations">💡 Innovations</a>
+    </div>
+</div>
+
+<style>.quick-access-widget{position:fixed;bottom:20px;right:20px;z-index:1000;}.quick-access-btn{width:60px;height:60px;border-radius:50%;background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);border:none;color:white;font-size:24px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);transition:transform 0.3s ease;}.quick-access-btn:hover{transform:scale(1.1);}.quick-access-menu{display:none;position:absolute;bottom:70px;right:0;background:white;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.15);padding:12px;min-width:200px;}.quick-access-menu.active{display:block;animation:slideUp 0.3s ease;}@keyframes slideUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}.quick-access-menu a{display:block;padding:12px 16px;color:#2c3e50;text-decoration:none;border-radius:8px;transition:background 0.2s ease;font-size:14px;}.quick-access-menu a:hover{background:#f8f9fa;}@media (max-width:768px){.quick-access-widget{bottom:15px;right:15px;}.quick-access-btn{width:50px;height:50px;font-size:20px;}}</style>
+
+<script>
+function toggleQuickAccess() {
+    const menu = document.getElementById('quickAccessMenu');
+    menu.classList.toggle('active');
+}
+
+document.addEventListener('click', function(event) {
+    const widget = document.getElementById('quickAccessWidget');
+    const menu = document.getElementById('quickAccessMenu');
+    if (widget && !widget.contains(event.target)) {
+        menu.classList.remove('active');
+    }
+});
+</script>
+    <script src="error-tracker.js"></script>
+    <script src="google-adsense.js"></script>
+</body>
+</html>

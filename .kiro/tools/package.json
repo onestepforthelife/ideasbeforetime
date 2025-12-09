@@ -9,10 +9,11 @@
     "monitor": "node sentry-error-tracking.js"
   },
   "dependencies": {
+    "@sentry/browser": "^10.29.0",
     "@sentry/node": "^7.91.0",
     "chromadb": "^1.7.0",
     "dotenv": "^16.3.1",
-    "redis": "^4.6.11"
+    "redis": "^4.7.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.57.0",

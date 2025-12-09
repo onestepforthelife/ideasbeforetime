@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-09T12:49:00.192Z",
+  "timestamp": "2025-12-09T13:24:40.466Z",
   "scores": {
     "phase1": 100,
     "phase2": 192,
@@ -33,7 +33,6 @@
       "nickel-esg-report-protected.html: Missing footer CSS",
       "PAYMENT_VISUAL_GUIDE.html: Missing navigation CSS - header unstyled!",
       "test-goda.html: Missing navigation CSS - header unstyled!",
-      "test-goda.html: Missing footer CSS",
       "test-multi-ai.html: Missing navigation CSS - header unstyled!",
       "test-preview-system.html: Missing navigation CSS - header unstyled!",
       "test-spo-flow.html: Missing navigation CSS - header unstyled!",
@@ -48,6 +47,8 @@
       "acrylic.html: White on white (no contrast)",
       "admin-control-panel.html: White on white (no contrast)",
       "admin-testing-dashboard.html: White on white (no contrast)",
+      "astronomy-calculator.html: Left alignment (should be center)",
+      "astronomy-calculator.html: White on white (no contrast)",
       "astronomy.html: White on white (no contrast)",
       "BASF_IT_SECURITY_PROPOSAL.html: White on white (no contrast)",
       "blog-post-1.html: White on white (no contrast)",
@@ -239,6 +240,9 @@
     ],
     "phase5": [
       "access.html: common-navigation.js in head without defer",
+      "astronomy-calculator.html: common-navigation.css before inline styles - overridden",
+      "astronomy-calculator.html: common-footer.css before inline styles - overridden",
+      "astronomy-calculator.html: Form without handler",
       "astronomy.html: common-navigation.css before inline styles - overridden",
       "astronomy.html: Form without handler",
       "email.html: common-navigation.js in head without defer",
@@ -260,11 +264,11 @@
       "ro.html: common-navigation.js in head without defer",
       "specialty.html: common-navigation.js in head without defer"
     ],
-    "total": 243
+    "total": 247
   },
   "files": {
-    "html": 193,
+    "html": 194,
     "css": 9,
-    "js": 179
+    "js": 188
   }
 }

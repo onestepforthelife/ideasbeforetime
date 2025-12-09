@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Performance: Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preload" href="common-styles.css" as="style">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Multi-Provider AI</title>
+    <style>body{font-family:Arial,sans-serif;max-width: 1400px;margin:50px auto;padding:20px;background:linear-gradient(135deg,#5a6c7d 0%,#5a6c7d 100%);color:white;}.container{background:rgba(255,255,255,0.1);padding:30px;border-radius:15px;backdrop-filter:blur(10px);}h1{text-align:center;margin-bottom:30px;}button{background:white;color:#5a6c7d;border:none;padding:15px 30px;font-size:16px;border-radius:8px;cursor:pointer;width:100%;margin-bottom:20px;font-weight:bold;}button:hover{background:#f0f0f0;}#result{background:rgba(255,255,255,0.2);padding:20px;border-radius:8px;margin-top:20px;min-height:100px;}.success{color:#4ade80;}.error{color:#f87171;}.loading{color:#fbbf24;}.provider-badge{display:inline-block;background:rgba(255,255,255,0.3);padding:5px 15px;border-radius:20px;margin-top:10px;font-size:14px;}</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Ideas Before Time",
+  "alternateName": "One Step For The Life",
+  "url": "https://onestepforthelife.com",
+  "description": "AI tools, market research, business insights, and professional resources",
+  "author": {
+    "@type": "Person",
+    "name": "Amit Kumar",
+    "jobTitle": "Business Analyst & AI Specialist"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://onestepforthelife.com/blog.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <link rel="modulepreload" href="common-navigation.js">
+    <link rel="stylesheet" href="common-footer.css">
+</head>
+<body>
+    <script src="common-navigation.js"></script>
+    <div class="container">
+        <h1>🤖 Multi-Provider AI Test</h1>
+        
+        <button onclick="testAI()">🚀 Test AI (Auto-Failover)</button>
+        <button onclick="testSpecificProvider('groq')">Test Groq Only</button>
+        <button onclick="testSpecificProvider('gemini')">Test Gemini Only</button>
+        <button onclick="testSpecificProvider('huggingface')">Test Hugging Face Only</button>
+        <button onclick="testSpecificProvider('cohere')">Test Cohere Only</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script src="AI_MULTI_PROVIDER_FAILOVER.js"></script>
+    <script>
+        async function testAI() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<p class="loading">⏳ Testing AI with automatic failover...</p>';
+            
+            try {
+                const result = await generateAIContent('Say hello and introduce yourself in one sentence');
+                
+                resultDiv.innerHTML = `
+                    <p class="success"><strong>✅ Success!</strong></p>
+                    <p><strong>Provider Used:</strong> <span class="provider-badge">${result.provider}</span></p>
+                    <p><strong>Response:</strong></p>
+                    <p>${result.content}</p>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <p class="error"><strong>❌ Error:</strong></p>
+                    <p>${error.message}</p>
+                `;
+            }
+        }
+
+        async function testSpecificProvider(providerId) {
+            const resultDiv = document.getElementById('result');
+            const provider = AI_PROVIDERS[providerId];
+            resultDiv.innerHTML = `<p class="loading">⏳ Testing ${provider.name}...</p>`;
+            
+            try {
+                const result = await callProvider(providerId, 'Say hello in one sentence');
+                
+                resultDiv.innerHTML = `
+                    <p class="success"><strong>✅ ${provider.name} Works!</strong></p>
+                    <p><strong>Response:</strong></p>
+                    <p>${result}</p>
+                    <p><strong>Speed:</strong> ${provider.speed}</p>
+                    <p><strong>Quality:</strong> ${provider.quality}</p>
+                    <p><strong>Limit:</strong> ${provider.limit}</p>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <p class="error"><strong>❌ ${provider.name} Failed:</strong></p>
+                    <p>${error.message}</p>
+                `;
+            }
+        }
+    </script>
+    <script src="common-footer.js"></script>
+    <script src="google-adsense.js"></script>
+</body>
+</html>

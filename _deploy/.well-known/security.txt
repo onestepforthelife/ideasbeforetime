@@ -1,0 +1,10 @@
+Contact: mailto:onestepforthelife@gmail.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://onestepforthelife.com/.well-known/security.txt
+Policy: https://onestepforthelife.com/privacy-policy.html
+Acknowledgments: https://onestepforthelife.com/about.html
+
+# This is a legitimate personal portfolio and innovation showcase website
+# Owner: Amit Kumar
+# Purpose: Professional portfolio, innovation timeline, and optional AI services

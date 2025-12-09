@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="typography-standards.css">
+    <link rel="stylesheet" href="alignment-standards.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GODA Kiro Troubleshooter - Solve IDE Issues | Ideas Before Time</title>
+    <link rel="icon" type="image/jpeg" href="images/logo Goda 40 bs 32 pixel.jpg">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #5a6c7d;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .error-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            min-height: 120px;
+            font-family: 'Courier New', monospace;
+        }
+        .solve-btn {
+            background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s;
+        }
+        .solve-btn:hover {
+            transform: translateY(-2px);
+        }
+        .solution {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #5a6c7d;
+            display: none;
+        }
+        .solution h3 {
+            color: #5a6c7d;
+            margin-bottom: 15px;
+        }
+        .solution-text {
+            line-height: 1.8;
+            color: #333;
+        }
+        .common-errors {
+            margin-top: 30px;
+        }
+        .error-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-left: 4px solid #5a6c7d;
+        }
+        .error-card:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+        .error-title {
+            font-weight: bold;
+            color: #5a6c7d;
+            margin-bottom: 5px;
+        }
+        .error-desc {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 FIX KIRO - ALL ERRORS</h1>
+        <p class="subtitle">by GODA • Paste your Kiro error and get instant solution</p>
+
+        <textarea class="error-input" id="errorInput" placeholder="Paste your Kiro error message here...
+
+Example:
+- 'Command failed with exit code 1'
+- 'Module not found'
+- 'Permission denied'
+- Any error from Kiro IDE"></textarea>
+
+        <button class="solve-btn" onclick="solveError()">🚀 Solve Error</button>
+
+        <div class="solution" id="solution">
+            <h3>💡 Solution:</h3>
+            <div class="solution-text" id="solutionText"></div>
+        </div>
+
+        <div class="common-errors">
+            <h3 style="color: #5a6c7d; margin-bottom: 20px;">📋 Common Errors (Click to solve)</h3>
+            
+            <div class="error-card" onclick="quickSolve('exit1')">
+                <div class="error-title">Command failed with exit code 1</div>
+                <div class="error-desc">Build or script execution failed</div>
+            </div>
+
+            <div class="error-card" onclick="quickSolve('module')">
+                <div class="error-title">Module not found / Cannot find module</div>
+                <div class="error-desc">Missing dependencies or wrong path</div>
+            </div>
+
+            <div class="error-card" onclick="quickSolve('permission')">
+                <div class="error-title">Permission denied / EACCES</div>
+                <div class="error-desc">File or folder access denied</div>
+            </div>
+
+            <div class="error-card" onclick="quickSolve('port')">
+                <div class="error-title">Port already in use / EADDRINUSE</div>
+                <div class="error-desc">Another process using the port</div>
+            </div>
+
+            <div class="error-card" onclick="quickSolve('syntax')">
+                <div class="error-title">SyntaxError / Unexpected token</div>
+                <div class="error-desc">Code syntax error</div>
+            </div>
+
+            <div class="error-card" onclick="quickSolve('network')">
+                <div class="error-title">Network error / ENOTFOUND</div>
+                <div class="error-desc">Cannot connect to server</div>
+            </div>
+
+            <div class="error-card" onclick="quickSolve('mcp')">
+                <div class="error-title">MCP Server Issues / Powers Not Working</div>
+                <div class="error-desc">MCP tools disabled or failing</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const solutions = {
+            'exit1': {
+                title: 'Command failed with exit code 1',
+                solution: `<strong>Quick Fix:</strong><br>
+1. Check the error message above the exit code<br>
+2. Common causes:<br>
+   • Missing dependencies → Run: <code>npm install</code><br>
+   • Syntax error in code → Check the file mentioned<br>
+   • Build error → Check build logs<br><br>
+<strong>Steps:</strong><br>
+1. Read full error message<br>
+2. Fix the specific issue mentioned<br>
+3. Run command again`
+            },
+            'module': {
+                title: 'Module not found',
+                solution: `<strong>Quick Fix:</strong><br>
+1. Install missing module: <code>npm install [module-name]</code><br>
+2. Check if path is correct<br>
+3. Check if file exists<br><br>
+<strong>Common causes:</strong><br>
+• Forgot to run npm install<br>
+• Wrong import path<br>
+• Typo in module name<br>
+• Module not in package.json`
+            },
+            'permission': {
+                title: 'Permission denied',
+                solution: `<strong>Quick Fix:</strong><br>
+1. Run as administrator (Windows)<br>
+2. Or use: <code>sudo</code> (Mac/Linux)<br>
+3. Check file permissions<br><br>
+<strong>Windows:</strong> Right-click → Run as administrator<br>
+<strong>Mac/Linux:</strong> <code>sudo [command]</code>`
+            },
+            'port': {
+                title: 'Port already in use',
+                solution: `<strong>Quick Fix:</strong><br>
+1. Kill process using port:<br>
+   Windows: <code>netstat -ano | findstr :[PORT]</code><br>
+   Then: <code>taskkill /PID [PID] /F</code><br><br>
+2. Or use different port<br>
+3. Or restart computer`
+            },
+            'syntax': {
+                title: 'Syntax Error',
+                solution: `<strong>Quick Fix:</strong><br>
+1. Check line number in error<br>
+2. Look for:<br>
+   • Missing brackets: ( ) { } [ ]<br>
+   • Missing semicolons: ;<br>
+   • Missing quotes: " " ' '<br>
+   • Wrong indentation<br><br>
+3. Use code editor to highlight errors`
+            },
+            'network': {
+                title: 'Network Error',
+                solution: `<strong>Quick Fix:</strong><br>
+1. Check internet connection<br>
+2. Check if URL is correct<br>
+3. Check firewall settings<br>
+4. Try again after few seconds<br><br>
+<strong>If persists:</strong><br>
+• Restart router<br>
+• Disable VPN temporarily<br>
+• Check DNS settings`
+            },
+            'mcp': {
+                title: 'MCP Server Issues',
+                solution: `<strong>Quick Fix:</strong><br>
+1. Check MCP server status in Kiro<br>
+2. Restart MCP server:<br>
+   • Open Command Palette (Ctrl+Shift+P)<br>
+   • Search: "MCP: Restart Server"<br>
+   • Select the failing server<br><br>
+<strong>Enable/Disable MCP:</strong><br>
+1. Open: <code>.kiro/settings/mcp.json</code><br>
+2. Find your server config<br>
+3. Set: <code>"disabled": false</code> (to enable)<br>
+4. Or: <code>"disabled": true</code> (to disable)<br>
+5. Save file → Server auto-restarts<br><br>
+<strong>Common MCP Issues:</strong><br>
+• Server not responding → Restart server<br>
+• Tools not showing → Check "disabled" setting<br>
+• Connection failed → Check command/args in config<br>
+• Python errors → Check uvx/uv installed<br><br>
+<strong>Check MCP Config:</strong><br>
+File: <code>.kiro/settings/mcp.json</code><br>
+Look for: "disabled": true/false`
+            }
+        };
+
+        function solveError() {
+            const input = document.getElementById('errorInput').value.toLowerCase();
+            const solutionDiv = document.getElementById('solution');
+            const solutionText = document.getElementById('solutionText');
+
+            if (!input.trim()) {
+                alert('Please paste your error message first!');
+                return;
+            }
+
+            let solution = '';
+
+            // Match error patterns
+            if (input.includes('exit code 1') || input.includes('failed')) {
+                solution = solutions.exit1.solution;
+            } else if (input.includes('module') || input.includes('cannot find')) {
+                solution = solutions.module.solution;
+            } else if (input.includes('permission') || input.includes('eacces')) {
+                solution = solutions.permission.solution;
+            } else if (input.includes('port') || input.includes('eaddrinuse')) {
+                solution = solutions.port.solution;
+            } else if (input.includes('syntax') || input.includes('unexpected')) {
+                solution = solutions.syntax.solution;
+            } else if (input.includes('network') || input.includes('enotfound')) {
+                solution = solutions.network.solution;
+            } else {
+                solution = `<strong>General Troubleshooting:</strong><br>
+1. Read the full error message carefully<br>
+2. Copy exact error and search on Google<br>
+3. Check if all dependencies installed<br>
+4. Restart Kiro IDE<br>
+5. Check file paths are correct<br><br>
+<strong>Still stuck?</strong><br>
+• Check Kiro documentation<br>
+• Ask in Kiro community<br>
+• Share error with team`;
+            }
+
+            solutionText.innerHTML = solution;
+            solutionDiv.style.display = 'block';
+            solutionDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function quickSolve(type) {
+            const solutionDiv = document.getElementById('solution');
+            const solutionText = document.getElementById('solutionText');
+            
+            solutionText.innerHTML = solutions[type].solution;
+            solutionDiv.style.display = 'block';
+            solutionDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+    <script src="common-navigation.js"></script>
+    <link rel="stylesheet" href="common-navigation.css">
+    <script src="common-footer.js"></script>
+    <link rel="stylesheet" href="common-footer.css">
+
+<!-- Quick Access Widget -->
+<div class="quick-access-widget" id="quickAccessWidget">
+    <button class="quick-access-btn" onclick="toggleQuickAccess()">
+        <span class="icon">⚡</span>
+    </button>
+    <div class="quick-access-menu" id="quickAccessMenu">
+        <a href="/index">🏠 Home</a>
+        <a href="/about">👤 About</a>
+        <a href="/blog">📝 Blog</a>
+        <a href="/market-reports">📊 Reports</a>
+        <a href="/cv">📄 CV</a>
+        <a href="/tools">🛠️ Tools</a>
+        <a href="/innovations">💡 Innovations</a>
+    </div>
+</div>
+
+<style>.quick-access-widget{position:fixed;bottom:20px;right:20px;z-index:1000;}.quick-access-btn{width:60px;height:60px;border-radius:50%;background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);border:none;color:white;font-size:24px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);transition:transform 0.3s ease;}.quick-access-btn:hover{transform:scale(1.1);}.quick-access-menu{display:none;position:absolute;bottom:70px;right:0;background:white;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.15);padding:12px;min-width:200px;}.quick-access-menu.active{display:block;animation:slideUp 0.3s ease;}@keyframes slideUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}.quick-access-menu a{display:block;padding:12px 16px;color:#2c3e50;text-decoration:none;border-radius:8px;transition:background 0.2s ease;font-size:14px;}.quick-access-menu a:hover{background:#f8f9fa;}@media (max-width:768px){.quick-access-widget{bottom:15px;right:15px;}.quick-access-btn{width:50px;height:50px;font-size:20px;}}</style>
+
+<script>
+function toggleQuickAccess() {
+    const menu = document.getElementById('quickAccessMenu');
+    menu.classList.toggle('active');
+}
+
+document.addEventListener('click', function(event) {
+    const widget = document.getElementById('quickAccessWidget');
+    const menu = document.getElementById('quickAccessMenu');
+    if (widget && !widget.contains(event.target)) {
+        menu.classList.remove('active');
+    }
+});
+</script>
+<script src="goda-chatbot.js"></script>
+    <script src="error-tracker.js"></script>
+    <script src="google-adsense.js"></script>
+</body>
+</html>

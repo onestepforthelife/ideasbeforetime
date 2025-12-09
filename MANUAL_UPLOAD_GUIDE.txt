@@ -1,0 +1,96 @@
+═══════════════════════════════════════════════════════════════
+MANUAL UPLOAD GUIDE - NO GITHUB NEEDED
+═══════════════════════════════════════════════════════════════
+
+When GitHub is down or failing, use this method:
+
+METHOD 1: CLOUDFLARE DASHBOARD (EASIEST - 2 MINUTES)
+═══════════════════════════════════════════════════════════════
+
+1. Open browser and go to:
+   https://dash.cloudflare.com
+
+2. Login with your Cloudflare account
+
+3. Click "Workers & Pages" in left sidebar
+
+4. Find "onestepforthelife" and click it
+
+5. Click "Create deployment" button (top right)
+
+6. You'll see two options:
+   - "Connect to Git" (skip this)
+   - "Direct Upload" (USE THIS)
+
+7. Click "Direct Upload"
+
+8. Drag and drop these files:
+   - astronomy.html (your new page)
+   - Any other changed files
+   
+   OR click "Select files" and choose them
+
+9. Click "Deploy site"
+
+10. Wait 30 seconds - DONE!
+
+Your site will be live immediately at:
+https://onestepforthelife.com
+
+
+METHOD 2: WRANGLER CLI (AUTOMATED - ONE-TIME SETUP)
+═══════════════════════════════════════════════════════════════
+
+FIRST TIME ONLY:
+1. Double-click: SETUP_WRANGLER_BACKUP.bat
+2. Wait for installation
+3. Browser will open - login to Cloudflare
+4. Close browser when done
+
+EVERY TIME YOU DEPLOY:
+1. Double-click: DEPLOY_WRANGLER.bat
+2. Wait 30 seconds
+3. Done!
+
+
+WHICH METHOD TO USE?
+═══════════════════════════════════════════════════════════════
+
+Use METHOD 1 if:
+- You only deploy occasionally
+- You want the simplest option
+- You don't want to install anything
+
+Use METHOD 2 if:
+- You deploy frequently
+- You want automation
+- You're comfortable with command line
+
+
+TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════
+
+Q: I don't see "Direct Upload" option
+A: Your Cloudflare plan might not support it. Use Wrangler CLI instead.
+
+Q: Wrangler says "not logged in"
+A: Run SETUP_WRANGLER_BACKUP.bat again
+
+Q: Files uploaded but site not updating
+A: Clear Cloudflare cache:
+   Dashboard > Caching > Purge Everything
+
+
+EMERGENCY CONTACT
+═══════════════════════════════════════════════════════════════
+
+If both methods fail:
+1. Check Cloudflare status: https://www.cloudflarestatus.com
+2. Contact Cloudflare support
+3. Consider temporary hosting on Netlify or Vercel
+
+
+═══════════════════════════════════════════════════════════════
+Created: December 9, 2025
+Last Updated: December 9, 2025
+═══════════════════════════════════════════════════════════════

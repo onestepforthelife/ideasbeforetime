@@ -1,0 +1,24 @@
+{
+  "test1": {
+    "exitCode": 1,
+    "status": "FAILED",
+    "timestamp": "2025-12-09T13:24:40.259Z"
+  },
+  "test2": {
+    "exitCode": 1,
+    "status": "FAILED",
+    "timestamp": "2025-12-09T13:24:40.481Z"
+  },
+  "mecer": {
+    "made": true,
+    "everything": true,
+    "complete": {
+      "exitCode": 1,
+      "status": "FAILED",
+      "timestamp": "2025-12-09T13:24:40.481Z"
+    },
+    "executed": true,
+    "reality": false
+  },
+  "timestamp": "2025-12-09T13:24:39.187Z"
+}

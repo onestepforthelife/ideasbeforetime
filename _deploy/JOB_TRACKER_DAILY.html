@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="typography-standards.css">
+    <link rel="stylesheet" href="alignment-standards.css">
+    <!-- Performance: Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preload" href="common-styles.css" as="style">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📋 Daily Job Tracker | Amit Kumar</title>
+<link rel="icon" type="image/jpeg" href="images/logo Goda 40 bs 32 pixel.jpg">
+<link rel="apple-touch-icon" href="images/Logo One Step for the life 180 by 84 Pixel.jpg">
+    <link rel="stylesheet" href="common-watermark.css">
+    
+    <style>*{margin:0;padding:0;box-sizing:border-box;}body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);padding:20px;min-height:100vh;}.container{max-width:1400px;margin:0 auto;background:white;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3);overflow:hidden;}.header{text-align: center;}.header h1{font-size:2em;margin-bottom:10px;}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding:20px;}.stat-card{background:#f8f9fa;padding:20px;border-radius:10px;text-align:center;border:2px solid #e9ecef;}.stat-number{font-size:2.5em;font-weight:700;color:#2563eb;}.stat-label{color:#6c757d;font-size:0.9em;margin-top:5px;}.search-links{background:#fff3cd;border:2px solid #ffc107;border-radius:10px;padding:20px;margin:0 20px 20px;}.search-links h3{color:#856404;margin-bottom:15px;}.search-link{display:block;background:white;padding:12px;margin-bottom:10px;border-radius:6px;text-decoration:none;color:#2a5298;font-weight:600;transition:all 0.2s;}.search-link:hover{background: #5a6c7d;color:white;transform:translateX(5px);}.job-list{padding:20px;}.job-item{background:#f8f9fa;padding:15px;margin-bottom:10px;border-radius:8px;border-left:4px solid #ffc107;display:flex;align-items:center;gap:15px;}.job-item.done{border-left-color:#28a745;opacity:0.7;}.job-checkbox{width:24px;height:24px;cursor:pointer;}.job-details{flex:1;}.job-title{font-weight:600;color:#2a5298;font-size:1.1em;margin-bottom:5px;}.job-company{color:#6c757d;font-size:0.95em;}.job-date{color:#6c757d;font-size:0.85em;font-style:italic;}.job-actions{display:flex;gap:10px;}.btn{padding:10px 20px;border-radius:6px;border:none;cursor:pointer;font-weight:600;transition:all 0.2s;}.btn-view{background: #5a6c7d;color:white;}.btn-delete{background:#dc3545;color:white;}.btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.2);}.add-form{background:#e7f3ff;padding:20px;margin:0 20px 20px;border-radius:10px;border:2px solid #2563eb;}.form-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:10px;}input{padding:10px;border:2px solid #dee2e6;border-radius:6px;font-size:1em;width:100%;}.btn-add{background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);color:white;padding:12px;width:100%;font-size:1.1em;}</style>
+    <link rel="stylesheet" href="common-footer.css">
+    <meta name="description" content="JOB_TRACKER_DAILY - Ideas Before Time platform">
+
+    <style>@media (max-width:768px){body{padding:10px !important;}.container,.access-container,.reports-container,.dashboard-container,.tool-container{max-width:100% !important;padding:20px !important;margin:10px !important;}h1{font-size:24px !important;}h2{font-size:20px !important;}.nav-links{flex-direction:column;}.grid,.package-grid,.reports-grid{grid-template-columns:1fr !important;}}</style>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3181510462001437"
+            crossorigin="anonymous"></script>
+    <script src="google-adsense.js"></script>
+    <link rel="canonical" href="/https://onestepforthelife.com/JOB_TRACKER_DAILY">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Ideas Before Time",
+  "alternateName": "One Step For The Life",
+  "url": "https://onestepforthelife.com",
+  "description": "AI tools, market research, business insights, and professional resources",
+  "author": {
+    "@type": "Person",
+    "name": "Amit Kumar",
+    "jobTitle": "Business Analyst & AI Specialist"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://onestepforthelife.com/blog.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <link rel="modulepreload" href="common-navigation.js">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📋 Daily Job Tracker</h1>
+            <p>Track Applications • Check Progress • Never Miss a Job</p>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card"><div class="stat-number" id="totalJobs">0</div><div class="stat-label">Total Jobs</div></div>
+            <div class="stat-card"><div class="stat-number" id="pendingJobs">0</div><div class="stat-label">Pending</div></div>
+            <div class="stat-card"><div class="stat-number" id="doneJobs">0</div><div class="stat-label">Completed</div></div>
+        </div>
+        
+        <div class="search-links">
+            <h3>🔍 Quick Job Search (Opens New Tab)</h3>
+            <a href="https://www.linkedin.com/jobs/search/?keywords=director%20semiconductor%20singapore&location=Singapore&f_TPR=r86400&f_SB2=1" target="_blank" class="search-link" aria-label="External link (opens in new tab)">💼 LinkedIn: Semiconductor Jobs Singapore (S$30K+)</a>
+            <a href="https://www.linkedin.com/jobs/search/?keywords=logistics%20director%20singapore&location=Singapore&f_TPR=r86400&f_SB2=1" target="_blank" class="search-link" aria-label="External link (opens in new tab)">📦 LinkedIn: Logistics Jobs Singapore (S$30K+)</a>
+            <a href="https://www.google.com/search?q=semiconductor+director+jobs+singapore+%2430000" target="_blank" class="search-link" aria-label="External link (opens in new tab)">🔎 Google: Semiconductor Director Jobs</a>
+        </div>
+        
+        <div class="add-form">
+            <h3 style="color: #2a5298; margin-bottom: 15px;">➕ Add New Job</h3>
+            <div class="form-row">
+                <input type="text" id="newCompany" placeholder="Company Name">
+                <input type="text" id="newJobTitle" placeholder="Job Title">
+                <input type="text" id="newDomain" placeholder="company.com">
+            </div>
+            <button class="btn btn-add" onclick="addJob()">➕ Add to Tracker</button>
+        </div>
+        
+        <div class="job-list">
+            <h3 style="margin-bottom: 15px; color: #2a5298;">📝 Your Job Applications</h3>
+            <div id="jobListContainer"></div>
+        </div>
+    </div>
+    
+    <script>
+        function getJobs() { return JSON.parse(localStorage.getItem('jobApplications') || '[]'); }
+        function saveJobs(jobs) { localStorage.setItem('jobApplications', JSON.stringify(jobs)); }
+        
+        function addJob() {
+            const company = document.getElementById('newCompany').value.trim();
+            const jobTitle = document.getElementById('newJobTitle').value.trim();
+            const domain = document.getElementById('newDomain').value.trim();
+            
+            if (!company || !jobTitle || !domain) { alert('Fill all fields'); return; }
+            
+            const jobs = getJobs();
+            jobs.unshift({ id: Date.now(), company, jobTitle, domain, date: new Date().toISOString(), done: false });
+            saveJobs(jobs);
+            
+            document.getElementById('newCompany').value = '';
+            document.getElementById('newJobTitle').value = '';
+            document.getElementById('newDomain').value = '';
+            
+            loadJobs();
+        }
+        
+        function toggleDone(id) {
+            const jobs = getJobs();
+            const job = jobs.find(j => j.id === id);
+            if (job) { job.done = !job.done; saveJobs(jobs); loadJobs(); }
+        }
+        
+        function deleteJob(id) {
+            if (confirm('Delete this job?')) {
+                const jobs = getJobs().filter(j => j.id !== id);
+                saveJobs(jobs);
+                loadJobs();
+            }
+        }
+        
+        function viewJob(id) {
+            const job = getJobs().find(j => j.id === id);
+            if (job) {
+                const url = `JOB_OUTREACH_AUTOMATION_TOOL.html?company=${encodeURIComponent(job.company)}&title=${encodeURIComponent(job.jobTitle)}&domain=${encodeURIComponent(job.domain)}`;
+                window.open(url, '_blank');
+            }
+        }
+        
+        function loadJobs() {
+            const jobs = getJobs();
+            document.getElementById('totalJobs').textContent = jobs.length;
+            document.getElementById('pendingJobs').textContent = jobs.filter(j => !j.done).length;
+            document.getElementById('doneJobs').textContent = jobs.filter(j => j.done).length;
+            
+            const container = document.getElementById('jobListContainer');
+            if (jobs.length === 0) {
+                container.innerHTML = '<div style="text-align: center; padding: 40px; color: #6c757d;"><div style="font-size: 3em;">📭</div><p>No jobs yet. Add one above!</p></div>';
+                return;
+            }
+            
+            container.innerHTML = jobs.map(job => `
+                <div class="job-item ${job.done ? 'done' : ''}">
+                    <input type="checkbox" class="job-checkbox" ${job.done ? 'checked' : ''} onchange="toggleDone(${job.id})">
+                    <div class="job-details">
+                        <div class="job-title">${job.jobTitle}</div>
+                        <div class="job-company">${job.company} • ${job.domain}</div>
+                        <div class="job-date">Added: ${new Date(job.date).toLocaleDateString()}</div>
+                    </div>
+                    <div class="job-actions">
+                        <button class="btn btn-view" onclick="viewJob(${job.id})">👁️ Generate Email</button>
+                        <button class="btn btn-delete" onclick="deleteJob(${job.id})">🗑️</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        window.addEventListener('load', loadJobs);
+    </script>
+    <script src="common-navigation.js"></script>
+    <link rel="stylesheet" href="common-navigation.css">
+    <script src="universal-analytics.js"></script>
+<script src="common-footer.js"></script>
+    <script src="error-tracker.js"></script>
+
+<!-- Quick Links Widget -->
+<div class="quick-links-widget" style="position: fixed; right: 20px; bottom: 80px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); padding: 20px; width: 250px; z-index: 999; display: none;" id="quickLinksWidget">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h4 style="margin: 0; color: #2563eb; font-size: 16px;">🚀 Quick Access</h4>
+        <button onclick="document.getElementById('quickLinksWidget').style.display='none'" style="background: none; border: none; font-size: 20px; cursor: pointer; color: #999;">&times;</button>
+    </div>
+    <div style="display: grid; gap: 8px;">
+        <a href="/index" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>🏠</span> Home
+        </a>
+        <a href="/blog" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📝</span> Blog (100 posts)
+        </a>
+        <a href="/about" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>👤</span> About
+        </a>
+        <a href="/cv" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📄</span> CV
+        </a>
+        <a href="/market-reports" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📊</span> Reports
+        </a>
+        <a href="/social-optimizer-index" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>🚀</span> Tools
+        </a>
+        <a href="/library" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>📚</span> Library
+        </a>
+        <a href="/innovations" style="padding: 8px 12px; background: #f5f5f5; border-radius: 5px; text-decoration: none; color: #333; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background 0.3s;">
+            <span>💡</span> Innovations
+        </a>
+    </div>
+</div>
+
+<!-- Quick Links Toggle Button -->
+<button onclick="document.getElementById('quickLinksWidget').style.display='block'" style="position: fixed; right: 20px; bottom: 20px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%); color: white; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 998; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    🔗
+</button>
+
+<style>.quick-links-widget a:hover{background: #5a6c7d !important;color:white !important;}@media (max-width:768px){.quick-links-widget{right:10px;bottom:70px;width:200px;padding:15px;}}</style>
+
+<script src="goda-chatbot.js"></script>
+</body>
+</html>
+
+

@@ -6,17 +6,17 @@ const https = require('https');
 const tests = [
     {
         name: 'SPO Payment Button',
-        url: 'https://onestepforthelife.com/social-optimizer-app.html',
+        url: 'https://onestepforthelife.com/social-optimizer-app',
         check: 'Pay ₹21 Now'
     },
     {
         name: 'Astronomy Payment Button',
-        url: 'https://onestepforthelife.com/astronomy.html',
+        url: 'https://onestepforthelife.com/astronomy',
         check: 'Pay ₹21 Now'
     },
     {
         name: 'Business News Auto-Update',
-        url: 'https://onestepforthelife.com/business-news.html',
+        url: 'https://onestepforthelife.com/business-news',
         check: 'business-insights-auto-updater.js'
     }
 ];

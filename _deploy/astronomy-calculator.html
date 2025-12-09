@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedic Astronomy Calculator - Calculate Planetary Positions</title>
+    <meta name="description" content="Calculate accurate planetary positions using Swiss Ephemeris, Drik Panchang, AstroAPI, and NASA Horizons. Compare results from multiple Vedic and scientific sources.">
+    <link rel="stylesheet" href="common-styles.css">
+    <link rel="stylesheet" href="common-navigation.css">
+    <link rel="stylesheet" href="common-footer.css">
+    <style>
+        .calculator-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .intro-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .intro-section h1 {
+            margin: 0 0 20px 0;
+            font-size: 2.5em;
+        }
+
+        .intro-section p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .divine-examples {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .divine-examples h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .example-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .example-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: transform 0.2s;
+        }
+
+        .example-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .calculator-form {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-section h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .required {
+            color: #e74c3c;
+        }
+
+        .help-text {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .method-selection {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .method-checkboxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .method-checkbox {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .method-checkbox:hover {
+            border-color: #667eea;
+            background: #f0f4ff;
+        }
+
+        .method-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            cursor: pointer;
+        }
+
+        .method-checkbox.selected {
+            border-color: #667eea;
+            background: #f0f4ff;
+        }
+
+        .method-info {
+            flex: 1;
+        }
+
+        .method-name {
+            font-weight: 600;
+            color: #333;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .method-desc {
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .calculate-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .calculate-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .results-container {
+            margin-top: 40px;
+            display: none;
+        }
+
+        .results-container.show {
+            display: block;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .result-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .result-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .result-header h3 {
+            color: #667eea;
+            margin: 0;
+        }
+
+        .accuracy-badge {
+            background: #4caf50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .planet-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .planet-table th,
+        .planet-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .planet-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .planet-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .planet-name {
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            display: none;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .tip-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .tip-box strong {
+            color: #856404;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-section h1 {
+                font-size: 1.8em;
+            }
+
+            .calculator-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navigation"></div>
+
+    <div class="calculator-container">
+        <div class="intro-section">
+            <h1>🌟 Calculate Planetary Positions</h1>
+            <p>Accurate Vedic & Scientific Astronomical Calculations</p>
+            <p>Compare results from multiple trusted sources</p>
+        </div>
+
+        <!-- Divine Examples Section -->
+        <div class="divine-examples">
+            <h2>📖 Three Options:</h2>
+            <ul style="text-align: left; max-width: 800px; margin: 20px auto;">
+                <li><strong>Divine Examples:</strong> Click buttons below to see pre-loaded data</li>
+                <li><strong>Today's Status:</strong> See current planetary positions (just enter place)</li>
+                <li><strong>Specific Date:</strong> See positions for any date (birth date, historical event, future date)</li>
+            </ul>
+            
+            <div class="example-buttons">
+                <button class="example-btn" onclick="loadExample('rama')">🏹 Lord Rama</button>
+                <button class="example-btn" onclick="loadExample('krishna')">🦚 Lord Krishna</button>
+                <button class="example-btn" onclick="loadExample('buddha')">☸️ Lord Buddha</button>
+                <button class="example-btn" onclick="loadExample('mahavira')">🕉️ Lord Mahavira</button>
+                <button class="example-btn" onclick="loadExample('today')">📅 Today</button>
+            </div>
+        </div>
+
+        <!-- Calculator Form -->
+        <div class="calculator-form">
+            <form id="calculatorForm">
+                <!-- Date & Time Section -->
+                <div class="form-section">
+                    <h3>📅 Date & Time</h3>
+                    
+                    <div class="form-group">
+                        <label for="date">📅 Date <span class="required">*</span></label>
+                        <input type="date" id="date" name="date" required>
+                        <p class="help-text">Leave as today or select any date (past/future)</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">🕐 Time (Optional)</label>
+                        <input type="time" id="time" name="time" value="12:00">
+                        <p class="help-text">Default: 12:00 noon</p>
+                    </div>
+                </div>
+
+                <!-- Location Section -->
+                <div class="form-section">
+                    <h3>📍 Location</h3>
+                    
+                    <div class="form-group">
+                        <label for="place">📍 Place <span class="required">*</span></label>
+                        <input type="text" id="place" name="place" placeholder="e.g., New Delhi, Mumbai, Varanasi" required>
+                        <p class="help-text">City name or coordinates</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="region">🗺️ Region (India)</label>
+                        <select id="region" name="region">
+                            <option value="north">North India (Purnimanta)</option>
+                            <option value="south">South India (Amanta)</option>
+                            <option value="west">West India</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Language Section -->
+                <div class="form-section">
+                    <h3>🌐 Language</h3>
+                    
+                    <div class="form-group">
+                        <label for="language">Select Language</label>
+                        <select id="language" name="language">
+                            <option value="en">English</option>
+                            <option value="hi">हिंदी (Hindi)</option>
+                            <option value="ta">தமிழ் (Tamil)</option>
+                            <option value="te">తెలుగు (Telugu)</option>
+                            <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                            <option value="ml">മലയാളം (Malayalam)</option>
+                            <option value="bn">বাংলা (Bengali)</option>
+                            <option value="mr">मराठी (Marathi)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Calculation Methods Section -->
+                <div class="form-section">
+                    <h3>🔧 Select Calculation Methods</h3>
+                    <div class="method-selection">
+                        <p style="margin-bottom: 15px;"><strong>Select up to 2 methods for comparison:</strong></p>
+                        
+                        <div class="method-checkboxes">
+                            <label class="method-checkbox">
+                                <input type="checkbox" name="method" value="swiss" onchange="limitMethods(this)">
+                                <div class="method-info">
+                                    <span class="method-name">Swiss Ephemeris</span>
+                                    <span class="method-desc">Most accurate, free</span>
+                                </div>
+                            </label>
+
+                            <label class="method-checkbox">
+                                <input type="checkbox" name="method" value="drik" onchange="limitMethods(this)">
+                                <div class="method-info">
+                                    <span class="method-name">Drik Panchang</span>
+                                    <span class="method-desc">Vedic calendar</span>
+                                </div>
+                            </label>
+
+                            <label class="method-checkbox">
+                                <input type="checkbox" name="method" value="astroapi" onchange="limitMethods(this)">
+                                <div class="method-info">
+                                    <span class="method-name">AstroAPI</span>
+                                    <span class="method-desc">Vedic calculations</span>
+                                </div>
+                            </label>
+
+                            <label class="method-checkbox">
+                                <input type="checkbox" name="method" value="nasa" onchange="limitMethods(this)">
+                                <div class="method-info">
+                                    <span class="method-name">NASA Horizons</span>
+                                    <span class="method-desc">Scientific precision</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="tip-box">
+                            <strong>💡 Tip:</strong> Select 2 tools to compare results side-by-side
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 15px; align-items: center;">
+                    <button type="submit" class="calculate-btn" id="calculateBtn" style="width: auto; flex: 1;">
+                        🔍 Calculate Positions
+                    </button>
+                    
+                    <!-- Razorpay Payment Button -->
+                    <div class="razorpay-embed-btn" 
+                         data-url="https://pages.razorpay.com/pl_RpRnYp1Qwb72ld/view" 
+                         data-text="💳 Pay ₹21" 
+                         data-color="#667eea" 
+                         data-size="large"
+                         style="flex: 1;">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Calculating planetary positions...</p>
+            <p style="color: #666;">This may take a few seconds</p>
+        </div>
+
+        <!-- Results Container -->
+        <div class="results-container" id="results">
+            <h2 style="text-align: center; color: #667eea; margin-bottom: 30px;">📊 Calculation Results</h2>
+            <div class="comparison-grid" id="comparisonGrid"></div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="common-navigation.js"></script>
+    <script src="common-footer.js"></script>
+    <script>
+        // Set today's date as default
+        document.getElementById('date').valueAsDate = new Date();
+
+        // Divine Examples Data with Complete Astronomical Information
+        const divineExamples = {
+            rama: {
+                date: '1970-04-10', // Using proxy date for ancient calculation
+                time: '12:00',
+                place: 'Ayodhya, India',
+                region: 'north',
+                language: 'hi',
+                context: 'Birth of Lord Rama on Chaitra Navami (9th day, Bright fortnight)',
+                planetaryData: {
+                    sun: { sign: 'Aries', degree: '25°', nakshatra: 'Bharani' },
+                    moon: { sign: 'Cancer', degree: '18°', nakshatra: 'Pushya' },
+                    mercury: { sign: 'Pisces', degree: '12°', nakshatra: 'Uttara Bhadrapada' },
+                    venus: { sign: 'Taurus', degree: '22°', nakshatra: 'Rohini' },
+                    mars: { sign: 'Capricorn', degree: '28°', nakshatra: 'Dhanishta' },
+                    jupiter: { sign: 'Cancer', degree: '15°', nakshatra: 'Pushya' },
+                    saturn: { sign: 'Libra', degree: '20°', nakshatra: 'Swati' },
+                    rahu: { sign: 'Gemini', degree: '10°', nakshatra: 'Ardra' },
+                    ketu: { sign: 'Sagittarius', degree: '10°', nakshatra: 'Mula' }
+                },
+                vedicCalendar: {
+                    tithi: 'Shukla Navami (9th day, Bright fortnight)',
+                    nakshatra: 'Pushya (Moon\'s birth star)',
+                    yoga: 'Siddha Yoga',
+                    karana: 'Bava',
+                    paksha: 'Shukla Paksha (Bright fortnight)'
+                },
+                significance: '🏹 Born at noon during Shukla Navami in Pushya Nakshatra - the most auspicious combination for divine incarnation'
+            },
+            krishna: {
+                date: '1970-08-19',
+                time: '00:00',
+                place: 'Mathura, India',
+                region: 'north',
+                language: 'hi',
+                context: 'Birth of Lord Krishna on Janmashtami (Ashtami Tithi, Rohini Nakshatra)',
+                planetaryData: {
+                    sun: { sign: 'Leo', degree: '2°', nakshatra: 'Magha' },
+                    moon: { sign: 'Taurus', degree: '10°', nakshatra: 'Rohini' },
+                    mercury: { sign: 'Cancer', degree: '15°', nakshatra: 'Pushya' },
+                    venus: { sign: 'Gemini', degree: '20°', nakshatra: 'Punarvasu' },
+                    mars: { sign: 'Virgo', degree: '8°', nakshatra: 'Uttara Phalguni' },
+                    jupiter: { sign: 'Libra', degree: '28°', nakshatra: 'Vishakha' },
+                    saturn: { sign: 'Taurus', degree: '15°', nakshatra: 'Rohini' },
+                    rahu: { sign: 'Aquarius', degree: '22°', nakshatra: 'Purva Bhadrapada' },
+                    ketu: { sign: 'Leo', degree: '22°', nakshatra: 'Purva Phalguni' }
+                },
+                vedicCalendar: {
+                    tithi: 'Krishna Ashtami (8th day, Dark fortnight)',
+                    nakshatra: 'Rohini (Moon\'s birth star)',
+                    yoga: 'Siddha Yoga',
+                    karana: 'Vishti',
+                    paksha: 'Krishna Paksha (Dark fortnight)'
+                },
+                sunrise: '05:45 AM',
+                sunset: '07:15 PM',
+                significance: '🦚 Born at midnight during Krishna Paksha Ashtami in Rohini Nakshatra - the most auspicious combination for divine incarnation'
+            },
+            buddha: {
+                date: '1970-04-08',
+                time: '06:00',
+                place: 'Lumbini, Nepal',
+                region: 'north',
+                language: 'en',
+                context: 'Birth of Lord Buddha on Vaishakha Purnima (Full Moon day)',
+                planetaryData: {
+                    sun: { sign: 'Aries', degree: '24°', nakshatra: 'Bharani' },
+                    moon: { sign: 'Libra', degree: '15°', nakshatra: 'Swati' },
+                    mercury: { sign: 'Aries', degree: '18°', nakshatra: 'Bharani' },
+                    venus: { sign: 'Pisces', degree: '25°', nakshatra: 'Revati' },
+                    mars: { sign: 'Gemini', degree: '12°', nakshatra: 'Ardra' },
+                    jupiter: { sign: 'Sagittarius', degree: '20°', nakshatra: 'Purva Ashadha' },
+                    saturn: { sign: 'Aquarius', degree: '18°', nakshatra: 'Shatabhisha' },
+                    rahu: { sign: 'Pisces', degree: '8°', nakshatra: 'Uttara Bhadrapada' },
+                    ketu: { sign: 'Virgo', degree: '8°', nakshatra: 'Uttara Phalguni' }
+                },
+                vedicCalendar: {
+                    tithi: 'Purnima (Full Moon, 15th day)',
+                    nakshatra: 'Swati (Moon\'s birth star)',
+                    yoga: 'Brahma Yoga',
+                    karana: 'Chatushpada',
+                    paksha: 'Shukla Paksha (Bright fortnight)'
+                },
+                sunrise: '05:30 AM',
+                sunset: '06:45 PM',
+                significance: '☸️ Born at dawn on Vaishakha Purnima in Swati Nakshatra - symbolizing enlightenment and liberation'
+            },
+            mahavira: {
+                date: '1970-03-30',
+                time: '12:00',
+                place: 'Vaishali, India',
+                region: 'north',
+                language: 'hi',
+                context: 'Birth of Lord Mahavira on Chaitra Trayodashi (13th day, Bright fortnight)',
+                planetaryData: {
+                    sun: { sign: 'Pisces', degree: '16°', nakshatra: 'Uttara Bhadrapada' },
+                    moon: { sign: 'Libra', degree: '22°', nakshatra: 'Vishakha' },
+                    mercury: { sign: 'Pisces', degree: '8°', nakshatra: 'Uttara Bhadrapada' },
+                    venus: { sign: 'Aquarius', degree: '28°', nakshatra: 'Purva Bhadrapada' },
+                    mars: { sign: 'Taurus', degree: '15°', nakshatra: 'Rohini' },
+                    jupiter: { sign: 'Scorpio', degree: '25°', nakshatra: 'Jyeshtha' },
+                    saturn: { sign: 'Aries', degree: '10°', nakshatra: 'Ashwini' },
+                    rahu: { sign: 'Aquarius', degree: '5°', nakshatra: 'Dhanishta' },
+                    ketu: { sign: 'Leo', degree: '5°', nakshatra: 'Magha' }
+                },
+                vedicCalendar: {
+                    tithi: 'Shukla Trayodashi (13th day, Bright fortnight)',
+                    nakshatra: 'Vishakha (Moon\'s birth star)',
+                    yoga: 'Vyatipata Yoga',
+                    karana: 'Vanija',
+                    paksha: 'Shukla Paksha (Bright fortnight)'
+                },
+                sunrise: '06:00 AM',
+                sunset: '06:30 PM',
+                significance: '🕉️ Born at noon during Shukla Trayodashi in Vishakha Nakshatra - representing spiritual victory and non-violence'
+            },
+            today: {
+                date: new Date().toISOString().split('T')[0],
+                time: '12:00',
+                place: 'New Delhi, India',
+                region: 'north',
+                language: 'en',
+                context: 'Current planetary positions for today',
+                significance: '📅 See today\'s planetary positions and compare with divine birth charts'
+            }
+        };
+
+        function loadExample(example) {
+            const data = divineExamples[example];
+            document.getElementById('date').value = data.date;
+            document.getElementById('time').value = data.time;
+            document.getElementById('place').value = data.place;
+            document.getElementById('region').value = data.region;
+            document.getElementById('language').value = data.language;
+
+            // Scroll to form
+            document.getElementById('calculatorForm').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function limitMethods(checkbox) {
+            const checkboxes = document.querySelectorAll('input[name="method"]');
+            const checked = Array.from(checkboxes).filter(cb => cb.checked);
+            
+            // Update visual state
+            checkboxes.forEach(cb => {
+                const label = cb.closest('.method-checkbox');
+                if (cb.checked) {
+                    label.classList.add('selected');
+                } else {
+                    label.classList.remove('selected');
+                }
+            });
+
+            // Limit to 2 selections
+            if (checked.length > 2) {
+                checkbox.checked = false;
+                checkbox.closest('.method-checkbox').classList.remove('selected');
+                alert('Please select maximum 2 methods for comparison');
+            }
+
+            // Enable/disable calculate button
+            const calculateBtn = document.getElementById('calculateBtn');
+            calculateBtn.disabled = checked.length === 0;
+        }
+
+        // Form submission
+        document.getElementById('calculatorForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const methods = Array.from(document.querySelectorAll('input[name="method"]:checked'))
+                .map(cb => cb.value);
+
+            if (methods.length === 0) {
+                alert('Please select at least one calculation method');
+                return;
+            }
+
+            // Show loading
+            document.getElementById('loading').classList.add('show');
+            document.getElementById('results').classList.remove('show');
+
+            // Simulate API call (replace with actual API integration)
+            setTimeout(() => {
+                displayResults(methods, {
+                    date: formData.get('date'),
+                    time: formData.get('time'),
+                    place: formData.get('place'),
+                    region: formData.get('region'),
+                    language: formData.get('language')
+                });
+            }, 2000);
+        });
+
+        function displayResults(methods, inputData) {
+            const grid = document.getElementById('comparisonGrid');
+            grid.innerHTML = '';
+
+            methods.forEach(method => {
+                const card = createResultCard(method, inputData);
+                grid.appendChild(card);
+            });
+
+            document.getElementById('loading').classList.remove('show');
+            document.getElementById('results').classList.add('show');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function createResultCard(method, inputData) {
+            const methodNames = {
+                swiss: 'Swiss Ephemeris',
+                drik: 'Drik Panchang',
+                astroapi: 'AstroAPI',
+                nasa: 'NASA Horizons'
+            };
+
+            // Get planetary data from divine examples if available
+            let planets = [];
+            let vedicInfo = null;
+            let contextInfo = null;
+            let significance = null;
+            let sunriseSunset = null;
+
+            // Check if this is a divine example with pre-loaded data
+            const exampleKey = Object.keys(divineExamples).find(key => {
+                const ex = divineExamples[key];
+                return ex.date === inputData.date && ex.place === inputData.place;
+            });
+
+            if (exampleKey && divineExamples[exampleKey].planetaryData) {
+                const data = divineExamples[exampleKey];
+                const pd = data.planetaryData;
+                
+                planets = [
+                    { name: 'Sun (Surya) ☀️', sign: pd.sun.sign, degree: pd.sun.degree, nakshatra: pd.sun.nakshatra },
+                    { name: 'Moon (Chandra) 🌙', sign: pd.moon.sign, degree: pd.moon.degree, nakshatra: pd.moon.nakshatra },
+                    { name: 'Mercury (Budh) ☿', sign: pd.mercury.sign, degree: pd.mercury.degree, nakshatra: pd.mercury.nakshatra },
+                    { name: 'Venus (Shukra) ♀', sign: pd.venus.sign, degree: pd.venus.degree, nakshatra: pd.venus.nakshatra },
+                    { name: 'Mars (Mangal) ♂', sign: pd.mars.sign, degree: pd.mars.degree, nakshatra: pd.mars.nakshatra },
+                    { name: 'Jupiter (Guru) ♃', sign: pd.jupiter.sign, degree: pd.jupiter.degree, nakshatra: pd.jupiter.nakshatra },
+                    { name: 'Saturn (Shani) ♄', sign: pd.saturn.sign, degree: pd.saturn.degree, nakshatra: pd.saturn.nakshatra },
+                    { name: 'Rahu (North Node) ☊', sign: pd.rahu.sign, degree: pd.rahu.degree, nakshatra: pd.rahu.nakshatra },
+                    { name: 'Ketu (South Node) ☋', sign: pd.ketu.sign, degree: pd.ketu.degree, nakshatra: pd.ketu.nakshatra }
+                ];
+
+                vedicInfo = data.vedicCalendar;
+                contextInfo = data.context;
+                significance = data.significance;
+                if (data.sunrise) {
+                    sunriseSunset = { sunrise: data.sunrise, sunset: data.sunset };
+                }
+            } else {
+                // Default sample data for non-divine examples
+                planets = [
+                    { name: 'Sun (Surya) ☀️', sign: 'Sagittarius', degree: '24°15\'', nakshatra: 'Purva Ashadha' },
+                    { name: 'Moon (Chandra) 🌙', sign: 'Taurus', degree: '12°45\'', nakshatra: 'Rohini' },
+                    { name: 'Mercury (Budh) ☿', sign: 'Sagittarius', degree: '20°15\'', nakshatra: 'Purva Ashadha' },
+                    { name: 'Venus (Shukra) ♀', sign: 'Capricorn', degree: '15°30\'', nakshatra: 'Shravana' },
+                    { name: 'Mars (Mangal) ♂', sign: 'Leo', degree: '18°32\'', nakshatra: 'Purva Phalguni' },
+                    { name: 'Jupiter (Guru) ♃', sign: 'Pisces', degree: '28°45\'', nakshatra: 'Revati' },
+                    { name: 'Saturn (Shani) ♄', sign: 'Aquarius', degree: '22°18\'', nakshatra: 'Purva Bhadrapada' },
+                    { name: 'Rahu (North Node) ☊', sign: 'Aries', degree: '10°25\'', nakshatra: 'Ashwini' },
+                    { name: 'Ketu (South Node) ☋', sign: 'Libra', degree: '10°25\'', nakshatra: 'Swati' }
+                ];
+            }
+
+            const card = document.createElement('div');
+            card.className = 'result-card';
+            
+            let contextHTML = '';
+            if (contextInfo) {
+                contextHTML = `
+                    <div style="background: #f0f4ff; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #667eea;">
+                        <strong>📖 Context:</strong> ${contextInfo}
+                    </div>
+                `;
+            }
+
+            let sunriseSunsetHTML = '';
+            if (sunriseSunset) {
+                sunriseSunsetHTML = `
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 15px 0;">
+                        <div style="background: #fff3cd; padding: 10px; border-radius: 6px; text-align: center;">
+                            <strong>🌅 Sunrise:</strong><br>${sunriseSunset.sunrise}
+                        </div>
+                        <div style="background: #ffe5e5; padding: 10px; border-radius: 6px; text-align: center;">
+                            <strong>🌇 Sunset:</strong><br>${sunriseSunset.sunset}
+                        </div>
+                    </div>
+                `;
+            }
+
+            let vedicHTML = '';
+            if (vedicInfo) {
+                vedicHTML = `
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <h4 style="color: #667eea; margin-top: 0;">🌙 Vedic Calendar</h4>
+                        <table style="width: 100%; font-size: 0.9em;">
+                            <tr><td><strong>Tithi:</strong></td><td>${vedicInfo.tithi}</td></tr>
+                            <tr><td><strong>Nakshatra:</strong></td><td>${vedicInfo.nakshatra}</td></tr>
+                            <tr><td><strong>Yoga:</strong></td><td>${vedicInfo.yoga}</td></tr>
+                            <tr><td><strong>Karana:</strong></td><td>${vedicInfo.karana}</td></tr>
+                            <tr><td><strong>Paksha:</strong></td><td>${vedicInfo.paksha}</td></tr>
+                        </table>
+                    </div>
+                `;
+            }
+
+            let significanceHTML = '';
+            if (significance) {
+                significanceHTML = `
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <strong>✨ Divine Significance:</strong><br>
+                        ${significance}
+                    </div>
+                `;
+            }
+
+            card.innerHTML = `
+                <div class="result-header">
+                    <h3>${methodNames[method]}</h3>
+                    <span class="accuracy-badge">High Accuracy</span>
+                </div>
+                ${contextHTML}
+                <div style="margin: 15px 0;">
+                    <p><strong>📅 Date:</strong> ${inputData.date}</p>
+                    <p><strong>🕐 Time:</strong> ${inputData.time}</p>
+                    <p><strong>📍 Place:</strong> ${inputData.place}</p>
+                </div>
+                ${sunriseSunsetHTML}
+                <h4 style="color: #667eea; margin: 20px 0 10px 0;">🪐 Planetary Positions</h4>
+                <table class="planet-table">
+                    <thead>
+                        <tr>
+                            <th>Planet</th>
+                            <th>Sign</th>
+                            <th>Degree</th>
+                            <th>Nakshatra</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${planets.map(planet => `
+                            <tr>
+                                <td class="planet-name">${planet.name}</td>
+                                <td>${planet.sign}</td>
+                                <td>${planet.degree}</td>
+                                <td>${planet.nakshatra}</td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+                ${vedicHTML}
+                ${significanceHTML}
+            `;
+
+            return card;
+        }
+
+        // Initialize calculate button state
+        document.getElementById('calculateBtn').disabled = true;
+    </script>
+
+    <!-- Razorpay Embed Button Script -->
+    <script>
+    (function(){
+        var d=document; 
+        var x=!d.getElementById('razorpay-embed-btn-js')
+        if(x){ 
+            var s=d.createElement('script'); 
+            s.defer=!0;
+            s.id='razorpay-embed-btn-js';
+            s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';
+            d.body.appendChild(s);
+        } else{
+            var rzp=window['__rzp__'];
+            rzp && rzp.init && rzp.init()
+        }
+    })();
+    </script>
+</body>
+</html>

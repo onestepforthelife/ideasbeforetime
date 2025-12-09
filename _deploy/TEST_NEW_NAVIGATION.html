@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="typography-standards.css">
+    <link rel="stylesheet" href="alignment-standards.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Test - Ideas Before Time</title>
+<link rel="icon" type="image/jpeg" href="images/logo Goda 40 bs 32 pixel.jpg">
+<link rel="apple-touch-icon" href="images/Logo One Step for the life 180 by 84 Pixel.jpg">
+    <link rel="stylesheet" href="common-styles.css">
+    
+    <style>
+        .test-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .test-section {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .test-section h2 {
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+        .test-item {
+            padding: 15px;
+            margin: 10px 0;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border-left: 4px solid #007acc;
+        }
+        .test-item.pass {
+            border-left-color: #28a745;
+        }
+        .test-item.fail {
+            border-left-color: #dc3545;
+        }
+        .test-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .test-links a {
+            display: block;
+            padding: 15px;
+            background: #007acc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        .test-links a:hover {
+            background: #005a9e;
+        }
+    </style>
+    <link rel="stylesheet" href="common-navigation.css">
+</head>
+<body>
+    <script src="common-navigation.js"></script>
+    
+    <main class="test-container">
+        <div class="test-section">
+            <h2>🧪 Navigation Test Page</h2>
+            <p>This page tests the new 4-hub navigation structure.</p>
+        </div>
+
+        <div class="test-section">
+            <h2>✅ Test Checklist</h2>
+            
+            <div class="test-item">
+                <strong>1. Navigation Visible</strong><br>
+                Check if navigation bar appears at top with gradient background
+            </div>
+            
+            <div class="test-item">
+                <strong>2. Four Main Hubs</strong><br>
+                Verify: 🏠 Home | 📚 Learn ▼ | 🛠️ Tools ▼ | 📊 Insights ▼ | 👤 About ▼
+            </div>
+            
+            <div class="test-item">
+                <strong>3. Dropdown Menus</strong><br>
+                Hover over each hub - dropdown should appear with sub-pages
+            </div>
+            
+            <div class="test-item">
+                <strong>4. CTA Buttons</strong><br>
+                Check for "Use Free Tools" and "Request Premium" buttons on right
+            </div>
+            
+            <div class="test-item">
+                <strong>5. Mobile View</strong><br>
+                Resize browser to mobile width - hamburger menu should appear
+            </div>
+            
+            <div class="test-item">
+                <strong>6. Mobile Dropdowns</strong><br>
+                On mobile, tap hub items to expand sub-menus
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🔗 Test Hub Pages</h2>
+            <div class="test-links">
+                <a href="/learn">📚 Learn Hub</a>
+                <a href="/tools">🛠️ Tools Hub</a>
+                <a href="/insights">📊 Insights Hub</a>
+                <a href="/about">👤 About Hub</a>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🔗 Test Dropdown Links</h2>
+            
+            <h3>Learn Section:</h3>
+            <div class="test-links">
+                <a href="/blog">Blog</a>
+                <a href="/library">Library</a>
+                <a href="/innovations">Innovations</a>
+            </div>
+
+            <h3>Tools Section:</h3>
+            <div class="test-links">
+                <a href="/spo">SPO</a>
+                <a href="/jobs">Job Search</a>
+                <a href="/ro">RO Guide</a>
+                <a href="/linkedin">LinkedIn</a>
+                <a href="/kiro">GODA (Kiro)</a>
+                <a href="/astronomy">Astrology</a>
+            </div>
+
+            <h3>Insights Section:</h3>
+            <div class="test-links">
+                <a href="/market-reports">Chemical Reports</a>
+                <a href="/business-insights">Business Insights</a>
+                <a href="/request-access">Premium Access</a>
+            </div>
+
+            <h3>About Section:</h3>
+            <div class="test-links">
+                <a href="/about">About Creator</a>
+                <a href="/cv">Professional CV</a>
+                <a href="/timeline">Career Timeline</a>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>📱 Mobile Testing Instructions</h2>
+            <ol>
+                <li>Open Chrome DevTools (F12)</li>
+                <li>Click "Toggle device toolbar" (Ctrl+Shift+M)</li>
+                <li>Select "iPhone 12 Pro" or "Pixel 5"</li>
+                <li>Verify hamburger menu appears</li>
+                <li>Click hamburger to open menu</li>
+                <li>Tap hub items to expand dropdowns</li>
+                <li>Test all links work</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h2>✅ Expected Results</h2>
+            <ul>
+                <li>✅ Navigation bar sticky at top</li>
+                <li>✅ Gradient background (blue-gray)</li>
+                <li>✅ 4 main hubs with dropdown arrows</li>
+                <li>✅ Dropdowns appear on hover (desktop)</li>
+                <li>✅ White dropdown background with shadow</li>
+                <li>✅ 2 CTA buttons visible on right</li>
+                <li>✅ Hamburger menu on mobile</li>
+                <li>✅ All links work (no 404 errors)</li>
+                <li>✅ Smooth transitions and hover effects</li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="common-footer.js"></script>
+    <link rel="stylesheet" href="common-footer.css">
+<script src="goda-chatbot.js"></script>
+
+<!-- Quick Access Widget -->
+<div class="quick-access-widget" id="quickAccessWidget">
+    <button class="quick-access-btn" onclick="toggleQuickAccess()">
+        <span class="icon">⚡</span>
+    </button>
+    <div class="quick-access-menu" id="quickAccessMenu">
+        <a href="/index">🏠 Home</a>
+        <a href="/about">👤 About</a>
+        <a href="/blog">📝 Blog</a>
+        <a href="/market-reports">📊 Reports</a>
+        <a href="/cv">📄 CV</a>
+        <a href="/tools">🛠️ Tools</a>
+        <a href="/innovations">💡 Innovations</a>
+    </div>
+</div>
+
+<style>.quick-access-widget{position:fixed;bottom:20px;right:20px;z-index:1000;}.quick-access-btn{width:60px;height:60px;border-radius:50%;background: linear-gradient(135deg, #5a6c7d 0%, #8b9aa7 100%);border:none;color:white;font-size:24px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);transition:transform 0.3s ease;}.quick-access-btn:hover{transform:scale(1.1);}.quick-access-menu{display:none;position:absolute;bottom:70px;right:0;background:white;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.15);padding:12px;min-width:200px;}.quick-access-menu.active{display:block;animation:slideUp 0.3s ease;}@keyframes slideUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}.quick-access-menu a{display:block;padding:12px 16px;color:#2c3e50;text-decoration:none;border-radius:8px;transition:background 0.2s ease;font-size:14px;}.quick-access-menu a:hover{background:#f8f9fa;}@media (max-width:768px){.quick-access-widget{bottom:15px;right:15px;}.quick-access-btn{width:50px;height:50px;font-size:20px;}}</style>
+
+<script>
+function toggleQuickAccess() {
+    const menu = document.getElementById('quickAccessMenu');
+    menu.classList.toggle('active');
+}
+
+document.addEventListener('click', function(event) {
+    const widget = document.getElementById('quickAccessWidget');
+    const menu = document.getElementById('quickAccessMenu');
+    if (widget && !widget.contains(event.target)) {
+        menu.classList.remove('active');
+    }
+});
+</script>
+    <script src="error-tracker.js"></script>
+    <script src="google-adsense.js"></script>
+</body>
+</html>

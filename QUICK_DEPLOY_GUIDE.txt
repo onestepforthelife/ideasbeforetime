@@ -1,0 +1,42 @@
+🚀 QUICK DEPLOY GUIDE
+═══════════════════════════════════════════════════════════════
+
+📋 ONE-TIME SETUP (5 minutes):
+
+1. Cloudflare Dashboard → ideasbeforetime → Settings
+2. Disable "Automatic deployments" from GitHub
+3. Go to Deployments tab
+4. Find: ed55c4de
+5. Click "..." → "Rollback to this deployment"
+6. Done!
+
+═══════════════════════════════════════════════════════════════
+
+🚀 DEPLOY ANYTIME (1 minute):
+
+Double-click: DEPLOY.bat
+
+That's it!
+
+═══════════════════════════════════════════════════════════════
+
+✅ VERIFY IT WORKED:
+
+Run: node test-live-deployment-dec9.js
+
+Should show:
+✅ SPO Payment Button
+✅ Astronomy Payment Button  
+✅ Business News Auto-Update
+
+═══════════════════════════════════════════════════════════════
+
+💡 REMEMBER:
+
+- No Git needed
+- No GitHub Desktop
+- Just: DEPLOY.bat
+- Wait 1 minute
+- Done!
+
+═══════════════════════════════════════════════════════════════

@@ -1,0 +1,65 @@
+/* Universal Watermark Styling - Ideas Before Time */
+/* Include this file in all pages: <link rel="stylesheet" href="common-watermark.css"> */
+
+body::before {
+    content: "AV © Onestepforthelife";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 100px;
+    font-weight: 700;
+    color: rgba(102, 126, 234, 0.08);
+    pointer-events: none;
+    z-index: 1;
+    white-space: nowrap;
+    user-select: none;
+}
+
+/* For pages with lighter backgrounds */
+body.light-watermark::before {
+    color: rgba(102, 126, 234, 0.05);
+}
+
+/* For pages with darker backgrounds */
+body.dark-watermark::before {
+    color: rgba(255, 255, 255, 0.08);
+}
+
+/* Repeating watermark pattern for long pages */
+body.repeating-watermark::before {
+    content: "AV © Onestepforthelife  •  AV © Onestepforthelife  •  AV © Onestepforthelife  •  AV © Onestepforthelife  •  AV © Onestepforthelife  •  AV © Onestepforthelife  •  AV © Onestepforthelife  •  AV © Onestepforthelife  •  AV © Onestepforthelife  •  AV © Onestepforthelife";
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    font-size: 16px;
+    line-height: 3.5;
+    letter-spacing: 2px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Mobile responsive watermark */
+@media (max-width: 768px) {
+    body::before {
+        font-size: 60px;
+    }
+    
+    body.repeating-watermark::before {
+        font-size: 14px;
+        line-height: 3;
+    }
+}
+
+@media (max-width: 480px) {
+    body::before {
+        font-size: 40px;
+    }
+    
+    body.repeating-watermark::before {
+        font-size: 12px;
+        line-height: 2.5;
+    }
+}
+

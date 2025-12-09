@@ -1,0 +1,14 @@
+# Cloudflare Pages _redirects file
+# Format: [source] [destination] [code]
+# 
+# Fix incorrect /innovations/ URLs - redirect to correct .html files
+/innovations/market-reports.html /market-reports.html 301
+/innovations/market-reports /market-reports.html 301
+/innovations/tools.html /tools.html 301
+/innovations/tools /tools.html 301
+/innovations/social-optimizer-index.html /social-optimizer-index.html 301
+/innovations/social-optimizer-index /social-optimizer-index.html 301
+
+# Redirect deleted/renamed pages
+/kiro-training-guide /kiro-improvement-guide 301
+/kiro-training-guide.html /kiro-improvement-guide.html 301
