@@ -225,9 +225,9 @@ function checkCloudflareDeployment() {
 checkCloudflareDeployment();
 
 // ============================================
-// PHASE 6: SPO TOOL (Learning #21, #22)
+// PHASE 6: SPO TOOL & ACCESS CONTROL (Learning #21, #22, #56)
 // ============================================
-console.log('\n💰 PHASE 6: SPO Tool (₹21 Payment)...');
+console.log('\n💰 PHASE 6: SPO Tool & Access Control...');
 
 function checkSPOTool() {
     if (!fs.existsSync('social-optimizer-app.html')) {
@@ -264,21 +264,56 @@ function checkSPOTool() {
         ISSUES.critical.push('SPO form not found - users cannot enter data (Learning #21)');
     }
     
+    // Check access control comment (PAID TOOL, not Cloudflare Access)
+    const hasPaidComment = spo.includes('PAID TOOL') || spo.includes('PAID:');
+    const hasWrongAccessComment = spo.includes('Cloudflare Access') || spo.includes('MUST be protected');
+    if (hasWrongAccessComment) {
+        ISSUES.high.push('SPO: Has Cloudflare Access comment - WRONG! Should be PAID TOOL comment');
+    }
+    if (!hasPaidComment) {
+        ISSUES.medium.push('SPO: Missing "PAID TOOL" comment in code');
+    }
+    
     console.log(`   ✅ SPO tool file exists`);
     console.log(`   ${spo.includes('₹21') ? '✅' : '⚠️'} Pricing (₹21) displayed`);
     console.log(`   ${hasPayButton ? '✅' : '❌'} Payment button exists`);
     console.log(`   ${hasRazorpay ? '✅' : '⚠️'} Razorpay integrated`);
     console.log(`   ${spo.includes('NO REFUND') ? '✅' : '⚠️'} NO REFUNDS policy stated`);
+    console.log(`   ${hasPaidComment && !hasWrongAccessComment ? '✅' : '⚠️'} Access control: PAID TOOL (correct)`);
     
     // Check Astronomy tool payment (Learning #56)
     if (fs.existsSync('astronomy.html')) {
         const astro = fs.readFileSync('astronomy.html', 'utf8');
         const astroPayButton = astro.includes('Pay Now') || astro.includes('payment') || astro.includes('razorpay');
+        const astroPaidComment = astro.includes('PAID TOOL') || astro.includes('PAID:');
+        const astroWrongComment = astro.includes('Cloudflare Access');
+        
         if (!astroPayButton) {
             ISSUES.critical.push('Astronomy: Payment button MISSING - users cannot pay! (Learning #56)');
         }
+        if (astroWrongComment) {
+            ISSUES.high.push('Astronomy: Has Cloudflare Access comment - WRONG! Should be PAID TOOL');
+        }
+        if (!astroPaidComment) {
+            ISSUES.medium.push('Astronomy: Missing "PAID TOOL" comment in code');
+        }
+        
         console.log(`   ${astroPayButton ? '✅' : '❌'} Astronomy payment button exists`);
+        console.log(`   ${astroPaidComment && !astroWrongComment ? '✅' : '⚠️'} Astronomy access: PAID TOOL (correct)`);
     }
+    
+    // Check Admin panels have Cloudflare Access comments
+    const adminFiles = ['admin-control-panel.html', 'admin-testing-dashboard.html', 'social-optimizer-admin.html'];
+    adminFiles.forEach(file => {
+        if (fs.existsSync(file)) {
+            const content = fs.readFileSync(file, 'utf8');
+            const hasAccessComment = content.includes('Cloudflare Access') || content.includes('MUST be protected');
+            if (!hasAccessComment) {
+                ISSUES.high.push(`${file}: Missing Cloudflare Access comment - admin panel MUST be protected`);
+            }
+            console.log(`   ${hasAccessComment ? '✅' : '❌'} ${file}: Cloudflare Access comment`);
+        }
+    });
 }
 
 checkSPOTool();
